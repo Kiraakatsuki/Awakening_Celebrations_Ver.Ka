@@ -21,7 +21,8 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
     public Tasks.Vision.Core.RunningMode RunningMode { get; set; } = Tasks.Vision.Core.RunningMode.LIVE_STREAM;
 
-    public int NumHands { get; set; } = 1;
+    // The gesture layer needs two concurrent hand tracks for clap and both-hands-raised.
+    public int NumHands { get; set; } = 2;
     public float MinHandDetectionConfidence { get; set; } = 0.5f;
     public float MinHandPresenceConfidence { get; set; } = 0.5f;
     public float MinTrackingConfidence { get; set; } = 0.5f;

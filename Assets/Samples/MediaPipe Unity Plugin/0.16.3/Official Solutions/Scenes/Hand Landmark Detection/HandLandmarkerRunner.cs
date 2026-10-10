@@ -5,6 +5,7 @@
 // https://opensource.org/licenses/MIT.
 
 using System.Collections;
+using System;
 using Mediapipe.Tasks.Vision.HandLandmarker;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -18,6 +19,12 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     private Experimental.TextureFramePool _textureFramePool;
 
     public readonly HandLandmarkDetectionConfig config = new HandLandmarkDetectionConfig();
+
+    /// <summary>
+    /// Raised for each result produced by this runner. Subscribers must copy any
+    /// data they retain because the runner reuses its result buffers.
+    /// </summary>
+    public event Action<HandLandmarkerResult> ResultReceived;
 
     public override void Stop()
     {
@@ -115,6 +122,10 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
             if (req.hasError)
             {
               Debug.LogWarning($"Failed to read texture from the image source");
+              // The frame was acquired from the pool before the readback. Return it
+              // even on failure so repeated transient readback errors cannot exhaust
+              // the finite pool and stop subsequent camera frames from being read.
+              textureFrame.Release();
               continue;
             }
             image = textureFrame.BuildCPUImage();
@@ -128,20 +139,24 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
             if (taskApi.TryDetect(image, imageProcessingOptions, ref result))
             {
               _handLandmarkerResultAnnotationController.DrawNow(result);
+              ResultReceived?.Invoke(result);
             }
             else
             {
               _handLandmarkerResultAnnotationController.DrawNow(default);
+              ResultReceived?.Invoke(default);
             }
             break;
           case Tasks.Vision.Core.RunningMode.VIDEO:
             if (taskApi.TryDetectForVideo(image, GetCurrentTimestampMillisec(), imageProcessingOptions, ref result))
             {
               _handLandmarkerResultAnnotationController.DrawNow(result);
+              ResultReceived?.Invoke(result);
             }
             else
             {
               _handLandmarkerResultAnnotationController.DrawNow(default);
+              ResultReceived?.Invoke(default);
             }
             break;
           case Tasks.Vision.Core.RunningMode.LIVE_STREAM:
@@ -153,6 +168,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
     private void OnHandLandmarkDetectionOutput(HandLandmarkerResult result, Image image, long timestamp)
     {
+      ResultReceived?.Invoke(result);
       _handLandmarkerResultAnnotationController.DrawLater(result);
     }
   }

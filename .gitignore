@@ -44,3 +44,17 @@ crashlytics-build.properties
 
 # Keep project source, scenes, packages, assets,
 # ProjectSettings, metadata and documentation tracked.
+
+# Additional temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
+*.swo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.local
