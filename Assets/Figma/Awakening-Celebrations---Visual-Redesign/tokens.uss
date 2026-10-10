@@ -1,0 +1,29 @@
+:root {
+    --stage-deep: rgba(14, 14, 14, 1);
+    --stage-base: rgba(23, 23, 23, 1);
+    --stage-raised: rgba(35, 35, 35, 1);
+    --text-primary: rgba(239, 234, 224, 1);
+    --text-secondary: rgba(174, 171, 164, 1);
+    --text-tertiary: rgba(120, 118, 113, 1);
+    --glass-fill: rgba(234, 247, 255, 1);
+    --glass-stroke: rgba(255, 255, 255, 1);
+    --accent-gaia: rgba(49, 215, 242, 1);
+    --accent-pandemic: rgba(178, 154, 130, 1);
+    --accent-rebirth: rgba(216, 169, 193, 1);
+    --accent-guardian: rgba(191, 233, 255, 1);
+    --accent-conscience: rgba(255, 106, 42, 1);
+    --accent-sanctuary: rgba(243, 185, 95, 1);
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-8: 64px;
+    --space-12: 96px;
+    --radius-sm: 16px;
+    --radius-md: 24px;
+    --radius-lg: 32px;
+    --radius-xl: 48px;
+    --radius-full: 999px;
+}

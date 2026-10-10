@@ -1,0 +1,439 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18bf186d5934f3dbb4839d736c78a45, type: 3}
+  m_Name: RuntimeScreenCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::RuntimeScreenCatalog
+  entries:
+  - screenId: "Home"
+    language: zh
+    figmaRootNodeId: "53:2"
+    asset: {fileID: 9197481963319205126, guid: 5e1547a4ad8a6eb4cbf53db0ebb059d3, type: 3}
+  - screenId: "Home"
+    language: en
+    figmaRootNodeId: "51:4"
+    asset: {fileID: 9197481963319205126, guid: b5a94a2ed84aa5f439aa27e811c78a54, type: 3}
+  - screenId: "Privacy"
+    language: en
+    figmaRootNodeId: "51:39"
+    asset: {fileID: 9197481963319205126, guid: 1e59db1f59f707641992c4e2450cdc40, type: 3}
+  - screenId: "Privacy"
+    language: zh
+    figmaRootNodeId: "53:37"
+    asset: {fileID: 9197481963319205126, guid: d1814c946541f0f4ea993e40fbf94906, type: 3}
+  - screenId: "TUTORIAL---ENTRY---DIM"
+    language: en
+    figmaRootNodeId: "24:281"
+    asset: {fileID: 9197481963319205126, guid: c9a47f94846d46968f6e224c70f70055, type: 3}
+  - screenId: "TUTORIAL---INTRODUCTION"
+    language: en
+    figmaRootNodeId: "24:326"
+    asset: {fileID: 9197481963319205126, guid: 969424950b8d4191aa676fc2e8039285, type: 3}
+  - screenId: "TUTORIAL---LOOK---MOVE"
+    language: en
+    figmaRootNodeId: "24:378"
+    asset: {fileID: 9197481963319205126, guid: 0dbbbf189f5843d2b25819cea3350055, type: 3}
+  - screenId: "TUTORIAL---POINT"
+    language: en
+    figmaRootNodeId: "24:426"
+    asset: {fileID: 9197481963319205126, guid: 6dd33b5127db4e21917d31fa2f15dada, type: 3}
+  - screenId: "TUTORIAL---HOLD---SELECT"
+    language: en
+    figmaRootNodeId: "24:476"
+    asset: {fileID: 9197481963319205126, guid: 01af6f49ddf64e1db7adfd56e5350fab, type: 3}
+  - screenId: "TUTORIAL---EXPERIENCE"
+    language: en
+    figmaRootNodeId: "24:522"
+    asset: {fileID: 9197481963319205126, guid: 4d07ee79af1a4c738aebb64049a0b1ef, type: 3}
+  - screenId: "TUTORIAL---READY"
+    language: en
+    figmaRootNodeId: "24:568"
+    asset: {fileID: 9197481963319205126, guid: aefd825a1f7147e0bc837911c525503e, type: 3}
+  - screenId: "TUTORIAL---RETURN---DISMISS"
+    language: en
+    figmaRootNodeId: "24:613"
+    asset: {fileID: 9197481963319205126, guid: 05fec9f9a27549819643dbca8ee14db5, type: 3}
+  - screenId: "TUTORIAL---ENTRY---DIM"
+    language: zh
+    figmaRootNodeId: "105:307"
+    asset: {fileID: 9197481963319205126, guid: e18721964791129469ecede9b98a61e7, type: 3}
+  - screenId: "TUTORIAL---INTRODUCTION"
+    language: zh
+    figmaRootNodeId: "105:352"
+    asset: {fileID: 9197481963319205126, guid: 2f39e3082638e0e49825d740710a07c7, type: 3}
+  - screenId: "TUTORIAL---LOOK---MOVE"
+    language: zh
+    figmaRootNodeId: "105:434"
+    asset: {fileID: 9197481963319205126, guid: 570215b08e5cf1548a973e9679932743, type: 3}
+  - screenId: "TUTORIAL---POINT"
+    language: zh
+    figmaRootNodeId: "105:493"
+    asset: {fileID: 9197481963319205126, guid: 7fd51b2c318a4a9479855746cf6b2c57, type: 3}
+  - screenId: "TUTORIAL---HOLD---SELECT"
+    language: zh
+    figmaRootNodeId: "105:552"
+    asset: {fileID: 9197481963319205126, guid: b68f91d05dbb56c4080c2378d28de60a, type: 3}
+  - screenId: "TUTORIAL---EXPERIENCE"
+    language: zh
+    figmaRootNodeId: "105:608"
+    asset: {fileID: 9197481963319205126, guid: 008d3ceb81d782e4e8e1ef582920b9fa, type: 3}
+  - screenId: "TUTORIAL---READY"
+    language: zh
+    figmaRootNodeId: "105:666"
+    asset: {fileID: 9197481963319205126, guid: b1484537b0ae1db44bf9f0162a199d7c, type: 3}
+  - screenId: "TUTORIAL---RETURN---DISMISS"
+    language: zh
+    figmaRootNodeId: "105:711"
+    asset: {fileID: 9197481963319205126, guid: be2713cd9b767d046876e3cd03812fff, type: 3}
+  - screenId: "ATTRACT---MONOCHROME---FALLBACK-INPUT"
+    language: en
+    figmaRootNodeId: "124:3734"
+    asset: {fileID: 9197481963319205126, guid: 61a77fef80b9dc14cb95f0f6026d5270, type: 3}
+  - screenId: "ATTRACT---MONOCHROME---FALLBACK-INPUT"
+    language: zh
+    figmaRootNodeId: "124:3767"
+    asset: {fileID: 9197481963319205126, guid: c0cc741384055c14d814d8503b4afc97, type: 3}
+  - screenId: "COLOR-RELEASE"
+    language: en
+    figmaRootNodeId: "124:3800"
+    asset: {fileID: 9197481963319205126, guid: 266d7eab0d4835a458d6a938e5496228, type: 3}
+  - screenId: "COLOR-RELEASE"
+    language: zh
+    figmaRootNodeId: "124:3833"
+    asset: {fileID: 9197481963319205126, guid: 9c1445592963bfd4c8fafdede2edba9d, type: 3}
+  - screenId: "PERFORMER-SELECT---FALLBACK-INPUT"
+    language: en
+    figmaRootNodeId: "124:3867"
+    asset: {fileID: 9197481963319205126, guid: 8c99caf8f19af0542a9ab804abd568b1, type: 3}
+  - screenId: "PERFORMER-SELECT---FALLBACK-INPUT"
+    language: zh
+    figmaRootNodeId: "124:3895"
+    asset: {fileID: 9197481963319205126, guid: 04d5c14a40efa5847ba3d38d09397cd0, type: 3}
+  - screenId: "GAIA---FOCUS-VIEW---PER-001"
+    language: en
+    figmaRootNodeId: "124:3924"
+    asset: {fileID: 9197481963319205126, guid: e8a96d3fe0915ab4ba11b27f916d3122, type: 3}
+  - screenId: "GAIA---FOCUS-VIEW---PER-001"
+    language: zh
+    figmaRootNodeId: "124:3942"
+    asset: {fileID: 9197481963319205126, guid: 2be51cff5cab1be4cba4c69a5ec3450d, type: 3}
+  - screenId: "GAIA---ACTIVATION---PER-001"
+    language: en
+    figmaRootNodeId: "124:3960"
+    asset: {fileID: 9197481963319205126, guid: 70a0ee0507b32884f948b3c75a87e802, type: 3}
+  - screenId: "GAIA---ACTIVATION---PER-001"
+    language: zh
+    figmaRootNodeId: "124:3978"
+    asset: {fileID: 9197481963319205126, guid: 3ecbbbd57f7c79c498eabaa6f746bde7, type: 3}
+  - screenId: "GAIA---LIVING-PORTRAIT---PER-001"
+    language: en
+    figmaRootNodeId: "124:3996"
+    asset: {fileID: 9197481963319205126, guid: b7c99f07de80334419b7959e932be306, type: 3}
+  - screenId: "GAIA---LIVING-PORTRAIT---PER-001"
+    language: zh
+    figmaRootNodeId: "124:4014"
+    asset: {fileID: 9197481963319205126, guid: 69af93f79603bb04888eda8df6366a30, type: 3}
+  - screenId: "GAIA---RELEASE---PER-001"
+    language: en
+    figmaRootNodeId: "124:4032"
+    asset: {fileID: 9197481963319205126, guid: afedeb11fe98be44281ce9c309d15280, type: 3}
+  - screenId: "GAIA---RELEASE---PER-001"
+    language: zh
+    figmaRootNodeId: "124:4047"
+    asset: {fileID: 9197481963319205126, guid: b569e1778761d5a44a5e6d41e91cce75, type: 3}
+  - screenId: "GAIA---POST-VIDEO-AI---PER-001"
+    language: en
+    figmaRootNodeId: "124:4062"
+    asset: {fileID: 9197481963319205126, guid: 69e18923aff1a72458b62ca535ed6b80, type: 3}
+  - screenId: "GAIA---POST-VIDEO-AI---PER-001"
+    language: zh
+    figmaRootNodeId: "124:4080"
+    asset: {fileID: 9197481963319205126, guid: c4464efc66aa5db4e8faa1acc5baeef6, type: 3}
+  - screenId: "PANDEMIC---FOCUS-VIEW---PER-002"
+    language: en
+    figmaRootNodeId: "124:4098"
+    asset: {fileID: 9197481963319205126, guid: 282c0a7f24315c84bbbf0b7a05f79926, type: 3}
+  - screenId: "PANDEMIC---FOCUS-VIEW---PER-002"
+    language: zh
+    figmaRootNodeId: "124:4116"
+    asset: {fileID: 9197481963319205126, guid: 94db2f95d29f77f41b43b0b53b339d26, type: 3}
+  - screenId: "PANDEMIC---ACTIVATION---PER-002"
+    language: en
+    figmaRootNodeId: "124:4134"
+    asset: {fileID: 9197481963319205126, guid: d51bc365fa9a4c746840c42128823704, type: 3}
+  - screenId: "PANDEMIC---ACTIVATION---PER-002"
+    language: zh
+    figmaRootNodeId: "124:4152"
+    asset: {fileID: 9197481963319205126, guid: d9293ed6c505d2e4fa5cdb3f409fe90a, type: 3}
+  - screenId: "PANDEMIC---LIVING-PORTRAIT---PER-002"
+    language: en
+    figmaRootNodeId: "124:4170"
+    asset: {fileID: 9197481963319205126, guid: a90a70fc3b21a384385022b2c11e9ef4, type: 3}
+  - screenId: "PANDEMIC---LIVING-PORTRAIT---PER-002"
+    language: zh
+    figmaRootNodeId: "124:4188"
+    asset: {fileID: 9197481963319205126, guid: 67d8231169859c4498b0ad159d5c8a63, type: 3}
+  - screenId: "PANDEMIC---RELEASE---PER-002"
+    language: en
+    figmaRootNodeId: "124:4206"
+    asset: {fileID: 9197481963319205126, guid: 62474923f58f3e04f9f81c5604d88191, type: 3}
+  - screenId: "PANDEMIC---RELEASE---PER-002"
+    language: zh
+    figmaRootNodeId: "124:4221"
+    asset: {fileID: 9197481963319205126, guid: dd79916d5560cb942b758e974b430d87, type: 3}
+  - screenId: "PANDEMIC---POST-VIDEO-AI---PER-002"
+    language: en
+    figmaRootNodeId: "124:4236"
+    asset: {fileID: 9197481963319205126, guid: d70b071ee433d4e429124c369a86c001, type: 3}
+  - screenId: "PANDEMIC---POST-VIDEO-AI---PER-002"
+    language: zh
+    figmaRootNodeId: "124:4254"
+    asset: {fileID: 9197481963319205126, guid: e6042ae1feea7bf48b0d92b6a3df265f, type: 3}
+  - screenId: "RE-BIRTH---FOCUS-VIEW---PER-003"
+    language: en
+    figmaRootNodeId: "124:4272"
+    asset: {fileID: 9197481963319205126, guid: 940329f7b66f22149881de029bc57bb3, type: 3}
+  - screenId: "RE-BIRTH---FOCUS-VIEW---PER-003"
+    language: zh
+    figmaRootNodeId: "124:4290"
+    asset: {fileID: 9197481963319205126, guid: 51e50f7b54fc3584499667eb00c3e3bc, type: 3}
+  - screenId: "RE-BIRTH---ACTIVATION---PER-003"
+    language: en
+    figmaRootNodeId: "124:4308"
+    asset: {fileID: 9197481963319205126, guid: fac5aebe72678924c9590f70b4c882e4, type: 3}
+  - screenId: "RE-BIRTH---ACTIVATION---PER-003"
+    language: zh
+    figmaRootNodeId: "124:4326"
+    asset: {fileID: 9197481963319205126, guid: 07d252aa2baa9f548a27ba61fb689973, type: 3}
+  - screenId: "RE-BIRTH---LIVING-PORTRAIT---PER-003"
+    language: en
+    figmaRootNodeId: "124:4344"
+    asset: {fileID: 9197481963319205126, guid: ae578aa6b6f5f8344b7104828034adca, type: 3}
+  - screenId: "RE-BIRTH---LIVING-PORTRAIT---PER-003"
+    language: zh
+    figmaRootNodeId: "124:4362"
+    asset: {fileID: 9197481963319205126, guid: adb57c157e0a32d4cbccd3c954ea4f70, type: 3}
+  - screenId: "RE-BIRTH---RELEASE---PER-003"
+    language: en
+    figmaRootNodeId: "124:4380"
+    asset: {fileID: 9197481963319205126, guid: 71b533210c3ef1742ade990f2f06431e, type: 3}
+  - screenId: "RE-BIRTH---RELEASE---PER-003"
+    language: zh
+    figmaRootNodeId: "124:4395"
+    asset: {fileID: 9197481963319205126, guid: d13a6418361d0d0488c859552b11477a, type: 3}
+  - screenId: "RE-BIRTH---POST-VIDEO-AI---PER-003"
+    language: en
+    figmaRootNodeId: "124:4410"
+    asset: {fileID: 9197481963319205126, guid: 2453208a8b7f3e147b8c144972865d02, type: 3}
+  - screenId: "RE-BIRTH---POST-VIDEO-AI---PER-003"
+    language: zh
+    figmaRootNodeId: "124:4428"
+    asset: {fileID: 9197481963319205126, guid: a7d02a455ff51174fbcad3656ed46d90, type: 3}
+  - screenId: "WHITE-GUARDIAN---FOCUS-VIEW---PER-004"
+    language: en
+    figmaRootNodeId: "124:4446"
+    asset: {fileID: 9197481963319205126, guid: 59b35328435291843b548d1a5b3a9028, type: 3}
+  - screenId: "WHITE-GUARDIAN---FOCUS-VIEW---PER-004"
+    language: zh
+    figmaRootNodeId: "124:4464"
+    asset: {fileID: 9197481963319205126, guid: 758274893c5f8bc4597cfd7180bb9b85, type: 3}
+  - screenId: "WHITE-GUARDIAN---ACTIVATION---PER-004"
+    language: en
+    figmaRootNodeId: "124:4482"
+    asset: {fileID: 9197481963319205126, guid: 91e4bf4149e51da44b6f57b748d7c553, type: 3}
+  - screenId: "WHITE-GUARDIAN---ACTIVATION---PER-004"
+    language: zh
+    figmaRootNodeId: "124:4500"
+    asset: {fileID: 9197481963319205126, guid: fad1dfd19ebdeb543b56bfba8ce6d7de, type: 3}
+  - screenId: "WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004"
+    language: en
+    figmaRootNodeId: "124:4518"
+    asset: {fileID: 9197481963319205126, guid: 4500d12d3121343488cd28beaafbcfb2, type: 3}
+  - screenId: "WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004"
+    language: zh
+    figmaRootNodeId: "124:4536"
+    asset: {fileID: 9197481963319205126, guid: 13ac7ddf1f1e44a4290a1e2387fcbe44, type: 3}
+  - screenId: "WHITE-GUARDIAN---RELEASE---PER-004"
+    language: en
+    figmaRootNodeId: "124:4554"
+    asset: {fileID: 9197481963319205126, guid: 2c2df9a35c274324682d3f683581f16c, type: 3}
+  - screenId: "WHITE-GUARDIAN---RELEASE---PER-004"
+    language: zh
+    figmaRootNodeId: "124:4569"
+    asset: {fileID: 9197481963319205126, guid: e5298225b3ec6ca4eb614e4afca83f3d, type: 3}
+  - screenId: "WHITE-GUARDIAN---POST-VIDEO-AI---PER-004"
+    language: en
+    figmaRootNodeId: "124:4584"
+    asset: {fileID: 9197481963319205126, guid: ff02731834dbf5d41889fab3ec9a4067, type: 3}
+  - screenId: "WHITE-GUARDIAN---POST-VIDEO-AI---PER-004"
+    language: zh
+    figmaRootNodeId: "124:4602"
+    asset: {fileID: 9197481963319205126, guid: a8bb60d3515f9ba40b6eb0e410398956, type: 3}
+  - screenId: "CONSCIENCE---FOCUS-VIEW---PER-005"
+    language: en
+    figmaRootNodeId: "124:4620"
+    asset: {fileID: 9197481963319205126, guid: b8f356deb8442ef4a8a6587fce961ef5, type: 3}
+  - screenId: "CONSCIENCE---FOCUS-VIEW---PER-005"
+    language: zh
+    figmaRootNodeId: "124:4638"
+    asset: {fileID: 9197481963319205126, guid: 5435c652cf5f6694d89fb1f78aa6f5b3, type: 3}
+  - screenId: "CONSCIENCE---ACTIVATION---PER-005"
+    language: en
+    figmaRootNodeId: "124:4656"
+    asset: {fileID: 9197481963319205126, guid: 354cc3593a81c3943a00d37fea8904cd, type: 3}
+  - screenId: "CONSCIENCE---ACTIVATION---PER-005"
+    language: zh
+    figmaRootNodeId: "124:4674"
+    asset: {fileID: 9197481963319205126, guid: c7e408387bfb28346bc4e1c622580803, type: 3}
+  - screenId: "CONSCIENCE---LIVING-PORTRAIT---PER-005"
+    language: en
+    figmaRootNodeId: "124:4692"
+    asset: {fileID: 9197481963319205126, guid: 998922bef66c25f4193abee8a57ca312, type: 3}
+  - screenId: "CONSCIENCE---LIVING-PORTRAIT---PER-005"
+    language: zh
+    figmaRootNodeId: "124:4710"
+    asset: {fileID: 9197481963319205126, guid: 530dd0798be480d48b8fe19fc20cb646, type: 3}
+  - screenId: "CONSCIENCE---RELEASE---PER-005"
+    language: en
+    figmaRootNodeId: "124:4728"
+    asset: {fileID: 9197481963319205126, guid: 6dea95bc04ae3844ca9ea47ba6734bfb, type: 3}
+  - screenId: "CONSCIENCE---RELEASE---PER-005"
+    language: zh
+    figmaRootNodeId: "124:4743"
+    asset: {fileID: 9197481963319205126, guid: 202e35d9f771ca343a602ce302eb0b5b, type: 3}
+  - screenId: "CONSCIENCE---POST-VIDEO-AI---PER-005"
+    language: en
+    figmaRootNodeId: "124:4758"
+    asset: {fileID: 9197481963319205126, guid: 0f591a7806f68d7439c7505f645a5ead, type: 3}
+  - screenId: "CONSCIENCE---POST-VIDEO-AI---PER-005"
+    language: zh
+    figmaRootNodeId: "124:4776"
+    asset: {fileID: 9197481963319205126, guid: 6f229b42e76ae9041858933123399cc0, type: 3}
+  - screenId: "SANCTUARY---FOCUS-VIEW---PER-006"
+    language: en
+    figmaRootNodeId: "124:4794"
+    asset: {fileID: 9197481963319205126, guid: 0618aab42e8b451409c9e47e7f45a1db, type: 3}
+  - screenId: "SANCTUARY---FOCUS-VIEW---PER-006"
+    language: zh
+    figmaRootNodeId: "124:4812"
+    asset: {fileID: 9197481963319205126, guid: 14a78719bb30332419287a7180e17717, type: 3}
+  - screenId: "SANCTUARY---ACTIVATION---PER-006"
+    language: en
+    figmaRootNodeId: "124:4830"
+    asset: {fileID: 9197481963319205126, guid: f89bd646cf435d243aff70970765fa35, type: 3}
+  - screenId: "SANCTUARY---ACTIVATION---PER-006"
+    language: zh
+    figmaRootNodeId: "124:4848"
+    asset: {fileID: 9197481963319205126, guid: 2f39c7d0746c69f4b807171d6de71279, type: 3}
+  - screenId: "SANCTUARY---LIVING-PORTRAIT---PER-006"
+    language: en
+    figmaRootNodeId: "124:4866"
+    asset: {fileID: 9197481963319205126, guid: 91d6b9e901a488a4794dbadf1beb4f5e, type: 3}
+  - screenId: "SANCTUARY---LIVING-PORTRAIT---PER-006"
+    language: zh
+    figmaRootNodeId: "124:4884"
+    asset: {fileID: 9197481963319205126, guid: a6cdfa1fba0bf10409a4dc5b914d8430, type: 3}
+  - screenId: "SANCTUARY---RELEASE---PER-006"
+    language: en
+    figmaRootNodeId: "124:4902"
+    asset: {fileID: 9197481963319205126, guid: 8b3d0a552233e644cacc7851e62c5631, type: 3}
+  - screenId: "SANCTUARY---RELEASE---PER-006"
+    language: zh
+    figmaRootNodeId: "124:4917"
+    asset: {fileID: 9197481963319205126, guid: 53d8a87aad4a738439054351039a187d, type: 3}
+  - screenId: "SANCTUARY---POST-VIDEO-AI---PER-006"
+    language: en
+    figmaRootNodeId: "124:4932"
+    asset: {fileID: 9197481963319205126, guid: fa3ea12a628054f4ba1efe8e08391184, type: 3}
+  - screenId: "SANCTUARY---POST-VIDEO-AI---PER-006"
+    language: zh
+    figmaRootNodeId: "124:4950"
+    asset: {fileID: 9197481963319205126, guid: e366626b217103d4da4622bddc523b82, type: 3}
+  - screenId: "Assistant-GAIA"
+    language: en
+    figmaRootNodeId: "124:4969"
+    asset: {fileID: 9197481963319205126, guid: a6c9ed8e7098c304f8dde074a7a586ce, type: 3}
+  - screenId: "Assistant-GAIA"
+    language: zh
+    figmaRootNodeId: "124:4985"
+    asset: {fileID: 9197481963319205126, guid: 5304a9839079cb74cadeb6daeb3ab47b, type: 3}
+  - screenId: "Assistant-PANDEMIC"
+    language: en
+    figmaRootNodeId: "124:5001"
+    asset: {fileID: 9197481963319205126, guid: cd29506db2520be4eb0df76e96b787d0, type: 3}
+  - screenId: "Assistant-PANDEMIC"
+    language: zh
+    figmaRootNodeId: "124:5017"
+    asset: {fileID: 9197481963319205126, guid: 74670598a59646549b65680bffe43d87, type: 3}
+  - screenId: "Assistant-RE-BIRTH"
+    language: en
+    figmaRootNodeId: "124:5033"
+    asset: {fileID: 9197481963319205126, guid: b8534637e4376af42b7e0011e4f783f4, type: 3}
+  - screenId: "Assistant-RE-BIRTH"
+    language: zh
+    figmaRootNodeId: "124:5049"
+    asset: {fileID: 9197481963319205126, guid: 8645e27cd7095e44abaf942b5b86aae4, type: 3}
+  - screenId: "Assistant-WHITE-GUARDIAN"
+    language: en
+    figmaRootNodeId: "124:5065"
+    asset: {fileID: 9197481963319205126, guid: 466a052655b8edd4eb2455fc3bce24f1, type: 3}
+  - screenId: "Assistant-WHITE-GUARDIAN"
+    language: zh
+    figmaRootNodeId: "124:5081"
+    asset: {fileID: 9197481963319205126, guid: 0c29b3a09e5cf8f4b8c1d4679cc4deea, type: 3}
+  - screenId: "Assistant-CONSCIENCE"
+    language: en
+    figmaRootNodeId: "124:5097"
+    asset: {fileID: 9197481963319205126, guid: 06d2b2183ad5592468c5e0bc7a4d3b29, type: 3}
+  - screenId: "Assistant-CONSCIENCE"
+    language: zh
+    figmaRootNodeId: "124:5113"
+    asset: {fileID: 9197481963319205126, guid: 3ed851760a7c2f041bae9ebd86786d63, type: 3}
+  - screenId: "Assistant-SANCTUARY"
+    language: en
+    figmaRootNodeId: "124:5129"
+    asset: {fileID: 9197481963319205126, guid: 84a2088461d0d3c4f86d53bafc62ff35, type: 3}
+  - screenId: "Assistant-SANCTUARY"
+    language: zh
+    figmaRootNodeId: "124:5145"
+    asset: {fileID: 9197481963319205126, guid: cb3b21dd872f29b48ad470f91b67a942, type: 3}
+  - screenId: "AssistantChooser"
+    language: en
+    figmaRootNodeId: "124:5161"
+    asset: {fileID: 9197481963319205126, guid: f15378fb3e5a75643b944173fa23ca5f, type: 3}
+  - screenId: "AssistantChooser"
+    language: zh
+    figmaRootNodeId: "124:5189"
+    asset: {fileID: 9197481963319205126, guid: 68f72feb5d493794fb3e26c546f7de7f, type: 3}
+  - screenId: "SETTINGS---EXPERIENCE-CONTROLS"
+    language: en
+    figmaRootNodeId: "124:5218"
+    asset: {fileID: 9197481963319205126, guid: ebddf28f004e00648b39df50dea95021, type: 3}
+  - screenId: "SETTINGS---EXPERIENCE-CONTROLS"
+    language: zh
+    figmaRootNodeId: "124:5272"
+    asset: {fileID: 9197481963319205126, guid: f1030a5a23a09e449b85dc0a7056ddd7, type: 3}
+  - screenId: "CLOSING---CELEBRATION"
+    language: en
+    figmaRootNodeId: "124:5327"
+    asset: {fileID: 9197481963319205126, guid: 4491cc275b596624bbd88ebbdf28d2ef, type: 3}
+  - screenId: "CLOSING---CELEBRATION"
+    language: zh
+    figmaRootNodeId: "124:5341"
+    asset: {fileID: 9197481963319205126, guid: 95c1d06b330642f4d9485029c09d176a, type: 3}
+  - screenId: "SOUVENIR---QR-DELIVERY"
+    language: en
+    figmaRootNodeId: "124:5355"
+    asset: {fileID: 9197481963319205126, guid: e77658d5b47172c4ba88d2ef7e820442, type: 3}
+  - screenId: "SOUVENIR---QR-DELIVERY"
+    language: zh
+    figmaRootNodeId: "124:5434"
+    asset: {fileID: 9197481963319205126, guid: 9e32bf6bfbff5c643897c7881ef5286f, type: 3}

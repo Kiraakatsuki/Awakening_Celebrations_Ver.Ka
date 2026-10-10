@@ -1,0 +1,54 @@
+/* Shared state feedback. Generated UXML keeps its screen-specific colors and layout. */
+.ac-interactive {
+    opacity: 1;
+}
+
+.ac-interactive.ac-hover {
+    opacity: 0.94;
+}
+
+.ac-interactive.ac-pressed {
+    opacity: 0.82;
+}
+
+.ac-interactive.ac-unavailable {
+    opacity: 0.58;
+}
+
+.ac-control-unavailable {
+    opacity: 0.55;
+}
+
+.ac-interactive.ac-keyboard-focus {
+    outline-color: rgba(255, 255, 255, 0.92);
+    outline-width: 2px;
+    outline-offset: 2px;
+}
+
+/* Keep the gold keyboard accent scoped to Home's existing dark palette. */
+.ac-screen-home .ac-interactive.ac-keyboard-focus {
+    outline-color: rgba(243, 185, 95, 0.95);
+}
+
+/* Attract / transition screens respond on their full surface, so use restrained feedback. */
+.ac-touch-surface {
+    opacity: 1;
+}
+
+.ac-touch-surface.ac-hover {
+    opacity: 0.98;
+}
+
+.ac-touch-surface.ac-pressed {
+    opacity: 0.94;
+}
+
+.ac-touch-surface.ac-keyboard-focus {
+    outline-color: rgba(255, 255, 255, 0.92);
+    outline-width: 2px;
+    outline-offset: -3px;
+}
+
+.ac-screen-home .ac-touch-surface.ac-keyboard-focus {
+    outline-color: rgba(243, 185, 95, 0.95);
+}

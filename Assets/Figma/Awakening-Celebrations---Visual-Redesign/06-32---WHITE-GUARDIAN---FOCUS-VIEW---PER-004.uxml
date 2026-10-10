@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss?fileID=7433441132597879392&amp;guid=54520f9c483ff1b418710149640639ee&amp;type=3#tokens"/>
+    <Style src="project://database/Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uss?fileID=7433441132597879392&amp;guid=186d5350d583cda41add12021ba7f881&amp;type=3#06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004"/>
+    <ui:VisualElement style="width: 1920px; height: 1080px; background-color: rgb(7, 10, 14);">
+        <ui:VisualElement style="width: 1100px; height: 1080px; border-width: 1px; border-color: rgba(191, 233, 255, 0.35); background-color: rgba(191, 233, 255, 0.24); position: absolute; left: 0; top: 0;"/>
+        <ui:VisualElement style="width: 820px; height: 1080px; border-width: 1px; border-color: rgba(191, 233, 255, 0.35); background-color: rgba(191, 233, 255, 0.24); position: absolute; left: 1100px; top: 0;"/>
+        <ui:VisualElement style="width: 1190px; height: 900px; border-radius: 36px; border-width: 1px; border-color: rgba(49, 215, 242, 0.35); position: absolute; left: 180px; top: 70px; background-image: url(&quot;project://database/Assets/Art/Figma/PER_WHITE/Approved%20Master%20Image.png?fileID=2800000&amp;guid=6c612b4386bf4f44686341c10a96ae17&amp;type=3#Approved Master Image&quot;);"/>
+        <ui:Label text="PER-004" class="unity-label" style="width: 220px; height: 34px; color: rgb(49, 215, 242); font-size: 12px; white-space: normal; position: absolute; left: 220px; top: 110px;"/>
+        <ui:Label text="核准主影像 / 可編輯填色" class="unity-label" style="width: 600px; height: 28px; color: rgb(174, 171, 164); font-size: 11px; white-space: normal; position: absolute; left: 220px; top: 148px;"/>
+        <ui:Label text="替換為未修改的核准表演者原始素材。保留構圖與辨識度。" class="unity-label" style="width: 760px; height: 52px; color: rgb(174, 171, 164); font-size: 14px; white-space: normal; position: absolute; left: 220px; top: 820px;"/>
+        <ui:VisualElement style="width: 405px; height: 710px; border-radius: 32px; border-width: 1px; border-color: rgba(235, 248, 255, 0.18); background-color: rgba(235, 248, 255, 0.08); position: absolute; left: 1415px; top: 100px;"/>
+        <ui:Label text="表演者 / 聚焦視圖" class="unity-label" style="width: 300px; height: 24px; color: rgb(174, 171, 164); font-size: 11px; white-space: normal; position: absolute; left: 1455px; top: 140px;"/>
+        <ui:Label text="WHITE GUARDIAN" class="unity-label" style="width: 300px; height: 72px; color: rgb(239, 234, 224); font-size: 44px; white-space: normal; position: absolute; left: 1455px; top: 180px;"/>
+        <ui:Label text="大地 / 新生 / 生態記憶" class="unity-label" style="width: 300px; height: 60px; color: rgb(174, 171, 164); font-size: 16px; white-space: normal; position: absolute; left: 1455px; top: 265px;"/>
+        <ui:Label text="表演者主導視覺場域。UI 僅作為詮釋層。" class="unity-label" style="width: 305px; height: 80px; color: rgb(239, 234, 224); font-size: 16px; white-space: normal; position: absolute; left: 1455px; top: 365px;"/>
+        <ui:Label text="來源 / 出處" class="unity-label" style="width: 280px; height: 24px; color: rgb(174, 171, 164); font-size: 11px; white-space: normal; position: absolute; left: 1455px; top: 500px;"/>
+        <ui:Label text="核准原始主影像 · PER-004" class="unity-label" style="width: 300px; height: 54px; color: rgb(174, 171, 164); font-size: 14px; white-space: normal; position: absolute; left: 1455px; top: 535px;"/>
+        <ui:Label text="張開手掌 + 保持 / 返回" class="unity-label" style="width: 320px; height: 30px; color: rgb(49, 215, 242); font-size: 11px; white-space: normal; position: absolute; left: 1455px; top: 735px;"/>
+        <ui:Label text="喚醒慶典" class="unity-label" style="width: 420px; height: 26px; color: rgb(174, 171, 164); font-size: 11px; white-space: normal; position: absolute; left: 72px; top: 48px;"/>
+        <ui:Label text="聚焦" class="unity-label" style="width: 240px; height: 44px; color: rgb(239, 234, 224); font-size: 28px; white-space: normal; position: absolute; left: 72px; top: 78px;"/>
+        <ui:Label text="WHITE GUARDIAN / 聚焦視圖" class="unity-label" style="color: rgb(191, 233, 255); -unity-font-definition: url(&quot;project://database/Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf?fileID=12800000&amp;guid=f129b03ed61794ba68a0ed3044e56031&amp;type=3#Inter-Regular&quot;); font-size: 18px; -unity-font-style: bold; white-space: nowrap; position: absolute; left: 24px; top: 18px;"/>
+    </ui:VisualElement>
+</ui:UXML>

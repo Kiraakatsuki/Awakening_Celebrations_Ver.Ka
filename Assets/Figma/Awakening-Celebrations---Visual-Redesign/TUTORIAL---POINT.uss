@@ -1,0 +1,12 @@
+.gesture-cursor-point {
+    width: 250px;
+    height: 240px;
+    border-radius: 18px;
+    background-color: #121212;
+    color: #EBEBE5;
+    -unity-text-align: middle-center;
+    -unity-font-definition: url("project://database/Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf?fileID=12800000&guid=f129b03ed61794ba68a0ed3044e56031&type=3#Inter-Regular");
+    font-size: 16px;
+    white-space: normal;
+}
+

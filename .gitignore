@@ -1,0 +1,46 @@
+# Unity generated and temporary files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Build output
+[Bb]uild/
+[Bb]uilds/
+[Ee]xport/
+*.apk
+*.aab
+*.app
+*.unitypackage
+
+# IDE and editor-generated files
+.vs/
+.idea/
+.gradle/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Crash reports and temporary files
+sysinfo.txt
+crashlytics-build.properties
+
+# Keep project source, scenes, packages, assets,
+# ProjectSettings, metadata and documentation tracked.
