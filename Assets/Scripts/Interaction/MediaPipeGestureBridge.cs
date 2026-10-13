@@ -31,11 +31,13 @@ namespace AwakeningCelebrations.Interaction
 
         public event Action<GestureRecognitionEvent> GestureDetected;
         public event Action<bool> TrackingChanged;
+        public event Action<bool, Vector2> PointingChanged;
 
         private void Awake()
         {
             recognizer = new GestureRecognitionLayer(settings);
             recognizer.GestureDetected += ForwardGesture;
+            recognizer.PointingChanged += ForwardPointing;
         }
 
         private void OnEnable()
@@ -60,6 +62,7 @@ namespace AwakeningCelebrations.Interaction
             }
             SetTracking(false);
             recognizer?.Reset();
+            PointingChanged?.Invoke(false, Vector2.zero);
         }
 
         private void Update()
@@ -154,6 +157,11 @@ namespace AwakeningCelebrations.Interaction
                 Debug.Log("Gesture recognized: " + gesture.Gesture + direction, this);
             }
             GestureDetected?.Invoke(gesture);
+        }
+
+        private void ForwardPointing(bool isPointing, Vector2 normalizedPosition)
+        {
+            PointingChanged?.Invoke(isPointing, normalizedPosition);
         }
 
         private void SetTracking(bool isTracking)

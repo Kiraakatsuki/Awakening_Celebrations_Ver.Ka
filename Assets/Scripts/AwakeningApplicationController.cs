@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AwakeningCelebrations.Interaction;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -43,6 +44,21 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     [SerializeField] private UIDocument navigationDocument;
     [SerializeField] private RuntimeScreenCatalog screenCatalog;
     [SerializeField] private HomeLanguageController homeController;
+    [SerializeField, Min(0f), Tooltip("The imported Color Release screen has no completion event or duration; this configurable presentation interval is a provisional default.")]
+    private float colorReleasePresentationSeconds = 2f;
+    [SerializeField] private AudioClip environmentalMusicClip;
+    [SerializeField] private AudioSource environmentalMusicSource;
+    [SerializeField, Min(0.1f), Tooltip("Higher values make the gesture cursor catch up faster to the tracked fingertip.")]
+    private float gestureCursorSmoothingSpeed = 16f;
+    [SerializeField, Tooltip("The requirements identify a prepared environmental rhythm layer but do not specify repeat/stop behavior. Choose the desired behavior when assigning the approved clip.")]
+    private EnvironmentalMusicMode environmentalMusicMode = EnvironmentalMusicMode.LoopUntilStopped;
+
+    private enum EnvironmentalMusicMode
+    {
+        PlayOnce,
+        LoopUntilStopped,
+        Toggle
+    }
 
     private readonly Stack<RouteState> backStack = new Stack<RouteState>();
     private readonly List<Action> screenUnbind = new List<Action>();
@@ -54,9 +70,33 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private int selectedPerformer = -1;
     private bool consentAccepted;
     private bool hasAwakenedThisSession;
+    private bool awakeningSequenceCompletedThisSession;
+    private bool waveCompleted;
+    private bool clapCompleted;
+    private bool warnedMissingEnvironmentalMusic;
+    private MediaPipeGestureBridge gestureBridge;
+    private bool gestureBridgeSubscribed;
+    private float nextGestureBridgeSearchTime;
+    private bool warnedMissingGestureBridge;
+    private int targetedPerformer = -1;
+    private VisualElement[] performerTargets;
+    private Coroutine colorReleaseRoutine;
+    private bool transitionInProgress;
     private ManifestSnapshot nodeSnapshot;
     private StyleSheet interactionStyles;
     private bool interactionStylesAdded;
+    private GestureCursorController gestureCursor;
+
+    private enum InteractionCommand
+    {
+        WaveCompleted,
+        ClapCompleted,
+        ColorAwakeningCompleted,
+        ConfirmPerformer,
+        ActivateLivingPortrait,
+        AdvanceStage,
+        BackRequested
+    }
 
     public string CurrentScreen { get { return currentScreen; } }
     public AppLanguage Language { get { return language; } }
@@ -100,6 +140,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void Awake()
     {
+        gestureCursor = new GestureCursorController(gestureCursorSmoothingSpeed);
+        GestureCameraConsentGate.SetConsent(false);
         if (screenCatalog == null)
             screenCatalog = Resources.Load<RuntimeScreenCatalog>("RuntimeScreenCatalog");
         TextAsset snapshot = Resources.Load<TextAsset>("RuntimeNodeBindings");
@@ -136,16 +178,32 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         HomeLanguageController.SettingsRequested += OnSettingsRequested;
         HomeLanguageController.ReviewConsentRequested += OnReviewConsentRequested;
         HomeLanguageController.ConsentChanged += OnConsentChanged;
+        TryConnectGestureBridge();
     }
 
     private void OnDisable()
     {
+        GestureCameraConsentGate.SetConsent(false);
+        StopEnvironmentalMusic();
         HomeLanguageController.LanguageChanged -= OnLanguageChanged;
         HomeLanguageController.PrivacyRequested -= OnPrivacyRequested;
         HomeLanguageController.SettingsRequested -= OnSettingsRequested;
         HomeLanguageController.ReviewConsentRequested -= OnReviewConsentRequested;
         HomeLanguageController.ConsentChanged -= OnConsentChanged;
+        if (gestureBridge != null)
+        {
+            gestureBridge.GestureDetected -= OnGestureDetected;
+            gestureBridge.PointingChanged -= OnPointingChanged;
+            gestureBridge.TrackingChanged -= OnTrackingChanged;
+            gestureBridgeSubscribed = false;
+        }
         ClearBindings(screenUnbind);
+        if (colorReleaseRoutine != null)
+        {
+            StopCoroutine(colorReleaseRoutine);
+            colorReleaseRoutine = null;
+        }
+        transitionInProgress = false;
         while (overlays.Count > 0)
             CloseTopOverlay();
     }
@@ -162,6 +220,200 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
         if (homeController != null)
             homeController.SetHomeVisible(true);
+
+        if (gestureBridge == null && !warnedMissingGestureBridge)
+        {
+            warnedMissingGestureBridge = true;
+            Debug.LogWarning("No MediaPipeGestureBridge is loaded. Gesture input will connect automatically when the existing Hand Landmarker sample scene is loaded.", this);
+        }
+    }
+
+    private void Update()
+    {
+        gestureCursor?.Tick(Time.unscaledDeltaTime);
+        if (gestureBridge == null && Time.unscaledTime >= nextGestureBridgeSearchTime)
+        {
+            nextGestureBridgeSearchTime = Time.unscaledTime + 1f;
+            TryConnectGestureBridge();
+        }
+    }
+
+    private void TryConnectGestureBridge()
+    {
+        MediaPipeGestureBridge availableBridge = FindObjectOfType<MediaPipeGestureBridge>(true);
+        if (availableBridge == null)
+            return;
+
+        if (gestureBridge != availableBridge)
+        {
+            if (gestureBridge != null && gestureBridgeSubscribed)
+            {
+                gestureBridge.GestureDetected -= OnGestureDetected;
+                gestureBridge.PointingChanged -= OnPointingChanged;
+                gestureBridge.TrackingChanged -= OnTrackingChanged;
+            }
+            gestureBridgeSubscribed = false;
+            gestureBridge = availableBridge;
+        }
+        if (!gestureBridgeSubscribed)
+        {
+            gestureBridge.GestureDetected += OnGestureDetected;
+            gestureBridge.PointingChanged += OnPointingChanged;
+            gestureBridge.TrackingChanged += OnTrackingChanged;
+            gestureBridgeSubscribed = true;
+            Debug.Log("AwakeningApplicationController connected to MediaPipe gesture events.", this);
+        }
+    }
+
+    private void OnGestureDetected(GestureRecognitionEvent gesture)
+    {
+        switch (gesture.Gesture)
+        {
+            case SemanticGesture.Wave:
+                HandleInteractionCommand(InteractionCommand.WaveCompleted);
+                break;
+            case SemanticGesture.Clap:
+                HandleInteractionCommand(InteractionCommand.ClapCompleted);
+                break;
+            case SemanticGesture.Point:
+                break;
+            case SemanticGesture.Fist:
+                if (!transitionInProgress)
+                    gestureCursor?.ClickAtCurrentPosition();
+                break;
+            case SemanticGesture.BothHandsRaised:
+                HandleInteractionCommand(InteractionCommand.ActivateLivingPortrait);
+                break;
+            case SemanticGesture.OpenPalmHeld:
+                HandleInteractionCommand(InteractionCommand.BackRequested);
+                break;
+        }
+    }
+
+    private void OnPointingChanged(bool isPointing, Vector2 normalizedPosition)
+    {
+        gestureCursor?.SetPointing(isPointing, normalizedPosition);
+    }
+
+    private void OnTrackingChanged(bool isTracking)
+    {
+        if (!isTracking)
+            gestureCursor?.ClearPosition();
+    }
+
+    private void HandleInteractionCommand(InteractionCommand command)
+    {
+        if (transitionInProgress)
+            return;
+
+        if (command == InteractionCommand.BackRequested)
+        {
+            if (currentScreen != HomeScreen)
+            {
+                Debug.Log("Back requested from " + currentScreen + ".", this);
+                Back();
+            }
+            return;
+        }
+
+        switch (command)
+        {
+            case InteractionCommand.WaveCompleted:
+                if (currentScreen != AttractScreen)
+                    return;
+                if (hasAwakenedThisSession)
+                {
+                    Navigate(PerformerSelectScreen, language, true);
+                    return;
+                }
+                if (!consentAccepted || waveCompleted || !Navigate(ColorReleaseScreen, language, true))
+                    return;
+                waveCompleted = true;
+                hasAwakenedThisSession = true;
+                Debug.Log("Wave completed the initial color awakening.", this);
+                break;
+
+            case InteractionCommand.ClapCompleted:
+                if (!hasAwakenedThisSession || currentScreen == HomeScreen || currentScreen == PrivacyScreen || ArrayIndexOf(TutorialScreens, currentScreen) >= 0)
+                    return;
+                PlayEnvironmentalMusic();
+                if (currentScreen == ColorReleaseScreen && !clapCompleted)
+                {
+                    clapCompleted = true;
+                    colorReleaseRoutine = StartCoroutine(CompleteColorReleaseAfterPresentation());
+                }
+                break;
+
+            case InteractionCommand.ColorAwakeningCompleted:
+                if (currentScreen != ColorReleaseScreen || !hasAwakenedThisSession || !clapCompleted)
+                    return;
+                colorReleaseRoutine = null;
+                if (Navigate(PerformerSelectScreen, language, true))
+                    awakeningSequenceCompletedThisSession = true;
+                break;
+
+            case InteractionCommand.ConfirmPerformer:
+                if (currentScreen == PerformerSelectScreen && targetedPerformer >= 0)
+                {
+                    Debug.Log("Performer confirmed: " + Performers[targetedPerformer] + ".", this);
+                    SelectPerformer(targetedPerformer, false);
+                }
+                break;
+
+            case InteractionCommand.ActivateLivingPortrait:
+                if (IsPerformerStage(currentScreen, out int activationPerformer, out int activationStage) && activationStage <= 1)
+                {
+                    Debug.Log("Both hands raised for " + Performers[activationPerformer] + " on " + Stages[activationStage] + ".", this);
+                    AdvancePerformerStage(activationPerformer, activationStage);
+                }
+                break;
+
+            case InteractionCommand.AdvanceStage:
+                if (currentScreen == AttractScreen)
+                {
+                    HandleInteractionCommand(InteractionCommand.WaveCompleted);
+                }
+                else if (currentScreen == ColorReleaseScreen)
+                {
+                    HandleInteractionCommand(InteractionCommand.ColorAwakeningCompleted);
+                }
+                else if (IsPerformerStage(currentScreen, out int performer, out int stage))
+                {
+                    if (stage <= 1)
+                        HandleInteractionCommand(InteractionCommand.ActivateLivingPortrait);
+                    else
+                        AdvancePerformerStage(performer, stage);
+                }
+                break;
+        }
+    }
+
+    private IEnumerator CompleteColorReleaseAfterPresentation()
+    {
+        yield return new WaitForSecondsRealtime(colorReleasePresentationSeconds);
+        if (currentScreen == ColorReleaseScreen && hasAwakenedThisSession && clapCompleted)
+            HandleInteractionCommand(InteractionCommand.ColorAwakeningCompleted);
+    }
+
+    private void SetTargetedPerformer(int index)
+    {
+        if (index < -1 || index >= Performers.Length || targetedPerformer == index)
+            return;
+        if (performerTargets != null && targetedPerformer >= 0 && targetedPerformer < performerTargets.Length && performerTargets[targetedPerformer] != null)
+            performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
+        targetedPerformer = index;
+        if (index >= 0 && performerTargets != null && index < performerTargets.Length && performerTargets[index] != null)
+            performerTargets[index].AddToClassList("ac-performer-targeted");
+        if (index >= 0)
+            Debug.Log("Performer targeted: " + Performers[index] + ".", this);
+    }
+
+    private void ClearTargetedPerformer()
+    {
+        if (performerTargets != null && targetedPerformer >= 0 && targetedPerformer < performerTargets.Length && performerTargets[targetedPerformer] != null)
+            performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
+        targetedPerformer = -1;
+        performerTargets = null;
     }
 
     private void OnLanguageChanged(AppLanguage selectedLanguage)
@@ -183,6 +435,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private void OnConsentChanged(bool accepted)
     {
         consentAccepted = accepted;
+        if (!accepted)
+            GestureCameraConsentGate.SetConsent(false);
     }
 
     private void OnPrivacyRequested()
@@ -202,6 +456,20 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     public bool Navigate(string screenId, AppLanguage targetLanguage, bool recordHistory, bool preserveHistory = false)
     {
+        if (transitionInProgress)
+            return false;
+        if (hasAwakenedThisSession && (screenId == HomeScreen || screenId == AttractScreen || screenId == ColorReleaseScreen || ArrayIndexOf(TutorialScreens, screenId) >= 0))
+        {
+            screenId = PerformerSelectScreen;
+            recordHistory = false;
+            preserveHistory = true;
+        }
+        if (screenId == AttractScreen && !consentAccepted)
+        {
+            GestureCameraConsentGate.SetConsent(false);
+            Debug.LogWarning("The Attract experience cannot start until consent is accepted.", this);
+            return false;
+        }
         VisualTreeAsset asset;
         if (screenCatalog == null || !screenCatalog.TryGet(screenId, targetLanguage, out asset))
         {
@@ -211,6 +479,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (navigationDocument == null)
             return false;
 
+        transitionInProgress = true;
+
+        if (currentScreen == ColorReleaseScreen && screenId != ColorReleaseScreen && colorReleaseRoutine != null)
+        {
+            StopCoroutine(colorReleaseRoutine);
+            colorReleaseRoutine = null;
+        }
+        ClearTargetedPerformer();
         while (overlays.Count > 0)
             CloseTopOverlay();
         if (recordHistory && currentScreen != HomeScreen)
@@ -226,14 +502,42 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         currentScreen = screenId;
         activeBindingScreen = screenId;
         language = targetLanguage;
+        bool cameraAllowed = consentAccepted && (screenId == AttractScreen || screenId == ColorReleaseScreen || screenId == PerformerSelectScreen || IsPerformerStage(screenId, out _, out _) || (hasAwakenedThisSession && (screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY")));
+        GestureCameraConsentGate.SetConsent(cameraAllowed);
+        if (!cameraAllowed)
+            gestureCursor?.ClearPosition();
         if (homeController != null)
             homeController.SetHomeVisible(false);
         BindCurrentScreen();
+        StartCoroutine(ReleaseTransitionLockNextFrame());
         return true;
+    }
+
+    private IEnumerator ReleaseTransitionLockNextFrame()
+    {
+        yield return null;
+        transitionInProgress = false;
     }
 
     public void ShowHome(bool recordHistory)
     {
+        if (hasAwakenedThisSession)
+        {
+            if (currentScreen != PerformerSelectScreen)
+                Navigate(PerformerSelectScreen, language, false);
+            return;
+        }
+        if (transitionInProgress)
+            return;
+        transitionInProgress = true;
+        if (colorReleaseRoutine != null)
+        {
+            StopCoroutine(colorReleaseRoutine);
+            colorReleaseRoutine = null;
+        }
+        ClearTargetedPerformer();
+        GestureCameraConsentGate.SetConsent(false);
+        StopEnvironmentalMusic();
         if (recordHistory && currentScreen != HomeScreen)
             backStack.Push(new RouteState { screen = currentScreen, language = language });
         else if (!recordHistory)
@@ -247,13 +551,64 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         activeBindingScreen = HomeScreen;
         if (homeController != null)
             homeController.SetHomeVisible(true);
+        StartCoroutine(ReleaseTransitionLockNextFrame());
+    }
+
+    private void ReturnHomeFromDone()
+    {
+        if (transitionInProgress)
+            return;
+
+        transitionInProgress = true;
+        if (colorReleaseRoutine != null)
+        {
+            StopCoroutine(colorReleaseRoutine);
+            colorReleaseRoutine = null;
+        }
+        ClearTargetedPerformer();
+        backStack.Clear();
+        GestureCameraConsentGate.SetConsent(false);
+        gestureCursor?.ClearPosition();
+        StopEnvironmentalMusic();
+        ClearBindings(screenUnbind);
+        while (overlays.Count > 0)
+            CloseTopOverlay();
+        if (navigationDocument != null)
+            navigationDocument.enabled = false;
+        currentScreen = HomeScreen;
+        activeBindingScreen = HomeScreen;
+        if (homeController != null)
+            homeController.SetHomeVisible(true);
+        StartCoroutine(ReleaseTransitionLockNextFrame());
     }
 
     public void Back()
     {
+        if (!awakeningSequenceCompletedThisSession)
+            return;
         if (overlays.Count > 0)
         {
             CloseTopOverlay();
+            return;
+        }
+        if (hasAwakenedThisSession)
+        {
+            if (currentScreen == ColorReleaseScreen && !clapCompleted)
+                return;
+            if (currentScreen == PerformerSelectScreen)
+                return;
+
+            while (backStack.Count > 0)
+            {
+                RouteState candidate = backStack.Pop();
+                if (!IsAllowedPostAwakeningBackTarget(candidate.screen))
+                    continue;
+
+                Navigate(candidate.screen, candidate.language, false, true);
+                return;
+            }
+
+            Navigate(PerformerSelectScreen, language, false);
             return;
         }
         if (backStack.Count == 0)
@@ -275,6 +630,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             return;
 
         activeBindingScreen = currentScreen;
+        gestureCursor?.Attach(root);
         root.AddToClassList("ac-screen-runtime");
         root.AddToClassList("ac-interactive");
         EventCallback<FocusInEvent> rootFocusIn = evt => root.AddToClassList("ac-keyboard-focus");
@@ -353,7 +709,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
         if (currentScreen == AttractScreen)
         {
-            Action advance = () => Navigate(hasAwakenedThisSession ? PerformerSelectScreen : ColorReleaseScreen, language, true);
+            Action advance = () => HandleInteractionCommand(InteractionCommand.AdvanceStage);
             RegisterClick(root, advance, screenUnbind);
             RegisterKeyOnRoot(root, advance, screenUnbind);
             FocusFirstFocusable(root);
@@ -361,13 +717,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
         if (currentScreen == ColorReleaseScreen)
         {
-            Action completeAwakening = () =>
-            {
-                hasAwakenedThisSession = true;
-                Navigate(PerformerSelectScreen, language, true);
-            };
-            RegisterClick(root, completeAwakening, screenUnbind);
-            RegisterKeyOnRoot(root, completeAwakening, screenUnbind);
+            Action clap = () => HandleInteractionCommand(InteractionCommand.ClapCompleted);
+            RegisterClick(root, clap, screenUnbind);
+            RegisterKeyOnRoot(root, clap, screenUnbind);
             FocusFirstFocusable(root);
             return;
         }
@@ -409,7 +761,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             BindPath(root, "1/7/35", "Label", privacyId, () => Navigate(PrivacyScreen, language, true), screenUnbind, false);
             BindPath(root, "1/8/4", "VisualElement", assistantSurfaceId, () => Navigate(AssistantChooserScreen, language, true), screenUnbind);
             BindPath(root, "1/8/5", "Label", assistantId, () => Navigate(AssistantChooserScreen, language, true), screenUnbind, false);
-            BindPath(root, "1/9", "Label", backId, () => Navigate(PerformerSelectScreen, language, false), screenUnbind);
+            BindPath(root, "1/9", "Label", backId, () => HandleInteractionCommand(InteractionCommand.BackRequested), screenUnbind);
             FocusFirstFocusable(root);
             return;
         }
@@ -441,7 +793,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 Debug.LogError("Could not derive the verified stage action node for " + currentScreen + ".", this);
                 return;
             }
-            Action advanceStage = () => AdvancePerformerStage(performer, stage);
+            Action advanceStage = () => HandleInteractionCommand(InteractionCommand.AdvanceStage);
             BindPath(root, actionPath, "Label", nodeId, advanceStage, screenUnbind);
             RegisterKeyOnRoot(root, advanceStage, screenUnbind);
             FocusFirstFocusable(root);
@@ -460,14 +812,19 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
         if (currentScreen == "SOUVENIR---QR-DELIVERY")
         {
-            BindPath(root, "1/7/7", "VisualElement", language == AppLanguage.English ? "124:5431" : "124:5510", () => Navigate(PerformerSelectScreen, language, false), screenUnbind);
-            BindPath(root, "1/7/8", "Label", language == AppLanguage.English ? "124:5432" : "124:5511", () => Navigate(PerformerSelectScreen, language, false), screenUnbind, false);
+            BindPath(root, "1/7/7", "VisualElement", language == AppLanguage.English ? "124:5431" : "124:5510", ReturnHomeFromDone, screenUnbind);
+            BindPath(root, "1/7/8", "Label", language == AppLanguage.English ? "124:5432" : "124:5511", ReturnHomeFromDone, screenUnbind, false);
         }
         FocusFirstFocusable(root);
     }
 
     private void ContinueFromPrivacy()
     {
+        if (hasAwakenedThisSession)
+        {
+            Navigate(PerformerSelectScreen, language, false);
+            return;
+        }
         if (!consentAccepted)
         {
             Debug.LogWarning("Consent is required before continuing. Return Home and select the consent checkbox first.", this);
@@ -476,21 +833,119 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         Navigate(TutorialScreens[0], language, true);
     }
 
+    private bool IsAllowedPostAwakeningBackTarget(string screenId)
+    {
+        return screenId == PerformerSelectScreen || screenId == SettingsScreen || screenId == AssistantChooserScreen ||
+            screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY" ||
+            IsPerformerStage(screenId, out _, out _);
+    }
+
+    private void PlayEnvironmentalMusic()
+    {
+        if (environmentalMusicClip == null)
+        {
+            if (!warnedMissingEnvironmentalMusic)
+            {
+                warnedMissingEnvironmentalMusic = true;
+                Debug.LogWarning("Clap was accepted, but no approved environmental music clip is assigned.", this);
+            }
+            return;
+        }
+
+        if (environmentalMusicSource == null)
+            environmentalMusicSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
+
+        environmentalMusicSource.playOnAwake = false;
+        environmentalMusicSource.clip = environmentalMusicClip;
+        if (environmentalMusicMode == EnvironmentalMusicMode.Toggle && environmentalMusicSource.isPlaying)
+        {
+            environmentalMusicSource.Stop();
+            return;
+        }
+        if (environmentalMusicMode == EnvironmentalMusicMode.LoopUntilStopped)
+            environmentalMusicSource.loop = true;
+        else
+            environmentalMusicSource.loop = false;
+
+        if (environmentalMusicSource.isPlaying)
+            return;
+        if (environmentalMusicMode == EnvironmentalMusicMode.PlayOnce)
+            environmentalMusicSource.PlayOneShot(environmentalMusicClip);
+        else
+            environmentalMusicSource.Play();
+    }
+
+    private void StopEnvironmentalMusic()
+    {
+        if (environmentalMusicSource != null && environmentalMusicSource.isPlaying)
+            environmentalMusicSource.Stop();
+    }
+
     private void BindPerformerChoices(VisualElement root, bool assistantChoice, List<Action> cleanup)
     {
+        if (!assistantChoice)
+            performerTargets = new VisualElement[Performers.Length];
+
         for (int i = 0; i < Performers.Length; i++)
         {
             int performerIndex = i;
             string surfacePath = "1/" + (5 + (i * 3));
             string labelPath = "1/" + (6 + (i * 3));
+            string cuePath = "1/" + (7 + (i * 3));
             int surfaceNode = (assistantChoice
                 ? (language == AppLanguage.English ? 5166 : 5194)
                 : (language == AppLanguage.English ? 3872 : 3900)) + (i * 3);
             int labelNode = surfaceNode + 1;
-            BindPath(root, surfacePath, "VisualElement", "124:" + surfaceNode, () => SelectPerformer(performerIndex, assistantChoice), cleanup);
-            BindPath(root, labelPath, "Label", "124:" + labelNode, () => SelectPerformer(performerIndex, assistantChoice), cleanup, false);
-            BindPath(root, "1/" + (7 + (i * 3)), "Label", "124:" + (labelNode + 1), () => SelectPerformer(performerIndex, assistantChoice), cleanup, false);
+            Action activate = () =>
+            {
+                if (assistantChoice)
+                {
+                    SelectPerformer(performerIndex, true);
+                    return;
+                }
+                SetTargetedPerformer(performerIndex);
+                HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
+            };
+            BindPath(root, surfacePath, "VisualElement", "124:" + surfaceNode, activate, cleanup);
+            BindPath(root, labelPath, "Label", "124:" + labelNode, activate, cleanup, false);
+            BindPath(root, cuePath, "Label", "124:" + (labelNode + 1), activate, cleanup, false);
+
+            if (!assistantChoice)
+            {
+                VisualElement surface;
+                if (IsVerifiedPerformerNode(surfacePath, "VisualElement", "124:" + surfaceNode) &&
+                    TryResolvePath(root, surfacePath, out surface))
+                {
+                    performerTargets[performerIndex] = surface;
+                    RegisterTargetHover(surface, performerIndex, cleanup);
+                }
+                VisualElement label;
+                if (IsVerifiedPerformerNode(labelPath, "Label", "124:" + labelNode) &&
+                    TryResolvePath(root, labelPath, out label))
+                    RegisterTargetHover(label, performerIndex, cleanup);
+                VisualElement cue;
+                if (IsVerifiedPerformerNode(cuePath, "Label", "124:" + (labelNode + 1)) &&
+                    TryResolvePath(root, cuePath, out cue))
+                    RegisterTargetHover(cue, performerIndex, cleanup);
+            }
         }
+    }
+
+    private bool IsVerifiedPerformerNode(string path, string expectedTag, string figmaNodeId)
+    {
+        string ownerRootNodeId;
+        ManifestNode mapping = FindManifestNode(figmaNodeId, out ownerRootNodeId);
+        RuntimeScreenCatalog.Entry ownerEntry;
+        return mapping != null && mapping.path == path && mapping.tag == expectedTag &&
+               screenCatalog != null && screenCatalog.TryGetEntry(PerformerSelectScreen, language, out ownerEntry) &&
+               ownerEntry.figmaRootNodeId == ownerRootNodeId;
+    }
+
+    private void RegisterTargetHover(VisualElement element, int index, List<Action> cleanup)
+    {
+        EventCallback<PointerEnterEvent> pointerEnter = evt => SetTargetedPerformer(index);
+        element.RegisterCallback(pointerEnter);
+        cleanup.Add(() => element.UnregisterCallback(pointerEnter));
     }
 
     private void SelectPerformer(int index, bool openAssistant)
@@ -921,11 +1376,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             if (evt.keyCode == KeyCode.Escape || (evt.keyCode == KeyCode.Backspace && !(evt.target is TextField)))
             {
                 evt.StopPropagation();
-                Back();
+                HandleInteractionCommand(InteractionCommand.BackRequested);
             }
             else if (currentScreen == PerformerSelectScreen && (int)evt.keyCode >= (int)KeyCode.Alpha1 && (int)evt.keyCode <= (int)KeyCode.Alpha6)
             {
-                SelectPerformer((int)evt.keyCode - (int)KeyCode.Alpha1, false);
+                SetTargetedPerformer((int)evt.keyCode - (int)KeyCode.Alpha1);
+                HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
             }
             else if (currentScreen == AssistantChooserScreen && (int)evt.keyCode >= (int)KeyCode.Alpha1 && (int)evt.keyCode <= (int)KeyCode.Alpha6)
             {

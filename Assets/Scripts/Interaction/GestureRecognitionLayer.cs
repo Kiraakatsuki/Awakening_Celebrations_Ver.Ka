@@ -21,13 +21,17 @@ namespace AwakeningCelebrations.Interaction
         // Normalized direction in the image passed to Hand Landmarker (x right, y down).
         // The runner may flip that image, so this is not necessarily physical camera space.
         public readonly Vector2 PointDirection;
+        // Normalized index fingertip position in the transformed input image.
+        public readonly Vector2 PointPosition;
         public readonly double TimestampSeconds;
 
-        public GestureRecognitionEvent(SemanticGesture gesture, string handedness, Vector2 pointDirection, double timestampSeconds)
+        public GestureRecognitionEvent(SemanticGesture gesture, string handedness, Vector2 pointDirection,
+            Vector2 pointPosition, double timestampSeconds)
         {
             Gesture = gesture;
             Handedness = handedness;
             PointDirection = pointDirection;
+            PointPosition = pointPosition;
             TimestampSeconds = timestampSeconds;
         }
     }
@@ -111,8 +115,12 @@ namespace AwakeningCelebrations.Interaction
         private bool clapLatched;
         private bool hasValidHands;
         private double lastValidHandsTime;
+        private string pointingHandId;
+        private double pointingStarted;
+        private bool pointing;
 
         public event Action<GestureRecognitionEvent> GestureDetected;
+        public event Action<bool, Vector2> PointingChanged;
 
         public GestureRecognitionLayer(GestureRecognitionSettings settings)
         {
@@ -123,6 +131,9 @@ namespace AwakeningCelebrations.Interaction
         {
             if (hands == null || hands.Count == 0)
             {
+                pointingHandId = null;
+                pointingStarted = 0;
+                SetPointing(false, Vector2.zero);
                 if (hasValidHands && timestampSeconds - lastValidHandsTime >= settings.trackingLossResetSeconds)
                 {
                     ResetTrackingState();
@@ -154,6 +165,7 @@ namespace AwakeningCelebrations.Interaction
             ProcessClap(analyzedHands, timestampSeconds);
             ProcessBothHandsRaised(analyzedHands, timestampSeconds);
             RemoveMissingHands(analyzedHands, timestampSeconds);
+            UpdatePointing(analyzedHands, timestampSeconds);
         }
 
         public void Reset()
@@ -164,6 +176,9 @@ namespace AwakeningCelebrations.Interaction
             clapHasPreviousDistance = false;
             clapLatched = false;
             hasValidHands = false;
+            pointingHandId = null;
+            pointingStarted = 0;
+            SetPointing(false, Vector2.zero);
         }
 
         private HandPose Analyze(TrackedHand hand)
@@ -201,7 +216,7 @@ namespace AwakeningCelebrations.Interaction
             }
 
             return new HandPose(hand.Id, p, palmCenter, palmWidth, openPalm, fist, point, direction,
-                p[Wrist].y <= settings.raisedWristMaximumY);
+                p[IndexTip], p[Wrist].y <= settings.raisedWristMaximumY);
         }
 
         private bool IsFingerCurled(Vector2[] points, int tip, int pip, Vector2 palmCenter)
@@ -212,7 +227,7 @@ namespace AwakeningCelebrations.Interaction
         private void ProcessSingleHandGestures(HandPose hand, double now)
         {
             ProcessPose(hand.Id, "point", hand.Point, SemanticGesture.Point, now, settings.poseDwellSeconds,
-                hand.PointDirection, hand.Points[Wrist]);
+                hand.PointDirection, hand.Points[Wrist], targetPosition: hand.PointPosition);
             ProcessPose(hand.Id, "fist", hand.Fist, SemanticGesture.Fist, now, settings.poseDwellSeconds,
                 Vector2.zero, hand.Points[Wrist]);
             ProcessPose(hand.Id, "open-palm-held", hand.OpenPalm, SemanticGesture.OpenPalmHeld, now,
@@ -221,7 +236,8 @@ namespace AwakeningCelebrations.Interaction
         }
 
         private void ProcessPose(string identity, string poseKey, bool active, SemanticGesture gesture,
-            double now, float dwell, Vector2 direction, Vector2 anchor, float maximumDrift = float.PositiveInfinity)
+            double now, float dwell, Vector2 direction, Vector2 anchor,
+            float maximumDrift = float.PositiveInfinity, Vector2 targetPosition = default)
         {
             var key = identity + ":" + poseKey;
             if (!active)
@@ -269,7 +285,7 @@ namespace AwakeningCelebrations.Interaction
             }
 
             state.Emitted = true;
-            Emit(gesture, identity == "global" ? string.Empty : identity, direction, now);
+            Emit(gesture, identity == "global" ? string.Empty : identity, direction, targetPosition, now);
         }
 
         private void ProcessWave(HandPose hand, double now)
@@ -291,7 +307,7 @@ namespace AwakeningCelebrations.Interaction
                 history.HorizontalRange >= settings.waveMinimumHorizontalTravel &&
                 CooldownElapsed(SemanticGesture.Wave, now))
             {
-                Emit(SemanticGesture.Wave, hand.Id, Vector2.zero, now);
+                Emit(SemanticGesture.Wave, hand.Id, Vector2.zero, Vector2.zero, now);
                 history.Clear(now, hand.Points[Wrist].x);
             }
         }
@@ -320,7 +336,7 @@ namespace AwakeningCelebrations.Interaction
                 distanceInPalmWidths <= settings.clapContactDistancePalmWidths &&
                 CooldownElapsed(SemanticGesture.Clap, now))
             {
-                Emit(SemanticGesture.Clap, string.Empty, Vector2.zero, now);
+                Emit(SemanticGesture.Clap, string.Empty, Vector2.zero, Vector2.zero, now);
                 clapLatched = true;
                 clapArmed = false;
             }
@@ -342,6 +358,42 @@ namespace AwakeningCelebrations.Interaction
 
             ProcessPose("global", "both-hands-raised", raisedCount >= 2 && !clapLatched,
                 SemanticGesture.BothHandsRaised, now, settings.poseDwellSeconds, Vector2.zero, Vector2.zero);
+        }
+
+        private void UpdatePointing(List<HandPose> hands, double now)
+        {
+            for (var i = 0; i < hands.Count; i++)
+            {
+                var hand = hands[i];
+                if (!hand.Point)
+                {
+                    continue;
+                }
+
+                if (pointingHandId != hand.Id)
+                {
+                    pointingHandId = hand.Id;
+                    pointingStarted = now;
+                }
+
+                SetPointing(now - pointingStarted >= settings.poseDwellSeconds, hand.PointPosition);
+                return;
+            }
+
+            pointingHandId = null;
+            pointingStarted = 0;
+            SetPointing(false, Vector2.zero);
+        }
+
+        private void SetPointing(bool isPointing, Vector2 position)
+        {
+            if (pointing == isPointing && !isPointing)
+            {
+                return;
+            }
+
+            pointing = isPointing;
+            PointingChanged?.Invoke(isPointing, position);
         }
 
         private void RemoveMissingHands(List<HandPose> hands, double now)
@@ -378,10 +430,10 @@ namespace AwakeningCelebrations.Interaction
             return !lastEmitted.TryGetValue(gesture, out var last) || now - last >= settings.eventCooldownSeconds;
         }
 
-        private void Emit(SemanticGesture gesture, string handId, Vector2 direction, double now)
+        private void Emit(SemanticGesture gesture, string handId, Vector2 direction, Vector2 position, double now)
         {
             lastEmitted[gesture] = now;
-            GestureDetected?.Invoke(new GestureRecognitionEvent(gesture, handId, direction, now));
+            GestureDetected?.Invoke(new GestureRecognitionEvent(gesture, handId, direction, position, now));
         }
 
         private void ResetTrackingState()
@@ -392,6 +444,9 @@ namespace AwakeningCelebrations.Interaction
             clapHasPreviousDistance = false;
             clapLatched = false;
             hasValidHands = false;
+            pointingHandId = null;
+            pointingStarted = 0;
+            SetPointing(false, Vector2.zero);
         }
 
         private readonly struct HandPose
@@ -404,10 +459,11 @@ namespace AwakeningCelebrations.Interaction
             public readonly bool Fist;
             public readonly bool Point;
             public readonly Vector2 PointDirection;
+            public readonly Vector2 PointPosition;
             public readonly bool Raised;
 
             public HandPose(string id, Vector2[] points, Vector2 palmCenter, float palmWidth,
-                bool openPalm, bool fist, bool point, Vector2 pointDirection, bool raised)
+                bool openPalm, bool fist, bool point, Vector2 pointDirection, Vector2 pointPosition, bool raised)
             {
                 Id = id;
                 Points = points;
@@ -417,6 +473,7 @@ namespace AwakeningCelebrations.Interaction
                 Fist = fist;
                 Point = point;
                 PointDirection = pointDirection;
+                PointPosition = pointPosition;
                 Raised = raised;
             }
         }

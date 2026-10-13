@@ -19,6 +19,23 @@
     opacity: 0.55;
 }
 
+.ac-performer-targeted {
+    outline-color: rgba(243, 185, 95, 0.98);
+    outline-width: 4px;
+    outline-offset: 3px;
+}
+
+.ac-awakening-progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 38px;
+    height: 32px;
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 16px;
+    unity-text-align: middle-center;
+}
+
 .ac-interactive.ac-keyboard-focus {
     outline-color: rgba(255, 255, 255, 0.92);
     outline-width: 2px;

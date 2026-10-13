@@ -6,6 +6,7 @@
 
 using System.Collections;
 using System;
+using AwakeningCelebrations.Interaction;
 using Mediapipe.Tasks.Vision.HandLandmarker;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -17,6 +18,9 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     [SerializeField] private HandLandmarkerResultAnnotationController _handLandmarkerResultAnnotationController;
 
     private Experimental.TextureFramePool _textureFramePool;
+    private bool bootstrapReady;
+    private bool pipelineStarted;
+    private bool imageSourcePrepared;
 
     public readonly HandLandmarkDetectionConfig config = new HandLandmarkDetectionConfig();
 
@@ -26,8 +30,79 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     /// </summary>
     public event Action<HandLandmarkerResult> ResultReceived;
 
+    protected override IEnumerator Start()
+    {
+      yield return new WaitUntil(() => GestureCameraConsentGate.ConsentGranted);
+      bootstrap = FindBootstrap();
+      yield return new WaitUntil(() => bootstrap != null && bootstrap.isFinished);
+      bootstrapReady = true;
+      ApplyCameraConsent(GestureCameraConsentGate.ConsentGranted);
+    }
+
+    private void OnEnable()
+    {
+      if (!GestureCameraConsentGate.Register(this))
+      {
+        enabled = false;
+      }
+    }
+
+    private void OnDisable()
+    {
+      GestureCameraConsentGate.Unregister(this);
+    }
+
+    public void ApplyCameraConsent(bool consentGranted)
+    {
+      if (!consentGranted)
+      {
+        if (pipelineStarted)
+        {
+          Stop();
+        }
+        return;
+      }
+
+      if (bootstrapReady && !pipelineStarted && isActiveAndEnabled)
+      {
+        Play();
+      }
+    }
+
+    public override void Play()
+    {
+      if (!bootstrapReady || !GestureCameraConsentGate.ConsentGranted)
+        return;
+
+      base.Play();
+      pipelineStarted = true;
+    }
+
+    public override void Pause()
+    {
+      if (pipelineStarted && imageSourcePrepared)
+      {
+        base.Pause();
+      }
+    }
+
+    public override void Resume()
+    {
+      if (pipelineStarted && imageSourcePrepared && GestureCameraConsentGate.ConsentGranted)
+      {
+        base.Resume();
+      }
+    }
+
     public override void Stop()
     {
+      if (!pipelineStarted)
+      {
+        return;
+      }
+
+      pipelineStarted = false;
+      imageSourcePrepared = false;
       base.Stop();
       _textureFramePool?.Dispose();
       _textureFramePool = null;
@@ -56,6 +131,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
         Debug.LogError("Failed to start ImageSource, exiting...");
         yield break;
       }
+      imageSourcePrepared = true;
 
       // Use RGBA32 as the input format.
       // TODO: When using GpuBuffer, MediaPipe assumes that the input format is BGRA, so maybe the following code needs to be fixed.
