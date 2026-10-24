@@ -29,6 +29,8 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     /// data they retain because the runner reuses its result buffers.
     /// </summary>
     public event Action<HandLandmarkerResult> ResultReceived;
+    public long FailedTextureReadbackCount { get; private set; }
+    public long SkippedTexturePoolFrameCount { get; private set; }
 
     protected override IEnumerator Start()
     {
@@ -165,6 +167,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
         if (!_textureFramePool.TryGetTextureFrame(out var textureFrame))
         {
+          SkippedTexturePoolFrameCount++;
           yield return new WaitForEndOfFrame();
           continue;
         }
@@ -197,6 +200,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
             if (req.hasError)
             {
+              FailedTextureReadbackCount++;
               Debug.LogWarning($"Failed to read texture from the image source");
               // The frame was acquired from the pool before the readback. Return it
               // even on failure so repeated transient readback errors cannot exhaust

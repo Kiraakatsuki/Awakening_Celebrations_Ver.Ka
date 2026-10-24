@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 namespace AwakeningCelebrations.Interaction
@@ -45,6 +46,8 @@ namespace AwakeningCelebrations.Interaction
         [Min(0f)] public float eventCooldownSeconds = 0.8f;
         [Min(0f)] public float trackingLossResetSeconds = 0.35f;
         [Min(0f)] public float noResultWarningSeconds = 5.0f;
+        public bool diagnosticsEnabled;
+        [Min(0.1f)] public float diagnosticsIntervalSeconds = 1.0f;
         [Min(0f)] public float openPalmMaxDrift = 0.06f;
 
         [Min(1f)] public float fingerExtendedDistanceRatio = 1.12f;
@@ -53,21 +56,30 @@ namespace AwakeningCelebrations.Interaction
         [Min(0f)] public float fistThumbMaximumPalmWidths = 1.15f;
         [Min(1f)] public float pointIndexExtensionRatio = 1.12f;
         [Min(0f)] public float pointOtherFingerMaximumRatio = 1.04f;
-        [Range(1, 4)] public int openPalmMinimumExtendedFingers = 3;
-        [Range(1, 4)] public int fistMinimumCurledFingers = 3;
+        [Range(1, 4)] public int openPalmMinimumExtendedFingers = 4;
+        [Range(1, 4)] public int fistMinimumCurledFingers = 4;
 
-        [Min(0f)] public float waveWindowSeconds = 1.0f;
-        [Min(0f)] public float waveMinimumHorizontalTravel = 0.14f;
+        [Min(0f)] public float waveWindowSeconds = 1.4f;
+        [Min(0f)] public float waveMinimumHorizontalTravel = 1.25f;
         [Min(1)] public int waveDirectionReversals = 2;
-        [Min(0f)] public float waveMinimumStep = 0.025f;
+        [Min(0f)] public float waveMinimumStep = 0.18f;
+        [Min(3)] public int waveMinimumSamples = 6;
+        [Min(0.01f)] public float waveMaximumObservationGapSeconds = 0.2f;
+        [Min(0f)] public float waveMaximumVerticalDriftPalmWidths = 0.9f;
 
         [Min(0f)] public float clapArmDistancePalmWidths = 1.2f;
         [Min(0f)] public float clapContactDistancePalmWidths = 0.65f;
-        [Min(0f)] public float clapMinimumClosingPalmWidths = 0.2f;
+        [Min(0f)] public float clapMinimumClosingPalmWidths = 0.3f;
+        [Min(0f)] public float clapMinimumFrameClosingPalmWidths = 0.015f;
+        [Min(1)] public int clapMinimumClosingObservations = 3;
+        [Min(0f)] public float clapSeparationDwellSeconds = 0.25f;
+        [Min(0f)] public float clapClosingWindowSeconds = 0.8f;
+        [Min(0f)] public float clapOpeningResetPalmWidths = 0.08f;
 
         // Hand Landmarker has no shoulder/body landmarks. These frame-space rules
         // are provisional until a body-pose source and the approved definition exist.
         [Range(0f, 1f)] public float raisedWristMaximumY = 0.42f;
+        [Min(0f)] public float bothHandsRaisedDwellSeconds = 0.45f;
     }
 
     public readonly struct TrackedHand
@@ -107,12 +119,19 @@ namespace AwakeningCelebrations.Interaction
         private readonly Dictionary<string, PoseState> poseStates = new Dictionary<string, PoseState>();
         private readonly Dictionary<SemanticGesture, double> lastEmitted = new Dictionary<SemanticGesture, double>();
         private readonly Dictionary<string, WaveHistory> waveHistories = new Dictionary<string, WaveHistory>();
+        private readonly Dictionary<string, bool> diagnosticCandidateStates = new Dictionary<string, bool>();
+        private readonly Dictionary<string, double> lastCandidateDiagnosticTimes = new Dictionary<string, double>();
         private readonly List<HandPose> analyzedHands = new List<HandPose>(2);
         private readonly HashSet<string> presentHandIds = new HashSet<string>();
+        private readonly List<string> staleWaveIds = new List<string>();
         private bool clapArmed;
         private double lastClapDistance;
         private bool clapHasPreviousDistance;
         private bool clapLatched;
+        private double clapSeparatedSince = double.NaN;
+        private double clapStartedAt;
+        private double clapClosingDistance;
+        private int clapClosingObservations;
         private bool hasValidHands;
         private double lastValidHandsTime;
         private string pointingHandId;
@@ -121,6 +140,7 @@ namespace AwakeningCelebrations.Interaction
 
         public event Action<GestureRecognitionEvent> GestureDetected;
         public event Action<bool, Vector2> PointingChanged;
+        public event Action<string> DiagnosticMessage;
 
         public GestureRecognitionLayer(GestureRecognitionSettings settings)
         {
@@ -129,11 +149,15 @@ namespace AwakeningCelebrations.Interaction
 
         public void ProcessFrame(IReadOnlyList<TrackedHand> hands, double timestampSeconds)
         {
+            analyzedHands.Clear();
             if (hands == null || hands.Count == 0)
             {
                 pointingHandId = null;
                 pointingStarted = 0;
                 SetPointing(false, Vector2.zero);
+                ProcessClap(analyzedHands, timestampSeconds);
+                ProcessBothHandsRaised(analyzedHands, timestampSeconds);
+                RemoveMissingHands(analyzedHands, timestampSeconds);
                 if (hasValidHands && timestampSeconds - lastValidHandsTime >= settings.trackingLossResetSeconds)
                 {
                     ResetTrackingState();
@@ -148,7 +172,6 @@ namespace AwakeningCelebrations.Interaction
             hasValidHands = true;
             lastValidHandsTime = timestampSeconds;
 
-            analyzedHands.Clear();
             for (var i = 0; i < hands.Count; i++)
             {
                 var hand = hands[i];
@@ -172,9 +195,15 @@ namespace AwakeningCelebrations.Interaction
         {
             poseStates.Clear();
             waveHistories.Clear();
+            diagnosticCandidateStates.Clear();
+            lastCandidateDiagnosticTimes.Clear();
             clapArmed = false;
             clapHasPreviousDistance = false;
             clapLatched = false;
+            clapSeparatedSince = double.NaN;
+            clapStartedAt = 0;
+            clapClosingDistance = 0f;
+            clapClosingObservations = 0;
             hasValidHands = false;
             pointingHandId = null;
             pointingStarted = 0;
@@ -216,7 +245,7 @@ namespace AwakeningCelebrations.Interaction
             }
 
             return new HandPose(hand.Id, p, palmCenter, palmWidth, openPalm, fist, point, direction,
-                p[IndexTip], p[Wrist].y <= settings.raisedWristMaximumY);
+                p[IndexTip], p[Wrist].y <= settings.raisedWristMaximumY, extended, curled);
         }
 
         private bool IsFingerCurled(Vector2[] points, int tip, int pip, Vector2 palmCenter)
@@ -226,6 +255,10 @@ namespace AwakeningCelebrations.Interaction
 
         private void ProcessSingleHandGestures(HandPose hand, double now)
         {
+            string geometry = "extended=" + hand.ExtendedCount + "/4, curled=" + hand.CurledCount + "/4, palmWidth=" + hand.PalmWidth.ToString("0.000");
+            ReportCandidate(hand.Id, "Point", hand.Point, geometry);
+            ReportCandidate(hand.Id, "Fist", hand.Fist, geometry);
+            ReportCandidate(hand.Id, "OpenPalm", hand.OpenPalm, geometry);
             ProcessPose(hand.Id, "point", hand.Point, SemanticGesture.Point, now, settings.poseDwellSeconds,
                 hand.PointDirection, hand.Points[Wrist], targetPosition: hand.PointPosition);
             ProcessPose(hand.Id, "fist", hand.Fist, SemanticGesture.Fist, now, settings.poseDwellSeconds,
@@ -242,17 +275,24 @@ namespace AwakeningCelebrations.Interaction
             var key = identity + ":" + poseKey;
             if (!active)
             {
+                ReportCandidate(identity, poseKey, false, "classifier no longer supports pose");
                 if (poseStates.TryGetValue(key, out var inactiveState) && !inactiveState.HasInactiveTime)
                 {
                     inactiveState.InactiveSince = now;
                     inactiveState.HasInactiveTime = true;
+                    if (!inactiveState.Emitted)
+                    {
+                        ReportDiagnostic("Pose " + key + " ended before acceptance; release hysteresis started.");
+                    }
                 }
                 return;
             }
 
             if (!poseStates.TryGetValue(key, out var state))
             {
-                poseStates[key] = new PoseState(now, anchor);
+                state = new PoseState(now, anchor);
+                poseStates[key] = state;
+                ReportDiagnostic("Pose " + key + " candidate started; requires " + dwell.ToString("0.00") + "s dwell.");
                 return;
             }
 
@@ -281,18 +321,34 @@ namespace AwakeningCelebrations.Interaction
 
             if (state.Emitted || now - state.Started < dwell || !CooldownElapsed(gesture, now))
             {
+                if (!state.Emitted && now - state.Started < dwell && !state.DwellReported)
+                {
+                    state.DwellReported = true;
+                    ReportDiagnostic("Pose " + key + " pending: dwell " + (now - state.Started).ToString("0.00") + "/" + dwell.ToString("0.00") + "s.");
+                }
+                else if (!state.Emitted && !CooldownElapsed(gesture, now) && !state.CooldownReported)
+                {
+                    state.CooldownReported = true;
+                    ReportDiagnostic("Pose " + key + " held but rejected by " + gesture + " event cooldown.");
+                }
                 return;
             }
 
             state.Emitted = true;
             Emit(gesture, identity == "global" ? string.Empty : identity, direction, targetPosition, now);
+            ReportDiagnostic("Pose " + key + " accepted after " + (now - state.Started).ToString("0.00") + "s.");
         }
 
         private void ProcessWave(HandPose hand, double now)
         {
             if (!hand.OpenPalm)
             {
-                waveHistories.Remove(hand.Id);
+                if (waveHistories.TryGetValue(hand.Id, out var inactiveHistory) &&
+                    inactiveHistory.MarkOpenPalmInactive(now, settings.poseReleaseDwellSeconds))
+                {
+                    waveHistories.Remove(hand.Id);
+                    ReportDiagnostic("Wave history released for " + hand.Id + " after stable open-palm release.");
+                }
                 return;
             }
 
@@ -302,14 +358,54 @@ namespace AwakeningCelebrations.Interaction
                 waveHistories.Add(hand.Id, history);
             }
 
-            history.Add(hand.Points[Wrist].x, now, settings.waveWindowSeconds, settings.waveMinimumStep);
-            if (history.Reversals >= settings.waveDirectionReversals &&
-                history.HorizontalRange >= settings.waveMinimumHorizontalTravel &&
-                CooldownElapsed(SemanticGesture.Wave, now))
+            history.MarkOpenPalmActive();
+            if (history.Emitted)
+                return;
+
+            bool resetForGap = history.Add(hand.Points[Wrist].x, hand.Points[Wrist].y, hand.PalmWidth, now,
+                settings.waveWindowSeconds, settings.waveMaximumObservationGapSeconds,
+                settings.waveMinimumStep);
+            if (resetForGap)
+                ReportDiagnostic("Wave history reset for " + hand.Id + " after an observation gap.");
+
+            if (settings.diagnosticsEnabled)
+                ReportWaveSummary(hand.Id, history, now);
+
+            bool enoughMotion = history.SampleCount >= settings.waveMinimumSamples &&
+                                history.Reversals >= settings.waveDirectionReversals &&
+                                history.HorizontalRange >= settings.waveMinimumHorizontalTravel &&
+                                history.VerticalRange <= settings.waveMaximumVerticalDriftPalmWidths;
+            ReportCandidate(hand.Id, "Wave", enoughMotion,
+                "samples=" + history.SampleCount + ", reversals=" + history.Reversals +
+                ", horizontal=" + history.HorizontalRange.ToString("0.00") +
+                ", vertical=" + history.VerticalRange.ToString("0.00") + " palm widths");
+            if (enoughMotion && !history.Emitted && CooldownElapsed(SemanticGesture.Wave, now))
             {
                 Emit(SemanticGesture.Wave, hand.Id, Vector2.zero, Vector2.zero, now);
-                history.Clear(now, hand.Points[Wrist].x);
+                history.Emitted = true;
+                ReportDiagnostic("Wave accepted for " + hand.Id + "; event latched until open palm is released.");
             }
+            else if (enoughMotion && !CooldownElapsed(SemanticGesture.Wave, now))
+            {
+                if (!history.CooldownReported)
+                {
+                    history.CooldownReported = true;
+                    ReportDiagnostic("Wave candidate rejected by event cooldown for " + hand.Id + ".");
+                }
+            }
+            else
+                history.CooldownReported = false;
+        }
+
+        private void ReportWaveSummary(string handId, WaveHistory history, double now)
+        {
+            if (now - history.LastDiagnosticAt < settings.diagnosticsIntervalSeconds)
+                return;
+            history.LastDiagnosticAt = now;
+            ReportDiagnostic("Wave trajectory " + handId + ": samples=" + history.SampleCount +
+                ", reversals=" + history.Reversals + ", horizontal=" + history.HorizontalRange.ToString("0.00") +
+                ", vertical=" + history.VerticalRange.ToString("0.00") + " palm widths, trace=" +
+                history.RecentTrace(8) + ", latched=" + history.Emitted + ".");
         }
 
         private void ProcessClap(List<HandPose> hands, double now)
@@ -318,7 +414,10 @@ namespace AwakeningCelebrations.Interaction
             {
                 clapArmed = false;
                 clapHasPreviousDistance = false;
-                clapLatched = false;
+                clapSeparatedSince = double.NaN;
+                clapClosingDistance = 0f;
+                clapClosingObservations = 0;
+                ReportCandidate("global", "Clap", false, "two tracked hands required");
                 return;
             }
 
@@ -326,19 +425,72 @@ namespace AwakeningCelebrations.Interaction
             var distanceInPalmWidths = Vector2.Distance(hands[0].PalmCenter, hands[1].PalmCenter) / averagePalmWidth;
             if (distanceInPalmWidths >= settings.clapArmDistancePalmWidths)
             {
-                clapArmed = true;
-                clapLatched = false;
+                if (double.IsNaN(clapSeparatedSince))
+                    clapSeparatedSince = now;
+                if (now - clapSeparatedSince >= settings.clapSeparationDwellSeconds)
+                {
+                    if (clapLatched)
+                    {
+                        clapLatched = false;
+                        ReportDiagnostic("Clap latch released after stable hand separation.");
+                    }
+                    if (!clapArmed)
+                    {
+                        clapArmed = true;
+                        clapStartedAt = now;
+                        clapClosingDistance = 0f;
+                        clapClosingObservations = 0;
+                        ReportDiagnostic("Clap armed after hands stayed separated.");
+                    }
+                }
+            }
+            else
+                clapSeparatedSince = double.NaN;
+
+            if (clapLatched)
+            {
+                lastClapDistance = distanceInPalmWidths;
+                clapHasPreviousDistance = true;
+                ReportCandidate("global", "Clap", false, "already emitted; awaiting separation");
+                return;
             }
 
-            var closedFromPrevious = clapHasPreviousDistance &&
-                                     lastClapDistance - distanceInPalmWidths >= settings.clapMinimumClosingPalmWidths;
-            if (!clapLatched && clapArmed && closedFromPrevious &&
-                distanceInPalmWidths <= settings.clapContactDistancePalmWidths &&
-                CooldownElapsed(SemanticGesture.Clap, now))
+            if (clapArmed && now - clapStartedAt > settings.clapClosingWindowSeconds)
+            {
+                clapArmed = false;
+                clapClosingDistance = 0f;
+                clapClosingObservations = 0;
+                ReportDiagnostic("Clap candidate rejected: closing window expired before contact.");
+            }
+
+            if (clapArmed && clapHasPreviousDistance)
+            {
+                double closingStep = lastClapDistance - distanceInPalmWidths;
+                if (closingStep >= settings.clapMinimumFrameClosingPalmWidths)
+                {
+                    clapClosingDistance += closingStep;
+                    clapClosingObservations++;
+                }
+                else if (-closingStep >= settings.clapOpeningResetPalmWidths)
+                {
+                    clapClosingDistance = 0f;
+                    clapClosingObservations = 0;
+                    clapStartedAt = now;
+                }
+            }
+
+            bool clapCandidate = clapArmed && distanceInPalmWidths <= settings.clapContactDistancePalmWidths &&
+                                 clapClosingDistance >= settings.clapMinimumClosingPalmWidths &&
+                                 clapClosingObservations >= settings.clapMinimumClosingObservations;
+            ReportCandidate("global", "Clap", clapCandidate,
+                "distance=" + distanceInPalmWidths.ToString("0.00") + ", closing=" + clapClosingDistance.ToString("0.00") +
+                ", observations=" + clapClosingObservations);
+            if (clapCandidate && CooldownElapsed(SemanticGesture.Clap, now))
             {
                 Emit(SemanticGesture.Clap, string.Empty, Vector2.zero, Vector2.zero, now);
                 clapLatched = true;
                 clapArmed = false;
+                ReportDiagnostic("Clap accepted after closing movement and palm-width contact.");
             }
 
             lastClapDistance = distanceInPalmWidths;
@@ -356,8 +508,10 @@ namespace AwakeningCelebrations.Interaction
                 }
             }
 
-            ProcessPose("global", "both-hands-raised", raisedCount >= 2 && !clapLatched,
-                SemanticGesture.BothHandsRaised, now, settings.poseDwellSeconds, Vector2.zero, Vector2.zero);
+            ReportCandidate("global", "BothHandsRaised", raisedCount >= 2,
+                "raised wrists=" + raisedCount + "/2; image y <= " + settings.raisedWristMaximumY.ToString("0.00"));
+            ProcessPose("global", "both-hands-raised", raisedCount >= 2,
+                SemanticGesture.BothHandsRaised, now, settings.bothHandsRaisedDwellSeconds, Vector2.zero, Vector2.zero);
         }
 
         private void UpdatePointing(List<HandPose> hands, double now)
@@ -404,6 +558,18 @@ namespace AwakeningCelebrations.Interaction
                 presentHandIds.Add(hands[i].Id);
             }
 
+            staleWaveIds.Clear();
+            foreach (var pair in waveHistories)
+            {
+                if (!presentHandIds.Contains(pair.Key) &&
+                    pair.Value.MarkOpenPalmInactive(now, settings.poseReleaseDwellSeconds))
+                {
+                    staleWaveIds.Add(pair.Key);
+                }
+            }
+            for (var i = 0; i < staleWaveIds.Count; i++)
+                waveHistories.Remove(staleWaveIds[i]);
+
             foreach (var key in poseStates.Keys)
             {
                 if (key.StartsWith("global:", StringComparison.Ordinal) || presentHandIds.Contains(HandIdFromPoseKey(key)))
@@ -414,9 +580,34 @@ namespace AwakeningCelebrations.Interaction
                 {
                     missingState.InactiveSince = now;
                     missingState.HasInactiveTime = true;
+                    if (!missingState.Emitted)
+                        ReportDiagnostic("Pose " + key + " lost tracking before acceptance; release hysteresis started.");
                 }
             }
 
+        }
+
+        private void ReportCandidate(string identity, string candidate, bool active, string detail = null)
+        {
+            if (!settings.diagnosticsEnabled)
+                return;
+            string key = identity + ":" + candidate;
+            if (diagnosticCandidateStates.TryGetValue(key, out var previous) && previous == active)
+                return;
+            diagnosticCandidateStates[key] = active;
+            double now = Time.realtimeSinceStartupAsDouble;
+            if (lastCandidateDiagnosticTimes.TryGetValue(key, out var last) &&
+                now - last < Math.Max(0.1f, settings.diagnosticsIntervalSeconds))
+                return;
+            lastCandidateDiagnosticTimes[key] = now;
+            ReportDiagnostic(candidate + " candidate " + (active ? "active" : "inactive") +
+                " for " + identity + (string.IsNullOrEmpty(detail) ? string.Empty : " (" + detail + ")") + ".");
+        }
+
+        private void ReportDiagnostic(string message)
+        {
+            if (settings.diagnosticsEnabled)
+                DiagnosticMessage?.Invoke(message);
         }
 
         private static string HandIdFromPoseKey(string key)
@@ -440,9 +631,15 @@ namespace AwakeningCelebrations.Interaction
         {
             poseStates.Clear();
             waveHistories.Clear();
+            diagnosticCandidateStates.Clear();
+            lastCandidateDiagnosticTimes.Clear();
             clapArmed = false;
             clapHasPreviousDistance = false;
             clapLatched = false;
+            clapSeparatedSince = double.NaN;
+            clapStartedAt = 0;
+            clapClosingDistance = 0f;
+            clapClosingObservations = 0;
             hasValidHands = false;
             pointingHandId = null;
             pointingStarted = 0;
@@ -461,9 +658,12 @@ namespace AwakeningCelebrations.Interaction
             public readonly Vector2 PointDirection;
             public readonly Vector2 PointPosition;
             public readonly bool Raised;
+            public readonly int ExtendedCount;
+            public readonly int CurledCount;
 
             public HandPose(string id, Vector2[] points, Vector2 palmCenter, float palmWidth,
-                bool openPalm, bool fist, bool point, Vector2 pointDirection, Vector2 pointPosition, bool raised)
+                bool openPalm, bool fist, bool point, Vector2 pointDirection, Vector2 pointPosition, bool raised,
+                int extendedCount, int curledCount)
             {
                 Id = id;
                 Points = points;
@@ -475,6 +675,8 @@ namespace AwakeningCelebrations.Interaction
                 PointDirection = pointDirection;
                 PointPosition = pointPosition;
                 Raised = raised;
+                ExtendedCount = extendedCount;
+                CurledCount = curledCount;
             }
         }
 
@@ -485,6 +687,8 @@ namespace AwakeningCelebrations.Interaction
             public bool Emitted;
             public bool HasInactiveTime;
             public double InactiveSince;
+            public bool DwellReported;
+            public bool CooldownReported;
 
             public PoseState(double started, Vector2 anchor)
             {
@@ -496,57 +700,149 @@ namespace AwakeningCelebrations.Interaction
         private sealed class WaveHistory
         {
             private readonly List<Sample> samples = new List<Sample>();
-            private int lastDirection;
+            private bool hasPrevious;
+            private float previousX;
+            private float previousY;
+            private float previousScale;
+            private double previousTime;
+            private float cumulativeX;
+            private float cumulativeY;
+            private bool hasOpenPalmInactiveTime;
+            private double openPalmInactiveSince;
 
             public int Reversals { get; private set; }
             public float HorizontalRange { get; private set; }
+            public float VerticalRange { get; private set; }
+            public int SampleCount { get { return samples.Count; } }
+            public bool Emitted { get; set; }
+            public bool CooldownReported { get; set; }
+            public double LastDiagnosticAt { get; set; }
 
-            public void Add(float x, double time, float window, float minimumStep)
+            public bool Add(float x, float y, float scale, double time, float window, float maximumGap, float minimumStep)
             {
-                samples.Add(new Sample(x, time));
+                scale = Mathf.Max(scale, 0.001f);
+                bool resetForGap = hasPrevious && time - previousTime > maximumGap;
+                if (resetForGap)
+                    ClearMotion();
+
+                if (!hasPrevious)
+                {
+                    hasPrevious = true;
+                    previousX = x;
+                    previousY = y;
+                    previousScale = scale;
+                    previousTime = time;
+                    samples.Add(new Sample(0f, 0f, time));
+                    Recalculate(minimumStep);
+                    return resetForGap;
+                }
+
+                float normalizedScale = Mathf.Max((previousScale + scale) * 0.5f, 0.001f);
+                cumulativeX += (x - previousX) / normalizedScale;
+                cumulativeY += (y - previousY) / normalizedScale;
+                samples.Add(new Sample(cumulativeX, cumulativeY, time));
+                previousX = x;
+                previousY = y;
+                previousScale = scale;
+                previousTime = time;
+
                 while (samples.Count > 0 && time - samples[0].Time > window)
                 {
                     samples.RemoveAt(0);
                 }
 
-                if (samples.Count >= 2)
-                {
-                    var delta = samples[samples.Count - 1].X - samples[samples.Count - 2].X;
-                    var direction = Mathf.Abs(delta) >= minimumStep ? Math.Sign(delta) : 0;
-                    if (direction != 0)
-                    {
-                        if (lastDirection != 0 && direction != lastDirection)
-                        {
-                            Reversals++;
-                        }
-                        lastDirection = direction;
-                    }
-                }
-
-                var min = float.MaxValue;
-                var max = float.MinValue;
-                for (var i = 0; i < samples.Count; i++)
-                {
-                    min = Mathf.Min(min, samples[i].X);
-                    max = Mathf.Max(max, samples[i].X);
-                }
-                HorizontalRange = samples.Count > 1 ? max - min : 0f;
+                Recalculate(minimumStep);
+                return resetForGap;
             }
 
-            public void Clear(double time, float x)
+            private void Recalculate(float minimumStep)
             {
-                samples.Clear();
-                samples.Add(new Sample(x, time));
-                lastDirection = 0;
                 Reversals = 0;
                 HorizontalRange = 0f;
+                VerticalRange = 0f;
+                if (samples.Count == 0)
+                    return;
+
+                float minX = float.MaxValue;
+                float maxX = float.MinValue;
+                float minY = float.MaxValue;
+                float maxY = float.MinValue;
+                for (var i = 0; i < samples.Count; i++)
+                {
+                    minX = Mathf.Min(minX, samples[i].X);
+                    maxX = Mathf.Max(maxX, samples[i].X);
+                    minY = Mathf.Min(minY, samples[i].Y);
+                    maxY = Mathf.Max(maxY, samples[i].Y);
+                }
+                HorizontalRange = maxX - minX;
+                VerticalRange = maxY - minY;
+
+                float anchor = samples[0].X;
+                int previousDirection = 0;
+                for (var i = 1; i < samples.Count; i++)
+                {
+                    float delta = samples[i].X - anchor;
+                    if (Mathf.Abs(delta) < minimumStep)
+                        continue;
+                    int direction = Math.Sign(delta);
+                    if (previousDirection != 0 && direction != previousDirection)
+                        Reversals++;
+                    previousDirection = direction;
+                    anchor = samples[i].X;
+                }
+            }
+
+            public void MarkOpenPalmActive()
+            {
+                hasOpenPalmInactiveTime = false;
+            }
+
+            public bool MarkOpenPalmInactive(double time, float releaseDwell)
+            {
+                if (!hasOpenPalmInactiveTime)
+                {
+                    hasOpenPalmInactiveTime = true;
+                    openPalmInactiveSince = time;
+                }
+                return time - openPalmInactiveSince >= releaseDwell;
+            }
+
+            public string RecentTrace(int maximumSamples)
+            {
+                var trace = new StringBuilder();
+                int start = Mathf.Max(0, samples.Count - maximumSamples);
+                for (var i = start; i < samples.Count; i++)
+                {
+                    if (i > start)
+                        trace.Append(' ');
+                    trace.Append(samples[i].X.ToString("0.0"));
+                    trace.Append('/');
+                    trace.Append(samples[i].Y.ToString("0.0"));
+                }
+                return trace.ToString();
+            }
+
+            private void ClearMotion()
+            {
+                samples.Clear();
+                hasPrevious = false;
+                previousX = 0f;
+                previousY = 0f;
+                previousScale = 0f;
+                previousTime = 0;
+                cumulativeX = 0f;
+                cumulativeY = 0f;
+                Reversals = 0;
+                HorizontalRange = 0f;
+                VerticalRange = 0f;
             }
 
             private readonly struct Sample
             {
                 public readonly float X;
+                public readonly float Y;
                 public readonly double Time;
-                public Sample(float x, double time) { X = x; Time = time; }
+                public Sample(float x, float y, double time) { X = x; Y = y; Time = time; }
             }
         }
     }

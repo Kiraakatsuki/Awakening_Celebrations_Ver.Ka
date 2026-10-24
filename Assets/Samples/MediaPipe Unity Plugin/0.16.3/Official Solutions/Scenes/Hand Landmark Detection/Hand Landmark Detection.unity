@@ -465,10 +465,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AwakeningCelebrations.Interaction.MediaPipeGestureBridge
   settings:
     poseDwellSeconds: 0.18
+    poseReleaseDwellSeconds: 0.15
     openPalmHoldSeconds: 1
     eventCooldownSeconds: 0.8
     trackingLossResetSeconds: 0.35
     noResultWarningSeconds: 5
+    diagnosticsEnabled: 0
+    diagnosticsIntervalSeconds: 1
     openPalmMaxDrift: 0.06
     fingerExtendedDistanceRatio: 1.12
     fingerCurledDistanceRatio: 0.96
@@ -476,16 +479,25 @@ MonoBehaviour:
     fistThumbMaximumPalmWidths: 1.15
     pointIndexExtensionRatio: 1.12
     pointOtherFingerMaximumRatio: 1.04
-    openPalmMinimumExtendedFingers: 3
-    fistMinimumCurledFingers: 3
-    waveWindowSeconds: 1
-    waveMinimumHorizontalTravel: 0.14
+    openPalmMinimumExtendedFingers: 4
+    fistMinimumCurledFingers: 4
+    waveWindowSeconds: 1.4
+    waveMinimumHorizontalTravel: 1.25
     waveDirectionReversals: 2
-    waveMinimumStep: 0.025
+    waveMinimumStep: 0.18
+    waveMinimumSamples: 6
+    waveMaximumObservationGapSeconds: 0.2
+    waveMaximumVerticalDriftPalmWidths: 0.9
     clapArmDistancePalmWidths: 1.2
     clapContactDistancePalmWidths: 0.65
-    clapMinimumClosingPalmWidths: 0.2
+    clapMinimumClosingPalmWidths: 0.3
+    clapMinimumFrameClosingPalmWidths: 0.015
+    clapMinimumClosingObservations: 3
+    clapSeparationDwellSeconds: 0.25
+    clapClosingWindowSeconds: 0.8
+    clapOpeningResetPalmWidths: 0.08
     raisedWristMaximumY: 0.42
+    bothHandsRaisedDwellSeconds: 0.45
   logRecognizedGestures: 1
 --- !u!224 &1229135957 stripped
 RectTransform:
