@@ -10,6 +10,7 @@ namespace AwakeningCelebrations.Interaction
     public static class GestureCameraConsentGate
     {
         private static bool consentGranted;
+        private static bool previewVisible;
         private static HandLandmarkerRunner registeredRunner;
 
         public static bool ConsentGranted { get { return consentGranted; } }
@@ -18,6 +19,7 @@ namespace AwakeningCelebrations.Interaction
         private static void ResetSession()
         {
             consentGranted = false;
+            previewVisible = false;
             registeredRunner = null;
         }
 
@@ -26,6 +28,17 @@ namespace AwakeningCelebrations.Interaction
             consentGranted = granted;
             if (registeredRunner != null)
                 registeredRunner.ApplyCameraConsent(granted);
+        }
+
+        /// <summary>
+        /// Controls the sample scene's on-screen camera canvas independently of
+        /// camera capture, which remains available for gesture recognition.
+        /// </summary>
+        public static void SetPreviewVisible(bool visible)
+        {
+            previewVisible = visible;
+            if (registeredRunner != null)
+                registeredRunner.SetPreviewVisible(visible);
         }
 
         public static bool Register(HandLandmarkerRunner runner)
@@ -37,6 +50,7 @@ namespace AwakeningCelebrations.Interaction
             }
 
             registeredRunner = runner;
+            runner.SetPreviewVisible(previewVisible);
             runner.ApplyCameraConsent(consentGranted);
             return true;
         }

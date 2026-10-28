@@ -58,3 +58,24 @@ crashlytics-build.properties
 .env.*
 !.env.example
 *.local
+
+# Local Unity MCP package � do not commit
+/Packages/com.coplaydev.unity-mcp/
+
+# Generated Unity/Figma runtime screenshots
+/Assets/Screenshots/FigmaAuditRuntime.meta
+/Assets/Screenshots/FigmaUnityRuntime.meta
+/Assets/Screenshots/FigmaUnityRuntime/
+/Assets/Screenshots/fidelity-audit-*.png
+/Assets/Screenshots/fidelity-audit-*.png.meta
+/Assets/Screenshots/screenshot-*.png
+/Assets/Screenshots/screenshot-*.png.meta
+
+# Generated Figma audit documentation and exports
+/Documentation/FigmaScreenshots/
+/Documentation/FigmaUnityContactSheets/
+/Documentation/figma-captures/
+/Documentation/FigmaUnityFidelityAudit.md
+/Documentation/FigmaUnityFrameInventory.csv
+/Documentation/FigmaUnityRuntimeRootInventory.csv
+/Documentation/FigmaUnityUIAudit.md

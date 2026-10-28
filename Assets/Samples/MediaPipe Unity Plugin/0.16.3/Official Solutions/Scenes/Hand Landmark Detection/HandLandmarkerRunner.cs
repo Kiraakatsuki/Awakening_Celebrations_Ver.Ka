@@ -21,6 +21,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     private bool bootstrapReady;
     private bool pipelineStarted;
     private bool imageSourcePrepared;
+    private Canvas previewCanvas;
 
     public readonly HandLandmarkDetectionConfig config = new HandLandmarkDetectionConfig();
 
@@ -31,6 +32,19 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     public event Action<HandLandmarkerResult> ResultReceived;
     public long FailedTextureReadbackCount { get; private set; }
     public long SkippedTexturePoolFrameCount { get; private set; }
+
+    public void SetPreviewVisible(bool visible)
+    {
+      if (previewCanvas == null && screen != null)
+      {
+        previewCanvas = screen.GetComponentInParent<Canvas>();
+      }
+
+      if (previewCanvas != null)
+      {
+        previewCanvas.enabled = visible;
+      }
+    }
 
     protected override IEnumerator Start()
     {

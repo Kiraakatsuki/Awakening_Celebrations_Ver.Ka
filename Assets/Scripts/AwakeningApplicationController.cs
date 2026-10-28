@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using AwakeningCelebrations.Interaction;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UIElements;
 
 [DefaultExecutionOrder(-100)]
@@ -52,6 +54,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private float gestureCursorSmoothingSpeed = 16f;
     [SerializeField, Tooltip("The requirements identify a prepared environmental rhythm layer but do not specify repeat/stop behavior. Choose the desired behavior when assigning the approved clip.")]
     private EnvironmentalMusicMode environmentalMusicMode = EnvironmentalMusicMode.LoopUntilStopped;
+    [SerializeField, Tooltip("Public HTTPS base URL for the Render assistant service. Keep API credentials on the backend.")]
+    private string assistantBackendBaseUrl = "https://awakening-celebrations-ver-ka.onrender.com";
 
     private enum EnvironmentalMusicMode
     {
@@ -86,6 +90,39 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private StyleSheet interactionStyles;
     private bool interactionStylesAdded;
     private GestureCursorController gestureCursor;
+    private AssistantSession assistantSession;
+    private Coroutine assistantRequestRoutine;
+    private UnityWebRequest assistantWebRequest;
+    private int assistantSessionSequence;
+
+    private sealed class AssistantSession
+    {
+        public int id;
+        public int performerIndex;
+        public string performerId;
+        public string assistantScreenId;
+        public VisualElement root;
+        public TextField input;
+        public Label placeholder;
+        public ScrollView conversation;
+        public Label status;
+        public Button send;
+        public string failedMessage;
+        public bool requestInProgress;
+    }
+
+    [Serializable]
+    private sealed class AssistantChatRequest
+    {
+        public string message;
+    }
+
+    [Serializable]
+    private sealed class AssistantChatResponse
+    {
+        public string reply;
+        public string error;
+    }
 
     private enum InteractionCommand
     {
@@ -489,6 +526,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         ClearTargetedPerformer();
         while (overlays.Count > 0)
             CloseTopOverlay();
+        if (assistantSession != null || assistantWebRequest != null || assistantRequestRoutine != null)
+            CancelAssistantRequest();
         if (recordHistory && currentScreen != HomeScreen)
             backStack.Push(new RouteState { screen = currentScreen, language = language });
         else if (!recordHistory && !preserveHistory)
@@ -504,6 +543,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         language = targetLanguage;
         bool cameraAllowed = consentAccepted && (screenId == AttractScreen || screenId == ColorReleaseScreen || screenId == PerformerSelectScreen || IsPerformerStage(screenId, out _, out _) || (hasAwakenedThisSession && (screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY")));
         GestureCameraConsentGate.SetConsent(cameraAllowed);
+        // MediaPipe capture supports gesture input; none of the current imported
+        // application screens calls for the sample's full-screen camera canvas.
+        GestureCameraConsentGate.SetPreviewVisible(false);
         if (!cameraAllowed)
             gestureCursor?.ClearPosition();
         if (homeController != null)
@@ -781,10 +823,10 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             }
             RuntimeScreenCatalog.Entry stageEntry;
             string nodeId = null;
+            int rootIndex = -1;
             if (screenCatalog != null && screenCatalog.TryGetEntry(currentScreen, language, out stageEntry))
             {
                 string[] rootParts = stageEntry.figmaRootNodeId.Split(':');
-                int rootIndex;
                 if (rootParts.Length == 2 && int.TryParse(rootParts[1], out rootIndex))
                     nodeId = rootParts[0] + ":" + (rootIndex + nodeOffset);
             }
@@ -795,6 +837,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             }
             Action advanceStage = () => HandleInteractionCommand(InteractionCommand.AdvanceStage);
             BindPath(root, actionPath, "Label", nodeId, advanceStage, screenUnbind);
+            if (stage == Stages.Length - 1)
+                ConfigurePerformerAgentPage(root, performer, rootIndex, screenUnbind);
             RegisterKeyOnRoot(root, advanceStage, screenUnbind);
             FocusFirstFocusable(root);
             return;
@@ -993,6 +1037,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void OpenAssistantOverlay(int performer)
     {
+        if (performer < 0 || performer >= Performers.Length)
+        {
+            Debug.LogError("Cannot open an assistant for invalid performer index " + performer + ".", this);
+            return;
+        }
+
         string overlayId = "Assistant-" + Performers[performer];
         VisualTreeAsset asset;
         if (screenCatalog == null || !screenCatalog.TryGet(overlayId, language, out asset))
@@ -1006,8 +1056,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         VisualElement baseRoot = GetUxmlRoot(panelRoot);
         if (baseRoot != null)
             baseRoot.SetEnabled(false);
+        tree.AddToClassList("ac-assistant-overlay-container");
         panelRoot.Add(tree);
         overlays.Push(new OverlayState { tree = tree, baseRoot = baseRoot });
+        selectedPerformer = performer;
+        GestureCameraConsentGate.SetPreviewVisible(false);
         List<Action> cleanup = new List<Action>();
         overlayUnbind.Push(cleanup);
         VisualElement importedRoot = GetUxmlRoot(tree);
@@ -1016,7 +1069,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         importedRoot.AddToClassList("ac-screen-runtime");
         importedRoot.focusable = false;
         importedRoot.tabIndex = -1;
-        DisableAssistantControls(importedRoot, baseNode);
+        ConfigureAssistantChat(importedRoot, performer, cleanup);
         BindPath(importedRoot, "1/14", "VisualElement", "124:" + (baseNode + 13), CloseTopOverlay, cleanup);
         BindPath(importedRoot, "1/15", "Label", "124:" + (baseNode + 14), CloseTopOverlay, cleanup, false);
         EventCallback<KeyDownEvent> overlayKey = evt =>
@@ -1039,13 +1092,479 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             }
         }
         activeBindingScreen = currentScreen;
-        Debug.Log("Opened assistant overlay for " + Performers[performer] + ". Assistant responses require an unconfigured service.", this);
+        Debug.Log("Opened assistant overlay for " + Performers[performer] + ".", this);
+    }
+
+    private void ConfigureAssistantChat(VisualElement root, int performer, List<Action> cleanup)
+    {
+        assistantSession = new AssistantSession
+        {
+            id = ++assistantSessionSequence,
+            performerIndex = performer,
+            performerId = Performers[performer],
+            assistantScreenId = "Assistant-" + Performers[performer],
+            root = root
+        };
+
+        // Assistant replies need room for paragraphs, lists, and code output.
+        // Keep the existing horizontal layout while extending only this overlay.
+        root.style.height = 640;
+
+        string[] suggestionPaths = { "1/4", "1/6", "1/8" };
+        string[] suggestionLabelPaths = { "1/5", "1/7", "1/9" };
+        for (int i = 0; i < suggestionPaths.Length; i++)
+        {
+            VisualElement surface;
+            VisualElement labelElement;
+            if (TryResolvePath(root, suggestionPaths[i], out surface) &&
+                TryResolvePath(root, suggestionLabelPaths[i], out labelElement) && labelElement is Label suggestionLabel)
+            {
+                AssistantSession suggestionSession = assistantSession;
+                string suggestionPrompt = suggestionLabel.text;
+                Action askSuggestion = () => SubmitAssistantMessage(suggestionSession, suggestionPrompt);
+                RegisterClick(surface, askSuggestion, cleanup);
+                RegisterClick(suggestionLabel, askSuggestion, cleanup);
+            }
+            else
+            {
+                Debug.LogWarning("Assistant suggestion controls could not be resolved at " + suggestionPaths[i] + ".", this);
+            }
+        }
+
+        StyleSheet chatStyles = Resources.Load<StyleSheet>("AssistantChatRuntime");
+        if (chatStyles != null)
+        {
+            root.styleSheets.Add(chatStyles);
+            root.AddToClassList("ac-assistant-accent-" + Performers[performer].ToLowerInvariant().Replace("-", ""));
+        }
+        else
+        {
+            Debug.LogError("Resources/AssistantChatRuntime.uss is missing.", this);
+        }
+
+        TextField input = new TextField { name = "assistantChatInput", maxLength = 3600 };
+        input.AddToClassList("ac-assistant-chat-input");
+        root.Add(input);
+        assistantSession.input = input;
+
+        Label placeholder = new Label(language == AppLanguage.English ? "Ask a question…" : "輸入問題…");
+        placeholder.AddToClassList("ac-assistant-chat-placeholder");
+        placeholder.pickingMode = PickingMode.Ignore;
+        root.Add(placeholder);
+        assistantSession.placeholder = placeholder;
+
+        Button send = new Button { name = "assistantChatSend" };
+        send.text = language == AppLanguage.English ? "Ask" : "詢問";
+        send.AddToClassList("ac-assistant-chat-send");
+        root.Add(send);
+        assistantSession.send = send;
+
+        ScrollView conversation = new ScrollView(ScrollViewMode.Vertical) { name = "assistantConversation" };
+        conversation.AddToClassList("ac-assistant-conversation");
+        root.Add(conversation);
+        assistantSession.conversation = conversation;
+
+        Label status = new Label();
+        status.AddToClassList("ac-assistant-chat-status");
+        status.AddToClassList("ac-assistant-chat-hidden");
+        conversation.Add(status);
+        assistantSession.status = status;
+
+        AssistantSession session = assistantSession;
+        Action sendAction = () => SubmitAssistantMessage(session, session.input.value);
+        send.clicked += sendAction;
+        cleanup.Add(() => send.clicked -= sendAction);
+
+        EventCallback<KeyDownEvent> submitOnEnter = evt =>
+        {
+            if (evt.keyCode == KeyCode.Return || evt.keyCode == KeyCode.KeypadEnter)
+            {
+                evt.StopPropagation();
+                SubmitAssistantMessage(session, session.input.value);
+            }
+        };
+        input.RegisterCallback(submitOnEnter);
+        cleanup.Add(() => input.UnregisterCallback(submitOnEnter));
+
+        EventCallback<ChangeEvent<string>> updatePlaceholder = evt =>
+        {
+            if (string.IsNullOrWhiteSpace(evt.newValue))
+                placeholder.RemoveFromClassList("ac-assistant-chat-placeholder-hidden");
+            else
+                placeholder.AddToClassList("ac-assistant-chat-placeholder-hidden");
+        };
+        input.RegisterCallback(updatePlaceholder);
+        cleanup.Add(() => input.UnregisterCallback(updatePlaceholder));
+
+        EventCallback<FocusInEvent> hidePlaceholder = _ => placeholder.AddToClassList("ac-assistant-chat-placeholder-hidden");
+        EventCallback<FocusOutEvent> showPlaceholder = _ =>
+        {
+            if (string.IsNullOrWhiteSpace(input.value))
+                placeholder.RemoveFromClassList("ac-assistant-chat-placeholder-hidden");
+        };
+        input.RegisterCallback(hidePlaceholder);
+        input.RegisterCallback(showPlaceholder);
+        cleanup.Add(() => input.UnregisterCallback(hidePlaceholder));
+        cleanup.Add(() => input.UnregisterCallback(showPlaceholder));
+
+        assistantSession = session;
+        if (!TryBuildAssistantChatUrl(out _))
+            SetAssistantStatus(session, language == AppLanguage.English ? "Assistant service URL is not configured." : "尚未設定助理服務網址。", false);
+    }
+
+    private void ConfigurePerformerAgentPage(VisualElement root, int performer, int figmaRootIndex, List<Action> cleanup)
+    {
+        string screenId = GetPerformerScreen(performer, Stages.Length - 1);
+        assistantSession = new AssistantSession
+        {
+            id = ++assistantSessionSequence,
+            performerIndex = performer,
+            performerId = Performers[performer],
+            assistantScreenId = screenId,
+            root = root
+        };
+
+        StyleSheet chatStyles = Resources.Load<StyleSheet>("AssistantChatRuntime");
+        if (chatStyles != null)
+        {
+            root.styleSheets.Add(chatStyles);
+            root.AddToClassList("ac-assistant-accent-" + Performers[performer].ToLowerInvariant().Replace("-", ""));
+        }
+        else
+        {
+            Debug.LogError("Resources/AssistantChatRuntime.uss is missing.", this);
+        }
+
+        ScrollView conversation = new ScrollView(ScrollViewMode.Vertical) { name = "performerAgentConversation" };
+        conversation.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+        conversation.verticalScrollerVisibility = ScrollerVisibility.Auto;
+        conversation.AddToClassList("ac-performer-agent-conversation");
+        root.Add(conversation);
+
+        Label status = new Label(language == AppLanguage.English
+            ? "Choose a question below to start a conversation."
+            : "請選擇下方問題開始對話。");
+        status.AddToClassList("ac-assistant-chat-status");
+        conversation.Add(status);
+
+        assistantSession.conversation = conversation;
+        assistantSession.status = status;
+        AssistantSession session = assistantSession;
+
+        int[] promptSurfaceOffsets = { 10, 12, 14 };
+        for (int i = 0; i < promptSurfaceOffsets.Length; i++)
+        {
+            string promptSurfacePath = "1/6/" + (4 + i * 2);
+            string promptLabelPath = "1/6/" + (5 + i * 2);
+            VisualElement surface;
+            VisualElement labelElement;
+            if (TryResolvePath(root, promptSurfacePath, out surface) &&
+                TryResolvePath(root, promptLabelPath, out labelElement) && labelElement is Label promptLabel)
+            {
+                int promptOffset = promptSurfaceOffsets[i];
+                string promptSurfaceId = "124:" + (figmaRootIndex + promptOffset);
+                Action askPrompt = () => SubmitAssistantMessage(session, promptLabel.text);
+                BindPath(root, promptSurfacePath, "VisualElement", promptSurfaceId, askPrompt, cleanup);
+            }
+            else
+            {
+                Debug.LogWarning("Performer agent prompt controls could not be resolved for " + screenId + " at " + promptSurfacePath + ".", this);
+            }
+        }
+
+        if (!TryBuildAssistantChatUrl(out _))
+            SetAssistantStatus(session, language == AppLanguage.English ? "Assistant service URL is not configured." : "尚未設定助理服務網址。", false);
+    }
+
+    private bool TryBuildAssistantChatUrl(out string chatUrl)
+    {
+        chatUrl = null;
+        Uri baseUri;
+        string configuredUrl = assistantBackendBaseUrl == null ? string.Empty : assistantBackendBaseUrl.Trim().TrimEnd('/');
+        if (!Uri.TryCreate(configuredUrl, UriKind.Absolute, out baseUri) ||
+            baseUri.Scheme != Uri.UriSchemeHttps || baseUri.AbsolutePath != "/" ||
+            !string.IsNullOrEmpty(baseUri.Query) || !string.IsNullOrEmpty(baseUri.Fragment))
+            return false;
+
+        chatUrl = configuredUrl + "/chat";
+        return true;
+    }
+
+    private void SubmitAssistantMessage(AssistantSession session, string rawMessage)
+    {
+        if (session == null || session != assistantSession || session.id != assistantSessionSequence ||
+            session.performerIndex < 0 || session.performerIndex >= Performers.Length ||
+            session.performerId != Performers[session.performerIndex] ||
+            !IsAssistantSessionViewActive(session) ||
+            selectedPerformer != session.performerIndex ||
+            session.root == null || session.root.panel == null || session.requestInProgress)
+            return;
+
+        string message = rawMessage == null ? string.Empty : rawMessage.Trim();
+        if (message.Length == 0)
+        {
+            SetAssistantStatus(session, language == AppLanguage.English ? "Enter a question before sending." : "請先輸入問題再送出。", false);
+            return;
+        }
+        if (message.Length > 3600)
+        {
+            SetAssistantStatus(session, language == AppLanguage.English ? "Your question is too long. Please shorten it and retry." : "問題內容過長，請縮短後重試。", false);
+            return;
+        }
+        if (!TryBuildAssistantChatUrl(out string chatUrl))
+        {
+            SetAssistantStatus(session, language == AppLanguage.English ? "Assistant service URL is not configured." : "尚未設定助理服務網址。", false);
+            return;
+        }
+
+        bool retryingFailedMessage = session.failedMessage == message;
+        if (!retryingFailedMessage)
+        {
+            Label userMessage = new Label(message) { enableRichText = false };
+            userMessage.AddToClassList("ac-assistant-chat-message");
+            userMessage.AddToClassList("ac-assistant-chat-user-message");
+            session.conversation.Add(userMessage);
+        }
+
+        session.requestInProgress = true;
+        if (session.send != null)
+            session.send.SetEnabled(false);
+        SetAssistantStatus(session, language == AppLanguage.English ? "Thinking…" : "思考中…", true);
+        string scopedMessage = BuildPerformerScopedMessage(session, message);
+        assistantRequestRoutine = StartCoroutine(SendAssistantRequest(session, scopedMessage, chatUrl, message));
+    }
+
+    private bool IsAssistantSessionViewActive(AssistantSession session)
+    {
+        if (session == null)
+            return false;
+        if (session.assistantScreenId == activeBindingScreen)
+            return true;
+
+        return session.assistantScreenId == "Assistant-" + session.performerId && overlays.Count > 0 &&
+               GetUxmlRoot(overlays.Peek().tree) == session.root;
+    }
+
+    private string BuildPerformerScopedMessage(AssistantSession session, string visitorMessage)
+    {
+        string languageInstruction = language == AppLanguage.English
+            ? "Reply in the same language as the visitor's question."
+            : "請使用訪客問題所使用的語言回答。";
+        string evidenceInstruction = language == AppLanguage.English
+            ? "Use only facts supplied in this request. Do not invent performer-specific facts; say when verified context is insufficient."
+            : "僅使用此請求提供的事實。不要捏造表演者相關資訊；若缺乏已核實的背景資料，請明確說明。";
+
+        return "Selected performer assistant: " + session.performerId + ". " + languageInstruction + " " + evidenceInstruction +
+               "\nVisitor question:\n" + visitorMessage;
+    }
+
+    private IEnumerator SendAssistantRequest(AssistantSession session, string message, string chatUrl, string visitorMessage)
+    {
+        AssistantChatRequest payload = new AssistantChatRequest { message = message };
+        byte[] body = Encoding.UTF8.GetBytes(JsonUtility.ToJson(payload));
+        using (UnityWebRequest request = new UnityWebRequest(chatUrl, UnityWebRequest.kHttpVerbPOST))
+        {
+            request.uploadHandler = new UploadHandlerRaw(body);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.timeout = 45;
+            request.SetRequestHeader("Content-Type", "application/json; charset=utf-8");
+            assistantWebRequest = request;
+            yield return request.SendWebRequest();
+
+            assistantWebRequest = null;
+            assistantRequestRoutine = null;
+            if (session != assistantSession || session.id != assistantSessionSequence || session.root == null || session.root.panel == null)
+                yield break;
+
+            session.requestInProgress = false;
+            if (session.send != null)
+                session.send.SetEnabled(true);
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                string retryHint = session.send == null
+                    ? (language == AppLanguage.English ? "Select the same question again to retry." : "再次選擇相同問題即可重試。")
+                    : (language == AppLanguage.English ? "Tap Retry to try again." : "請點選「重試」再試一次。");
+                string error = request.result == UnityWebRequest.Result.ConnectionError
+                    ? (language == AppLanguage.English ? "Network error. Check your connection. " + retryHint : "網路連線失敗，請確認連線。" + retryHint)
+                    : (language == AppLanguage.English ? "Assistant server error (HTTP " + request.responseCode + "). " + retryHint : "助理伺服器錯誤（HTTP " + request.responseCode + "）。" + retryHint);
+                Debug.LogWarning("Assistant request failed with HTTP status " + request.responseCode + " (" + request.result + ").", this);
+                FailAssistantMessage(session, visitorMessage, error);
+                yield break;
+            }
+
+            AssistantChatResponse result = null;
+            try
+            {
+                result = JsonUtility.FromJson<AssistantChatResponse>(request.downloadHandler.text);
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning("Assistant response JSON could not be parsed (" + exception.GetType().Name + ").", this);
+            }
+
+            if (result == null || string.IsNullOrWhiteSpace(result.reply))
+            {
+                FailAssistantMessage(session, visitorMessage, language == AppLanguage.English
+                    ? (session.send == null ? "The assistant returned an unexpected response. Select the same question again to retry." : "The assistant returned an unexpected response. Tap Retry to try again.")
+                    : (session.send == null ? "助理回覆格式無法辨識，請再次選擇相同問題重試。" : "助理回覆格式無法辨識，請點選「重試」。"));
+                yield break;
+            }
+
+            Label reply = AppendAssistantReply(session, result.reply);
+            session.failedMessage = null;
+            if (session.input != null && session.input.value.Trim() == visitorMessage)
+                session.input.value = string.Empty;
+            if (session.send != null)
+                session.send.text = language == AppLanguage.English ? "Ask" : "詢問";
+            SetAssistantStatus(session, string.Empty, false);
+            session.conversation.schedule.Execute(() =>
+            {
+                if (session == assistantSession && session.root != null && session.root.panel != null)
+                    session.conversation.ScrollTo(reply);
+            }).ExecuteLater(1);
+        }
+    }
+
+    private Label AppendAssistantReply(AssistantSession session, string replyText)
+    {
+        string[] lines = replyText.Replace("\r\n", "\n").Replace('\r', '\n').Split('\n');
+        bool inCodeBlock = false;
+        Label lastContent = null;
+
+        for (int i = 0; i < lines.Length; i++)
+        {
+            string line = lines[i];
+            string trimmed = line.Trim();
+            if (trimmed.StartsWith("```", StringComparison.Ordinal))
+            {
+                inCodeBlock = !inCodeBlock;
+                continue;
+            }
+
+            if (line.Length == 0 && !inCodeBlock)
+            {
+                VisualElement paragraphGap = new VisualElement();
+                paragraphGap.AddToClassList("ac-assistant-chat-paragraph-gap");
+                session.conversation.Add(paragraphGap);
+                continue;
+            }
+
+            string displayLine = line;
+            string lineClass = inCodeBlock ? "ac-assistant-chat-code-line" : "ac-assistant-chat-paragraph";
+            if (!inCodeBlock)
+            {
+                int headingMarkers = 0;
+                while (headingMarkers < line.Length && headingMarkers < 6 && line[headingMarkers] == '#')
+                    headingMarkers++;
+                if (headingMarkers > 0 && headingMarkers < line.Length && line[headingMarkers] == ' ')
+                {
+                    displayLine = line.Substring(headingMarkers + 1);
+                    lineClass = "ac-assistant-chat-heading";
+                }
+                else if (trimmed.StartsWith("- ", StringComparison.Ordinal) ||
+                         trimmed.StartsWith("* ", StringComparison.Ordinal) ||
+                         trimmed.StartsWith("+ ", StringComparison.Ordinal))
+                {
+                    displayLine = "• " + trimmed.Substring(2);
+                    lineClass = "ac-assistant-chat-list-item";
+                }
+                else if (TryFormatNumberedListLine(trimmed, out displayLine))
+                {
+                    lineClass = "ac-assistant-chat-list-item";
+                }
+                else if (trimmed.StartsWith("> ", StringComparison.Ordinal))
+                {
+                    displayLine = "│ " + trimmed.Substring(2);
+                    lineClass = "ac-assistant-chat-quote";
+                }
+            }
+
+            Label lineLabel = new Label(displayLine) { enableRichText = false };
+            lineLabel.AddToClassList("ac-assistant-chat-message");
+            lineLabel.AddToClassList("ac-assistant-chat-reply-message");
+            lineLabel.AddToClassList(lineClass);
+            session.conversation.Add(lineLabel);
+            lastContent = lineLabel;
+        }
+
+        if (lastContent == null)
+        {
+            lastContent = new Label(replyText) { enableRichText = false };
+            lastContent.AddToClassList("ac-assistant-chat-message");
+            lastContent.AddToClassList("ac-assistant-chat-reply-message");
+            session.conversation.Add(lastContent);
+        }
+
+        return lastContent;
+    }
+
+    private static bool TryFormatNumberedListLine(string line, out string displayLine)
+    {
+        displayLine = line;
+        int markerEnd = 0;
+        while (markerEnd < line.Length && char.IsDigit(line[markerEnd]))
+            markerEnd++;
+        if (markerEnd == 0 || markerEnd + 1 >= line.Length ||
+            (line[markerEnd] != '.' && line[markerEnd] != ')') || line[markerEnd + 1] != ' ')
+            return false;
+
+        displayLine = line.Substring(0, markerEnd + 1) + " " + line.Substring(markerEnd + 2);
+        return true;
+    }
+
+    private void FailAssistantMessage(AssistantSession session, string message, string status)
+    {
+        session.failedMessage = message;
+        if (session.send != null)
+            session.send.text = language == AppLanguage.English ? "Retry" : "重試";
+        SetAssistantStatus(session, status, false);
+    }
+
+    private static void SetAssistantStatus(AssistantSession session, string message, bool isLoading)
+    {
+        if (session == null || session.status == null)
+            return;
+        session.status.text = message;
+        if (string.IsNullOrEmpty(message))
+            session.status.AddToClassList("ac-assistant-chat-hidden");
+        else
+            session.status.RemoveFromClassList("ac-assistant-chat-hidden");
+
+        if (isLoading)
+            session.status.AddToClassList("ac-assistant-chat-loading");
+        else
+            session.status.RemoveFromClassList("ac-assistant-chat-loading");
+
+        if (!string.IsNullOrEmpty(message) && session.conversation != null)
+        {
+            session.status.RemoveFromHierarchy();
+            session.conversation.Add(session.status);
+            session.conversation.ScrollTo(session.status);
+        }
+    }
+
+    private void CancelAssistantRequest()
+    {
+        assistantSessionSequence++;
+        if (assistantWebRequest != null)
+        {
+            assistantWebRequest.Abort();
+            assistantWebRequest.Dispose();
+            assistantWebRequest = null;
+        }
+        if (assistantRequestRoutine != null)
+        {
+            StopCoroutine(assistantRequestRoutine);
+            assistantRequestRoutine = null;
+        }
+        assistantSession = null;
     }
 
     private void CloseTopOverlay()
     {
         if (overlays.Count == 0)
             return;
+        CancelAssistantRequest();
         OverlayState state = overlays.Pop();
         if (overlayUnbind.Count > 0)
             ClearBindings(overlayUnbind.Pop());
@@ -1057,6 +1576,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             FocusFirstFocusable(state.baseRoot);
         }
         activeBindingScreen = currentScreen;
+        GestureCameraConsentGate.SetPreviewVisible(false);
     }
 
     private static VisualElement GetUxmlRoot(VisualElement documentRoot)
@@ -1293,30 +1813,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         {
             string[] control = controls[i];
             MarkUnavailable(root, control[0], control[1], "124:" + (int.Parse(control[2]) + localeNodeOffset), control[3]);
-        }
-    }
-
-    private void DisableAssistantControls(VisualElement root, int baseNode)
-    {
-        string unavailable = language == AppLanguage.English ? "Unavailable" : "目前無法使用";
-        string suggestionUnavailable = language == AppLanguage.English ? "Assistant unavailable" : "助理服務目前無法使用";
-        string[][] controls =
-        {
-            new[] { "1/4", "VisualElement", "3", null },
-            new[] { "1/5", "Label", "4", suggestionUnavailable },
-            new[] { "1/6", "VisualElement", "5", null },
-            new[] { "1/7", "Label", "6", suggestionUnavailable },
-            new[] { "1/8", "VisualElement", "7", null },
-            new[] { "1/9", "Label", "8", suggestionUnavailable },
-            new[] { "1/10", "VisualElement", "9", null },
-            new[] { "1/11", "Label", "10", suggestionUnavailable },
-            new[] { "1/12", "VisualElement", "11", null },
-            new[] { "1/13", "Label", "12", unavailable }
-        };
-        for (int i = 0; i < controls.Length; i++)
-        {
-            string[] control = controls[i];
-            MarkUnavailable(root, control[0], control[1], "124:" + (baseNode + int.Parse(control[2])), control[3]);
         }
     }
 

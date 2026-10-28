@@ -1,0 +1,201 @@
+.ac-assistant-chat-input {
+    position: absolute;
+    left: 50px;
+    top: 230px;
+    width: 900px;
+    height: 58px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 29px;
+    border-width: 1px;
+    border-color: rgba(255, 106, 42, 0.55);
+    background-color: rgba(20, 23, 26, 0.98);
+    color: #EFEAE0;
+    font-size: 16px;
+}
+
+.ac-assistant-chat-input .unity-text-field__input {
+    border-width: 0;
+    background-color: transparent;
+    color: #EFEAE0;
+    font-size: 16px;
+}
+
+.ac-assistant-chat-placeholder {
+    position: absolute;
+    left: 74px;
+    top: 248px;
+    width: 780px;
+    color: #787671;
+    font-size: 16px;
+    white-space: normal;
+}
+
+.ac-assistant-chat-placeholder-hidden,
+.ac-assistant-chat-hidden {
+    display: none;
+}
+
+.ac-assistant-chat-send {
+    position: absolute;
+    left: 970px;
+    top: 232px;
+    width: 130px;
+    height: 54px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 27px;
+    border-width: 1px;
+    border-color: rgba(255, 106, 42, 0.62);
+    background-color: rgba(61, 25, 10, 0.98);
+    color: #EFEAE0;
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.ac-assistant-chat-send:hover {
+    background-color: rgba(91, 39, 16, 0.98);
+}
+
+.ac-assistant-conversation {
+    position: absolute;
+    left: 50px;
+    top: 296px;
+    width: 1200px;
+    height: 320px;
+    max-height: 320px;
+    border-radius: 16px;
+    border-width: 1px;
+    border-color: rgba(255, 106, 42, 0.28);
+    background-color: rgba(20, 23, 26, 0.88);
+}
+
+.ac-performer-agent-conversation {
+    position: absolute;
+    left: 140px;
+    top: 300px;
+    width: 1640px;
+    height: 300px;
+    max-height: 300px;
+    background-color: rgba(20, 23, 26, 0.72);
+    color: #EFEAE0;
+}
+
+.ac-assistant-conversation .unity-scroll-view__content-container {
+    flex-direction: column;
+    padding: 8px;
+}
+
+.ac-assistant-chat-message {
+    width: 100%;
+    flex-shrink: 0;
+    margin-bottom: 5px;
+    color: #EFEAE0;
+    font-size: 14px;
+    white-space: normal;
+}
+
+.ac-assistant-chat-paragraph-gap {
+    height: 8px;
+    flex-shrink: 0;
+}
+
+.ac-assistant-chat-heading {
+    color: #EFEAE0;
+    -unity-font-style: bold;
+}
+
+.ac-assistant-chat-list-item {
+    padding-left: 12px;
+}
+
+.ac-assistant-chat-code-line {
+    min-height: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(7, 10, 14, 0.72);
+    color: #D6D1C8;
+    -unity-font-style: normal;
+}
+
+.ac-assistant-chat-quote {
+    padding-left: 8px;
+    border-left-width: 2px;
+    border-left-color: rgba(239, 234, 224, 0.45);
+    color: #D6D1C8;
+}
+
+.ac-assistant-chat-user-message {
+    color: #D6D1C8;
+    -unity-font-style: bold;
+}
+
+.ac-assistant-chat-reply-message {
+    color: #EFEAE0;
+}
+
+.ac-assistant-chat-status {
+    width: 100%;
+    color: #B9B5AC;
+    font-size: 13px;
+    white-space: normal;
+}
+
+.ac-assistant-chat-loading {
+    color: #EFEAE0;
+}
+
+.ac-assistant-accent-gaia .ac-assistant-chat-input,
+.ac-assistant-accent-gaia .ac-assistant-conversation {
+    border-color: rgba(49, 215, 242, 0.5);
+}
+
+.ac-assistant-accent-gaia .ac-assistant-chat-send {
+    border-color: rgba(49, 215, 242, 0.62);
+    background-color: rgba(12, 52, 58, 0.98);
+}
+
+.ac-assistant-accent-pandemic .ac-assistant-chat-input,
+.ac-assistant-accent-pandemic .ac-assistant-conversation {
+    border-color: rgba(178, 154, 130, 0.5);
+}
+
+.ac-assistant-accent-pandemic .ac-assistant-chat-send {
+    border-color: rgba(178, 154, 130, 0.62);
+    background-color: rgba(43, 37, 31, 0.98);
+}
+
+.ac-assistant-accent-rebirth .ac-assistant-chat-input,
+.ac-assistant-accent-rebirth .ac-assistant-conversation {
+    border-color: rgba(216, 169, 193, 0.5);
+}
+
+.ac-assistant-accent-rebirth .ac-assistant-chat-send {
+    border-color: rgba(216, 169, 193, 0.62);
+    background-color: rgba(58, 37, 49, 0.98);
+}
+
+.ac-assistant-accent-whiteguardian .ac-assistant-chat-input,
+.ac-assistant-accent-whiteguardian .ac-assistant-conversation {
+    border-color: rgba(191, 233, 255, 0.5);
+}
+
+.ac-assistant-accent-whiteguardian .ac-assistant-chat-send {
+    border-color: rgba(191, 233, 255, 0.62);
+    background-color: rgba(31, 47, 57, 0.98);
+}
+
+.ac-assistant-accent-conscience .ac-assistant-chat-input,
+.ac-assistant-accent-conscience .ac-assistant-conversation {
+    border-color: rgba(255, 106, 42, 0.5);
+}
+
+.ac-assistant-accent-sanctuary .ac-assistant-chat-input,
+.ac-assistant-accent-sanctuary .ac-assistant-conversation {
+    border-color: rgba(243, 185, 95, 0.5);
+}
+
+.ac-assistant-accent-sanctuary .ac-assistant-chat-send {
+    border-color: rgba(243, 185, 95, 0.62);
+    background-color: rgba(59, 46, 27, 0.98);
+}

@@ -50,6 +50,6 @@ Add these environment variables under the Render service's Environment settings:
 
 Render provides `PORT` automatically. Do not add the key to Unity, the repository, or a client build. Commit `package-lock.json` alongside `package.json`; Render installs only this backend's Node dependencies.
 
-## Unity integration status
+## Unity integration
 
-The current runtime chooses language-specific UI Toolkit assets through `RuntimeScreenCatalog` and `AwakeningApplicationController`. Its assistant overlay uses imported visual designs; the runtime currently disables the placeholder controls and displays an unavailable state. The design assets do not include an actual text input/response binding, so this backend is intentionally independent until the runtime chat interaction is implemented. Unity should call the deployed HTTPS `/chat` endpoint with JSON `{ "message": "..." }` and read the `reply` field. Keep the API key exclusively in Render.
+The Unity runtime uses the language-specific UI Toolkit assets registered in `RuntimeScreenCatalog`. `AwakeningApplicationController` now adds a live text input, send/retry action, suggestion handlers, and conversation view to the imported assistant panel. It sends JSON `{ "message": "..." }` to the deployed HTTPS `/chat` endpoint and displays the `reply` field. Configure the service base URL in the controller's **Assistant Backend Base URL** Inspector field. The OpenAI API key remains exclusively in Render.
