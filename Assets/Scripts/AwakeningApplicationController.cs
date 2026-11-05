@@ -523,6 +523,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (language == selectedLanguage)
             return;
         language = selectedLanguage;
+        UpdateNavigationHistoryLanguage(selectedLanguage);
 
         if (overlays.Count > 0)
         {
@@ -532,6 +533,20 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
         if (currentScreen != HomeScreen)
             Navigate(currentScreen, language, false, true);
+    }
+
+    private void UpdateNavigationHistoryLanguage(AppLanguage selectedLanguage)
+    {
+        if (backStack.Count == 0)
+            return;
+
+        RouteState[] routes = backStack.ToArray();
+        backStack.Clear();
+        for (int i = routes.Length - 1; i >= 0; i--)
+        {
+            routes[i].language = selectedLanguage;
+            backStack.Push(routes[i]);
+        }
     }
 
     private void OnConsentChanged(bool accepted)
@@ -704,6 +719,15 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (homeController != null)
             homeController.SetHomeVisible(true);
         StartCoroutine(ReleaseTransitionLockNextFrame());
+    }
+
+    private void ReturnHomeFromSettings()
+    {
+        if (transitionInProgress)
+            return;
+
+        selectedPerformer = -1;
+        ReturnHomeFromDone();
     }
 
     public void Back()
@@ -891,7 +915,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             BindPath(root, "1/7/35", "Label", privacyId, () => Navigate(PrivacyScreen, language, true), screenUnbind, false);
             BindPath(root, "1/8/4", "VisualElement", assistantSurfaceId, () => Navigate(AssistantChooserScreen, language, true), screenUnbind);
             BindPath(root, "1/8/5", "Label", assistantId, () => Navigate(AssistantChooserScreen, language, true), screenUnbind, false);
-            BindPath(root, "1/9", "Label", backId, () => HandleInteractionCommand(InteractionCommand.BackRequested), screenUnbind);
+            BindPath(root, "1/9", "Label", backId, ReturnHomeFromSettings, screenUnbind);
             FocusFirstFocusable(root);
             return;
         }
@@ -925,8 +949,20 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             }
             Action advanceStage = () => HandleInteractionCommand(InteractionCommand.AdvanceStage);
             BindPath(root, actionPath, "Label", nodeId, advanceStage, screenUnbind);
+            if (stage < Stages.Length - 1)
+                RegisterPageClick(root, advanceStage, screenUnbind);
             if (stage == Stages.Length - 1)
+            {
+                string continueSurfaceId = "124:" + (rootIndex + 16);
+                BindPath(root, "1/6/10", "VisualElement", continueSurfaceId, advanceStage, screenUnbind);
+                VisualElement continueSurface;
+                VisualElement continueLabel;
+                if (TryResolvePath(root, "1/6/10", out continueSurface) &&
+                    TryResolvePath(root, "1/6/11", out continueLabel))
+                    RegisterButtonHoverProxy(continueLabel, continueSurface, screenUnbind);
+
                 ConfigurePerformerAgentPage(root, performer, rootIndex, screenUnbind);
+            }
             RegisterKeyOnRoot(root, advanceStage, screenUnbind);
             FocusFirstFocusable(root);
             return;
@@ -1123,6 +1159,41 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         EventCallback<PointerEnterEvent> pointerEnter = evt => SetTargetedPerformer(index);
         element.RegisterCallback(pointerEnter);
         cleanup.Add(() => element.UnregisterCallback(pointerEnter));
+    }
+
+    private void RegisterButtonHoverProxy(VisualElement hitTarget, VisualElement visualTarget, List<Action> cleanup)
+    {
+        EventCallback<PointerEnterEvent> pointerEnter = _ => visualTarget.AddToClassList("ac-hover");
+        EventCallback<PointerLeaveEvent> pointerLeave = evt =>
+        {
+            if (!visualTarget.worldBound.Contains(new Vector2(evt.position.x, evt.position.y)))
+            {
+                visualTarget.RemoveFromClassList("ac-hover");
+                visualTarget.RemoveFromClassList("ac-pressed");
+            }
+        };
+        EventCallback<PointerDownEvent> pointerDown = evt =>
+        {
+            if (evt.button == 0)
+                visualTarget.AddToClassList("ac-pressed");
+        };
+        EventCallback<PointerUpEvent> pointerUp = evt =>
+        {
+            if (evt.button == 0 || evt.pressedButtons == 0)
+                visualTarget.RemoveFromClassList("ac-pressed");
+        };
+        EventCallback<PointerCancelEvent> pointerCancel = _ => visualTarget.RemoveFromClassList("ac-pressed");
+
+        hitTarget.RegisterCallback(pointerEnter);
+        hitTarget.RegisterCallback(pointerLeave);
+        hitTarget.RegisterCallback(pointerDown);
+        hitTarget.RegisterCallback(pointerUp);
+        hitTarget.RegisterCallback(pointerCancel);
+        cleanup.Add(() => hitTarget.UnregisterCallback(pointerEnter));
+        cleanup.Add(() => hitTarget.UnregisterCallback(pointerLeave));
+        cleanup.Add(() => hitTarget.UnregisterCallback(pointerDown));
+        cleanup.Add(() => hitTarget.UnregisterCallback(pointerUp));
+        cleanup.Add(() => hitTarget.UnregisterCallback(pointerCancel));
     }
 
     private void SelectPerformer(int index, bool openAssistant)
@@ -1409,8 +1480,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             {
                 int promptOffset = promptSurfaceOffsets[i];
                 string promptSurfaceId = "124:" + (figmaRootIndex + promptOffset);
+                string promptLabelId = "124:" + (figmaRootIndex + promptOffset + 1);
                 Action askPrompt = () => SubmitAssistantMessage(session, promptLabel.text);
                 BindPath(root, promptSurfacePath, "VisualElement", promptSurfaceId, askPrompt, cleanup);
+                BindPath(root, promptLabelPath, "Label", promptLabelId, askPrompt, cleanup, false);
+                RegisterButtonHoverProxy(labelElement, surface, cleanup);
             }
             else
             {
@@ -2085,6 +2159,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     // corresponding runtime elements at their current UXML positions.
     private string ResolveRuntimeElementPath(string figmaPath)
     {
+        if (activeBindingScreen == "SOUVENIR---QR-DELIVERY")
+        {
+            if (figmaPath == "1/7/7")
+                return "1/6/7";
+            if (figmaPath == "1/7/8")
+                return "1/6/8";
+        }
+
         if (activeBindingScreen != SettingsScreen || language != AppLanguage.English)
             return figmaPath;
 

@@ -17,6 +17,7 @@ public sealed class HomeLanguageController : MonoBehaviour
     public static event Action SettingsRequested;
     public static event Action ReviewConsentRequested;
     public static event Action<bool> ConsentChanged;
+    private const string LanguagePreferenceKey = "AwakeningCelebrations.Language";
     private const string EnglishAssetName = "HOME---ENGLISH---SANCTUARY";
     private const string ChineseAssetName = "HOME--------SANCTUARY";
     private const int ExpectedChildCount = 34;
@@ -462,7 +463,8 @@ public sealed class HomeLanguageController : MonoBehaviour
         chineseReview.SetUnavailable(true);
         initialized = true;
         ApplyConsentState();
-        ApplyLanguage(Language.English);
+        string savedLanguage = PlayerPrefs.GetString(LanguagePreferenceKey, "en");
+        ApplyLanguage(savedLanguage == "zh" ? Language.Chinese : Language.English);
         return true;
     }
 
@@ -602,6 +604,8 @@ public sealed class HomeLanguageController : MonoBehaviour
     {
         currentLanguage = language;
         bool showEnglish = language == Language.English;
+        PlayerPrefs.SetString(LanguagePreferenceKey, showEnglish ? "en" : "zh");
+        PlayerPrefs.Save();
 
         ResetTransientStates();
         englishRoot.SetEnabled(showEnglish);
