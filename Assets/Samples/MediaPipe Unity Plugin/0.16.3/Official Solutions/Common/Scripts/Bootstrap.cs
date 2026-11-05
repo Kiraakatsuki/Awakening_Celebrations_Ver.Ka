@@ -87,6 +87,7 @@ namespace Mediapipe.Unity.Sample
       ImageSourceProvider.Switch(_appSettings.defaultImageSource);
 
       isFinished = true;
+      Debug.Log("MediaPipe Bootstrap initialization completed.", this);
     }
 
     private void DecideInferenceMode()
@@ -101,15 +102,30 @@ namespace Mediapipe.Unity.Sample
 #endif
     }
 
+    private void OnDisable()
+    {
+      if (Application.isPlaying)
+      {
+        ShutdownMediaPipeRuntime();
+      }
+    }
+
     private void OnApplicationQuit()
     {
-      GpuManager.Shutdown();
+      ShutdownMediaPipeRuntime();
+    }
 
+    private void ShutdownMediaPipeRuntime()
+    {
       if (_isGlogInitialized)
       {
+        GpuManager.Shutdown();
         Glog.Shutdown();
+        _isGlogInitialized = false;
+        Debug.Log("MediaPipe Bootstrap native resources were shut down.", this);
       }
 
+      isFinished = false;
       Protobuf.ResetLogHandler();
     }
   }

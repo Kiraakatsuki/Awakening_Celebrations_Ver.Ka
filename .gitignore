@@ -1,81 +1,213 @@
-# Unity generated and temporary files
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
-[Mm]emoryCaptures/
-[Rr]ecordings/
+# Unity generated data and local editor state
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emory[Cc]aptures/
+/[Rr]ecordings/
+/.utmp/
+/Export/
+/ExportedObj/
+/ServerData/
+/BuildOutput/
+/*_BackUpThisFolder_ButDontShipItWithYourGame/
+/*_BurstDebugInformation_DoNotShip/
 
-# Build output
-[Bb]uild/
-[Bb]uilds/
-[Ee]xport/
+# Unity crash recovery and generated asset caches
+/[Aa]ssets/_Recovery/
+/[Aa]ssets/_Recovery.meta
+/[Aa]ssets/Plugins/Editor/JetBrains*
+/[Aa]ssets/**/*.blend1
+/[Aa]ssets/**/*.blend1.meta
+/[Aa]ssets/**/TDImportCache/
+/[Aa]ssets/**/TDImportCache.meta
+/[Aa]ssets/AddressableAssetsData/*/addressables_content_state.bin
+/[Aa]ssets/AddressableAssetsData/*/addressables_content_state.bin.meta
+/[Aa]ssets/AddressableAssetsData/link.xml
+/[Aa]ssets/AddressableAssetsData/link.xml.meta
+/[Aa]ssets/Addressables_Temp/
+/[Aa]ssets/Addressables_Temp.meta
+/[Aa]ssets/StreamingAssets/aa/
+/[Aa]ssets/StreamingAssets/aa.meta
+/[Aa]ssets/GeneratedLocalRepo/
+/[Aa]ssets/GeneratedLocalRepo.meta
+/[Aa]ssets/[Ss]ceneDependencyCache*
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers/
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/[Aa]ssets/Resources/PerformanceTestRunInfo.json
+/[Aa]ssets/Resources/PerformanceTestRunInfo.json.meta
+/[Aa]ssets/Resources/PerformanceTestRunSettings.json
+/[Aa]ssets/Resources/PerformanceTestRunSettings.json.meta
+/[Aa]ssets/InitTestScene*.unity
+/[Aa]ssets/InitTestScene*.unity.meta
+/UIElementsSchema/
+
+# Generated runtime screenshots stored under Assets; other screenshot assets stay trackable
+/Assets/Screenshots/FigmaAuditRuntime/
+/Assets/Screenshots/FigmaAuditRuntime.meta
+/Assets/Screenshots/FigmaUnityRuntime/
+/Assets/Screenshots/FigmaUnityRuntime.meta
+/Assets/Screenshots/fidelity-audit-*.png
+/Assets/Screenshots/fidelity-audit-*.png.meta
+/Assets/Screenshots/screenshot-*.png
+/Assets/Screenshots/screenshot-*.png.meta
+
+# Unity build packages and crash output
 *.apk
 *.aab
-*.app
+*.obb
+*.ipa
 *.unitypackage
+*.unitypackage.meta
+*.app
+sysinfo.txt
+crashlytics-build.properties
+mono_crash.*
+tmpinst-dir.stamp
+*.dSYM/
 
-# IDE and editor-generated files
+# IDE and editor-generated files (Visual Studio, Rider, VS Code, MonoDevelop)
 .vs/
 .idea/
 .gradle/
-*.csproj
+.consulo/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+**/.localhistory/
+_ReSharper*/
+*.DotSettings.user
+*.iml
+*.sln.iml
 *.sln
+*.slnx
+*.csproj
+*.unityproj
 *.suo
+*.rsuser
 *.user
+*.userosscache
 *.userprefs
+*.sln.docstates
 *.pidb
+*.pidb.meta
 *.booproj
+*.svd
 *.svclog
 *.pdb
+*.pdb.meta
 *.mdb
+*.mdb.meta
 *.opendb
 *.VC.db
+*.VC.VC.opendb
+*.cachefile
+*.tmp_proj
+*.tlog
+*.psess
+*.vsp
+*.vspx
+*.sap
+*.ilk
+*.idb
+*.iobj
+*.ipdb
+*.pch
+*.sdf
+*.ncb
+*.aps
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.scc
+*.vspscc
+*.vssscc
+*.e2e
+*.gpState
 
-# Operating system files
-.DS_Store
-Thumbs.db
-Desktop.ini
+# Build, test, and coverage outputs for auxiliary tools
+/artifacts/
+/.artifacts/
+/bin/
+/obj/
+/[Dd]ebug/
+/[Dd]ebugPublic/
+/[Rr]elease/
+/[Rr]eleases/
+/[Oo]ut/
+/[Bb]ld/
+/awakening-ai-backend/bin/
+/awakening-ai-backend/obj/
+/awakening-ai-backend/[Dd]ebug/
+/awakening-ai-backend/[Dd]ebugPublic/
+/awakening-ai-backend/[Rr]elease/
+/awakening-ai-backend/[Rr]eleases/
+/awakening-ai-backend/[Oo]ut/
+/awakening-ai-backend/[Bb]ld/
+/awakening-ai-backend/dist/
+/TestResults/
+/awakening-ai-backend/TestResults/
+/coverage/
+/awakening-ai-backend/coverage/
+coverage*.json
+coverage*.xml
+coverage*.info
+*.trx
+*.coverage
+*.coveragexml
+*.binlog
+MSBuild_Logs/
 
-# Crash reports and temporary files
-sysinfo.txt
-crashlytics-build.properties
+# Node, Python, and package-manager caches
+node_modules/
+.npm/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.venv/
+venv/
+virtualenv/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Keep project source, scenes, packages, assets,
-# ProjectSettings, metadata and documentation tracked.
-
-# Additional temporary files
+# Logs, crash dumps, and temporary/backup files
+*.log
+*.stackdump
 *.tmp
 *.temp
 *.bak
 *.orig
 *.swp
 *.swo
+*~
+.dirstamp
 
-# Local environment and secrets
+# Local environment files and developer-specific configuration
 .env
 .env.*
 !.env.example
+!.env.sample
 *.local
+*.local.*
+local.properties
 
-# Local Unity MCP package � do not commit
-/Packages/com.coplaydev.unity-mcp/
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
 
-# Generated Unity/Figma runtime screenshots
-/Assets/Screenshots/FigmaAuditRuntime.meta
-/Assets/Screenshots/FigmaUnityRuntime.meta
-/Assets/Screenshots/FigmaUnityRuntime/
-/Assets/Screenshots/fidelity-audit-*.png
-/Assets/Screenshots/fidelity-audit-*.png.meta
-/Assets/Screenshots/screenshot-*.png
-/Assets/Screenshots/screenshot-*.png.meta
-
-# Generated Figma audit documentation and exports
-/Documentation/FigmaScreenshots/
-/Documentation/FigmaUnityContactSheets/
-/Documentation/figma-captures/
-/Documentation/FigmaUnityFidelityAudit.md
-/Documentation/FigmaUnityFrameInventory.csv
-/Documentation/FigmaUnityRuntimeRootInventory.csv
-/Documentation/FigmaUnityUIAudit.md
+# Packages/manifest.json, Packages/packages-lock.json, embedded packages,
+# ProjectSettings, Assets (including .meta), scenes, and Documentation are source files.
+# Keep the local MCP package trackable: the current packages-lock.json resolves it as embedded.

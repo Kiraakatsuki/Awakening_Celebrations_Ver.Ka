@@ -141,22 +141,7 @@ namespace AwakeningCelebrations.Interaction
 
         public bool ClickAtCurrentPosition()
         {
-            if (!hasPosition || screenRoot == null || screenRoot.panel == null)
-            {
-                return false;
-            }
-
-            Rect bounds = screenRoot.worldBound;
-            if (bounds.width <= 0f || bounds.height <= 0f)
-            {
-                return false;
-            }
-
-            Vector2 normalizedPosition = hasSmoothedPosition ? smoothedNormalized : targetNormalized;
-            Vector2 panelPosition = new Vector2(bounds.x + normalizedPosition.x * bounds.width,
-                bounds.y + normalizedPosition.y * bounds.height);
-            VisualElement target = screenRoot.panel.Pick(panelPosition);
-            if (target == null || target == cursor)
+            if (!TryPickAtCurrentPosition(out VisualElement target) || target == cursor)
             {
                 return false;
             }
@@ -166,6 +151,23 @@ namespace AwakeningCelebrations.Interaction
                 target.SendEvent(click);
             }
             return true;
+        }
+
+        public bool TryPickAtCurrentPosition(out VisualElement target)
+        {
+            target = null;
+            if (!hasPosition || screenRoot == null || screenRoot.panel == null)
+                return false;
+
+            Rect bounds = screenRoot.worldBound;
+            if (bounds.width <= 0f || bounds.height <= 0f)
+                return false;
+
+            Vector2 normalizedPosition = hasSmoothedPosition ? smoothedNormalized : targetNormalized;
+            Vector2 panelPosition = new Vector2(bounds.x + normalizedPosition.x * bounds.width,
+                bounds.y + normalizedPosition.y * bounds.height);
+            target = screenRoot.panel.Pick(panelPosition);
+            return target != null;
         }
     }
 }

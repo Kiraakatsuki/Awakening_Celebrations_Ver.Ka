@@ -6,6 +6,7 @@
 
 using System.Collections;
 using System;
+using System.Collections.Generic;
 using AwakeningCelebrations.Interaction;
 using Mediapipe.Tasks.Vision.HandLandmarker;
 using UnityEngine;
@@ -30,6 +31,8 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     /// data they retain because the runner reuses its result buffers.
     /// </summary>
     public event Action<HandLandmarkerResult> ResultReceived;
+    public bool IsPipelineStarted { get { return pipelineStarted; } }
+    public bool IsImageSourcePrepared { get { return imageSourcePrepared; } }
     public long FailedTextureReadbackCount { get; private set; }
     public long SkippedTexturePoolFrameCount { get; private set; }
 
@@ -50,8 +53,20 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     {
       yield return new WaitUntil(() => GestureCameraConsentGate.ConsentGranted);
       bootstrap = FindBootstrap();
-      yield return new WaitUntil(() => bootstrap != null && bootstrap.isFinished);
+      var bootstrapWaitStarted = Time.realtimeSinceStartupAsDouble;
+      while (bootstrap != null && !bootstrap.isFinished && Time.realtimeSinceStartupAsDouble - bootstrapWaitStarted < 60.0)
+      {
+        yield return null;
+      }
+
+      if (bootstrap == null || !bootstrap.isFinished)
+      {
+        Debug.LogError("MediaPipe Bootstrap did not finish initializing within 60 seconds. Camera and hand tracking were not started.", this);
+        yield break;
+      }
+
       bootstrapReady = true;
+      Debug.Log("MediaPipe Bootstrap is ready; waiting for camera consent to start hand tracking.", this);
       ApplyCameraConsent(GestureCameraConsentGate.ConsentGranted);
     }
 
@@ -126,6 +141,73 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
     protected override IEnumerator Run()
     {
+      yield return RunWithFailureHandling(RunPipeline());
+    }
+
+    private IEnumerator RunWithFailureHandling(IEnumerator pipeline)
+    {
+      var stack = new Stack<IEnumerator>();
+      stack.Push(pipeline);
+
+      while (stack.Count > 0)
+      {
+        var currentEnumerator = stack.Peek();
+        object currentYield = null;
+        bool movedNext;
+        Exception pipelineFailure = null;
+        try
+        {
+          movedNext = currentEnumerator.MoveNext();
+          if (movedNext)
+          {
+            currentYield = currentEnumerator.Current;
+          }
+        }
+        catch (Exception exception)
+        {
+          movedNext = false;
+          pipelineFailure = exception;
+        }
+
+        if (pipelineFailure != null)
+        {
+          Debug.LogError($"MediaPipe hand tracking startup or processing failed: {pipelineFailure}", this);
+          // Allow StartCoroutine to finish assigning the runner coroutine handle before
+          // the base runner's Stop() attempts to stop it.
+          yield return null;
+          while (stack.Count > 0)
+          {
+            (stack.Pop() as IDisposable)?.Dispose();
+          }
+          pipelineStarted = false;
+          imageSourcePrepared = false;
+          base.Stop();
+          _textureFramePool?.Dispose();
+          _textureFramePool = null;
+          Debug.LogWarning("Hand tracking resources were released after failure. Toggle camera consent off and on to retry.", this);
+          yield break;
+        }
+
+        if (!movedNext)
+        {
+          (currentEnumerator as IDisposable)?.Dispose();
+          stack.Pop();
+          continue;
+        }
+
+        if (currentYield is IEnumerator nestedEnumerator)
+        {
+          stack.Push(nestedEnumerator);
+        }
+        else
+        {
+          yield return currentYield;
+        }
+      }
+    }
+
+    private IEnumerator RunPipeline()
+    {
       Debug.Log($"Delegate = {config.Delegate}");
       Debug.Log($"Image Read Mode = {config.ImageReadMode}");
       Debug.Log($"Running Mode = {config.RunningMode}");
@@ -135,28 +217,37 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
       Debug.Log($"MinTrackingConfidence = {config.MinTrackingConfidence}");
 
       yield return AssetLoader.PrepareAssetAsync(config.ModelPath);
+      Debug.Log($"Hand Landmarker model asset prepared: {config.ModelPath}", this);
 
       var options = config.GetHandLandmarkerOptions(config.RunningMode == Tasks.Vision.Core.RunningMode.LIVE_STREAM ? OnHandLandmarkDetectionOutput : null);
       taskApi = HandLandmarker.CreateFromOptions(options, GpuManager.GpuResources);
+      Debug.Log("Hand Landmarker task initialized.", this);
       var imageSource = ImageSourceProvider.ImageSource;
 
       yield return imageSource.Play();
 
       if (!imageSource.isPrepared)
       {
-        Debug.LogError("Failed to start ImageSource, exiting...");
-        yield break;
+        throw new InvalidOperationException("ImageSource.Play completed without preparing a camera texture.");
       }
       imageSourcePrepared = true;
+      Debug.Log($"Camera source ready: {imageSource.sourceName ?? "unknown"}, {imageSource.textureWidth}x{imageSource.textureHeight}, requested {imageSource.frameRate:0.##} FPS, rotation {imageSource.rotation}, mirrored={imageSource.isFrontFacing || imageSource.isHorizontallyFlipped}.", this);
 
       // Use RGBA32 as the input format.
       // TODO: When using GpuBuffer, MediaPipe assumes that the input format is BGRA, so maybe the following code needs to be fixed.
       _textureFramePool = new Experimental.TextureFramePool(imageSource.textureWidth, imageSource.textureHeight, TextureFormat.RGBA32, 10);
 
       // NOTE: The screen will be resized later, keeping the aspect ratio.
-      screen.Initialize(imageSource);
-
-      SetupAnnotationController(_handLandmarkerResultAnnotationController, imageSource);
+      // The application scene runs this pipeline headlessly. The sample scene's
+      // preview and annotation UI are optional and must not gate camera tracking.
+      if (screen != null)
+      {
+        screen.Initialize(imageSource);
+      }
+      if (_handLandmarkerResultAnnotationController != null)
+      {
+        SetupAnnotationController(_handLandmarkerResultAnnotationController, imageSource);
+      }
 
       var transformationOptions = imageSource.GetTransformationOptions();
       var flipHorizontally = transformationOptions.flipHorizontally;
@@ -232,24 +323,24 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
           case Tasks.Vision.Core.RunningMode.IMAGE:
             if (taskApi.TryDetect(image, imageProcessingOptions, ref result))
             {
-              _handLandmarkerResultAnnotationController.DrawNow(result);
+              _handLandmarkerResultAnnotationController?.DrawNow(result);
               ResultReceived?.Invoke(result);
             }
             else
             {
-              _handLandmarkerResultAnnotationController.DrawNow(default);
+              _handLandmarkerResultAnnotationController?.DrawNow(default);
               ResultReceived?.Invoke(default);
             }
             break;
           case Tasks.Vision.Core.RunningMode.VIDEO:
             if (taskApi.TryDetectForVideo(image, GetCurrentTimestampMillisec(), imageProcessingOptions, ref result))
             {
-              _handLandmarkerResultAnnotationController.DrawNow(result);
+              _handLandmarkerResultAnnotationController?.DrawNow(result);
               ResultReceived?.Invoke(result);
             }
             else
             {
-              _handLandmarkerResultAnnotationController.DrawNow(default);
+              _handLandmarkerResultAnnotationController?.DrawNow(default);
               ResultReceived?.Invoke(default);
             }
             break;
@@ -263,7 +354,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     private void OnHandLandmarkDetectionOutput(HandLandmarkerResult result, Image image, long timestamp)
     {
       ResultReceived?.Invoke(result);
-      _handLandmarkerResultAnnotationController.DrawLater(result);
+      _handLandmarkerResultAnnotationController?.DrawLater(result);
     }
   }
 }

@@ -17,6 +17,7 @@ namespace AwakeningCelebrations.Interaction
     {
         [SerializeField] private GestureRecognitionSettings settings = new GestureRecognitionSettings();
         [SerializeField] private bool logRecognizedGestures = true;
+        [SerializeField, Range(0f, 1f)] private float minimumHandednessConfidence = 0.55f;
 
         private readonly object resultLock = new object();
         private GestureRecognitionLayer recognizer;
@@ -26,7 +27,6 @@ namespace AwakeningCelebrations.Interaction
         private long processedSequence;
         private double latestResultTime;
         private double lastNonEmptyHandsTime;
-        private double bridgeEnabledTime;
         private bool tracking;
         private bool warnedNoResults;
         private int lastDiagnosticHandCount = -1;
@@ -35,9 +35,11 @@ namespace AwakeningCelebrations.Interaction
         private double lastFrameIntervalMilliseconds;
         private double lastResultQueueDelayMilliseconds;
         private double lastRecognitionProcessingMilliseconds;
+        private double pipelineStartedTime;
         private long droppedResultCount;
         private int trackingInterruptionCount;
         private bool reportedPipelineConfiguration;
+        private bool reportedFirstResult;
 
         public event Action<GestureRecognitionEvent> GestureDetected;
         public event Action<bool> TrackingChanged;
@@ -61,8 +63,9 @@ namespace AwakeningCelebrations.Interaction
             }
 
             runner.ResultReceived += OnResultReceived;
-            bridgeEnabledTime = NowSeconds();
+            pipelineStartedTime = 0;
             warnedNoResults = false;
+            reportedFirstResult = false;
         }
 
         private void OnDisable()
@@ -78,6 +81,16 @@ namespace AwakeningCelebrations.Interaction
 
         private void Update()
         {
+            if (!GestureCameraConsentGate.ConsentGranted)
+            {
+                if (tracking)
+                {
+                    recognizer.Reset();
+                    SetTracking(false);
+                }
+                return;
+            }
+
             TrackedHand[] frameHands = null;
             double frameTime = 0;
             long sequence = 0;
@@ -95,14 +108,18 @@ namespace AwakeningCelebrations.Interaction
             }
 
             var now = NowSeconds();
+            if (runner == null || !runner.IsPipelineStarted || !runner.IsImageSourcePrepared)
+            {
+                pipelineStartedTime = 0;
+                warnedNoResults = false;
+            }
+            else if (pipelineStartedTime <= 0)
+            {
+                pipelineStartedTime = now;
+            }
+
             if (frameHands != null)
             {
-                if (frameHands.Length > 0)
-                {
-                    lastNonEmptyHandsTime = frameTime;
-                    SetTracking(true);
-                }
-
                 droppedResultCount += skippedResults;
                 if (lastProcessedResultTime > 0)
                     lastFrameIntervalMilliseconds = Math.Max(0, frameTime - lastProcessedResultTime) * 1000.0;
@@ -110,6 +127,9 @@ namespace AwakeningCelebrations.Interaction
                 double processStarted = NowSeconds();
                 recognizer.ProcessFrame(frameHands, frameTime);
                 double processedAt = NowSeconds();
+                if (recognizer.HasUsableTracking)
+                    lastNonEmptyHandsTime = frameTime;
+                SetTracking(recognizer.HasUsableTracking);
                 lastResultQueueDelayMilliseconds = Math.Max(0, processStarted - frameTime) * 1000.0;
                 lastRecognitionProcessingMilliseconds = Math.Max(0, processedAt - processStarted) * 1000.0;
                 ReportFrameDiagnostics(frameHands.Length, processedAt);
@@ -120,16 +140,23 @@ namespace AwakeningCelebrations.Interaction
                 recognizer.Reset();
                 SetTracking(false);
             }
-            else if (!warnedNoResults && runner != null && now - bridgeEnabledTime > settings.noResultWarningSeconds && latestSequence == 0)
+            else if (!warnedNoResults && runner != null && runner.IsPipelineStarted && runner.IsImageSourcePrepared &&
+                     pipelineStartedTime > 0 && now - pipelineStartedTime > settings.noResultWarningSeconds && latestSequence == 0)
             {
                 warnedNoResults = true;
-                Debug.LogWarning("No Hand Landmarker results received. Start the sample runner and check its camera/model setup.", this);
+                Debug.LogWarning("No Hand Landmarker results received after the camera became ready. Check inference callbacks and model/runtime logs.", this);
             }
         }
 
         private void OnResultReceived(HandLandmarkerResult result)
         {
             var count = result.handLandmarks == null ? 0 : result.handLandmarks.Count;
+            if (!reportedFirstResult)
+            {
+                reportedFirstResult = true;
+                Debug.Log($"MediaPipe first hand-landmark result received: {count} hand(s).", this);
+            }
+
             var converted = new TrackedHand[count];
             var validCount = 0;
             for (var handIndex = 0; handIndex < count; handIndex++)
@@ -150,10 +177,20 @@ namespace AwakeningCelebrations.Interaction
                 if (result.handedness != null && handIndex < result.handedness.Count &&
                     result.handedness[handIndex].categories != null && result.handedness[handIndex].categories.Count > 0)
                 {
-                    var categoryName = result.handedness[handIndex].categories[0].categoryName;
-                    if (!string.IsNullOrEmpty(categoryName))
+                    var handednessCategory = result.handedness[handIndex].categories[0];
+                    var categoryName = handednessCategory.categoryName;
+                    if (!string.IsNullOrEmpty(categoryName) && handednessCategory.score >= minimumHandednessConfidence)
                     {
                         handId = categoryName;
+                    }
+                }
+
+                for (var assigned = 0; assigned < validCount; assigned++)
+                {
+                    if (converted[assigned].Id == handId)
+                    {
+                        handId = "hand-" + handIndex;
+                        break;
                     }
                 }
 

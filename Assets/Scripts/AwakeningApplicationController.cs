@@ -44,6 +44,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     };
 
     [SerializeField] private UIDocument navigationDocument;
+    [SerializeField] private ScreenDocumentManager screenDocumentManager;
     [SerializeField] private RuntimeScreenCatalog screenCatalog;
     [SerializeField] private HomeLanguageController homeController;
     [SerializeField, Min(0f), Tooltip("The imported Color Release screen has no completion event or duration; this configurable presentation interval is a provisional default.")]
@@ -52,6 +53,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     [SerializeField] private AudioSource environmentalMusicSource;
     [SerializeField, Min(0.1f), Tooltip("Higher values make the gesture cursor catch up faster to the tracked fingertip.")]
     private float gestureCursorSmoothingSpeed = 16f;
+    [SerializeField, Min(0f)] private float gestureTargetStabilitySeconds = 0.12f;
+    [SerializeField, Min(0f)] private float gestureTargetReleaseSeconds = 0.75f;
     [SerializeField, Tooltip("The requirements identify a prepared environmental rhythm layer but do not specify repeat/stop behavior. Choose the desired behavior when assigning the approved clip.")]
     private EnvironmentalMusicMode environmentalMusicMode = EnvironmentalMusicMode.LoopUntilStopped;
     [SerializeField, Tooltip("Public HTTPS base URL for the Render assistant service. Keep API credentials on the backend.")]
@@ -78,11 +81,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private bool waveCompleted;
     private bool clapCompleted;
     private bool warnedMissingEnvironmentalMusic;
-    private MediaPipeGestureBridge gestureBridge;
+    [SerializeField] private MediaPipeGestureBridge gestureBridge;
     private bool gestureBridgeSubscribed;
-    private float nextGestureBridgeSearchTime;
     private bool warnedMissingGestureBridge;
     private int targetedPerformer = -1;
+    private int gestureTargetCandidate = -1;
+    private float gestureTargetCandidateSince;
+    private float gestureTargetLostSince = -1f;
+    private bool gesturePointing;
     private VisualElement[] performerTargets;
     private Coroutine colorReleaseRoutine;
     private bool transitionInProgress;
@@ -188,7 +194,10 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (homeController == null)
             homeController = FindObjectOfType<HomeLanguageController>();
 
-        if (navigationDocument == null)
+        if (screenDocumentManager != null)
+            screenDocumentManager.Initialize();
+
+        if (navigationDocument == null && screenDocumentManager == null)
         {
             UIDocument[] documents = FindObjectsOfType<UIDocument>(true);
             for (int i = 0; i < documents.Length; i++)
@@ -201,7 +210,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             }
         }
 
-        if (navigationDocument != null)
+        if (screenDocumentManager == null && navigationDocument != null)
         {
             navigationDocument.sortingOrder = 10;
             navigationDocument.enabled = false;
@@ -250,7 +259,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         yield return null;
         if (screenCatalog == null)
             Debug.LogError("AwakeningApplicationController: Resources/RuntimeScreenCatalog.asset is missing.", this);
-        if (navigationDocument == null)
+        if (screenDocumentManager == null && navigationDocument == null)
             Debug.LogError("AwakeningApplicationController: Assign the navigation UIDocument in the scene.", this);
         if (homeController == null)
             Debug.LogError("AwakeningApplicationController: HomeLanguageController was not found.", this);
@@ -261,45 +270,32 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (gestureBridge == null && !warnedMissingGestureBridge)
         {
             warnedMissingGestureBridge = true;
-            Debug.LogWarning("No MediaPipeGestureBridge is loaded. Gesture input will connect automatically when the existing Hand Landmarker sample scene is loaded.", this);
+            Debug.LogWarning("No MediaPipeGestureBridge is assigned on the application controller. Gesture input is unavailable.", this);
         }
     }
 
     private void Update()
     {
         gestureCursor?.Tick(Time.unscaledDeltaTime);
-        if (gestureBridge == null && Time.unscaledTime >= nextGestureBridgeSearchTime)
+        if (!gesturePointing && gestureTargetLostSince >= 0f &&
+            Time.unscaledTime - gestureTargetLostSince >= gestureTargetReleaseSeconds)
         {
-            nextGestureBridgeSearchTime = Time.unscaledTime + 1f;
-            TryConnectGestureBridge();
+            SetTargetedPerformer(-1);
+            gestureTargetLostSince = -1f;
+            gestureTargetCandidate = -1;
         }
     }
 
     private void TryConnectGestureBridge()
     {
-        MediaPipeGestureBridge availableBridge = FindObjectOfType<MediaPipeGestureBridge>(true);
-        if (availableBridge == null)
+        if (gestureBridge == null || gestureBridgeSubscribed)
             return;
 
-        if (gestureBridge != availableBridge)
-        {
-            if (gestureBridge != null && gestureBridgeSubscribed)
-            {
-                gestureBridge.GestureDetected -= OnGestureDetected;
-                gestureBridge.PointingChanged -= OnPointingChanged;
-                gestureBridge.TrackingChanged -= OnTrackingChanged;
-            }
-            gestureBridgeSubscribed = false;
-            gestureBridge = availableBridge;
-        }
-        if (!gestureBridgeSubscribed)
-        {
-            gestureBridge.GestureDetected += OnGestureDetected;
-            gestureBridge.PointingChanged += OnPointingChanged;
-            gestureBridge.TrackingChanged += OnTrackingChanged;
-            gestureBridgeSubscribed = true;
-            Debug.Log("AwakeningApplicationController connected to MediaPipe gesture events.", this);
-        }
+        gestureBridge.GestureDetected += OnGestureDetected;
+        gestureBridge.PointingChanged += OnPointingChanged;
+        gestureBridge.TrackingChanged += OnTrackingChanged;
+        gestureBridgeSubscribed = true;
+        Debug.Log("AwakeningApplicationController connected to its serialized gesture rig.", this);
     }
 
     private void OnGestureDetected(GestureRecognitionEvent gesture)
@@ -313,10 +309,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 HandleInteractionCommand(InteractionCommand.ClapCompleted);
                 break;
             case SemanticGesture.Point:
+                // Pointing is a continuous target operation. It never confirms or
+                // navigates; the cursor hit test updates targetedPerformer below.
                 break;
             case SemanticGesture.Fist:
-                if (!transitionInProgress)
-                    gestureCursor?.ClickAtCurrentPosition();
+                if (!transitionInProgress && currentScreen == PerformerSelectScreen)
+                    HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
                 break;
             case SemanticGesture.BothHandsRaised:
                 HandleInteractionCommand(InteractionCommand.ActivateLivingPortrait);
@@ -330,12 +328,74 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private void OnPointingChanged(bool isPointing, Vector2 normalizedPosition)
     {
         gestureCursor?.SetPointing(isPointing, normalizedPosition);
+        if (!isPointing)
+        {
+            if (gesturePointing)
+                gestureTargetLostSince = Time.unscaledTime;
+            gesturePointing = false;
+            gestureTargetCandidate = -1;
+            return;
+        }
+
+        gesturePointing = true;
+        gestureTargetLostSince = -1f;
+        if (currentScreen != PerformerSelectScreen || performerTargets == null)
+            return;
+
+        if (gestureCursor == null || !gestureCursor.TryPickAtCurrentPosition(out VisualElement picked))
+        {
+            UpdateGestureTarget(-1);
+            return;
+        }
+
+        while (picked != null)
+        {
+            for (int i = 0; i < performerTargets.Length; i++)
+            {
+                if (performerTargets[i] != null && picked == performerTargets[i])
+                {
+                    UpdateGestureTarget(i);
+                    return;
+                }
+            }
+            picked = picked.parent;
+        }
+        UpdateGestureTarget(-1);
+    }
+
+    private void UpdateGestureTarget(int candidate)
+    {
+        if (candidate == targetedPerformer)
+        {
+            gestureTargetCandidate = -1;
+            return;
+        }
+
+        if (gestureTargetCandidate != candidate)
+        {
+            gestureTargetCandidate = candidate;
+            gestureTargetCandidateSince = Time.unscaledTime;
+            return;
+        }
+
+        if (Time.unscaledTime - gestureTargetCandidateSince >= gestureTargetStabilitySeconds)
+        {
+            SetTargetedPerformer(candidate);
+            gestureTargetCandidate = -1;
+        }
     }
 
     private void OnTrackingChanged(bool isTracking)
     {
         if (!isTracking)
+        {
             gestureCursor?.ClearPosition();
+            gesturePointing = false;
+            gestureTargetLostSince = -1f;
+            gestureTargetCandidate = -1;
+            if (currentScreen == PerformerSelectScreen)
+                SetTargetedPerformer(-1);
+        }
     }
 
     private void HandleInteractionCommand(InteractionCommand command)
@@ -451,6 +511,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
         targetedPerformer = -1;
         performerTargets = null;
+        gestureTargetCandidate = -1;
+        gestureTargetLostSince = -1f;
+        gesturePointing = false;
     }
 
     private void OnLanguageChanged(AppLanguage selectedLanguage)
@@ -513,7 +576,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             Debug.LogError("AwakeningApplicationController: No " + targetLanguage + " asset is registered for logical screen '" + screenId + "'.", this);
             return false;
         }
-        if (navigationDocument == null)
+        if (navigationDocument == null && screenDocumentManager == null)
             return false;
 
         transitionInProgress = true;
@@ -534,9 +597,19 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             backStack.Clear();
 
         ClearBindings(screenUnbind);
-        navigationDocument.enabled = false;
-        navigationDocument.visualTreeAsset = asset;
-        navigationDocument.enabled = true;
+        if (screenDocumentManager != null)
+            navigationDocument = screenDocumentManager.Activate(screenId, asset);
+        else
+        {
+            navigationDocument.enabled = false;
+            navigationDocument.visualTreeAsset = asset;
+            navigationDocument.enabled = true;
+        }
+        if (navigationDocument == null)
+        {
+            transitionInProgress = false;
+            return false;
+        }
         ApplyInteractionStyles();
         currentScreen = screenId;
         activeBindingScreen = screenId;
@@ -587,8 +660,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         ClearBindings(screenUnbind);
         while (overlays.Count > 0)
             CloseTopOverlay();
+        if (screenDocumentManager != null)
+            screenDocumentManager.DeactivateMain();
         if (navigationDocument != null)
             navigationDocument.enabled = false;
+        navigationDocument = null;
         currentScreen = HomeScreen;
         activeBindingScreen = HomeScreen;
         if (homeController != null)
@@ -615,8 +691,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         ClearBindings(screenUnbind);
         while (overlays.Count > 0)
             CloseTopOverlay();
+        if (screenDocumentManager != null)
+            screenDocumentManager.DeactivateMain();
         if (navigationDocument != null)
             navigationDocument.enabled = false;
+        navigationDocument = null;
         currentScreen = HomeScreen;
         activeBindingScreen = HomeScreen;
         if (homeController != null)
@@ -626,7 +705,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     public void Back()
     {
-        if (!awakeningSequenceCompletedThisSession)
+        // Settings is available before awakening and must return to its caller.
+        // Other screens retain the existing pre-awakening Back restriction.
+        if (!awakeningSequenceCompletedThisSession && currentScreen != SettingsScreen)
             return;
         if (overlays.Count > 0)
         {
@@ -771,7 +852,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             BindPerformerChoices(root, currentScreen == AssistantChooserScreen, screenUnbind);
             if (currentScreen == AssistantChooserScreen)
             {
-                BindPath(root, "1/23", "Label", language == AppLanguage.English ? "124:5184" : "124:5212", () => Navigate(SettingsScreen, language, false), screenUnbind);
+                BindPath(root, "1/23", "Label", language == AppLanguage.English ? "124:5184" : "124:5212", () => Navigate(SettingsScreen, language, true), screenUnbind);
             }
             FocusFirstFocusable(root);
             return;
@@ -1051,14 +1132,27 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             return;
         }
 
-        VisualElement tree = asset.Instantiate();
-        VisualElement panelRoot = navigationDocument.rootVisualElement;
-        VisualElement baseRoot = GetUxmlRoot(panelRoot);
+        VisualElement panelRoot;
+        if (screenDocumentManager != null)
+            panelRoot = screenDocumentManager.ActivateOverlay(asset);
+        else
+            panelRoot = navigationDocument.rootVisualElement;
+        if (panelRoot == null)
+            return;
+        VisualElement tree = screenDocumentManager != null ? GetUxmlRoot(panelRoot) : asset.Instantiate();
+        VisualElement baseRoot = screenDocumentManager != null
+            ? (navigationDocument == null ? null : GetUxmlRoot(navigationDocument.rootVisualElement))
+            : GetUxmlRoot(panelRoot);
         if (baseRoot != null)
             baseRoot.SetEnabled(false);
         tree.AddToClassList("ac-assistant-overlay-container");
-        panelRoot.Add(tree);
+        if (screenDocumentManager == null)
+            panelRoot.Add(tree);
         overlays.Push(new OverlayState { tree = tree, baseRoot = baseRoot });
+        if (screenDocumentManager == null)
+            ApplyInteractionStylesTo(navigationDocument);
+        if (screenDocumentManager != null && interactionStyles != null)
+            panelRoot.styleSheets.Add(interactionStyles);
         selectedPerformer = performer;
         GestureCameraConsentGate.SetPreviewVisible(false);
         List<Action> cleanup = new List<Action>();
@@ -1568,7 +1662,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         OverlayState state = overlays.Pop();
         if (overlayUnbind.Count > 0)
             ClearBindings(overlayUnbind.Pop());
-        if (state.tree != null)
+        if (screenDocumentManager != null)
+            screenDocumentManager.DeactivateOverlay();
+        else if (state.tree != null)
             state.tree.RemoveFromHierarchy();
         if (state.baseRoot != null)
         {
@@ -1717,10 +1813,16 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void ApplyInteractionStyles()
     {
-        if (interactionStylesAdded || interactionStyles == null || navigationDocument == null || navigationDocument.rootVisualElement == null)
+        ApplyInteractionStylesTo(navigationDocument);
+    }
+
+    private void ApplyInteractionStylesTo(UIDocument document)
+    {
+        if (interactionStyles == null || document == null || document.rootVisualElement == null)
             return;
-        navigationDocument.rootVisualElement.styleSheets.Add(interactionStyles);
-        interactionStylesAdded = true;
+        document.rootVisualElement.styleSheets.Add(interactionStyles);
+        if (document == navigationDocument)
+            interactionStylesAdded = true;
     }
 
     private void RegisterClick(VisualElement element, Action action, List<Action> cleanup)

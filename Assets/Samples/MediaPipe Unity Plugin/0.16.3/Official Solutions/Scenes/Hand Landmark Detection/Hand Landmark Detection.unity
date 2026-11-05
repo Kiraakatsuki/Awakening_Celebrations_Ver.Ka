@@ -473,6 +473,10 @@ MonoBehaviour:
     diagnosticsEnabled: 0
     diagnosticsIntervalSeconds: 1
     openPalmMaxDrift: 0.06
+    landmarkSmoothing: 0.35
+    normalizedLandmarkMargin: 0.02
+    minimumPoseObservations: 5
+    maximumPoseObservationGapSeconds: 0.12
     fingerExtendedDistanceRatio: 1.12
     fingerCurledDistanceRatio: 0.96
     thumbExtensionPalmWidths: 0.65
@@ -488,16 +492,21 @@ MonoBehaviour:
     waveMinimumSamples: 6
     waveMaximumObservationGapSeconds: 0.2
     waveMaximumVerticalDriftPalmWidths: 0.9
-    clapArmDistancePalmWidths: 1.2
-    clapContactDistancePalmWidths: 0.65
+    clapArmDistancePalmWidths: 1.8
+    clapContactDistancePalmWidths: 0.9
     clapMinimumClosingPalmWidths: 0.3
     clapMinimumFrameClosingPalmWidths: 0.015
     clapMinimumClosingObservations: 3
     clapSeparationDwellSeconds: 0.25
     clapClosingWindowSeconds: 0.8
     clapOpeningResetPalmWidths: 0.08
-    raisedWristMaximumY: 0.42
+    clapMinimumReboundPalmWidths: 0.12
+    clapMaximumReboundSeconds: 0.35
+    raisedWristMaximumY: 0.55
     bothHandsRaisedDwellSeconds: 0.45
+    bothHandsRaiseMinimumTravel: 0.12
+    bothHandsRaiseWindowSeconds: 1.5
+    raiseGestureArmingMargin: 0.06
   logRecognizedGestures: 1
 --- !u!224 &1229135957 stripped
 RectTransform:
