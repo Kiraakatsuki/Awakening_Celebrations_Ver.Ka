@@ -99,7 +99,6 @@ public sealed class ScreenDocumentManager : MonoBehaviour
         if (screenId.StartsWith("TUTORIAL---", StringComparison.Ordinal)) return "Tutorial";
         if (screenId.StartsWith("ATTRACT---", StringComparison.Ordinal)) return "Attract";
         if (screenId == "COLOR-RELEASE") return "ColorRelease";
-        if (screenId.StartsWith("PERFORMER-SELECT", StringComparison.Ordinal)) return "PerformerSelection";
         if (screenId == "AssistantChooser") return "AssistantChooser";
         if (screenId.StartsWith("SETTINGS---", StringComparison.Ordinal)) return "Settings";
         if (screenId.StartsWith("CLOSING---", StringComparison.Ordinal)) return "Closing";

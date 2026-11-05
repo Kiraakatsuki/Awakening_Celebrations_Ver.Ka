@@ -13,7 +13,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private const string HomeScreen = "Home";
     private const string PrivacyScreen = "Privacy";
     private const string SettingsScreen = "SETTINGS---EXPERIENCE-CONTROLS";
-    private const string PerformerSelectScreen = "PERFORMER-SELECT---FALLBACK-INPUT";
     private const string AttractScreen = "ATTRACT---MONOCHROME---FALLBACK-INPUT";
     private const string ColorReleaseScreen = "COLOR-RELEASE";
     private const string AssistantChooserScreen = "AssistantChooser";
@@ -80,6 +79,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private bool awakeningSequenceCompletedThisSession;
     private bool waveCompleted;
     private bool clapCompleted;
+    private bool colorReleaseSelectionReady;
     private bool warnedMissingEnvironmentalMusic;
     [SerializeField] private MediaPipeGestureBridge gestureBridge;
     private bool gestureBridgeSubscribed;
@@ -90,6 +90,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private float gestureTargetLostSince = -1f;
     private bool gesturePointing;
     private VisualElement[] performerTargets;
+    private VisualElement colorReleaseRoot;
     private Coroutine colorReleaseRoutine;
     private bool transitionInProgress;
     private ManifestSnapshot nodeSnapshot;
@@ -313,7 +314,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 // navigates; the cursor hit test updates targetedPerformer below.
                 break;
             case SemanticGesture.Fist:
-                if (!transitionInProgress && currentScreen == PerformerSelectScreen)
+                if (!transitionInProgress && currentScreen == ColorReleaseScreen && colorReleaseSelectionReady)
                     HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
                 break;
             case SemanticGesture.BothHandsRaised:
@@ -339,7 +340,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
         gesturePointing = true;
         gestureTargetLostSince = -1f;
-        if (currentScreen != PerformerSelectScreen || performerTargets == null)
+        if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady || performerTargets == null)
             return;
 
         if (gestureCursor == null || !gestureCursor.TryPickAtCurrentPosition(out VisualElement picked))
@@ -393,7 +394,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             gesturePointing = false;
             gestureTargetLostSince = -1f;
             gestureTargetCandidate = -1;
-            if (currentScreen == PerformerSelectScreen)
+            if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady)
                 SetTargetedPerformer(-1);
         }
     }
@@ -420,7 +421,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                     return;
                 if (hasAwakenedThisSession)
                 {
-                    Navigate(PerformerSelectScreen, language, true);
+                    Navigate(ColorReleaseScreen, language, true);
                     return;
                 }
                 if (!consentAccepted || waveCompleted || !Navigate(ColorReleaseScreen, language, true))
@@ -442,15 +443,16 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 break;
 
             case InteractionCommand.ColorAwakeningCompleted:
-                if (currentScreen != ColorReleaseScreen || !hasAwakenedThisSession || !clapCompleted)
+                if (currentScreen != ColorReleaseScreen || !hasAwakenedThisSession || !clapCompleted || colorReleaseSelectionReady)
                     return;
                 colorReleaseRoutine = null;
-                if (Navigate(PerformerSelectScreen, language, true))
-                    awakeningSequenceCompletedThisSession = true;
+                awakeningSequenceCompletedThisSession = true;
+                colorReleaseSelectionReady = true;
+                PrepareColorReleaseSelection();
                 break;
 
             case InteractionCommand.ConfirmPerformer:
-                if (currentScreen == PerformerSelectScreen && targetedPerformer >= 0)
+                if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady && targetedPerformer >= 0)
                 {
                     Debug.Log("Performer confirmed: " + Performers[targetedPerformer] + ".", this);
                     SelectPerformer(targetedPerformer, false);
@@ -560,7 +562,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             return false;
         if (hasAwakenedThisSession && (screenId == HomeScreen || screenId == AttractScreen || screenId == ColorReleaseScreen || ArrayIndexOf(TutorialScreens, screenId) >= 0))
         {
-            screenId = PerformerSelectScreen;
+            screenId = ColorReleaseScreen;
             recordHistory = false;
             preserveHistory = true;
         }
@@ -587,6 +589,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             colorReleaseRoutine = null;
         }
         ClearTargetedPerformer();
+        colorReleaseRoot = null;
         while (overlays.Count > 0)
             CloseTopOverlay();
         if (assistantSession != null || assistantWebRequest != null || assistantRequestRoutine != null)
@@ -614,7 +617,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         currentScreen = screenId;
         activeBindingScreen = screenId;
         language = targetLanguage;
-        bool cameraAllowed = consentAccepted && (screenId == AttractScreen || screenId == ColorReleaseScreen || screenId == PerformerSelectScreen || IsPerformerStage(screenId, out _, out _) || (hasAwakenedThisSession && (screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY")));
+        bool cameraAllowed = consentAccepted && (screenId == AttractScreen || screenId == ColorReleaseScreen || IsPerformerStage(screenId, out _, out _) || (hasAwakenedThisSession && (screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY")));
         GestureCameraConsentGate.SetConsent(cameraAllowed);
         // MediaPipe capture supports gesture input; none of the current imported
         // application screens calls for the sample's full-screen camera canvas.
@@ -638,8 +641,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     {
         if (hasAwakenedThisSession)
         {
-            if (currentScreen != PerformerSelectScreen)
-                Navigate(PerformerSelectScreen, language, false);
+            if (currentScreen != ColorReleaseScreen)
+                Navigate(ColorReleaseScreen, language, false);
             return;
         }
         if (transitionInProgress)
@@ -716,9 +719,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
         if (hasAwakenedThisSession)
         {
-            if (currentScreen == ColorReleaseScreen && !clapCompleted)
-                return;
-            if (currentScreen == PerformerSelectScreen)
+            if (currentScreen == ColorReleaseScreen)
                 return;
 
             while (backStack.Count > 0)
@@ -731,7 +732,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 return;
             }
 
-            Navigate(PerformerSelectScreen, language, false);
+            Navigate(ColorReleaseScreen, language, false);
             return;
         }
         if (backStack.Count == 0)
@@ -815,6 +816,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                     string[] guidePaths = { "1/37", "1/41", "1/43", "1/39", "1/39" };
                     int guideIndex = tutorialIndex - 1;
                     BindPath(root, guidePaths[guideIndex], "Label", language == AppLanguage.English ? englishGuideIds[guideIndex] : chineseGuideIds[guideIndex], () => Navigate(TutorialScreens[tutorialIndex + 1], language, true), screenUnbind);
+                    int nextTutorialIndex = tutorialIndex + 1;
+                    RegisterPageClick(root, () => Navigate(TutorialScreens[nextTutorialIndex], language, true), screenUnbind);
                 }
                 RegisterKeyOnRoot(root, () => Navigate(TutorialScreens[tutorialIndex + 1], language, true), screenUnbind);
             }
@@ -840,20 +843,24 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
         if (currentScreen == ColorReleaseScreen)
         {
-            Action clap = () => HandleInteractionCommand(InteractionCommand.ClapCompleted);
+            colorReleaseRoot = root;
+            Action clap = () =>
+            {
+                if (!colorReleaseSelectionReady)
+                    HandleInteractionCommand(InteractionCommand.ClapCompleted);
+            };
             RegisterClick(root, clap, screenUnbind);
             RegisterKeyOnRoot(root, clap, screenUnbind);
+            if (colorReleaseSelectionReady)
+                PrepareColorReleaseSelection();
             FocusFirstFocusable(root);
             return;
         }
 
-        if (currentScreen == PerformerSelectScreen || currentScreen == AssistantChooserScreen)
+        if (currentScreen == AssistantChooserScreen)
         {
-            BindPerformerChoices(root, currentScreen == AssistantChooserScreen, screenUnbind);
-            if (currentScreen == AssistantChooserScreen)
-            {
-                BindPath(root, "1/23", "Label", language == AppLanguage.English ? "124:5184" : "124:5212", () => Navigate(SettingsScreen, language, true), screenUnbind);
-            }
+            BindAssistantPerformerChoices(root, screenUnbind);
+            BindPath(root, "1/23", "Label", language == AppLanguage.English ? "124:5184" : "124:5212", () => Navigate(SettingsScreen, language, true), screenUnbind);
             FocusFirstFocusable(root);
             return;
         }
@@ -929,8 +936,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         {
             BindPath(root, "1/7/3", "VisualElement", language == AppLanguage.English ? "124:5337" : "124:5351", () => Navigate("SOUVENIR---QR-DELIVERY", language, true), screenUnbind);
             BindPath(root, "1/7/4", "Label", language == AppLanguage.English ? "124:5338" : "124:5352", () => Navigate("SOUVENIR---QR-DELIVERY", language, true), screenUnbind, false);
-            BindPath(root, "1/7/5", "VisualElement", language == AppLanguage.English ? "124:5339" : "124:5353", () => Navigate(PerformerSelectScreen, language, false), screenUnbind);
-            BindPath(root, "1/7/6", "Label", language == AppLanguage.English ? "124:5340" : "124:5354", () => Navigate(PerformerSelectScreen, language, false), screenUnbind, false);
+            BindPath(root, "1/7/5", "VisualElement", language == AppLanguage.English ? "124:5339" : "124:5353", () => Navigate(ColorReleaseScreen, language, false), screenUnbind);
+            BindPath(root, "1/7/6", "Label", language == AppLanguage.English ? "124:5340" : "124:5354", () => Navigate(ColorReleaseScreen, language, false), screenUnbind, false);
             FocusFirstFocusable(root);
             return;
         }
@@ -947,7 +954,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     {
         if (hasAwakenedThisSession)
         {
-            Navigate(PerformerSelectScreen, language, false);
+            Navigate(ColorReleaseScreen, language, false);
             return;
         }
         if (!consentAccepted)
@@ -960,7 +967,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private bool IsAllowedPostAwakeningBackTarget(string screenId)
     {
-        return screenId == PerformerSelectScreen || screenId == SettingsScreen || screenId == AssistantChooserScreen ||
+        return screenId == ColorReleaseScreen || screenId == SettingsScreen || screenId == AssistantChooserScreen ||
             screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY" ||
             IsPerformerStage(screenId, out _, out _);
     }
@@ -1006,10 +1013,68 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             environmentalMusicSource.Stop();
     }
 
-    private void BindPerformerChoices(VisualElement root, bool assistantChoice, List<Action> cleanup)
+    private void BindAssistantPerformerChoices(VisualElement root, List<Action> cleanup)
     {
-        if (!assistantChoice)
-            performerTargets = new VisualElement[Performers.Length];
+        int firstSurfaceNode = language == AppLanguage.English ? 5166 : 5194;
+        for (int i = 0; i < Performers.Length; i++)
+        {
+            int performerIndex = i;
+            string surfacePath = "1/" + (5 + (i * 3));
+            string labelPath = "1/" + (6 + (i * 3));
+            string cuePath = "1/" + (7 + (i * 3));
+            int surfaceNode = firstSurfaceNode + (i * 3);
+            int labelNode = surfaceNode + 1;
+            Action activate = () => SelectPerformer(performerIndex, true);
+            BindPath(root, surfacePath, "VisualElement", "124:" + surfaceNode, activate, cleanup);
+            BindPath(root, labelPath, "Label", "124:" + labelNode, activate, cleanup, false);
+            BindPath(root, cuePath, "Label", "124:" + (labelNode + 1), activate, cleanup, false);
+        }
+    }
+
+    private void PrepareColorReleaseSelection()
+    {
+        if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady || colorReleaseRoot == null)
+            return;
+
+        SetLabelTextAtPath(colorReleaseRoot, "1/24", language == AppLanguage.English
+            ? "Choose a performer to continue."
+            : "選擇一位表演者以繼續。");
+        SetLabelTextAtPath(colorReleaseRoot, "1/25", language == AppLanguage.English
+            ? "POINT OR CLICK A PRESENCE TO SELECT  ·  1–6"
+            : "指向或點擊一位存在以選擇  ·  1–6");
+        SetLabelTextAtPath(colorReleaseRoot, "1/28/1", language == AppLanguage.English
+            ? "PERFORMER SELECTION"
+            : "選擇表演者");
+        SetLabelTextAtPath(colorReleaseRoot, "1/28/2", language == AppLanguage.English
+            ? "MOUSE / TOUCH  ·  CLICK A PRESENCE"
+            : "滑鼠／觸控：點擊一位存在");
+        SetLabelTextAtPath(colorReleaseRoot, "1/28/3", language == AppLanguage.English
+            ? "KEYBOARD / CONTROLLER  ·  1–6 TO SELECT"
+            : "鍵盤／控制器：1–6 選擇");
+        SetLabelTextAtPath(colorReleaseRoot, "1/28/4", language == AppLanguage.English
+            ? "Point to, click, or press 1–6 to select."
+            : "指向、點擊或按 1–6 選擇。");
+
+        BindColorReleasePerformerChoices(colorReleaseRoot, screenUnbind);
+    }
+
+    private void BindColorReleasePerformerChoices(VisualElement root, List<Action> cleanup)
+    {
+        performerTargets = new VisualElement[Performers.Length];
+        RuntimeScreenCatalog.Entry entry;
+        if (screenCatalog == null || !screenCatalog.TryGetEntry(ColorReleaseScreen, language, out entry))
+        {
+            Debug.LogError("Color Release is not registered for performer selection in " + language + ".", this);
+            return;
+        }
+
+        string[] rootParts = entry.figmaRootNodeId.Split(':');
+        int rootNodeIndex;
+        if (rootParts.Length != 2 || !int.TryParse(rootParts[1], out rootNodeIndex))
+        {
+            Debug.LogError("Color Release has an invalid Figma root node ID: " + entry.figmaRootNodeId + ".", this);
+            return;
+        }
 
         for (int i = 0; i < Performers.Length; i++)
         {
@@ -1017,53 +1082,40 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             string surfacePath = "1/" + (5 + (i * 3));
             string labelPath = "1/" + (6 + (i * 3));
             string cuePath = "1/" + (7 + (i * 3));
-            int surfaceNode = (assistantChoice
-                ? (language == AppLanguage.English ? 5166 : 5194)
-                : (language == AppLanguage.English ? 3872 : 3900)) + (i * 3);
+            int surfaceNode = rootNodeIndex + 5 + (i * 3);
             int labelNode = surfaceNode + 1;
             Action activate = () =>
             {
-                if (assistantChoice)
-                {
-                    SelectPerformer(performerIndex, true);
+                if (!colorReleaseSelectionReady || currentScreen != ColorReleaseScreen)
                     return;
-                }
                 SetTargetedPerformer(performerIndex);
                 HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
             };
-            BindPath(root, surfacePath, "VisualElement", "124:" + surfaceNode, activate, cleanup);
-            BindPath(root, labelPath, "Label", "124:" + labelNode, activate, cleanup, false);
-            BindPath(root, cuePath, "Label", "124:" + (labelNode + 1), activate, cleanup, false);
 
-            if (!assistantChoice)
+            BindPath(root, surfacePath, "VisualElement", rootParts[0] + ":" + surfaceNode, activate, cleanup);
+            BindPath(root, labelPath, "Label", rootParts[0] + ":" + labelNode, activate, cleanup, false);
+            BindPath(root, cuePath, "Label", rootParts[0] + ":" + (labelNode + 1), activate, cleanup, false);
+
+            VisualElement surface;
+            if (TryResolvePath(root, surfacePath, out surface))
             {
-                VisualElement surface;
-                if (IsVerifiedPerformerNode(surfacePath, "VisualElement", "124:" + surfaceNode) &&
-                    TryResolvePath(root, surfacePath, out surface))
-                {
-                    performerTargets[performerIndex] = surface;
-                    RegisterTargetHover(surface, performerIndex, cleanup);
-                }
-                VisualElement label;
-                if (IsVerifiedPerformerNode(labelPath, "Label", "124:" + labelNode) &&
-                    TryResolvePath(root, labelPath, out label))
-                    RegisterTargetHover(label, performerIndex, cleanup);
-                VisualElement cue;
-                if (IsVerifiedPerformerNode(cuePath, "Label", "124:" + (labelNode + 1)) &&
-                    TryResolvePath(root, cuePath, out cue))
-                    RegisterTargetHover(cue, performerIndex, cleanup);
+                performerTargets[performerIndex] = surface;
+                RegisterTargetHover(surface, performerIndex, cleanup);
             }
+            VisualElement label;
+            if (TryResolvePath(root, labelPath, out label))
+                RegisterTargetHover(label, performerIndex, cleanup);
+            VisualElement cue;
+            if (TryResolvePath(root, cuePath, out cue))
+                RegisterTargetHover(cue, performerIndex, cleanup);
         }
     }
 
-    private bool IsVerifiedPerformerNode(string path, string expectedTag, string figmaNodeId)
+    private static void SetLabelTextAtPath(VisualElement root, string path, string value)
     {
-        string ownerRootNodeId;
-        ManifestNode mapping = FindManifestNode(figmaNodeId, out ownerRootNodeId);
-        RuntimeScreenCatalog.Entry ownerEntry;
-        return mapping != null && mapping.path == path && mapping.tag == expectedTag &&
-               screenCatalog != null && screenCatalog.TryGetEntry(PerformerSelectScreen, language, out ownerEntry) &&
-               ownerEntry.figmaRootNodeId == ownerRootNodeId;
+        VisualElement element;
+        if (TryResolvePath(root, path, out element) && element is Label label)
+            label.text = value;
     }
 
     private void RegisterTargetHover(VisualElement element, int index, List<Action> cleanup)
@@ -1874,6 +1926,19 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         cleanup.Add(() => element.UnregisterCallback(callback));
     }
 
+    private void RegisterPageClick(VisualElement root, Action action, List<Action> cleanup)
+    {
+        EventCallback<ClickEvent> callback = evt =>
+        {
+            if (transitionInProgress)
+                return;
+            evt.StopPropagation();
+            action();
+        };
+        root.RegisterCallback(callback);
+        cleanup.Add(() => root.UnregisterCallback(callback));
+    }
+
     private void DisableSettingsControls(VisualElement root, int localeNodeOffset)
     {
         string unavailable = language == AppLanguage.English ? "Unavailable" : "目前無法使用";
@@ -1978,8 +2043,10 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 evt.StopPropagation();
                 HandleInteractionCommand(InteractionCommand.BackRequested);
             }
-            else if (currentScreen == PerformerSelectScreen && (int)evt.keyCode >= (int)KeyCode.Alpha1 && (int)evt.keyCode <= (int)KeyCode.Alpha6)
+            else if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady &&
+                     (int)evt.keyCode >= (int)KeyCode.Alpha1 && (int)evt.keyCode <= (int)KeyCode.Alpha6)
             {
+                evt.StopPropagation();
                 SetTargetedPerformer((int)evt.keyCode - (int)KeyCode.Alpha1);
                 HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
             }

@@ -3,7 +3,6 @@
     <Style src="project://database/Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uss?fileID=7433441132597879392&amp;guid=1d8160f9a1a0e7f4d9c526ba579fee49&amp;type=3#06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH"/>
     <ui:VisualElement style="width: 1920px; height: 1080px; background-color: rgb(6, 9, 13);">
         <ui:VisualElement style="width: 1920px; height: 1080px; background-color: rgb(6, 10, 15); position: absolute; left: 0; top: 0;"/>
-        <ui:VisualElement style="width: 1460px; height: 1040px; border-radius: 1460px; border-width: 1px; border-color: rgba(191, 233, 255, 0.35); background-color: rgba(191, 233, 255, 0.3); position: absolute; left: 230px; top: 20px;"/>
         <ui:VisualElement style="width: 970px; height: 750px; border-radius: 970px; border-width: 1px; border-color: rgba(191, 233, 255, 0.35); background-color: rgba(191, 233, 255, 0.3); position: absolute; left: 475px; top: 165px;"/>
         <ui:VisualElement style="width: 670px; height: 590px; border-radius: 670px; border-width: 1px; border-color: rgba(191, 233, 255, 0.35); background-color: rgba(191, 233, 255, 0.3); position: absolute; left: 625px; top: 245px;"/>
         <ui:VisualElement style="width: 1680px; height: 930px; border-radius: 36px; position: absolute; left: 120px; top: 75px; background-image: url(&quot;project://database/Assets/Art/Figma/PER_WHITE/Living%20Master%20Image.png?fileID=2800000&amp;guid=d1308851b69dd874192b5bf931e7c9ae&amp;type=3#Living Master Image&quot;);"/>

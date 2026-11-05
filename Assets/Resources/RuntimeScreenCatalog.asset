@@ -109,14 +109,6 @@ MonoBehaviour:
     language: zh
     figmaRootNodeId: "124:3833"
     asset: {fileID: 9197481963319205126, guid: 9c1445592963bfd4c8fafdede2edba9d, type: 3}
-  - screenId: "PERFORMER-SELECT---FALLBACK-INPUT"
-    language: en
-    figmaRootNodeId: "124:3867"
-    asset: {fileID: 9197481963319205126, guid: 8c99caf8f19af0542a9ab804abd568b1, type: 3}
-  - screenId: "PERFORMER-SELECT---FALLBACK-INPUT"
-    language: zh
-    figmaRootNodeId: "124:3895"
-    asset: {fileID: 9197481963319205126, guid: 04d5c14a40efa5847ba3d38d09397cd0, type: 3}
   - screenId: "GAIA---FOCUS-VIEW---PER-001"
     language: en
     figmaRootNodeId: "124:3924"
