@@ -1715,16 +1715,17 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             return;
         }
 
+        string runtimePath = ResolveRuntimeElementPath(path);
         VisualElement element;
-        if (!TryResolvePath(root, path, out element))
+        if (!TryResolvePath(root, runtimePath, out element))
         {
-            Debug.LogError("Figma binding failed: node " + figmaNodeId + " at " + activeBindingScreen + "/" + path + " is not present.", this);
+            Debug.LogError("Figma binding failed: node " + figmaNodeId + " at " + activeBindingScreen + "/" + runtimePath + " is not present.", this);
             return;
         }
         string actualTag = element is Label ? "Label" : element.GetType() == typeof(VisualElement) ? "VisualElement" : element.GetType().Name;
         if (actualTag != expectedTag)
         {
-            Debug.LogError("Figma binding rejected: node " + figmaNodeId + " at " + path + " is " + actualTag + ", expected " + expectedTag + ".", this);
+            Debug.LogError("Figma binding rejected: node " + figmaNodeId + " at " + runtimePath + " is " + actualTag + ", expected " + expectedTag + ".", this);
             return;
         }
 
@@ -1931,10 +1932,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             return;
         }
 
+        string runtimePath = ResolveRuntimeElementPath(path);
         VisualElement element;
-        if (!TryResolvePath(root, path, out element))
+        if (!TryResolvePath(root, runtimePath, out element))
         {
-            Debug.LogError("Could not resolve unavailable control node " + figmaNodeId + " at " + path + ".", this);
+            Debug.LogError("Could not resolve unavailable control node " + figmaNodeId + " at " + runtimePath + ".", this);
             return;
         }
         string actualTag = element is Label ? "Label" : element.GetType() == typeof(VisualElement) ? "VisualElement" : element.GetType().Name;
@@ -2008,6 +2010,30 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
         element = current;
         return true;
+    }
+
+    // The English Settings document was manually aligned and no longer has the
+    // two decorative root elements present in the original Figma hierarchy.
+    // Keep manifest validation on the canonical Figma paths, but resolve the
+    // corresponding runtime elements at their current UXML positions.
+    private string ResolveRuntimeElementPath(string figmaPath)
+    {
+        if (activeBindingScreen != SettingsScreen || language != AppLanguage.English)
+            return figmaPath;
+
+        // English Settings has a separate button-surface element before this label.
+        if (figmaPath == "1/7/35")
+            return "1/5/36";
+        if (figmaPath == "1/9")
+            return "1/7";
+        if (figmaPath == "1/10" || figmaPath.StartsWith("1/10/", StringComparison.Ordinal))
+            return "1/8" + figmaPath.Substring("1/10".Length);
+        if (figmaPath.StartsWith("1/8/", StringComparison.Ordinal))
+            return "1/6/" + figmaPath.Substring("1/8/".Length);
+        if (figmaPath.StartsWith("1/7/", StringComparison.Ordinal))
+            return "1/5/" + figmaPath.Substring("1/7/".Length);
+
+        return figmaPath;
     }
 
     private static int ArrayIndexOf(string[] values, string value)
