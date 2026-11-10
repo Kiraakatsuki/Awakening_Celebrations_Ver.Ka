@@ -6,6 +6,7 @@ using AwakeningCelebrations.Interaction;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UIElements;
+using UnityEngine.Video;
 
 [DefaultExecutionOrder(-100)]
 public sealed class AwakeningApplicationController : MonoBehaviour
@@ -48,6 +49,18 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     [SerializeField] private HomeLanguageController homeController;
     [SerializeField, Min(0f), Tooltip("The imported Color Release screen has no completion event or duration; this configurable presentation interval is a provisional default.")]
     private float colorReleasePresentationSeconds = 2f;
+    [SerializeField, Min(0.1f), Tooltip("Total time spent on Activation, including its fade in and fade out.")]
+    private float activationSequenceDurationSeconds = 3f;
+    [SerializeField, Min(0.05f), Tooltip("Fade duration used for Focus, Activation, Living Portrait and Release transitions.")]
+    private float performerTransitionFadeSeconds = 0.65f;
+    [SerializeField, Tooltip("Temporary fallback only. When disabled, an unassigned Living Portrait remains on its placeholder until another application-controlled action.")]
+    private bool automaticallyAdvancePlaceholderPortrait = true;
+    [SerializeField, Min(0f), Tooltip("Preview time on the existing placeholder before automatically opening Release, used only when that performer's video slot is empty.")]
+    private float placeholderPortraitPreviewSeconds = 10f;
+    [SerializeField, Tooltip("Assign one VideoClip per performer in the existing performer order: Gaia, Pandemic, Re-Birth, White Guardian, Conscience, Sanctuary.")]
+    private VideoClip[] performerPortraitVideos = new VideoClip[6];
+    [SerializeField, Tooltip("Optional VideoPlayer. If empty, the controller creates and reuses one at runtime.")]
+    private VideoPlayer livingPortraitVideoPlayer;
     [SerializeField] private AudioClip environmentalMusicClip;
     [SerializeField] private AudioSource environmentalMusicSource;
     [SerializeField, Min(0.1f), Tooltip("Higher values make the gesture cursor catch up faster to the tracked fingertip.")]
@@ -92,7 +105,27 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private VisualElement[] performerTargets;
     private VisualElement colorReleaseRoot;
     private Coroutine colorReleaseRoutine;
+    private Coroutine performerStageRoutine;
+    private Coroutine placeholderPortraitRoutine;
+    private Coroutine livingPortraitTransitionRoutine;
     private bool transitionInProgress;
+    private bool performerSequenceActive;
+    private bool performerFlowTransitionLock;
+    private bool livingPortraitCompletionRequested;
+    private bool livingPortraitVisible;
+    private bool livingPortraitPlayerEventsRegistered;
+    private bool livingPortraitFirstFrameReceived;
+    private bool livingPortraitVideoPrepared;
+    private bool livingPortraitSeekCompleted;
+    private bool livingPortraitPlaybackStarted;
+    private bool placeholderFallbackRequested;
+    private int livingPortraitPerformer = -1;
+    private VisualElement livingPortraitSurface;
+    private Image livingPortraitVideoImage;
+    private StyleBackground livingPortraitPlaceholderBackground;
+    private StyleEnum<ScaleMode> livingPortraitPlaceholderScaleMode;
+    private StyleEnum<Overflow> livingPortraitSurfaceOverflow;
+    private RenderTexture livingPortraitRenderTexture;
     private ManifestSnapshot nodeSnapshot;
     private StyleSheet interactionStyles;
     private bool interactionStylesAdded;
@@ -218,6 +251,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
     }
 
+    private void OnValidate()
+    {
+        if (performerPortraitVideos == null || performerPortraitVideos.Length != Performers.Length)
+            Array.Resize(ref performerPortraitVideos, Performers.Length);
+    }
+
     private void OnEnable()
     {
         HomeLanguageController.LanguageChanged += OnLanguageChanged;
@@ -232,6 +271,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     {
         GestureCameraConsentGate.SetConsent(false);
         StopEnvironmentalMusic();
+        StopPerformerExperienceSequence();
         HomeLanguageController.LanguageChanged -= OnLanguageChanged;
         HomeLanguageController.PrivacyRequested -= OnPrivacyRequested;
         HomeLanguageController.SettingsRequested -= OnSettingsRequested;
@@ -251,6 +291,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             colorReleaseRoutine = null;
         }
         transitionInProgress = false;
+        performerFlowTransitionLock = false;
         while (overlays.Count > 0)
             CloseTopOverlay();
     }
@@ -460,7 +501,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 break;
 
             case InteractionCommand.ActivateLivingPortrait:
-                if (IsPerformerStage(currentScreen, out int activationPerformer, out int activationStage) && activationStage <= 1)
+                if (!transitionInProgress && !performerSequenceActive &&
+                    IsPerformerStage(currentScreen, out int activationPerformer, out int activationStage) && activationStage == 0)
                 {
                     Debug.Log("Both hands raised for " + Performers[activationPerformer] + " on " + Stages[activationStage] + ".", this);
                     AdvancePerformerStage(activationPerformer, activationStage);
@@ -478,9 +520,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 }
                 else if (IsPerformerStage(currentScreen, out int performer, out int stage))
                 {
-                    if (stage <= 1)
+                    if (stage == 0)
                         HandleInteractionCommand(InteractionCommand.ActivateLivingPortrait);
-                    else
+                    else if (stage == 3 || stage == Stages.Length - 1)
                         AdvancePerformerStage(performer, stage);
                 }
                 break;
@@ -575,6 +617,13 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     {
         if (transitionInProgress)
             return false;
+        if (performerSequenceActive &&
+            IsPerformerStage(currentScreen, out int activePerformer, out int activeStage) &&
+            (activeStage == 1 || activeStage == 2) &&
+            screenId != GetPerformerScreen(activePerformer, activeStage + 1))
+            return false;
+        bool leavingLivingPortrait = (currentScreen != screenId || targetLanguage != language) &&
+            IsPerformerStage(currentScreen, out _, out int currentStage) && currentStage == 2;
         if (hasAwakenedThisSession && (screenId == HomeScreen || screenId == AttractScreen || screenId == ColorReleaseScreen || ArrayIndexOf(TutorialScreens, screenId) >= 0))
         {
             screenId = ColorReleaseScreen;
@@ -623,6 +672,15 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             navigationDocument.visualTreeAsset = asset;
             navigationDocument.enabled = true;
         }
+        if (leavingLivingPortrait)
+        {
+            StopLivingPortraitVideoPlayer(false, true);
+            livingPortraitSurface = null;
+            livingPortraitPerformer = -1;
+            livingPortraitVisible = false;
+            livingPortraitCompletionRequested = false;
+            placeholderFallbackRequested = false;
+        }
         if (navigationDocument == null)
         {
             transitionInProgress = false;
@@ -649,7 +707,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private IEnumerator ReleaseTransitionLockNextFrame()
     {
         yield return null;
-        transitionInProgress = false;
+        if (!performerFlowTransitionLock)
+            transitionInProgress = false;
     }
 
     public void ShowHome(bool recordHistory)
@@ -732,6 +791,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     public void Back()
     {
+        if (performerSequenceActive || performerFlowTransitionLock)
+            return;
+
         // Settings is available before awakening and must return to its caller.
         // Other screens retain the existing pre-awakening Back restriction.
         if (!awakeningSequenceCompletedThisSession && currentScreen != SettingsScreen)
@@ -923,34 +985,35 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (IsPerformerStage(currentScreen, out int performer, out int stage))
         {
             selectedPerformer = performer;
-            string actionPath;
-            int nodeOffset;
-            switch (stage)
-            {
-                case 0: actionPath = "1/14"; nodeOffset = 14; break; // Gesture cue
-                case 1: actionPath = "1/14"; nodeOffset = 14; break; // Gesture cue
-                case 2: actionPath = "1/15"; nodeOffset = 15; break; // Return cue
-                case 3: actionPath = "1/11"; nodeOffset = 11; break; // Interaction cue
-                default: actionPath = "1/6/11"; nodeOffset = 17; break; // Continue
-            }
-            RuntimeScreenCatalog.Entry stageEntry;
-            string nodeId = null;
             int rootIndex = -1;
-            if (screenCatalog != null && screenCatalog.TryGetEntry(currentScreen, language, out stageEntry))
-            {
-                string[] rootParts = stageEntry.figmaRootNodeId.Split(':');
-                if (rootParts.Length == 2 && int.TryParse(rootParts[1], out rootIndex))
-                    nodeId = rootParts[0] + ":" + (rootIndex + nodeOffset);
-            }
-            if (nodeId == null)
-            {
-                Debug.LogError("Could not derive the verified stage action node for " + currentScreen + ".", this);
-                return;
-            }
             Action advanceStage = () => HandleInteractionCommand(InteractionCommand.AdvanceStage);
-            BindPath(root, actionPath, "Label", nodeId, advanceStage, screenUnbind);
-            if (stage < Stages.Length - 1)
-                RegisterPageClick(root, advanceStage, screenUnbind);
+            if (stage != 1 && stage != 2)
+            {
+                string actionPath;
+                int nodeOffset;
+                switch (stage)
+                {
+                    case 0: actionPath = "1/14"; nodeOffset = 14; break; // Gesture cue
+                    case 3: actionPath = "1/11"; nodeOffset = 11; break; // Interaction cue
+                    default: actionPath = "1/6/11"; nodeOffset = 17; break; // Continue
+                }
+                RuntimeScreenCatalog.Entry stageEntry;
+                string nodeId = null;
+                if (screenCatalog != null && screenCatalog.TryGetEntry(currentScreen, language, out stageEntry))
+                {
+                    string[] rootParts = stageEntry.figmaRootNodeId.Split(':');
+                    if (rootParts.Length == 2 && int.TryParse(rootParts[1], out rootIndex))
+                        nodeId = rootParts[0] + ":" + (rootIndex + nodeOffset);
+                }
+                if (nodeId == null)
+                {
+                    Debug.LogError("Could not derive the verified stage action node for " + currentScreen + ".", this);
+                    return;
+                }
+                BindPath(root, actionPath, "Label", nodeId, advanceStage, screenUnbind);
+            }
+            if (stage == 0 || stage == 3)
+                RegisterPageClick(root, advanceStage, screenUnbind, true);
             if (stage == Stages.Length - 1)
             {
                 string continueSurfaceId = "124:" + (rootIndex + 16);
@@ -963,7 +1026,32 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
                 ConfigurePerformerAgentPage(root, performer, rootIndex, screenUnbind);
             }
-            RegisterKeyOnRoot(root, advanceStage, screenUnbind);
+            if (stage == 0 || stage == 3 || stage == Stages.Length - 1)
+                RegisterKeyOnRoot(root, advanceStage, screenUnbind);
+
+            if (stage == 1)
+            {
+                performerSequenceActive = true;
+                performerFlowTransitionLock = true;
+                root.style.opacity = 0f;
+                VisualElement activationArtwork = root.Q<VisualElement>("activationArtwork");
+                if (activationArtwork != null)
+                    activationArtwork.style.opacity = 0.68f;
+                performerStageRoutine = StartCoroutine(PlayActivationSequence(root, performer));
+            }
+            else if (stage == 2)
+            {
+                performerSequenceActive = true;
+                performerFlowTransitionLock = true;
+                StartLivingPortrait(root, performer);
+            }
+            else if (stage == 3)
+            {
+                performerSequenceActive = false;
+                performerFlowTransitionLock = true;
+                root.style.opacity = 0f;
+                performerStageRoutine = StartCoroutine(FadeInRelease(root));
+            }
             FocusFirstFocusable(root);
             return;
         }
@@ -1209,10 +1297,468 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void AdvancePerformerStage(int performer, int stage)
     {
-        if (stage < Stages.Length - 1)
-            Navigate(GetPerformerScreen(performer, stage + 1), language, true);
-        else
+        if (performer < 0 || performer >= Performers.Length || transitionInProgress)
+            return;
+
+        selectedPerformer = performer;
+        if (stage == 0)
+        {
+            if (performerSequenceActive)
+                return;
+            performerSequenceActive = true;
+            performerFlowTransitionLock = true;
+            transitionInProgress = true;
+            performerStageRoutine = StartCoroutine(FadeFocusIntoActivation(performer));
+            return;
+        }
+
+        // Activation and Living Portrait are automatic states. Their input is
+        // deliberately ignored so a gesture or click cannot skip either state.
+        if (stage == 1 || stage == 2)
+            return;
+
+        if (stage == Stages.Length - 1)
             Navigate("CLOSING---CELEBRATION", language, true);
+        else if (stage == 3)
+            Navigate(GetPerformerScreen(performer, stage + 1), language, true);
+    }
+
+    private IEnumerator FadeFocusIntoActivation(int performer)
+    {
+        string focusScreen = GetPerformerScreen(performer, 0);
+        VisualElement focusRoot = navigationDocument == null ? null : navigationDocument.rootVisualElement;
+        yield return FadeVisualElement(focusRoot, 1f, 0f, performerTransitionFadeSeconds);
+        if (currentScreen != focusScreen || selectedPerformer != performer)
+        {
+            performerStageRoutine = null;
+            performerSequenceActive = false;
+            performerFlowTransitionLock = false;
+            transitionInProgress = false;
+            yield break;
+        }
+
+        performerStageRoutine = null;
+        NavigateWithinPerformerFlow(GetPerformerScreen(performer, 1));
+    }
+
+    private IEnumerator PlayActivationSequence(VisualElement root, int performer)
+    {
+        string activationScreen = GetPerformerScreen(performer, 1);
+        VisualElement artwork = root.Q<VisualElement>("activationArtwork");
+        if (root != null)
+            root.style.opacity = 0f;
+        if (artwork != null)
+            artwork.style.opacity = 0.68f;
+
+        float fade = Mathf.Max(0.05f, performerTransitionFadeSeconds);
+        float duration = Mathf.Max(activationSequenceDurationSeconds, fade * 2f);
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            if (currentScreen != activationScreen || selectedPerformer != performer)
+            {
+                performerStageRoutine = null;
+                yield break;
+            }
+
+            float alpha = elapsed < fade
+                ? Mathf.Clamp01(elapsed / fade)
+                : elapsed > duration - fade
+                    ? Mathf.Clamp01((duration - elapsed) / fade)
+                    : 1f;
+            float awakening = Mathf.SmoothStep(0.68f, 1f, Mathf.Clamp01(elapsed / Mathf.Max(0.01f, duration - fade)));
+            if (root != null)
+                root.style.opacity = alpha;
+            if (artwork != null)
+                artwork.style.opacity = awakening;
+
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        if (root != null)
+            root.style.opacity = 0f;
+        performerStageRoutine = null;
+        NavigateWithinPerformerFlow(GetPerformerScreen(performer, 2));
+    }
+
+    private IEnumerator FadeInLivingPortrait(VisualElement root, int performer)
+    {
+        yield return FadeVisualElement(root, 0f, 1f, performerTransitionFadeSeconds);
+        if (!IsCurrentPerformerStage(performer, 2))
+        {
+            performerStageRoutine = null;
+            yield break;
+        }
+
+        livingPortraitVisible = true;
+        performerStageRoutine = null;
+        performerFlowTransitionLock = false;
+        transitionInProgress = false;
+        TryStartLivingPortraitPlayback();
+        if (placeholderFallbackRequested)
+            StartPlaceholderPortraitTimer(performer);
+        if (livingPortraitCompletionRequested)
+            StartLivingPortraitExitTransition(performer);
+    }
+
+    private IEnumerator FadeInRelease(VisualElement root)
+    {
+        yield return FadeVisualElement(root, 0f, 1f, performerTransitionFadeSeconds);
+        performerStageRoutine = null;
+        performerFlowTransitionLock = false;
+        transitionInProgress = false;
+    }
+
+    private IEnumerator FadeVisualElement(VisualElement element, float from, float to, float duration)
+    {
+        if (element == null)
+            yield break;
+        float safeDuration = Mathf.Max(0.05f, duration);
+        float elapsed = 0f;
+        while (elapsed < safeDuration)
+        {
+            element.style.opacity = Mathf.Lerp(from, to, Mathf.Clamp01(elapsed / safeDuration));
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        element.style.opacity = to;
+    }
+
+    private bool NavigateWithinPerformerFlow(string destination)
+    {
+        transitionInProgress = false;
+        performerFlowTransitionLock = true;
+        if (Navigate(destination, language, true))
+            return true;
+
+        performerFlowTransitionLock = false;
+        performerSequenceActive = false;
+        transitionInProgress = false;
+        return false;
+    }
+
+    private bool IsCurrentPerformerStage(int performer, int stage)
+    {
+        return selectedPerformer == performer && currentScreen == GetPerformerScreen(performer, stage);
+    }
+
+    private void StartLivingPortrait(VisualElement root, int performer)
+    {
+        StopLivingPortraitVideoPlayer(true, true);
+        livingPortraitPerformer = performer;
+        livingPortraitCompletionRequested = false;
+        livingPortraitVisible = false;
+        livingPortraitFirstFrameReceived = false;
+        livingPortraitVideoPrepared = false;
+        livingPortraitSeekCompleted = false;
+        livingPortraitPlaybackStarted = false;
+        placeholderFallbackRequested = false;
+        livingPortraitSurface = root.Q<VisualElement>("livingPortraitVideoSurface");
+        if (livingPortraitSurface == null)
+        {
+            Debug.LogError("Living Portrait is missing its named video surface; the existing artwork remains visible.", this);
+            placeholderFallbackRequested = true;
+        }
+        else
+        {
+            livingPortraitPlaceholderBackground = livingPortraitSurface.style.backgroundImage;
+            livingPortraitPlaceholderScaleMode = livingPortraitSurface.style.unityBackgroundScaleMode;
+            livingPortraitSurfaceOverflow = livingPortraitSurface.style.overflow;
+        }
+
+        VideoClip clip = performerPortraitVideos != null && performer < performerPortraitVideos.Length
+            ? performerPortraitVideos[performer]
+            : null;
+        if (clip == null)
+        {
+            Debug.LogWarning("No Living Portrait video is assigned for " + Performers[performer] + "; keeping the placeholder fallback.", this);
+            placeholderFallbackRequested = true;
+        }
+        else if (livingPortraitSurface != null)
+            PrepareLivingPortraitVideo(clip);
+
+        if (root != null)
+            root.style.opacity = 0f;
+        performerStageRoutine = StartCoroutine(FadeInLivingPortrait(root, performer));
+    }
+
+    private void PrepareLivingPortraitVideo(VideoClip clip)
+    {
+        if (livingPortraitVideoPlayer == null)
+        {
+            livingPortraitVideoPlayer = GetComponent<VideoPlayer>();
+            if (livingPortraitVideoPlayer == null)
+            {
+                livingPortraitVideoPlayer = gameObject.AddComponent<VideoPlayer>();
+            }
+        }
+
+        int width = clip.width >= 64 && clip.width <= 4096 ? (int)clip.width : 1920;
+        int height = clip.height >= 64 && clip.height <= 4096 ? (int)clip.height : 1080;
+        livingPortraitRenderTexture = new RenderTexture(width, height, 0, RenderTextureFormat.ARGB32)
+        {
+            name = "Living Portrait Video - " + Performers[livingPortraitPerformer]
+        };
+        livingPortraitRenderTexture.Create();
+
+        livingPortraitVideoImage = new Image
+        {
+            name = "livingPortraitVideoImage",
+            scaleMode = ScaleMode.ScaleToFit,
+            pickingMode = PickingMode.Ignore
+        };
+        livingPortraitVideoImage.style.position = Position.Absolute;
+        livingPortraitVideoImage.style.left = 0f;
+        livingPortraitVideoImage.style.top = 0f;
+        livingPortraitVideoImage.style.right = 0f;
+        livingPortraitVideoImage.style.bottom = 0f;
+        livingPortraitVideoImage.style.display = DisplayStyle.None;
+        livingPortraitSurface.style.overflow = Overflow.Hidden;
+        livingPortraitSurface.Add(livingPortraitVideoImage);
+
+        livingPortraitVideoPlayer.enabled = true;
+        livingPortraitVideoPlayer.Stop();
+        livingPortraitVideoPlayer.playOnAwake = false;
+        livingPortraitVideoPlayer.isLooping = false;
+        livingPortraitVideoPlayer.waitForFirstFrame = true;
+        livingPortraitVideoPlayer.skipOnDrop = true;
+        livingPortraitVideoPlayer.sendFrameReadyEvents = true;
+        livingPortraitVideoPlayer.source = VideoSource.VideoClip;
+        livingPortraitVideoPlayer.clip = clip;
+        livingPortraitVideoPlayer.renderMode = VideoRenderMode.RenderTexture;
+        livingPortraitVideoPlayer.targetTexture = livingPortraitRenderTexture;
+        livingPortraitVideoPlayer.audioOutputMode = VideoAudioOutputMode.None;
+        livingPortraitVideoPlayer.prepareCompleted += OnLivingPortraitVideoPrepared;
+        livingPortraitVideoPlayer.seekCompleted += OnLivingPortraitVideoSeekCompleted;
+        livingPortraitVideoPlayer.frameReady += OnLivingPortraitVideoFrameReady;
+        livingPortraitVideoPlayer.loopPointReached += OnLivingPortraitVideoCompleted;
+        livingPortraitVideoPlayer.errorReceived += OnLivingPortraitVideoError;
+        livingPortraitPlayerEventsRegistered = true;
+        livingPortraitVideoPlayer.Prepare();
+    }
+
+    private void OnLivingPortraitVideoPrepared(VideoPlayer source)
+    {
+        if (source != livingPortraitVideoPlayer || livingPortraitSurface == null ||
+            !IsCurrentPerformerStage(livingPortraitPerformer, 2) || livingPortraitRenderTexture == null)
+            return;
+
+        if (!livingPortraitRenderTexture.IsCreated())
+        {
+            OnLivingPortraitVideoError(source, "The Living Portrait RenderTexture is not created.");
+            return;
+        }
+
+        livingPortraitVideoImage.image = livingPortraitRenderTexture;
+        livingPortraitVideoPrepared = true;
+        if (source.frame == 0)
+        {
+            livingPortraitSeekCompleted = true;
+            TryStartLivingPortraitPlayback();
+        }
+        else
+        {
+            source.time = 0d;
+        }
+    }
+
+    private void OnLivingPortraitVideoSeekCompleted(VideoPlayer source)
+    {
+        if (source != livingPortraitVideoPlayer || !IsCurrentPerformerStage(livingPortraitPerformer, 2))
+            return;
+
+        livingPortraitSeekCompleted = true;
+        TryStartLivingPortraitPlayback();
+    }
+
+    private void TryStartLivingPortraitPlayback()
+    {
+        if (!livingPortraitVisible || !livingPortraitVideoPrepared || !livingPortraitSeekCompleted ||
+            livingPortraitPlaybackStarted || livingPortraitVideoPlayer == null ||
+            !IsCurrentPerformerStage(livingPortraitPerformer, 2))
+            return;
+
+        livingPortraitPlaybackStarted = true;
+        livingPortraitVideoPlayer.Play();
+        Debug.Log("Living Portrait playback started for " + Performers[livingPortraitPerformer] +
+            " at frame " + livingPortraitVideoPlayer.frame + " (" + livingPortraitVideoPlayer.width + "x" +
+            livingPortraitVideoPlayer.height + ", " + livingPortraitVideoPlayer.frameRate.ToString("0.###") + " fps).", this);
+    }
+
+    private void OnLivingPortraitVideoFrameReady(VideoPlayer source, long frameIndex)
+    {
+        if (source != livingPortraitVideoPlayer ||
+            !IsCurrentPerformerStage(livingPortraitPerformer, 2) || livingPortraitRenderTexture == null ||
+            livingPortraitVideoImage == null)
+            return;
+
+        if (!livingPortraitFirstFrameReceived)
+        {
+            livingPortraitFirstFrameReceived = true;
+            livingPortraitVideoImage.style.display = DisplayStyle.Flex;
+            if (livingPortraitSurface != null)
+                livingPortraitSurface.style.backgroundImage = new StyleBackground();
+            Debug.Log("Living Portrait first frame rendered for " + Performers[livingPortraitPerformer] +
+                " (frame " + frameIndex + ", RenderTexture " + livingPortraitRenderTexture.width + "x" +
+                livingPortraitRenderTexture.height + ").", this);
+        }
+
+        // The RenderTexture is updated by VideoPlayer outside the UI Toolkit
+        // style system. Invalidate this Image on each decoded frame so cached
+        // UI content samples the latest texture instead of retaining frame 0.
+        livingPortraitVideoImage.MarkDirtyRepaint();
+    }
+
+    private void OnLivingPortraitVideoCompleted(VideoPlayer source)
+    {
+        if (source == livingPortraitVideoPlayer && IsCurrentPerformerStage(livingPortraitPerformer, 2))
+            RequestLivingPortraitCompletion(livingPortraitPerformer);
+    }
+
+    private void OnLivingPortraitVideoError(VideoPlayer source, string message)
+    {
+        if (source != livingPortraitVideoPlayer || !IsCurrentPerformerStage(livingPortraitPerformer, 2))
+            return;
+
+        int performer = livingPortraitPerformer;
+        Debug.LogError("Living Portrait video failed for " + Performers[performer] +
+            (livingPortraitFirstFrameReceived ? " after rendering its first frame" : " before rendering a frame") +
+            "; restoring the existing placeholder fallback. " + message, this);
+        StopLivingPortraitVideoPlayer(true, true);
+        placeholderFallbackRequested = true;
+        if (livingPortraitVisible)
+            StartPlaceholderPortraitTimer(performer);
+    }
+
+    private void StartPlaceholderPortraitTimer(int performer)
+    {
+        if (!automaticallyAdvancePlaceholderPortrait || placeholderPortraitPreviewSeconds <= 0f ||
+            placeholderPortraitRoutine != null || !IsCurrentPerformerStage(performer, 2))
+            return;
+        placeholderPortraitRoutine = StartCoroutine(WaitForPlaceholderPortrait(performer));
+    }
+
+    private IEnumerator WaitForPlaceholderPortrait(int performer)
+    {
+        yield return new WaitForSecondsRealtime(placeholderPortraitPreviewSeconds);
+        placeholderPortraitRoutine = null;
+        if (IsCurrentPerformerStage(performer, 2))
+            RequestLivingPortraitCompletion(performer);
+    }
+
+    private void RequestLivingPortraitCompletion(int performer)
+    {
+        if (livingPortraitCompletionRequested || !IsCurrentPerformerStage(performer, 2))
+            return;
+
+        livingPortraitCompletionRequested = true;
+        if (placeholderPortraitRoutine != null)
+        {
+            StopCoroutine(placeholderPortraitRoutine);
+            placeholderPortraitRoutine = null;
+        }
+        StopLivingPortraitVideoPlayer(false, false);
+        if (livingPortraitVisible)
+            StartLivingPortraitExitTransition(performer);
+    }
+
+    private void StartLivingPortraitExitTransition(int performer)
+    {
+        if (livingPortraitTransitionRoutine == null && IsCurrentPerformerStage(performer, 2))
+            livingPortraitTransitionRoutine = StartCoroutine(LeaveLivingPortrait(performer));
+    }
+
+    private IEnumerator LeaveLivingPortrait(int performer)
+    {
+        transitionInProgress = true;
+        performerFlowTransitionLock = true;
+        VisualElement root = navigationDocument == null ? null : navigationDocument.rootVisualElement;
+        yield return FadeVisualElement(root, 1f, 0f, performerTransitionFadeSeconds);
+        if (!IsCurrentPerformerStage(performer, 2))
+        {
+            livingPortraitTransitionRoutine = null;
+            yield break;
+        }
+
+        livingPortraitTransitionRoutine = null;
+        NavigateWithinPerformerFlow(GetPerformerScreen(performer, 3));
+    }
+
+    private void StopLivingPortraitVideoPlayer(bool restorePlaceholder, bool releaseTexture)
+    {
+        if (livingPortraitPlayerEventsRegistered && livingPortraitVideoPlayer != null)
+        {
+            livingPortraitVideoPlayer.prepareCompleted -= OnLivingPortraitVideoPrepared;
+            livingPortraitVideoPlayer.seekCompleted -= OnLivingPortraitVideoSeekCompleted;
+            livingPortraitVideoPlayer.frameReady -= OnLivingPortraitVideoFrameReady;
+            livingPortraitVideoPlayer.loopPointReached -= OnLivingPortraitVideoCompleted;
+            livingPortraitVideoPlayer.errorReceived -= OnLivingPortraitVideoError;
+            livingPortraitPlayerEventsRegistered = false;
+        }
+
+        if (livingPortraitVideoPlayer != null)
+        {
+            livingPortraitVideoPlayer.Stop();
+            livingPortraitVideoPlayer.targetTexture = null;
+            livingPortraitVideoPlayer.clip = null;
+        }
+
+        if (restorePlaceholder && livingPortraitSurface != null)
+        {
+            livingPortraitSurface.style.backgroundImage = livingPortraitPlaceholderBackground;
+            livingPortraitSurface.style.unityBackgroundScaleMode = livingPortraitPlaceholderScaleMode;
+            livingPortraitSurface.style.overflow = livingPortraitSurfaceOverflow;
+        }
+        if ((restorePlaceholder || releaseTexture) && livingPortraitVideoImage != null)
+        {
+            livingPortraitVideoImage.RemoveFromHierarchy();
+            livingPortraitVideoImage = null;
+        }
+        if (releaseTexture)
+            ReleaseLivingPortraitRenderTexture();
+        if (restorePlaceholder || releaseTexture)
+        {
+            livingPortraitSurface = null;
+            livingPortraitPerformer = -1;
+        }
+    }
+
+    private void ReleaseLivingPortraitRenderTexture()
+    {
+        if (livingPortraitRenderTexture == null)
+            return;
+        livingPortraitRenderTexture.Release();
+        if (Application.isPlaying)
+            Destroy(livingPortraitRenderTexture);
+        else
+            DestroyImmediate(livingPortraitRenderTexture);
+        livingPortraitRenderTexture = null;
+    }
+
+    private void StopPerformerExperienceSequence()
+    {
+        if (performerStageRoutine != null)
+        {
+            StopCoroutine(performerStageRoutine);
+            performerStageRoutine = null;
+        }
+        if (placeholderPortraitRoutine != null)
+        {
+            StopCoroutine(placeholderPortraitRoutine);
+            placeholderPortraitRoutine = null;
+        }
+        if (livingPortraitTransitionRoutine != null)
+        {
+            StopCoroutine(livingPortraitTransitionRoutine);
+            livingPortraitTransitionRoutine = null;
+        }
+        StopLivingPortraitVideoPlayer(true, true);
+        performerSequenceActive = false;
+        performerFlowTransitionLock = false;
+        livingPortraitVisible = false;
+        livingPortraitCompletionRequested = false;
+        placeholderFallbackRequested = false;
     }
 
     private string GetPerformerScreen(int performer, int stage)
@@ -2000,7 +2546,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         cleanup.Add(() => element.UnregisterCallback(callback));
     }
 
-    private void RegisterPageClick(VisualElement root, Action action, List<Action> cleanup)
+    private void RegisterPageClick(VisualElement root, Action action, List<Action> cleanup, bool captureChildClicks = false)
     {
         EventCallback<ClickEvent> callback = evt =>
         {
@@ -2009,8 +2555,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             evt.StopPropagation();
             action();
         };
-        root.RegisterCallback(callback);
-        cleanup.Add(() => root.UnregisterCallback(callback));
+        TrickleDown phase = captureChildClicks ? TrickleDown.TrickleDown : TrickleDown.NoTrickleDown;
+        root.RegisterCallback(callback, phase);
+        cleanup.Add(() => root.UnregisterCallback(callback, phase));
     }
 
     private void DisableSettingsControls(VisualElement root, int localeNodeOffset)

@@ -499,6 +499,17 @@ MonoBehaviour:
   screenDocumentManager: {fileID: 1482408251}
   screenCatalog: {fileID: 11400000, guid: a9e295d16e5a48d7bf0fe01a94b7f87d, type: 2}
   homeController: {fileID: 1482408248}
+  activationSequenceDurationSeconds: 3
+  performerTransitionFadeSeconds: 0.65
+  automaticallyAdvancePlaceholderPortrait: 1
+  placeholderPortraitPreviewSeconds: 10
+  performerPortraitVideos:
+  - {fileID: 32900000, guid: 8b6f6f1e3f264810aba6d340fe734e09, type: 3}
+  - {fileID: 32900000, guid: c00ec61dfec4470bb0453aa212307594, type: 3}
+  - {fileID: 32900000, guid: 0d0041709efa403fab018e2ee14f0c26, type: 3}
+  - {fileID: 32900000, guid: cee0636ab52a4b9d8d5026944c69fc25, type: 3}
+  - {fileID: 32900000, guid: 3647aa80071445388d8227a6da31ef08, type: 3}
+  - {fileID: 32900000, guid: af0527d9d7044ba28bc9c274f8d91c97, type: 3}
   gestureBridge: {fileID: 1064799469}
 --- !u!4 &1482408249
 Transform:
