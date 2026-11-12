@@ -91,14 +91,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private bool hasAwakenedThisSession;
     private bool awakeningSequenceCompletedThisSession;
     private bool waveCompleted;
-    private bool clapCompleted;
     private bool colorReleaseSelectionReady;
-    private bool warnedMissingEnvironmentalMusic;
+    private AudioClip fallbackClapSound;
     [SerializeField] private MediaPipeGestureBridge gestureBridge;
     private bool gestureBridgeSubscribed;
     private bool warnedMissingGestureBridge;
     private int targetedPerformer = -1;
-    private int gestureTargetCandidate = -1;
+    private int gestureTarget = -1;
+    private int? gestureTargetCandidate;
     private float gestureTargetCandidateSince;
     private float gestureTargetLostSince = -1f;
     private bool gesturePointing;
@@ -116,7 +116,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private bool livingPortraitPlayerEventsRegistered;
     private bool livingPortraitFirstFrameReceived;
     private bool livingPortraitVideoPrepared;
-    private bool livingPortraitSeekCompleted;
     private bool livingPortraitPlaybackStarted;
     private bool placeholderFallbackRequested;
     private int livingPortraitPerformer = -1;
@@ -130,6 +129,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private StyleSheet interactionStyles;
     private bool interactionStylesAdded;
     private GestureCursorController gestureCursor;
+    private Label handTrackingStatus;
     private AssistantSession assistantSession;
     private Coroutine assistantRequestRoutine;
     private UnityWebRequest assistantWebRequest;
@@ -318,13 +318,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void Update()
     {
+        UpdateHandTrackingStatus();
         gestureCursor?.Tick(Time.unscaledDeltaTime);
+        if (gesturePointing)
+            UpdatePointedPerformer();
         if (!gesturePointing && gestureTargetLostSince >= 0f &&
             Time.unscaledTime - gestureTargetLostSince >= gestureTargetReleaseSeconds)
         {
-            SetTargetedPerformer(-1);
-            gestureTargetLostSince = -1f;
-            gestureTargetCandidate = -1;
+            ClearGestureTarget();
         }
     }
 
@@ -355,8 +356,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 // navigates; the cursor hit test updates targetedPerformer below.
                 break;
             case SemanticGesture.Fist:
-                if (!transitionInProgress && currentScreen == ColorReleaseScreen && colorReleaseSelectionReady)
+                if (!transitionInProgress && currentScreen == ColorReleaseScreen && colorReleaseSelectionReady &&
+                    overlays.Count == 0 && gestureTarget >= 0 &&
+                    (gesturePointing || (gestureTargetLostSince >= 0f &&
+                        Time.unscaledTime - gestureTargetLostSince < gestureTargetReleaseSeconds)))
+                {
+                    SetTargetedPerformer(gestureTarget);
                     HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
+                }
                 break;
             case SemanticGesture.BothHandsRaised:
                 HandleInteractionCommand(InteractionCommand.ActivateLivingPortrait);
@@ -375,13 +382,18 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             if (gesturePointing)
                 gestureTargetLostSince = Time.unscaledTime;
             gesturePointing = false;
-            gestureTargetCandidate = -1;
+            gestureTargetCandidate = null;
             return;
         }
 
         gesturePointing = true;
         gestureTargetLostSince = -1f;
-        if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady || performerTargets == null)
+    }
+
+    private void UpdatePointedPerformer()
+    {
+        if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady ||
+            overlays.Count > 0 || performerTargets == null)
             return;
 
         if (gestureCursor == null || !gestureCursor.TryPickAtCurrentPosition(out VisualElement picked))
@@ -407,9 +419,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void UpdateGestureTarget(int candidate)
     {
-        if (candidate == targetedPerformer)
+        if (candidate == gestureTarget)
         {
-            gestureTargetCandidate = -1;
+            gestureTargetCandidate = null;
             return;
         }
 
@@ -417,13 +429,84 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         {
             gestureTargetCandidate = candidate;
             gestureTargetCandidateSince = Time.unscaledTime;
-            return;
         }
 
         if (Time.unscaledTime - gestureTargetCandidateSince >= gestureTargetStabilitySeconds)
         {
-            SetTargetedPerformer(candidate);
-            gestureTargetCandidate = -1;
+            ClearGestureTarget();
+            gestureTarget = candidate;
+            if (candidate >= 0)
+                SetTargetedPerformer(candidate);
+        }
+    }
+
+    private void ClearGestureTarget()
+    {
+        if (targetedPerformer == gestureTarget)
+            SetTargetedPerformer(-1);
+        gestureTarget = -1;
+        gestureTargetCandidate = null;
+        gestureTargetLostSince = -1f;
+    }
+
+    private void BindHandTrackingStatus(VisualElement root)
+    {
+        if (!GestureCameraConsentGate.ConsentGranted)
+            return;
+
+        var status = new Label { name = "hand-tracking-status", pickingMode = PickingMode.Ignore };
+        status.style.position = Position.Absolute;
+        status.style.left = 24;
+        status.style.top = 16;
+        status.style.fontSize = 18;
+        status.style.paddingLeft = 10;
+        status.style.paddingRight = 10;
+        status.style.paddingTop = 5;
+        status.style.paddingBottom = 5;
+        status.style.backgroundColor = new Color(0.04f, 0.08f, 0.1f, 0.9f);
+        root.Add(status);
+        handTrackingStatus = status;
+        screenUnbind.Add(() =>
+        {
+            status.RemoveFromHierarchy();
+            handTrackingStatus = null;
+        });
+        UpdateHandTrackingStatus();
+    }
+
+    private void UpdateHandTrackingStatus()
+    {
+        if (handTrackingStatus == null)
+            return;
+
+        bool english = language == AppLanguage.English;
+        int count = gestureBridge != null ? gestureBridge.TrackedHandCount : 0;
+        string text;
+        if (gestureBridge == null)
+            text = english ? "Hand tracker unavailable" : "手部追蹤無法使用";
+        else if (!gestureBridge.IsCameraReady)
+            text = english ? "Waiting for camera" : "等待相機";
+        else if (!gestureBridge.HasReceivedFrames)
+            text = english ? "Waiting for hand tracking" : "等待手部追蹤";
+        else if (count == 0)
+            text = english ? "No hand detected · Show your hand to the camera" : "未偵測到手部 · 請將手伸到相機前";
+        else
+        {
+            text = english ? (count == 1 ? "1 hand detected" : "2 hands detected") : $"已偵測到 {count} 隻手";
+            if (currentScreen == AttractScreen)
+                text += english ? " · Wave side to side for colour · Clap for sound" : " · 左右揮手喚醒色彩 · 拍手播放聲音";
+            else if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady)
+                text += english ? " · Point, then make a fist · Clap for sound" : " · 指向後握拳確認 · 拍手播放聲音";
+            else if (IsPerformerStage(currentScreen, out _, out int stage) && stage == 0)
+                text += english ? " · Show both open palms to play the video" : " · 張開雙手並朝向相機以播放影片";
+            else if (IsPerformerStage(currentScreen, out _, out stage) && stage == 2)
+                text += english ? " · Hold one open palm for 2 seconds to go back" : " · 張開一隻手掌並保持 2 秒即可返回";
+        }
+
+        if (handTrackingStatus.text != text)
+        {
+            handTrackingStatus.text = text;
+            handTrackingStatus.style.color = count > 0 ? new Color(0.45f, 1f, 0.83f) : Color.white;
         }
     }
 
@@ -433,18 +516,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         {
             gestureCursor?.ClearPosition();
             gesturePointing = false;
-            gestureTargetLostSince = -1f;
-            gestureTargetCandidate = -1;
-            if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady)
-                SetTargetedPerformer(-1);
+            ClearGestureTarget();
         }
     }
 
     private void HandleInteractionCommand(InteractionCommand command)
     {
-        if (transitionInProgress)
-            return;
-
         if (command == InteractionCommand.BackRequested)
         {
             if (currentScreen != HomeScreen)
@@ -454,6 +531,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             }
             return;
         }
+
+        if (transitionInProgress)
+            return;
 
         switch (command)
         {
@@ -469,22 +549,18 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                     return;
                 waveCompleted = true;
                 hasAwakenedThisSession = true;
+                colorReleaseRoutine = StartCoroutine(CompleteColorReleaseAfterPresentation());
                 Debug.Log("Wave completed the initial color awakening.", this);
                 break;
 
             case InteractionCommand.ClapCompleted:
-                if (!hasAwakenedThisSession || currentScreen == HomeScreen || currentScreen == PrivacyScreen || ArrayIndexOf(TutorialScreens, currentScreen) >= 0)
+                if (!GestureCameraConsentGate.ConsentGranted)
                     return;
                 PlayEnvironmentalMusic();
-                if (currentScreen == ColorReleaseScreen && !clapCompleted)
-                {
-                    clapCompleted = true;
-                    colorReleaseRoutine = StartCoroutine(CompleteColorReleaseAfterPresentation());
-                }
                 break;
 
             case InteractionCommand.ColorAwakeningCompleted:
-                if (currentScreen != ColorReleaseScreen || !hasAwakenedThisSession || !clapCompleted || colorReleaseSelectionReady)
+                if (currentScreen != ColorReleaseScreen || !hasAwakenedThisSession || colorReleaseSelectionReady)
                     return;
                 colorReleaseRoutine = null;
                 awakeningSequenceCompletedThisSession = true;
@@ -532,7 +608,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private IEnumerator CompleteColorReleaseAfterPresentation()
     {
         yield return new WaitForSecondsRealtime(colorReleasePresentationSeconds);
-        if (currentScreen == ColorReleaseScreen && hasAwakenedThisSession && clapCompleted)
+        if (currentScreen == ColorReleaseScreen && hasAwakenedThisSession)
             HandleInteractionCommand(InteractionCommand.ColorAwakeningCompleted);
     }
 
@@ -551,11 +627,13 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void ClearTargetedPerformer()
     {
+        gestureCursor?.ClearPosition();
         if (performerTargets != null && targetedPerformer >= 0 && targetedPerformer < performerTargets.Length && performerTargets[targetedPerformer] != null)
             performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
         targetedPerformer = -1;
         performerTargets = null;
-        gestureTargetCandidate = -1;
+        gestureTarget = -1;
+        gestureTargetCandidate = null;
         gestureTargetLostSince = -1f;
         gesturePointing = false;
     }
@@ -791,12 +869,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     public void Back()
     {
-        if (performerSequenceActive || performerFlowTransitionLock)
+        bool leavingVideo = IsPerformerStage(currentScreen, out _, out int stage) && stage == 2;
+        if (!leavingVideo && (transitionInProgress || performerSequenceActive || performerFlowTransitionLock))
             return;
 
-        // Settings is available before awakening and must return to its caller.
-        // Other screens retain the existing pre-awakening Back restriction.
-        if (!awakeningSequenceCompletedThisSession && currentScreen != SettingsScreen)
+        if (!awakeningSequenceCompletedThisSession && currentScreen != SettingsScreen && currentScreen != AttractScreen)
             return;
         if (overlays.Count > 0)
         {
@@ -808,13 +885,20 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             if (currentScreen == ColorReleaseScreen)
                 return;
 
+            if (leavingVideo)
+            {
+                StopPerformerExperienceSequence();
+                transitionInProgress = false;
+            }
+
             while (backStack.Count > 0)
             {
                 RouteState candidate = backStack.Pop();
                 if (!IsAllowedPostAwakeningBackTarget(candidate.screen))
                     continue;
 
-                Navigate(candidate.screen, candidate.language, false, true);
+                if (Navigate(candidate.screen, candidate.language, false, true) && leavingVideo)
+                    Debug.Log("Living Portrait stopped. Returned to " + currentScreen + ".", this);
                 return;
             }
 
@@ -841,6 +925,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
         activeBindingScreen = currentScreen;
         gestureCursor?.Attach(root);
+        BindHandTrackingStatus(root);
         root.AddToClassList("ac-screen-runtime");
         root.AddToClassList("ac-interactive");
         EventCallback<FocusInEvent> rootFocusIn = evt => root.AddToClassList("ac-keyboard-focus");
@@ -939,6 +1024,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             RegisterKeyOnRoot(root, clap, screenUnbind);
             if (colorReleaseSelectionReady)
                 PrepareColorReleaseSelection();
+            else if (hasAwakenedThisSession && colorReleaseRoutine == null)
+                colorReleaseRoutine = StartCoroutine(CompleteColorReleaseAfterPresentation());
             FocusFirstFocusable(root);
             return;
         }
@@ -1011,6 +1098,26 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                     return;
                 }
                 BindPath(root, actionPath, "Label", nodeId, advanceStage, screenUnbind);
+            }
+            if (stage == 0)
+            {
+                gestureBridge?.ResetVideoGesture();
+                var playButton = new Button(advanceStage)
+                {
+                    name = "play-performer-video",
+                    text = language == AppLanguage.English ? "Play video" : "播放影片"
+                };
+                playButton.style.position = Position.Absolute;
+                playButton.style.top = 16;
+                playButton.style.right = 24;
+                playButton.style.minHeight = 40;
+                playButton.style.paddingLeft = 16;
+                playButton.style.paddingRight = 16;
+                playButton.style.fontSize = 18;
+                playButton.style.color = new Color(0.04f, 0.08f, 0.1f);
+                playButton.style.backgroundColor = new Color(0.45f, 1f, 0.83f);
+                root.Add(playButton);
+                screenUnbind.Add(() => playButton.RemoveFromHierarchy());
             }
             if (stage == 0 || stage == 3)
                 RegisterPageClick(root, advanceStage, screenUnbind, true);
@@ -1093,25 +1200,28 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     {
         return screenId == ColorReleaseScreen || screenId == SettingsScreen || screenId == AssistantChooserScreen ||
             screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY" ||
-            IsPerformerStage(screenId, out _, out _);
+            (IsPerformerStage(screenId, out _, out int stage) && stage != 1 && stage != 2);
     }
 
     private void PlayEnvironmentalMusic()
     {
+        if (environmentalMusicSource == null)
+        {
+            environmentalMusicSource = GetComponent<AudioSource>();
+            if (environmentalMusicSource == null)
+                environmentalMusicSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        environmentalMusicSource.playOnAwake = false;
         if (environmentalMusicClip == null)
         {
-            if (!warnedMissingEnvironmentalMusic)
-            {
-                warnedMissingEnvironmentalMusic = true;
-                Debug.LogWarning("Clap was accepted, but no approved environmental music clip is assigned.", this);
-            }
+            if (fallbackClapSound == null)
+                fallbackClapSound = CreateClapChime();
+            environmentalMusicSource.PlayOneShot(fallbackClapSound);
+            Debug.Log("Clap chime started.", this);
             return;
         }
 
-        if (environmentalMusicSource == null)
-            environmentalMusicSource = GetComponent<AudioSource>() ?? gameObject.AddComponent<AudioSource>();
-
-        environmentalMusicSource.playOnAwake = false;
         environmentalMusicSource.clip = environmentalMusicClip;
         if (environmentalMusicMode == EnvironmentalMusicMode.Toggle && environmentalMusicSource.isPlaying)
         {
@@ -1129,6 +1239,29 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             environmentalMusicSource.PlayOneShot(environmentalMusicClip);
         else
             environmentalMusicSource.Play();
+    }
+
+    private static AudioClip CreateClapChime()
+    {
+        const int sampleRate = 24000;
+        var samples = new float[sampleRate];
+        for (int i = 0; i < samples.Length; i++)
+        {
+            float time = (float)i / sampleRate;
+            float envelope = Mathf.Min(time * 100f, 1f) * Mathf.Exp(-5f * time) * (1f - time);
+            samples[i] = envelope * (0.18f * Mathf.Sin(2f * Mathf.PI * 523.25f * time) +
+                0.09f * Mathf.Sin(2f * Mathf.PI * 783.99f * time));
+        }
+
+        AudioClip clip = AudioClip.Create("Awakening chime", samples.Length, 1, sampleRate, false);
+        clip.SetData(samples, 0);
+        return clip;
+    }
+
+    private void OnDestroy()
+    {
+        if (fallbackClapSound != null)
+            Destroy(fallbackClapSound);
     }
 
     private void StopEnvironmentalMusic()
@@ -1164,8 +1297,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             ? "Choose a performer to continue."
             : "選擇一位表演者以繼續。");
         SetLabelTextAtPath(colorReleaseRoot, "1/25", language == AppLanguage.English
-            ? "POINT OR CLICK A PRESENCE TO SELECT  ·  1–6"
-            : "指向或點擊一位存在以選擇  ·  1–6");
+            ? "POINT AT AN IMAGE  ·  MAKE A FIST TO CONFIRM"
+            : "指向圖像  ·  握拳確認");
         SetLabelTextAtPath(colorReleaseRoot, "1/28/1", language == AppLanguage.English
             ? "PERFORMER SELECTION"
             : "選擇表演者");
@@ -1176,8 +1309,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             ? "KEYBOARD / CONTROLLER  ·  1–6 TO SELECT"
             : "鍵盤／控制器：1–6 選擇");
         SetLabelTextAtPath(colorReleaseRoot, "1/28/4", language == AppLanguage.English
-            ? "Point to, click, or press 1–6 to select."
-            : "指向、點擊或按 1–6 選擇。");
+            ? "Point, then make a fist. You can also click or press 1–6."
+            : "指向後握拳確認，也可點擊或按 1–6 選擇。");
 
         BindColorReleasePerformerChoices(colorReleaseRoot, screenUnbind);
     }
@@ -1451,7 +1584,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         livingPortraitVisible = false;
         livingPortraitFirstFrameReceived = false;
         livingPortraitVideoPrepared = false;
-        livingPortraitSeekCompleted = false;
         livingPortraitPlaybackStarted = false;
         placeholderFallbackRequested = false;
         livingPortraitSurface = root.Q<VisualElement>("livingPortraitVideoSurface");
@@ -1530,7 +1662,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         livingPortraitVideoPlayer.targetTexture = livingPortraitRenderTexture;
         livingPortraitVideoPlayer.audioOutputMode = VideoAudioOutputMode.None;
         livingPortraitVideoPlayer.prepareCompleted += OnLivingPortraitVideoPrepared;
-        livingPortraitVideoPlayer.seekCompleted += OnLivingPortraitVideoSeekCompleted;
         livingPortraitVideoPlayer.frameReady += OnLivingPortraitVideoFrameReady;
         livingPortraitVideoPlayer.loopPointReached += OnLivingPortraitVideoCompleted;
         livingPortraitVideoPlayer.errorReceived += OnLivingPortraitVideoError;
@@ -1552,29 +1683,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
         livingPortraitVideoImage.image = livingPortraitRenderTexture;
         livingPortraitVideoPrepared = true;
-        if (source.frame == 0)
-        {
-            livingPortraitSeekCompleted = true;
-            TryStartLivingPortraitPlayback();
-        }
-        else
-        {
-            source.time = 0d;
-        }
-    }
-
-    private void OnLivingPortraitVideoSeekCompleted(VideoPlayer source)
-    {
-        if (source != livingPortraitVideoPlayer || !IsCurrentPerformerStage(livingPortraitPerformer, 2))
-            return;
-
-        livingPortraitSeekCompleted = true;
         TryStartLivingPortraitPlayback();
     }
 
     private void TryStartLivingPortraitPlayback()
     {
-        if (!livingPortraitVisible || !livingPortraitVideoPrepared || !livingPortraitSeekCompleted ||
+        if (!livingPortraitVisible || !livingPortraitVideoPrepared ||
             livingPortraitPlaybackStarted || livingPortraitVideoPlayer == null ||
             !IsCurrentPerformerStage(livingPortraitPerformer, 2))
             return;
@@ -1690,7 +1804,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (livingPortraitPlayerEventsRegistered && livingPortraitVideoPlayer != null)
         {
             livingPortraitVideoPlayer.prepareCompleted -= OnLivingPortraitVideoPrepared;
-            livingPortraitVideoPlayer.seekCompleted -= OnLivingPortraitVideoSeekCompleted;
             livingPortraitVideoPlayer.frameReady -= OnLivingPortraitVideoFrameReady;
             livingPortraitVideoPlayer.loopPointReached -= OnLivingPortraitVideoCompleted;
             livingPortraitVideoPlayer.errorReceived -= OnLivingPortraitVideoError;

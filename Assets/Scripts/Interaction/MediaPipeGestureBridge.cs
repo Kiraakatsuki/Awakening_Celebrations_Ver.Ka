@@ -40,21 +40,28 @@ namespace AwakeningCelebrations.Interaction
         private int trackingInterruptionCount;
         private bool reportedPipelineConfiguration;
         private bool reportedFirstResult;
+        private bool reportedTwoHands;
+        private bool wasConsentGranted;
+
+        public int TrackedHandCount { get; private set; }
+        public bool IsCameraReady => runner != null && runner.IsImageSourcePrepared;
+        public bool HasReceivedFrames { get; private set; }
 
         public event Action<GestureRecognitionEvent> GestureDetected;
         public event Action<bool> TrackingChanged;
         public event Action<bool, Vector2> PointingChanged;
 
-        private void Awake()
+        public void ResetVideoGesture()
+        {
+            recognizer?.ResetVideoGesture();
+        }
+
+        private void OnEnable()
         {
             recognizer = new GestureRecognitionLayer(settings);
             recognizer.GestureDetected += ForwardGesture;
             recognizer.PointingChanged += ForwardPointing;
             recognizer.DiagnosticMessage += ForwardDiagnostic;
-        }
-
-        private void OnEnable()
-        {
             runner = GetComponent<HandLandmarkerRunner>();
             if (runner == null)
             {
@@ -66,6 +73,7 @@ namespace AwakeningCelebrations.Interaction
             pipelineStartedTime = 0;
             warnedNoResults = false;
             reportedFirstResult = false;
+            reportedTwoHands = false;
         }
 
         private void OnDisable()
@@ -75,6 +83,8 @@ namespace AwakeningCelebrations.Interaction
                 runner.ResultReceived -= OnResultReceived;
             }
             SetTracking(false);
+            TrackedHandCount = 0;
+            HasReceivedFrames = false;
             recognizer?.Reset();
             PointingChanged?.Invoke(false, Vector2.zero);
         }
@@ -83,13 +93,23 @@ namespace AwakeningCelebrations.Interaction
         {
             if (!GestureCameraConsentGate.ConsentGranted)
             {
-                if (tracking)
+                if (wasConsentGranted)
                 {
+                    wasConsentGranted = false;
+                    lock (resultLock)
+                        processedSequence = latestSequence;
                     recognizer.Reset();
                     SetTracking(false);
+                    TrackedHandCount = 0;
+                    HasReceivedFrames = false;
+                    lastNonEmptyHandsTime = 0;
+                    pipelineStartedTime = 0;
+                    reportedFirstResult = false;
+                    reportedTwoHands = false;
                 }
                 return;
             }
+            wasConsentGranted = true;
 
             TrackedHand[] frameHands = null;
             double frameTime = 0;
@@ -120,16 +140,31 @@ namespace AwakeningCelebrations.Interaction
 
             if (frameHands != null)
             {
+                HasReceivedFrames = true;
                 droppedResultCount += skippedResults;
                 if (lastProcessedResultTime > 0)
                     lastFrameIntervalMilliseconds = Math.Max(0, frameTime - lastProcessedResultTime) * 1000.0;
                 lastProcessedResultTime = frameTime;
                 double processStarted = NowSeconds();
-                recognizer.ProcessFrame(frameHands, frameTime);
+                // Keep the cursor and gesture histories across brief detector dropouts.
+                // Longer gaps still cancel holds and release the cursor.
+                if (frameHands.Length > 0 || frameTime - lastNonEmptyHandsTime >= 0.16)
+                {
+                    recognizer.ProcessFrame(frameHands, frameTime);
+                    if (recognizer.HasUsableTracking)
+                    {
+                        TrackedHandCount = recognizer.UsableHandCount;
+                        lastNonEmptyHandsTime = frameTime;
+                        if (TrackedHandCount == 2 && !reportedTwoHands)
+                        {
+                            reportedTwoHands = true;
+                            Debug.Log("Hand tracker detected two hands. Clap recognition is available.", this);
+                        }
+                    }
+                }
                 double processedAt = NowSeconds();
                 if (recognizer.HasUsableTracking)
-                    lastNonEmptyHandsTime = frameTime;
-                SetTracking(recognizer.HasUsableTracking);
+                    SetTracking(true);
                 lastResultQueueDelayMilliseconds = Math.Max(0, processStarted - frameTime) * 1000.0;
                 lastRecognitionProcessingMilliseconds = Math.Max(0, processedAt - processStarted) * 1000.0;
                 ReportFrameDiagnostics(frameHands.Length, processedAt);
@@ -138,10 +173,11 @@ namespace AwakeningCelebrations.Interaction
             if (tracking && now - lastNonEmptyHandsTime >= settings.trackingLossResetSeconds)
             {
                 recognizer.Reset();
+                TrackedHandCount = 0;
                 SetTracking(false);
             }
             else if (!warnedNoResults && runner != null && runner.IsPipelineStarted && runner.IsImageSourcePrepared &&
-                     pipelineStartedTime > 0 && now - pipelineStartedTime > settings.noResultWarningSeconds && latestSequence == 0)
+                     pipelineStartedTime > 0 && now - pipelineStartedTime > settings.noResultWarningSeconds && !HasReceivedFrames)
             {
                 warnedNoResults = true;
                 Debug.LogWarning("No Hand Landmarker results received after the camera became ready. Check inference callbacks and model/runtime logs.", this);
@@ -194,7 +230,19 @@ namespace AwakeningCelebrations.Interaction
                     }
                 }
 
-                converted[validCount++] = new TrackedHand(handId, points);
+                Vector3[] worldPoints = null;
+                if (result.handWorldLandmarks != null && handIndex < result.handWorldLandmarks.Count)
+                {
+                    var world = result.handWorldLandmarks[handIndex].landmarks;
+                    if (world != null && world.Count >= 21)
+                    {
+                        worldPoints = new Vector3[21];
+                        for (var i = 0; i < worldPoints.Length; i++)
+                            worldPoints[i] = new Vector3(world[i].x, world[i].y, world[i].z);
+                    }
+                }
+
+                converted[validCount++] = new TrackedHand(handId, points, worldPoints);
             }
 
             if (validCount != converted.Length)
