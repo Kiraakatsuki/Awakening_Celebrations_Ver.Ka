@@ -33,6 +33,16 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     public event Action<HandLandmarkerResult> ResultReceived;
     public bool IsPipelineStarted { get { return pipelineStarted; } }
     public bool IsImageSourcePrepared { get { return imageSourcePrepared; } }
+    public Texture CameraPreviewTexture
+    {
+      get
+      {
+        if (!GestureCameraConsentGate.ConsentGranted || !isActiveAndEnabled || !pipelineStarted || !imageSourcePrepared || isPaused)
+          return null;
+        var source = ImageSourceProvider.ImageSource;
+        return source != null && source.isPrepared && source.isPlaying ? source.GetCurrentTexture() : null;
+      }
+    }
     public long FailedTextureReadbackCount { get; private set; }
     public long SkippedTexturePoolFrameCount { get; private set; }
 

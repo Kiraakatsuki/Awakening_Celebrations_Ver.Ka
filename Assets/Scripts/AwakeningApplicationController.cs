@@ -125,6 +125,10 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private StyleEnum<ScaleMode> livingPortraitPlaceholderScaleMode;
     private StyleEnum<Overflow> livingPortraitSurfaceOverflow;
     private RenderTexture livingPortraitRenderTexture;
+    private VisualElement cameraPreviewFrame;
+    private Image cameraPreviewImage;
+    private VisualElement cameraPreviewDocumentRoot;
+    private string cameraPreviewStatus;
     private ManifestSnapshot nodeSnapshot;
     private StyleSheet interactionStyles;
     private bool interactionStylesAdded;
@@ -269,6 +273,13 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void OnDisable()
     {
+        cameraPreviewFrame?.RemoveFromHierarchy();
+        if (cameraPreviewImage != null)
+            cameraPreviewImage.image = null;
+        cameraPreviewFrame = null;
+        cameraPreviewImage = null;
+        cameraPreviewDocumentRoot = null;
+        cameraPreviewStatus = null;
         GestureCameraConsentGate.SetConsent(false);
         StopEnvironmentalMusic();
         StopPerformerExperienceSequence();
@@ -319,6 +330,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private void Update()
     {
         UpdateHandTrackingStatus();
+        UpdateCameraPreview();
         gestureCursor?.Tick(Time.unscaledDeltaTime);
         if (gesturePointing)
             UpdatePointedPerformer();
@@ -327,6 +339,107 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         {
             ClearGestureTarget();
         }
+    }
+
+    private void UpdateCameraPreview()
+    {
+        bool applicable = GestureCameraConsentGate.ConsentGranted && gestureBridge != null &&
+            gestureBridge.IsCameraReady &&
+            (currentScreen == AttractScreen || currentScreen == ColorReleaseScreen ||
+             (IsPerformerStage(currentScreen, out _, out int stage) && (stage == 0 || stage == 3)));
+        Texture texture = applicable ? gestureBridge.CameraPreviewTexture : null;
+        VisualElement documentRoot = navigationDocument == null ? null : navigationDocument.rootVisualElement;
+        if (!applicable || texture == null || documentRoot == null)
+        {
+            if (cameraPreviewFrame != null)
+                cameraPreviewFrame.style.display = DisplayStyle.None;
+            if (cameraPreviewImage != null)
+                cameraPreviewImage.image = null;
+            SetCameraPreviewStatus(!GestureCameraConsentGate.ConsentGranted ? "hidden: consent not granted" :
+                gestureBridge == null ? "hidden: gesture bridge unavailable" :
+                !gestureBridge.IsCameraReady ? "hidden: camera not prepared" : !applicable ? "hidden: screen does not use gestures" :
+                texture == null ? "hidden: waiting for the running camera texture" : "hidden: no active UIDocument");
+            return;
+        }
+
+        if (cameraPreviewFrame == null)
+        {
+            cameraPreviewFrame = new VisualElement { name = "gestureCameraPreviewFrame", pickingMode = PickingMode.Ignore };
+            cameraPreviewFrame.style.position = Position.Absolute;
+            cameraPreviewFrame.style.right = 22f;
+            cameraPreviewFrame.style.bottom = 22f;
+            cameraPreviewFrame.style.paddingLeft = 3f;
+            cameraPreviewFrame.style.paddingRight = 3f;
+            cameraPreviewFrame.style.paddingTop = 3f;
+            cameraPreviewFrame.style.paddingBottom = 3f;
+            cameraPreviewFrame.style.backgroundColor = new Color(0.035f, 0.045f, 0.055f, 0.94f);
+            cameraPreviewFrame.style.borderTopWidth = 1f;
+            cameraPreviewFrame.style.borderRightWidth = 1f;
+            cameraPreviewFrame.style.borderBottomWidth = 1f;
+            cameraPreviewFrame.style.borderLeftWidth = 1f;
+            cameraPreviewFrame.style.borderTopColor = new Color(0.78f, 0.68f, 0.48f, 0.82f);
+            cameraPreviewFrame.style.borderRightColor = cameraPreviewFrame.style.borderTopColor;
+            cameraPreviewFrame.style.borderBottomColor = cameraPreviewFrame.style.borderTopColor;
+            cameraPreviewFrame.style.borderLeftColor = cameraPreviewFrame.style.borderTopColor;
+            cameraPreviewFrame.style.borderTopLeftRadius = 10f;
+            cameraPreviewFrame.style.borderTopRightRadius = 10f;
+            cameraPreviewFrame.style.borderBottomLeftRadius = 10f;
+            cameraPreviewFrame.style.borderBottomRightRadius = 10f;
+            cameraPreviewFrame.style.overflow = Overflow.Hidden;
+            cameraPreviewImage = new Image { name = "gestureCameraPreviewImage", scaleMode = ScaleMode.ScaleToFit, pickingMode = PickingMode.Ignore };
+            cameraPreviewImage.style.position = Position.Absolute;
+            cameraPreviewImage.style.left = 4f;
+            cameraPreviewImage.style.right = 4f;
+            cameraPreviewImage.style.top = 4f;
+            cameraPreviewImage.style.bottom = 4f;
+            cameraPreviewFrame.Add(cameraPreviewImage);
+            documentRoot.Add(cameraPreviewFrame);
+        }
+
+        if (cameraPreviewFrame.parent != documentRoot)
+        {
+            cameraPreviewFrame.RemoveFromHierarchy();
+            documentRoot.Add(cameraPreviewFrame);
+            cameraPreviewDocumentRoot = null;
+        }
+        if (cameraPreviewDocumentRoot != documentRoot)
+        {
+            cameraPreviewDocumentRoot = documentRoot;
+            Debug.Log("Camera preview attached to " + navigationDocument.name + " for " + currentScreen + ".", this);
+        }
+
+        float rootWidth = documentRoot.resolvedStyle.width;
+        float rootHeight = documentRoot.resolvedStyle.height;
+        float previewWidth = Mathf.Clamp(rootWidth * 0.19f, 150f, 230f);
+        float aspect = texture.height > 0 ? (float)texture.width / texture.height : 16f / 9f;
+        if (aspect < 0.5f || aspect > 3f)
+            aspect = 16f / 9f;
+        float previewHeight = previewWidth / aspect;
+        float maxHeight = Mathf.Max(100f, rootHeight * 0.24f);
+        if (previewHeight > maxHeight)
+        {
+            previewHeight = maxHeight;
+            previewWidth = previewHeight * aspect;
+        }
+
+        cameraPreviewFrame.style.width = previewWidth;
+        cameraPreviewFrame.style.height = previewHeight;
+        cameraPreviewFrame.style.display = overlays.Count == 0 ? DisplayStyle.Flex : DisplayStyle.None;
+        if (cameraPreviewImage.image != texture)
+        {
+            cameraPreviewImage.image = texture;
+            Debug.Log("Camera preview using live " + texture.GetType().Name + " " + texture.width + "x" + texture.height + ".", this);
+        }
+        SetCameraPreviewStatus(overlays.Count == 0 ? "visible: " + currentScreen : "hidden: assistant overlay");
+        cameraPreviewImage.MarkDirtyRepaint();
+    }
+
+    private void SetCameraPreviewStatus(string status)
+    {
+        if (cameraPreviewStatus == status)
+            return;
+        cameraPreviewStatus = status;
+        Debug.Log("Camera preview " + status + ".", this);
     }
 
     private void TryConnectGestureBridge()
@@ -778,6 +891,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (homeController != null)
             homeController.SetHomeVisible(false);
         BindCurrentScreen();
+        UpdateCameraPreview();
         StartCoroutine(ReleaseTransitionLockNextFrame());
         return true;
     }
