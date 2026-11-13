@@ -33,6 +33,8 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
     public event Action<HandLandmarkerResult> ResultReceived;
     public bool IsPipelineStarted { get { return pipelineStarted; } }
     public bool IsImageSourcePrepared { get { return imageSourcePrepared; } }
+    // Read-only diagnostic for presentation; capture ownership and retry semantics are unchanged.
+    public string LastPipelineFailureType { get; private set; }
     public Texture CameraPreviewTexture
     {
       get
@@ -71,6 +73,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
       if (bootstrap == null || !bootstrap.isFinished)
       {
+        LastPipelineFailureType = "BootstrapUnavailable";
         Debug.LogError("MediaPipe Bootstrap did not finish initializing within 60 seconds. Camera and hand tracking were not started.", this);
         yield break;
       }
@@ -115,6 +118,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
       if (!bootstrapReady || !GestureCameraConsentGate.ConsentGranted)
         return;
 
+      LastPipelineFailureType = null;
       base.Play();
       pipelineStarted = true;
     }
@@ -181,6 +185,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
 
         if (pipelineFailure != null)
         {
+          LastPipelineFailureType = pipelineFailure.GetType().Name;
           Debug.LogError($"MediaPipe hand tracking startup or processing failed: {pipelineFailure}", this);
           // Allow StartCoroutine to finish assigning the runner coroutine handle before
           // the base runner's Stop() attempts to stop it.

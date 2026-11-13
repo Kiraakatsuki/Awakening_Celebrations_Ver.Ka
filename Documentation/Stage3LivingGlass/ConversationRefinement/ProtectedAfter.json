@@ -1,0 +1,62 @@
+[
+  {
+    "path": "Assets\\Scenes\\SampleScene.unity",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Scenes\\AwakeningLivingGlass.unity",
+    "unchanged": true
+  },
+  {
+    "path": "ProjectSettings\\EditorBuildSettings.asset",
+    "unchanged": true
+  },
+  {
+    "path": "Packages\\manifest.json",
+    "unchanged": true
+  },
+  {
+    "path": "Packages\\packages-lock.json",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Conscience.mp4.meta",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Gaia.mp4.meta",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Pandemic.mp4.meta",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Re-Birth.mp4.meta",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Sanctuary.mp4.meta",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\White_Guardian.mp4.meta",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Samples\\MediaPipe Unity Plugin\\0.16.3\\Official Solutions\\Scenes\\Hand Landmark Detection\\HandLandmarkerRunner.cs",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Scripts\\AwakeningApplicationController.cs",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\Scripts\\Interaction\\MediaPipeGestureBridge.cs",
+    "unchanged": true
+  },
+  {
+    "path": "Assets\\LivingGlass\\Integration\\LivingGlassFlowIntegration.cs",
+    "unchanged": true
+  }
+]

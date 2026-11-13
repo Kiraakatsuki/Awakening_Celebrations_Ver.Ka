@@ -1,0 +1,2498 @@
+[
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassProjectValidation.cs",
+    "guid": "00a55255c6181024b81f26e14c4db79a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/GraphRunner.cs",
+    "guid": "00f8c92dc785a7523b94c869aaead45f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4932__en.png",
+    "guid": "00ff76a3567ae8e43989d29b7ed3acd7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_493__zh.png",
+    "guid": "1097703d04634cf4587c96b2937a4bff",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs",
+    "guid": "20f2fd61d43b483ba93442eb6cfc37cf",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_281__en.png",
+    "guid": "30216291e2ec4524f8252d19a939a153",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4206__en.png",
+    "guid": "30c79ef3d98ff9b42b9fed778d66b87e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMPro.cginc",
+    "guid": "407bc68d299748449bbf7f48ee690f8d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_522__zh__postfix.png",
+    "guid": "504522308e97be84390150bde66d786f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__phase3-after-1.png",
+    "guid": "608182d421809304b95a339e03f07d20",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkerRunner.cs",
+    "guid": "70620c801523bd3daafb31ee271ecac9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/ImageSourceProvider.cs",
+    "guid": "703949cb153f043aca7381a8f9b21a86",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Fonts/SourceSerif4-Regular.ttf",
+    "guid": "707a1bc4ec9ccae45bac455726415b9f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "guid": "8026945368f4a1ed29b086d7499b3172",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkDetectionConfigWindow.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4917__zh.png",
+    "guid": "90b71a1fc21667a4e837b8c1181340c1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader",
+    "guid": "a02a7d8c237544f1962732b55a9aebf1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/NotoSansCJKtc-Regular.otf",
+    "guid": "c0c4f1dcdeb23c54aa39e6a20ce12557",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_307__zh__postfont-final.png",
+    "guid": "c02dae478d6a83b48947f446241d95a4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Pandemic.mp4",
+    "guid": "c00ec61dfec4470bb0453aa212307594",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__phase3-final.png",
+    "guid": "d084d465da505be4685a3006dbfbecda",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Settings/Lit2DSceneTemplate.scenetemplate",
+    "guid": "d03ed43fc9d8a4f2e9fa70c1c7916eb9",
+    "dependencies": [
+      "Assets/Settings/Scenes/URP2DSceneTemplate.unity"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "guid": "d00f9eb5648585662ba6825f8ab8400f",
+    "dependencies": [
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Scripts/Interaction/GestureRecognitionLayer.cs",
+    "guid": "e049b5861edc489383301a3fcea00869",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-190420.png",
+    "guid": "f082beca854bf3e4385582ae590dc6ce",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile-2-Pass.shader",
+    "guid": "0178fcb869bafef4690d177d31d17db8",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_608__zh__postfont.png",
+    "guid": "013eb0cc594361c459655b0cc2fd0b22",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_426__en__postfix.png",
+    "guid": "111400c4857b07545aeb6d4cb2847891",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png",
+    "guid": "1114d2fde7872974f82a6daa6a5f3a7c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__postfix.png",
+    "guid": "1154365641524a8498ca075eab1a5317",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+    "guid": "1146a9de09159a948b683e94fb3d3c95",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/AppSettings.asset"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4032__en.png",
+    "guid": "116d8bfc341b84e48be79830672ba153",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/Fonts/Font Awesome 5 Free-Solid-900.otf",
+    "guid": "31374bd91c77c305a835fc84a9c49449",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassStabilizationChecks.cs",
+    "guid": "31771f59639724b4e9048111ebce2cd3",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_568__en.png",
+    "guid": "61d7dd9ff9eead544b86f3b8bc6c5eb2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5272__zh.png",
+    "guid": "71ac61f2a47f2e14d9f410dbbbd508fa",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4692__en.png",
+    "guid": "8161c9ce09a11634fa25acfe7ec84394",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3895__zh.png",
+    "guid": "91d2ffb978d1ab3468c18db1df3f332b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_522__en__postfix.png",
+    "guid": "9106aec3221c6e84f9c0ccf8367300d4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Attract/Presence — RE-BIRTH.png",
+    "guid": "a1d65b2c7319066458c7bfab8210399d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab",
+    "guid": "a159008dd252acd3cae7c02b4f17a5c4",
+    "dependencies": [
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/Attract/Presence — CONSCIENCE.png",
+    "guid": "b1e188c301029fe42bf1de708fb6f92c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4464__zh.png",
+    "guid": "b1b98c97cc0b0db409fbdaa2dc3ed767",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png",
+    "guid": "c160f3c9df1acc645bcf9174c1a4b743",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5113__zh.png",
+    "guid": "c1d2aea44d78fd64f8ee62b784bef8fd",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Performer Select/Selection target — PANDEMIC.png",
+    "guid": "c1272a8605687ce4b99a60234bb1eaad",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "guid": "c11d1e65e08886c308c31ea8d84e4ee6",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/SolutionMenu.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/AppSettings.asset",
+    "guid": "c1dea6c0f46f82342ac6b11989a0fb74",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/AppSettings.cs"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/PER_WHITE/Living Master Image.png",
+    "guid": "d1308851b69dd874192b5bf931e7c9ae",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs",
+    "guid": "d121819773a417c4da38e023c044efa0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "guid": "d1f297de946a523dda5bc19fb59525f6",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/FaceDetectionConfigWindow.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3978__zh.png",
+    "guid": "d1867e93ad0ce4d4d8bb3e4317889787",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__phase3-corrected-1.png",
+    "guid": "e15b8519816f97f479446c0cc593a2cd",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/UnicodeInlineText.cs",
+    "guid": "e19bd0338085f7932856aa45f1be2899",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-170327.png",
+    "guid": "f1a7483b2bc3fda40a4b55428931192c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_711__zh__postfont.png",
+    "guid": "f1696620131abed448d8a618b7b29abc",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmentationConfigWindow.cs",
+    "guid": "0218389f27a751092a0b1a9423b75a4f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scenes/AwakeningLivingGlass.unity",
+    "guid": "12792cd3e2cf3c84b854c8186ea81f3a",
+    "dependencies": [
+      "Assets/LivingGlass/Assets/LivingGlassAssets.asset",
+      "Assets/LivingGlass/Presentation/LivingGlassPresentation.cs",
+      "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+      "Assets/Resources/Videos/LivingPortrait/Conscience.mp4",
+      "Assets/Resources/Videos/LivingPortrait/Gaia.mp4",
+      "Assets/Resources/Videos/LivingPortrait/Pandemic.mp4",
+      "Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4",
+      "Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4",
+      "Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs",
+      "Assets/Scripts/AwakeningApplicationController.cs",
+      "Assets/Scripts/Interaction/MediaPipeGestureBridge.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/2D/Light2D.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/UniversalAdditionalCameraData.cs"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph",
+    "guid": "124c112a6e8f1a54e8b0870e881b56d8",
+    "dependencies": [
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl",
+      "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader",
+    "guid": "128e987d567d4e2c824d754223b3f3b0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Rendering/LivingGlassAtmosphere.cs",
+    "guid": "225324369d626c243b834edc6ece7a72",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkDetectionConfigWindow.cs",
+    "guid": "22ff2a945620cf0ed909d994a7f1ed8b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Attract/Presence — PANDEMIC.png",
+    "guid": "328833ae6a41f7544a5cb62e0a54c298",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "guid": "326e6292d21184e3384c9de6a8abe56a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Settings/Renderer2D.asset",
+    "guid": "424799608f7334c24bf367e4bbfa7f9a",
+    "dependencies": [
+      "Packages/com.unity.render-pipelines.universal/Runtime/2D/Renderer2DData.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Projected.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Shadow-Geometry.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Shadow-Sprite.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Geometry.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Sprite.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Debug/DebugReplacement.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Debug/HDRDebugView.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Debug/ProbeVolumeSamplingDebugPositionNormal.compute",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/BlitHDROverlay.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlit.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlitColorAndDepth.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/Sampling.shader"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/PER_GAIA/Master Image — Activation.png",
+    "guid": "526b4db9d63a1c44f817e6b893301eb9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-190603.png",
+    "guid": "52dc2aa384f778b498b8401ae6c7d1c1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4848__zh.png",
+    "guid": "626b3369b0e7a594097ca17575abe8c7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/ImageSourceConfig.cs",
+    "guid": "72185b07b1e2bc4d9b4c72f9199fbbef",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4170__en.png",
+    "guid": "72a821194a81de340a711a05dcf051d7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5327__en.png",
+    "guid": "82e77cb241d18a54080c9a8b1161ec4c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_SANCTUARY/Master Image — Activation.png",
+    "guid": "827b4ccfba2dccb47b17be39fbb3755c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+    "guid": "827c4431af677e057aa6f14170d0785c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_476__en.png",
+    "guid": "82ec13a5f2b1d8643a826d6e8113c2fa",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "guid": "9266d411ded84c378f53e32ef01a8e6e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5017__zh.png",
+    "guid": "9228666d3dbf11f418f842118c8bbae2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "guid": "927caf745c48e562eaa2cda915b091b4",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkerRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/MultiPoseLandmarkListWithMaskAnnotation.prefab",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MultiPoseLandmarkListWithMaskAnnotation.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/PoseLandmarkerResultAnnotationController.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/RawImage.cs"
+    ]
+  },
+  {
+    "path": "Assets/Scripts/Interaction/MediaPipeGestureBridge.cs",
+    "guid": "b2c807c845aa4a2a97a73f2790356e5d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4116__zh.png",
+    "guid": "c2afe7e487f87bc4891acdb008cafe16",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassConversationChecks.cs",
+    "guid": "d2334668938b4094b8b216831b60b142",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/ImageReadMode.cs",
+    "guid": "e2825bab162c74e46abd755a68c1f231",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4290__zh.png",
+    "guid": "f24503870a2fd08499f02f78c3bd52f1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_666__zh.png",
+    "guid": "03d31c1081d0eeb4bb98b582113638e6",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4728__en.png",
+    "guid": "33fc31b0a390044449770e8a19e648e2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "guid": "43e0b06a07be91d9ab8df9c5e822664a",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/ImageSourceConfig.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/FontAwesome Button.prefab",
+    "guid": "43e9f0194e843b641ab8083b120feac8",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/Fonts/Font Awesome 5 Free-Solid-900.otf",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/UnicodeInlineText.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "guid": "530502d398830609297010a1521c815f",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/UV Grid.mat",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/holistic_cpu.txt",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/holistic_gpu.txt",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/holistic_opengles.txt",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingSolution.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Radar.renderTexture",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Detection Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/HolisticLandmarkList Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Mask Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/PoseLandmarkList Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Rectangle Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Shaders/UnmaskShader.shader",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/DetectionAnnotation.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/DetectionAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/HolisticLandmarkListAnnotation.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/HolisticLandmarkListAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MaskAnnotation.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MaskAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/NormalizedRectAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/PoseLandmarkListAnnotation.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/PoseWorldLandmarkListAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/RectangleAnnotation.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/RawImage.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5355__en.png",
+    "guid": "53556e0ffc05c5f4fbdda802f538014d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_352__zh.png",
+    "guid": "531c0935c583e294381d7a1274e0af71",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "guid": "6398790df6f5f3123a3d09434706eb95",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/FaceDetectorRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Detection List Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/DetectionListAnnotation.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/DetectionResultAnnotationController.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4866__en.png",
+    "guid": "73ae332e24f8c4041a1a0554d1a685ee",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5049__zh.png",
+    "guid": "73ce7b45dbe1d4d4191f712e0ce4f628",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5145__zh.png",
+    "guid": "733fc8dca242a534ebb1fe29860be5e7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/UniversalRenderPipelineGlobalSettings.asset",
+    "guid": "93b439a37f63240aca3dd4e01d978a9f",
+    "dependencies": [
+      "Assets/DefaultVolumeProfile.asset",
+      "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/DynamicGI/DynamicGISkyOcclusion.urtshader",
+      "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/ProbeVolumeCellDilation.compute",
+      "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/ProbeVolumeSubdivide.compute",
+      "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/RenderingLayerMask/TraceRenderingLayerMask.urtshader",
+      "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader",
+      "Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VoxelizeScene.shader",
+      "Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeSamplingDebugMesh.fbx",
+      "Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeDebug.shader",
+      "Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeFragmentationDebug.shader",
+      "Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeNumbersDisplayTex.png",
+      "Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeOffsetDebug.shader",
+      "Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeSamplingDebug.shader",
+      "Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumeBlendStates.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumeUploadData.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumeUploadDataL2.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Environment/EnvironmentImportanceSamplingBuild.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Meshes/6FaceSkyboxMesh.mesh",
+      "Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Meshes/SkyboxMesh.mesh",
+      "Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/BlitCookie.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/BlitCubemap.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/BuildLightGrid.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/SetAlphaChannel.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/DebugOccluder.shader",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/DebugOcclusionTest.shader",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceDataBufferCopyKernels.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceDataBufferUploadKernels.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceOcclusionCullingKernels.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceTransformUpdateKernels.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceWindDataUpdateKernels.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/OccluderDepthPyramidKernels.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/OcclusionCullingDebug.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/STP/StpPreTaa.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/STP/StpSetup.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/STP/StpTaa.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Common/GeometryPool/GeometryPoolKernels.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Common/Utilities/CopyBuffer.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/bit_histogram.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/block_reduce_part.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/block_scan.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/build_hlbvh.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/CopyPositions.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/restructure_bvh.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/scatter.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/Vrs/Shaders/VrsTexture.compute",
+      "Packages/com.unity.render-pipelines.core/Runtime/Vrs/Shaders/VrsVisualization.shader",
+      "Packages/com.unity.render-pipelines.core/Shaders/CoreCopy.shader",
+      "Packages/com.unity.render-pipelines.universal/Editor/Volume/DefaultVolumeProfile.asset",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Decal/DBuffer/DBufferClear.shader",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Mesh2D-Lit-Default.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat",
+      "Packages/com.unity.render-pipelines.universal/Runtime/RendererFeatures/OnTileUberPost.shader",
+      "Packages/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipelineGlobalSettings.cs",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Projected.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Shadow-Geometry.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Shadow-Sprite.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Geometry.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Sprite.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractive.shadergraph",
+      "Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractiveMasked.shadergraph",
+      "Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractiveTransparent.shadergraph",
+      "Packages/com.unity.render-pipelines.universal/Shaders/CameraMotionVectors.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Debug/DebugReplacement.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Debug/HDRDebugView.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Debug/ProbeVolumeSamplingDebugPositionNormal.compute",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree7.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree8_PBRLit.shadergraph",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree9_URP.shadergraph",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/Bloom.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/BokehDepthOfField.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/CameraMotionBlur.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/EdgeAdaptiveSpatialUpsampling.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/FinalPost.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/GaussianDepthOfField.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LensFlareDataDriven.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LensFlareScreenSpace.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderHdr.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderLdr.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/PaniniProjection.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/ScalingSetup.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/StopNaN.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/SubpixelMorphologicalAntialiasing.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/TemporalAA.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/UberPost.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainDetailLit.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrass.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrassBillboard.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/BlitHDROverlay.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/ClusterDeferred.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/CopyDepth.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlit.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlitColorAndDepth.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/Sampling.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/ScreenSpaceAmbientOcclusion.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/StencilDeferred.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/Utils/StencilDitherMaskSeed.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/XR/XRMirrorView.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/XR/XRMotionVector.shader",
+      "Packages/com.unity.render-pipelines.universal/Shaders/XR/XROcclusionMesh.shader",
+      "Packages/com.unity.render-pipelines.universal/Textures/BayerMatrix.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_0.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_1.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_10.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_11.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_12.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_13.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_14.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_15.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_16.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_17.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_18.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_19.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_2.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_20.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_21.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_22.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_23.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_24.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_25.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_26.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_27.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_28.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_29.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_3.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_30.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_31.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_4.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_5.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_6.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_7.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_8.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_9.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_0.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_1.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_2.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_3.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_4.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_5.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_6.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise64/L/LDR_LLL1_0.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/DebugFont.tga",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large01.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large02.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium01.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium02.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium03.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium04.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium05.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium06.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin02.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/SMAA/AreaTex.tga",
+      "Packages/com.unity.render-pipelines.universal/Textures/SMAA/SearchTex.tga"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph",
+    "guid": "a3d800b099a06e0478fb790c5e79057a",
+    "dependencies": [
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl",
+      "Packages/com.unity.render-pipelines.universal/Editor/ShaderGraph/UniversalMetadata.cs",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc",
+    "guid": "c334973cef89a9840b0b0c507e0377ab",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "guid": "d3734ffcdd3a40779bdd8de2c55bee2f",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectorRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Detection List Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/DetectionListAnnotation.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/DetectionResultAnnotationController.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/Performer Select/Selection target — CONSCIENCE.png",
+    "guid": "d365a12e43c8eda4db04b857864ad040",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "guid": "d3c55222b68d3b6b797034638df4d179",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmenterRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/MaskOverlayAnnotation.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Shaders/OverlayMask.shader",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/ImageSegmenterResultAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MaskOverlayAnnotation.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/RawImage.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "guid": "d31ec499ac06b6b0cb4299d9b4aa7f19",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmentationConfigWindow.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Fonts/LiberationSans.ttf",
+    "guid": "e3265ab4bf004d28a9537516768c1c75",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Mediapipe.Unity.Sample.asmdef",
+    "guid": "f32148de13e8ca8369101d3ef3260930",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/official_hand_tracking_demo_opengles.txt",
+    "guid": "04e27f61585a09eefba5551c1c6751fd",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/ImageSource/VideoSource.cs",
+    "guid": "04085488e5fac35599866a2a6fceeda3",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_378__en__postfix.png",
+    "guid": "14a43af2ab6ebdb438581ddd767bfff7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "guid": "14f706a2859a564a7b7ae1bb3a7985e2",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkDetectionConfigWindow.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/_Recovery/1.unity",
+    "guid": "14584012bb16e9e40a323a12243598c0",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Assets/Scripts/Interaction/MediaPipeGestureBridge.cs",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Multi HandLandmarkList Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/HandLandmarkerResultAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MultiHandLandmarkListAnnotation.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader",
+    "guid": "14eb328de4b8eb245bb7cea29e4ac00b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+    "guid": "140d1d2c406167c50819d89f86d9092e",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/FontAwesome Button.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/Modal.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/ModalButton.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/GraphicRaycaster.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/CanvasScaler.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3996__en.png",
+    "guid": "449ad95cfe777a647a4b91905bd3b075",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+    "guid": "54fbc05425d3aba4483f5c9b133939f4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Core/AppLanguage.cs",
+    "guid": "642c68c3a1487b54d8b8c0095933bc38",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_WHITE/Master Image — Activation.png",
+    "guid": "74c1aa0ecb37a6242a397b1e2a801a18",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4674__zh.png",
+    "guid": "945dcce51b9ace646875a845107e5fea",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_476__zh__postfix.png",
+    "guid": "945dfe2de0048794e88b88a4e07fd7e3",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_RE-BIRTH/Released performer image.png",
+    "guid": "a46c899decd10184ca826c19ca135b93",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4950__zh.png",
+    "guid": "a4ccd07127f1b114e923017ae63f248f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_PANDEMIC/Living Master Image.png",
+    "guid": "b408896a27ffc0145acbdb5e6e42910a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_WHITE/Released performer image.png",
+    "guid": "c4c8ba5c0a9bced4da7e53d944e4825f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4047__zh.png",
+    "guid": "e461876e22a1bea49a7c4708fc89c347",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/fidelity-audit-home-zh-runtime.png",
+    "guid": "e4d50e4f26cd3e148bdf7a4059e6e677",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs",
+    "guid": "f4d846393f8d9f20fa64b924b0d95e68",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/OFL.txt",
+    "guid": "f46ccd369e5fd6d4b9a3e468718fb8da",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4236__en.png",
+    "guid": "f46da3345f01076408d136bcd4408a69",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_GAIA/Released performer image.png",
+    "guid": "0567c11655683ff499a24e9806fe7c32",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/FaceLandmarkDetectionConfigWindow.cs",
+    "guid": "1563c5a06dc303a40888548c3d646a33",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_378__zh__postfix.png",
+    "guid": "25352e4b5f656584a980b043fc93326b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4569__zh.png",
+    "guid": "55f18cc3b09c1df4d8604af41dbeb41c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5129__en.png",
+    "guid": "5582ee70d273bd94cb3501e9348af023",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_326__zh__postfix.png",
+    "guid": "55ccd907d1db3bc4e9ffd5834d80a36b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Release/Presence — RE-BIRTH.png",
+    "guid": "6513b04592303e843a5258958a3beac7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4062__en.png",
+    "guid": "65cbc2b15f7a1314b9973741cc78afbf",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Release/Presence — CONSCIENCE.png",
+    "guid": "75498ea04b6af66428144e8980a2986c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Fonts/SourceSans3-Regular.ttf",
+    "guid": "851431ccc1b0a894b8a0611f098d3003",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Release/Presence — PANDEMIC.png",
+    "guid": "85a5ef2fc3b5e3449a700c757bb7d3fc",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader",
+    "guid": "85187c2149c549c5b33f0cdb02836b17",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "guid": "851c916ab4f413a74a8cc310fb1d5421",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__phase3-corrected.png",
+    "guid": "951de819ebe3bfa4cb1209ef0c9da8fb",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Release/Presence — WHITE GUARDIAN.png",
+    "guid": "95deb9614294b3740b7d6c5bf0bfd131",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/53_37__zh__privacy-runtime-context.png",
+    "guid": "a5388748631275046929f0cf7453bee1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__phase3-after.png",
+    "guid": "c553342ebc40022418bc90da3e7fd137",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_568__en__postfix.png",
+    "guid": "d5493eb2da3c83f4993abb80948df4f9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4602__zh.png",
+    "guid": "e5912b2b44fb1a946bd972731f51c775",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_RE-BIRTH/Living Master Image.png",
+    "guid": "f56ebb73d6cc4284bbf5078d877fd952",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-190805.png",
+    "guid": "0661eecdeed94fa48baa461296c0fe7d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-190816.png",
+    "guid": "06b7b06198a7c4b4d849851c0be642c4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "guid": "16062faf4cda54140b781b925351b119",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoSolution.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/official_hand_tracking_demo_cpu.txt",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/official_hand_tracking_demo_gpu.txt",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/official_hand_tracking_demo_opengles.txt",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/AutoFit.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/RawImage.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4326__zh.png",
+    "guid": "16de60361f7b2714cbfb35bb1e57085c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_326__en__postfix.png",
+    "guid": "260b8e9f2ffb250418801ca3f255bd5f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4152__zh.png",
+    "guid": "36d0a41cc674d544f80b444b6c3092c7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Conscience.mp4",
+    "guid": "3647aa80071445388d8227a6da31ef08",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerAppSettings.asset",
+    "guid": "56a0017fcc2b402fbcd0301656a585cf",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/AppSettings.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5097__en.png",
+    "guid": "56c9b0b1fefe1a045852c1dd5a95886f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/fidelity-audit-privacy-en-runtime.png",
+    "guid": "66b702fb8e20d9f4e9ea5c947df52ee9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__postfix-1.png",
+    "guid": "76b77ac82fd66ab42a1fb67376cc1727",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Performer Select/Selection target — WHITE GUARDIAN.png",
+    "guid": "769cfca1948154041a32ce48e3504943",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/fidelity-audit-privacy-zh-runtime.png",
+    "guid": "760ee7ec440af2746ba28854efa0c076",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl",
+    "guid": "96de908384869cd409c75efa351d5edf",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_608__zh.png",
+    "guid": "a60d8add3fed32d408615932f807e805",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-163815.png",
+    "guid": "b6add3aabf02db24da31860141c6e5b1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5081__zh.png",
+    "guid": "d6bb395d6e623e14a80923c5752c3575",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Themes/LivingGlassAssets.cs",
+    "guid": "d6eeb1c9879f7c8468faa8101fc6fc2d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph",
+    "guid": "f63d574838ccfb44f84acc05fed0af48",
+    "dependencies": [
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingSolution.cs",
+    "guid": "074337820eff7f441910fadfc931aa08",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4554__en.png",
+    "guid": "07e357435bac39f4fa1b6c13d4b66136",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Performer Select/Selection target — RE-BIRTH.png",
+    "guid": "077f54d4ea8dac94ebf87beb9764b17b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_613__en.png",
+    "guid": "1741832913f824d4b8db2b18b959a7f9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3924__en.png",
+    "guid": "2752911d543ddb645809e503442df235",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4536__zh.png",
+    "guid": "27ff88acfbbe471439715f17967511b4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_522__en.png",
+    "guid": "37b7a169b388cc848bf8b373c095586c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/WaitForResult.cs",
+    "guid": "374b5ec183b8225d0ac8b0664812f5f1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4902__en.png",
+    "guid": "47ceb3e0e7d04904184429e8725f4e6a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_307__zh__phase3-final.png",
+    "guid": "5732be162acbbcc4886d581a1c1b4b35",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+    "guid": "5713b959e3c77a58fb258133fc8e4aef",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/AutoFit.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/RawImage.cs"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/PER_CONSCIENCE/Released performer image.png",
+    "guid": "579a95e023815ff4e9c8a631db08dcf4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4710__zh.png",
+    "guid": "675cf74828581224bacef4d4319d9e9f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/LivingGlassAssets.asset",
+    "guid": "67bc85ad740f1524a978ca1f399f125a",
+    "dependencies": [
+      "Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png",
+      "Assets/Art/Figma/PER_CONSCIENCE/Living Master Image.png",
+      "Assets/Art/Figma/PER_CONSCIENCE/Master Image — Activation.png",
+      "Assets/Art/Figma/PER_GAIA/Approved Master Image.png",
+      "Assets/Art/Figma/PER_GAIA/Living Master Image.png",
+      "Assets/Art/Figma/PER_GAIA/Master Image — Activation.png",
+      "Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png",
+      "Assets/Art/Figma/PER_PANDEMIC/Living Master Image.png",
+      "Assets/Art/Figma/PER_PANDEMIC/Master Image — Activation.png",
+      "Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png",
+      "Assets/Art/Figma/PER_RE-BIRTH/Living Master Image.png",
+      "Assets/Art/Figma/PER_RE-BIRTH/Master Image — Activation.png",
+      "Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png",
+      "Assets/Art/Figma/PER_SANCTUARY/Living Master Image.png",
+      "Assets/Art/Figma/PER_SANCTUARY/Master Image — Activation.png",
+      "Assets/Art/Figma/PER_WHITE/Approved Master Image.png",
+      "Assets/Art/Figma/PER_WHITE/Living Master Image.png",
+      "Assets/Art/Figma/PER_WHITE/Master Image — Activation.png",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf",
+      "Assets/LivingGlass/Assets/Fonts/NotoSansCJKtc-Regular.otf",
+      "Assets/LivingGlass/Themes/LivingGlassAssets.cs",
+      "Assets/LivingGlass/UI/Styles/LivingGlass.uss"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4080__zh.png",
+    "guid": "77b0e1849dbc7d74e8b5e908ca882640",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5189__zh.png",
+    "guid": "7718ec1caf38b734b8b02c2d843ce672",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Styles/LivingGlass.uss",
+    "guid": "77c8b76aa1d96ed47ab082ef0bc18307",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5033__en.png",
+    "guid": "7769583d2a7544e43b66e8be8559d511",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png",
+    "guid": "8749efbdc19be6342aa6e6e8bc3fe9d3",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "guid": "876ab69f364310341971aaf30ddb42e6",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4098__en.png",
+    "guid": "870d64b74b5437b489f011657753166d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4482__en.png",
+    "guid": "9786f7d86c59c164f9c66deeb8bab7d7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_613__zh__postfix.png",
+    "guid": "9779ed13d959aaa44bb53d5e7a5c3c55",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4620__en.png",
+    "guid": "a79216deb217f714e9cd6117897136dc",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/UV Grid.mat",
+    "guid": "a79c31a495f5d77d08ce9fbc53f8ca2d",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/UV Grid.png"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab",
+    "guid": "b7c55e0db5bc46df90a6157eb1521758",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerAppSettings.asset"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat",
+    "guid": "e73a58f6e2794ae7b1b7e50b7fb811b0",
+    "dependencies": [
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader",
+    "guid": "f7ada0af4f174f0694ca6a487b8f543d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_434__zh.png",
+    "guid": "08263f751c4ac0f489625923a16ab622",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/AutoFit.cs",
+    "guid": "08567ddcd5175eeebafe07a630413ad2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4344__en.png",
+    "guid": "08c6a1085389a9a4f8ac35efca7a3b28",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png",
+    "guid": "080975e17e658524d821ef6b43eea92c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4584__en.png",
+    "guid": "18c5e46e519f61644802d69a31545297",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4758__en.png",
+    "guid": "388023253d66ea242944c555f105df3a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4308__en.png",
+    "guid": "3880c32c47bb4a046a0b158f8f087291",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoSolution.cs",
+    "guid": "386ee87194003cbd899dddcd6a2e6add",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoConfig.cs",
+    "guid": "483740821ccce60b4a263dad0478e9b7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/EnumExtension.cs",
+    "guid": "483835b03033d6fffba13a16e193450d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader",
+    "guid": "48bb5f55d8670e349b6e614913f9d910",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingConfig.cs",
+    "guid": "5870c72997b0a4f178afb3fa4b42f8ec",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5161__en.png",
+    "guid": "5804f43e7f53dfe448a5b2d9cf68f15e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Release/Presence — SANCTUARY.png",
+    "guid": "586a7a00ead9e304c98a96d94a970fe0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+    "guid": "68e6db2ebdc24f95958faec2be5558d6",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Settings/UniversalRP.asset",
+    "guid": "681886c5eb7344803b6206f758bf0b1c",
+    "dependencies": [
+      "Assets/Settings/Renderer2D.asset",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs",
+      "Packages/com.unity.render-pipelines.universal/Textures/BayerMatrix.png",
+      "Packages/com.unity.render-pipelines.universal/Textures/BlueNoise64/L/LDR_LLL1_0.png"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/ImageSource/ImageSource.cs",
+    "guid": "78116299de071af7094419302302ec05",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/UV Grid.png",
+    "guid": "783abb08ef3bea5f994c0dd50a4abc50",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/FaceLandmarkerRunner.cs",
+    "guid": "78fe4f7b7ad763b02aa042ef4c50ff6e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/51_39__en__privacy-runtime-context.png",
+    "guid": "8860dff6335f93e4c967d3110d5b920a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs",
+    "guid": "88a32c2c64215969c81c79fa23411733",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4362__zh.png",
+    "guid": "88dbe87f943cf964eb0343b5a45512dc",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_CONSCIENCE/Living Master Image.png",
+    "guid": "98b3bc9c251401d478d6ca2de593f709",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "guid": "98d49dcfe667ea822a91d6b74f7cb2e9",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Assets/Scripts/Interaction/MediaPipeGestureBridge.cs",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Multi HandLandmarkList Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/HandLandmarkerResultAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MultiHandLandmarkListAnnotation.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/Souvenir/Souvenir artwork preview.png",
+    "guid": "98691bb3f575dc94a88f573c14856bbd",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/RouteContract.json",
+    "guid": "a8dc20657a4b5d549b7243375bb4d8d4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/AssetLoader.cs",
+    "guid": "b8bd1b384b7c7414cb732e8fbabf95a8",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader",
+    "guid": "c8d12adcee749c344b8117cf7c7eb912",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_PANDEMIC/Released performer image.png",
+    "guid": "c878d2cf6d8568e4d94a76c6b0e7f742",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt",
+    "guid": "d82c1b31c7e74239bff1220585707d2b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/RunningMode.cs",
+    "guid": "e82590f067b6f1b96ac9dadddcd9ab26",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/VisionTaskApiRunner.cs",
+    "guid": "e80a3d78e5958821fb1c31ba5b6c6f21",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "guid": "f8e13ca9036ae790aa97029999dd7750",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfigWindows.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/ModalButton.cs",
+    "guid": "f8fb55141659b9607bbd8859e1dbcf04",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "guid": "09e2e81854f3f746e816e1db55d28fa2",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoConfig.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4776__zh.png",
+    "guid": "097dc66d49a949f4aa8be6c568565278",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_307__zh__phase3-final-1.png",
+    "guid": "196d83d6e30b6514c8a645e87730716c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4380__en.png",
+    "guid": "29601663377a41546b825bc0eae00d3b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc",
+    "guid": "3997e2241185407d80309a82f9148466",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "guid": "39283c598b419151e84e22759e3d01ed",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingConfig.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkDetectionConfig.cs",
+    "guid": "393ef72a4f0c9fb6cab26fcb69e31eb4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/ImageSource/WebCamSource.cs",
+    "guid": "498146e99d4934673bd948c8be11227e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat",
+    "guid": "79459efec17a4d00a321bdcc27bbc385",
+    "dependencies": [
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4134__en.png",
+    "guid": "89056e6f70389444496e3ce8c4cf2206",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Attract/Presence — SANCTUARY.png",
+    "guid": "99cac32d97da7604cbc08efa01cc3f80",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5218__en.png",
+    "guid": "a901728f4b2c6b4458b6a160f3cdfe92",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/holistic_cpu.txt",
+    "guid": "a901443779a96c97890cab1b274b506f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Core/LivingGlassRoutes.cs",
+    "guid": "a9bbcaa954eef0c469e9817c108facce",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/official_hand_tracking_demo_gpu.txt",
+    "guid": "b9c68673d0e7f6380a80da74e3a9f826",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/FaceLandmarkDetectionConfig.cs",
+    "guid": "b96f532c42adfa2c2b108e5b17b581ad",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4446__en.png",
+    "guid": "c956250035ae12845a673734024dc8f0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc",
+    "guid": "d930090c0cd643c7b55f19a38538c162",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/InferenceMode.cs",
+    "guid": "d95cf1e3a8fe6741295a3b42972dec58",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassContractChecks.cs",
+    "guid": "e9148d7c1743b6141b04119f4aea2a5c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_666__zh__postfont.png",
+    "guid": "f991c5ba06ce9d1488c64982a6fd9ab5",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset",
+    "guid": "f952c082cb03451daed3ee968ac6c63e",
+    "dependencies": [
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_StyleSheet.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_552__zh__postfont.png",
+    "guid": "f9ee06600e1481a499bc9e729d854d76",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Attract/Presence — GAIA.png",
+    "guid": "0a34372e070dda4468eaa9694f6484bb",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5001__en.png",
+    "guid": "3a91235ccab6c964dbb5fe9773c5422b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_SANCTUARY/Released performer image.png",
+    "guid": "3a38c6581cbfab04a8ea76d1fcedf9cd",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4518__en.png",
+    "guid": "3a09259ef524fd145a58842662f75e8c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/124_3734__en__isolated-ui.png",
+    "guid": "3a0b09980e1151d4e8129cb7726e474c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5065__en.png",
+    "guid": "4a913e4a5759e80489e8e1a7b5e604c5",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/fidelity-audit-privacy-en-after-root-fix.png",
+    "guid": "5a6f2c3ab7f4a4346adcec7cdc4dc3d0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Privacy/SANCTUARY — DIMMED PRIVACY BACKGROUND.png",
+    "guid": "7a3141fbb6ab47c419dcbef262bc4eb2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_568__zh__postfix.png",
+    "guid": "9a71282ced62ca54d86389d38bdc4d63",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Release/Presence — GAIA.png",
+    "guid": "9a0de252fe74e6540bfaf10d2044b5da",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/SolutionMenu.cs",
+    "guid": "9add77a6e4bf64e118297a7f33a820a7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3960__en.png",
+    "guid": "aaddd8e22d7aea1489ca459f03df168d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Presentation/LivingGlassPresentation.cs",
+    "guid": "cad620e9fb0add044b980b308fe63616",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph",
+    "guid": "ca2ed216f98028c4dae6c5224a952b3c",
+    "dependencies": [
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "Assets/TextMesh Pro/Shaders/SDFFunctions.hlsl",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphImporter.cs",
+      "Packages/com.unity.shadergraph/Editor/Importers/ShaderGraphMetadata.cs"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/PER_CONSCIENCE/Master Image — Activation.png",
+    "guid": "eaa2ba12fd0a0224d848a328f0966529",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/FaceDetectionConfigWindow.cs",
+    "guid": "ea4546bdb229f3d9b9c3eb61bb0a3c45",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/official_hand_tracking_demo_cpu.txt",
+    "guid": "eae74b0ecd74d8ed0a0610fc6bd2a647",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/tutorial-entry-phase2.png",
+    "guid": "eaba8bfac92844a4c8106b2f63a3154f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfigWindows.cs",
+    "guid": "ea1ce3a75b2958a89a0191d6cdcfde15",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt",
+    "guid": "fade42e8bc714b018fac513c043d323b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/Source.json",
+    "guid": "0b639b748592eeb4dbdd3e8c91772fd6",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/FaceDetectorRunner.cs",
+    "guid": "0b86ba34db2c888778bdb2f439fd1c76",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/TaskApiRunner.cs",
+    "guid": "2bf52f7ed0f46b72888f6ee86ae79a2f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_711__zh.png",
+    "guid": "2b8a68ed98fef0f448c785ac9b09f348",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_426__zh__postfix.png",
+    "guid": "2b6d5aa639f7e0147b99c9f4d44b73f0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/InputSystem_Actions.inputactions",
+    "guid": "2bcd2660ca9b64942af0de543d8d7100",
+    "dependencies": [
+      "Packages/com.unity.inputsystem/InputSystem/Actions/InputActionAsset.cs",
+      "Packages/com.unity.inputsystem/InputSystem/Actions/InputActionReference.cs",
+      "Packages/com.unity.inputsystem/InputSystem/Editor/AssetImporter/InputActionImporter.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/Fonts/Font Awesome 5 Free-Regular-400.otf",
+    "guid": "3b2d9ccd632e45a698d858435046a7f0",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/Fonts/Font Awesome 5 Free-Solid-900.otf"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/PER_GAIA/Approved Master Image.png",
+    "guid": "5b12a0fff7bd34a4994debd2bac3a0df",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_476__en__postfix.png",
+    "guid": "5bae0bde633fce74cab8a19586f0c69a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_352__zh__postfont.png",
+    "guid": "6b89721b0fd804a4d80f4fbf4e95d4b0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-164302.png",
+    "guid": "6b9bb88c93f436c4d904396f7b8377fd",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4743__zh.png",
+    "guid": "7b609029cc99cdd4c9a59945c3995153",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4221__zh.png",
+    "guid": "7bba2ca481206d44183469e3a59653a8",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__en__postoffset.png",
+    "guid": "8b4692fcbfb7bd94a87e8af41b637e25",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Gaia.mp4",
+    "guid": "8b6f6f1e3f264810aba6d340fe734e09",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/ModalContents.cs",
+    "guid": "9b0553bf939a2c523bd6b421012b9337",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/124_3767__zh__isolated-ui.png",
+    "guid": "9bdaff9875c1c7741911e1787c611c7f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Components/LivingGlassGestureIllustration.cs",
+    "guid": "9bacd1c6928806d4381317bc2757f1a0",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4985__zh.png",
+    "guid": "abd393a6a8a6e4f47bfa9c68f104cfe8",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/LegacySolutionRunner.cs",
+    "guid": "ab85c32cd451f15a8ba19394cb3d8fde",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3942__zh.png",
+    "guid": "abc85f3369314204582a44bbfc051405",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/fidelity-audit-home-en-after-root-fix.png",
+    "guid": "ab4c1e0783763834a90122a55e7138ac",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_493__zh__postfont.png",
+    "guid": "ab1e4d4a43beafb40bad7f68dda6e206",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_SANCTUARY/Living Master Image.png",
+    "guid": "cb710201b970e004f8e6b8254532dc57",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Performer Select/Selection target — GAIA.png",
+    "guid": "cbd6c340b6b747c4e869ed1472d020a9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/Motion/LivingGlassMotion.cs",
+    "guid": "db0efad36c1fe8f41a3344a6b6125616",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_378__en.png",
+    "guid": "eb05c625211e6394693b22557a941577",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5341__zh.png",
+    "guid": "fbe7025af3bfeed41861073275b5ea71",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3833__zh.png",
+    "guid": "2c89fd508f17adb41a13fcbd718bf98a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Settings/Scenes/URP2DSceneTemplate.unity",
+    "guid": "2cda990e2423bbf4892e6590ba056729",
+    "dependencies": [
+      "Packages/com.unity.render-pipelines.universal/Runtime/2D/Light2D.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/UniversalAdditionalCameraData.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4638__zh.png",
+    "guid": "4c91bb9ff8cbb984084a91f93374a9c2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_WHITE/Approved Master Image.png",
+    "guid": "6c612b4386bf4f44686341c10a96ae17",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_281__zh__postfix.png",
+    "guid": "9c91a6e94e151b74a977b7a186e4bd7f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/FaceDetectionConfig.cs",
+    "guid": "9c9332510a2d9db4dba112176df7b3db",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/GestureCameraConsentGate.cs",
+    "guid": "9c6c0a91ce8b48639be342d1b8242517",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkDetectionConfigWindow.cs",
+    "guid": "9c4d18f994c2cb51282484e339c69005",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4812__zh.png",
+    "guid": "ac6f3f0fec1f99f4baf74ff8e1f78258",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "guid": "bcc6cf6fe8edcbedc948607491e604d1",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/FaceLandmarkDetectionConfigWindow.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Button.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Dropdown.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Image.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/InputField.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/ContentSizeFitter.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/HorizontalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/LayoutElement.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Layout/VerticalLayoutGroup.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Mask.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Scrollbar.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/ScrollRect.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Text.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/UI/Core/Toggle.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4428__zh.png",
+    "guid": "bc4d0750bd209404d978faa31c9a94c4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader",
+    "guid": "bc1ede39bf3643ee8e493720e4259791",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4884__zh.png",
+    "guid": "cc0335366471fbf43857782ae5e686df",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmenterRunner.cs",
+    "guid": "fc2516ab17bf9a56185cb561f270551a",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_PANDEMIC/Master Image — Activation.png",
+    "guid": "fc9fb74d77fa24b46aa08e70a536fc75",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4",
+    "guid": "0d0041709efa403fab018e2ee14f0c26",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Performer Select/Selection target — SANCTUARY.png",
+    "guid": "0db7a91dd9c12a0428d0f74f7504d110",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Scripts/Modal.cs",
+    "guid": "1ddeec99217ea692c920535a87583a51",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss",
+    "guid": "2db48ef4cdeedc14785b96411ed62cfb",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4014__zh.png",
+    "guid": "2db47f142cbba6e45a50bee641143701",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4254__zh.png",
+    "guid": "2d0b68b13b256dd4bb56e2358110d692",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/StreamingAssets/hand_landmarker.bytes",
+    "guid": "2dce87228bf04e57a0c502ff169e7c7b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_552__zh.png",
+    "guid": "4da2054edb0217249b727837f1f214a7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Radar.renderTexture",
+    "guid": "5da80a5efc5910a21b9460daafddfb45",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/holistic_opengles.txt",
+    "guid": "5db98b44b5bd2a0e8b5c7dec21d0577d",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_307__zh__postoffset.png",
+    "guid": "6d879495ff51c1c4ea85f9eb3f3cbda5",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/24_613__en__postfix.png",
+    "guid": "6d8f1af281d394847b98720644b371f2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/Attract/Presence — WHITE GUARDIAN.png",
+    "guid": "9d1642b93ebdf164ca764f041cd41432",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4188__zh.png",
+    "guid": "ad0714db378eb6942ac439d7ece796ca",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/ImageSource/StaticImageSource.cs",
+    "guid": "bd7955705ab46c72b9124bb116a2dca9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3867__en.png",
+    "guid": "bdb9891dff1d411479dffaae39cb672f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4830__en.png",
+    "guid": "bdfcb828887e7e549994b81156d18440",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmentationConfig.cs",
+    "guid": "cd2febadf5c625191beac2548bdb920b",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4395__zh.png",
+    "guid": "dd318633b8b9d5242b5aaf063d74bf3c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader",
+    "guid": "dd89cf5b9246416f84610a006f916af7",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkDetectionConfig.cs",
+    "guid": "fd027ec03d30d23bea8268b01a851ae2",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/AppSettings.cs",
+    "guid": "fdd967c0e52e7b13f80827e23283472e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader",
+    "guid": "1e3b057af24249748ff873be7fafee47",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+    "guid": "1e5ca12f2e237d34b97a9585ad45a2cb",
+    "dependencies": [
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf",
+      "Assets/LivingGlass/Assets/Fonts/NotoSansCJKtc-Regular.otf",
+      "Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt",
+      "Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt",
+      "Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/ImageSource/ImageSourceType.cs",
+    "guid": "2e20c591a3836aae1abc65429b7adde1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Scripts/Interaction/GestureCursorController.cs",
+    "guid": "2e0475b7dc8442f9ab28666e7a9fb539",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+    "guid": "2e498d1c8094910479dc3e1b768306a4",
+    "dependencies": [
+      "Assets/TextMesh Pro/Fonts/LiberationSans.ttf",
+      "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader",
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_FontAsset.cs"
+    ]
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4272__en.png",
+    "guid": "4ef1828abf584d2409a414a8c9f5f258",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/phase3/105_434__zh__postfont.png",
+    "guid": "6e317b69ac27f734fb5139ace2d9ba8e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4969__en.png",
+    "guid": "6ec2fdc963859c1409c6174db93bef51",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt",
+    "guid": "6e59c59b81ab47f9b6ec5781fa725d2c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_5434__zh.png",
+    "guid": "7e51fb1f158750d41add69e5d7c92bdf",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_426__en.png",
+    "guid": "7ea2213a1926e6f44bc66d8c6f3b079f",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/screenshot-20261024-163626.png",
+    "guid": "8ee80329b06bf7b4596c690b28629373",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/holistic_gpu.txt",
+    "guid": "8eaa695afee89c8eea9241f8a5ab9645",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/fidelity-audit-home-en-runtime.png",
+    "guid": "bed2d907d586c5745894d64b4025279e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4",
+    "guid": "cee0636ab52a4b9d8d5026944c69fc25",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_3800__en.png",
+    "guid": "ce062240f56fdb4498c03cf1d9a0a531",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4410__en.png",
+    "guid": "ee9db784f219f1c4da193fad67339eea",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4500__zh.png",
+    "guid": "fe8083d38f473ac4c9cd3c80f5ed406c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader",
+    "guid": "fe393ace9b354375a9cb14cdbbc28be4",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4656__en.png",
+    "guid": "1f8cd473f5eeab24ca29ff90bf0b70d9",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/_Recovery/0 (1).unity",
+    "guid": "3f900265efa72df48acdf99f2a6c05a5",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Assets/Scripts/Interaction/MediaPipeGestureBridge.cs",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Multi HandLandmarkList Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/HandLandmarkerResultAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MultiHandLandmarkListAnnotation.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs"
+    ]
+  },
+  {
+    "path": "Assets/DefaultVolumeProfile.asset",
+    "guid": "3f9215ea0144899419cfbc0957140d3f",
+    "dependencies": [
+      "Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumesOptions.cs",
+      "Packages/com.unity.render-pipelines.core/Runtime/Volume/VolumeProfile.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/Bloom.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ChannelMixer.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ChromaticAberration.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ColorAdjustments.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ColorCurves.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ColorLookup.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/DepthOfField.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/FilmGrain.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/LensDistortion.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/LiftGammaGain.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/MotionBlur.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/PaniniProjection.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ScreenSpaceLensFlare.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ShadowsMidtonesHighlights.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/SplitToning.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/Tonemapping.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/Vignette.cs",
+      "Packages/com.unity.render-pipelines.universal/Runtime/Overrides/WhiteBalance.cs"
+    ]
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/TMP Settings.asset",
+    "guid": "3f5b5dff67a942289a9defa416b206f3",
+    "dependencies": [
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt",
+      "Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt",
+      "Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset",
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_Settings.cs"
+    ]
+  },
+  {
+    "path": "Assets/Art/Figma/Home/HOME BACKGROUND.png",
+    "guid": "5fd6d45b803987f4d9db8da268b89bf6",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/124_4794__en.png",
+    "guid": "6fa021e3a28de824c86d9737ce40bbdd",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/105_307__zh.png",
+    "guid": "6f2c99bd82072c240bbfb4a7c647180e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+    "guid": "8f586378b4e144a9851e7b34d9b748ee",
+    "dependencies": [
+      "Assets/TextMesh Pro/Fonts/LiberationSans.ttf",
+      "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+      "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader",
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_FontAsset.cs"
+    ]
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4",
+    "guid": "af0527d9d7044ba28bc9c274f8d91c97",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/Fonts/Font Awesome 5 Brands-Regular-400.otf",
+    "guid": "bfc0aeb4c10eb29e89d25e777739f57c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/ScreenMaterial.mat",
+    "guid": "bf16eac2a3a7c8815b4d789b8ed4a22c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/TextMesh Pro/Shaders/TMP_Sprite.shader",
+    "guid": "cf81c85f95fe47e1a27f6ae460cf182c",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_RE-BIRTH/Master Image — Activation.png",
+    "guid": "cf2d3fbd7a90b3f41bdf7a72aacda9b1",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Art/Figma/PER_GAIA/Living Master Image.png",
+    "guid": "df737857f1e4c314997d9c8bbd4cbfcf",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "guid": "df0fc3b9f7146dee593f8b5660ae773c",
+    "dependencies": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Screen.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/FaceLandmarkerRunner.cs",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+      "Packages/com.github.homuler.mediapipe/PackageResources/Prefabs/Multi FaceLandmarkList Annotation.prefab",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/FaceLandmarkerResultAnnotationController.cs",
+      "Packages/com.github.homuler.mediapipe/Runtime/Scripts/Unity/Annotation/MultiFaceLandmarkListAnnotation.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/EventSystem.cs",
+      "Packages/com.unity.ugui/Runtime/UGUI/EventSystem/InputModules/StandaloneInputModule.cs"
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectorRunner.cs",
+    "guid": "ef4725ddbd544eb769c8fdedd008ae0e",
+    "dependencies": []
+  },
+  {
+    "path": "Assets/Screenshots/FigmaUnityRuntime/24_326__en.png",
+    "guid": "efb83a2771694264d8b07c98c216bc70",
+    "dependencies": []
+  }
+]

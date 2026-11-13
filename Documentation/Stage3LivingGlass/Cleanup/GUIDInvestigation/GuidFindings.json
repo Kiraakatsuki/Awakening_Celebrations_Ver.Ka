@@ -1,0 +1,598 @@
+[
+  {
+    "guid": "03cfc4915c15d504a9ed85ecc404e607",
+    "occurrences": [
+      {
+        "guid": "03cfc4915c15d504a9ed85ecc404e607",
+        "path": "Assets/Settings/Renderer2D.asset",
+        "line": 21,
+        "context": [
+          "  probeVolumeResources:",
+          "    probeVolumeDebugShader: {fileID: 4800000, guid: e5c6678ed2aaa91408dd3df699057aae, type: 3}",
+          "    probeVolumeFragmentationDebugShader: {fileID: 4800000, guid: 03cfc4915c15d504a9ed85ecc404e607, type: 3}",
+          "    probeVolumeOffsetDebugShader: {fileID: 4800000, guid: 53a11f4ebaebf4049b3638ef78dc9664, type: 3}",
+          "    probeVolumeSamplingDebugShader: {fileID: 4800000, guid: 8f96cd657dc40064aa21efcc7e50a2e7, type: 3}"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "probeVolumeResources.probeVolumeFragmentationDebugShader",
+    "expected_type": "Shader",
+    "origin": "URP retained migration/debug data",
+    "scope": "Both via QualitySettings renderer; obsolete field is not consumed by current renderer",
+    "obsolete_reference": true,
+    "current_property_exists": true,
+    "impact": "Dangling value in Obsolete ProbeVolumeResources. Package source has no consumer of this legacy container; current APV uses ProbeVolumeDebugResources. No confirmed application defect.",
+    "repair": "None required for runtime. Retain renderer bytes; do not map to a similarly named shader.",
+    "evidence": [
+      "DeprecatedFieldProof.json",
+      "RendererSchema.json",
+      "RendererSourceHits.json",
+      "RendererLiveReferences.json"
+    ]
+  },
+  {
+    "guid": "24ec0e140fb444a44ab96ee80844e18e",
+    "occurrences": [
+      {
+        "guid": "24ec0e140fb444a44ab96ee80844e18e",
+        "path": "Assets/Settings/Renderer2D.asset",
+        "line": 25,
+        "context": [
+          "    probeVolumeSamplingDebugShader: {fileID: 4800000, guid: 8f96cd657dc40064aa21efcc7e50a2e7, type: 3}",
+          "    probeSamplingDebugMesh: {fileID: -3555484719484374845, guid: 57d7c4c16e2765b47a4d2069b311bffe, type: 3}",
+          "    probeSamplingDebugTexture: {fileID: 2800000, guid: 24ec0e140fb444a44ab96ee80844e18e, type: 3}",
+          "  m_RendererFeatures: []",
+          "  m_RendererFeatureMap: "
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "probeVolumeResources.probeSamplingDebugTexture",
+    "expected_type": "Texture2D",
+    "origin": "URP retained migration/debug data",
+    "scope": "Both via QualitySettings renderer; obsolete field is not consumed by current renderer",
+    "obsolete_reference": true,
+    "current_property_exists": true,
+    "impact": "Dangling value in Obsolete ProbeVolumeResources. Package source has no consumer of this legacy container; current APV uses ProbeVolumeDebugResources. No confirmed application defect.",
+    "repair": "None required for runtime. Retain renderer bytes; do not map to a similarly named shader.",
+    "evidence": [
+      "DeprecatedFieldProof.json",
+      "RendererSchema.json",
+      "RendererSourceHits.json",
+      "RendererLiveReferences.json"
+    ]
+  },
+  {
+    "guid": "488fbb6a3005b66c2b657204bce83fcf",
+    "occurrences": [
+      {
+        "guid": "488fbb6a3005b66c2b657204bce83fcf",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta",
+        "line": 7,
+        "context": [
+          "  serializedVersion: 2",
+          "  defaultReferences:",
+          "  - globalConfigManagerPrefab: {fileID: 4394522812020757894, guid: 488fbb6a3005b66c2b657204bce83fcf,",
+          "      type: 3}",
+          "  - gpuManagerPrefab: {fileID: 7458244645391269047, guid: a84904e562ecaf887b2dba62111bb901,"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "MonoImporter.defaultReferences.globalConfigManagerPrefab",
+    "expected_type": "Prefab object (exact former field/component type unavailable)",
+    "origin": "MediaPipe0.16.3 sample importer metadata",
+    "scope": "Both reference current Bootstrap through HandLandmarkerBootstrap; old importer field absent",
+    "obsolete_reference": true,
+    "current_property_exists": false,
+    "impact": "Bootstrap class has neither old field; MonoImporter.GetDefaultReference returns null. Both scenes reference the valid current HandLandmarkerBootstrap, whose _appSettings resolves. This does not diagnose camera operation.",
+    "repair": "None required. Preserve Bootstrap.cs.meta GUID and defaults; do not substitute current AppSettings for a prefab.",
+    "evidence": [
+      "BootstrapImporter.json",
+      "PrefabReadOnlyInspection.json",
+      "BothSceneSerializedScope.json",
+      "SceneBootstrapReferences.json",
+      "MediaPipeArchiveMatches.json"
+    ]
+  },
+  {
+    "guid": "53a11f4ebaebf4049b3638ef78dc9664",
+    "occurrences": [
+      {
+        "guid": "53a11f4ebaebf4049b3638ef78dc9664",
+        "path": "Assets/Settings/Renderer2D.asset",
+        "line": 22,
+        "context": [
+          "    probeVolumeDebugShader: {fileID: 4800000, guid: e5c6678ed2aaa91408dd3df699057aae, type: 3}",
+          "    probeVolumeFragmentationDebugShader: {fileID: 4800000, guid: 03cfc4915c15d504a9ed85ecc404e607, type: 3}",
+          "    probeVolumeOffsetDebugShader: {fileID: 4800000, guid: 53a11f4ebaebf4049b3638ef78dc9664, type: 3}",
+          "    probeVolumeSamplingDebugShader: {fileID: 4800000, guid: 8f96cd657dc40064aa21efcc7e50a2e7, type: 3}",
+          "    probeSamplingDebugMesh: {fileID: -3555484719484374845, guid: 57d7c4c16e2765b47a4d2069b311bffe, type: 3}"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "probeVolumeResources.probeVolumeOffsetDebugShader",
+    "expected_type": "Shader",
+    "origin": "URP retained migration/debug data",
+    "scope": "Both via QualitySettings renderer; obsolete field is not consumed by current renderer",
+    "obsolete_reference": true,
+    "current_property_exists": true,
+    "impact": "Dangling value in Obsolete ProbeVolumeResources. Package source has no consumer of this legacy container; current APV uses ProbeVolumeDebugResources. No confirmed application defect.",
+    "repair": "None required for runtime. Retain renderer bytes; do not map to a similarly named shader.",
+    "evidence": [
+      "DeprecatedFieldProof.json",
+      "RendererSchema.json",
+      "RendererSourceHits.json",
+      "RendererLiveReferences.json"
+    ]
+  },
+  {
+    "guid": "5688ab254e4c0634f8d6c8e0792331ca",
+    "occurrences": [
+      {
+        "guid": "5688ab254e4c0634f8d6c8e0792331ca",
+        "path": "Assets/Settings/Renderer2D.asset",
+        "line": 64,
+        "context": [
+          "  m_FallbackErrorShader: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}",
+          "  m_PostProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}",
+          "  m_FallOffLookup: {fileID: 2800000, guid: 5688ab254e4c0634f8d6c8e0792331ca, type: 3}",
+          "  m_DefaultMaterialType: 0",
+          "  m_DefaultCustomMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "m_FallOffLookup",
+    "expected_type": "Texture2D",
+    "origin": "Old URP2D serialized texture",
+    "scope": "Both via QualitySettings renderer; property absent in installed schema",
+    "obsolete_reference": true,
+    "current_property_exists": false,
+    "impact": "Current Renderer2DData has no such serialized field. Light2DLookupTexture generates its falloff texture; the raw YAML entry is not an active requirement.",
+    "repair": "None. Do not assign generated light lookup texture into stale YAML.",
+    "evidence": [
+      "RendererSchema.json",
+      "RendererSourceHits.json"
+    ]
+  },
+  {
+    "guid": "57d7c4c16e2765b47a4d2069b311bffe",
+    "occurrences": [
+      {
+        "guid": "57d7c4c16e2765b47a4d2069b311bffe",
+        "path": "Assets/Settings/Renderer2D.asset",
+        "line": 24,
+        "context": [
+          "    probeVolumeOffsetDebugShader: {fileID: 4800000, guid: 53a11f4ebaebf4049b3638ef78dc9664, type: 3}",
+          "    probeVolumeSamplingDebugShader: {fileID: 4800000, guid: 8f96cd657dc40064aa21efcc7e50a2e7, type: 3}",
+          "    probeSamplingDebugMesh: {fileID: -3555484719484374845, guid: 57d7c4c16e2765b47a4d2069b311bffe, type: 3}",
+          "    probeSamplingDebugTexture: {fileID: 2800000, guid: 24ec0e140fb444a44ab96ee80844e18e, type: 3}",
+          "  m_RendererFeatures: []"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "probeVolumeResources.probeSamplingDebugMesh",
+    "expected_type": "Mesh",
+    "origin": "URP retained migration/debug data",
+    "scope": "Both via QualitySettings renderer; obsolete field is not consumed by current renderer",
+    "obsolete_reference": true,
+    "current_property_exists": true,
+    "impact": "Dangling value in Obsolete ProbeVolumeResources. Package source has no consumer of this legacy container; current APV uses ProbeVolumeDebugResources. No confirmed application defect.",
+    "repair": "None required for runtime. Retain renderer bytes; do not map to a similarly named shader.",
+    "evidence": [
+      "DeprecatedFieldProof.json",
+      "RendererSchema.json",
+      "RendererSourceHits.json",
+      "RendererLiveReferences.json"
+    ]
+  },
+  {
+    "guid": "5a0e103d2920f990ab08fe7bada48cc4",
+    "occurrences": [
+      {
+        "guid": "5a0e103d2920f990ab08fe7bada48cc4",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+        "line": 3962,
+        "context": [
+          "  m_Enabled: 1",
+          "  m_EditorHideFlags: 0",
+          "  m_Script: {fileID: 11500000, guid: 5a0e103d2920f990ab08fe7bada48cc4, type: 3}",
+          "  m_Name: ",
+          "  m_EditorClassIdentifier: "
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Historical or rollback dependency",
+    "genuine_missing_live_reference": true,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "MonoBehaviour &1409415355137883427.m_Script (Global Config Window root)",
+    "expected_type": "MonoScript; intended historical class unknown",
+    "origin": "MediaPipe0.16.3 sample prefab, shipped with missing component",
+    "scope": "Neither application scene dependency closure; imported support workflow",
+    "obsolete_reference": null,
+    "current_property_exists": true,
+    "impact": "Read-only prefab inspection confirms one missing MonoBehaviour. Same reference ships in local0.16.3 archive; no exact script identity in project/package/Editor resources. Cannot infer behavior or assign another component.",
+    "repair": "If the old Global Config workflow is retained, recover the original MonoScript and its .meta GUID5a0e103d2920f990ab08fe7bada48cc4 from a known-good matching source. Preserve component fileID1409415355137883427. Intended class/source unavailable; repair blocked pending provenance, no deletion or reassignment.",
+    "evidence": [
+      "PrefabReadOnlyInspection.json",
+      "MediaPipeArchiveMatches.json"
+    ]
+  },
+  {
+    "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+    "occurrences": [
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+        "line": 906,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0,",
+          "        type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e,"
+        ]
+      },
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+        "line": 916,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0,",
+          "        type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e,"
+        ]
+      },
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+        "line": 876,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0, type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e, type: 3}",
+          "      propertyPath: _contents"
+        ]
+      },
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+        "line": 928,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0,",
+          "        type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e,"
+        ]
+      },
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+        "line": 906,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0,",
+          "        type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e,"
+        ]
+      },
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+        "line": 923,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0,",
+          "        type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e,"
+        ]
+      },
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/_Recovery/0 (1).unity",
+        "line": 855,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0, type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e, type: 3}",
+          "      propertyPath: _contents"
+        ]
+      },
+      {
+        "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+        "path": "Assets/_Recovery/1.unity",
+        "line": 856,
+        "context": [
+          "      propertyPath: contents",
+          "      value: ",
+          "      objectReference: {fileID: 7355513348742275121, guid: 8236d46ca3a43d373ae6ad281fea8fe0, type: 3}",
+          "    - target: {fileID: 8571076843980202029, guid: 140d1d2c406167c50819d89f86d9092e, type: 3}",
+          "      propertyPath: _contents"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "PrefabInstance.m_Modification.m_Modifications[*] (target8571076843980202029).propertyPath=contents / objectReference",
+    "expected_type": "GameObject prefab (old ModalButton contents override)",
+    "origin": "Six imported MediaPipe sample scenes plus two ignored recovery scenes",
+    "scope": "Neither application scene; inherited obsolete sample override only",
+    "obsolete_reference": true,
+    "current_property_exists": false,
+    "impact": "Target component is ModalButton. Serialized contents field does not exist; _contents exists and has per-sample valid override. Hand sample current override points to Hand Landmark Detection Config Window.prefab. Do not delete whole Main Canvas/sample.",
+    "repair": "None required for primary scenes. Future sample-only normalization may drop just the dead contents override after preserving valid _contents; not performed.",
+    "evidence": [
+      "ModalOverrideSchema.json",
+      "SerializedOccurrences.json",
+      "MediaPipeArchiveMatches.json",
+      "ToolingAssets.json"
+    ]
+  },
+  {
+    "guid": "8f96cd657dc40064aa21efcc7e50a2e7",
+    "occurrences": [
+      {
+        "guid": "8f96cd657dc40064aa21efcc7e50a2e7",
+        "path": "Assets/Settings/Renderer2D.asset",
+        "line": 23,
+        "context": [
+          "    probeVolumeFragmentationDebugShader: {fileID: 4800000, guid: 03cfc4915c15d504a9ed85ecc404e607, type: 3}",
+          "    probeVolumeOffsetDebugShader: {fileID: 4800000, guid: 53a11f4ebaebf4049b3638ef78dc9664, type: 3}",
+          "    probeVolumeSamplingDebugShader: {fileID: 4800000, guid: 8f96cd657dc40064aa21efcc7e50a2e7, type: 3}",
+          "    probeSamplingDebugMesh: {fileID: -3555484719484374845, guid: 57d7c4c16e2765b47a4d2069b311bffe, type: 3}",
+          "    probeSamplingDebugTexture: {fileID: 2800000, guid: 24ec0e140fb444a44ab96ee80844e18e, type: 3}"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "probeVolumeResources.probeVolumeSamplingDebugShader",
+    "expected_type": "Shader",
+    "origin": "URP retained migration/debug data",
+    "scope": "Both via QualitySettings renderer; obsolete field is not consumed by current renderer",
+    "obsolete_reference": true,
+    "current_property_exists": true,
+    "impact": "Dangling value in Obsolete ProbeVolumeResources. Package source has no consumer of this legacy container; current APV uses ProbeVolumeDebugResources. No confirmed application defect.",
+    "repair": "None required for runtime. Retain renderer bytes; do not map to a similarly named shader.",
+    "evidence": [
+      "DeprecatedFieldProof.json",
+      "RendererSchema.json",
+      "RendererSourceHits.json",
+      "RendererLiveReferences.json"
+    ]
+  },
+  {
+    "guid": "a84904e562ecaf887b2dba62111bb901",
+    "occurrences": [
+      {
+        "guid": "a84904e562ecaf887b2dba62111bb901",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta",
+        "line": 9,
+        "context": [
+          "  - globalConfigManagerPrefab: {fileID: 4394522812020757894, guid: 488fbb6a3005b66c2b657204bce83fcf,",
+          "      type: 3}",
+          "  - gpuManagerPrefab: {fileID: 7458244645391269047, guid: a84904e562ecaf887b2dba62111bb901,",
+          "      type: 3}",
+          "  executionOrder: 0"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "MonoImporter.defaultReferences.gpuManagerPrefab",
+    "expected_type": "Prefab object (exact former field/component type unavailable)",
+    "origin": "MediaPipe0.16.3 sample importer metadata",
+    "scope": "Both reference current Bootstrap through HandLandmarkerBootstrap; old importer field absent",
+    "obsolete_reference": true,
+    "current_property_exists": false,
+    "impact": "Bootstrap class has neither old field; MonoImporter.GetDefaultReference returns null. Both scenes reference the valid current HandLandmarkerBootstrap, whose _appSettings resolves. This does not diagnose camera operation.",
+    "repair": "None required. Preserve Bootstrap.cs.meta GUID and defaults; do not substitute current AppSettings for a prefab.",
+    "evidence": [
+      "BootstrapImporter.json",
+      "PrefabReadOnlyInspection.json",
+      "BothSceneSerializedScope.json",
+      "SceneBootstrapReferences.json",
+      "MediaPipeArchiveMatches.json"
+    ]
+  },
+  {
+    "guid": "b3ab972b21db85d48ade9657efdd4771",
+    "occurrences": [
+      {
+        "guid": "b3ab972b21db85d48ade9657efdd4771",
+        "path": "Assets/Settings/Lit2DSceneTemplate.scenetemplate",
+        "line": 68,
+        "context": [
+          "  preview: {fileID: -3604256930052969394}",
+          "  dependencies:",
+          "  - dependency: {fileID: 2800000, guid: b3ab972b21db85d48ade9657efdd4771, type: 3}",
+          "    instantiationMode: 1",
+          "  templatePipeline: {fileID: 0}"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Editor/tooling dependency",
+    "genuine_missing_live_reference": true,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "SceneTemplateAsset.dependencies.Array.data[0].dependency",
+    "expected_type": "UnityEngine.Object dependency; Texture2D inferred from legacy fileID2800000",
+    "origin": "Editor-generated URP2D scene template",
+    "scope": "Neither application scene; New Scene template tooling only",
+    "obsolete_reference": null,
+    "current_property_exists": true,
+    "impact": "Live dependency property is missing, while embedded preview texture resolves. No evidence establishes these textures are interchangeable. Template scene instantiation was not run.",
+    "repair": "In a separately approved isolated Editor experiment, call the verified SceneTemplateService.CreateTemplateFromScene(existing.templateScene, temporarySceneTemplatePath), compare its dependency list with the existing template, and propose only the minimal dependency-array correction. Preserve original template identity and preview. If the missing texture remains required, recover its exact GUID first. No template creation/rewrite performed.",
+    "evidence": [
+      "ToolingAssets.json",
+      "SerializedOccurrences.json"
+    ]
+  },
+  {
+    "guid": "c41005c129ba4d66911b75229fd70b45",
+    "occurrences": [
+      {
+        "guid": "c41005c129ba4d66911b75229fd70b45",
+        "path": "Assets/TextMesh Pro/Resources/TMP Settings.asset",
+        "line": 39,
+        "context": [
+          "  m_matchMaterialPreset: 1",
+          "  m_HideSubTextObjects: 0",
+          "  m_defaultSpriteAsset: {fileID: 11400000, guid: c41005c129ba4d66911b75229fd70b45,",
+          "    type: 2}",
+          "  m_defaultSpriteAssetPath: Sprite Assets/"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Historical or rollback dependency",
+    "genuine_missing_live_reference": true,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "TMP_Settings.m_defaultSpriteAsset",
+    "expected_type": "TMPro.TMP_SpriteAsset",
+    "origin": "TMP imported Resources settings / EmojiOne conversion record",
+    "scope": "Global optional TMP resource; neither application UI source uses TMP_Settings, TextMeshPro or <sprite>; native-scene closures do not include this settings asset",
+    "obsolete_reference": false,
+    "current_property_exists": true,
+    "impact": "Live optional sprite default is genuinely missing. UGUI conversion metadata identifies EmojiOne.asset but provides no runtime redirection. Exact asset is absent from installed bundles; a different Default Sprite Asset is not equivalent. TMP sprite fallback may be unavailable in supported sample text; no primary-app failure confirmed.",
+    "repair": "Restore the exact EmojiOne sprite asset GUIDc41005c129ba4d66911b75229fd70b45 plus matching atlas/material dependencies from verified provenance if this capability is required. Otherwise explicitly approve an empty optional default before clearing only this field. Neither action performed.",
+    "evidence": [
+      "ToolingAssets.json",
+      "PackageConversionMatches.json",
+      "BundledSpriteEvidence.json",
+      "TMPSourceHits.json"
+    ]
+  },
+  {
+    "guid": "d5da564da19cb6b7d8e4f97f269edc5d",
+    "occurrences": [
+      {
+        "guid": "d5da564da19cb6b7d8e4f97f269edc5d",
+        "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+        "line": 270,
+        "context": [
+          "  m_Enabled: 1",
+          "  m_EditorHideFlags: 0",
+          "  m_Script: {fileID: 11500000, guid: d5da564da19cb6b7d8e4f97f269edc5d, type: 3}",
+          "  m_Name: ",
+          "  m_EditorClassIdentifier: "
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Historical or rollback dependency",
+    "genuine_missing_live_reference": true,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "MonoBehaviour &1064799463.m_Script (_poolSize:10)",
+    "expected_type": "MonoScript; likely legacy pool component, exact class not proven",
+    "origin": "MediaPipe Legacy/MediaPipe Video scene, shipped upstream",
+    "scope": "Neither application scene; legacy sample only",
+    "obsolete_reference": null,
+    "current_property_exists": true,
+    "impact": "Nonzero m_Script GUID cannot resolve. Local archive contains same orphan. Current package Experimental.TextureFramePool is IDisposable, not a MonoBehaviour, so it is not a serialization-compatible replacement.",
+    "repair": "Restore the exact historical MonoScript with GUIDd5da564da19cb6b7d8e4f97f269edc5d and compatible _poolSize field from matching source, retaining component fileID1064799463. Otherwise plan explicit legacy-sample migration separately; do not attach the current pool class.",
+    "evidence": [
+      "SerializedOccurrences.json",
+      "MediaPipeArchiveMatches.json"
+    ]
+  },
+  {
+    "guid": "e5c6678ed2aaa91408dd3df699057aae",
+    "occurrences": [
+      {
+        "guid": "e5c6678ed2aaa91408dd3df699057aae",
+        "path": "Assets/Settings/Renderer2D.asset",
+        "line": 20,
+        "context": [
+          "    probeVolumeSamplingDebugComputeShader: {fileID: 7200000, guid: 53626a513ea68ce47b59dc1299fe3959, type: 3}",
+          "  probeVolumeResources:",
+          "    probeVolumeDebugShader: {fileID: 4800000, guid: e5c6678ed2aaa91408dd3df699057aae, type: 3}",
+          "    probeVolumeFragmentationDebugShader: {fileID: 4800000, guid: 03cfc4915c15d504a9ed85ecc404e607, type: 3}",
+          "    probeVolumeOffsetDebugShader: {fileID: 4800000, guid: 53a11f4ebaebf4049b3638ef78dc9664, type: 3}"
+        ]
+      }
+    ],
+    "asset_database_resolution": "unresolved",
+    "exact_asset_found_elsewhere": false,
+    "category": "Validator false positive",
+    "genuine_missing_live_reference": false,
+    "active_application_broken": false,
+    "repair_applied": false,
+    "property": "probeVolumeResources.probeVolumeDebugShader",
+    "expected_type": "Shader",
+    "origin": "URP retained migration/debug data",
+    "scope": "Both via QualitySettings renderer; obsolete field is not consumed by current renderer",
+    "obsolete_reference": true,
+    "current_property_exists": true,
+    "impact": "Dangling value in Obsolete ProbeVolumeResources. Package source has no consumer of this legacy container; current APV uses ProbeVolumeDebugResources. No confirmed application defect.",
+    "repair": "None required for runtime. Retain renderer bytes; do not map to a similarly named shader.",
+    "evidence": [
+      "DeprecatedFieldProof.json",
+      "RendererSchema.json",
+      "RendererSourceHits.json",
+      "RendererLiveReferences.json"
+    ]
+  }
+]

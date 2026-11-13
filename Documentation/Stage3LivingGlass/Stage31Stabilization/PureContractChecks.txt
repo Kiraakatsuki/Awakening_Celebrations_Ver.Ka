@@ -1,0 +1,6 @@
+PASS: 104 catalog records / 52 routes have supported families, unique IDs and both locales.
+PASS: all30 performer chapters map exactly; only Activation/Portrait are protected families; invalid routes rejected.
+PASS: interrupting a motion preserves its current pose and suppresses stale completion.
+PASS: clearing cancels visual completions; reduced motion applies the same final pose immediately.
+PASS: artwork proxy crop preserves aperture content, is invariant to shared scale/offset and handles unresolved geometry.
+Runtime, hardware, media playback and service calls NOT RUN.

@@ -1,0 +1,23 @@
+﻿path,lines,ownership,status
+Assets/Scripts/AwakeningApplicationController.cs,3056,Shared serialized facade; sole flow/session/gesture/video/assistant/audio owner. Only write-only flag removed.,REFACTORED — validated (compilation/Editor/static only)
+Assets/Scripts/HomeLanguageController.cs,757,Rollback Home bindings and locale/consent interaction; required by SampleScene.,RETAINED — required
+Assets/Scripts/RuntimeScreenCatalog.cs,61,Shared route/locale registry; Resources and prebuild validation dependency.,RETAINED — required
+Assets/Scripts/ScreenDocumentManager.cs,113,Rollback UIDocument family activation and overlay sorting.,RETAINED — required
+Assets/Scripts/Interaction/GestureCursorController.cs,173,Shared pointer/gesture cursor view lifecycle.,RETAINED — required
+Assets/Scripts/Interaction/GestureRecognitionLayer.cs,1030,Shared detector/dwell/release/cooldown semantics; no tuning authorized.,RETAINED — required
+Assets/Scripts/Interaction/MediaPipeGestureBridge.cs,349,Shared main-thread recognition adapter and capture diagnostic; existing user changes preserved.,RETAINED — required
+Assets/LivingGlass/Core/LivingGlassRoutes.cs,42,Shared pure Living Glass route and protected-stage classification.,RETAINED — required
+Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs,369,Authorization-bound runtime test harness; retained but not invoked this stage.,RETAINED — required
+Assets/LivingGlass/Editor/LivingGlassContractChecks.cs,69,Pure route/motion/crop contracts; no application initialization.,RETAINED — required
+Assets/LivingGlass/Editor/LivingGlassConversationChecks.cs,92,Isolated Editor-only layout/state specimens; typed preview access.,REFACTORED — validated (compilation/Editor/static only)
+Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs,154,Isolated Editor-only preview lifecycle; typed read-only checker seam added.,REFACTORED — validated (compilation/Editor/static only)
+Assets/LivingGlass/Editor/LivingGlassSceneBuilder.cs,162,Refuses candidate overwrite; approved asset-path loading and static scene validation.,RETAINED — required
+Assets/LivingGlass/Editor/LivingGlassStabilizationChecks.cs,146,Isolated visual-tree/cancellation/style checks; typed preview access.,REFACTORED — validated (compilation/Editor/static only)
+Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs,283,Semantic presentation port into the same shared controller; no duplicate business services.,RETAINED — required
+Assets/LivingGlass/Motion/LivingGlassMotion.cs,60,Single cancellable visual track owner; semantic completion stays outside tween callbacks.,RETAINED — required
+Assets/LivingGlass/Presentation/LivingGlassPresentation.cs,830,"Active reusable screen families, shell, overlays, local focus and visual ownership.",RETAINED — required
+Assets/LivingGlass/Rendering/LivingGlassAtmosphere.cs,44,One bounded mesh light plane; no extra camera/offscreen blur pipeline.,RETAINED — required
+Assets/LivingGlass/Themes/LivingGlassAssets.cs,23,Shared six-performer art/font/theme/reduced-effects configuration.,RETAINED — required
+Assets/LivingGlass/UI/Components/LivingGlassGestureIllustration.cs,61,Shared tutorial illustration rendering; no recognizer/hardware ownership.,RETAINED — required
+Assets/Editor/FigmaRuntimeMappingValidator.cs,201,Original imported manifest/catalog/UXML validation and prebuild callback; required rollback tooling.,RETAINED — required
+Assets/Editor/Phase4RuntimeScreenshotCapture.cs,54,Menu entry points for historical original-scene runtime capture; NOT invoked.,RETAINED — required

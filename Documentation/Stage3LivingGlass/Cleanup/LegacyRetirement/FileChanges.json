@@ -1,0 +1,14 @@
+{
+  "changed": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta"
+  ],
+  "removed": [],
+  "added": []
+}

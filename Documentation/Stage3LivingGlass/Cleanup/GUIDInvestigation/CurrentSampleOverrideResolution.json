@@ -1,0 +1,26 @@
+[
+  {
+    "guid": "d1f297de946a523dda5bc19fb59525f6",
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab"
+  },
+  {
+    "guid": "bcc6cf6fe8edcbedc948607491e604d1",
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab"
+  },
+  {
+    "guid": "14f706a2859a564a7b7ae1bb3a7985e2",
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab"
+  },
+  {
+    "guid": "d31ec499ac06b6b0cb4299d9b4aa7f19",
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab"
+  },
+  {
+    "guid": "f8e13ca9036ae790aa97029999dd7750",
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab"
+  },
+  {
+    "guid": "8026945368f4a1ed29b086d7499b3172",
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab"
+  }
+]

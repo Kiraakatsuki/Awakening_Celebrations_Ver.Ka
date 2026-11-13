@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-13",
+  "verification": "documentation and filesystem checks only",
+  "checks": {
+    "nine_required_deliverables": true,
+    "catalog_assets_resolve": true,
+    "catalog_locale_pairs": true,
+    "local_uxml_asset_references": true,
+    "manifest_mapping_fields_match": true,
+    "catalog_xml_parses": true,
+    "six_video_slots_resolve": true,
+    "tracked_application_diff_empty": true,
+    "documentation_links_fences": true
+  },
+  "issues": [],
+  "runtime_visual_compile_checks": "NOT RUN by instruction",
+  "preexisting_untracked_guidance": [
+    "AGENTS.md",
+    ".agents/"
+  ]
+}

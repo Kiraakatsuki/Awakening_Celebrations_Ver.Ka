@@ -1,0 +1,34 @@
+[
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\Scripts\\AwakeningApplicationController.cs",
+    "errors": []
+  },
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\LivingGlass\\Core\\AppLanguage.cs",
+    "errors": []
+  },
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\LivingGlass\\Core\\LivingGlassRoutes.cs",
+    "errors": []
+  },
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\LivingGlass\\Editor\\LivingGlassBoundedValidation.cs",
+    "errors": []
+  },
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\LivingGlass\\Editor\\LivingGlassContractChecks.cs",
+    "errors": []
+  },
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\LivingGlass\\Editor\\LivingGlassPreviewWindow.cs",
+    "errors": []
+  },
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\LivingGlass\\Editor\\LivingGlassProjectValidation.cs",
+    "errors": []
+  },
+  {
+    "path": "Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Proposed/Assets\\LivingGlass\\Integration\\LivingGlassFlowIntegration.cs",
+    "errors": []
+  }
+]

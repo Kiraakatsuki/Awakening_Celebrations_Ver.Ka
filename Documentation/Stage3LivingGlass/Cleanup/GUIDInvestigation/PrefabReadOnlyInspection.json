@@ -1,0 +1,35 @@
+[
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "objectName": "Global Config Window",
+    "missingScripts": 1
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Modal.prefab",
+    "loaded": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+    "objectName": "Bootstrap",
+    "type": "Mediapipe.Unity.Sample.Bootstrap",
+    "properties": [
+      {
+        "name": "_appSettings",
+        "type": "PPtr<$AppSettings>",
+        "value": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/AppSettings.asset"
+      }
+    ]
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab",
+    "objectName": "HandLandmarkerBootstrap",
+    "type": "Mediapipe.Unity.Sample.Bootstrap",
+    "properties": [
+      {
+        "name": "_appSettings",
+        "type": "PPtr<$AppSettings>",
+        "value": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerAppSettings.asset"
+      }
+    ]
+  }
+]

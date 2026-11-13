@@ -1,0 +1,193 @@
+{
+    "label": "Normal-9-480-0070",
+    "utc": "2026-11-13T12:25:25.2840103Z",
+    "route": "WHITE-GUARDIAN---FOCUS-VIEW---PER-004",
+    "locale": "Chinese",
+    "focus": "",
+    "videoState": "none",
+    "capturePhase": "Rendered end-of-frame",
+    "requestedUtc": "2026-11-13T12:25:25.1866007Z",
+    "overlayKind": "",
+    "width": 1920,
+    "height": 1080,
+    "frame": 36199,
+    "performer": 3,
+    "players": 0,
+    "playingPlayers": 0,
+    "requestedFrame": 36198,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "header",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 34.0,
+                "width": 1728.0,
+                "height": 103.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "outgoing-content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "",
+            "visibility": "Hidden",
+            "picking": "Ignore"
+        },
+        {
+            "name": "transition-portrait",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 863.0,
+                "y": 141.0,
+                "width": 977.0,
+                "height": 754.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "chapter-copy",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 77.0,
+                "y": 180.0,
+                "width": 848.0,
+                "height": 466.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 635.0,
+                "y": 972.0,
+                "width": 650.0,
+                "height": 80.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 1011.0,
+                "width": 242.0,
+                "height": 41.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "art-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 863.0,
+                "y": 140.0,
+                "width": 980.0,
+                "height": 756.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Hidden",
+            "picking": "Ignore"
+        }
+    ]
+}

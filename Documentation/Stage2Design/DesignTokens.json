@@ -1,0 +1,90 @@
+{
+  "status": "proposed / not approved / design only",
+  "viewport": [
+    1920,
+    1080
+  ],
+  "frameRateTarget": 60,
+  "color": {
+    "stage": "#101419",
+    "raised": "#212831",
+    "text": "#F3EEE4",
+    "secondary": "#C3C8CF",
+    "muted": "#A8B0BB",
+    "line": "#46505C",
+    "GAIA": "#31D7F2",
+    "PANDEMIC": "#B29A82",
+    "RE-BIRTH": "#D8A9C1",
+    "WHITE-GUARDIAN": "#BFE9FF",
+    "CONSCIENCE": "#FF6A2A",
+    "SANCTUARY": "#F3B95F",
+    "success": "#92D9BC",
+    "warning": "#F2CA7D",
+    "error": "#FFACAC"
+  },
+  "space": [
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "radius": [
+    12,
+    20,
+    28,
+    40
+  ],
+  "type": {
+    "en": {
+      "body": "Source Sans 3",
+      "display": "Source Serif 4"
+    },
+    "zh-Hant": {
+      "body": "Noto Sans TC",
+      "display": "Noto Serif TC"
+    },
+    "sizes": {
+      "display": [
+        72,
+        88
+      ],
+      "title": [
+        44,
+        48
+      ],
+      "section": [
+        28,
+        30
+      ],
+      "body": 24,
+      "control": 22,
+      "caption": [
+        18,
+        20
+      ]
+    },
+    "local_prototype_zh_fallback": [
+      "Noto Sans TC",
+      "Microsoft JhengHei",
+      "sans-serif"
+    ]
+  },
+  "motion_ms": {
+    "feedback": 110,
+    "exit": 160,
+    "panel_enter": 220,
+    "navigation": 280,
+    "cinematic_existing": 650,
+    "activation_existing": 3000,
+    "reduced_max": 80
+  },
+  "material": {
+    "baseline": "tint and opaque reading regions",
+    "enhancement": "shared bounded backdrop, separately approved",
+    "native_backdrop_filter_assumed": false
+  }
+}

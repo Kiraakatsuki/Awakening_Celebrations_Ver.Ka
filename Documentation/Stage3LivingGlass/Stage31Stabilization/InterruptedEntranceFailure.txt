@@ -1,0 +1,5 @@
+PASS: 1001 shared-ease samples never show outgoing and incoming copy together.
+FAIL: System.InvalidOperationException: interrupted entrance does not brighten the outgoing page
+  at LivingGlassStabilizationChecks.CheckTransition (System.Int32 performer, AppLanguage locale) [0x005dd] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\LivingGlassStabilizationChecks.cs:111 
+  at LivingGlassStabilizationChecks.Tick () [0x00029] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\LivingGlassStabilizationChecks.cs:58 
+FAIL: interrupted entrance does not brighten the outgoing page

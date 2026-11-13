@@ -1,0 +1,1 @@
+PASS: actual decoded portrait canceled through Back; player stopped, owned texture released, handlers unregistered. Route=GAIA---FOCUS-VIEW---PER-001

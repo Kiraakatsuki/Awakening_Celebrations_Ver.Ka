@@ -1,0 +1,263 @@
+{
+  "type": "UnityEngine.Rendering.Universal.Renderer2DData",
+  "properties": [
+    {
+      "property": "probeVolumeResources",
+      "exists": true,
+      "type": "ProbeVolumeResources"
+    },
+    {
+      "property": "probeVolumeResources.probeVolumeDebugShader",
+      "exists": true,
+      "type": "PPtr<$Shader>"
+    },
+    {
+      "property": "probeVolumeResources.probeVolumeFragmentationDebugShader",
+      "exists": true,
+      "type": "PPtr<$Shader>"
+    },
+    {
+      "property": "probeVolumeResources.probeVolumeOffsetDebugShader",
+      "exists": true,
+      "type": "PPtr<$Shader>"
+    },
+    {
+      "property": "probeVolumeResources.probeVolumeSamplingDebugShader",
+      "exists": true,
+      "type": "PPtr<$Shader>"
+    },
+    {
+      "property": "probeVolumeResources.probeSamplingDebugMesh",
+      "exists": true,
+      "type": "PPtr<$Mesh>"
+    },
+    {
+      "property": "probeVolumeResources.probeSamplingDebugTexture",
+      "exists": true,
+      "type": "PPtr<$Texture2D>"
+    },
+    {
+      "property": "m_FallOffLookup",
+      "exists": false,
+      "type": null
+    }
+  ],
+  "fields": [
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_LayerMask",
+      "type": "UnityEngine.LayerMask",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_TransparencySortMode",
+      "type": "UnityEngine.TransparencySortMode",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_TransparencySortAxis",
+      "type": "UnityEngine.Vector3",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_HDREmulationScale",
+      "type": "System.Single",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_LightRenderTextureScale",
+      "type": "System.Single",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_LightBlendStyles",
+      "type": "UnityEngine.Rendering.Universal.Light2DBlendStyle[]",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_UseDepthStencilBuffer",
+      "type": "System.Boolean",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_UseCameraSortingLayersTexture",
+      "type": "System.Boolean",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_CameraSortingLayersTextureBound",
+      "type": "System.Int32",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_CameraSortingLayerDownsamplingMethod",
+      "type": "UnityEngine.Rendering.Universal.Downsampling",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_MaxLightRenderTextureCount",
+      "type": "System.UInt32",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_MaxShadowRenderTextureCount",
+      "type": "System.UInt32",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_PostProcessData",
+      "type": "UnityEngine.Rendering.Universal.PostProcessData",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<lightMaterials>k__BackingField",
+      "type": "System.Collections.Generic.Dictionary`2[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<spriteSelfShadowMaterial>k__BackingField",
+      "type": "UnityEngine.Material",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<spriteUnshadowMaterial>k__BackingField",
+      "type": "UnityEngine.Material",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<geometrySelfShadowMaterial>k__BackingField",
+      "type": "UnityEngine.Material",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<geometryUnshadowMaterial>k__BackingField",
+      "type": "UnityEngine.Material",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<projectedShadowMaterial>k__BackingField",
+      "type": "UnityEngine.Material",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<projectedUnshadowMaterial>k__BackingField",
+      "type": "UnityEngine.Material",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "normalsRenderTarget",
+      "type": "UnityEngine.Rendering.RTHandle",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "cameraSortingLayerRenderTarget",
+      "type": "UnityEngine.Rendering.RTHandle",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "<lightCullResult>k__BackingField",
+      "type": "UnityEngine.Rendering.Universal.ILight2DCullResult",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_DefaultMaterialType",
+      "type": "UnityEngine.Rendering.Universal.Renderer2DData+Renderer2DDefaultMaterialType",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.Renderer2DData",
+      "name": "m_DefaultCustomMaterial",
+      "type": "UnityEngine.Material",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "debugShaders",
+      "type": "UnityEngine.Rendering.Universal.ScriptableRendererData+DebugShaderResources",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "probeVolumeResources",
+      "type": "UnityEngine.Rendering.Universal.ScriptableRendererData+ProbeVolumeResources",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "<isInvalidated>k__BackingField",
+      "type": "System.Boolean",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "m_RendererFeatures",
+      "type": "System.Collections.Generic.List`1[[UnityEngine.Rendering.Universal.ScriptableRendererFeature, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "m_RendererFeatureMap",
+      "type": "System.Collections.Generic.List`1[[System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "m_UseNativeRenderPass",
+      "type": "System.Boolean",
+      "serialized": true
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "m_StripShadowsOffVariants",
+      "type": "System.Boolean",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Rendering.Universal.ScriptableRendererData",
+      "name": "m_StripAdditionalLightOffVariants",
+      "type": "System.Boolean",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Object",
+      "name": "m_CachedPtr",
+      "type": "System.IntPtr",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Object",
+      "name": "m_EntityId",
+      "type": "UnityEngine.EntityId",
+      "serialized": false
+    },
+    {
+      "owner": "UnityEngine.Object",
+      "name": "m_UnityRuntimeErrorString",
+      "type": "System.String",
+      "serialized": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "EditorPreviews/*.png": "Rejected: ReadScreenPixel included the foreground Codex window. Not used for visual acceptance.",
+  "WindowCaptures/*.png": "Inspected static Editor popup captured after activating Unity; 1536x960 desktop surface, 1920x1080 logical canvas. Not Game view, runtime or FPS evidence."
+}

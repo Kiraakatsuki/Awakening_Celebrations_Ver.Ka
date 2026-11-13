@@ -1,0 +1,13 @@
+?? .agents/
+?? AGENTS.md
+?? Documentation/CurrentArchitectureAssessment.md
+?? Documentation/FeatureImplementationMatrix.md
+?? Documentation/GlobalNavigationRedesign.md
+?? Documentation/MotionInteractionSpecification.md
+?? Documentation/PremiumDesignSystem.md
+?? Documentation/PremiumExperienceAudit.md
+?? Documentation/Stage2Design/
+?? Documentation/TargetRuntimeArchitecture.md
+?? Documentation/TechnicalDebtAssessment.md
+?? Documentation/TransformationAudit/
+?? Documentation/TransformationRoadmap.md

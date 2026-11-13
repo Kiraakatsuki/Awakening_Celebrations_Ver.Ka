@@ -1,0 +1,21 @@
+{
+  "phase": "before",
+  "native_assets": 591,
+  "physical_assets": 593,
+  "hashed_files": 2045,
+  "scene_closures_including_packages": {
+    "SampleScene": 274,
+    "LivingGlass": 45,
+    "intersection": 36
+  },
+  "classifications": {
+    "UNRESOLVED": 43,
+    "KEEP — ROLLBACK": 390,
+    "KEEP — SHARED": 138,
+    "KEEP — ACTIVE": 22
+  },
+  "dynamic_tooling_reference_lines": 360,
+  "external_guids_to_resolve": 261,
+  "source_files": 396,
+  "zero_incoming_triage": 252
+}

@@ -1,0 +1,102 @@
+{
+  "version": "Gallery Arc spatial addendum v1",
+  "approval": {
+    "composition": "Gallery Arc approved by user",
+    "treatment": "B preferred conditionally",
+    "exact_bounds": "proposed; final visual review/approval pending",
+    "production": "not authorized"
+  },
+  "palettes": [
+    {
+      "name": "GAIA",
+      "accent": "#5BD8ED",
+      "atmosphere": "#137F91",
+      "secondary": "#3BAFAE"
+    },
+    {
+      "name": "PANDEMIC",
+      "accent": "#C0AA91",
+      "atmosphere": "#756453",
+      "secondary": "#9A8163"
+    },
+    {
+      "name": "RE-BIRTH",
+      "accent": "#E0B0C8",
+      "atmosphere": "#8B557C",
+      "secondary": "#B77EA5"
+    },
+    {
+      "name": "WHITE-GUARDIAN",
+      "accent": "#C5E9FA",
+      "atmosphere": "#6A839A",
+      "secondary": "#A5B6C4"
+    },
+    {
+      "name": "CONSCIENCE",
+      "accent": "#FF956A",
+      "atmosphere": "#9B4B2B",
+      "secondary": "#C87546"
+    },
+    {
+      "name": "SANCTUARY",
+      "accent": "#F1C57A",
+      "atmosphere": "#98713B",
+      "secondary": "#BB9456"
+    }
+  ],
+  "bounds": {
+    "A": {
+      "scale": 1.006,
+      "lift": 2,
+      "translateX": 0,
+      "rotateX": 0,
+      "rotateY": 0,
+      "parallaxX": 0,
+      "parallaxY": 0,
+      "recession": 1
+    },
+    "B": {
+      "scale": 1.02,
+      "lift": 6,
+      "translateX": 4,
+      "rotateX": 1,
+      "rotateY": 1.4,
+      "parallaxX": 3,
+      "parallaxY": 2,
+      "recession": 0.996
+    },
+    "responseMs": 240,
+    "returnMs": 340,
+    "themeMs": 280,
+    "confirmationMs": 650,
+    "reducedMs": 60
+  },
+  "lighting": {
+    "environment_opacity": 0.1,
+    "overlay_environment_opacity": 0.025,
+    "identification_rim_opacity": 0.42,
+    "overlay_rim_opacity": 0.22,
+    "environment_planes": 1
+  },
+  "geometry": {
+    "hit_wrappers_move": false,
+    "text_and_focus_move": false,
+    "native_arc_row": {
+      "x": 96,
+      "y": 340,
+      "width": 1728,
+      "height": 464
+    },
+    "perspective_css_px": 1200,
+    "native_pose": "2D optical proxy; not CSS/Unity perspective proof"
+  },
+  "reduced": {
+    "spatial_transforms": false,
+    "parallax": false,
+    "recession": false,
+    "reflection": false,
+    "max_color_opacity_ms": 60,
+    "functional_state_changes": false
+  },
+  "timing_source": "model bounds; not detector dwell/loss/cooldown values"
+}

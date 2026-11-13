@@ -1,0 +1,139 @@
+[
+  {
+    "guid": "03cfc4915c15d504a9ed85ecc404e607",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "24ec0e140fb444a44ab96ee80844e18e",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "488fbb6a3005b66c2b657204bce83fcf",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "53a11f4ebaebf4049b3638ef78dc9664",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "5688ab254e4c0634f8d6c8e0792331ca",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "57d7c4c16e2765b47a4d2069b311bffe",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "5a0e103d2920f990ab08fe7bada48cc4",
+    "category_before": "Historical or rollback dependency",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 1,
+    "current_source_paths": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab"
+    ],
+    "status": "RETAINED — genuine support/optional issue",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "8236d46ca3a43d373ae6ad281fea8fe0",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 8,
+    "source_occurrences_after": 2,
+    "current_source_paths": [
+      "Assets/_Recovery/0 (1).unity",
+      "Assets/_Recovery/1.unity"
+    ],
+    "status": "RETAINED — protected recovery data only",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "8f96cd657dc40064aa21efcc7e50a2e7",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "a84904e562ecaf887b2dba62111bb901",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "b3ab972b21db85d48ade9657efdd4771",
+    "category_before": "Editor/tooling dependency",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 1,
+    "current_source_paths": [
+      "Assets/Settings/Lit2DSceneTemplate.scenetemplate"
+    ],
+    "status": "RETAINED — genuine support/optional issue",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "c41005c129ba4d66911b75229fd70b45",
+    "category_before": "Historical or rollback dependency",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 1,
+    "current_source_paths": [
+      "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+    ],
+    "status": "RETAINED — genuine support/optional issue",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "d5da564da19cb6b7d8e4f97f269edc5d",
+    "category_before": "Historical or rollback dependency",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 1,
+    "current_source_paths": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity"
+    ],
+    "status": "RETAINED — genuine support/optional issue",
+    "active_application_broken_confirmed": false
+  },
+  {
+    "guid": "e5c6678ed2aaa91408dd3df699057aae",
+    "category_before": "Validator false positive",
+    "source_occurrences_before": 1,
+    "source_occurrences_after": 0,
+    "current_source_paths": [],
+    "status": "RETIRED — no referencing source remains in scan roots",
+    "active_application_broken_confirmed": false
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "regression_checks": [
+    {
+      "check": "exact eight-file scope; no asset/code additions or deletions",
+      "status": "PASS",
+      "detail": [
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta",
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+        "Assets/Settings/Renderer2D.asset"
+      ]
+    },
+    {
+      "check": "native snapshot corresponds to current file hashes",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all CSharp and all other2037 files preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "renderer diff contains only the obsolete resource block and falloff line",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Bootstrap diff removes only stale default-reference names",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "six sample diffs remove only dead contents overrides",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "metadata identities preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all591 native asset GUID/dependency entries unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "both scene dependency closures unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "native retired slots empty and Bootstrap identity intact",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "no new unresolved GUIDs; exactly nine retired from scan roots",
+      "status": "PASS",
+      "detail": [
+        "5a0e103d2920f990ab08fe7bada48cc4",
+        "8236d46ca3a43d373ae6ad281fea8fe0",
+        "b3ab972b21db85d48ade9657efdd4771",
+        "c41005c129ba4d66911b75229fd70b45",
+        "d5da564da19cb6b7d8e4f97f269edc5d"
+      ]
+    },
+    {
+      "check": "remaining obsolete override is confined to protected recovery files",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "104 UXML parse and100 USS have no unresolved GUID dependencies",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "existing24 static checks and original mapping validator pass",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "regression_status": "PASS",
+  "strict_raw_guid_resolution": {
+    "status": "FAIL",
+    "distinct_guids": 5,
+    "sources": {
+      "5a0e103d2920f990ab08fe7bada48cc4": [
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab"
+      ],
+      "8236d46ca3a43d373ae6ad281fea8fe0": [
+        "Assets/_Recovery/0 (1).unity",
+        "Assets/_Recovery/1.unity"
+      ],
+      "b3ab972b21db85d48ade9657efdd4771": [
+        "Assets/Settings/Lit2DSceneTemplate.scenetemplate"
+      ],
+      "c41005c129ba4d66911b75229fd70b45": [
+        "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+      ],
+      "d5da564da19cb6b7d8e4f97f269edc5d": [
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity"
+      ]
+    }
+  },
+  "classified_findings": {
+    "genuine_support_optional_issues": 4,
+    "protected_obsolete_recovery_guid": 1,
+    "confirmed_active_application_broken": 0
+  },
+  "note": "Raw missing references are not suppressed; no runtime behavior or visual acceptance was tested."
+}

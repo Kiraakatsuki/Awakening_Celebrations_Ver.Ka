@@ -1,0 +1,11 @@
+[
+  "Assets/Scripts/AwakeningApplicationController.cs",
+  "Assets/LivingGlass/Core/AppLanguage.cs",
+  "Assets/LivingGlass/Core/LivingGlassRoutes.cs",
+  "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+  "Assets/LivingGlass/Editor/LivingGlassContractChecks.cs",
+  "Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs",
+  "Assets/LivingGlass/Editor/LivingGlassProjectValidation.cs",
+  "Assets/LivingGlass/Editor/RouteContract.json",
+  "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs"
+]

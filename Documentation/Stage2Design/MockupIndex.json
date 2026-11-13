@@ -1,0 +1,242 @@
+[
+  {
+    "name": "A / Home / en",
+    "nodeId": "4:3",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-3",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-home-en.png"
+  },
+  {
+    "name": "A / Selection / en",
+    "nodeId": "4:25",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-25",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-selection-en.png"
+  },
+  {
+    "name": "A / Settings / en",
+    "nodeId": "4:59",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-59",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-settings-en.png"
+  },
+  {
+    "name": "A / AI / en",
+    "nodeId": "4:97",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-97",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-ai-en.png"
+  },
+  {
+    "name": "A / Cinematic / en",
+    "nodeId": "4:130",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-130",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-focus-en.png"
+  },
+  {
+    "name": "A / Home / zh",
+    "nodeId": "4:138",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-138",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-home-zh.png"
+  },
+  {
+    "name": "A / Selection / zh",
+    "nodeId": "4:160",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-160",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-selection-zh.png"
+  },
+  {
+    "name": "A / Settings / zh",
+    "nodeId": "4:194",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-194",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-settings-zh.png"
+  },
+  {
+    "name": "A / AI / zh",
+    "nodeId": "4:232",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-232",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-ai-zh.png"
+  },
+  {
+    "name": "A / Cinematic / zh",
+    "nodeId": "4:265",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-265",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/A-focus-zh.png"
+  },
+  {
+    "name": "B / Home / en",
+    "nodeId": "4:274",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-274",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-home-en.png"
+  },
+  {
+    "name": "B / Selection / en",
+    "nodeId": "4:297",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-297",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-selection-en.png"
+  },
+  {
+    "name": "B / Settings / en",
+    "nodeId": "4:343",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-343",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-settings-en.png"
+  },
+  {
+    "name": "B / AI / en",
+    "nodeId": "4:382",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-382",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-ai-en.png"
+  },
+  {
+    "name": "B / Cinematic / en",
+    "nodeId": "4:416",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-416",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-focus-en.png"
+  },
+  {
+    "name": "B / Home / zh",
+    "nodeId": "4:425",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-425",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-home-zh.png"
+  },
+  {
+    "name": "B / Selection / zh",
+    "nodeId": "4:448",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-448",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-selection-zh.png"
+  },
+  {
+    "name": "B / Settings / zh",
+    "nodeId": "4:494",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-494",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-settings-zh.png"
+  },
+  {
+    "name": "B / AI / zh",
+    "nodeId": "4:533",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-533",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-ai-zh.png"
+  },
+  {
+    "name": "B / Cinematic / zh",
+    "nodeId": "4:567",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-567",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/B-focus-zh.png"
+  },
+  {
+    "name": "C / Home / en",
+    "nodeId": "4:577",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-577",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-home-en.png"
+  },
+  {
+    "name": "C / Selection / en",
+    "nodeId": "4:600",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-600",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-selection-en.png"
+  },
+  {
+    "name": "C / Settings / en",
+    "nodeId": "4:624",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-624",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-settings-en.png"
+  },
+  {
+    "name": "C / AI / en",
+    "nodeId": "4:663",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-663",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-ai-en.png"
+  },
+  {
+    "name": "C / Cinematic / en",
+    "nodeId": "4:697",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-697",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-focus-en.png"
+  },
+  {
+    "name": "C / Home / zh",
+    "nodeId": "4:706",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-706",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-home-zh.png"
+  },
+  {
+    "name": "C / Selection / zh",
+    "nodeId": "4:729",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-729",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-selection-zh.png"
+  },
+  {
+    "name": "C / Settings / zh",
+    "nodeId": "4:753",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-753",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-settings-zh.png"
+  },
+  {
+    "name": "C / AI / zh",
+    "nodeId": "4:792",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-792",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-ai-zh.png"
+  },
+  {
+    "name": "C / Cinematic / zh",
+    "nodeId": "4:826",
+    "url": "https://www.figma.com/design/9VQRtMDk8vFGer7gktEYsB?node-id=4-826",
+    "width": 1920,
+    "height": 1080,
+    "browserStudy": "review-evidence/C-focus-zh.png"
+  }
+]

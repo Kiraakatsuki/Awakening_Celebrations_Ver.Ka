@@ -1,0 +1,48 @@
+--- before/Assets/LivingGlass/UI/Styles/LivingGlass.uss
++++ after/Assets/LivingGlass/UI/Styles/LivingGlass.uss
+@@ -126,11 +126,40 @@
+ .lg-chat-input { margin: 18px 0 8px; font-size: 21px; flex-direction: column; }
+ .lg-chat-input .unity-text-field__input { min-height: 76px; padding: 12px; white-space: normal; background-color: #0f1823; color: var(--lg-text); border-width: 1px; border-color: #718493; border-radius: 12px; }
+ .lg-chat-input .unity-text-field__label { margin-bottom: 10px; }
+-.lg-postvideo-copy { width: 60%; margin-top: 0; padding: 22px 32px; }
+-.lg-postvideo-copy .lg-display { font-size: 36px; margin-bottom: 4px; }
+-.lg-postvideo-copy .lg-body, .lg-postvideo-copy .lg-eyebrow { margin-bottom: 4px; }
+-.lg-postvideo-copy .lg-conversation { height: 150px; }
+-.lg-postvideo-copy .lg-small { font-size: 17px; }
++.lg-reflection { position: absolute; left: 5%; right: 5%; top: 16%; bottom: 15%; flex-direction: row; }
++.lg-reflection-interaction { flex-grow: 1; flex-basis: 0; min-width: 0; padding: 24px 28px; background-color: var(--lg-glass); border-width: 1px; border-color: var(--lg-edge); border-radius: 26px; }
++.lg-reflection-title { font-size: 32px; white-space: normal; flex-shrink: 0; margin-bottom: 4px; }
++.lg-reflection-interaction > .lg-small { font-size: 19px; margin: 4px 0 14px; }
++.lg-reflection-artwork { width: 31%; margin-left: 32px; min-width: 0; }
++.lg-reflection-art { flex-grow: 1; flex-basis: 0; min-height: 0; width: 100%; border-radius: 4px; }
++.lg-reflection-identity { margin-top: 20px; flex-shrink: 0; }
++.lg-reflection-identity .lg-small { margin: 6px 0 0; }
++.lg-reflection-next { margin: 20px 0 0; min-height: 60px; flex-shrink: 0; }
++.lg-reflection .lg-suggestions { flex-shrink: 0; margin: 0 -4px 12px; flex-wrap: nowrap; }
++.lg-reflection .lg-suggestion { flex-grow: 1; flex-basis: 0; min-width: 0; min-height: 64px; margin: 0 4px; padding: 10px 12px; border-width: 3px; border-color: #435362; }
++.lg-reflection .lg-suggestion:hover { border-color: #a8bac6; }
++.lg-reflection .lg-suggestion:focus { border-color: #f3f0e8; }
++.lg-reflection .lg-conversation { flex-grow: 1; flex-basis: 0; min-height: 160px; height: auto; margin-top: 0; padding: 18px; }
++.lg-question-composer { flex-direction: row; flex-shrink: 0; height: 144px; margin-top: 16px; }
++.lg-question-composer .lg-chat-input { flex-grow: 1; flex-basis: 0; min-width: 0; margin: 0 16px 0 0; }
++.lg-question-composer .unity-text-field__input { flex-grow: 1; min-height: 76px; }
++.lg-composer-controls { width: 150px; justify-content: flex-end; }
++.lg-composer-controls .lg-action { margin: 0; }
++.lg-composer-controls .lg-request-cancel { height: 48px; min-height: 48px; padding: 4px 6px; font-size: 16px; }
++.lg-composer-controls .lg-request-cancel:disabled { display: none; }
++.lg-composer-controls .lg-primary { position: absolute; top: 24px; left: 0; right: 0; height: 60px; }
++.lg-composer-controls .lg-request-cancel { position: absolute; bottom: 0; left: 0; right: 0; }
++.lg-compact .lg-reflection-artwork { width: 27%; margin-left: 24px; }
++.lg-short .lg-reflection { top: 17%; bottom: 17%; }
++.lg-short .lg-reflection-interaction { padding: 14px 18px; }
++.lg-short .lg-reflection-title { font-size: 26px; }
++.lg-short .lg-reflection-interaction > .lg-small { font-size: 17px; margin-bottom: 10px; }
++.lg-short .lg-reflection .lg-suggestion { min-height: 52px; font-size: 16px; padding: 6px; }
++.lg-short .lg-question-composer { height: 128px; margin-top: 12px; }
++.lg-short .lg-composer-controls { width: 130px; }
++.lg-short .lg-composer-controls .lg-primary { top: 18px; height: 48px; min-height: 48px; }
++.lg-short .lg-composer-controls .lg-request-cancel { height: 48px; min-height: 48px; font-size: 16px; }
++.lg-opaque .lg-reflection-interaction { background-color: #243343; }
+ .ac-assistant-chat-message { white-space: normal; font-size: 21px; color: var(--lg-text); margin-bottom: 14px; }
+ .ac-assistant-chat-user-message { color: #c2cbd5; padding: 12px; background-color: #273b4b; border-radius: 12px; }
+ .ac-assistant-chat-hidden { display: none; }

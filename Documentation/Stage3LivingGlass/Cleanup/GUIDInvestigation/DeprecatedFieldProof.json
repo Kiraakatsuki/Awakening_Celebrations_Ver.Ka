@@ -1,0 +1,59 @@
+[
+  {
+    "field": "probeVolumeResources",
+    "obsolete": [
+      "Probe volume debug resource are now in the ProbeVolumeDebugResources class. #from(2023.3)"
+    ],
+    "children": [
+      {
+        "name": "probeVolumeDebugShader",
+        "type": "UnityEngine.Shader",
+        "obsolete": [
+          "This shader is now in the ProbeVolumeDebugResources class. #from(2023.3)"
+        ]
+      },
+      {
+        "name": "probeVolumeFragmentationDebugShader",
+        "type": "UnityEngine.Shader",
+        "obsolete": [
+          "This shader is now in the ProbeVolumeDebugResources class. #from(2023.3)"
+        ]
+      },
+      {
+        "name": "probeVolumeOffsetDebugShader",
+        "type": "UnityEngine.Shader",
+        "obsolete": [
+          "This shader is now in the ProbeVolumeDebugResources class. #from(2023.3)"
+        ]
+      },
+      {
+        "name": "probeVolumeSamplingDebugShader",
+        "type": "UnityEngine.Shader",
+        "obsolete": [
+          "This shader is now in the ProbeVolumeDebugResources class. #from(2023.3)"
+        ]
+      },
+      {
+        "name": "probeSamplingDebugMesh",
+        "type": "UnityEngine.Mesh",
+        "obsolete": [
+          "This shader is now in the ProbeVolumeDebugResources class. #from(2023.3)"
+        ]
+      },
+      {
+        "name": "probeSamplingDebugTexture",
+        "type": "UnityEngine.Texture2D",
+        "obsolete": [
+          "This shader is now in the ProbeVolumeDebugResources class. #from(2023.3)"
+        ]
+      },
+      {
+        "name": "probeVolumeBlendStatesCS",
+        "type": "UnityEngine.ComputeShader",
+        "obsolete": [
+          "This shader is now in the ProbeVolumeRuntimeResources class. #from(2023.3)"
+        ]
+      }
+    ]
+  }
+]

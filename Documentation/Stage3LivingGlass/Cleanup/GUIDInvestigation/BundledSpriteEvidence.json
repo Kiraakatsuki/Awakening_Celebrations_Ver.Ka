@@ -1,0 +1,82 @@
+[
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Essential Resources.unitypackage",
+    "guid": "cf81c85f95fe47e1a27f6ae460cf182c",
+    "pathname": "Assets/TextMesh Pro/Shaders/TMP_Sprite.shader",
+    "references": []
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "701e577af2ba48b689972d42efb95456",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Sprites",
+    "references": []
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "e76e6c0f81964cbda3fe0b7d26ed8060",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Scenes/15 - Inline Graphics & Sprites.unity",
+    "references": [
+      "0000000000000000e000000000000000",
+      "058cba836c1846c3aa1c5fd2e28aea77",
+      "749b9069dc4742c5bfa5c74644049926",
+      "8a89fa14b10d46a99122fd4f73fca9a2",
+      "a9df86876be30af4e9b5f5975d8ee7d8",
+      "e32c266ee6204b21a427753cb0694c81",
+      "f4688fdb7df04437aeb418b961361dc5",
+      "f5f67c52d1564df4a8936ccd202a3bd8",
+      "fbef3c704dce48f08a44612d6c856c8d"
+    ]
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "3ac6db30e75b49b282a3564110579f27",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Resources/Sprite Assets",
+    "references": []
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "a0fc465d6cf04254a2938578735e2383",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Sprites/Default Sprites.png",
+    "references": []
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "fd09957580ac4326916010f1f260975b",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Sprites/DropCap Numbers.psd",
+    "references": []
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "fbef3c704dce48f08a44612d6c856c8d",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Resources/Sprite Assets/Default Sprite Asset.asset",
+    "references": [
+      "84a92b25f83d49b9bc132d206b370281",
+      "a0fc465d6cf04254a2938578735e2383",
+      "cf81c85f95fe47e1a27f6ae460cf182c"
+    ]
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "22a2fba786ad4c40ac0ba09f0b933100",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Scenes/14 - Multi Font & Sprites.unity",
+    "references": [
+      "0000000000000000e000000000000000",
+      "6b9a46634d3f3f0498640b1a019d5853",
+      "749b9069dc4742c5bfa5c74644049926",
+      "8f586378b4e144a9851e7b34d9b748ee",
+      "9541d86e2fd84c1d9990edf0852d74ab",
+      "c41005c129ba4d66911b75229fd70b45",
+      "e73a58f6e2794ae7b1b7e50b7fb811b0"
+    ]
+  },
+  {
+    "archive": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Package Resources/TMP Examples & Extras.unitypackage",
+    "guid": "14aa93acbb234d16aaef0e8b46814db6",
+    "pathname": "Assets/TextMesh Pro/Examples & Extras/Resources/Sprite Assets/DropCap Numbers.asset",
+    "references": [
+      "84a92b25f83d49b9bc132d206b370281",
+      "cf81c85f95fe47e1a27f6ae460cf182c",
+      "fd09957580ac4326916010f1f260975b"
+    ]
+  }
+]

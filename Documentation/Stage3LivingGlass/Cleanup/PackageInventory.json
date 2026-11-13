@@ -1,0 +1,458 @@
+[
+  {
+    "package": "com.coplaydev.unity-mcp",
+    "declared_version": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
+    "resolved_version": "file:com.coplaydev.unity-mcp",
+    "source": "embedded",
+    "classification": "KEEP — SHARED",
+    "reason": "Attached Editor inspection/validation tooling"
+  },
+  {
+    "package": "com.github.homuler.mediapipe",
+    "declared_version": "file:C:/Users/Nakul J S/Downloads/com.github.homuler.mediapipe-0.16.3.tgz",
+    "resolved_version": "file:C:/Users/Nakul J S/Downloads/com.github.homuler.mediapipe-0.16.3.tgz",
+    "source": "local-tarball",
+    "classification": "KEEP — SHARED",
+    "reason": "Shared camera/recognition implementation; local tarball portability risk retained"
+  },
+  {
+    "package": "com.unity.2d.animation",
+    "declared_version": "14.0.4",
+    "resolved_version": "14.0.4",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.2d.aseprite",
+    "declared_version": "4.0.2",
+    "resolved_version": "4.0.2",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.2d.psdimporter",
+    "declared_version": "13.0.3",
+    "resolved_version": "13.0.3",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.2d.sprite",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.2d.spriteshape",
+    "declared_version": "14.0.1",
+    "resolved_version": "14.0.1",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.2d.tilemap",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.2d.tilemap.extras",
+    "declared_version": "7.0.1",
+    "resolved_version": "7.0.1",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.2d.tooling",
+    "declared_version": "2.0.2",
+    "resolved_version": "2.0.2",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.ai.assistant",
+    "declared_version": "2.20.0-pre.2",
+    "resolved_version": "2.20.0-pre.2",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Editor tooling/inference dependency; distinct from visitor assistant HTTP backend; no removal justified"
+  },
+  {
+    "package": "com.unity.ai.inference",
+    "declared_version": "2.6.1",
+    "resolved_version": "2.6.1",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Editor tooling/inference dependency; distinct from visitor assistant HTTP backend; no removal justified"
+  },
+  {
+    "package": "com.unity.collab-proxy",
+    "declared_version": "2.12.4",
+    "resolved_version": "2.12.4",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.ide.rider",
+    "declared_version": "3.0.40",
+    "resolved_version": "3.0.40",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.ide.visualstudio",
+    "declared_version": "2.0.27",
+    "resolved_version": "2.0.27",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.inputsystem",
+    "declared_version": "1.19.0",
+    "resolved_version": "1.19.0",
+    "source": "registry",
+    "classification": "KEEP — SHARED",
+    "reason": "ProjectSettings action configuration and supported input infrastructure"
+  },
+  {
+    "package": "com.unity.multiplayer.center",
+    "declared_version": "1.0.1",
+    "resolved_version": "1.0.1",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.render-pipelines.universal",
+    "declared_version": "17.4.0",
+    "resolved_version": "17.4.0",
+    "source": "builtin",
+    "classification": "KEEP — SHARED",
+    "reason": "Active URP 2D rendering in ProjectSettings"
+  },
+  {
+    "package": "com.unity.test-framework",
+    "declared_version": "1.6.0",
+    "resolved_version": "1.6.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.timeline",
+    "declared_version": "1.8.12",
+    "resolved_version": "1.8.12",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.ugui",
+    "declared_version": "2.0.0",
+    "resolved_version": "2.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.ui.figma",
+    "declared_version": "0.2.0-exp.1",
+    "resolved_version": "0.2.0-exp.1",
+    "source": "registry",
+    "classification": "KEEP — SHARED",
+    "reason": "Imported design provenance/tooling and rollback workflow; not disposable from scene-only evidence"
+  },
+  {
+    "package": "com.unity.visualscripting",
+    "declared_version": "1.9.11",
+    "resolved_version": "1.9.11",
+    "source": "registry",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.accessibility",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.adaptiveperformance",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.ai",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.androidjni",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.animation",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.assetbundle",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.audio",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.cloth",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.director",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.imageconversion",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.imgui",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.jsonserialize",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.particlesystem",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.physics",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.physics2d",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.screencapture",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.terrain",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.terrainphysics",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.tilemap",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.ui",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.uielements",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.umbra",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.unityanalytics",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.unitywebrequest",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.unitywebrequestassetbundle",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.unitywebrequestaudio",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.unitywebrequesttexture",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.unitywebrequestwww",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.vectorgraphics",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.vehicles",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.video",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.vr",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.wind",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  },
+  {
+    "package": "com.unity.modules.xr",
+    "declared_version": "1.0.0",
+    "resolved_version": "1.0.0",
+    "source": "builtin",
+    "classification": "UNRESOLVED",
+    "reason": "Declared Unity module/development dependency; removal not established and no package migration authorized"
+  }
+]

@@ -1,0 +1,418 @@
+[
+  {
+    "route": "Home",
+    "locale": "zh"
+  },
+  {
+    "route": "Home",
+    "locale": "en"
+  },
+  {
+    "route": "Privacy",
+    "locale": "en"
+  },
+  {
+    "route": "Privacy",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---ENTRY---DIM",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---INTRODUCTION",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---LOOK---MOVE",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---POINT",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---HOLD---SELECT",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---EXPERIENCE",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---READY",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---RETURN---DISMISS",
+    "locale": "en"
+  },
+  {
+    "route": "TUTORIAL---ENTRY---DIM",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---INTRODUCTION",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---LOOK---MOVE",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---POINT",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---HOLD---SELECT",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---EXPERIENCE",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---READY",
+    "locale": "zh"
+  },
+  {
+    "route": "TUTORIAL---RETURN---DISMISS",
+    "locale": "zh"
+  },
+  {
+    "route": "ATTRACT---MONOCHROME---FALLBACK-INPUT",
+    "locale": "en"
+  },
+  {
+    "route": "ATTRACT---MONOCHROME---FALLBACK-INPUT",
+    "locale": "zh"
+  },
+  {
+    "route": "COLOR-RELEASE",
+    "locale": "en"
+  },
+  {
+    "route": "COLOR-RELEASE",
+    "locale": "zh"
+  },
+  {
+    "route": "GAIA---FOCUS-VIEW---PER-001",
+    "locale": "en"
+  },
+  {
+    "route": "GAIA---FOCUS-VIEW---PER-001",
+    "locale": "zh"
+  },
+  {
+    "route": "GAIA---ACTIVATION---PER-001",
+    "locale": "en"
+  },
+  {
+    "route": "GAIA---ACTIVATION---PER-001",
+    "locale": "zh"
+  },
+  {
+    "route": "GAIA---LIVING-PORTRAIT---PER-001",
+    "locale": "en"
+  },
+  {
+    "route": "GAIA---LIVING-PORTRAIT---PER-001",
+    "locale": "zh"
+  },
+  {
+    "route": "GAIA---RELEASE---PER-001",
+    "locale": "en"
+  },
+  {
+    "route": "GAIA---RELEASE---PER-001",
+    "locale": "zh"
+  },
+  {
+    "route": "GAIA---POST-VIDEO-AI---PER-001",
+    "locale": "en"
+  },
+  {
+    "route": "GAIA---POST-VIDEO-AI---PER-001",
+    "locale": "zh"
+  },
+  {
+    "route": "PANDEMIC---FOCUS-VIEW---PER-002",
+    "locale": "en"
+  },
+  {
+    "route": "PANDEMIC---FOCUS-VIEW---PER-002",
+    "locale": "zh"
+  },
+  {
+    "route": "PANDEMIC---ACTIVATION---PER-002",
+    "locale": "en"
+  },
+  {
+    "route": "PANDEMIC---ACTIVATION---PER-002",
+    "locale": "zh"
+  },
+  {
+    "route": "PANDEMIC---LIVING-PORTRAIT---PER-002",
+    "locale": "en"
+  },
+  {
+    "route": "PANDEMIC---LIVING-PORTRAIT---PER-002",
+    "locale": "zh"
+  },
+  {
+    "route": "PANDEMIC---RELEASE---PER-002",
+    "locale": "en"
+  },
+  {
+    "route": "PANDEMIC---RELEASE---PER-002",
+    "locale": "zh"
+  },
+  {
+    "route": "PANDEMIC---POST-VIDEO-AI---PER-002",
+    "locale": "en"
+  },
+  {
+    "route": "PANDEMIC---POST-VIDEO-AI---PER-002",
+    "locale": "zh"
+  },
+  {
+    "route": "RE-BIRTH---FOCUS-VIEW---PER-003",
+    "locale": "en"
+  },
+  {
+    "route": "RE-BIRTH---FOCUS-VIEW---PER-003",
+    "locale": "zh"
+  },
+  {
+    "route": "RE-BIRTH---ACTIVATION---PER-003",
+    "locale": "en"
+  },
+  {
+    "route": "RE-BIRTH---ACTIVATION---PER-003",
+    "locale": "zh"
+  },
+  {
+    "route": "RE-BIRTH---LIVING-PORTRAIT---PER-003",
+    "locale": "en"
+  },
+  {
+    "route": "RE-BIRTH---LIVING-PORTRAIT---PER-003",
+    "locale": "zh"
+  },
+  {
+    "route": "RE-BIRTH---RELEASE---PER-003",
+    "locale": "en"
+  },
+  {
+    "route": "RE-BIRTH---RELEASE---PER-003",
+    "locale": "zh"
+  },
+  {
+    "route": "RE-BIRTH---POST-VIDEO-AI---PER-003",
+    "locale": "en"
+  },
+  {
+    "route": "RE-BIRTH---POST-VIDEO-AI---PER-003",
+    "locale": "zh"
+  },
+  {
+    "route": "WHITE-GUARDIAN---FOCUS-VIEW---PER-004",
+    "locale": "en"
+  },
+  {
+    "route": "WHITE-GUARDIAN---FOCUS-VIEW---PER-004",
+    "locale": "zh"
+  },
+  {
+    "route": "WHITE-GUARDIAN---ACTIVATION---PER-004",
+    "locale": "en"
+  },
+  {
+    "route": "WHITE-GUARDIAN---ACTIVATION---PER-004",
+    "locale": "zh"
+  },
+  {
+    "route": "WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004",
+    "locale": "en"
+  },
+  {
+    "route": "WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004",
+    "locale": "zh"
+  },
+  {
+    "route": "WHITE-GUARDIAN---RELEASE---PER-004",
+    "locale": "en"
+  },
+  {
+    "route": "WHITE-GUARDIAN---RELEASE---PER-004",
+    "locale": "zh"
+  },
+  {
+    "route": "WHITE-GUARDIAN---POST-VIDEO-AI---PER-004",
+    "locale": "en"
+  },
+  {
+    "route": "WHITE-GUARDIAN---POST-VIDEO-AI---PER-004",
+    "locale": "zh"
+  },
+  {
+    "route": "CONSCIENCE---FOCUS-VIEW---PER-005",
+    "locale": "en"
+  },
+  {
+    "route": "CONSCIENCE---FOCUS-VIEW---PER-005",
+    "locale": "zh"
+  },
+  {
+    "route": "CONSCIENCE---ACTIVATION---PER-005",
+    "locale": "en"
+  },
+  {
+    "route": "CONSCIENCE---ACTIVATION---PER-005",
+    "locale": "zh"
+  },
+  {
+    "route": "CONSCIENCE---LIVING-PORTRAIT---PER-005",
+    "locale": "en"
+  },
+  {
+    "route": "CONSCIENCE---LIVING-PORTRAIT---PER-005",
+    "locale": "zh"
+  },
+  {
+    "route": "CONSCIENCE---RELEASE---PER-005",
+    "locale": "en"
+  },
+  {
+    "route": "CONSCIENCE---RELEASE---PER-005",
+    "locale": "zh"
+  },
+  {
+    "route": "CONSCIENCE---POST-VIDEO-AI---PER-005",
+    "locale": "en"
+  },
+  {
+    "route": "CONSCIENCE---POST-VIDEO-AI---PER-005",
+    "locale": "zh"
+  },
+  {
+    "route": "SANCTUARY---FOCUS-VIEW---PER-006",
+    "locale": "en"
+  },
+  {
+    "route": "SANCTUARY---FOCUS-VIEW---PER-006",
+    "locale": "zh"
+  },
+  {
+    "route": "SANCTUARY---ACTIVATION---PER-006",
+    "locale": "en"
+  },
+  {
+    "route": "SANCTUARY---ACTIVATION---PER-006",
+    "locale": "zh"
+  },
+  {
+    "route": "SANCTUARY---LIVING-PORTRAIT---PER-006",
+    "locale": "en"
+  },
+  {
+    "route": "SANCTUARY---LIVING-PORTRAIT---PER-006",
+    "locale": "zh"
+  },
+  {
+    "route": "SANCTUARY---RELEASE---PER-006",
+    "locale": "en"
+  },
+  {
+    "route": "SANCTUARY---RELEASE---PER-006",
+    "locale": "zh"
+  },
+  {
+    "route": "SANCTUARY---POST-VIDEO-AI---PER-006",
+    "locale": "en"
+  },
+  {
+    "route": "SANCTUARY---POST-VIDEO-AI---PER-006",
+    "locale": "zh"
+  },
+  {
+    "route": "Assistant-GAIA",
+    "locale": "en"
+  },
+  {
+    "route": "Assistant-GAIA",
+    "locale": "zh"
+  },
+  {
+    "route": "Assistant-PANDEMIC",
+    "locale": "en"
+  },
+  {
+    "route": "Assistant-PANDEMIC",
+    "locale": "zh"
+  },
+  {
+    "route": "Assistant-RE-BIRTH",
+    "locale": "en"
+  },
+  {
+    "route": "Assistant-RE-BIRTH",
+    "locale": "zh"
+  },
+  {
+    "route": "Assistant-WHITE-GUARDIAN",
+    "locale": "en"
+  },
+  {
+    "route": "Assistant-WHITE-GUARDIAN",
+    "locale": "zh"
+  },
+  {
+    "route": "Assistant-CONSCIENCE",
+    "locale": "en"
+  },
+  {
+    "route": "Assistant-CONSCIENCE",
+    "locale": "zh"
+  },
+  {
+    "route": "Assistant-SANCTUARY",
+    "locale": "en"
+  },
+  {
+    "route": "Assistant-SANCTUARY",
+    "locale": "zh"
+  },
+  {
+    "route": "AssistantChooser",
+    "locale": "en"
+  },
+  {
+    "route": "AssistantChooser",
+    "locale": "zh"
+  },
+  {
+    "route": "SETTINGS---EXPERIENCE-CONTROLS",
+    "locale": "en"
+  },
+  {
+    "route": "SETTINGS---EXPERIENCE-CONTROLS",
+    "locale": "zh"
+  },
+  {
+    "route": "CLOSING---CELEBRATION",
+    "locale": "en"
+  },
+  {
+    "route": "CLOSING---CELEBRATION",
+    "locale": "zh"
+  },
+  {
+    "route": "SOUVENIR---QR-DELIVERY",
+    "locale": "en"
+  },
+  {
+    "route": "SOUVENIR---QR-DELIVERY",
+    "locale": "zh"
+  }
+]

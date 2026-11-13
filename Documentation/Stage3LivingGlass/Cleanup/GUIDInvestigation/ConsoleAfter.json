@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "message": "Retrieved 3 log entries.",
+  "data": [
+    {
+      "type": "Exception",
+      "message": "Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).",
+      "file": "./Library/PackageCache/com.unity.ai.assistant@1b11b9bfd84a/Modules/Unity.AI.ModelSelector/Services/Stores/Actions/ModelSelectorSuperProxyActions.cs",
+      "line": 495,
+      "stackTrace": null
+    },
+    {
+      "type": "Warning",
+      "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: [WebSocket] Receive loop error: The remote party closed the WebSocket connection without completing the close handshake.",
+      "file": "./Packages/com.coplaydev.unity-mcp/Editor/Helpers/McpLog.cs",
+      "line": 45,
+      "stackTrace": null
+    },
+    {
+      "type": "Warning",
+      "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: [WebSocket] Connection closed: The remote party closed the WebSocket connection without completing the close handshake.",
+      "file": "./Packages/com.coplaydev.unity-mcp/Editor/Helpers/McpLog.cs",
+      "line": 45,
+      "stackTrace": null
+    }
+  ]
+}

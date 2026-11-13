@@ -1,0 +1,78 @@
+{
+    "label": "Media-real-loop-3",
+    "utc": "2026-11-13T11:22:25.1436474Z",
+    "route": "WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004",
+    "locale": "English",
+    "focus": "",
+    "videoState": "prepared=True,playing=False,frame=480,time=20,clip=White_Guardian",
+    "width": 1920,
+    "height": 1080,
+    "frame": 59167,
+    "performer": 3,
+    "players": 1,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 77.0,
+                "y": 977.0,
+                "width": 1766.0,
+                "height": 91.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        }
+    ]
+}

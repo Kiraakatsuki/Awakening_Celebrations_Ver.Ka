@@ -1,0 +1,2 @@
+PASS: saved candidate scene verified; camera gate denied; rig inactive in unsaved scene; backend endpoint blank; sender/consent controls disabled by guard. No production scene/asset saves. Ten-minute stop deadline per session.
+Gallery/Attract downstream fixtures are presentation setup, never gesture recognition results.

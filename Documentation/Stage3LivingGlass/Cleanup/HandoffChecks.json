@@ -1,0 +1,10 @@
+{
+  "required_reports": "PASS",
+  "local_links": "PASS",
+  "historical_artifacts_restored_byte_for_byte": 7,
+  "runtime_assets_added": 0,
+  "runtime_assets_removed": 0,
+  "runtime_source_files_changed": 4,
+  "runtime_testing": "NOT RUN",
+  "complete_external_guid_resolution": "FAIL — 14 pre-existing unresolved references"
+}

@@ -1,0 +1,45 @@
+Assets/Art/Figma/PER_RE-BIRTH/Living Master Image.png
+Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/AppSettings.cs
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerAppSettings.asset
+Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png
+Assets/Art/Figma/PER_RE-BIRTH/Master Image — Activation.png
+Assets/Art/Figma/PER_CONSCIENCE/Master Image — Activation.png
+Assets/LivingGlass/UI/Styles/LivingGlass.uss
+Assets/Art/Figma/PER_WHITE/Master Image — Activation.png
+Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4
+Assets/Resources/Videos/LivingPortrait/Conscience.mp4
+Assets/LivingGlass/Themes/LivingGlassAssets.cs
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs
+Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4
+Assets/Scenes/AwakeningLivingGlass.unity
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs
+Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png
+Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab
+Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+Assets/Art/Figma/PER_GAIA/Approved Master Image.png
+Assets/Art/Figma/PER_PANDEMIC/Living Master Image.png
+Assets/Art/Figma/PER_GAIA/Master Image — Activation.png
+Assets/Resources/Videos/LivingPortrait/Gaia.mp4
+Packages/com.unity.render-pipelines.universal/Runtime/UniversalAdditionalCameraData.cs
+Assets/Art/Figma/PER_SANCTUARY/Living Master Image.png
+Packages/com.unity.render-pipelines.universal/Runtime/2D/Light2D.cs
+Assets/Scripts/Interaction/MediaPipeGestureBridge.cs
+Assets/Scripts/AwakeningApplicationController.cs
+Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png
+Assets/Art/Figma/PER_WHITE/Living Master Image.png
+Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4
+Assets/Art/Figma/PER_CONSCIENCE/Living Master Image.png
+Assets/Art/Figma/PER_PANDEMIC/Master Image — Activation.png
+Assets/Art/Figma/PER_WHITE/Approved Master Image.png
+Assets/LivingGlass/Presentation/LivingGlassPresentation.cs
+Assets/Art/Figma/PER_SANCTUARY/Master Image — Activation.png
+Assets/LivingGlass/Assets/LivingGlassAssets.asset
+Assets/Resources/Videos/LivingPortrait/Pandemic.mp4
+Assets/LivingGlass/Assets/Fonts/NotoSansCJKtc-Regular.otf
+Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt
+Assets/LivingGlass/UI/LivingGlassPanel.asset
+Assets/Art/Figma/PER_GAIA/Living Master Image.png
+Assets/Fonts/SourceSerif4-Regular.ttf
+Assets/Fonts/SourceSans3-Regular.ttf

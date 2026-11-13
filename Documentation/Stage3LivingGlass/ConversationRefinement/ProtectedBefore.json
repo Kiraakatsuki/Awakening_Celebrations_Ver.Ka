@@ -1,0 +1,62 @@
+[
+  {
+    "path": "Assets\\Scenes\\SampleScene.unity",
+    "sha256": "415e9d2a3ab7e3d34bcef9bd6cc15251316d0abc5db767ab979c381a0ada3d04"
+  },
+  {
+    "path": "Assets\\Scenes\\AwakeningLivingGlass.unity",
+    "sha256": "b66a1c508db23d896cb29141125a286116427ca0a196cf8df588f5b90c66f0c8"
+  },
+  {
+    "path": "ProjectSettings\\EditorBuildSettings.asset",
+    "sha256": "ca0137d80f07a367ef09e06b240f6e8ef30d23ae59843d77f6ae15e05cd14a7e"
+  },
+  {
+    "path": "Packages\\manifest.json",
+    "sha256": "ba47b9112d475478eefb3ce9e57f84a1516205e925fcd9fed02683c7c3ca3439"
+  },
+  {
+    "path": "Packages\\packages-lock.json",
+    "sha256": "d6376fc97b7db80c862c44fe20e4a236a360f7858baf0003afb7f1d33f8fd318"
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Conscience.mp4.meta",
+    "sha256": "7cf8baf19a609327654fb14c8374b02b2eac1da4053f06e12e7f4d62e904dd45"
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Gaia.mp4.meta",
+    "sha256": "0ac706fd98eab2645c7129af611b87e09255cb8690f7ab467d2a886a3c085fe9"
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Pandemic.mp4.meta",
+    "sha256": "9c2c6e664d7c33a05d953a9e3953f738e3564006bc37718ab0a0c383da878480"
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Re-Birth.mp4.meta",
+    "sha256": "6396bfa622dceb4752008ae51ca37e3d7adab3a36b2c04345c694a14f991a1d6"
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\Sanctuary.mp4.meta",
+    "sha256": "c07c4bcdb1e788fd44360808959d4bc612d9687144a0008c8a60c36233b8c82a"
+  },
+  {
+    "path": "Assets\\Resources\\Videos\\LivingPortrait\\White_Guardian.mp4.meta",
+    "sha256": "a1e11eb879d6889cfac8da9aadfe7e5b53d223c4c337412053ae8880b0675364"
+  },
+  {
+    "path": "Assets\\Samples\\MediaPipe Unity Plugin\\0.16.3\\Official Solutions\\Scenes\\Hand Landmark Detection\\HandLandmarkerRunner.cs",
+    "sha256": "c371788209489687ba1d3276132ac821c70d8eab275a810b83172875ec780a9c"
+  },
+  {
+    "path": "Assets\\Scripts\\AwakeningApplicationController.cs",
+    "sha256": "b60e63a4b4f99d0d7e1608a009825fe3bfd8a0f28cc100353c7b64e9c68eaadc"
+  },
+  {
+    "path": "Assets\\Scripts\\Interaction\\MediaPipeGestureBridge.cs",
+    "sha256": "662a30e3d6ca31be30bb5b1e9c09c7228d5ddbec1444b30ee4ee5693b66e6e4d"
+  },
+  {
+    "path": "Assets\\LivingGlass\\Integration\\LivingGlassFlowIntegration.cs",
+    "sha256": "8f0f048e9b2b61ac007f10ba7bd11b1ce593f7d70ad70509c97c49090b7a23e1"
+  }
+]

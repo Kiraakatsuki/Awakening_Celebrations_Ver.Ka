@@ -1,0 +1,346 @@
+[
+  {
+    "nodeId": "18:66",
+    "name": "Living Glass / Gallery arc / en",
+    "file": "review-evidence/Gallery-arc-en.png",
+    "width": 1600,
+    "height": 900,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:110",
+    "name": "Living Glass / Gallery constellation / en",
+    "file": "review-evidence/Gallery-constellation-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:154",
+    "name": "Living Glass / Gallery salon / en",
+    "file": "review-evidence/Gallery-salon-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:212",
+    "name": "Living Glass / home / en",
+    "file": "review-evidence/home-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:233",
+    "name": "Living Glass / privacy / en",
+    "file": "review-evidence/privacy-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:254",
+    "name": "Living Glass / tutorial / en",
+    "file": "review-evidence/tutorial-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:275",
+    "name": "Living Glass / attract / en",
+    "file": "review-evidence/attract-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:296",
+    "name": "Living Glass / postvideo / en",
+    "file": "review-evidence/postvideo-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:317",
+    "name": "Living Glass / chooser / en",
+    "file": "review-evidence/chooser-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:338",
+    "name": "Living Glass / closing / en",
+    "file": "review-evidence/closing-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:359",
+    "name": "Living Glass / souvenir / en",
+    "file": "review-evidence/souvenir-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:380",
+    "name": "Living Glass / calibration / en",
+    "file": "review-evidence/calibration-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:401",
+    "name": "Living Glass / settings / en",
+    "file": "review-evidence/settings-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:485",
+    "name": "Living Glass / ai / en",
+    "file": "review-evidence/ai-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:549",
+    "name": "Living Glass / focus / en",
+    "file": "review-evidence/focus-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:570",
+    "name": "Living Glass / activation / en",
+    "file": "review-evidence/activation-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:586",
+    "name": "Living Glass / portrait / en",
+    "file": "review-evidence/portrait-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:603",
+    "name": "Living Glass / playing / en",
+    "file": "review-evidence/playing-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:611",
+    "name": "Living Glass / release / en",
+    "file": "review-evidence/release-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:634",
+    "name": "Living Glass / Gallery arc / zh",
+    "file": "review-evidence/Gallery-arc-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:678",
+    "name": "Living Glass / Gallery constellation / zh",
+    "file": "review-evidence/Gallery-constellation-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:722",
+    "name": "Living Glass / Gallery salon / zh",
+    "file": "review-evidence/Gallery-salon-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:780",
+    "name": "Living Glass / home / zh",
+    "file": "review-evidence/home-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:801",
+    "name": "Living Glass / privacy / zh",
+    "file": "review-evidence/privacy-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:822",
+    "name": "Living Glass / tutorial / zh",
+    "file": "review-evidence/tutorial-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:843",
+    "name": "Living Glass / attract / zh",
+    "file": "review-evidence/attract-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:864",
+    "name": "Living Glass / postvideo / zh",
+    "file": "review-evidence/postvideo-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:885",
+    "name": "Living Glass / chooser / zh",
+    "file": "review-evidence/chooser-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:906",
+    "name": "Living Glass / closing / zh",
+    "file": "review-evidence/closing-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:927",
+    "name": "Living Glass / souvenir / zh",
+    "file": "review-evidence/souvenir-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:948",
+    "name": "Living Glass / calibration / zh",
+    "file": "review-evidence/calibration-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:969",
+    "name": "Living Glass / settings / zh",
+    "file": "review-evidence/settings-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1053",
+    "name": "Living Glass / ai / zh",
+    "file": "review-evidence/ai-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1117",
+    "name": "Living Glass / focus / zh",
+    "file": "review-evidence/focus-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1138",
+    "name": "Living Glass / activation / zh",
+    "file": "review-evidence/activation-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1154",
+    "name": "Living Glass / portrait / zh",
+    "file": "review-evidence/portrait-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1171",
+    "name": "Living Glass / playing / zh",
+    "file": "review-evidence/playing-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1179",
+    "name": "Living Glass / release / zh",
+    "file": "review-evidence/release-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1202",
+    "name": "Living Glass / Theme PANDEMIC / en",
+    "file": "review-evidence/Theme-PANDEMIC-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1223",
+    "name": "Living Glass / Theme RE-BIRTH / en",
+    "file": "review-evidence/Theme-RE-BIRTH-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1244",
+    "name": "Living Glass / Theme WHITE-GUARDIAN / en",
+    "file": "review-evidence/Theme-WHITE-GUARDIAN-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1265",
+    "name": "Living Glass / Theme CONSCIENCE / en",
+    "file": "review-evidence/Theme-CONSCIENCE-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  },
+  {
+    "nodeId": "18:1286",
+    "name": "Living Glass / Theme SANCTUARY / en",
+    "file": "review-evidence/Theme-SANCTUARY-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma render; not browser or Unity"
+  }
+]

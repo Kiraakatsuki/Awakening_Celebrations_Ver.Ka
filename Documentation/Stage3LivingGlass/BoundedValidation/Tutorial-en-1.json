@@ -1,0 +1,78 @@
+{
+    "label": "Tutorial-en-1",
+    "utc": "2026-11-13T11:15:27.1969416Z",
+    "route": "TUTORIAL---INTRODUCTION",
+    "locale": "English",
+    "focus": "tutorial-next",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 156120,
+    "performer": 0,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 633.0,
+                "y": 972.0,
+                "width": 655.0,
+                "height": 80.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 986.0,
+                "width": 242.0,
+                "height": 66.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        }
+    ]
+}

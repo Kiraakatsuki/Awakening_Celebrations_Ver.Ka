@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Retrieved 1 log entries.",
+  "data": [
+    {
+      "type": "Exception",
+      "message": "Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).",
+      "file": "./Library/PackageCache/com.unity.ai.assistant@1b11b9bfd84a/Modules/Unity.AI.ModelSelector/Services/Stores/Actions/ModelSelectorSuperProxyActions.cs",
+      "line": 495,
+      "stackTrace": null
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+    "label": "Home-zh-before-capture",
+    "utc": "2026-11-13T11:00:28.0688188Z",
+    "route": "Home",
+    "locale": "Chinese",
+    "focus": "",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 2,
+    "performer": -1,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        }
+    ]
+}

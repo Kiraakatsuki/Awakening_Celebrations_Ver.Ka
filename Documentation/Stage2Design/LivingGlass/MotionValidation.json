@@ -1,0 +1,2299 @@
+[
+  {
+    "id": "23:522",
+    "name": "Motion / Gallery and overlays",
+    "timelines": [
+      {
+        "id": "23:522",
+        "duration": 6
+      }
+    ],
+    "animated": [
+      {
+        "id": "23:567",
+        "name": "Artwork / GAIA",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:569",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:570",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.4
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:571",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 0.52
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:572",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:573",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 18
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:574",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0.52
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:576",
+        "name": "Artwork / GAIA",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:578",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:579",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.4
+                },
+                "timelinePosition": 0.02
+              },
+              {
+                "id": "23:580",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 0.54
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:581",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:582",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 18
+                },
+                "timelinePosition": 0.02
+              },
+              {
+                "id": "23:583",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0.54
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:585",
+        "name": "Artwork / GAIA",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:587",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:588",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.4
+                },
+                "timelinePosition": 0.04
+              },
+              {
+                "id": "23:589",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 0.56
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:590",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:591",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 18
+                },
+                "timelinePosition": 0.04
+              },
+              {
+                "id": "23:592",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0.56
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:594",
+        "name": "Artwork / GAIA",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:596",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:597",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.4
+                },
+                "timelinePosition": 0.06
+              },
+              {
+                "id": "23:598",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 0.58
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:599",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:600",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 18
+                },
+                "timelinePosition": 0.06
+              },
+              {
+                "id": "23:601",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0.58
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:603",
+        "name": "Artwork / GAIA",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:605",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:606",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.4
+                },
+                "timelinePosition": 0.08
+              },
+              {
+                "id": "23:607",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 0.6
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:608",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:609",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 18
+                },
+                "timelinePosition": 0.08
+              },
+              {
+                "id": "23:610",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0.6
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:612",
+        "name": "Artwork / GAIA",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:614",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:615",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.4
+                },
+                "timelinePosition": 0.1
+              },
+              {
+                "id": "23:616",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 0.62
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:617",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:618",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 18
+                },
+                "timelinePosition": 0.1
+              },
+              {
+                "id": "23:619",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0.62
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:620",
+        "name": "Modal scrim",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:621",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0.38
+            },
+            "keyframes": [
+              {
+                "id": "23:622",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:623",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 1.6
+              },
+              {
+                "id": "23:624",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 1.82
+              },
+              {
+                "id": "23:625",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 2.8
+              },
+              {
+                "id": "23:626",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.02
+              },
+              {
+                "id": "23:627",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.5
+              },
+              {
+                "id": "23:628",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 3.72
+              },
+              {
+                "id": "23:629",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 4.7
+              },
+              {
+                "id": "23:630",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 4.92
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:631",
+        "name": "Settings panel",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y",
+          "SCALE_XY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:670",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:671",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:672",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 1.6
+              },
+              {
+                "id": "23:673",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 1.96
+              },
+              {
+                "id": "23:674",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 2.8
+              },
+              {
+                "id": "23:675",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.02
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:676",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:677",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 65
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:678",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 65
+                },
+                "timelinePosition": 1.6
+              },
+              {
+                "id": "23:679",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 1.96
+              },
+              {
+                "id": "23:680",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 2.8
+              },
+              {
+                "id": "23:681",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 65
+                },
+                "timelinePosition": 3.02
+              }
+            ]
+          },
+          "SCALE_XY": {
+            "id": "KeyframeTrackId:23:682",
+            "baseValue": {
+              "type": "VECTOR",
+              "value": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "keyframes": [
+              {
+                "id": "23:683",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 0.9399999976158142,
+                    "y": 0.9399999976158142
+                  }
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:684",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 0.9399999976158142,
+                    "y": 0.9399999976158142
+                  }
+                },
+                "timelinePosition": 1.6
+              },
+              {
+                "id": "23:685",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                "timelinePosition": 1.96
+              },
+              {
+                "id": "23:686",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                "timelinePosition": 2.8
+              },
+              {
+                "id": "23:687",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 0.9399999976158142,
+                    "y": 0.9399999976158142
+                  }
+                },
+                "timelinePosition": 3.02
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:688",
+        "name": "Assistant panel",
+        "properties": [
+          "OPACITY",
+          "TRANSLATION_Y",
+          "SCALE_XY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:707",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:708",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:709",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.5
+              },
+              {
+                "id": "23:710",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 3.86
+              },
+              {
+                "id": "23:711",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 4.7
+              },
+              {
+                "id": "23:712",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 4.92
+              }
+            ]
+          },
+          "TRANSLATION_Y": {
+            "id": "KeyframeTrackId:23:713",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0
+            },
+            "keyframes": [
+              {
+                "id": "23:714",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 65
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:715",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 65
+                },
+                "timelinePosition": 3.5
+              },
+              {
+                "id": "23:716",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.86
+              },
+              {
+                "id": "23:717",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 4.7
+              },
+              {
+                "id": "23:718",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 65
+                },
+                "timelinePosition": 4.92
+              }
+            ]
+          },
+          "SCALE_XY": {
+            "id": "KeyframeTrackId:23:719",
+            "baseValue": {
+              "type": "VECTOR",
+              "value": {
+                "x": 1,
+                "y": 1
+              }
+            },
+            "keyframes": [
+              {
+                "id": "23:720",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 0.9399999976158142,
+                    "y": 0.9399999976158142
+                  }
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:721",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 0.9399999976158142,
+                    "y": 0.9399999976158142
+                  }
+                },
+                "timelinePosition": 3.5
+              },
+              {
+                "id": "23:722",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                "timelinePosition": 3.86
+              },
+              {
+                "id": "23:723",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 1,
+                    "y": 1
+                  }
+                },
+                "timelinePosition": 4.7
+              },
+              {
+                "id": "23:724",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "VECTOR",
+                  "value": {
+                    "x": 0.9399999976158142,
+                    "y": 0.9399999976158142
+                  }
+                },
+                "timelinePosition": 4.92
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "23:725",
+    "name": "Motion / Reduced gallery and overlays",
+    "timelines": [
+      {
+        "id": "23:725",
+        "duration": 6
+      }
+    ],
+    "animated": [
+      {
+        "id": "23:769",
+        "name": "Modal scrim",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:770",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 0.38
+            },
+            "keyframes": [
+              {
+                "id": "23:771",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:772",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 1.6
+              },
+              {
+                "id": "23:773",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 1.66
+              },
+              {
+                "id": "23:774",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 2.8
+              },
+              {
+                "id": "23:775",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 2.86
+              },
+              {
+                "id": "23:776",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.5
+              },
+              {
+                "id": "23:777",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 3.56
+              },
+              {
+                "id": "23:778",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0.38
+                },
+                "timelinePosition": 4.7
+              },
+              {
+                "id": "23:779",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 4.76
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:780",
+        "name": "Settings panel",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:819",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:820",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:821",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 1.6
+              },
+              {
+                "id": "23:822",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 1.66
+              },
+              {
+                "id": "23:823",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 2.8
+              },
+              {
+                "id": "23:824",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 2.86
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:825",
+        "name": "Assistant panel",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:844",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:845",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:846",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.5
+              },
+              {
+                "id": "23:847",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 3.56
+              },
+              {
+                "id": "23:848",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 4.7
+              },
+              {
+                "id": "23:849",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 4.76
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "23:850",
+    "name": "Motion / GAIA chapter event storyboard",
+    "timelines": [
+      {
+        "id": "23:850",
+        "duration": 14
+      }
+    ],
+    "animated": [
+      {
+        "id": "23:894",
+        "name": "Living Glass / focus / en",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:915",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:916",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:917",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 1.5
+              },
+              {
+                "id": "23:918",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 2.15
+              },
+              {
+                "id": "23:919",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 3.2
+              },
+              {
+                "id": "23:920",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.85
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:921",
+        "name": "Living Glass / activation / en",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:937",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:938",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:939",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 3.2
+              },
+              {
+                "id": "23:940",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 3.85
+              },
+              {
+                "id": "23:941",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 6.85
+              },
+              {
+                "id": "23:942",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 7.5
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:943",
+        "name": "Living Glass / portrait / en",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:960",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:961",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:962",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 6.85
+              },
+              {
+                "id": "23:963",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 7.5
+              },
+              {
+                "id": "23:964",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 8.5
+              },
+              {
+                "id": "23:965",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 8.65
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:966",
+        "name": "Living Glass / playing / en",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:974",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:975",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:976",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 8.5
+              },
+              {
+                "id": "23:977",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 8.65
+              },
+              {
+                "id": "23:978",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 10
+              },
+              {
+                "id": "23:979",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 10.65
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "23:980",
+        "name": "Living Glass / release / en",
+        "properties": [
+          "OPACITY"
+        ],
+        "tracks": {
+          "OPACITY": {
+            "id": "KeyframeTrackId:23:1003",
+            "baseValue": {
+              "type": "FLOAT",
+              "value": 1
+            },
+            "keyframes": [
+              {
+                "id": "23:1004",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 0
+              },
+              {
+                "id": "23:1005",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 10
+              },
+              {
+                "id": "23:1006",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 10.65
+              },
+              {
+                "id": "23:1007",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 1
+                },
+                "timelinePosition": 12
+              },
+              {
+                "id": "23:1008",
+                "easing": {
+                  "type": "CUSTOM_CUBIC_BEZIER",
+                  "easingFunctionCubicBezier": {
+                    "x1": 0.2199999988079071,
+                    "y1": 0.7599999904632568,
+                    "x2": 0.23999999463558197,
+                    "y2": 1
+                  }
+                },
+                "value": {
+                  "type": "FLOAT",
+                  "value": 0
+                },
+                "timelinePosition": 12.65
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

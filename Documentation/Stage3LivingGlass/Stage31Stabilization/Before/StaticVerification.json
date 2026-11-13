@@ -1,0 +1,105 @@
+[
+  {
+    "check": "preserved Assets\\Scenes\\SampleScene.unity",
+    "status": "PASS",
+    "sha256": "415E9D2A3AB7E3D34BCEF9BD6CC15251316D0ABC5DB767AB979C381A0ADA3D04"
+  },
+  {
+    "check": "preserved ProjectSettings\\EditorBuildSettings.asset",
+    "status": "PASS",
+    "sha256": "CA0137D80F07A367EF09E06B240F6E8EF30D23AE59843D77F6AE15E05CD14A7E"
+  },
+  {
+    "check": "preserved Packages\\manifest.json",
+    "status": "PASS",
+    "sha256": "BA47B9112D475478EEFB3CE9E57F84A1516205E925FCD9FED02683C7C3CA3439"
+  },
+  {
+    "check": "preserved Packages\\packages-lock.json",
+    "status": "PASS",
+    "sha256": "D6376FC97B7DB80C862C44FE20E4A236A360F7858BAF0003AFB7F1D33F8FD318"
+  },
+  {
+    "check": "unchanged protected method StartLivingPortrait",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method PrepareLivingPortraitVideo",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method OnLivingPortraitVideoPrepared",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method TryStartLivingPortraitPlayback",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method OnLivingPortraitVideoFrameReady",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method OnLivingPortraitVideoCompleted",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method OnLivingPortraitVideoError",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method StartPlaceholderPortraitTimer",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method WaitForPlaceholderPortrait",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method RequestLivingPortraitCompletion",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method StopLivingPortraitVideoPlayer",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method ReleaseLivingPortraitRenderTexture",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method TryBuildAssistantChatUrl",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method BuildPerformerScopedMessage",
+    "status": "PASS"
+  },
+  {
+    "check": "unchanged protected method CancelAssistantRequest",
+    "status": "PASS"
+  },
+  {
+    "check": "gesture bridge unchanged except read-only diagnostic",
+    "status": "PASS"
+  },
+  {
+    "check": "runner unchanged except existing-failure diagnostic assignments",
+    "status": "PASS"
+  },
+  {
+    "check": "Traditional Chinese source glyph coverage",
+    "status": "PASS",
+    "unique_characters": 365,
+    "missing": []
+  },
+  {
+    "check": "new asset metadata",
+    "status": "PASS",
+    "missing": []
+  },
+  {
+    "check": "six serialized video slots identical and ordered",
+    "status": "PASS"
+  }
+]

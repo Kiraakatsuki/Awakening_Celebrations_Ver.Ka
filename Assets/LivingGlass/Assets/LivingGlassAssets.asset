@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6eeb1c9879f7c8468faa8101fc6fc2d, type: 3}
+  m_Name: LivingGlassAssets
+  m_EditorClassIdentifier: Assembly-CSharp::LivingGlassAssets
+  portraits:
+  - {fileID: 2800000, guid: 5b12a0fff7bd34a4994debd2bac3a0df, type: 3}
+  - {fileID: 2800000, guid: c160f3c9df1acc645bcf9174c1a4b743, type: 3}
+  - {fileID: 2800000, guid: 8749efbdc19be6342aa6e6e8bc3fe9d3, type: 3}
+  - {fileID: 2800000, guid: 6c612b4386bf4f44686341c10a96ae17, type: 3}
+  - {fileID: 2800000, guid: 080975e17e658524d821ef6b43eea92c, type: 3}
+  - {fileID: 2800000, guid: 1114d2fde7872974f82a6daa6a5f3a7c, type: 3}
+  activation:
+  - {fileID: 2800000, guid: 526b4db9d63a1c44f817e6b893301eb9, type: 3}
+  - {fileID: 2800000, guid: fc9fb74d77fa24b46aa08e70a536fc75, type: 3}
+  - {fileID: 2800000, guid: cf2d3fbd7a90b3f41bdf7a72aacda9b1, type: 3}
+  - {fileID: 2800000, guid: 74c1aa0ecb37a6242a397b1e2a801a18, type: 3}
+  - {fileID: 2800000, guid: eaa2ba12fd0a0224d848a328f0966529, type: 3}
+  - {fileID: 2800000, guid: 827b4ccfba2dccb47b17be39fbb3755c, type: 3}
+  living:
+  - {fileID: 2800000, guid: df737857f1e4c314997d9c8bbd4cbfcf, type: 3}
+  - {fileID: 2800000, guid: b408896a27ffc0145acbdb5e6e42910a, type: 3}
+  - {fileID: 2800000, guid: f56ebb73d6cc4284bbf5078d877fd952, type: 3}
+  - {fileID: 2800000, guid: d1308851b69dd874192b5bf931e7c9ae, type: 3}
+  - {fileID: 2800000, guid: 98b3bc9c251401d478d6ca2de593f709, type: 3}
+  - {fileID: 2800000, guid: cb710201b970e004f8e6b8254532dc57, type: 3}
+  bodyEnglish: {fileID: 12800000, guid: 851431ccc1b0a894b8a0611f098d3003, type: 3}
+  displayEnglish: {fileID: 12800000, guid: 707a1bc4ec9ccae45bac455726415b9f, type: 3}
+  traditionalChinese: {fileID: 12800000, guid: c0c4f1dcdeb23c54aa39e6a20ce12557, type: 3}
+  styles: {fileID: 7433441132597879392, guid: 77c8b76aa1d96ed47ab082ef0bc18307, type: 3}
+  reducedMotion: 0
+  reducedEffects: 0

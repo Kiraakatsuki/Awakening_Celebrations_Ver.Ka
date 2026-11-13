@@ -1,0 +1,364 @@
+﻿asset,font,missing,text
+04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,喚單待機色醒,喚醒 / 待機 — 單色
+04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世勢彩手於沉甦界睡色處讓醒,世界處於沉睡。手勢讓色彩甦醒。
+04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保動向持指甦移醒,移動 → 指向 → 保持 → 甦醒
+04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,代入替輸,替代輸入
+04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,並以動控擊滑甦移觸醒點鼠,滑鼠／觸控：移動並點擊以甦醒
+04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,盤鍵,鍵盤：Enter / Space
+04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,仍作使勢可完手操整時法無用,手勢無法使用時仍可完整操作
+04-04---COLOR-RELEASE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,彩放甦色醒釋,甦醒／色彩釋放
+04-04---COLOR-RELEASE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世勢彩手於沉甦界睡色處讓醒,世界處於沉睡。手勢讓色彩甦醒。
+04-04---COLOR-RELEASE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世互偵入到動命回彩歸測生界色進,偵測到互動  ·  色彩回歸  ·  進入生命世界
+04-04---COLOR-RELEASE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,代入替輸,替代輸入
+04-04---COLOR-RELEASE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,控擊滑繼續觸點鼠,滑鼠／觸控：點擊繼續
+04-04---COLOR-RELEASE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,盤鍵,鍵盤：Enter / Space
+04-04---COLOR-RELEASE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,仍作使勢可完手操整時法無用,手勢無法使用時仍可完整操作
+06-02---GAIA---FOCUS-VIEW---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,圖焦聚視,GAIA / 聚焦視圖
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-001 / 核准主影像
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像全動可向啟圖在存展幅延影插構槽編輯,可編輯影像插槽 — 啟動構圖向全幅存在延展。
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,後景背退,背景退後
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,優先取層後得權演空者表訊讓資退間,資訊層退後，讓表演者取得空間優先權。
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,喚在存正醒,正在喚醒存在
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保勢手持放釋,保持 / 釋放手勢
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命圖焦生聚肖視,聚焦視圖 → 生命肖像
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不切化換是空而轉間面頁,空間轉化，而不是頁面切換。
+06-04---GAIA---ACTIVATION---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟,GAIA / 啟動
+06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,生命肖像
+06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-001 / 核准主影像
+06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保像入准可填已影核演留編置者色表輯,已置入核准表演者影像；保留可編輯影像填色。
+06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟在存,存在啟動
+06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,做出勢手放釋,做出釋放手勢
+06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不互作再動可得操次此玻璃示處變除非顯,此處不顯示玻璃 UI，除非互動再次變得可操作。
+06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,GAIA / 生命肖像
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回放返釋,釋放 / 返回
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世主享位像共回地導溶界肖解除,肖像解除主導地位，溶回共享世界。
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-001 / 核准主影像
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世享位像共可同回影插材槽演界的相素編置者表輯返,可編輯影像插槽 — 相同表演者素材返回共享世界的位置。
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,勢手放釋,釋放手勢
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保域場復恢持束空結間,保持結束 → 空間場域恢復
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,也切對式換有框沒硬確話認面頁,沒有確認對話框，也沒有硬式頁面切換。
+06-08---GAIA---RELEASE---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,放釋,GAIA / 釋放
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成播放,VID-PER01-001 / 播放完成
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,以像入刻助可命在對已時束獨現理生的立結肖話進,生命肖像已結束。現在可以進入獨立的助理對話時刻。
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,剛問才的詢驗體,詢問剛才的體驗
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主互個刻助動圖層平影後成時更束比為焦片理結聚要視這靜,這個時刻比聚焦視圖更平靜。影片結束後，助理成為主要互動層。
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什會演為甦者表醒麼,為什麼表演者會甦醒？
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,了化文景背解,了解文化背景
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,來查源看,查看來源
+06-10---GAIA---POST-VIDEO-AI---PER-001.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,繼續,繼續
+06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,圖焦聚視,PANDEMIC / 聚焦視圖
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-002 / 核准主影像
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像全動可向啟圖在存展幅延影插構槽編輯,可編輯影像插槽 — 啟動構圖向全幅存在延展。
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,後景背退,背景退後
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,優先取層後得權演空者表訊讓資退間,資訊層退後，讓表演者取得空間優先權。
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,喚在存正醒,正在喚醒存在
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保勢手持放釋,保持 / 釋放手勢
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命圖焦生聚肖視,聚焦視圖 → 生命肖像
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不切化換是空而轉間面頁,空間轉化，而不是頁面切換。
+06-14---PANDEMIC---ACTIVATION---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟,PANDEMIC / 啟動
+06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,生命肖像
+06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-002 / 核准主影像
+06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保像入准可填已影核演留編置者色表輯,已置入核准表演者影像；保留可編輯影像填色。
+06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟在存,存在啟動
+06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,做出勢手放釋,做出釋放手勢
+06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不互作再動可得操次此玻璃示處變除非顯,此處不顯示玻璃 UI，除非互動再次變得可操作。
+06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,PANDEMIC / 生命肖像
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回放返釋,釋放 / 返回
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世主享位像共回地導溶界肖解除,肖像解除主導地位，溶回共享世界。
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-002 / 核准主影像
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世享位像共可同回影插材槽演界的相素編置者表輯返,可編輯影像插槽 — 相同表演者素材返回共享世界的位置。
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,勢手放釋,釋放手勢
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保域場復恢持束空結間,保持結束 → 空間場域恢復
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,也切對式換有框沒硬確話認面頁,沒有確認對話框，也沒有硬式頁面切換。
+06-18---PANDEMIC---RELEASE---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,放釋,PANDEMIC / 釋放
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成播放,VID-PER01-001 / 播放完成
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,以像入刻助可命在對已時束獨現理生的立結肖話進,生命肖像已結束。現在可以進入獨立的助理對話時刻。
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,剛問才的詢驗體,詢問剛才的體驗
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主互個刻助動圖層平影後成時更束比為焦片理結聚要視這靜,這個時刻比聚焦視圖更平靜。影片結束後，助理成為主要互動層。
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什會演為甦者表醒麼,為什麼表演者會甦醒？
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,了化文景背解,了解文化背景
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,來查源看,查看來源
+06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,繼續,繼續
+06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,圖焦聚視,RE-BIRTH / 聚焦視圖
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-003 / 核准主影像
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像全動可向啟圖在存展幅延影插構槽編輯,可編輯影像插槽 — 啟動構圖向全幅存在延展。
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,後景背退,背景退後
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,優先取層後得權演空者表訊讓資退間,資訊層退後，讓表演者取得空間優先權。
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,喚在存正醒,正在喚醒存在
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保勢手持放釋,保持 / 釋放手勢
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命圖焦生聚肖視,聚焦視圖 → 生命肖像
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不切化換是空而轉間面頁,空間轉化，而不是頁面切換。
+06-24---RE-BIRTH---ACTIVATION---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟,RE-BIRTH / 啟動
+06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,生命肖像
+06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-003 / 核准主影像
+06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保像入准可填已影核演留編置者色表輯,已置入核准表演者影像；保留可編輯影像填色。
+06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟在存,存在啟動
+06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,做出勢手放釋,做出釋放手勢
+06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不互作再動可得操次此玻璃示處變除非顯,此處不顯示玻璃 UI，除非互動再次變得可操作。
+06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,RE-BIRTH / 生命肖像
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回放返釋,釋放 / 返回
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世主享位像共回地導溶界肖解除,肖像解除主導地位，溶回共享世界。
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-003 / 核准主影像
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世享位像共可同回影插材槽演界的相素編置者表輯返,可編輯影像插槽 — 相同表演者素材返回共享世界的位置。
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,勢手放釋,釋放手勢
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保域場復恢持束空結間,保持結束 → 空間場域恢復
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,也切對式換有框沒硬確話認面頁,沒有確認對話框，也沒有硬式頁面切換。
+06-28---RE-BIRTH---RELEASE---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,放釋,RE-BIRTH / 釋放
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成播放,VID-PER01-001 / 播放完成
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,以像入刻助可命在對已時束獨現理生的立結肖話進,生命肖像已結束。現在可以進入獨立的助理對話時刻。
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,剛問才的詢驗體,詢問剛才的體驗
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主互個刻助動圖層平影後成時更束比為焦片理結聚要視這靜,這個時刻比聚焦視圖更平靜。影片結束後，助理成為主要互動層。
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什會演為甦者表醒麼,為什麼表演者會甦醒？
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,了化文景背解,了解文化背景
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,來查源看,查看來源
+06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,繼續,繼續
+06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,圖焦聚視,WHITE GUARDIAN / 聚焦視圖
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-004 / 核准主影像
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像全動可向啟圖在存展幅延影插構槽編輯,可編輯影像插槽 — 啟動構圖向全幅存在延展。
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,後景背退,背景退後
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,優先取層後得權演空者表訊讓資退間,資訊層退後，讓表演者取得空間優先權。
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,喚在存正醒,正在喚醒存在
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保勢手持放釋,保持 / 釋放手勢
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命圖焦生聚肖視,聚焦視圖 → 生命肖像
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不切化換是空而轉間面頁,空間轉化，而不是頁面切換。
+06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟,WHITE GUARDIAN / 啟動
+06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,生命肖像
+06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-004 / 核准主影像
+06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保像入准可填已影核演留編置者色表輯,已置入核准表演者影像；保留可編輯影像填色。
+06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟在存,存在啟動
+06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,做出勢手放釋,做出釋放手勢
+06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不互作再動可得操次此玻璃示處變除非顯,此處不顯示玻璃 UI，除非互動再次變得可操作。
+06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,WHITE GUARDIAN / 生命肖像
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回放返釋,釋放 / 返回
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世主享位像共回地導溶界肖解除,肖像解除主導地位，溶回共享世界。
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-004 / 核准主影像
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世享位像共可同回影插材槽演界的相素編置者表輯返,可編輯影像插槽 — 相同表演者素材返回共享世界的位置。
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,勢手放釋,釋放手勢
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保域場復恢持束空結間,保持結束 → 空間場域恢復
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,也切對式換有框沒硬確話認面頁,沒有確認對話框，也沒有硬式頁面切換。
+06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,放釋,WHITE GUARDIAN / 釋放
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成播放,VID-PER01-001 / 播放完成
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,以像入刻助可命在對已時束獨現理生的立結肖話進,生命肖像已結束。現在可以進入獨立的助理對話時刻。
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,剛問才的詢驗體,詢問剛才的體驗
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主互個刻助動圖層平影後成時更束比為焦片理結聚要視這靜,這個時刻比聚焦視圖更平靜。影片結束後，助理成為主要互動層。
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什會演為甦者表醒麼,為什麼表演者會甦醒？
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,了化文景背解,了解文化背景
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,來查源看,查看來源
+06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,繼續,繼續
+06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,圖焦聚視,CONSCIENCE / 聚焦視圖
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-005 / 核准主影像
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像全動可向啟圖在存展幅延影插構槽編輯,可編輯影像插槽 — 啟動構圖向全幅存在延展。
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,後景背退,背景退後
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,優先取層後得權演空者表訊讓資退間,資訊層退後，讓表演者取得空間優先權。
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,喚在存正醒,正在喚醒存在
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保勢手持放釋,保持 / 釋放手勢
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命圖焦生聚肖視,聚焦視圖 → 生命肖像
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不切化換是空而轉間面頁,空間轉化，而不是頁面切換。
+06-44---CONSCIENCE---ACTIVATION---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟,CONSCIENCE / 啟動
+06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,生命肖像
+06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-005 / 核准主影像
+06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保像入准可填已影核演留編置者色表輯,已置入核准表演者影像；保留可編輯影像填色。
+06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟在存,存在啟動
+06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,做出勢手放釋,做出釋放手勢
+06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不互作再動可得操次此玻璃示處變除非顯,此處不顯示玻璃 UI，除非互動再次變得可操作。
+06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,CONSCIENCE / 生命肖像
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回放返釋,釋放 / 返回
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世主享位像共回地導溶界肖解除,肖像解除主導地位，溶回共享世界。
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-005 / 核准主影像
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世享位像共可同回影插材槽演界的相素編置者表輯返,可編輯影像插槽 — 相同表演者素材返回共享世界的位置。
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,勢手放釋,釋放手勢
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保域場復恢持束空結間,保持結束 → 空間場域恢復
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,也切對式換有框沒硬確話認面頁,沒有確認對話框，也沒有硬式頁面切換。
+06-48---CONSCIENCE---RELEASE---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,放釋,CONSCIENCE / 釋放
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成播放,VID-PER01-001 / 播放完成
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,以像入刻助可命在對已時束獨現理生的立結肖話進,生命肖像已結束。現在可以進入獨立的助理對話時刻。
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,剛問才的詢驗體,詢問剛才的體驗
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主互個刻助動圖層平影後成時更束比為焦片理結聚要視這靜,這個時刻比聚焦視圖更平靜。影片結束後，助理成為主要互動層。
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什會演為甦者表醒麼,為什麼表演者會甦醒？
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,了化文景背解,了解文化背景
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,來查源看,查看來源
+06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,繼續,繼續
+06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,圖焦聚視,SANCTUARY / 聚焦視圖
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-006 / 核准主影像
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像全動可向啟圖在存展幅延影插構槽編輯,可編輯影像插槽 — 啟動構圖向全幅存在延展。
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,後景背退,背景退後
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,優先取層後得權演空者表訊讓資退間,資訊層退後，讓表演者取得空間優先權。
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,喚在存正醒,正在喚醒存在
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保勢手持放釋,保持 / 釋放手勢
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命圖焦生聚肖視,聚焦視圖 → 生命肖像
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不切化換是空而轉間面頁,空間轉化，而不是頁面切換。
+06-54---SANCTUARY---ACTIVATION---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟,SANCTUARY / 啟動
+06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,生命肖像
+06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-006 / 核准主影像
+06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保像入准可填已影核演留編置者色表輯,已置入核准表演者影像；保留可編輯影像填色。
+06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動啟在存,存在啟動
+06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,做出勢手放釋,做出釋放手勢
+06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不互作再動可得操次此玻璃示處變除非顯,此處不顯示玻璃 UI，除非互動再次變得可操作。
+06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,像命生肖,SANCTUARY / 生命肖像
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回放返釋,釋放 / 返回
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世主享位像共回地導溶界肖解除,肖像解除主導地位，溶回共享世界。
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主像准影核,PER-006 / 核准主影像
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世享位像共可同回影插材槽演界的相素編置者表輯返,可編輯影像插槽 — 相同表演者素材返回共享世界的位置。
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,勢手放釋,釋放手勢
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,保域場復恢持束空結間,保持結束 → 空間場域恢復
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,也切對式換有框沒硬確話認面頁,沒有確認對話框，也沒有硬式頁面切換。
+06-58---SANCTUARY---RELEASE---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,放釋,SANCTUARY / 釋放
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成播放,VID-PER01-001 / 播放完成
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,以像入刻助可命在對已時束獨現理生的立結肖話進,生命肖像已結束。現在可以進入獨立的助理對話時刻。
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,剛問才的詢驗體,詢問剛才的體驗
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,主互個刻助動圖層平影後成時更束比為焦片理結聚要視這靜,這個時刻比聚焦視圖更平靜。影片結束後，助理成為主要互動層。
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什會演為甦者表醒麼,為什麼表演者會甦醒？
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,了化文景背解,了解文化背景
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,來查源看,查看來源
+06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,繼續,繼續
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助喚理醒,喚醒助理
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事來內問在容徵您或故有正源的看觀詢象關,詢問有關 GAIA、故事、象徵、來源或您正在觀看的內容。
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什代位演者表這麼,這位表演者代表什麼？
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事像告張影我於的訴這關,告訴我關於這張影像的事
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事什來個故是源的這麼,這個故事的來源是什麼？
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入問輸題,輸入問題…
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,問詢,詢問
+07-02---PROTOTYPE---ASSISTANT---GAIA.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,閉關,關閉
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助喚理醒,喚醒助理
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事來內問在容徵您或故有正源的看觀詢象關,詢問有關 PANDEMIC、故事、象徵、來源或您正在觀看的內容。
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什代位演者表這麼,這位表演者代表什麼？
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事像告張影我於的訴這關,告訴我關於這張影像的事
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事什來個故是源的這麼,這個故事的來源是什麼？
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入問輸題,輸入問題…
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,問詢,詢問
+07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,閉關,關閉
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助喚理醒,喚醒助理
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事來內問在容徵您或故有正源的看觀詢象關,詢問有關 RE-BIRTH、故事、象徵、來源或您正在觀看的內容。
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什代位演者表這麼,這位表演者代表什麼？
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事像告張影我於的訴這關,告訴我關於這張影像的事
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事什來個故是源的這麼,這個故事的來源是什麼？
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入問輸題,輸入問題…
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,問詢,詢問
+07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,閉關,關閉
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助喚理醒,喚醒助理
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事來內問在容徵您或故有正源的看觀詢象關,詢問有關 WHITE GUARDIAN、故事、象徵、來源或您正在觀看的內容。
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什代位演者表這麼,這位表演者代表什麼？
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事像告張影我於的訴這關,告訴我關於這張影像的事
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事什來個故是源的這麼,這個故事的來源是什麼？
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入問輸題,輸入問題…
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,問詢,詢問
+07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,閉關,關閉
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助喚理醒,喚醒助理
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事來內問在容徵您或故有正源的看觀詢象關,詢問有關 CONSCIENCE、故事、象徵、來源或您正在觀看的內容。
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什代位演者表這麼,這位表演者代表什麼？
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事像告張影我於的訴這關,告訴我關於這張影像的事
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事什來個故是源的這麼,這個故事的來源是什麼？
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入問輸題,輸入問題…
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,問詢,詢問
+07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,閉關,關閉
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助喚理醒,喚醒助理
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事來內問在容徵您或故有正源的看觀詢象關,詢問有關 SANCTUARY、故事、象徵、來源或您正在觀看的內容。
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,什代位演者表這麼,這位表演者代表什麼？
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事像告張影我於的訴這關,告訴我關於這張影像的事
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事什來個故是源的這麼,這個故事的來源是什麼？
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入問輸題,輸入問題…
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,問詢,詢問
+07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,閉關,關閉
+07-14---PROTOTYPE---SETTINGS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,代入替輸,替代輸入
+07-14---PROTOTYPE---SETTINGS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,並向指控擊滑觸點鼠,滑鼠／觸控：指向並點擊
+07-14---PROTOTYPE---SETTINGS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,制器控擇盤選鍵,鍵盤／控制器：1–6 選擇
+08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,中文,English / 中文
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,定系統設,系統 / 設定
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,制控驗體,體驗控制
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世主以制命始安控為生界的終置裝靜,安靜的裝置控制，始終以生命世界為主。
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,制客控訪,訪客控制
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,言語,語言
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,文英,英文
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,內容言語,內容語言
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,整調,調整
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,聲音,聲音
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,啟開,開啟
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,效音驗體,體驗音效
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,整調,調整
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,無礙障,無障礙
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,標準,標準
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,偏動可好性態與讀,可讀性與動態偏好
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,整調,調整
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,蹤追,追蹤
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,已校準,已校準
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,互動新時校準要重需,需要時重新校準互動
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,整調,調整
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,驗體,體驗
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,始新重開,重新開始
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回始返開,返回開始
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,整調,調整
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同意私與隱,隱私與同意
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同意明查看說,查看同意說明
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,查看,查看
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,援支,支援
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助協要需,需要協助？
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,了助化可問或文景演理者背表解詢驗體,可詢問助理，了解體驗、表演者或文化背景。
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,助問理詢,詢問助理
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,則原計設,設計原則
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,一不介以傳入台同安定層式彙應成是會玻璃用的程統而舞融設語變靜面,設定不會變成傳統應用程式介面，而是以安靜的玻璃層融入同一舞台語彙。
+08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,頁首,首頁
+09-02---CLOSING---CELEBRATION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成甦醒,甦醒完成
+09-02---CLOSING---CELEBRATION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世到回寧界靜,世界回到寧靜。
+09-02---CLOSING---CELEBRATION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,位供典品完念慶成接提數的短簡紀著驗體,簡短的慶典完成體驗，接著提供數位紀念品。
+09-02---CLOSING---CELEBRATION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,事你喚感故段謝這醒,感謝你喚醒這段故事。
+09-02---CLOSING---CELEBRATION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世享位你備共到即取可品回好後得念數準演界的紀者表,表演者回到共享世界。準備好後即可取得你的數位紀念品。
+09-02---CLOSING---CELEBRATION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,取品得念我的紀,取得我的紀念品
+09-02---CLOSING---CELEBRATION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回返驗體,返回體驗
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,取品念束紀結領,結束 / 紀念品領取
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,帶把次走這驗體,把這次體驗帶走。
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,位你品啟念掃描數的紀開,掃描 QR Code 開啟你的數位紀念品。
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,你品念的紀,你的紀念品
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,品執客念時生產紀行訪,訪客紀念品 / 執行時產生
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,品圖念構紀覽預,紀念品構圖預覽
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,供像准同客影意提料最會材核生產由的素終與訪資,最終影像會由核准素材與訪客同意提供的資料產生。
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,掃描,掃描
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,你備品完已念成準的紀,你的紀念品已準備完成。
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,使手掃描機用相,使用手機相機掃描。
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,位佔區執時生產行,QR 佔位區 / 執行時產生
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,不供內固在地執定容提時會的目行,Figma 不會固定 QR 內容；Unity 會在執行時提供目的地。
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,完成,完成
+09-04---SOUVENIR---QR-DELIVERY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,一下位回完客待後態成接機狀訪迎返,完成後返回待機狀態，迎接下一位訪客。
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,典喚慶醒,喚醒慶典
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,歡迎,歡迎
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,世位入六命成構演生由界的者表進,進入由六位表演者構成的生命世界。
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,互動同始後意擇明私與言語說讀選開閱隱,選擇語言，閱讀隱私與同意說明後開始互動。
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,言語,語言
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,文英,英文
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,中文,中文
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,前始開,開始前
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同意私與隱,隱私與同意
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,之作前勢手操於明此用私繼續置裝說請讀蹤追閱隱,手勢追蹤用於操作此裝置。繼續之前，請閱讀隱私說明。
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,並勢同已意我手明說讀蹤追閱,我已閱讀並同意手勢追蹤同意說明。
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,明私說隱,隱私說明
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,定設,設定
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,並同始意開,同意並開始
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,互動勢取同得您意手的要需,手勢互動需要取得您的同意。
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,定設,設定
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入口同意門閘,入口 / 同意閘門
+HOME--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,入口域暖聖色金,聖域 / 暖金色入口
+HOME---ENGLISH---SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,中文,中文
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同意私系統與隱,系統 / 隱私與同意
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同意私與隱,隱私與同意
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,下互以前動勢啟手明用說請讀閱,啟用手勢互動前，請閱讀以下說明。
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,內同容您意的,您同意的內容
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,勢手蹤追,01  手勢追蹤
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,之互以使動勢影您手攝機用的置與行裝解讀蹤追進間,使用攝影機進行手勢追蹤，以解讀您與裝置之間的互動。
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,料理處資,02  資料處理
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,何作保儲刪地場如存實將或政料方明最理留私策終與處說資除隱,場地方隱私政策與最終 Unity 實作將說明資料如何處理、儲存、保留或刪除。
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,您擇的選,03  您的選擇
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,並互以入前動勢口可同回必您意手拒絕繼續返進須,您可以拒絕並返回入口。繼續進入手勢互動前必須同意。
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,備嗎準繼續,準備繼續嗎？
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同後意繼續,同意後繼續
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同已您意明確認說請讀閱,請確認您已閱讀同意說明。
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,並同意繼續,同意並繼續
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,拒絕,拒絕
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,回返頁首,返回首頁
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,件入口同必意是條的要,同意是必要的入口條件
+PRIVACY--------SANCTUARY.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,同意暖色金頁,SANCTUARY / 暖金色同意頁
+TUTORIAL---EXPERIENCE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,甦醒,甦醒
+TUTORIAL---HOLD---SELECT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,拳握,握拳
+TUTORIAL---INTRODUCTION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動移,移動
+TUTORIAL---INTRODUCTION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,向指,指向
+TUTORIAL---INTRODUCTION.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,拳握,握拳
+TUTORIAL---LOOK---MOVE.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,動移,移動
+TUTORIAL---POINT.uxml,Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf,向指,指向

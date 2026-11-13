@@ -1,0 +1,16 @@
+--- before/Assets\LivingGlass\Motion\LivingGlassMotion.cs
++++ after/Assets\LivingGlass\Motion\LivingGlassMotion.cs
+@@ -43,6 +43,13 @@
+         visual.style.translate = new Translate(offset.x, offset.y);
+         visual.style.scale = new Scale(new Vector3(scale, scale, 1));
+     }
++    public static void BridgeVisibility(float easedProgress, out float outgoing, out float incoming)
++    {
++        // Undo the shared quartic ease for timeline windows; the portrait still uses that ease.
++        float progress = 1 - Mathf.Pow(1 - Mathf.Clamp01(easedProgress), .25f);
++        outgoing = 1 - Mathf.Clamp01(progress / .28f);
++        incoming = Mathf.Clamp01((progress - .38f) / .32f);
++    }
+     public static Rect VisibleCrop(Rect uv, Rect image, Rect aperture)
+     {
+         if (image.width <= 0 || image.height <= 0) return uv;

@@ -1,0 +1,797 @@
+[
+  {
+    "mutatedNodeIds": [],
+    "concept": "A",
+    "frames": [
+      {
+        "id": "4:3",
+        "name": "A / Home / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 13,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3",
+          "Source Serif 4"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:4",
+            "name": "Artwork / SANCTUARY",
+            "width": 980,
+            "height": 790
+          }
+        ]
+      },
+      {
+        "id": "4:25",
+        "name": "A / Selection / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 4,
+        "fonts": [
+          "Source Sans 3",
+          "Source Serif 4"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:31",
+            "name": "Artwork / GAIA",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:34",
+            "name": "Artwork / PANDEMIC",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:37",
+            "name": "Artwork / RE-BIRTH",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:40",
+            "name": "Artwork / WHITE-GUARDIAN",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:43",
+            "name": "Artwork / CONSCIENCE",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:46",
+            "name": "Artwork / SANCTUARY",
+            "width": 274,
+            "height": 450
+          }
+        ]
+      },
+      {
+        "id": "4:59",
+        "name": "A / Settings / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:60",
+            "name": "Artwork / GAIA",
+            "width": 816,
+            "height": 760
+          }
+        ]
+      },
+      {
+        "id": "4:97",
+        "name": "A / AI / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 18,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:98",
+            "name": "Artwork / GAIA",
+            "width": 816,
+            "height": 760
+          }
+        ]
+      },
+      {
+        "id": "4:130",
+        "name": "A / Cinematic / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 5,
+        "instances": 0,
+        "fonts": [
+          "Source Serif 4",
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:131",
+            "name": "Artwork / GAIA",
+            "width": 1792,
+            "height": 872
+          }
+        ]
+      },
+      {
+        "id": "4:138",
+        "name": "A / Home / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 13,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC",
+          "Noto Serif TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:139",
+            "name": "Artwork / SANCTUARY",
+            "width": 980,
+            "height": 790
+          }
+        ]
+      },
+      {
+        "id": "4:160",
+        "name": "A / Selection / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 4,
+        "fonts": [
+          "Noto Sans TC",
+          "Noto Serif TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:166",
+            "name": "Artwork / GAIA",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:169",
+            "name": "Artwork / PANDEMIC",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:172",
+            "name": "Artwork / RE-BIRTH",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:175",
+            "name": "Artwork / WHITE-GUARDIAN",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:178",
+            "name": "Artwork / CONSCIENCE",
+            "width": 274,
+            "height": 450
+          },
+          {
+            "id": "4:181",
+            "name": "Artwork / SANCTUARY",
+            "width": 274,
+            "height": 450
+          }
+        ]
+      },
+      {
+        "id": "4:194",
+        "name": "A / Settings / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:195",
+            "name": "Artwork / GAIA",
+            "width": 816,
+            "height": 760
+          }
+        ]
+      },
+      {
+        "id": "4:232",
+        "name": "A / AI / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 18,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:233",
+            "name": "Artwork / GAIA",
+            "width": 816,
+            "height": 760
+          }
+        ]
+      },
+      {
+        "id": "4:265",
+        "name": "A / Cinematic / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 5,
+        "instances": 0,
+        "fonts": [
+          "Noto Serif TC",
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:266",
+            "name": "Artwork / GAIA",
+            "width": 1792,
+            "height": 872
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "mutatedNodeIds": [],
+    "concept": "B",
+    "frames": [
+      {
+        "id": "4:274",
+        "name": "B / Home / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 13,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3",
+          "Source Serif 4"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:275",
+            "name": "Artwork / SANCTUARY",
+            "width": 1350,
+            "height": 790
+          }
+        ]
+      },
+      {
+        "id": "4:297",
+        "name": "B / Selection / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 28,
+        "instances": 4,
+        "fonts": [
+          "Source Sans 3",
+          "Source Serif 4"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:304",
+            "name": "Artwork / GAIA",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:309",
+            "name": "Artwork / PANDEMIC",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:314",
+            "name": "Artwork / RE-BIRTH",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:319",
+            "name": "Artwork / WHITE-GUARDIAN",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:324",
+            "name": "Artwork / CONSCIENCE",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:329",
+            "name": "Artwork / SANCTUARY",
+            "width": 224,
+            "height": 248
+          }
+        ]
+      },
+      {
+        "id": "4:343",
+        "name": "B / Settings / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:344",
+            "name": "Artwork / GAIA",
+            "width": 1360,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:382",
+        "name": "B / AI / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 18,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:383",
+            "name": "Artwork / GAIA",
+            "width": 1360,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:416",
+        "name": "B / Cinematic / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 5,
+        "instances": 0,
+        "fonts": [
+          "Source Serif 4",
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:417",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 1000
+          }
+        ]
+      },
+      {
+        "id": "4:425",
+        "name": "B / Home / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 13,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC",
+          "Noto Serif TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:426",
+            "name": "Artwork / SANCTUARY",
+            "width": 1350,
+            "height": 790
+          }
+        ]
+      },
+      {
+        "id": "4:448",
+        "name": "B / Selection / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 28,
+        "instances": 4,
+        "fonts": [
+          "Noto Sans TC",
+          "Noto Serif TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:455",
+            "name": "Artwork / GAIA",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:460",
+            "name": "Artwork / PANDEMIC",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:465",
+            "name": "Artwork / RE-BIRTH",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:470",
+            "name": "Artwork / WHITE-GUARDIAN",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:475",
+            "name": "Artwork / CONSCIENCE",
+            "width": 224,
+            "height": 248
+          },
+          {
+            "id": "4:480",
+            "name": "Artwork / SANCTUARY",
+            "width": 224,
+            "height": 248
+          }
+        ]
+      },
+      {
+        "id": "4:494",
+        "name": "B / Settings / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:495",
+            "name": "Artwork / GAIA",
+            "width": 1360,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:533",
+        "name": "B / AI / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 18,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:534",
+            "name": "Artwork / GAIA",
+            "width": 1360,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:567",
+        "name": "B / Cinematic / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 5,
+        "instances": 0,
+        "fonts": [
+          "Noto Serif TC",
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:568",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "mutatedNodeIds": [
+      "4:582",
+      "4:603",
+      "4:629",
+      "4:668",
+      "4:711",
+      "4:732",
+      "4:758",
+      "4:797"
+    ],
+    "concept": "C",
+    "frames": [
+      {
+        "id": "4:577",
+        "name": "C / Home / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 13,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3",
+          "Source Serif 4"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:578",
+            "name": "Artwork / SANCTUARY",
+            "width": 1920,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:600",
+        "name": "C / Selection / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 17,
+        "instances": 4,
+        "fonts": [
+          "Source Sans 3",
+          "Source Serif 4"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:606",
+            "name": "Artwork / GAIA",
+            "width": 1190,
+            "height": 610
+          }
+        ]
+      },
+      {
+        "id": "4:624",
+        "name": "C / Settings / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:625",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:663",
+        "name": "C / AI / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 18,
+        "instances": 5,
+        "fonts": [
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:664",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:697",
+        "name": "C / Cinematic / en",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 5,
+        "instances": 0,
+        "fonts": [
+          "Source Serif 4",
+          "Source Sans 3"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:698",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 1000
+          }
+        ]
+      },
+      {
+        "id": "4:706",
+        "name": "C / Home / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 13,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC",
+          "Noto Serif TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:707",
+            "name": "Artwork / SANCTUARY",
+            "width": 1920,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:729",
+        "name": "C / Selection / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 17,
+        "instances": 4,
+        "fonts": [
+          "Noto Sans TC",
+          "Noto Serif TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:735",
+            "name": "Artwork / GAIA",
+            "width": 1190,
+            "height": 610
+          }
+        ]
+      },
+      {
+        "id": "4:753",
+        "name": "C / Settings / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 22,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:754",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:792",
+        "name": "C / AI / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 18,
+        "instances": 5,
+        "fonts": [
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:793",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 984
+          }
+        ]
+      },
+      {
+        "id": "4:826",
+        "name": "C / Cinematic / zh",
+        "dimensions": [
+          1920,
+          1080
+        ],
+        "editableText": 5,
+        "instances": 0,
+        "fonts": [
+          "Noto Serif TC",
+          "Noto Sans TC"
+        ],
+        "imageNodes": [
+          {
+            "id": "4:827",
+            "name": "Artwork / GAIA",
+            "width": 1920,
+            "height": 1000
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,2055 @@
+[
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml",
+    "guid": "008d3ceb81d782e4e8e1ef582920b9fa",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uss",
+    "guid": "200dc3520447a0644b66e6eac05601b4",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml",
+    "guid": "202e35d9f771ca343a602ce302eb0b5b",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_CONSCIENCE/Released performer image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml",
+    "guid": "70a0ee0507b32884f948b3c75a87e802",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_GAIA/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uss",
+    "guid": "a04d1501c8c51cb45b05febe42ccb5c5",
+    "dependencies": [
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml",
+    "guid": "c0cc741384055c14d814d8503b4afc97",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uss",
+      "Assets/Art/Figma/Attract/Presence \u2014 CONSCIENCE.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 SANCTUARY.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 PANDEMIC.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 GAIA.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 RE-BIRTH.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Attract/Presence \u2014 WHITE GUARDIAN.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uss",
+    "guid": "d016b3c6865c79947ad5412f88fad2d4",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml",
+    "guid": "01af6f49ddf64e1db7adfd56e5350fab",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uss",
+    "guid": "1136c5249f6fa5e4a80485e7702f63c0",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml",
+    "guid": "51e50f7b54fc3584499667eb00c3e3bc",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uss",
+    "guid": "517e08eadb5f7ef4091795e66dc10896",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "guid": "61a77fef80b9dc14cb95f0f6026d5270",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uss",
+      "Assets/Art/Figma/Attract/Presence \u2014 CONSCIENCE.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 SANCTUARY.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 PANDEMIC.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 GAIA.png",
+      "Assets/Art/Figma/Attract/Presence \u2014 RE-BIRTH.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Attract/Presence \u2014 WHITE GUARDIAN.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml",
+    "guid": "71b533210c3ef1742ade990f2f06431e",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Released performer image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uss",
+    "guid": "81539394559fccf44b4bc81c6fc363eb",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml",
+    "guid": "91e4bf4149e51da44b6f57b748d7c553",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_WHITE/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml",
+    "guid": "91d6b9e901a488a4794dbadf1beb4f5e",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Assets/Art/Figma/PER_SANCTUARY/Living Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uxml",
+    "guid": "b1484537b0ae1db44bf9f0162a199d7c",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uss",
+    "guid": "c136ddbf65436f342bbdd95db041d638",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml",
+    "guid": "d1814c946541f0f4ea993e40fbf94906",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Privacy/SANCTUARY \u2014 DIMMED PRIVACY BACKGROUND.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml",
+    "guid": "d13a6418361d0d0488c859552b11477a",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Released performer image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uxml",
+    "guid": "e18721964791129469ecede9b98a61e7",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uss",
+    "guid": "f111fc3772d1c66488db55f27b0744cf",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml",
+    "guid": "f1030a5a23a09e449b85dc0a7056ddd7",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "guid": "f15378fb3e5a75643b944173fa23ca5f",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 CONSCIENCE.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 WHITE GUARDIAN.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 SANCTUARY.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uss",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 RE-BIRTH.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 GAIA.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 PANDEMIC.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uss",
+    "guid": "42102e3a8b698e14f89895348705f55d",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml",
+    "guid": "62474923f58f3e04f9f81c5604d88191",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Released performer image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uss",
+    "guid": "622d2b94a86243641a8444564278293a",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uss",
+    "guid": "72bc0d8404c003a45b96ef2af350669f",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uss",
+    "guid": "82e54d022aad40348a3adb8b7331c028",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uss",
+    "guid": "82dbbf8816bce2444a2ab2c7347341fa",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uss",
+    "guid": "a252db6b2320f0148b3060b008b4a7f7",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uss",
+    "guid": "a26fd08bc6aaa394db18cce6a356b94f",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uss",
+    "guid": "b26bb4f6bd0c9ae4ba3e6285c791b3b8",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uss",
+    "guid": "e2a29ebe19825d247bf834646ec0c109",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uss",
+    "guid": "0377f0d230cbfcb47b4ae0bf74816f91",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml",
+    "guid": "13ac7ddf1f1e44a4290a1e2387fcbe44",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Assets/Art/Figma/PER_WHITE/Living Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uxml",
+    "guid": "5304a9839079cb74cadeb6daeb3ab47b",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml",
+    "guid": "53d8a87aad4a738439054351039a187d",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_SANCTUARY/Released performer image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml",
+    "guid": "530dd0798be480d48b8fe19fc20cb646",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uss",
+      "Assets/Art/Figma/PER_CONSCIENCE/Living Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uss",
+    "guid": "63a343e97f7f7bc4db612dc08a534aa9",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Fonts/NotoSerifSC-Regular SDF.asset",
+    "guid": "7395f1ea54cf01745a4daeb8996feecd",
+    "dependencies": [
+      "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_FontAsset.cs"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uss",
+    "guid": "73ad9952ec7a3b048864009cf1b7ca91",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uss",
+    "guid": "939df0f23d84c4745be9eacab9bb7939",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uss",
+    "guid": "b34df196d082fb94d973cd0e8ed4e550",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uss",
+    "guid": "c310ee8310a0d3e429d4d56c924810c9",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml",
+    "guid": "e366626b217103d4da4622bddc523b82",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Fonts/NotoSansSC-Regular SDF.asset",
+    "guid": "f384062a3087d0944b65d33419255380",
+    "dependencies": [
+      "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+      "Assets/Fonts/NotoSansSC-Regular.ttf",
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_FontAsset.cs"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml",
+    "guid": "14a78719bb30332419287a7180e17717",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uxml",
+    "guid": "2453208a8b7f3e147b8c144972865d02",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uxml",
+    "guid": "4491cc275b596624bbd88ebbdf28d2ef",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+    "guid": "54520f9c483ff1b418710149640639ee",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml",
+    "guid": "5435c652cf5f6694d89fb1f78aa6f5b3",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml",
+    "guid": "74670598a59646549b65680bffe43d87",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uss",
+    "guid": "740fae5e472f5de40a86cf6d112d9547",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "guid": "84a2088461d0d3c4f86d53bafc62ff35",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uss",
+    "guid": "844379a266ebf2842a055dec5a2fced8",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uss",
+    "guid": "847a1473bc4893140acb765400ca81c7",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml",
+    "guid": "940329f7b66f22149881de029bc57bb3",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml",
+    "guid": "94db2f95d29f77f41b43b0b53b339d26",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uss",
+    "guid": "b4fb3ee144025b34d91f5ddc39855311",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uxml",
+    "guid": "c4464efc66aa5db4e8faa1acc5baeef6",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uss",
+    "guid": "d4228daaeb23b7b40a25777db06a3c34",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uss",
+    "guid": "e44752fca7354cd41a51bb79a3ad3758",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uss",
+    "guid": "f4dd2676e70d83a4e9bc8827d3b6be2a",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uss",
+    "guid": "05db3b8120cb5b143b9b8b7fa2a93bb5",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml",
+    "guid": "05fec9f9a27549819643dbca8ee14db5",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uss",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uss",
+    "guid": "35d0a3145f9881749bddbda18a028bd4",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml",
+    "guid": "354cc3593a81c3943a00d37fea8904cd",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_CONSCIENCE/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uss",
+    "guid": "35cd116b192e2534d91b0e20f9add0dc",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml",
+    "guid": "4500d12d3121343488cd28beaafbcfb2",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Assets/Art/Figma/PER_WHITE/Living Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml",
+    "guid": "758274893c5f8bc4597cfd7180bb9b85",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_WHITE/Approved Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uxml",
+    "guid": "95c1d06b330642f4d9485029c09d176a",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml",
+    "guid": "b569e1778761d5a44a5e6d41e91cce75",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_GAIA/Released performer image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml",
+    "guid": "b5a94a2ed84aa5f439aa27e811c78a54",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Home/HOME BACKGROUND.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml",
+    "guid": "d51bc365fa9a4c746840c42128823704",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Master Image \u2014 Activation.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uss",
+    "guid": "e5c841190f2e06346a60774f433c6a25",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml",
+    "guid": "e5298225b3ec6ca4eb614e4afca83f3d",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_WHITE/Released performer image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "guid": "06d2b2183ad5592468c5e0bc7a4d3b29",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uss",
+    "guid": "06b32683b529d3e41bfd0e366029466d",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml",
+    "guid": "0618aab42e8b451409c9e47e7f45a1db",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uss",
+      "Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+    "guid": "1622a0294114a154483e4beb7daa6469",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uss",
+    "guid": "26c7f8ac4a99ced4e9728629755239a2",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "guid": "266d7eab0d4835a458d6a938e5496228",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/Release/Presence \u2014 GAIA.png",
+      "Assets/Art/Figma/Release/Presence \u2014 SANCTUARY.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uss",
+      "Assets/Art/Figma/Release/Presence \u2014 WHITE GUARDIAN.png",
+      "Assets/Art/Figma/Release/Presence \u2014 CONSCIENCE.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Release/Presence \u2014 PANDEMIC.png",
+      "Assets/Art/Figma/Release/Presence \u2014 RE-BIRTH.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uss",
+    "guid": "363531d6ec615924ca6a54b63d7e6727",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "guid": "466a052655b8edd4eb2455fc3bce24f1",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uss",
+    "guid": "469d7c4a9aed99347bf91a5cb7d547ed",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml",
+    "guid": "8645e27cd7095e44abaf942b5b86aae4",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uss",
+    "guid": "96345f24e57b9a24c8712f0275a27bd9",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml",
+    "guid": "969424950b8d4191aa676fc2e8039285",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "guid": "a6c9ed8e7098c304f8dde074a7a586ce",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uss",
+    "guid": "a65a2097188e99841938e37cd4d9db4a",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml",
+    "guid": "a6cdfa1fba0bf10409a4dc5b914d8430",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Assets/Art/Figma/PER_SANCTUARY/Living Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml",
+    "guid": "b68f91d05dbb56c4080c2378d28de60a",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uss",
+    "guid": "d6f8e1aedc20d4641bba4ed9e45df4b8",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uss",
+    "guid": "e611fdf19e8276b478ea8dbfeed3a65d",
+    "dependencies": [
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml",
+    "guid": "e6042ae1feea7bf48b0d92b6a3df265f",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uss",
+    "guid": "e616463be83b7f94b8cec66c0dd694a4",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uss",
+    "guid": "f6825eaeba8444241b18f580b97167a4",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml",
+    "guid": "07d252aa2baa9f548a27ba61fb689973",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Master Image \u2014 Activation.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uss",
+    "guid": "17b293bbe1f3f9d4394d0ca052a36e0c",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uss",
+    "guid": "17d48aa37ef73f3408374e0e2577d09c",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml",
+    "guid": "570215b08e5cf1548a973e9679932743",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml",
+    "guid": "67d8231169859c4498b0ad159d5c8a63",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Living Master Image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml",
+    "guid": "a7d02a455ff51174fbcad3656ed46d90",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml",
+    "guid": "b7c99f07de80334419b7959e932be306",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uss",
+      "Assets/Art/Figma/PER_GAIA/Living Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml",
+    "guid": "c7e408387bfb28346bc4e1c622580803",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_CONSCIENCE/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uxml",
+    "guid": "d70b071ee433d4e429124c369a86c001",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml",
+    "guid": "e77658d5b47172c4ba88d2ef7e820442",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Souvenir/Souvenir artwork preview.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uss",
+    "guid": "e7cdac49f6d6ae44b847e2e21e42da14",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uss",
+    "guid": "186d5350d583cda41add12021ba7f881",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml",
+    "guid": "282c0a7f24315c84bbbf0b7a05f79926",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uss",
+    "guid": "38982d8943fe7a7469cfac338404c295",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml",
+    "guid": "68f72feb5d493794fb3e26c546f7de7f",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 CONSCIENCE.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 WHITE GUARDIAN.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 SANCTUARY.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 RE-BIRTH.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 GAIA.png",
+      "Assets/Art/Figma/Performer Select/Selection target \u2014 PANDEMIC.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uss",
+    "guid": "88de459fc96789248a50221dc9a08596",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uss",
+    "guid": "987a6b1d14a79fc4f9fb57e7b25ed741",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml",
+    "guid": "a8bb60d3515f9ba40b6eb0e410398956",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "guid": "b8534637e4376af42b7e0011e4f783f4",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml",
+    "guid": "b8f356deb8442ef4a8a6587fce961ef5",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uss",
+      "Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Fonts/NotoSansSC-Regular.ttf",
+    "guid": "c816db0b425434a4dbab252e00cdb09a",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml",
+    "guid": "e8a96d3fe0915ab4ba11b27f916d3122",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_GAIA/Approved Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml",
+    "guid": "f89bd646cf435d243aff70970765fa35",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_SANCTUARY/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml",
+    "guid": "59b35328435291843b548d1a5b3a9028",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_WHITE/Approved Master Image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uxml",
+    "guid": "69e18923aff1a72458b62ca535ed6b80",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png",
+    "guid": "693e404b61e1a4641a9fc2180cfcdc39",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml",
+    "guid": "69af93f79603bb04888eda8df6366a30",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_GAIA/Living Master Image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml",
+    "guid": "998922bef66c25f4193abee8a57ca312",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uss",
+      "Assets/Art/Figma/PER_CONSCIENCE/Living Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uss",
+    "guid": "a961195dcda7221428bb48251e749343",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml",
+    "guid": "a90a70fc3b21a384385022b2c11e9ef4",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Living Master Image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml",
+    "guid": "c9a47f94846d46968f6e224c70f70055",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uss",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml",
+    "guid": "d9293ed6c505d2e4fa5cdb3f409fe90a",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Master Image \u2014 Activation.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uss",
+    "guid": "e93736a2c52f90e49bb12e20fc6fb685",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uss",
+    "guid": "e9d7147c892fcd84086052abf860a607",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uss",
+    "guid": "0a4468715e79d0b428355fdeffe2d701",
+    "dependencies": [
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uss",
+    "guid": "0aa62a1074308204fae9a0eae4363385",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Settings/Pipeline/EditorPipelineManager.asset",
+    "guid": "2a99fba1ceb62844f887b1f7d579a2e6",
+    "dependencies": [
+      "Packages/com.unity.pipeline/Editor/EditorPipelineManager.cs"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uss",
+    "guid": "3a6d5214a80e908479c9fd261ae82f27",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uss",
+    "guid": "6acc1b608773d19458898b89d0b69353",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uss",
+    "guid": "ca4c03934d523e5479f201139ef0b156",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uss",
+    "guid": "eae71bbfc968e064bae38ec6f5c3b78b",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uss",
+    "guid": "eabbd422ff4691f48b81569113b9f834",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml",
+    "guid": "fad1dfd19ebdeb543b56bfba8ce6d7de",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_WHITE/Master Image \u2014 Activation.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml",
+    "guid": "fac5aebe72678924c9590f70b4c882e4",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uxml",
+    "guid": "fa3ea12a628054f4ba1efe8e08391184",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uss",
+    "guid": "1bb40f1c45cd1d44c8fab25903a227f0",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uss",
+    "guid": "1b1dc2abd9030b14984e4292c9ff5ca3",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml",
+    "guid": "2be51cff5cab1be4cba4c69a5ec3450d",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_GAIA/Approved Master Image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uss",
+    "guid": "5bc61e7b768602f46886485a31271e49",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uss",
+    "guid": "5b7e5a28ec583884dbaaec50e19e18b7",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uss",
+    "guid": "8be3f72711bbc29489580bc9cab18171",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uss",
+    "guid": "8b27b280d3feaad4bbefb2c9c2b2e8d6",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uss",
+    "guid": "8bd8336eb73c5e74ba8affff7f4f9fc7",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml",
+    "guid": "8b3d0a552233e644cacc7851e62c5631",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uss",
+      "Assets/Art/Figma/PER_SANCTUARY/Released performer image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uss",
+    "guid": "9b943ae8813c1134884063c0134c67a5",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Fonts/SourceSerif4-Regular SDF.asset",
+    "guid": "9b1f88df1f10ac14ab137cba9fe7ff8c",
+    "dependencies": [
+      "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_FontAsset.cs"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uss",
+    "guid": "ab529f398f4b7ca4a8d153b98f7359ee",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uss",
+    "guid": "bbd673bd64e6bcf4685bd31311a927ad",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uss",
+    "guid": "bb19f5cde3feacb4f9f99102154b94a5",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml",
+    "guid": "cb3b21dd872f29b48ad470f91b67a942",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml",
+    "guid": "ebddf28f004e00648b39df50dea95021",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uss",
+    "guid": "0c280b80e5513834f867a3779a4c1288",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml",
+    "guid": "0c29b3a09e5cf8f4b8c1d4679cc4deea",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uss",
+    "guid": "0caefbbdeb41f7149a6cba2c5c6d8cc5",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml",
+    "guid": "2c2df9a35c274324682d3f683581f16c",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_WHITE/Released performer image.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/UI Toolkit/PanelSettings.asset",
+    "guid": "3c106ac1f6d9f414e9de24f6a96f1f1f",
+    "dependencies": [
+      "Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uss",
+    "guid": "4cc79f32c4d143b4f9a8476c7dcdf4b7",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uss",
+    "guid": "5c3c0879e8c0bf24787b66f8c2a854ef",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uss",
+    "guid": "6c46ce08b1af83c4c9f564856649a319",
+    "dependencies": [
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uss",
+    "guid": "7c042ce752bc3c74aac5ab409ef95463",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml",
+    "guid": "9c1445592963bfd4c8fafdede2edba9d",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/Release/Presence \u2014 GAIA.png",
+      "Assets/Art/Figma/Release/Presence \u2014 SANCTUARY.png",
+      "Assets/Art/Figma/Release/Presence \u2014 WHITE GUARDIAN.png",
+      "Assets/Art/Figma/Release/Presence \u2014 CONSCIENCE.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Release/Presence \u2014 PANDEMIC.png",
+      "Assets/Art/Figma/Release/Presence \u2014 RE-BIRTH.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uss",
+    "guid": "cce6b3262e549b8428c1ba8e328e37c1",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uss",
+    "guid": "ec5237085740d2545ac1cf51998620c8",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uss",
+    "guid": "ec19275a0f38ec141a8381302b7fc28d",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml",
+    "guid": "0dbbbf189f5843d2b25819cea3350055",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uss",
+    "guid": "1d8160f9a1a0e7f4d9c526ba579fee49",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml",
+    "guid": "4d07ee79af1a4c738aebb64049a0b1ef",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uss",
+    "guid": "5d66b8704e28ae74294591fbda50b43a",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml",
+    "guid": "6dd33b5127db4e21917d31fa2f15dada",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uss",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml",
+    "guid": "6dea95bc04ae3844ca9ea47ba6734bfb",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_CONSCIENCE/Released performer image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Fonts/SourceSans3-Regular SDF.asset",
+    "guid": "8dffbb7f707ae3a44a965d96566b1186",
+    "dependencies": [
+      "Assets/TextMesh Pro/Shaders/TMP_SDF.shader",
+      "Packages/com.unity.ugui/Runtime/TMP/TMP_FontAsset.cs",
+      "Assets/Fonts/NotoSansSC-Regular SDF.asset"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml",
+    "guid": "adb57c157e0a32d4cbccd3c954ea4f70",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "guid": "cd29506db2520be4eb0df76e96b787d0",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml",
+    "guid": "dd79916d5560cb942b758e974b430d87",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_PANDEMIC/Released performer image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uss",
+    "guid": "ddecb287821537e47974959f59a0d7a3",
+    "dependencies": [
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uss",
+    "guid": "fdca7d5bd6d76474cb54287c1ba0039b",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uss",
+    "guid": "fdaed99104c819f499c5366089f27f6c",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml",
+    "guid": "1e59db1f59f707641992c4e2450cdc40",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Privacy/SANCTUARY \u2014 DIMMED PRIVACY BACKGROUND.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uss",
+    "guid": "3e950a4cd096cfe43b1c5c7587cc9319",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml",
+    "guid": "3ed851760a7c2f041bae9ebd86786d63",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml",
+    "guid": "3ecbbbd57f7c79c498eabaa6f746bde7",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_GAIA/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml",
+    "guid": "5e1547a4ad8a6eb4cbf53db0ebb059d3",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Home/HOME BACKGROUND.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uss",
+    "guid": "6ef4c3221a6129f4f82df5aa97d46915",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uss",
+    "guid": "7efb395a1ed5151409f6bd52075255a8",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uss",
+    "guid": "7ebfbe7e9122d5343b3df9434de33363",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml",
+    "guid": "9e32bf6bfbff5c643897c7881ef5286f",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/Souvenir/Souvenir artwork preview.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml",
+    "guid": "ae578aa6b6f5f8344b7104828034adca",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Art/Figma/PER_RE-BIRTH/Living Master Image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uss",
+    "guid": "ae68831e658a21845a1f9dd9b7ef9812",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml",
+    "guid": "aefd825a1f7147e0bc837911c525503e",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uss",
+      "Assets/Fonts/SourceSans3-Regular.ttf",
+      "Assets/Fonts/SourceSerif4-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uxml",
+    "guid": "be2713cd9b767d046876e3cd03812fff",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uss",
+    "guid": "ee3366f60a895de43a0a662649101a3b",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uss",
+    "guid": "fe3c1ed38caa7424684754c1155d6d3e",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uxml",
+    "guid": "0f591a7806f68d7439c7505f645a5ead",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml",
+    "guid": "2f39e3082638e0e49825d740710a07c7",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml",
+    "guid": "2f39c7d0746c69f4b807171d6de71279",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_SANCTUARY/Master Image \u2014 Activation.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uss",
+    "guid": "5fe031ef6f33d174c846b6cb43147dc6",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml",
+    "guid": "6f229b42e76ae9041858933123399cc0",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uss",
+    "guid": "6ffc026344d557d41a0d6081072a15e0",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml",
+    "guid": "7fd51b2c318a4a9479855746cf6b2c57",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Fonts/NotoSansSC-Regular.ttf",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml",
+    "guid": "afedeb11fe98be44281ce9c309d15280",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf",
+      "Assets/Art/Figma/PER_GAIA/Released performer image.png",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uss"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Fonts/NotoSerifSC-Regular.ttf",
+    "guid": "bf1fc5a251e2d7149997c7a07e45ad03",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uss",
+    "guid": "ef0ca988243f8b447b3e6e7ad0404b29",
+    "dependencies": [],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  },
+  {
+    "path": "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uxml",
+    "guid": "ff02731834dbf5d41889fab3ec9a4067",
+    "dependencies": [
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss",
+      "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uss",
+      "Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf"
+    ],
+    "classification": "LEGACY_ONLY",
+    "reason": "Retired export/panel/font/editor-import workflow; no surviving outside native incoming, dynamic source path or primary dependency"
+  }
+]

@@ -1,0 +1,16 @@
+component,classification,reason,new_scene_usage,old_scene_usage
+AwakeningApplicationController,ADAPT,Single established flow/session authority receives a dedicated presentation port,Single active instance with LivingGlass reference,Unchanged serialized reference selects legacy presentation
+MediaPipeGestureBridge,ADAPT,Read-only camera failure diagnostic forwarded without changing recognizer,One serialized bridge,Existing bridge retained
+GestureRecognitionLayer and settings,REUSE,Protected semantic recognition and thresholds,Unmodified,Unmodified
+GestureCameraConsentGate,REUSE,Session-only capture and single-owner contract,Existing rig copied with identical serialized settings,Unmodified
+HandLandmarkerRunner,ADAPT,Read-only failure type set at existing failure points; no capture or retry policy change,Existing runner reports real failures,Existing runner behavior retained
+GestureCursorController,ADAPT,Existing mapping/smoothing reused; view applies dark neutral styling locally,One cursor attached to persistent view,Existing appearance retained
+Video lifecycle and media mapping,RETAIN TEMPORARILY,Proven prepare/first-frame/completion/cancel/fallback remains in single controller,Existing operation adapted to named surface,Existing binding and player lifecycle
+Assistant transport/session,RETAIN TEMPORARILY,Existing HTTPS chat contract and generation checks retained,New named controls feed existing transport,Existing imported controls feed same transport
+Environmental audio,REUSE,Existing clap meaning and source ownership,Same operation,Same operation
+HomeLanguageController,REPLACE,Imported Home binding is unsuitable for new presentation,Absent; semantic Home/consent/locale views replace it,Retained
+ScreenDocumentManager,REPLACE,New shell needs persistent document and modal scope,Absent; one UIDocument,Retained
+Imported UXML/USS and RuntimeNodeBindings,OBSOLETE CANDIDATE,Not needed by new presentation but still required by fallback,No runtime dependency through new presentation path,Retained with dependencies
+RuntimeScreenCatalog,REUSE,Authoritative logical route/locale inventory for validation,Validation reference; semantic family renderer covers records,Existing runtime lookup
+Independent portrait/assistant services,EXTRACT / REFACTOR,Follow-up extraction should preserve same operation ownership after parity evidence,Not duplicated; retained boundary documented,No destructive migration
+LivingGlassPresentation and styles,REPLACE,New approved composition and shared visual language,New isolated view system,Not referenced

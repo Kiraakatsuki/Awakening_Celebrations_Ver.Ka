@@ -1,0 +1,78 @@
+{
+    "label": "Media-decoded-4",
+    "utc": "2026-11-13T11:22:33.5856410Z",
+    "route": "CONSCIENCE---LIVING-PORTRAIT---PER-005",
+    "locale": "English",
+    "focus": "",
+    "videoState": "prepared=True,playing=True,frame=3,time=0.125,clip=Conscience",
+    "width": 1920,
+    "height": 1080,
+    "frame": 62728,
+    "performer": 4,
+    "players": 1,
+    "playingPlayers": 1,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 77.0,
+                "y": 977.0,
+                "width": 1766.0,
+                "height": 91.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        }
+    ]
+}

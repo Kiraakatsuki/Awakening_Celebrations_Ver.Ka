@@ -1,0 +1,54 @@
+2026-11-13T12:23:50.5652753Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T12:23:52.2371393Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T12:23:52.3917217Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T12:23:52.4301230Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T12:23:52.5944473Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T12:23:56.9804778Z | Log | Performer targeted: GAIA.
+2026-11-13T12:23:57.9791206Z | Log | Performer targeted: PANDEMIC.
+2026-11-13T12:23:58.9937543Z | Log | Performer targeted: RE-BIRTH.
+2026-11-13T12:23:59.9792568Z | Log | Performer targeted: WHITE-GUARDIAN.
+2026-11-13T12:24:00.9780824Z | Log | Performer targeted: CONSCIENCE.
+2026-11-13T12:24:01.9779980Z | Log | Performer targeted: SANCTUARY.
+2026-11-13T12:24:03.9807110Z | Log | Performer targeted: GAIA.
+2026-11-13T12:24:03.9817188Z | Log | Performer confirmed: GAIA.
+2026-11-13T12:25:04.9035671Z | Log | Performer targeted: GAIA.
+2026-11-13T12:25:04.9035671Z | Log | Performer confirmed: GAIA.
+2026-11-13T12:25:07.1106994Z | Log | Performer targeted: PANDEMIC.
+2026-11-13T12:25:07.1106994Z | Log | Performer confirmed: PANDEMIC.
+2026-11-13T12:25:09.3066356Z | Log | Performer targeted: RE-BIRTH.
+2026-11-13T12:25:09.3066356Z | Log | Performer confirmed: RE-BIRTH.
+2026-11-13T12:25:11.5030229Z | Log | Performer targeted: WHITE-GUARDIAN.
+2026-11-13T12:25:11.5040357Z | Log | Performer confirmed: WHITE-GUARDIAN.
+2026-11-13T12:25:13.7028414Z | Log | Performer targeted: CONSCIENCE.
+2026-11-13T12:25:13.7028414Z | Log | Performer confirmed: CONSCIENCE.
+2026-11-13T12:25:15.9030460Z | Log | Performer targeted: SANCTUARY.
+2026-11-13T12:25:15.9030460Z | Log | Performer confirmed: SANCTUARY.
+2026-11-13T12:25:18.1021197Z | Log | Performer targeted: GAIA.
+2026-11-13T12:25:18.1031257Z | Log | Performer confirmed: GAIA.
+2026-11-13T12:25:22.5027874Z | Log | Performer targeted: RE-BIRTH.
+2026-11-13T12:25:22.5027874Z | Log | Performer confirmed: RE-BIRTH.
+2026-11-13T12:25:24.7041500Z | Log | Performer targeted: WHITE-GUARDIAN.
+2026-11-13T12:25:24.7041500Z | Log | Performer confirmed: WHITE-GUARDIAN.
+2026-11-13T12:25:26.9029197Z | Log | Performer targeted: CONSCIENCE.
+2026-11-13T12:25:26.9029197Z | Log | Performer confirmed: CONSCIENCE.
+2026-11-13T12:25:29.1030920Z | Log | Performer targeted: SANCTUARY.
+2026-11-13T12:25:29.1040974Z | Log | Performer confirmed: SANCTUARY.
+Capture rejected: Expected-rejection-0085 | Presentation changed between capture request and rendered frame; rejected instead of pairing stale metadata.
+2026-11-13T12:26:06.3406309Z | Log | Performer targeted: WHITE-GUARDIAN.
+2026-11-13T12:26:37.0491625Z | Log | Performer targeted: SANCTUARY.
+2026-11-13T12:26:37.0491625Z | Log | Performer confirmed: SANCTUARY.
+2026-11-13T12:27:00.0923608Z | Log | Performer targeted: GAIA.
+2026-11-13T12:27:00.1409636Z | Log | Performer confirmed: GAIA.
+2026-11-13T12:27:04.0074481Z | Log | Both hands raised for GAIA on FOCUS-VIEW.
+2026-11-13T12:27:08.2990546Z | Log | Living Portrait playback started for GAIA at frame -1 (1280x720, 24 fps).
+2026-11-13T12:27:08.3016037Z | Log | Living Portrait first frame rendered for GAIA (frame 0, RenderTexture 1280x720).
+2026-11-13T12:28:13.4068356Z | Log | Performer targeted: PANDEMIC.
+2026-11-13T12:28:13.4068356Z | Log | Performer confirmed: PANDEMIC.
+2026-11-13T12:30:02.6260788Z | Log | Performer targeted: GAIA.
+2026-11-13T12:30:02.6260788Z | Log | Performer confirmed: GAIA.
+2026-11-13T12:30:06.6262182Z | Log | Performer targeted: PANDEMIC.
+2026-11-13T12:30:06.6262182Z | Log | Performer confirmed: PANDEMIC.
+2026-11-13T12:30:10.6263769Z | Log | Performer targeted: RE-BIRTH.
+2026-11-13T12:30:10.6263769Z | Log | Performer confirmed: RE-BIRTH.
+2026-11-13T12:30:41.8917304Z | Log | Performer targeted: RE-BIRTH.
+2026-11-13T12:30:41.8917304Z | Log | Performer confirmed: RE-BIRTH.

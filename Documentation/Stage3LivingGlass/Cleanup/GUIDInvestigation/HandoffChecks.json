@@ -1,0 +1,16 @@
+{
+  "report_links": "PASS",
+  "broken": [],
+  "guid_rows_json": 14,
+  "guid_rows_csv": 14,
+  "unique_guids": 14,
+  "validator_syntax": "PASS",
+  "repairs_applied": 0,
+  "assets_removed": 0,
+  "application_files_changed": 0,
+  "raw_guid_resolution": "FAIL — 14 still unresolved",
+  "known_support_defects": 4,
+  "confirmed_active_broken": 0,
+  "runtime": "NOT RUN",
+  "project_recompilation": "NOT RUN — no application source/asset changes"
+}

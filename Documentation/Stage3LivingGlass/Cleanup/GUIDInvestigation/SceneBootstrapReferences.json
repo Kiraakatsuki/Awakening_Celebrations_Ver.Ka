@@ -1,0 +1,7 @@
+[
+  {
+    "component": "Mediapipe.Unity.Sample.HandLandmarkDetection.HandLandmarkerRunner",
+    "objectName": "GestureRecognitionRig",
+    "bootstrap": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab"
+  }
+]

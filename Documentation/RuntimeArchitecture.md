@@ -1,3 +1,5 @@
+> **Historical snapshot — superseded for the active repository by [Stage 3.4](Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Architecture.md).** SampleScene operational rollback and imported-demo dependency statements below describe the earlier phase. Recovery now uses the verified archival commit/bundle; Living Glass is the sole development entry. Original findings are retained as historical evidence.
+
 # Runtime Architecture and Implementation Plan
 
 ## Verified constraints

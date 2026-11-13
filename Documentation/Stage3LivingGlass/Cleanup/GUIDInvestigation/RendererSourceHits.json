@@ -1,0 +1,114 @@
+[
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.core@6f62546dd936/Runtime/Lighting/ProbeVolume/ProbeReferenceVolume.Debug.cs",
+    "line": 371,
+    "context": [
+      "            if (GraphicsSettings.TryGetRenderPipelineSettings<ShaderStrippingSetting>(out var shaderStrippingSetting) && shaderStrippingSetting.stripRuntimeDebugShaders)",
+      "                return false;",
+      "#endif",
+      "            m_DebugMaterial = CoreUtils.CreateEngineMaterial(debugResources.probeVolumeDebugShader);",
+      "            m_DebugMaterial.enableInstancing = true;",
+      "",
+      "            // Probe Sampling Debug Mesh : useful to show additional information concerning probe sampling for a specific fragment",
+      "            // - Arrow : Debug fragment position and normal"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.core@6f62546dd936/Runtime/Lighting/ProbeVolume/ProbeReferenceVolume.Debug.cs",
+    "line": 381,
+    "context": [
+      "            m_DebugProbeSamplingMesh = debugResources.probeSamplingDebugMesh;",
+      "            m_DebugProbeSamplingMesh.bounds = new Bounds(Vector3.zero, Vector3.one * 9999999.9f); // dirty way of disabling culling (objects spawned at (0.0, 0.0, 0.0) but vertices moved in vertex shader)",
+      "            m_ProbeSamplingDebugMaterial = CoreUtils.CreateEngineMaterial(debugResources.probeVolumeSamplingDebugShader);",
+      "            m_ProbeSamplingDebugMaterial02 = CoreUtils.CreateEngineMaterial(debugResources.probeVolumeDebugShader);",
+      "            m_ProbeSamplingDebugMaterial02.enableInstancing = true;",
+      "",
+      "            probeSamplingDebugData.positionNormalBuffer = new GraphicsBuffer(GraphicsBuffer.Target.Structured, 2, System.Runtime.InteropServices.Marshal.SizeOf(typeof(Vector4)));",
+      ""
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.core@6f62546dd936/Runtime/Lighting/ProbeVolume/ProbeVolumeGlobalSettings.cs",
+    "line": 36,
+    "context": [
+      "",
+      "        [Header(\"Debug\")]",
+      "        [ResourcePath(\"Runtime/Debug/ProbeVolumeDebug.shader\")]",
+      "        public Shader probeVolumeDebugShader;",
+      "        [ResourcePath(\"Runtime/Debug/ProbeVolumeFragmentationDebug.shader\")]",
+      "        public Shader probeVolumeFragmentationDebugShader;",
+      "        [ResourcePath(\"Runtime/Debug/ProbeVolumeSamplingDebug.shader\")]",
+      "        public Shader probeVolumeSamplingDebugShader;"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.universal@7228970dbdbf/Runtime/Deprecated.cs",
+    "line": 253,
+    "context": [
+      "        /// </summary>",
+      "        [Serializable, ReloadGroup]",
+      "        [Obsolete(\"Probe volume debug resource are now in the ProbeVolumeDebugResources class. #from(2023.3)\")]",
+      "        public sealed class ProbeVolumeResources",
+      "        {",
+      "            /// <summary>",
+      "            /// Debug shader used to render probes in the volume.",
+      "            /// </summary>"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.universal@7228970dbdbf/Runtime/Deprecated.cs",
+    "line": 259,
+    "context": [
+      "            /// Debug shader used to render probes in the volume.",
+      "            /// </summary>",
+      "            [Obsolete(\"This shader is now in the ProbeVolumeDebugResources class. #from(2023.3)\")]",
+      "            public Shader probeVolumeDebugShader;",
+      "",
+      "            /// <summary>",
+      "            /// Debug shader used to display fragmentation of the GPU memory.",
+      "            /// </summary>"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.universal@7228970dbdbf/Runtime/Deprecated.cs",
+    "line": 302,
+    "context": [
+      "        /// Probe volume resources used by URP",
+      "        /// </summary>",
+      "        [Obsolete(\"Probe volume debug resource are now in the ProbeVolumeDebugResources class. #from(2023.3)\")]",
+      "        public ProbeVolumeResources probeVolumeResources;",
+      "    }",
+      "",
+      "    public sealed partial class Bloom : VolumeComponent, IPostProcessComponent",
+      "    {"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.universal@7228970dbdbf/Runtime/2D/Passes/Utility/Light2DLookupTexture.cs",
+    "line": 34,
+    "context": [
+      "        {",
+      "            if (s_FalloffLookupTexture == null || m_FalloffRTHandle == null)",
+      "            {",
+      "                var fallOffLookupTexture = GetFalloffLookupTexture();",
+      "",
+      "                m_FalloffRTHandle?.Release();",
+      "                m_FalloffRTHandle = RTHandles.Alloc(fallOffLookupTexture);",
+      "            }"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.render-pipelines.universal@7228970dbdbf/Runtime/2D/Passes/Utility/Light2DLookupTexture.cs",
+    "line": 37,
+    "context": [
+      "                var fallOffLookupTexture = GetFalloffLookupTexture();",
+      "",
+      "                m_FalloffRTHandle?.Release();",
+      "                m_FalloffRTHandle = RTHandles.Alloc(fallOffLookupTexture);",
+      "            }",
+      "",
+      "            return m_FalloffRTHandle;",
+      "        }"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "scene": "Assets/Scenes/SampleScene.unity",
+    "bootstrapAssignments": [
+      "_bootstrapPrefab: {fileID: 968918444066301895, guid: b7c55e0db5bc46df90a6157eb1521758, type: 3}"
+    ],
+    "directFourteenGuids": []
+  },
+  {
+    "scene": "Assets/Scenes/AwakeningLivingGlass.unity",
+    "bootstrapAssignments": [
+      "_bootstrapPrefab: {fileID: 968918444066301895, guid: b7c55e0db5bc46df90a6157eb1521758, type: 3}"
+    ],
+    "directFourteenGuids": []
+  }
+]

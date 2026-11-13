@@ -1,0 +1,396 @@
+[
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "PerformerCodes"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "screenDocumentManager"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "screenCatalog"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "homeController"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "screenUnbind"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "overlays"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "overlayUnbind"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "activeBindingScreen"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "colorReleaseRoot"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "cameraPreviewFrame"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "cameraPreviewImage"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "cameraPreviewDocumentRoot"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "cameraPreviewStatus"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "nodeSnapshot"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "interactionStyles"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "handTrackingStatus"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "assistantScreenId"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "FieldDeclarationSyntax",
+    "name": "placeholder"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "ClassDeclarationSyntax",
+    "name": "OverlayState"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "ClassDeclarationSyntax",
+    "name": "ManifestSnapshot"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "ClassDeclarationSyntax",
+    "name": "ManifestScreen"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "ClassDeclarationSyntax",
+    "name": "ManifestNode"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "Awake"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "OnEnable"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "Start"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "UpdateCameraPreview"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "SetCameraPreviewStatus"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "BindHandTrackingStatus"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "UpdateHandTrackingStatus"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "OnLanguageChanged"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "OnConsentChanged"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "OnPrivacyRequested"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "OnSettingsRequested"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "OnReviewConsentRequested"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "ShowHome"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ReturnHomeFromDone"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ReturnHomeFromSettings"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "BindCurrentScreen"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "BindAssistantPerformerChoices"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "PrepareColorReleaseSelection"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "BindColorReleasePerformerChoices"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "SetLabelTextAtPath"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "RegisterTargetHover"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "RegisterButtonHoverProxy"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "SelectPerformer"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "GetPerformerScreen"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "IsPerformerStage"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "OpenAssistantOverlay"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ConfigureAssistantChat"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ConfigurePerformerAgentPage"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "retain Living Glass branch / pure route authority",
+    "name": "IsAssistantSessionViewActive"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "CloseTopOverlay"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "GetUxmlRoot"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "FocusFirstFocusable"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "BindPath"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "FindManifestNode"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ApplyInteractionStyles"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ApplyInteractionStylesTo"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "RegisterClick"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "RegisterPageClick"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "DisableSettingsControls"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "MarkUnavailable"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "RegisterKeyOnRoot"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "RegisterKeyHandling"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "TryResolvePath"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ResolveRuntimeElementPath"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "action": "remove legacy member",
+    "kind": "MethodDeclarationSyntax",
+    "name": "ArrayIndexOf"
+  }
+]

@@ -1,0 +1,572 @@
+{
+    "label": "Enter-bridge-280",
+    "utc": "2026-11-13T11:11:47.6033451Z",
+    "route": "GAIA---FOCUS-VIEW---PER-001",
+    "locale": "English",
+    "focus": "play-performer-video",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 56741,
+    "performer": 0,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 0.08061444759368897,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "gallery-arc",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 340.0,
+                "width": 1728.0,
+                "height": 464.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "identification",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 550.0,
+                "y": 797.0,
+                "width": 820.0,
+                "height": 131.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 633.0,
+                "y": 972.0,
+                "width": 655.0,
+                "height": 80.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 986.0,
+                "width": 242.0,
+                "height": 66.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "presence-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 340.0,
+                "width": 261.0,
+                "height": 464.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "aperture-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 99.0,
+                "y": 381.0,
+                "width": 255.0,
+                "height": 340.0
+            },
+            "opacity": 0.0,
+            "scale": 1.0000020265579224,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "performer-name-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 101.0,
+                "y": 735.0,
+                "width": 249.0,
+                "height": 40.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "GAIA"
+        },
+        {
+            "name": "art-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 94.53750610351563,
+                "y": 375.0500183105469,
+                "width": 263.92498779296877,
+                "height": 351.8999938964844
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "presence-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 389.0,
+                "y": 340.0,
+                "width": 262.0,
+                "height": 464.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "aperture-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 392.0,
+                "y": 359.0,
+                "width": 256.0,
+                "height": 370.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0000063180923463,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "performer-name-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 394.0,
+                "y": 743.0,
+                "width": 250.0,
+                "height": 40.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "PANDEMIC"
+        },
+        {
+            "name": "art-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 387.52001953125,
+                "y": 352.5249938964844,
+                "width": 264.9599609375,
+                "height": 382.9499816894531
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "presence-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 683.0,
+                "y": 340.0,
+                "width": 261.0,
+                "height": 464.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "aperture-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 686.0,
+                "y": 343.0,
+                "width": 255.0,
+                "height": 400.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0000014305114747,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "performer-name-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 688.0,
+                "y": 757.0,
+                "width": 249.0,
+                "height": 40.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "RE-BIRTH"
+        },
+        {
+            "name": "art-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 681.5374755859375,
+                "y": 336.0,
+                "width": 263.92498779296877,
+                "height": 414.0
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "presence-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 976.0,
+                "y": 340.0,
+                "width": 261.0,
+                "height": 464.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "aperture-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 979.0,
+                "y": 343.0,
+                "width": 255.0,
+                "height": 400.0
+            },
+            "opacity": 1.0,
+            "scale": 1.000003695487976,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "performer-name-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 981.0,
+                "y": 757.0,
+                "width": 249.0,
+                "height": 40.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "WHITE-GUARDIAN"
+        },
+        {
+            "name": "art-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 974.5374755859375,
+                "y": 336.0,
+                "width": 263.925048828125,
+                "height": 414.0
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "presence-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1269.0,
+                "y": 340.0,
+                "width": 262.0,
+                "height": 464.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "aperture-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1272.0,
+                "y": 359.0,
+                "width": 256.0,
+                "height": 370.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0000044107437134,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "performer-name-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1274.0,
+                "y": 743.0,
+                "width": 250.0,
+                "height": 40.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "CONSCIENCE"
+        },
+        {
+            "name": "art-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1267.52001953125,
+                "y": 352.5249938964844,
+                "width": 264.9599609375,
+                "height": 382.9499816894531
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "presence-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1563.0,
+                "y": 340.0,
+                "width": 261.0,
+                "height": 464.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "aperture-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1563.4503173828125,
+                "y": 371.60040283203127,
+                "width": 260.099365234375,
+                "height": 346.7991943359375
+            },
+            "opacity": 1.0,
+            "scale": 1.0199975967407227,
+            "translation": {
+                "x": 0.0,
+                "y": -6.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "performer-name-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1568.0,
+                "y": 735.0,
+                "width": 249.0,
+                "height": 40.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "SANCTUARY"
+        },
+        {
+            "name": "art-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1558.8985595703125,
+                "y": 365.53143310546877,
+                "width": 269.202880859375,
+                "height": 358.9371337890625
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        }
+    ]
+}

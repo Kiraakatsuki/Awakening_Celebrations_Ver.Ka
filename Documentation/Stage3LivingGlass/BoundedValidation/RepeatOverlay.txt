@@ -1,0 +1,2 @@
+Eight alternating open/close cycles; plane count=0; visible=False
+route=GAIA---FOCUS-VIEW---PER-001;locale=English;focus=shell-settings;size=1920x1080;overlay=False;consent=False;rigInactive=True;requestAbsent=True;prepared=False,playing=False,frame=-1,time=0,clip=none

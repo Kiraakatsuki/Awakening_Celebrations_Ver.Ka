@@ -1,0 +1,339 @@
+diff --git a/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs b/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs
+index 8a6e65d..b2f6133 100644
+--- a/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs	
++++ b/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs	
+@@ -33,6 +33,8 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
+     public event Action<HandLandmarkerResult> ResultReceived;
+     public bool IsPipelineStarted { get { return pipelineStarted; } }
+     public bool IsImageSourcePrepared { get { return imageSourcePrepared; } }
++    // Read-only diagnostic for presentation; capture ownership and retry semantics are unchanged.
++    public string LastPipelineFailureType { get; private set; }
+     public Texture CameraPreviewTexture
+     {
+       get
+@@ -71,6 +73,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
+ 
+       if (bootstrap == null || !bootstrap.isFinished)
+       {
++        LastPipelineFailureType = "BootstrapUnavailable";
+         Debug.LogError("MediaPipe Bootstrap did not finish initializing within 60 seconds. Camera and hand tracking were not started.", this);
+         yield break;
+       }
+@@ -115,6 +118,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
+       if (!bootstrapReady || !GestureCameraConsentGate.ConsentGranted)
+         return;
+ 
++      LastPipelineFailureType = null;
+       base.Play();
+       pipelineStarted = true;
+     }
+@@ -181,6 +185,7 @@ namespace Mediapipe.Unity.Sample.HandLandmarkDetection
+ 
+         if (pipelineFailure != null)
+         {
++          LastPipelineFailureType = pipelineFailure.GetType().Name;
+           Debug.LogError($"MediaPipe hand tracking startup or processing failed: {pipelineFailure}", this);
+           // Allow StartCoroutine to finish assigning the runner coroutine handle before
+           // the base runner's Stop() attempts to stop it.
+diff --git a/Assets/Scripts/AwakeningApplicationController.cs b/Assets/Scripts/AwakeningApplicationController.cs
+index 3e96f2a..fb1408f 100644
+--- a/Assets/Scripts/AwakeningApplicationController.cs
++++ b/Assets/Scripts/AwakeningApplicationController.cs
+@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
+ using UnityEngine.Video;
+ 
+ [DefaultExecutionOrder(-100)]
+-public sealed class AwakeningApplicationController : MonoBehaviour
++public sealed partial class AwakeningApplicationController : MonoBehaviour
+ {
+     private const string HomeScreen = "Home";
+     private const string PrivacyScreen = "Privacy";
+@@ -151,6 +151,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+         public ScrollView conversation;
+         public Label status;
+         public Button send;
++        public Button cancel;
+         public string failedMessage;
+         public bool requestInProgress;
+     }
+@@ -223,6 +224,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+     {
+         gestureCursor = new GestureCursorController(gestureCursorSmoothingSpeed);
+         GestureCameraConsentGate.SetConsent(false);
++        if (livingGlass != null)
++        {
++            navigationDocument = livingGlass.Document;
++            return;
++        }
+         if (screenCatalog == null)
+             screenCatalog = Resources.Load<RuntimeScreenCatalog>("RuntimeScreenCatalog");
+         TextAsset snapshot = Resources.Load<TextAsset>("RuntimeNodeBindings");
+@@ -273,6 +279,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void OnDisable()
+     {
++        if (livingGlass != null)
++        {
++            ClearBindings(livingChatUnbind);
++            CancelAssistantRequest();
++            livingGlass.Shutdown();
++        }
+         cameraPreviewFrame?.RemoveFromHierarchy();
+         if (cameraPreviewImage != null)
+             cameraPreviewImage.image = null;
+@@ -310,6 +322,13 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+     private IEnumerator Start()
+     {
+         yield return null;
++        if (livingGlass != null)
++        {
++            livingGlass.Initialize(this);
++            language = PlayerPrefs.GetString("AwakeningCelebrations.Language", "en") == "zh" ? AppLanguage.Chinese : AppLanguage.English;
++            LivingGlassRender();
++            yield break;
++        }
+         if (screenCatalog == null)
+             Debug.LogError("AwakeningApplicationController: Resources/RuntimeScreenCatalog.asset is missing.", this);
+         if (screenDocumentManager == null && navigationDocument == null)
+@@ -343,6 +362,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void UpdateCameraPreview()
+     {
++        if (livingGlass != null)
++        {
++            LivingGlassUpdateStatus();
++            return;
++        }
+         bool applicable = GestureCameraConsentGate.ConsentGranted && gestureBridge != null &&
+             gestureBridge.IsCameraReady &&
+             (currentScreen == AttractScreen || currentScreen == ColorReleaseScreen ||
+@@ -489,6 +513,10 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void OnPointingChanged(bool isPointing, Vector2 normalizedPosition)
+     {
++        if (livingGlass != null && livingGlass.OverlayVisible)
++            return;
++        if (livingGlass != null && livingPointerOwnsTarget)
++            return;
+         gestureCursor?.SetPointing(isPointing, normalizedPosition);
+         if (!isPointing)
+         {
+@@ -505,6 +533,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void UpdatePointedPerformer()
+     {
++        if (livingGlass != null && livingGlass.OverlayVisible)
++            return;
+         if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady ||
+             overlays.Count > 0 || performerTargets == null)
+             return;
+@@ -542,6 +572,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+         {
+             gestureTargetCandidate = candidate;
+             gestureTargetCandidateSince = Time.unscaledTime;
++            if (livingGlass != null) livingGlass.AcquisitionChanged(candidate);
+         }
+ 
+         if (Time.unscaledTime - gestureTargetCandidateSince >= gestureTargetStabilitySeconds)
+@@ -635,6 +666,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void HandleInteractionCommand(InteractionCommand command)
+     {
++        if (livingGlass != null && livingGlass.OverlayVisible)
++        {
++            if (command == InteractionCommand.BackRequested) LivingGlassCloseOverlay();
++            return;
++        }
+         if (command == InteractionCommand.BackRequested)
+         {
+             if (currentScreen != HomeScreen)
+@@ -732,6 +768,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+         if (performerTargets != null && targetedPerformer >= 0 && targetedPerformer < performerTargets.Length && performerTargets[targetedPerformer] != null)
+             performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
+         targetedPerformer = index;
++        if (livingGlass != null)
++            livingGlass.TargetChanged(index);
+         if (index >= 0 && performerTargets != null && index < performerTargets.Length && performerTargets[index] != null)
+             performerTargets[index].AddToClassList("ac-performer-targeted");
+         if (index >= 0)
+@@ -740,6 +778,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void ClearTargetedPerformer()
+     {
++        livingPointerOwnsTarget = false;
++        if (livingGlass != null) livingGlass.TargetChanged(-1);
+         gestureCursor?.ClearPosition();
+         if (performerTargets != null && targetedPerformer >= 0 && targetedPerformer < performerTargets.Length && performerTargets[targetedPerformer] != null)
+             performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
+@@ -828,7 +868,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+             return false;
+         }
+         VisualTreeAsset asset;
+-        if (screenCatalog == null || !screenCatalog.TryGet(screenId, targetLanguage, out asset))
++        asset = null;
++        if (livingGlass != null ? !LivingGlassRoutes.Supports(screenId) : (screenCatalog == null || !screenCatalog.TryGet(screenId, targetLanguage, out asset)))
+         {
+             Debug.LogError("AwakeningApplicationController: No " + targetLanguage + " asset is registered for logical screen '" + screenId + "'.", this);
+             return false;
+@@ -855,7 +896,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+             backStack.Clear();
+ 
+         ClearBindings(screenUnbind);
+-        if (screenDocumentManager != null)
++        if (livingGlass != null)
++        {
++            // Render after flow state is committed; the view may retain an inert art proxy.
++        }
++        else if (screenDocumentManager != null)
+             navigationDocument = screenDocumentManager.Activate(screenId, asset);
+         else
+         {
+@@ -905,6 +950,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     public void ShowHome(bool recordHistory)
+     {
++        if (livingGlass != null)
++        {
++            LivingGlassHome(false);
++            return;
++        }
+         if (hasAwakenedThisSession)
+         {
+             if (currentScreen != ColorReleaseScreen)
+@@ -943,6 +993,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void ReturnHomeFromDone()
+     {
++        if (livingGlass != null)
++        {
++            LivingGlassHome(true);
++            return;
++        }
+         if (transitionInProgress)
+             return;
+ 
+@@ -983,6 +1038,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     public void Back()
+     {
++        if (livingGlass != null && livingGlass.OverlayVisible)
++        {
++            LivingGlassCloseOverlay();
++            return;
++        }
+         bool leavingVideo = IsPerformerStage(currentScreen, out _, out int stage) && stage == 2;
+         if (!leavingVideo && (transitionInProgress || performerSequenceActive || performerFlowTransitionLock))
+             return;
+@@ -1033,6 +1093,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void BindCurrentScreen()
+     {
++        if (livingGlass != null)
++        {
++            LivingGlassRender();
++            return;
++        }
+         VisualElement root = GetUxmlRoot(navigationDocument.rootVisualElement);
+         if (root == null)
+             return;
+@@ -1404,6 +1469,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void PrepareColorReleaseSelection()
+     {
++        if (livingGlass != null)
++        {
++            LivingGlassRender();
++            return;
++        }
+         if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady || colorReleaseRoot == null)
+             return;
+ 
+@@ -1552,6 +1622,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+         {
+             if (performerSequenceActive)
+                 return;
++            if (livingGlass != null) livingGlass.SettleRoutePresentation();
+             performerSequenceActive = true;
+             performerFlowTransitionLock = true;
+             transitionInProgress = true;
+@@ -1573,7 +1644,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+     private IEnumerator FadeFocusIntoActivation(int performer)
+     {
+         string focusScreen = GetPerformerScreen(performer, 0);
+-        VisualElement focusRoot = navigationDocument == null ? null : navigationDocument.rootVisualElement;
++        VisualElement focusRoot = LivingContent;
+         yield return FadeVisualElement(focusRoot, 1f, 0f, performerTransitionFadeSeconds);
+         if (currentScreen != focusScreen || selectedPerformer != performer)
+         {
+@@ -1661,7 +1732,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+     {
+         if (element == null)
+             yield break;
+-        float safeDuration = Mathf.Max(0.05f, duration);
++        float safeDuration = livingGlass != null && livingGlass.ReducedMotion ? 0.001f : Mathf.Max(0.05f, duration);
+         float elapsed = 0f;
+         while (elapsed < safeDuration)
+         {
+@@ -1901,7 +1972,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+     {
+         transitionInProgress = true;
+         performerFlowTransitionLock = true;
+-        VisualElement root = navigationDocument == null ? null : navigationDocument.rootVisualElement;
++        VisualElement root = LivingContent;
+         yield return FadeVisualElement(root, 1f, 0f, performerTransitionFadeSeconds);
+         if (!IsCurrentPerformerStage(performer, 2))
+         {
+@@ -2014,6 +2085,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+ 
+     private void OpenAssistantOverlay(int performer)
+     {
++        if (livingGlass != null && performer >= 0 && performer < Performers.Length)
++        {
++            LivingGlassOpenOverlay("Assistant-" + Performers[performer]);
++            return;
++        }
+         if (performer < 0 || performer >= Performers.Length)
+         {
+             Debug.LogError("Cannot open an assistant for invalid performer index " + performer + ".", this);
+@@ -2320,8 +2396,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+         }
+ 
+         session.requestInProgress = true;
++        if (livingGlass != null) session.root.Q("assistant-empty")?.AddToClassList("lg-hidden");
+         if (session.send != null)
+             session.send.SetEnabled(false);
++        if (session.cancel != null)
++            session.cancel.SetEnabled(true);
+         SetAssistantStatus(session, language == AppLanguage.English ? "Thinking…" : "思考中…", true);
+         string scopedMessage = BuildPerformerScopedMessage(session, message);
+         assistantRequestRoutine = StartCoroutine(SendAssistantRequest(session, scopedMessage, chatUrl, message));
+@@ -2331,6 +2410,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+     {
+         if (session == null)
+             return false;
++        if (livingGlass != null)
++            return livingGlass.IsAssistantActive(session.root) && selectedPerformer == session.performerIndex;
+         if (session.assistantScreenId == activeBindingScreen)
+             return true;
+ 
+@@ -2372,6 +2453,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
+             session.requestInProgress = false;
+             if (session.send != null)
+                 session.send.SetEnabled(true);
++            if (session.cancel != null)
++                session.cancel.SetEnabled(false);
+             if (request.result != UnityWebRequest.Result.Success)
+             {
+                 string retryHint = session.send == null
+diff --git a/Assets/Scripts/Interaction/MediaPipeGestureBridge.cs b/Assets/Scripts/Interaction/MediaPipeGestureBridge.cs
+index 9b67dce..1411846 100644
+--- a/Assets/Scripts/Interaction/MediaPipeGestureBridge.cs
++++ b/Assets/Scripts/Interaction/MediaPipeGestureBridge.cs
+@@ -46,6 +46,7 @@ namespace AwakeningCelebrations.Interaction
+         public int TrackedHandCount { get; private set; }
+         public bool IsCameraReady => runner != null && runner.IsImageSourcePrepared;
+         public bool HasReceivedFrames { get; private set; }
++        public bool HasCameraFailure => runner != null && !string.IsNullOrEmpty(runner.LastPipelineFailureType);
+         public Texture CameraPreviewTexture => IsCameraReady ? runner.CameraPreviewTexture : null;
+ 
+         public event Action<GestureRecognitionEvent> GestureDetected;

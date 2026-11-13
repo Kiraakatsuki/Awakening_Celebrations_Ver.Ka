@@ -1,0 +1,16 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Retrieved 1 log entries.\",\"data\":[\"Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).\"]}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Retrieved 1 log entries.",
+    "data": [
+      "Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com)."
+    ]
+  },
+  "isError": false
+}

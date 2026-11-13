@@ -1,0 +1,11 @@
+{
+  "removed": [
+    "com.unity.pipeline",
+    "com.unity.ui.figma"
+  ],
+  "changed_versions": [],
+  "added": [],
+  "app_ui_retained": true,
+  "mediapipe_version": "file:C:/Users/Nakul J S/Downloads/com.github.homuler.mediapipe-0.16.3.tgz",
+  "urp_version": "17.4.0"
+}

@@ -1,0 +1,178 @@
+--- before/Assets\LivingGlass\Editor\LivingGlassBoundedValidation.cs
++++ after/Assets\LivingGlass\Editor\LivingGlassBoundedValidation.cs
+@@ -1,5 +1,6 @@
+ #if UNITY_EDITOR
+ using System;
++using System.Collections;
+ using System.Collections.Generic;
+ using System.IO;
+ using System.Linq;
+@@ -17,14 +18,26 @@
+ public static class LivingGlassBoundedValidation
+ {
+     private const string Arm = "LivingGlass.Bounded.Armed";
+-    private const string Folder = "Documentation/Stage3LivingGlass/BoundedValidation";
++    private const string EvidenceRoot = "Documentation/Stage3LivingGlass/Stage31Stabilization/RuntimeRetest";
++    private static string Folder { get { return SessionState.GetString("LG.EvidenceFolder", EvidenceRoot + "/Unarmed"); } }
+     private const BindingFlags Private = BindingFlags.Instance | BindingFlags.NonPublic;
+     private static AwakeningApplicationController flow;
+     private static LivingGlassPresentation view;
+     private static LivingGlassAssets previewAssets;
+     private static readonly List<string> log = new List<string>();
+     private static readonly List<TimedAction> actions = new List<TimedAction>();
++    private static readonly Queue<CaptureRequest> captures = new Queue<CaptureRequest>();
++    private static CaptureRequest activeCapture;
++    private static Coroutine captureRoutine;
++    private static double captureDeadline;
++    private static int captureSequence;
+     private sealed class TimedAction { public double due; public Action action; }
++    private sealed class CaptureRequest
++    {
++        public string label, route, locale, utc, overlayKind;
++        public int frame, generation, target;
++        public bool overlay;
++    }
+     static LivingGlassBoundedValidation()
+     {
+         EditorApplication.playModeStateChanged += Changed;
+@@ -39,6 +52,7 @@
+     {
+         if (EditorApplication.isPlayingOrWillChangePlaymode || ScenePath() != LivingGlassSceneBuilder.ScenePath || UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty)
+             throw new InvalidOperationException("Requires the saved new scene in Edit Mode.");
++        SessionState.SetString("LG.EvidenceFolder", EvidenceRoot + "/" + DateTime.UtcNow.ToString("yyyyMMddTHHmmssfff") + "-" + Guid.NewGuid().ToString("N").Substring(0,6));
+         Directory.CreateDirectory(Folder + "/Screenshots");
+         flow = UnityEngine.Object.FindAnyObjectByType<AwakeningApplicationController>();
+         view = UnityEngine.Object.FindAnyObjectByType<LivingGlassPresentation>();
+@@ -61,12 +75,14 @@
+     private static void Changed(PlayModeStateChange state)
+     {
+         if (!SessionState.GetBool(Arm,false)) return;
+-        if (state == PlayModeStateChange.EnteredPlayMode) { flow = null; view = null; log.Clear(); actions.Clear(); }
++        if (state == PlayModeStateChange.EnteredPlayMode)
++        { flow = null; view = null; log.Clear(); actions.Clear(); captures.Clear(); activeCapture=null; captureRoutine=null; captureSequence=0; }
+         if (state == PlayModeStateChange.EnteredEditMode)
+         {
+             SessionState.SetBool(Arm,false);
+             File.WriteAllLines(Folder+"/RuntimeLog.txt", log);
+             actions.Clear();
++            captures.Clear(); activeCapture=null; captureRoutine=null;
+             if (SessionState.GetBool("LG.PrefHad",false)) PlayerPrefs.SetString("AwakeningCelebrations.Language", SessionState.GetString("LG.Pref","en"));
+             else PlayerPrefs.DeleteKey("AwakeningCelebrations.Language");
+             PlayerPrefs.Save();
+@@ -102,7 +118,23 @@
+             view.Root.Query<Button>(className:"lg-suggestion").ForEach(button => button.SetEnabled(false));
+         }
+         double now = EditorApplication.timeSinceStartup;
+-        for (int i=actions.Count-1;i>=0;i--) if (actions[i].due <= now) { Action action=actions[i].action; actions.RemoveAt(i); action(); }
++        if (activeCapture != null)
++        {
++            if (now > captureDeadline)
++            {
++                if (view != null && captureRoutine != null) view.StopCoroutine(captureRoutine);
++                RejectCapture(activeCapture, "No rendered end-of-frame within five seconds. Keep the Game view visible; no screenshot accepted.");
++                activeCapture=null; captureRoutine=null;
++            }
++            return;
++        }
++        if (captures.Count > 0) { StartNextCapture(); return; }
++        // Due work is FIFO for equal times and chronological after an Editor stall.
++        foreach (TimedAction item in actions.Where(a=>a.due<=now).OrderBy(a=>a.due).ToArray())
++        {
++            actions.Remove(item); item.action();
++            if (activeCapture != null || captures.Count > 0) break;
++        }
+     }
+     public static string Gallery()
+     {
+@@ -133,8 +165,52 @@
+     }
+     public static void Capture(string label)
+     {
+-        Require(); State(label);
+-        ScreenCapture.CaptureScreenshot(Folder+"/Screenshots/"+label+".png");
++        Require();
++        if (string.IsNullOrEmpty(label) || label.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
++            throw new ArgumentException("Capture label must be a filename, without a path.");
++        captures.Enqueue(new CaptureRequest { label=label+"-"+(++captureSequence).ToString("D4"), route=flow.CurrentScreen,
++            locale=flow.Language.ToString(), utc=DateTime.UtcNow.ToString("O"), frame=Time.frameCount,
++            generation=(int)Get(view,"viewGeneration"), target=(int)Get(view,"target"), overlay=view.OverlayVisible,overlayKind=(string)Get(view,"overlayKind") });
++        if (activeCapture == null) StartNextCapture();
++    }
++    private static void StartNextCapture()
++    {
++        if (captures.Count == 0) return;
++        activeCapture=captures.Dequeue(); captureDeadline=EditorApplication.timeSinceStartup+5;
++        captureRoutine=view.StartCoroutine(CaptureRenderedFrame(activeCapture));
++        foreach (EditorWindow window in Resources.FindObjectsOfTypeAll<EditorWindow>())
++            if (window.GetType().FullName == "UnityEditor.GameView") window.Repaint();
++        EditorApplication.QueuePlayerLoopUpdate();
++    }
++    private static IEnumerator CaptureRenderedFrame(CaptureRequest request)
++    {
++        yield return new WaitForEndOfFrame();
++        Texture2D pixels=null; RenderTexture previous=RenderTexture.active;
++        try
++        {
++            Require();
++            if (flow.CurrentScreen != request.route || flow.Language.ToString() != request.locale ||
++                (int)Get(view,"viewGeneration") != request.generation || (int)Get(view,"target") != request.target || view.OverlayVisible != request.overlay || (string)Get(view,"overlayKind") != request.overlayKind)
++                throw new InvalidOperationException("Presentation changed between capture request and rendered frame; rejected instead of pairing stale metadata.");
++            pixels=ScreenCapture.CaptureScreenshotAsTexture(1);
++            if (pixels == null || !pixels.isReadable || pixels.width != Screen.width || pixels.height != Screen.height || Screen.width != 1920 || Screen.height != 1080)
++                throw new InvalidOperationException("Capture must be readable and exactly match the 1920x1080 Game view.");
++            byte[] png=pixels.EncodeToPNG();
++            WriteState(request.label,request);
++            File.WriteAllBytes(Folder+"/Screenshots/"+request.label+".png",png);
++        }
++        catch (Exception error) { RejectCapture(request,error.Message); }
++        finally
++        {
++            RenderTexture.active=previous;
++            if (pixels != null) UnityEngine.Object.Destroy(pixels);
++            activeCapture=null; captureRoutine=null;
++        }
++    }
++    private static void RejectCapture(CaptureRequest request, string reason)
++    {
++        File.WriteAllText(Folder+"/"+request.label+"-REJECTED.txt",reason);
++        log.Add("Capture rejected: "+request.label+" | "+reason);
+     }
+     public static void After(float seconds, Action action) { actions.Add(new TimedAction { due=EditorApplication.timeSinceStartup+seconds, action=action }); }
+     public static string Burst(string label)
+@@ -144,27 +220,30 @@
+         { float at=time; After(at,()=>Capture(label+"-"+Mathf.RoundToInt(at*1000))); }
+         return "Queued actual rendered frame snapshots; no semantic/media events are synthesized.";
+     }
+-    [Serializable] private sealed class ElementRecord { public string name; public Rect bounds; public float opacity,scale; public Vector3 translation; public bool enabled; public string text; }
++    [Serializable] private sealed class ElementRecord { public string name; public Rect bounds; public float opacity,scale; public Vector3 translation; public bool enabled; public string text,visibility,picking; }
+     [Serializable] private sealed class Snapshot
+     {
+-        public string label,utc,route,locale,focus,videoState; public int width,height,frame,performer,players,playingPlayers;
++        public string label,utc,route,locale,focus,videoState,capturePhase,requestedUtc,overlayKind; public int width,height,frame,performer,players,playingPlayers,requestedFrame;
+         public bool cameraConsent,sessionConsent,rigInactive,requestAbsent,overlay; public ElementRecord[] elements;
+     }
+     public static string State(string label)
+-    {
+-        Require();
+-        var names = new List<string> { "content","gallery-arc","identification","shell","glass-window","camera","assistantChatStatus","resume-window" };
++    { return WriteState(label,null); }
++    private static string WriteState(string label, CaptureRequest capture)
++    {
++        Require();
++        var names = new List<string> { "content","header","outgoing-content","transition-portrait","chapter-copy","gallery-arc","identification","shell","glass-window","camera","assistantChatStatus","resume-window" };
+         for (int i=0;i<6;i++) { names.Add("presence-"+i); names.Add("aperture-"+i); names.Add("performer-name-"+i); names.Add("art-"+i); }
+         var elements = new List<ElementRecord>();
+         foreach (string name in names)
+         {
+             VisualElement e=view.Root.Q(name); if(e==null)continue;
+-            elements.Add(new ElementRecord { name=name,bounds=e.worldBound,opacity=e.resolvedStyle.opacity,scale=e.resolvedStyle.scale.value.x,translation=e.resolvedStyle.translate,enabled=e.enabledInHierarchy,text=(e as TextElement)?.text });
++            elements.Add(new ElementRecord { name=name,bounds=e.worldBound,opacity=e.resolvedStyle.opacity,scale=e.resolvedStyle.scale.value.x,translation=e.resolvedStyle.translate,enabled=e.enabledInHierarchy,text=(e as TextElement)?.text,visibility=e.resolvedStyle.visibility.ToString(),picking=e.pickingMode.ToString() });
+         }
+         var players=UnityEngine.Object.FindObjectsByType<VideoPlayer>(FindObjectsInactive.Include);
+         var p=players.FirstOrDefault();
+         var focused=view.Root.focusController?.focusedElement as VisualElement;
+         var data=new Snapshot { label=label,utc=DateTime.UtcNow.ToString("O"),route=flow.CurrentScreen,locale=flow.Language.ToString(),focus=focused?.name,
++            capturePhase=capture==null?"State only (no pixels)":"Rendered end-of-frame", requestedFrame=capture==null?Time.frameCount:capture.frame,requestedUtc=capture?.utc,overlayKind=(string)Get(view,"overlayKind"),
+             width=Screen.width,height=Screen.height,frame=Time.frameCount,performer=flow.SelectedPerformer,cameraConsent=GestureCameraConsentGate.ConsentGranted,sessionConsent=flow.LivingConsent,
+             rigInactive=UnityEngine.Object.FindObjectsByType<HandLandmarkerRunner>(FindObjectsInactive.Include).All(r=>!r.isActiveAndEnabled&&!r.IsPipelineStarted),requestAbsent=Get(flow,"assistantWebRequest")==null,
+             overlay=view.OverlayVisible,players=players.Length,playingPlayers=players.Count(v=>v.isPlaying),videoState=p==null?"none":"prepared="+p.isPrepared+",playing="+p.isPlaying+",frame="+p.frame+",time="+p.time+",clip="+(p.clip==null?"none":p.clip.name),elements=elements.ToArray() };

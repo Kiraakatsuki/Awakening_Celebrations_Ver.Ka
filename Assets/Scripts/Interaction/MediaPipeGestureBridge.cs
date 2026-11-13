@@ -46,6 +46,7 @@ namespace AwakeningCelebrations.Interaction
         public int TrackedHandCount { get; private set; }
         public bool IsCameraReady => runner != null && runner.IsImageSourcePrepared;
         public bool HasReceivedFrames { get; private set; }
+        public bool HasCameraFailure => runner != null && !string.IsNullOrEmpty(runner.LastPipelineFailureType);
         public Texture CameraPreviewTexture => IsCameraReady ? runner.CameraPreviewTexture : null;
 
         public event Action<GestureRecognitionEvent> GestureDetected;

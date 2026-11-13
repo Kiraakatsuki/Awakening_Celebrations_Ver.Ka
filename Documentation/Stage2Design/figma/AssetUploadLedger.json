@@ -1,0 +1,68 @@
+[
+  {
+    "performer": "GAIA",
+    "source": "Assets/Art/Figma/PER_GAIA/Approved Master Image.png",
+    "response": {
+      "success": true,
+      "imageHash": "d0b9dde2bbef820accb280eb544262867133da19",
+      "sizeBytes": 2582998,
+      "contentType": "image/png",
+      "placedOnNodeId": "2:7"
+    }
+  },
+  {
+    "performer": "PANDEMIC",
+    "source": "Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png",
+    "response": {
+      "success": true,
+      "imageHash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c",
+      "sizeBytes": 2017133,
+      "contentType": "image/png",
+      "placedOnNodeId": "2:2"
+    }
+  },
+  {
+    "performer": "RE-BIRTH",
+    "source": "Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png",
+    "response": {
+      "success": true,
+      "imageHash": "0c9809f40f73677964b45824c227d85dc2a53bc5",
+      "sizeBytes": 2533585,
+      "contentType": "image/png",
+      "placedOnNodeId": "2:6"
+    }
+  },
+  {
+    "performer": "WHITE",
+    "source": "Assets/Art/Figma/PER_WHITE/Approved Master Image.png",
+    "response": {
+      "success": true,
+      "imageHash": "29dbef3b4629075df8200a85af640f7c4bb8561d",
+      "sizeBytes": 2346191,
+      "contentType": "image/png",
+      "placedOnNodeId": "2:3"
+    }
+  },
+  {
+    "performer": "CONSCIENCE",
+    "source": "Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png",
+    "response": {
+      "success": true,
+      "imageHash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc",
+      "sizeBytes": 2363689,
+      "contentType": "image/png",
+      "placedOnNodeId": "2:4"
+    }
+  },
+  {
+    "performer": "SANCTUARY",
+    "source": "Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png",
+    "response": {
+      "success": true,
+      "imageHash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57",
+      "sizeBytes": 2349630,
+      "contentType": "image/png",
+      "placedOnNodeId": "2:5"
+    }
+  }
+]

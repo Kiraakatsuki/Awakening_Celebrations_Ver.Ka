@@ -1,0 +1,498 @@
+{
+  "createdNodeIds": [
+    "19:362",
+    "19:365",
+    "19:363",
+    "19:364",
+    "19:366",
+    "19:367",
+    "19:384",
+    "19:385",
+    "19:386",
+    "19:387",
+    "19:388",
+    "19:389",
+    "19:390",
+    "19:391",
+    "19:392",
+    "19:393",
+    "19:394",
+    "19:395",
+    "19:396",
+    "19:397",
+    "19:398",
+    "19:399",
+    "19:400",
+    "19:401",
+    "19:402",
+    "19:403",
+    "19:404",
+    "19:437",
+    "19:438",
+    "19:439",
+    "19:440",
+    "19:441",
+    "19:442",
+    "19:443",
+    "19:444",
+    "19:445",
+    "19:446",
+    "19:447",
+    "19:448",
+    "19:449",
+    "19:450",
+    "19:451",
+    "19:452",
+    "19:453",
+    "19:454",
+    "19:455",
+    "19:456",
+    "19:457"
+  ],
+  "mutatedNodeIds": [
+    "18:63",
+    "18:64",
+    "18:65",
+    "18:75",
+    "I18:75;18:64",
+    "18:78",
+    "I18:78;19:363",
+    "18:81",
+    "I18:81;19:366",
+    "18:84",
+    "I18:84;19:366",
+    "18:87",
+    "I18:87;19:363",
+    "18:90",
+    "I18:90;18:64",
+    "18:119",
+    "I18:119;18:64",
+    "18:122",
+    "I18:122;19:363",
+    "18:125",
+    "I18:125;19:366",
+    "18:128",
+    "I18:128;19:366",
+    "18:131",
+    "I18:131;19:363",
+    "18:134",
+    "I18:134;18:64",
+    "18:322",
+    "18:410",
+    "I18:410;18:64",
+    "18:413",
+    "I18:413;19:363",
+    "18:416",
+    "I18:416;19:366",
+    "18:419",
+    "I18:419;19:366",
+    "18:422",
+    "I18:422;19:363",
+    "18:425",
+    "I18:425;18:64",
+    "18:494",
+    "I18:494;18:64",
+    "18:497",
+    "I18:497;19:363",
+    "18:500",
+    "I18:500;19:366",
+    "18:503",
+    "I18:503;19:366",
+    "18:506",
+    "I18:506;19:363",
+    "18:509",
+    "I18:509;18:64",
+    "18:643",
+    "I18:643;18:64",
+    "18:646",
+    "I18:646;19:363",
+    "18:649",
+    "I18:649;19:366",
+    "18:652",
+    "I18:652;19:366",
+    "18:655",
+    "I18:655;19:363",
+    "18:658",
+    "I18:658;18:64",
+    "18:687",
+    "I18:687;18:64",
+    "18:690",
+    "I18:690;19:363",
+    "18:693",
+    "I18:693;19:366",
+    "18:696",
+    "I18:696;19:366",
+    "18:699",
+    "I18:699;19:363",
+    "18:702",
+    "I18:702;18:64",
+    "18:890",
+    "18:978",
+    "I18:978;18:64",
+    "18:981",
+    "I18:981;19:363",
+    "18:984",
+    "I18:984;19:366",
+    "18:987",
+    "I18:987;19:366",
+    "18:990",
+    "I18:990;19:363",
+    "18:993",
+    "I18:993;18:64",
+    "18:1062",
+    "I18:1062;18:64",
+    "18:1065",
+    "I18:1065;19:363",
+    "18:1068",
+    "I18:1068;19:366",
+    "18:1071",
+    "I18:1071;19:366",
+    "18:1074",
+    "I18:1074;19:363",
+    "18:1077",
+    "I18:1077;18:64"
+  ],
+  "depthComponents": [
+    "18:63",
+    "19:362",
+    "19:365"
+  ],
+  "records": [
+    {
+      "frame": "18:66",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:66",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:66",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:66",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:66",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:66",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:110",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:110",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:110",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:110",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:110",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:110",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:401",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:401",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:401",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:401",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:401",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:401",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:485",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:485",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:485",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:485",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:485",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:485",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:634",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:634",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:634",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:634",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:634",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:634",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:678",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:678",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:678",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:678",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:678",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:678",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:969",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:969",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:969",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:969",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:969",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:969",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:1053",
+      "performer": "GAIA",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:1053",
+      "performer": "PANDEMIC",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:1053",
+      "performer": "RE-BIRTH",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:1053",
+      "performer": "WHITE-GUARDIAN",
+      "component": "19:365",
+      "artHeight": 400,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:1053",
+      "performer": "CONSCIENCE",
+      "component": "19:362",
+      "artHeight": 370,
+      "instanceHeight": 464
+    },
+    {
+      "frame": "18:1053",
+      "performer": "SANCTUARY",
+      "component": "18:63",
+      "artHeight": 340,
+      "instanceHeight": 464
+    }
+  ]
+}

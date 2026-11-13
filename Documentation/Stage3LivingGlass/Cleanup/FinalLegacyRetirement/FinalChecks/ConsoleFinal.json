@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Retrieved 4 log entries.",
+  "data": [
+    "Assets\\Scripts\\AwakeningApplicationController.cs(946,50): warning CS0618: 'IStyle.unityBackgroundScaleMode' is obsolete: 'unityBackgroundScaleMode is deprecated. Use background-* properties instead.'\n",
+    "Assets\\Scripts\\AwakeningApplicationController.cs(1171,13): warning CS0618: 'IStyle.unityBackgroundScaleMode' is obsolete: 'unityBackgroundScaleMode is deprecated. Use background-* properties instead.'\n",
+    "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: [WebSocket] Unexpected receive error: WebSocket is not initialised",
+    "Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com)."
+  ]
+}

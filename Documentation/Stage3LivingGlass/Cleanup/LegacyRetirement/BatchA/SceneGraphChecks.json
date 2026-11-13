@@ -1,0 +1,12 @@
+[
+  {
+    "scene": "Assets/Scenes/SampleScene.unity",
+    "unchanged": true,
+    "dependencies": 274
+  },
+  {
+    "scene": "Assets/Scenes/AwakeningLivingGlass.unity",
+    "unchanged": true,
+    "dependencies": 45
+  }
+]

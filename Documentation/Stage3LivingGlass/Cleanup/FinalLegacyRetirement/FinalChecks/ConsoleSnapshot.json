@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "message": "Retrieved 17 log entries.",
+  "data": [
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityObjectIdCompat.cs(54,20): warning CS0618: 'Object.GetInstanceID()' is obsolete: 'GetInstanceID is deprecated. Use GetEntityId instead. This will be removed in a future version.'\n",
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityObjectIdCompat.cs(77,51): warning CS0618: 'EntityId.implicit operator EntityId(int)' is obsolete: 'EntityId will not be representable by an int in the future. This casting operator will be removed in a future version.'\n",
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityFindObjectsCompat.cs(33,49): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'\n",
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityFindObjectsCompat.cs(33,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'\n",
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityFindObjectsCompat.cs(49,52): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'\n",
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityFindObjectsCompat.cs(49,20): warning CS0618: 'Object.FindObjectsByType(Type, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType(Type) or FindObjectsByType(Type, FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'\n",
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityFindObjectsCompat.cs(64,17): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'\n",
+    "Packages\\com.coplaydev.unity-mcp\\Runtime\\Helpers\\UnityFindObjectsCompat.cs(62,20): warning CS0618: 'Object.FindObjectsByType(Type, FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType(Type) or FindObjectsByType(Type, FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'\n",
+    "Assets\\Samples\\MediaPipe Unity Plugin\\0.16.3\\Official Solutions\\Common\\Scripts\\ImageSource\\ImageSource.cs(34,21): warning CS0618: 'Resolution.refreshRate' is obsolete: 'Resolution.refreshRate is obsolete. Use refreshRateRatio instead.'\n",
+    "Assets\\Samples\\MediaPipe Unity Plugin\\0.16.3\\Official Solutions\\Common\\Scripts\\ImageSource\\ImageSource.cs(39,67): warning CS0618: 'Resolution.refreshRate' is obsolete: 'Resolution.refreshRate is obsolete. Use refreshRateRatio instead.'\n",
+    "Assets\\Samples\\MediaPipe Unity Plugin\\0.16.3\\Official Solutions\\Common\\Scripts\\GraphRunner.cs(103,26): warning CS0618: 'Object.GetInstanceID()' is obsolete: 'GetInstanceID is deprecated. Use GetEntityId instead. This will be removed in a future version.'\n",
+    "Assets\\Samples\\MediaPipe Unity Plugin\\0.16.3\\Official Solutions\\Common\\Scripts\\GraphRunner.cs(375,45): warning CS0618: 'Object.GetInstanceID()' is obsolete: 'GetInstanceID is deprecated. Use GetEntityId instead. This will be removed in a future version.'\n",
+    "Assets\\Scripts\\AwakeningApplicationController.cs(946,50): warning CS0618: 'IStyle.unityBackgroundScaleMode' is obsolete: 'unityBackgroundScaleMode is deprecated. Use background-* properties instead.'\n",
+    "Assets\\Scripts\\AwakeningApplicationController.cs(1171,13): warning CS0618: 'IStyle.unityBackgroundScaleMode' is obsolete: 'unityBackgroundScaleMode is deprecated. Use background-* properties instead.'\n",
+    "Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).",
+    "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: [WebSocket] Receive loop error: The remote party closed the WebSocket connection without completing the close handshake.",
+    "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: [WebSocket] Connection closed: The remote party closed the WebSocket connection without completing the close handshake."
+  ]
+}

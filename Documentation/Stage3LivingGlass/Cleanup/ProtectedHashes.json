@@ -1,0 +1,50 @@
+[
+  {
+    "path": "Assets/Scenes/AwakeningLivingGlass.unity",
+    "sha256": "b66a1c508db23d896cb29141125a286116427ca0a196cf8df588f5b90c66f0c8"
+  },
+  {
+    "path": "Assets/Scenes/SampleScene.unity",
+    "sha256": "415e9d2a3ab7e3d34bcef9bd6cc15251316d0abc5db767ab979c381a0ada3d04"
+  },
+  {
+    "path": "ProjectSettings/EditorBuildSettings.asset",
+    "sha256": "ca0137d80f07a367ef09e06b240f6e8ef30d23ae59843d77f6ae15e05cd14a7e"
+  },
+  {
+    "path": "Packages/manifest.json",
+    "sha256": "ba47b9112d475478eefb3ce9e57f84a1516205e925fcd9fed02683c7c3ca3439"
+  },
+  {
+    "path": "Packages/packages-lock.json",
+    "sha256": "d6376fc97b7db80c862c44fe20e4a236a360f7858baf0003afb7f1d33f8fd318"
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait.meta",
+    "sha256": "aba32f128a5ad62d1c756d7be32582181e3fa781bd6a6d625fb72fb447088d71"
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Conscience.mp4.meta",
+    "sha256": "7cf8baf19a609327654fb14c8374b02b2eac1da4053f06e12e7f4d62e904dd45"
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Gaia.mp4.meta",
+    "sha256": "0ac706fd98eab2645c7129af611b87e09255cb8690f7ab467d2a886a3c085fe9"
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Pandemic.mp4.meta",
+    "sha256": "9c2c6e664d7c33a05d953a9e3953f738e3564006bc37718ab0a0c383da878480"
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4.meta",
+    "sha256": "6396bfa622dceb4752008ae51ca37e3d7adab3a36b2c04345c694a14f991a1d6"
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4.meta",
+    "sha256": "c07c4bcdb1e788fd44360808959d4bc612d9687144a0008c8a60c36233b8c82a"
+  },
+  {
+    "path": "Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4.meta",
+    "sha256": "a1e11eb879d6889cfac8da9aadfe7e5b53d223c4c337412053ae8880b0675364"
+  }
+]

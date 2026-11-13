@@ -1,0 +1,12 @@
+[
+  {
+    "scene": "Assets/Scenes/SampleScene.unity",
+    "scriptGuids": 8,
+    "missing": []
+  },
+  {
+    "scene": "Assets/Scenes/AwakeningLivingGlass.unity",
+    "scriptGuids": 7,
+    "missing": []
+  }
+]

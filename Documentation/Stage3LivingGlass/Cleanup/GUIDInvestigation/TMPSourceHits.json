@@ -1,0 +1,146 @@
+[
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_SpriteAsset.cs",
+    "line": 283,
+    "context": [
+      "",
+      "            // Search default sprite asset potentially assigned in the TMP Settings.",
+      "            if (includeFallbacks && TMP_Settings.defaultSpriteAsset != null)",
+      "                return SearchForSpriteByUnicodeInternal(TMP_Settings.defaultSpriteAsset, unicode, true, out spriteIndex);",
+      "",
+      "            spriteIndex = -1;"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_SpriteAsset.cs",
+    "line": 284,
+    "context": [
+      "            // Search default sprite asset potentially assigned in the TMP Settings.",
+      "            if (includeFallbacks && TMP_Settings.defaultSpriteAsset != null)",
+      "                return SearchForSpriteByUnicodeInternal(TMP_Settings.defaultSpriteAsset, unicode, true, out spriteIndex);",
+      "",
+      "            spriteIndex = -1;",
+      "            return null;"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_SpriteAsset.cs",
+    "line": 387,
+    "context": [
+      "",
+      "            // Search default sprite asset potentially assigned in the TMP Settings.",
+      "            if (includeFallbacks && TMP_Settings.defaultSpriteAsset != null)",
+      "            {",
+      "                tempSpriteAsset = SearchForSpriteByHashCodeInternal(TMP_Settings.defaultSpriteAsset, hashCode, true, out spriteIndex);",
+      ""
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_SpriteAsset.cs",
+    "line": 389,
+    "context": [
+      "            if (includeFallbacks && TMP_Settings.defaultSpriteAsset != null)",
+      "            {",
+      "                tempSpriteAsset = SearchForSpriteByHashCodeInternal(TMP_Settings.defaultSpriteAsset, hashCode, true, out spriteIndex);",
+      "",
+      "                if (spriteIndex != -1)",
+      "                    return tempSpriteAsset;"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_SpriteAsset.cs",
+    "line": 418,
+    "context": [
+      "",
+      "            // Search for the missing sprite character in the default sprite asset and potential fallbacks.",
+      "            if (includeFallbacks && TMP_Settings.defaultSpriteAsset != null)",
+      "            {",
+      "                tempSpriteAsset = SearchForSpriteByUnicodeInternal(TMP_Settings.defaultSpriteAsset, missingSpriteCharacterUnicode, true, out spriteIndex);",
+      "                if (spriteIndex != -1)"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_SpriteAsset.cs",
+    "line": 420,
+    "context": [
+      "            if (includeFallbacks && TMP_Settings.defaultSpriteAsset != null)",
+      "            {",
+      "                tempSpriteAsset = SearchForSpriteByUnicodeInternal(TMP_Settings.defaultSpriteAsset, missingSpriteCharacterUnicode, true, out spriteIndex);",
+      "                if (spriteIndex != -1)",
+      "                    return tempSpriteAsset;",
+      "            }"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_Text.cs",
+    "line": 6268,
+    "context": [
+      "",
+      "            // Search for the character in the Default Sprite Asset assigned in the TMP Settings file.",
+      "            if (TMP_Settings.defaultSpriteAsset != null)",
+      "            {",
+      "                TMP_SpriteCharacter spriteCharacter = TMP_FontAssetUtilities.GetSpriteCharacterFromSpriteAsset(unicode, TMP_Settings.defaultSpriteAsset, true);",
+      ""
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_Text.cs",
+    "line": 6270,
+    "context": [
+      "            if (TMP_Settings.defaultSpriteAsset != null)",
+      "            {",
+      "                TMP_SpriteCharacter spriteCharacter = TMP_FontAssetUtilities.GetSpriteCharacterFromSpriteAsset(unicode, TMP_Settings.defaultSpriteAsset, true);",
+      "",
+      "                if (spriteCharacter != null)",
+      "                    return spriteCharacter;"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_Text.cs",
+    "line": 7975,
+    "context": [
+      "                            else if (m_defaultSpriteAsset == null)",
+      "                            {",
+      "                                if (TMP_Settings.defaultSpriteAsset != null)",
+      "                                    m_defaultSpriteAsset = TMP_Settings.defaultSpriteAsset;",
+      "                                else",
+      "                                    m_defaultSpriteAsset = Resources.Load<TMP_SpriteAsset>(\"Sprite Assets/Default Sprite Asset\");"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_Text.cs",
+    "line": 7976,
+    "context": [
+      "                            {",
+      "                                if (TMP_Settings.defaultSpriteAsset != null)",
+      "                                    m_defaultSpriteAsset = TMP_Settings.defaultSpriteAsset;",
+      "                                else",
+      "                                    m_defaultSpriteAsset = Resources.Load<TMP_SpriteAsset>(\"Sprite Assets/Default Sprite Asset\");",
+      ""
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_Text.cs",
+    "line": 7978,
+    "context": [
+      "                                    m_defaultSpriteAsset = TMP_Settings.defaultSpriteAsset;",
+      "                                else",
+      "                                    m_defaultSpriteAsset = Resources.Load<TMP_SpriteAsset>(\"Sprite Assets/Default Sprite Asset\");",
+      "",
+      "                                m_currentSpriteAsset = m_defaultSpriteAsset;",
+      "                            }"
+    ]
+  },
+  {
+    "path": "Library/PackageCache/com.unity.ugui@4dc88464a83d/Runtime/TMP/TMP_Text.cs",
+    "line": 8003,
+    "context": [
+      "",
+      "                                    if (tempSpriteAsset == null)",
+      "                                        tempSpriteAsset = Resources.Load<TMP_SpriteAsset>(TMP_Settings.defaultSpriteAssetPath + new string(m_htmlTag, m_xmlAttribute[0].valueStartIndex, m_xmlAttribute[0].valueLength));",
+      "                                }",
+      "",
+      "                                if (tempSpriteAsset == null)"
+    ]
+  }
+]

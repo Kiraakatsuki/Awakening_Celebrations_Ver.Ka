@@ -1,0 +1,116 @@
+{
+    "label": "04-Settings-zh-settled",
+    "utc": "2026-11-13T11:03:26.1104874Z",
+    "route": "Home",
+    "locale": "Chinese",
+    "focus": "window-close",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 41883,
+    "performer": -1,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": true,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 635.0,
+                "y": 972.0,
+                "width": 650.0,
+                "height": 80.0
+            },
+            "opacity": 0.5,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "glass-window",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1083.0,
+                "y": 100.0,
+                "width": 760.0,
+                "height": 860.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 1011.0,
+                "width": 242.0,
+                "height": 41.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 945.0,
+                "y": 173.0,
+                "width": 879.0,
+                "height": 691.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        }
+    ]
+}

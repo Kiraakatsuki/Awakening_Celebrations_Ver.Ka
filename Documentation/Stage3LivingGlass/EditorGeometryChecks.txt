@@ -1,0 +1,10 @@
+PASS: Gallery-en / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Gallery-zh / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Theme-GAIA / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Theme-PANDEMIC / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Theme-RE-BIRTH / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Theme-WHITE-GUARDIAN / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Theme-CONSCIENCE / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Theme-SANCTUARY / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Reduced-Gallery-en / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.
+PASS: Reduced-Gallery-zh / six distinct stable wrappers; names fit vertical bounds. Static Editor layout only.

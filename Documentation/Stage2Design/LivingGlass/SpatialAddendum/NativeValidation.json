@@ -1,0 +1,1280 @@
+{
+  "pageId": "33:2",
+  "frames": [
+    {
+      "id": "33:9",
+      "name": "Arc spatial / A / GAIA / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "33:54",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:18;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:19;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:20;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:21;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:22;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:60",
+      "name": "Arc spatial / A / PANDEMIC / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:68;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "33:105",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:70;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:71;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:72;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:73;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:111",
+      "name": "Arc spatial / A / RE-BIRTH / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:119;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:120;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "33:156",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:122;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:123;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:124;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:162",
+      "name": "Arc spatial / A / WHITE-GUARDIAN / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:170;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:171;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:172;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "33:207",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:174;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:175;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:213",
+      "name": "Arc spatial / A / CONSCIENCE / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:221;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:222;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:223;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:224;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "33:258",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:226;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:264",
+      "name": "Arc spatial / A / SANCTUARY / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:272;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:273;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:274;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:275;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:276;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "33:309",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:315",
+      "name": "Arc spatial / B / GAIA / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "33:360",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:324;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:325;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:326;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:327;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:328;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:366",
+      "name": "Arc spatial / B / PANDEMIC / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:374;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "33:411",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:376;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:377;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:378;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:379;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:417",
+      "name": "Arc spatial / B / RE-BIRTH / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:425;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:426;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "33:462",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:428;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:429;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:430;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:468",
+      "name": "Arc spatial / B / WHITE-GUARDIAN / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:476;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:477;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:478;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "33:513",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:480;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:481;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:519",
+      "name": "Arc spatial / B / CONSCIENCE / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:527;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:528;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:529;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:530;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "33:564",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:532;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:570",
+      "name": "Arc spatial / B / SANCTUARY / targeted / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:578;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:579;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:580;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:581;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:582;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "33:615",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:621",
+      "name": "Arc spatial / B / NEUTRAL / neutral / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:629;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:630;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:631;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:632;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:633;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:634;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:666",
+      "name": "Arc spatial / B / GAIA / acquiring / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:674;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:675;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:676;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:677;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:678;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:679;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:711",
+      "name": "Arc spatial / B / GAIA / lossPending / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:719;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:720;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:721;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:722;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:723;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:724;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:758",
+      "name": "Arc spatial / B / GAIA / targeted settings / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 41,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:766;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:767;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:768;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:769;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:770;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:771;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:846",
+      "name": "Arc spatial / B / GAIA / targeted ai / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 32,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I33:854;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:855;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:856;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:857;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:858;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:859;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:914",
+      "name": "Arc spatial / A / GAIA / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "33:959",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:923;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:924;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:925;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:926;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:927;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:965",
+      "name": "Arc spatial / A / PANDEMIC / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:973;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "33:1010",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:975;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:976;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:977;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:978;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1016",
+      "name": "Arc spatial / A / RE-BIRTH / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1024;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1025;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "33:1061",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1027;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1028;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1029;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1067",
+      "name": "Arc spatial / A / WHITE-GUARDIAN / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1075;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1076;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1077;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "33:1112",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1079;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1080;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1118",
+      "name": "Arc spatial / A / CONSCIENCE / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1126;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1127;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1128;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1129;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "33:1163",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1131;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1169",
+      "name": "Arc spatial / A / SANCTUARY / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1177;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1178;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1179;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1180;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1181;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "33:1214",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1220",
+      "name": "Arc spatial / B / GAIA / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "33:1265",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1229;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1230;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1231;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1232;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1233;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1271",
+      "name": "Arc spatial / B / PANDEMIC / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1279;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "33:1316",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1281;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1282;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1283;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1284;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1322",
+      "name": "Arc spatial / B / RE-BIRTH / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1330;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1331;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "33:1367",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1333;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1334;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1335;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1373",
+      "name": "Arc spatial / B / WHITE-GUARDIAN / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1381;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1382;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1383;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "33:1418",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1385;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1386;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1424",
+      "name": "Arc spatial / B / CONSCIENCE / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1432;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1433;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1434;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1435;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "33:1469",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1437;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1475",
+      "name": "Arc spatial / B / SANCTUARY / targeted / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1483;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1484;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1485;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1486;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1487;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "33:1520",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1526",
+      "name": "Arc spatial / B / NEUTRAL / neutral / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1534;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1535;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1536;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1537;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1538;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1539;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1571",
+      "name": "Arc spatial / B / GAIA / acquiring / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1579;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1580;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1581;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1582;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1583;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1584;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1616",
+      "name": "Arc spatial / B / GAIA / lossPending / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 22,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1624;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1625;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1626;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1627;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1628;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1629;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1663",
+      "name": "Arc spatial / B / GAIA / targeted settings / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 41,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1671;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1672;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1673;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1674;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1675;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1676;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "33:1751",
+      "name": "Arc spatial / B / GAIA / targeted ai / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 32,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I33:1759;18:64",
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I33:1760;19:363",
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I33:1761;19:366",
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I33:1762;19:366",
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I33:1763;19:363",
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I33:1764;18:64",
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    }
+  ]
+}

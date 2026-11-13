@@ -1,0 +1,1677 @@
+[
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/FaceDetectionConfig.cs",
+    "line": 46,
+    "evidence": "return \"blaze_face_short_range.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/FaceLandmarkDetectionConfig.cs",
+    "line": 30,
+    "evidence": "public string ModelPath => OutputFaceBlendshapes ? \"face_landmarker_v2_with_blendshapes.bytes\" : \"face_landmarker_v2.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkDetectionConfig.cs",
+    "line": 29,
+    "evidence": "public string ModelPath => \"hand_landmarker.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmentationConfig.cs",
+    "line": 71,
+    "evidence": "return \"selfie_segmentation.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmentationConfig.cs",
+    "line": 73,
+    "evidence": "return \"selfie_segmentation_landscape.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/ImageSegmentationConfig.cs",
+    "line": 75,
+    "evidence": "return \"hair_segmentation.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 65,
+    "evidence": "return \"efficientdet_lite0_float16.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 67,
+    "evidence": "return \"efficientdet_lite0_float32.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 69,
+    "evidence": "return \"efficientdet_lite0_int8.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 71,
+    "evidence": "return \"efficientdet_lite2_float16.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 73,
+    "evidence": "return \"efficientdet_lite2_float32.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 75,
+    "evidence": "return \"efficientdet_lite2_int8.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 77,
+    "evidence": "return \"ssd_mobilenet_v2_float16.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/ObjectDetectionConfig.cs",
+    "line": 79,
+    "evidence": "return \"ssd_mobilenet_v2_float32.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkDetectionConfig.cs",
+    "line": 49,
+    "evidence": "return \"pose_landmarker_lite.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkDetectionConfig.cs",
+    "line": 51,
+    "evidence": "return \"pose_landmarker_full.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/PoseLandmarkDetectionConfig.cs",
+    "line": 53,
+    "evidence": "return \"pose_landmarker_heavy.bytes\";"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 234,
+    "evidence": "WaitForAsset(\"face_detection_short_range.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 235,
+    "evidence": "WaitForAsset(refineFaceLandmarks ? \"face_landmark_with_attention.bytes\" : \"face_landmark.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 236,
+    "evidence": "WaitForAsset(\"iris_landmark.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 237,
+    "evidence": "WaitForAsset(\"hand_landmark_full.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 238,
+    "evidence": "WaitForAsset(\"hand_recrop.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 240,
+    "evidence": "WaitForAsset(\"palm_detection_full.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 241,
+    "evidence": "WaitForAsset(\"pose_detection.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 250,
+    "evidence": "case ModelComplexity.Lite: return WaitForAsset(\"pose_landmark_lite.bytes\");"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 251,
+    "evidence": "case ModelComplexity.Full: return WaitForAsset(\"pose_landmark_full.bytes\");"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs",
+    "line": 252,
+    "evidence": "case ModelComplexity.Heavy: return WaitForAsset(\"pose_landmark_heavy.bytes\");"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs",
+    "line": 99,
+    "evidence": "WaitForAsset(\"hand_landmark_full.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs",
+    "line": 100,
+    "evidence": "WaitForAsset(\"hand_recrop.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs",
+    "line": 102,
+    "evidence": "WaitForAsset(\"palm_detection_full.bytes\"),"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/EnumExtension.cs",
+    "line": 23,
+    "evidence": "var field = type.GetField(name);"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 47,
+    "evidence": "private static object Get(object owner, string field) { return owner.GetType().GetField(field, Private).GetValue(owner); }"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 48,
+    "evidence": "private static void Set(object owner, string field, object value) { owner.GetType().GetField(field, Private).SetValue(owner,value); }"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 49,
+    "evidence": "private static object Call(object owner, string method, params object[] values) { return owner.GetType().GetMethod(method, Private).Invoke(owner,values); }"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 337,
+    "evidence": "object group=sizesType.GetMethod(\"GetGroup\").Invoke(sizes,new[]{Enum.Parse(groupType,\"Standalone\")});"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 338,
+    "evidence": "int count=(int)group.GetType().GetMethod(\"GetTotalCount\").Invoke(group,null); int chosen=-1;"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 341,
+    "evidence": "object size=group.GetType().GetMethod(\"GetGameViewSize\").Invoke(group,new object[]{i});"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 349,
+    "evidence": "int custom=(int)group.GetType().GetMethod(\"GetCustomCount\").Invoke(group,null);"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 350,
+    "evidence": "group.GetType().GetMethod(\"AddCustomSize\").Invoke(group,new[]{size}); SessionState.SetInt(\"LG.AddedSize\",custom); chosen=count;"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 364,
+    "evidence": "Type groupType=typeof(Editor).Assembly.GetType(\"UnityEditor.GameViewSizeGroupType\"); object group=sizesType.GetMethod(\"GetGroup\").Invoke(sizes,new[]{Enum.Parse(groupType,\"Standalone\")});"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+    "line": 365,
+    "evidence": "group.GetType().GetMethod(\"RemoveCustomSize\").Invoke(group,new object[]{added});"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassContractChecks.cs",
+    "line": 60,
+    "evidence": "var asset = AssetDatabase.LoadAssetAtPath<TextAsset>(\"Assets/LivingGlass/Editor/RouteContract.json\");"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassConversationChecks.cs",
+    "line": 30,
+    "evidence": "if(typeof(LivingGlassPresentation).GetField(\"flow\",flags).GetValue(view)!=null)throw new InvalidOperationException(\"Services forbidden.\");"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs",
+    "line": 48,
+    "evidence": "var data = AssetDatabase.LoadAssetAtPath<LivingGlassAssets>(LivingGlassProjectValidation.AssetsPath);"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassProjectValidation.cs",
+    "line": 25,
+    "evidence": "if (AssetDatabase.LoadAssetAtPath<SceneAsset>(ScenePath) == null) throw new InvalidOperationException(\"Primary Living Glass scene missing.\");"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassProjectValidation.cs",
+    "line": 30,
+    "evidence": "var assets = AssetDatabase.LoadAssetAtPath<LivingGlassAssets>(AssetsPath);"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassProjectValidation.cs",
+    "line": 35,
+    "evidence": "var panel = AssetDatabase.LoadAssetAtPath<PanelSettings>(PanelPath);"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassStabilizationChecks.cs",
+    "line": 38,
+    "evidence": "Check(typeof(LivingGlassPresentation).GetField(\"flow\",Private).GetValue(view)==null,\"preview has no application/service owner\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Helpers/UnityAssembliesCompat.cs",
+    "line": 74,
+    "evidence": "try { type = Type.GetType(aqn, throwOnError: false); }"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Helpers/UnityAssembliesCompat.cs",
+    "line": 101,
+    "evidence": "var method = type.GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Helpers/UnityFindObjectsCompat.cs",
+    "line": 97,
+    "evidence": "_findObjectsOfTypeByType = typeof(UObject).GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Helpers/UnityFindObjectsCompat.cs",
+    "line": 114,
+    "evidence": "_findObjectsOfTypeWithInactive = typeof(UObject).GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Helpers/UnityFindObjectsCompat.cs",
+    "line": 135,
+    "evidence": "_findObjectOfTypeByType = typeof(UObject).GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Serialization/UnityTypeConverters.cs",
+    "line": 402,
+    "evidence": "var asset = UnityEditor.AssetDatabase.LoadAssetAtPath(path, objectType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Serialization/UnityTypeConverters.cs",
+    "line": 410,
+    "evidence": "var loadedAsset = UnityEditor.AssetDatabase.LoadAssetAtPath(strValue, objectType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Serialization/UnityTypeConverters.cs",
+    "line": 429,
+    "evidence": "var asset = UnityEditor.AssetDatabase.LoadAssetAtPath(path, objectType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Runtime/Serialization/UnityTypeConverters.cs",
+    "line": 517,
+    "evidence": "var asset = UnityEditor.AssetDatabase.LoadAssetAtPath(path, objectType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 235,
+    "evidence": "FieldInfo fieldInfo = type.GetField(propertyName, flags)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 236,
+    "evidence": "?? type.GetField(normalizedName, flags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 348,
+    "evidence": "/// Type.GetField() with NonPublic only returns fields declared directly on that type,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 440,
+    "evidence": "FieldInfo fieldInfo = componentType.GetField(propertyName, flags)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 441,
+    "evidence": "?? componentType.GetField(normalizedName, flags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 700,
+    "evidence": "var loaded = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 708,
+    "evidence": "var resolved = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(sanitized);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 743,
+    "evidence": "var resolved = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(sanitized);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ComponentOps.cs",
+    "line": 758,
+    "evidence": "var resolved = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(assetPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/EditorWindowScreenshotUtility.cs",
+    "line": 189,
+    "evidence": "MethodInfo grabPixels = hostView.GetType().GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/EditorWindowScreenshotUtility.cs",
+    "line": 245,
+    "evidence": "FieldInfo parentField = windowType.GetField(\"m_Parent\", BindingFlags.Instance | BindingFlags.NonPublic);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/EditorWindowScreenshotUtility.cs",
+    "line": 283,
+    "evidence": "MethodInfo method = instance.GetType().GetMethod(methodName, BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/MaterialOps.cs",
+    "line": 122,
+    "evidence": "var newTex = AssetDatabase.LoadAssetAtPath<Texture>(sanitizedPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/MaterialOps.cs",
+    "line": 305,
+    "evidence": "Texture tex = AssetDatabase.LoadAssetAtPath<Texture>(sanitizedPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ObjectResolver.cs",
+    "line": 173,
+    "evidence": "UnityEngine.Object asset = AssetDatabase.LoadAssetAtPath(findTerm, targetType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ObjectResolver.cs",
+    "line": 178,
+    "evidence": "asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(findTerm);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/ObjectResolver.cs",
+    "line": 188,
+    "evidence": "asset = AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(guids[0]), targetType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/PropertyConversion.cs",
+    "line": 82,
+    "evidence": "UnityEngine.Object loadedAsset = AssetDatabase.LoadAssetAtPath(assetPath, targetType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/RenderPipelineUtility.cs",
+    "line": 80,
+    "evidence": "var direct = Shader.Find(alias);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/RenderPipelineUtility.cs",
+    "line": 92,
+    "evidence": "?? Shader.Find(\"Unlit/Color\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/RenderPipelineUtility.cs",
+    "line": 109,
+    "evidence": "_ => TryFindShader(BuiltInLitShaders) ?? Shader.Find(\"Unlit/Color\")"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/RenderPipelineUtility.cs",
+    "line": 161,
+    "evidence": "var shader = Shader.Find(shaderName);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/RenderPipelineUtility.cs",
+    "line": 253,
+    "evidence": "if (shader == Shader.Find(\"Hidden/InternalErrorShader\"))"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/RenderPipelineUtility.cs",
+    "line": 310,
+    "evidence": "shader = Shader.Find(\"Unlit/Color\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/RenderPipelineUtility.cs",
+    "line": 419,
+    "evidence": "shader = Shader.Find(\"Unlit/Color\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/UnityTypeResolver.cs",
+    "line": 50,
+    "evidence": "// Try direct Type.GetType"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Helpers/UnityTypeResolver.cs",
+    "line": 51,
+    "evidence": "type = Type.GetType(typeName, throwOnError: false);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Services/StartupConfigRewrite.cs",
+    "line": 72,
+    "evidence": "var method = typeof(UnityEditor.AssetDatabase).GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Services/TestRunnerNoThrottle.cs",
+    "line": 121,
+    "evidence": "var method = typeof(EditorApplication).GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/CommandRegistry.cs",
+    "line": 125,
+    "evidence": "var method = typeof(UnityEditor.AssetDatabase).GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/CommandRegistry.cs",
+    "line": 193,
+    "evidence": "var method = type.GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 266,
+    "evidence": "var method = type.GetMethod(WrapperMethodName, BindingFlags.Public | BindingFlags.Static);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 670,
+    "evidence": "_syntaxTreeType = Type.GetType(\"Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree, Microsoft.CodeAnalysis.CSharp\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 671,
+    "evidence": "_compilationType = Type.GetType(\"Microsoft.CodeAnalysis.CSharp.CSharpCompilation, Microsoft.CodeAnalysis.CSharp\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 672,
+    "evidence": "_compilationOptionsType = Type.GetType(\"Microsoft.CodeAnalysis.CSharp.CSharpCompilationOptions, Microsoft.CodeAnalysis.CSharp\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 673,
+    "evidence": "_parseOptionsType = Type.GetType(\"Microsoft.CodeAnalysis.CSharp.CSharpParseOptions, Microsoft.CodeAnalysis.CSharp\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 674,
+    "evidence": "_metadataReferenceType = Type.GetType(\"Microsoft.CodeAnalysis.MetadataReference, Microsoft.CodeAnalysis\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 675,
+    "evidence": "_outputKindEnum = Type.GetType(\"Microsoft.CodeAnalysis.OutputKind, Microsoft.CodeAnalysis\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 676,
+    "evidence": "_languageVersionEnum = Type.GetType(\"Microsoft.CodeAnalysis.CSharp.LanguageVersion, Microsoft.CodeAnalysis.CSharp\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 684,
+    "evidence": "var syntaxTreeBase = Type.GetType(\"Microsoft.CodeAnalysis.SyntaxTree, Microsoft.CodeAnalysis\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 685,
+    "evidence": "_parseText = _syntaxTreeType.GetMethod(\"ParseText\", new[] { typeof(string), _parseOptionsType, typeof(string), typeof(Encoding), typeof(System.Threading.CancellationToken) });"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 693,
+    "evidence": "_createCompilation = _compilationType.GetMethod(\"Create\", new[] { typeof(string), syntaxTreeEnumerable, metadataRefEnumerable, _compilationOptionsType });"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 705,
+    "evidence": "var compilationBase = Type.GetType(\"Microsoft.CodeAnalysis.Compilation, Microsoft.CodeAnalysis\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 788,
+    "evidence": "var syntaxTreeBase = Type.GetType(\"Microsoft.CodeAnalysis.SyntaxTree, Microsoft.CodeAnalysis\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 820,
+    "evidence": "var severityError = Enum.Parse(Type.GetType(\"Microsoft.CodeAnalysis.DiagnosticSeverity, Microsoft.CodeAnalysis\"), \"Error\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 830,
+    "evidence": "var spanProp = loc.GetType().GetMethod(\"GetLineSpan\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ExecuteCode.cs",
+    "line": 837,
+    "evidence": "var msgProp = diag.GetType().GetMethod(\"GetMessage\", new[] { typeof(System.Globalization.CultureInfo) });"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageAsset.cs",
+    "line": 251,
+    "evidence": "// newAsset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(fullPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageAsset.cs",
+    "line": 348,
+    "evidence": "UnityEngine.Object asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageAsset.cs",
+    "line": 773,
+    "evidence": "UnityEngine.Object asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageAsset.cs",
+    "line": 1005,
+    "evidence": "System.Reflection.FieldInfo fieldInfo = type.GetField(memberName, flags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageAsset.cs",
+    "line": 1041,
+    "evidence": "UnityEngine.Object asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageBuild.cs",
+    "line": 119,
+    "evidence": "var profile = UnityEditor.AssetDatabase.LoadAssetAtPath<"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageBuild.cs",
+    "line": 389,
+    "evidence": "var loadedProfile = AssetDatabase.LoadAssetAtPath<"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageBuild.cs",
+    "line": 500,
+    "evidence": "var profile = AssetDatabase.LoadAssetAtPath<"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageMaterial.cs",
+    "line": 431,
+    "evidence": "Material existing = AssetDatabase.LoadAssetAtPath<Material>(matPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageMaterial.cs",
+    "line": 627,
+    "evidence": "if (AssetDatabase.LoadAssetAtPath<Material>(materialPath) != null)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageScene.cs",
+    "line": 1519,
+    "evidence": "var gameViewType = Type.GetType(\"UnityEditor.GameView,UnityEditor\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageScene.cs",
+    "line": 1630,
+    "evidence": "if (AssetDatabase.LoadAssetAtPath<SceneAsset>(projectRelativePath) != null) return true;"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageScriptableObject.cs",
+    "line": 147,
+    "evidence": "var existingAsset = AssetDatabase.LoadAssetAtPath<ScriptableObject>(finalPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageScriptableObject.cs",
+    "line": 1327,
+    "evidence": "var obj = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(resolvedPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageShader.cs",
+    "line": 165,
+    "evidence": "if (Shader.Find(name) != null)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageTexture.cs",
+    "line": 281,
+    "evidence": "Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(fullPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 326,
+    "evidence": "var vta = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(sourceAssetPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 341,
+    "evidence": "panelSettings = AssetDatabase.LoadAssetAtPath<PanelSettings>(panelSettingsPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 355,
+    "evidence": "panelSettings = AssetDatabase.LoadAssetAtPath<PanelSettings>(existingPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 414,
+    "evidence": "if (AssetDatabase.LoadAssetAtPath<PanelSettings>(path) != null)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 477,
+    "evidence": "var ps = AssetDatabase.LoadAssetAtPath<PanelSettings>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 596,
+    "evidence": "var ts = AssetDatabase.LoadAssetAtPath<ThemeStyleSheet>(tsPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 984,
+    "evidence": "var vta = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(uxmlPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 995,
+    "evidence": "ps = AssetDatabase.LoadAssetAtPath<PanelSettings>(AssetDatabase.GUIDToAssetPath(guids[0]));"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ManageUI.cs",
+    "line": 1903,
+    "evidence": "var asset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(assetPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 66,
+    "evidence": "_startGettingEntriesMethod = logEntriesType.GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 74,
+    "evidence": "_endGettingEntriesMethod = logEntriesType.GetMethod("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 81,
+    "evidence": "_clearMethod = logEntriesType.GetMethod(\"Clear\", staticFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 85,
+    "evidence": "_getCountMethod = logEntriesType.GetMethod(\"GetCount\", staticFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 89,
+    "evidence": "_getEntryMethod = logEntriesType.GetMethod(\"GetEntryInternal\", staticFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 99,
+    "evidence": "_modeField = logEntryType.GetField(\"mode\", instanceFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 103,
+    "evidence": "_messageField = logEntryType.GetField(\"message\", instanceFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 107,
+    "evidence": "_fileField = logEntryType.GetField(\"file\", instanceFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 111,
+    "evidence": "_lineField = logEntryType.GetField(\"line\", instanceFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 119,
+    "evidence": "_setFilteringTextMethod = logEntriesType.GetMethod(\"SetFilteringText\", staticFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ReadConsole.cs",
+    "line": 120,
+    "evidence": "_getFilteringTextMethod = logEntriesType.GetMethod(\"GetFilteringText\", staticFlags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/UnityReflect.cs",
+    "line": 349,
+    "evidence": "var field = type.GetField(memberName, flags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 156,
+    "evidence": "var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 172,
+    "evidence": "var mainStyleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 181,
+    "evidence": "var commonStyleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 264,
+    "evidence": "var connectionTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 279,
+    "evidence": "var clientConfigTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 303,
+    "evidence": "var advancedTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 336,
+    "evidence": "var validationTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 347,
+    "evidence": "var toolsTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 367,
+    "evidence": "var resourcesTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 387,
+    "evidence": "var assetGenTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 883,
+    "evidence": "bool roslynLoaded = Type.GetType(\"Microsoft.CodeAnalysis.CSharp.CSharpCompilation, Microsoft.CodeAnalysis.CSharp\") != null;"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 899,
+    "evidence": "bool hasProBuilder = Type.GetType(\"UnityEngine.ProBuilder.ProBuilderMesh, Unity.ProBuilder\") != null;"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 910,
+    "evidence": "bool hasCinemachine = Type.GetType(\"Unity.Cinemachine.CinemachineCamera, Unity.Cinemachine\") != null"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 911,
+    "evidence": "|| Type.GetType(\"Cinemachine.CinemachineVirtualCamera, Cinemachine\") != null;"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.cs",
+    "line": 933,
+    "evidence": "bool hasGltfast = IsUpmPackageInstalled(\"com.unity.cloud.gltfast\") || Type.GetType(\"GLTFast.GltfImport, glTFast\") != null;"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPSetupWindow.cs",
+    "line": 66,
+    "evidence": "var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/EditorPrefs/EditorPrefsWindow.cs",
+    "line": 102,
+    "evidence": "var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/EditorPrefs/EditorPrefsWindow.cs",
+    "line": 113,
+    "evidence": "itemTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/Branding/OceanMark.cs",
+    "line": 153,
+    "evidence": "return UnityEditor.AssetDatabase.LoadAssetAtPath<Texture2D>($\"{root}/package-icon.png\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 36,
+    "evidence": "var existing = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 97,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 166,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 237,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 342,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 481,
+    "evidence": "Type type = Type.GetType($\"UnityEngine.{typeName}, UnityEngine.CoreModule\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 484,
+    "evidence": "type = Type.GetType($\"UnityEngine.{typeName}, UnityEngine.AnimationModule\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 487,
+    "evidence": "type = Type.GetType($\"UnityEngine.{typeName}, UnityEngine\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 491,
+    "evidence": "type = Type.GetType(typeName);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 517,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipCreate.cs",
+    "line": 568,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ClipPresets.cs",
+    "line": 60,
+    "evidence": "var existing = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerBlendTrees.cs",
+    "line": 22,
+    "evidence": "var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerBlendTrees.cs",
+    "line": 83,
+    "evidence": "var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerBlendTrees.cs",
+    "line": 155,
+    "evidence": "var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerBlendTrees.cs",
+    "line": 168,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerCreate.cs",
+    "line": 32,
+    "evidence": "var existing = AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerCreate.cs",
+    "line": 85,
+    "evidence": "var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerCreate.cs",
+    "line": 435,
+    "evidence": "return AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerLayers.cs",
+    "line": 21,
+    "evidence": "var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerLayers.cs",
+    "line": 74,
+    "evidence": "var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Animation/ControllerLayers.cs",
+    "line": 143,
+    "evidence": "var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(controllerPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Blender/BlenderBridgeTool.cs",
+    "line": 252,
+    "evidence": "GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(assetPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Blender/BlenderBridgeTool.cs",
+    "line": 487,
+    "evidence": "Type volumeType = Type.GetType(\"UnityEngine.Rendering.Volume, Unity.RenderPipelines.Core.Runtime\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Blender/BlenderBridgeTool.cs",
+    "line": 495,
+    "evidence": "Type camDataType = Type.GetType(\"UnityEngine.Rendering.Universal.UniversalAdditionalCameraData, Unity.RenderPipelines.Universal.Runtime\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Blender/BlenderBridgeTool.cs",
+    "line": 509,
+    "evidence": "System.Reflection.FieldInfo sharedProfile = volumeType.GetField(\"sharedProfile\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Blender/BlenderBridgeTool.cs",
+    "line": 517,
+    "evidence": "var components = profile?.GetType().GetField(\"components\")?.GetValue(profile) as System.Collections.IEnumerable;"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Cameras/CameraControl.cs",
+    "line": 231,
+    "evidence": "var method = brainType.GetMethod(\"SetCameraOverride\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Cameras/CameraControl.cs",
+    "line": 295,
+    "evidence": "var method = brain.GetType().GetMethod(\"ReleaseCameraOverride\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Cameras/CameraHelpers.cs",
+    "line": 238,
+    "evidence": "var method = type.GetMethod(\"GetCinemachineComponent\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/GameObjects/GameObjectComponentHelpers.cs",
+    "line": 334,
+    "evidence": "fieldInfo = currentType.GetField(part, flags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/GameObjects/GameObjectComponentHelpers.cs",
+    "line": 416,
+    "evidence": "FieldInfo finalFieldInfo = currentType.GetField(finalPart, flags);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/GameObjects/GameObjectCreate.cs",
+    "line": 89,
+    "evidence": "GameObject prefabAsset = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/GraphicsHelpers.cs",
+    "line": 74,
+    "evidence": "_volumeType = Type.GetType(\"UnityEngine.Rendering.Volume, Unity.RenderPipelines.Core.Runtime\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/GraphicsHelpers.cs",
+    "line": 75,
+    "evidence": "_volumeProfileType = Type.GetType(\"UnityEngine.Rendering.VolumeProfile, Unity.RenderPipelines.Core.Runtime\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/GraphicsHelpers.cs",
+    "line": 76,
+    "evidence": "_volumeComponentType = Type.GetType(\"UnityEngine.Rendering.VolumeComponent, Unity.RenderPipelines.Core.Runtime\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/GraphicsHelpers.cs",
+    "line": 77,
+    "evidence": "_volumeParameterType = Type.GetType(\"UnityEngine.Rendering.VolumeParameter, Unity.RenderPipelines.Core.Runtime\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/GraphicsHelpers.cs",
+    "line": 203,
+    "evidence": "var asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/GraphicsHelpers.cs",
+    "line": 211,
+    "evidence": "var asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/RendererFeatureOps.cs",
+    "line": 27,
+    "evidence": "_scriptableRendererDataType = Type.GetType("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/RendererFeatureOps.cs",
+    "line": 29,
+    "evidence": "_scriptableRendererFeatureType = Type.GetType("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/RendererFeatureOps.cs",
+    "line": 31,
+    "evidence": "_universalRenderPipelineAssetType = Type.GetType("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/RendererFeatureOps.cs",
+    "line": 310,
+    "evidence": "var setActiveMethod = feature.GetType().GetMethod(\"SetActive\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/RendererFeatureOps.cs",
+    "line": 562,
+    "evidence": "var mat = AssetDatabase.LoadAssetAtPath<Material>(materialPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/SkyboxOps.cs",
+    "line": 112,
+    "evidence": "var mat = AssetDatabase.LoadAssetAtPath<Material>(materialPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/SkyboxOps.cs",
+    "line": 319,
+    "evidence": "var cubemap = AssetDatabase.LoadAssetAtPath<Texture>(cubemapPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/SkyboxOps.cs",
+    "line": 472,
+    "evidence": "var tex = AssetDatabase.LoadAssetAtPath<Texture>(value.ToString());"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 52,
+    "evidence": "profile = AssetDatabase.LoadAssetAtPath(profilePath, GraphicsHelpers.VolumeProfileType);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 88,
+    "evidence": "var addMethod = GraphicsHelpers.VolumeProfileType.GetMethod(\"Add\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 176,
+    "evidence": "var addMethod = GraphicsHelpers.VolumeProfileType.GetMethod(\"Add\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 304,
+    "evidence": "var removeMethod = GraphicsHelpers.VolumeProfileType.GetMethod(\"Remove\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 546,
+    "evidence": "var field = component.GetType().GetField(fieldName,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 552,
+    "evidence": "field = component.GetType().GetField(camelCase,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 655,
+    "evidence": "return AssetDatabase.LoadAssetAtPath<Texture2D>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 677,
+    "evidence": "var field = obj.GetType().GetField(name,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Graphics/VolumeOps.cs",
+    "line": 700,
+    "evidence": "var field = obj.GetType().GetField(name,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/JointOps.cs",
+    "line": 485,
+    "evidence": "var fieldInfo = type.GetField(prop.Name, BindingFlags.Public | BindingFlags.Instance);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 90,
+    "evidence": "var mat3D = AssetDatabase.LoadAssetAtPath<PhysicsMaterial>(materialPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 92,
+    "evidence": "var mat3D = AssetDatabase.LoadAssetAtPath<PhysicMaterial>(materialPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 94,
+    "evidence": "var mat2D = AssetDatabase.LoadAssetAtPath<PhysicsMaterial2D>(materialPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 188,
+    "evidence": "if (AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(assetPath) != null)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 250,
+    "evidence": "if (AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(assetPath) != null)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 300,
+    "evidence": "var mat = AssetDatabase.LoadAssetAtPath<PhysicsMaterial>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 302,
+    "evidence": "var mat = AssetDatabase.LoadAssetAtPath<PhysicMaterial>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Physics/PhysicsMaterialOps.cs",
+    "line": 390,
+    "evidence": "var mat = AssetDatabase.LoadAssetAtPath<PhysicsMaterial2D>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Prefabs/ManagePrefabs.cs",
+    "line": 115,
+    "evidence": "bool fileExistedAtPath = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(finalPath) != null;"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Prefabs/ManagePrefabs.cs",
+    "line": 332,
+    "evidence": "Material persisted = AssetDatabase.LoadAssetAtPath<Material>(matPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Prefabs/ManagePrefabs.cs",
+    "line": 515,
+    "evidence": "GameObject prefabAsset = AssetDatabase.LoadAssetAtPath<GameObject>(sanitizedPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Prefabs/ManagePrefabs.cs",
+    "line": 1047,
+    "evidence": "GameObject sourcePrefabAsset = AssetDatabase.LoadAssetAtPath<GameObject>(sanitizedSourcePath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Prefabs/ManagePrefabs.cs",
+    "line": 1308,
+    "evidence": "GameObject prefabAsset = AssetDatabase.LoadAssetAtPath<GameObject>(sanitizedPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 93,
+    "evidence": "_proBuilderMeshType = Type.GetType(\"UnityEngine.ProBuilder.ProBuilderMesh, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 100,
+    "evidence": "_shapeGeneratorType = Type.GetType(\"UnityEngine.ProBuilder.ShapeGenerator, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 101,
+    "evidence": "_shapeTypeEnum = Type.GetType(\"UnityEngine.ProBuilder.ShapeType, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 102,
+    "evidence": "_faceType = Type.GetType(\"UnityEngine.ProBuilder.Face, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 103,
+    "evidence": "_edgeType = Type.GetType(\"UnityEngine.ProBuilder.Edge, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 106,
+    "evidence": "_extrudeElementsType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.ExtrudeElements, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 107,
+    "evidence": "_extrudeMethodEnum = Type.GetType(\"UnityEngine.ProBuilder.ExtrudeMethod, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 108,
+    "evidence": "_bevelType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.Bevel, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 109,
+    "evidence": "_deleteElementsType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.DeleteElements, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 110,
+    "evidence": "_appendElementsType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.AppendElements, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 111,
+    "evidence": "_connectElementsType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.ConnectElements, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 112,
+    "evidence": "_mergeElementsType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.MergeElements, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 113,
+    "evidence": "_combineMeshesType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.CombineMeshes, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 114,
+    "evidence": "_surfaceTopologyType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.SurfaceTopology, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 115,
+    "evidence": "_vertexEditingType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.VertexEditing, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 116,
+    "evidence": "_elementSelectionType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.ElementSelection, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 119,
+    "evidence": "_pivotLocationType = Type.GetType(\"UnityEngine.ProBuilder.PivotLocation, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 120,
+    "evidence": "_axisEnum = Type.GetType(\"UnityEngine.ProBuilder.Axis, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 123,
+    "evidence": "_editorMeshUtilityType = Type.GetType(\"UnityEditor.ProBuilder.EditorMeshUtility, Unity.ProBuilder.Editor\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 124,
+    "evidence": "_meshImporterType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.MeshImporter, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 125,
+    "evidence": "_smoothingType = Type.GetType(\"UnityEngine.ProBuilder.Smoothing, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 126,
+    "evidence": "_meshValidationType = Type.GetType(\"UnityEngine.ProBuilder.MeshOperations.MeshValidation, Unity.ProBuilder\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 157,
+    "evidence": "var mat = AssetDatabase.LoadAssetAtPath<Material>(defaultMatPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 291,
+    "evidence": "var toMeshMethod = _proBuilderMeshType.GetMethod(\"ToMesh\", Type.EmptyTypes)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 292,
+    "evidence": "?? _proBuilderMeshType.GetMethod(\"ToMesh\", BindingFlags.Instance | BindingFlags.Public);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 297,
+    "evidence": "var refreshMethod = _proBuilderMeshType.GetMethod(\"Refresh\", Type.EmptyTypes)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 298,
+    "evidence": "?? _proBuilderMeshType.GetMethod(\"Refresh\", BindingFlags.Instance | BindingFlags.Public);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 305,
+    "evidence": "var optimizeMethod = _editorMeshUtilityType.GetMethod(\"Optimize\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 389,
+    "evidence": "var method = _shapeGeneratorType.GetMethod(methodName,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 401,
+    "evidence": "var f = _edgeType.GetField(\"a\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 409,
+    "evidence": "var f = _edgeType.GetField(\"b\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 824,
+    "evidence": "var createMethod = _shapeGeneratorType.GetMethod(\"CreateShape\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 837,
+    "evidence": "createMethod = _shapeGeneratorType.GetMethod(\"CreateShape\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 880,
+    "evidence": "var createFromPolygonMethod = _appendElementsType.GetMethod(\"CreateShapeFromPolygon\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 935,
+    "evidence": "var extrudeMethodInfo = _extrudeElementsType?.GetMethod(\"Extrude\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 977,
+    "evidence": "var extrudeMethod = _extrudeElementsType?.GetMethod(\"Extrude\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1022,
+    "evidence": "var bevelMethod = _bevelType.GetMethod(\"BevelEdges\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1090,
+    "evidence": "var deleteMethod = _deleteElementsType.GetMethod(\"DeleteFaces\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1103,
+    "evidence": "deleteMethod = _deleteElementsType.GetMethod(\"DeleteFaces\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1113,
+    "evidence": "deleteMethod = _deleteElementsType.GetMethod(\"DeleteFaces\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1169,
+    "evidence": "var bridgeMethod = _appendElementsType.GetMethod(\"Bridge\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1183,
+    "evidence": "bridgeMethod = _appendElementsType.GetMethod(\"Bridge\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1331,
+    "evidence": "var reverseMethod = _faceType.GetMethod(\"Reverse\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1410,
+    "evidence": "var combineMethod = _combineMeshesType.GetMethod(\"Combine\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1447,
+    "evidence": "var importM = _meshImporterType.GetMethod(\"Import\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1454,
+    "evidence": "importM = _meshImporterType.GetMethod(\"Import\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1511,
+    "evidence": "var combineMethod = _combineMeshesType.GetMethod(\"Combine\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1547,
+    "evidence": "var dupMethod = _appendElementsType.GetMethod(\"DuplicateAndFlip\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1584,
+    "evidence": "var createPolyMethod = _appendElementsType.GetMethod(\"CreatePolygon\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1628,
+    "evidence": "var mergeMethod = _vertexEditingType.GetMethod(\"MergeVertices\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1666,
+    "evidence": "var weldMethod = _vertexEditingType.GetMethod(\"WeldVertices\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1702,
+    "evidence": "var splitMethod = _vertexEditingType.GetMethod(\"SplitVertices\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1771,
+    "evidence": "var setPositionsMethod = _proBuilderMeshType.GetMethod(\"SetPositions\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1780,
+    "evidence": "var rebuildMethod = _proBuilderMeshType.GetMethod(\"RebuildWithPositionsAndFaces\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1827,
+    "evidence": "var insertMethod = _appendElementsType.GetMethod(\"InsertVertexOnEdge\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1852,
+    "evidence": "var insertMethod = _appendElementsType.GetMethod(\"InsertVertexInFace\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 1901,
+    "evidence": "var appendMethod = _appendElementsType.GetMethod(\"AppendVerticesToEdge\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2090,
+    "evidence": "var material = AssetDatabase.LoadAssetAtPath<Material>(materialPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2096,
+    "evidence": "var setMaterialMethod = _proBuilderMeshType.GetMethod(\"SetMaterial\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2164,
+    "evidence": "var setColorMethod = _proBuilderMeshType.GetMethod(\"SetFaceColor\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2183,
+    "evidence": "var vcShader = Shader.Find(\"ProBuilder/Standard Vertex Color\")"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2184,
+    "evidence": "?? Shader.Find(\"ProBuilder/Diffuse Vertex Color\")"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2185,
+    "evidence": "?? Shader.Find(\"Sprites/Default\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2216,
+    "evidence": "var scaleField = autoUnwrapType.GetField(\"scale\") ?? (MemberInfo)autoUnwrapType.GetProperty(\"scale\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2217,
+    "evidence": "var offsetField = autoUnwrapType.GetField(\"offset\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2218,
+    "evidence": "var rotField = autoUnwrapType.GetField(\"rotation\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2219,
+    "evidence": "var flipUField = autoUnwrapType.GetField(\"flipU\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2220,
+    "evidence": "var flipVField = autoUnwrapType.GetField(\"flipV\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ManageProBuilder.cs",
+    "line": 2256,
+    "evidence": "var refreshUVMethod = _proBuilderMeshType.GetMethod(\"RefreshUV\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ProBuilderMeshUtils.cs",
+    "line": 227,
+    "evidence": "var removeMethod = ManageProBuilder._meshValidationType.GetMethod(\"RemoveDegenerateTriangles\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ProBuilderMeshUtils.cs",
+    "line": 244,
+    "evidence": "var altMethod = ManageProBuilder._meshValidationType.GetMethod(\"RemoveDegenerateTriangles\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/ProBuilder/ProBuilderSmoothing.cs",
+    "line": 75,
+    "evidence": "var applyMethod = ManageProBuilder._smoothingType.GetMethod(\"ApplySmoothingGroups\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Vfx/VfxGraphAssets.cs",
+    "line": 81,
+    "evidence": "if (AssetDatabase.LoadAssetAtPath<VisualEffectAsset>(assetPath) != null)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Vfx/VfxGraphAssets.cs",
+    "line": 104,
+    "evidence": "newAsset = AssetDatabase.LoadAssetAtPath<VisualEffectAsset>(assetPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Vfx/VfxGraphAssets.cs",
+    "line": 270,
+    "evidence": "var asset = AssetDatabase.LoadAssetAtPath<VisualEffectAsset>(assetPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Vfx/VfxGraphAssets.cs",
+    "line": 279,
+    "evidence": "asset = AssetDatabase.LoadAssetAtPath<VisualEffectAsset>(assetPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Vfx/VfxGraphAssets.cs",
+    "line": 462,
+    "evidence": "var asset = AssetDatabase.LoadAssetAtPath<VisualEffectAsset>(path);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 26,
+    "evidence": "UtilType = Type.GetType(\"UnityEditorInternal.FrameDebuggerInternal.FrameDebuggerUtility, UnityEditor\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 28,
+    "evidence": "UtilType ??= Type.GetType(\"UnityEditorInternal.FrameDebuggerUtility, UnityEditor\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 35,
+    "evidence": "EnableMethod = UtilType.GetMethod(\"SetEnabled\", BindingFlags.Public | BindingFlags.Static,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 37,
+    "evidence": "?? UtilType.GetMethod(\"SetEnabled\", BindingFlags.Public | BindingFlags.Static);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 39,
+    "evidence": "GetFrameEventsMethod = UtilType.GetMethod(\"GetFrameEvents\", BindingFlags.Public | BindingFlags.Static);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 40,
+    "evidence": "GetEventInfoNameMethod = UtilType.GetMethod(\"GetFrameEventInfoName\", BindingFlags.Public | BindingFlags.Static);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 44,
+    "evidence": "EventDataType = Type.GetType(\"UnityEditorInternal.FrameDebuggerInternal.FrameDebuggerEventData, UnityEditor\")"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 45,
+    "evidence": "?? Type.GetType(\"UnityEditorInternal.FrameDebuggerEventData, UnityEditor\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 49,
+    "evidence": "GetEventDataMethod = UtilType.GetMethod(\"GetFrameEventData\", BindingFlags.Public | BindingFlags.Static,"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 52,
+    "evidence": "GetEventDataMethod ??= UtilType.GetMethod(\"GetFrameEventData\", BindingFlags.Public | BindingFlags.Static);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 246,
+    "evidence": "var field = type.GetField(fieldName, BindingFlags.Public | BindingFlags.Instance)"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/FrameDebuggerOps.cs",
+    "line": 247,
+    "evidence": "?? type.GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Instance);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 14,
+    "evidence": "Type.GetType(\"Unity.Profiling.Memory.MemoryProfiler, UnityEngine.CoreModule\")"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 15,
+    "evidence": "?? Type.GetType(\"UnityEngine.Profiling.Memory.Experimental.MemoryProfiler, UnityEngine.CoreModule\")"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 16,
+    "evidence": "?? Type.GetType(\"Unity.MemoryProfiler.MemoryProfiler, Unity.MemoryProfiler.Editor\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 39,
+    "evidence": "var debugScreenCaptureType = Type.GetType("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 41,
+    "evidence": "?? Type.GetType(\"UnityEngine.Profiling.Experimental.DebugScreenCapture, UnityEngine.CoreModule\")"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 42,
+    "evidence": "?? Type.GetType(\"Unity.Profiling.Memory.Experimental.DebugScreenCapture, Unity.MemoryProfiler.Editor\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 43,
+    "evidence": "var captureFlagsType = Type.GetType("
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 45,
+    "evidence": "?? Type.GetType(\"UnityEngine.Profiling.Memory.Experimental.CaptureFlags, UnityEngine.CoreModule\");"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 53,
+    "evidence": "takeMethod = MemoryProfilerType.GetMethod(\"TakeSnapshot\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 59,
+    "evidence": "takeMethod = MemoryProfilerType.GetMethod(\"TakeSnapshot\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 67,
+    "evidence": "takeMethod = MemoryProfilerType.GetMethod(\"TakeSnapshot\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/MemorySnapshotOps.cs",
+    "line": 73,
+    "evidence": "takeMethod = MemoryProfilerType.GetMethod(\"TakeSnapshot\","
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Tools/Profiler/Operations/ObjectMemoryOps.cs",
+    "line": 38,
+    "evidence": "var asset = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(objectPath);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Services/AssetGen/Import/AudioImportPipeline.cs",
+    "line": 55,
+    "evidence": "AudioClip clip = AssetDatabase.LoadAssetAtPath<AudioClip>(rel);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Services/AssetGen/Import/ModelImportPipeline.cs",
+    "line": 193,
+    "evidence": "var go = AssetDatabase.LoadAssetAtPath<GameObject>(rel);"
+  },
+  {
+    "path": "Packages/com.coplaydev.unity-mcp/Editor/Services/AssetGen/Import/ModelImportPipeline.cs",
+    "line": 227,
+    "evidence": "bool found = Type.GetType(\"GLTFast.GltfImport, glTFast\") != null;"
+  }
+]

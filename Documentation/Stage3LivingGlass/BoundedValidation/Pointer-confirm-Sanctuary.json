@@ -1,0 +1,97 @@
+{
+    "label": "Pointer-confirm-Sanctuary",
+    "utc": "2026-11-13T11:17:04.0263124Z",
+    "route": "SANCTUARY---FOCUS-VIEW---PER-006",
+    "locale": "Chinese",
+    "focus": "play-performer-video",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 198934,
+    "performer": 5,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 635.0,
+                "y": 972.0,
+                "width": 650.0,
+                "height": 80.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 1011.0,
+                "width": 242.0,
+                "height": 41.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 863.0,
+                "y": 140.0,
+                "width": 980.0,
+                "height": 756.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        }
+    ]
+}

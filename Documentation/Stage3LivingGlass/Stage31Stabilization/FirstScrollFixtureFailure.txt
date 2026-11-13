@@ -1,0 +1,19 @@
+PASS: 1001 shared-ease samples never show outgoing and incoming copy together.
+PASS: GAIA / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: PANDEMIC / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: RE-BIRTH / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: WHITE-GUARDIAN / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: CONSCIENCE / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: SANCTUARY / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: GAIA / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: PANDEMIC / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: RE-BIRTH / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: WHITE-GUARDIAN / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: CONSCIENCE / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: SANCTUARY / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: Home-en isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+PASS: Home-zh isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+FAIL: System.InvalidOperationException: isolated End event reaches final content
+  at LivingGlassStabilizationChecks.CheckScroll () [0x00224] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\LivingGlassStabilizationChecks.cs:130 
+  at LivingGlassStabilizationChecks.Tick () [0x000f5] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\LivingGlassStabilizationChecks.cs:65 
+FAIL: isolated End event reaches final content

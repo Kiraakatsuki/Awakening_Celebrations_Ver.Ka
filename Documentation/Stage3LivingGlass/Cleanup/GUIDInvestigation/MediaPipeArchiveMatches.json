@@ -1,0 +1,69 @@
+[
+  {
+    "path": "package/Samples~/Solutions/Common/Scripts/Bootstrap.cs.meta",
+    "guids": [
+      "a84904e562ecaf887b2dba62111bb901",
+      "488fbb6a3005b66c2b657204bce83fcf"
+    ],
+    "identity_meta": [
+      "guid: f4d846393f8d9f20fa64b924b0d95e68",
+      "MonoImporter:"
+    ]
+  },
+  {
+    "path": "package/Samples~/Solutions/UI/Objects/Global Config Window.prefab",
+    "guids": [
+      "5a0e103d2920f990ab08fe7bada48cc4"
+    ],
+    "identity_meta": null
+  },
+  {
+    "path": "package/Samples~/Solutions/Scenes/Face Detection/Face Detection.unity",
+    "guids": [
+      "8236d46ca3a43d373ae6ad281fea8fe0"
+    ],
+    "identity_meta": null
+  },
+  {
+    "path": "package/Samples~/Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "guids": [
+      "8236d46ca3a43d373ae6ad281fea8fe0"
+    ],
+    "identity_meta": null
+  },
+  {
+    "path": "package/Samples~/Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "guids": [
+      "8236d46ca3a43d373ae6ad281fea8fe0"
+    ],
+    "identity_meta": null
+  },
+  {
+    "path": "package/Samples~/Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "guids": [
+      "8236d46ca3a43d373ae6ad281fea8fe0"
+    ],
+    "identity_meta": null
+  },
+  {
+    "path": "package/Samples~/Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "guids": [
+      "d5da564da19cb6b7d8e4f97f269edc5d"
+    ],
+    "identity_meta": null
+  },
+  {
+    "path": "package/Samples~/Solutions/Scenes/Object Detection/Object Detection.unity",
+    "guids": [
+      "8236d46ca3a43d373ae6ad281fea8fe0"
+    ],
+    "identity_meta": null
+  },
+  {
+    "path": "package/Samples~/Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "guids": [
+      "8236d46ca3a43d373ae6ad281fea8fe0"
+    ],
+    "identity_meta": null
+  }
+]

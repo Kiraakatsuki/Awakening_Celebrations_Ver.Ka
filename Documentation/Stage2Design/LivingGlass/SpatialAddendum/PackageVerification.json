@@ -1,0 +1,13 @@
+{
+  "approved_composition": "Arc",
+  "treatment": "B preferred; caps pending approval",
+  "native_boards": 34,
+  "native_exports": 34,
+  "six_regions_unchanged_in_every_native_board": true,
+  "syntax": "passed for three prototype scripts",
+  "links": "all local addendum links resolve",
+  "pure_model_checks": "14 passed in recorded node --test run; no browser/Unity execution",
+  "browser_QA": "blocked by existing saved-policy denial; no retry/workaround in addendum",
+  "Unity_performance": "not run / not measured",
+  "production_diff": []
+}

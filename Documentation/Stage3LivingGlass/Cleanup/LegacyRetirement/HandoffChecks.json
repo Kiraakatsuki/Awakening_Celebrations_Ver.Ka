@@ -1,0 +1,19 @@
+{
+  "report_links": "PASS",
+  "broken_links": [],
+  "historical_generated_reports_restored": true,
+  "checker_syntax": "PASS",
+  "whole_files_removed": 0,
+  "CSharp_changed": 0,
+  "configuration_files_changed": 8,
+  "reference_occurrences_removed": 15,
+  "referenced_unresolved_guids_before": 14,
+  "referenced_unresolved_guids_after": 5,
+  "known_genuine_support_issues": 4,
+  "retained_recovery_only_obsolete_guid": 1,
+  "regression_checks_passed": 14,
+  "strict_raw_guid_integrity": "FAIL — known retained references",
+  "PlayMode": "NOT RUN",
+  "production_cutover": "NOT PERFORMED",
+  "recommendation": "Not ready for final operational acceptance/cutover; obtain scoped operational validation authorization"
+}

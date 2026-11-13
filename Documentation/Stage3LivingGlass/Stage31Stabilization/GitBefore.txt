@@ -1,0 +1,21 @@
+ M "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs"
+ M Assets/Scripts/AwakeningApplicationController.cs
+ M Assets/Scripts/Interaction/MediaPipeGestureBridge.cs
+?? .agents/
+?? AGENTS.md
+?? Assets/LivingGlass.meta
+?? Assets/LivingGlass/
+?? Assets/Scenes/AwakeningLivingGlass.unity
+?? Assets/Scenes/AwakeningLivingGlass.unity.meta
+?? Documentation/CurrentArchitectureAssessment.md
+?? Documentation/FeatureImplementationMatrix.md
+?? Documentation/GlobalNavigationRedesign.md
+?? Documentation/MotionInteractionSpecification.md
+?? Documentation/PremiumDesignSystem.md
+?? Documentation/PremiumExperienceAudit.md
+?? Documentation/Stage2Design/
+?? Documentation/Stage3LivingGlass/
+?? Documentation/TargetRuntimeArchitecture.md
+?? Documentation/TechnicalDebtAssessment.md
+?? Documentation/TransformationAudit/
+?? Documentation/TransformationRoadmap.md

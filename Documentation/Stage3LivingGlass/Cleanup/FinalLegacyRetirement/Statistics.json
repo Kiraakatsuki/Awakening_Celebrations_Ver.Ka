@@ -1,0 +1,43 @@
+{
+  "files_before": 2038,
+  "files_after": 1586,
+  "removed_physical_files": 458,
+  "added_physical_files": 6,
+  "changed_files": 10,
+  "removed_bytes": 41555592,
+  "imported_assets_before": 591,
+  "imported_assets_after": 368,
+  "scene_closure_after": 45,
+  "csharp_before": 396,
+  "csharp_after": 392,
+  "firstparty_csharp_before": 22,
+  "firstparty_csharp_after": 18,
+  "assets_csharp_before": 73,
+  "assets_csharp_after": 69,
+  "csharp_lines_before": 101681,
+  "csharp_lines_after": 98929,
+  "controller_lines_before": 3056,
+  "controller_lines_after": 1544,
+  "uxml_before": 115,
+  "uxml_after": 11,
+  "uss_before": 104,
+  "uss_after": 5,
+  "assets_uxml_before": 104,
+  "assets_uxml_after": 0,
+  "assets_uss_before": 100,
+  "assets_uss_after": 1,
+  "method_counts": {
+    "unchanged": 62,
+    "changed": 20,
+    "removed": 37,
+    "added": 0
+  },
+  "classification_counts": {
+    "REQUIRED_EDITOR_OR_BUILD": 7,
+    "SHARED_RUNTIME": 65,
+    "HISTORICAL_DOCUMENTATION": 154,
+    "ACTIVE_LIVING_GLASS": 43,
+    "UNRESOLVED": 100,
+    "LEGACY_ONLY": 228
+  }
+}

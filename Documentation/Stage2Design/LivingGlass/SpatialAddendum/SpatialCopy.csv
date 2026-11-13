@@ -1,0 +1,14 @@
+﻿key,en,zh_Hant,status
+ARC-neutral,Neutral gallery,中性藝廊,design copy; TC editorial review pending
+ARC-acquiring,Target acquiring · local feedback only,正在取得目標・僅局部回饋,design copy; TC editorial review pending
+ARC-targeted,Target stable · confirmation required,目標已穩定・須確認,design copy; TC editorial review pending
+ARC-targetChanged,"A new presence, one continuous atmosphere",另一種存在，氛圍連續流動,design copy; TC editorial review pending
+ARC-lossPending,Tracking interrupted · waiting for target-loss state,追蹤中斷・等待目標遺失狀態,design copy; TC editorial review pending
+ARC-trackingLost,Target cleared · returning to neutral,目標已清除・回到中性狀態,design copy; TC editorial review pending
+ARC-recovered,Context retained · acquire a fresh gesture target,保留情境・請重新取得手勢目標,design copy; TC editorial review pending
+ARC-confirmed,Performer confirmed,已確認表演者,design copy; TC editorial review pending
+ARC-overlayOpening,"Quiet controls, your context retained",從容調整，保留此刻情境,design copy; TC editorial review pending
+ARC-overlayOpen,Return to exactly where you were,回到剛才的體驗,design copy; TC editorial review pending
+ARC-overlayClosing,Returning to your experience,返回原本的體驗,design copy; TC editorial review pending
+ARC-reduced,"Reduced motion, same experience",減少動態效果，保留相同體驗,design copy; TC editorial review pending
+ARC-reflow,Reacquire your target,請重新取得目標,design copy; TC editorial review pending

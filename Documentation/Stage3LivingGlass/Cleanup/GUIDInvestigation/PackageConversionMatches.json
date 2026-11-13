@@ -1,0 +1,20 @@
+[
+  {
+    "file": "Library/PackageCache/com.unity.ugui@4dc88464a83d/PackageConversionData.json",
+    "json_path": "/assetRecords/97",
+    "data": {
+      "referencedResource": "EmojiOne.asset",
+      "target": "guid: 9a952e2781ef26940ae089f1053ef4ef",
+      "replacement": "guid: c41005c129ba4d66911b75229fd70b45"
+    }
+  },
+  {
+    "file": "Library/PackageCache/com.unity.ugui@4dc88464a83d/PackageConversionData_Assets.json",
+    "json_path": "/assetRecords/32",
+    "data": {
+      "referencedResource": "EmojiOne.asset",
+      "target": "guid: 9a952e2781ef26940ae089f1053ef4ef",
+      "replacement": "guid: c41005c129ba4d66911b75229fd70b45"
+    }
+  }
+]

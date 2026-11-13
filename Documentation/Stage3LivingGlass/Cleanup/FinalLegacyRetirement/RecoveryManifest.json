@@ -1,0 +1,18 @@
+{
+  "head": "b9f0972b38008b31e4bd2117ee88cb34ef9ce6fe",
+  "branch": "main",
+  "recovery_ref": "refs/archive/awakening-demo-pre-stage34-20261113t175527z",
+  "recovery_commit": "eb860bc572ad112d2b06d08697eb711110f1032c",
+  "tree": "46127b59cf5b74c11498bb5356ed9626eb0534b6",
+  "files": 2038,
+  "raw_blob_verification": "PASS",
+  "main_index_and_head_preserved": true,
+  "external_package": {
+    "path": "RecoveryExternal/com.github.homuler.mediapipe-0.16.3.tgz",
+    "original_path": "C:\\Users\\Nakul J S\\Downloads\\com.github.homuler.mediapipe-0.16.3.tgz",
+    "blob": "cfb0c1606a68f1e0ffe8f082ff640eebbe7fc74d"
+  },
+  "bundle": "D:\\Coding\\Unity\\Archives\\AwakeningCelebrations\\PreStage34-20261113T175527Z\\AwakeningDemo-PreStage34.bundle",
+  "bundle_sha256": "cfc576629e810601eb31f6f62f0254bfa3f2e5ca063612a62573a4b52d74a6d6",
+  "bundle_verification": "The bundle contains this ref:\neb860bc572ad112d2b06d08697eb711110f1032c refs/archive/awakening-demo-pre-stage34-20261113t175527z\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n"
+}

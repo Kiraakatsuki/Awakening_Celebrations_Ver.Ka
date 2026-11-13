@@ -1,0 +1,116 @@
+{
+    "label": "Settings-open-final-280",
+    "utc": "2026-11-13T11:28:01.7587660Z",
+    "route": "Home",
+    "locale": "English",
+    "focus": "window-close",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 8085,
+    "performer": -1,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": true,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 633.0,
+                "y": 972.0,
+                "width": 655.0,
+                "height": 80.0
+            },
+            "opacity": 0.5,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "glass-window",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1082.024658203125,
+                "y": 100.87167358398438,
+                "width": 759.9066162109375,
+                "height": 859.8944091796875
+            },
+            "opacity": 0.9979528188705444,
+            "scale": 0.9998771548271179,
+            "translation": {
+                "x": -1.021952748298645,
+                "y": 0.8188724517822266,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 986.0,
+                "width": 242.0,
+                "height": 66.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 945.0,
+                "y": 173.0,
+                "width": 879.0,
+                "height": 691.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        }
+    ]
+}

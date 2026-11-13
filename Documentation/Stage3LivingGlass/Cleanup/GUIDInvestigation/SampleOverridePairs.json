@@ -1,0 +1,50 @@
+[
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "obsolete_property": "contents",
+    "current_guid": "d1f297de946a523dda5bc19fb59525f6",
+    "current_fileID": "7355513348742275121"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "obsolete_property": "contents",
+    "current_guid": "bcc6cf6fe8edcbedc948607491e604d1",
+    "current_fileID": "7355513348742275121"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "obsolete_property": "contents",
+    "current_guid": "14f706a2859a564a7b7ae1bb3a7985e2",
+    "current_fileID": "7355513348742275121"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "obsolete_property": "contents",
+    "current_guid": "d31ec499ac06b6b0cb4299d9b4aa7f19",
+    "current_fileID": "7355513348742275121"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "obsolete_property": "contents",
+    "current_guid": "f8e13ca9036ae790aa97029999dd7750",
+    "current_fileID": "7355513348742275121"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "obsolete_property": "contents",
+    "current_guid": "8026945368f4a1ed29b086d7499b3172",
+    "current_fileID": "7355513348742275121"
+  },
+  {
+    "path": "Assets/_Recovery/0 (1).unity",
+    "obsolete_property": "contents",
+    "current_guid": "14f706a2859a564a7b7ae1bb3a7985e2",
+    "current_fileID": "7355513348742275121"
+  },
+  {
+    "path": "Assets/_Recovery/1.unity",
+    "obsolete_property": "contents",
+    "current_guid": "14f706a2859a564a7b7ae1bb3a7985e2",
+    "current_fileID": "7355513348742275121"
+  }
+]

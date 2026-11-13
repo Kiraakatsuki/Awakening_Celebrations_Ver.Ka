@@ -1,0 +1,20 @@
+{
+  "scope": "isolated design package; no Unity execution",
+  "local_markdown_links": "all resolve",
+  "source_hashes_unchanged": 20,
+  "localized_catalog_records": 104,
+  "logical_routes": 52,
+  "screen_families": 15,
+  "paired_deferred_states": 53,
+  "native_editable_frames": 30,
+  "browser_combinations_checked": 30,
+  "images_decoded": 49,
+  "prototype_js_syntax": "pass",
+  "tracked_production_diff": [],
+  "final_home_layout": "A/en and A/zh recaptured after narrowing reading column; 31.65px gap at captured browser width",
+  "limitations": [
+    "No Unity rendering or performance proof",
+    "No camera/video/live assistant test",
+    "Not every post-selection pixel variant finalized"
+  ]
+}

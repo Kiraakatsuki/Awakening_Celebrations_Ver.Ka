@@ -1,0 +1,655 @@
+{
+    "label": "Keyboard-before",
+    "utc": "2026-11-13T12:26:18.5271555Z",
+    "route": "COLOR-RELEASE",
+    "locale": "English",
+    "focus": "",
+    "videoState": "none",
+    "capturePhase": "State only (no pixels)",
+    "requestedUtc": "",
+    "overlayKind": "",
+    "width": 1920,
+    "height": 1080,
+    "frame": 58224,
+    "performer": 5,
+    "players": 0,
+    "playingPlayers": 0,
+    "requestedFrame": 58224,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": false,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "header",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "gallery-arc",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "identification",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "presence-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "aperture-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "performer-name-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "GAIA",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "art-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "presence-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "aperture-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "performer-name-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "PANDEMIC",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "art-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "presence-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "aperture-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "performer-name-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "RE-BIRTH",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "art-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "presence-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "aperture-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "performer-name-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "WHITE-GUARDIAN",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "art-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "presence-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "aperture-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "performer-name-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "CONSCIENCE",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "art-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "presence-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "aperture-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 0.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 8.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "performer-name-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 8.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "SANCTUARY",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        },
+        {
+            "name": "art-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 16.0,
+                "width": NaN,
+                "height": NaN
+            },
+            "opacity": 1.0,
+            "scale": 1.034999966621399,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        }
+    ]
+}

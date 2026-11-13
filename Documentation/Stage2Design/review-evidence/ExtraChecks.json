@@ -1,0 +1,46 @@
+[
+  {
+    "locale": "en",
+    "view": "components",
+    "present": true
+  },
+  {
+    "locale": "en",
+    "view": "deferred",
+    "present": true
+  },
+  {
+    "locale": "en",
+    "optional": "calibration",
+    "copy": "Close · Esc\nAlignment, only if needed.\n\nOptional flow: explain → check device → acquire target → evaluate → retry or cancel.\n\nNo calibration algorithm or success result is simulated. Keep this out of primary navigation until a measured need exists.\n\nCalibration not available"
+  },
+  {
+    "locale": "en",
+    "optional": "souvenir",
+    "copy": "Close · Esc\nCarry a moment with you.\n\nA takeaway is optional. Its content, destination, expiry and privacy rules must be approved first.\n\nDelivery unavailable · no QR code\n\nReady, expired, offline and error layouts are specified in DeferredFeatureUX.md."
+  },
+  {
+    "locale": "zh",
+    "view": "components",
+    "present": true
+  },
+  {
+    "locale": "zh",
+    "view": "deferred",
+    "present": true
+  },
+  {
+    "locale": "zh",
+    "optional": "calibration",
+    "copy": "關閉・Esc\n僅在需要時，調整對位。\n\n選用流程：說明 → 檢查裝置 → 取得目標 → 評估 → 重試或取消。\n\n此處不模擬校正演算法或成功結果。在量測證實需要之前，不放入主要導覽。\n\n校正目前無法使用"
+  },
+  {
+    "locale": "zh",
+    "optional": "souvenir",
+    "copy": "關閉・Esc\n帶走此刻的感受。\n\n紀念留存為選用功能。須先核准內容、目的地、期限與隱私規則。\n\n留存服務未提供・沒有 QR 碼\n\n已就緒、已過期、離線與錯誤版面規格見 DeferredFeatureUX.md。"
+  },
+  {
+    "check": "review-only reduced motion and opaque surfaces",
+    "classes": "concept-A zh home focus enter review-reduced review-opaque"
+  }
+]

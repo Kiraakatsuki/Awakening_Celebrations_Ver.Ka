@@ -1,0 +1,1345 @@
+{
+  "pageId": "18:48",
+  "frames": [
+    {
+      "id": "18:66",
+      "name": "Living Glass / Gallery arc / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 21,
+      "instances": 12,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I18:75;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:78;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:81;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:84;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:87;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:90;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:110",
+      "name": "Living Glass / Gallery constellation / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 21,
+      "instances": 12,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I18:119;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:122;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:125;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:128;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:131;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:134;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:154",
+      "name": "Living Glass / Gallery salon / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 27,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:165",
+          "name": "Artwork / GAIA",
+          "width": 235,
+          "height": 210,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "18:170",
+          "name": "Artwork / PANDEMIC",
+          "width": 235,
+          "height": 210,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "18:175",
+          "name": "Artwork / RE-BIRTH",
+          "width": 235,
+          "height": 210,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "18:181",
+          "name": "Artwork / WHITE-GUARDIAN",
+          "width": 235,
+          "height": 210,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "18:186",
+          "name": "Artwork / CONSCIENCE",
+          "width": 235,
+          "height": 210,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "18:191",
+          "name": "Artwork / SANCTUARY",
+          "width": 235,
+          "height": 210,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:212",
+      "name": "Living Glass / home / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:217",
+          "name": "Artwork / SANCTUARY",
+          "width": 768,
+          "height": 704,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:233",
+      "name": "Living Glass / privacy / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:238",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:254",
+      "name": "Living Glass / tutorial / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:259",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:275",
+      "name": "Living Glass / attract / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:280",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:296",
+      "name": "Living Glass / postvideo / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:301",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:317",
+      "name": "Living Glass / chooser / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 17,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:322",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "19:387",
+          "name": "Artwork / GAIA",
+          "width": 235,
+          "height": 230,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "19:390",
+          "name": "Artwork / PANDEMIC",
+          "width": 235,
+          "height": 230,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "19:393",
+          "name": "Artwork / RE-BIRTH",
+          "width": 235,
+          "height": 230,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "19:397",
+          "name": "Artwork / WHITE-GUARDIAN",
+          "width": 235,
+          "height": 230,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "19:400",
+          "name": "Artwork / CONSCIENCE",
+          "width": 235,
+          "height": 230,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "19:403",
+          "name": "Artwork / SANCTUARY",
+          "width": 235,
+          "height": 230,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:338",
+      "name": "Living Glass / closing / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:343",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:359",
+      "name": "Living Glass / souvenir / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:364",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:380",
+      "name": "Living Glass / calibration / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:385",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:401",
+      "name": "Living Glass / settings / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 40,
+      "instances": 19,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I18:410;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:413;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:416;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:419;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:422;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:425;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:485",
+      "name": "Living Glass / ai / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 31,
+      "instances": 17,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "I18:494;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:497;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:500;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:503;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:506;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:509;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:549",
+      "name": "Living Glass / focus / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:550",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:570",
+      "name": "Living Glass / activation / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 9,
+      "instances": 3,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:571",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:586",
+      "name": "Living Glass / portrait / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 10,
+      "instances": 3,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:587",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:603",
+      "name": "Living Glass / playing / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 3,
+      "instances": 2,
+      "fonts": [
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "18:604",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:611",
+      "name": "Living Glass / release / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 12,
+      "instances": 7,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:612",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:634",
+      "name": "Living Glass / Gallery arc / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 21,
+      "instances": 12,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I18:643;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:646;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:649;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:652;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:655;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:658;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:678",
+      "name": "Living Glass / Gallery constellation / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 21,
+      "instances": 12,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I18:687;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:690;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:693;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:696;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:699;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:702;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:722",
+      "name": "Living Glass / Gallery salon / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 27,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:733",
+          "name": "Artwork / GAIA",
+          "width": 235,
+          "height": 210,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "18:738",
+          "name": "Artwork / PANDEMIC",
+          "width": 235,
+          "height": 210,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "18:743",
+          "name": "Artwork / RE-BIRTH",
+          "width": 235,
+          "height": 210,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "18:749",
+          "name": "Artwork / WHITE-GUARDIAN",
+          "width": 235,
+          "height": 210,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "18:754",
+          "name": "Artwork / CONSCIENCE",
+          "width": 235,
+          "height": 210,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "18:759",
+          "name": "Artwork / SANCTUARY",
+          "width": 235,
+          "height": 210,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:780",
+      "name": "Living Glass / home / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:785",
+          "name": "Artwork / SANCTUARY",
+          "width": 768,
+          "height": 704,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:801",
+      "name": "Living Glass / privacy / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:806",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:822",
+      "name": "Living Glass / tutorial / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:827",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:843",
+      "name": "Living Glass / attract / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:848",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:864",
+      "name": "Living Glass / postvideo / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:869",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:885",
+      "name": "Living Glass / chooser / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 17,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "18:890",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "19:440",
+          "name": "Artwork / GAIA",
+          "width": 235,
+          "height": 230,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "19:443",
+          "name": "Artwork / PANDEMIC",
+          "width": 235,
+          "height": 230,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "19:446",
+          "name": "Artwork / RE-BIRTH",
+          "width": 235,
+          "height": 230,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "19:450",
+          "name": "Artwork / WHITE-GUARDIAN",
+          "width": 235,
+          "height": 230,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "19:453",
+          "name": "Artwork / CONSCIENCE",
+          "width": 235,
+          "height": 230,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "19:456",
+          "name": "Artwork / SANCTUARY",
+          "width": 235,
+          "height": 230,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:906",
+      "name": "Living Glass / closing / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:911",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:927",
+      "name": "Living Glass / souvenir / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:932",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:948",
+      "name": "Living Glass / calibration / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:953",
+          "name": "Artwork / GAIA",
+          "width": 768,
+          "height": 704,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:969",
+      "name": "Living Glass / settings / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 40,
+      "instances": 19,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I18:978;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:981;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:984;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:987;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:990;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:993;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:1053",
+      "name": "Living Glass / ai / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 31,
+      "instances": 17,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC",
+        "Source Sans 3"
+      ],
+      "images": [
+        {
+          "id": "I18:1062;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        },
+        {
+          "id": "I18:1065;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        },
+        {
+          "id": "I18:1068;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        },
+        {
+          "id": "I18:1071;19:366",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 400,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        },
+        {
+          "id": "I18:1074;19:363",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 370,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        },
+        {
+          "id": "I18:1077;18:64",
+          "name": "Artwork / GAIA",
+          "width": 261,
+          "height": 340,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    },
+    {
+      "id": "18:1117",
+      "name": "Living Glass / focus / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:1118",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:1138",
+      "name": "Living Glass / activation / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 9,
+      "instances": 3,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:1139",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:1154",
+      "name": "Living Glass / portrait / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 10,
+      "instances": 3,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:1155",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:1171",
+      "name": "Living Glass / playing / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 3,
+      "instances": 2,
+      "fonts": [
+        "Noto Sans TC"
+      ],
+      "images": [
+        {
+          "id": "18:1172",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:1179",
+      "name": "Living Glass / release / zh",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 12,
+      "instances": 7,
+      "fonts": [
+        "Noto Sans TC",
+        "Noto Serif TC"
+      ],
+      "images": [
+        {
+          "id": "18:1180",
+          "name": "Artwork / GAIA",
+          "width": 1768,
+          "height": 880,
+          "hash": "d0b9dde2bbef820accb280eb544262867133da19"
+        }
+      ]
+    },
+    {
+      "id": "18:1202",
+      "name": "Living Glass / Theme PANDEMIC / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:1203",
+          "name": "Artwork / PANDEMIC",
+          "width": 1768,
+          "height": 880,
+          "hash": "b60d5f32a4d7c19f34310fd2f8c9b7401c5b512c"
+        }
+      ]
+    },
+    {
+      "id": "18:1223",
+      "name": "Living Glass / Theme RE-BIRTH / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:1224",
+          "name": "Artwork / RE-BIRTH",
+          "width": 1768,
+          "height": 880,
+          "hash": "0c9809f40f73677964b45824c227d85dc2a53bc5"
+        }
+      ]
+    },
+    {
+      "id": "18:1244",
+      "name": "Living Glass / Theme WHITE-GUARDIAN / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:1245",
+          "name": "Artwork / WHITE-GUARDIAN",
+          "width": 1768,
+          "height": 880,
+          "hash": "29dbef3b4629075df8200a85af640f7c4bb8561d"
+        }
+      ]
+    },
+    {
+      "id": "18:1265",
+      "name": "Living Glass / Theme CONSCIENCE / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:1266",
+          "name": "Artwork / CONSCIENCE",
+          "width": 1768,
+          "height": 880,
+          "hash": "1b4373bc801edf6490cb06e74a9d7902af6a78cc"
+        }
+      ]
+    },
+    {
+      "id": "18:1286",
+      "name": "Living Glass / Theme SANCTUARY / en",
+      "width": 1920,
+      "height": 1080,
+      "editableText": 11,
+      "instances": 6,
+      "fonts": [
+        "Source Sans 3",
+        "Source Serif 4"
+      ],
+      "images": [
+        {
+          "id": "18:1287",
+          "name": "Artwork / SANCTUARY",
+          "width": 1768,
+          "height": 880,
+          "hash": "f6a5af1bfcdbbbdd9321d7f6c127f41a6a00ba57"
+        }
+      ]
+    }
+  ]
+}

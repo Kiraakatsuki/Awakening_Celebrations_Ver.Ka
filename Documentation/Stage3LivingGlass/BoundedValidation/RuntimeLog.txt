@@ -1,0 +1,7 @@
+2026-11-13T11:27:40.5403747Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:27:42.0802199Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:27:42.3032098Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:27:42.3489746Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:27:42.5118833Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:28:49.5726243Z | Log | Performer targeted: RE-BIRTH.
+2026-11-13T11:28:49.5746606Z | Log | Performer confirmed: RE-BIRTH.

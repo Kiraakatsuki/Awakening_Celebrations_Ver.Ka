@@ -1,0 +1,1 @@
+PASS: isolated local TC/Latin specimen, no services; maxScroll=987.2;viewport=(x:908.80, y:410.24, width:494.72, height:156.80);plainText=True

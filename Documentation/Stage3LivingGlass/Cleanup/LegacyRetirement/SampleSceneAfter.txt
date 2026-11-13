@@ -1,0 +1,274 @@
+Assets/Art/Figma/Attract/Presence — CONSCIENCE.png
+Assets/Art/Figma/Attract/Presence — GAIA.png
+Assets/Art/Figma/Attract/Presence — PANDEMIC.png
+Assets/Art/Figma/Attract/Presence — RE-BIRTH.png
+Assets/Art/Figma/Attract/Presence — SANCTUARY.png
+Assets/Art/Figma/Attract/Presence — WHITE GUARDIAN.png
+Assets/Art/Figma/Home/HOME BACKGROUND.png
+Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png
+Assets/Art/Figma/PER_CONSCIENCE/Living Master Image.png
+Assets/Art/Figma/PER_CONSCIENCE/Master Image — Activation.png
+Assets/Art/Figma/PER_CONSCIENCE/Released performer image.png
+Assets/Art/Figma/PER_GAIA/Approved Master Image.png
+Assets/Art/Figma/PER_GAIA/Living Master Image.png
+Assets/Art/Figma/PER_GAIA/Master Image — Activation.png
+Assets/Art/Figma/PER_GAIA/Released performer image.png
+Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png
+Assets/Art/Figma/PER_PANDEMIC/Living Master Image.png
+Assets/Art/Figma/PER_PANDEMIC/Master Image — Activation.png
+Assets/Art/Figma/PER_PANDEMIC/Released performer image.png
+Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png
+Assets/Art/Figma/PER_RE-BIRTH/Living Master Image.png
+Assets/Art/Figma/PER_RE-BIRTH/Master Image — Activation.png
+Assets/Art/Figma/PER_RE-BIRTH/Released performer image.png
+Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png
+Assets/Art/Figma/PER_SANCTUARY/Living Master Image.png
+Assets/Art/Figma/PER_SANCTUARY/Master Image — Activation.png
+Assets/Art/Figma/PER_SANCTUARY/Released performer image.png
+Assets/Art/Figma/PER_WHITE/Approved Master Image.png
+Assets/Art/Figma/PER_WHITE/Living Master Image.png
+Assets/Art/Figma/PER_WHITE/Master Image — Activation.png
+Assets/Art/Figma/PER_WHITE/Released performer image.png
+Assets/Art/Figma/Performer Select/Selection target — CONSCIENCE.png
+Assets/Art/Figma/Performer Select/Selection target — GAIA.png
+Assets/Art/Figma/Performer Select/Selection target — PANDEMIC.png
+Assets/Art/Figma/Performer Select/Selection target — RE-BIRTH.png
+Assets/Art/Figma/Performer Select/Selection target — SANCTUARY.png
+Assets/Art/Figma/Performer Select/Selection target — WHITE GUARDIAN.png
+Assets/Art/Figma/Privacy/SANCTUARY — DIMMED PRIVACY BACKGROUND.png
+Assets/Art/Figma/Release/Presence — CONSCIENCE.png
+Assets/Art/Figma/Release/Presence — GAIA.png
+Assets/Art/Figma/Release/Presence — PANDEMIC.png
+Assets/Art/Figma/Release/Presence — RE-BIRTH.png
+Assets/Art/Figma/Release/Presence — SANCTUARY.png
+Assets/Art/Figma/Release/Presence — WHITE GUARDIAN.png
+Assets/Art/Figma/Souvenir/Souvenir artwork preview.png
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml
+Assets/Fonts/NotoSansSC-Regular.ttf
+Assets/Fonts/SourceSans3-Regular.ttf
+Assets/Fonts/SourceSerif4-Regular.ttf
+Assets/Resources/RuntimeScreenCatalog.asset
+Assets/Resources/Videos/LivingPortrait/Conscience.mp4
+Assets/Resources/Videos/LivingPortrait/Gaia.mp4
+Assets/Resources/Videos/LivingPortrait/Pandemic.mp4
+Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4
+Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4
+Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/AppSettings.cs
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerAppSettings.asset
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs
+Assets/Scenes/SampleScene.unity
+Assets/Scripts/AwakeningApplicationController.cs
+Assets/Scripts/HomeLanguageController.cs
+Assets/Scripts/Interaction/MediaPipeGestureBridge.cs
+Assets/Scripts/RuntimeScreenCatalog.cs
+Assets/Scripts/ScreenDocumentManager.cs
+Assets/UI Toolkit/PanelSettings.asset
+Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss
+Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf
+Packages/com.unity.render-pipelines.universal/Runtime/2D/Light2D.cs
+Packages/com.unity.render-pipelines.universal/Runtime/UniversalAdditionalCameraData.cs

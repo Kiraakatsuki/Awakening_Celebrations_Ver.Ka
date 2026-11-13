@@ -1,0 +1,214 @@
+[
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/NotoSansCJKtc-Regular.otf",
+    "sha256": "dce08bd4fd91aa8aa76ed8fea4b694c2dfb8550f67871e326843212ddbeb88b4"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/NotoSansCJKtc-Regular.otf.meta",
+    "sha256": "061ab2a8c3e7f5ef2f30709ef30ded175d9ad8612dce16de48bec13686359b60"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/OFL.txt",
+    "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/OFL.txt.meta",
+    "sha256": "b515029707a3329ce3d8e63f73179482f325c497bf341b9da808af554c082a4a"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/Source.json",
+    "sha256": "01b85a24a8cd87dfe99317e12e0cce60aa605a5018a8d6df10b7eb007213fd5b"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts/Source.json.meta",
+    "sha256": "62732452b10828f75c33dc0400367045b8d6e411f432a7cb8703c687d6662061"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/Fonts.meta",
+    "sha256": "ea3325a857c86dd45a32c4b50278bcb51a206cc5e9cc16fe08685fa9ff971b44"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/LivingGlassAssets.asset",
+    "sha256": "34397ad9d875111355612a8d01fd0a11fa832f465908f5aaee81cd66b93395e9"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets/LivingGlassAssets.asset.meta",
+    "sha256": "4c376d7028dae059fdf5bd9cf4e619c8532135bce7441377f22e4086855d1144"
+  },
+  {
+    "path": "Assets/LivingGlass/Assets.meta",
+    "sha256": "4319bbc9097028a8cfb16bbbc8edc46b9e4b6fefee9ba769e03bbacd0e6f2461"
+  },
+  {
+    "path": "Assets/LivingGlass/Core/LivingGlassRoutes.cs",
+    "sha256": "8a97a85394e5efaa40b15c2ff4c87547b4f37ef105c8466270c133b36ffdebd7"
+  },
+  {
+    "path": "Assets/LivingGlass/Core/LivingGlassRoutes.cs.meta",
+    "sha256": "521f3a07e5bc46c2719aeae3bdd3fb2a108561dca5e674cd82635448bd039b07"
+  },
+  {
+    "path": "Assets/LivingGlass/Core.meta",
+    "sha256": "f895a45449237bc63d6166a77bab1bc092e9ebcb6dadbe4c480695e149f009a9"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassContractChecks.cs",
+    "sha256": "719517c0ef15a639b7d8917bf2cb0e454632127538b3c79c968596d7a3433abe"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassContractChecks.cs.meta",
+    "sha256": "8586951f9d8995c2f77e188ee12a9a4f096c914541ba6039ce0344f19c665c83"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs",
+    "sha256": "6b7fb3fc8e7f99164563d0386688290b155f2695ed96ca704e339507665138b1"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs.meta",
+    "sha256": "05dffb64a03e4f3e1f2a612153252eca0534880889a95aa58994cc36b5027079"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassSceneBuilder.cs",
+    "sha256": "b5d8c93f3cec6aa542d46306d96bba5efbcd33adcb52107c1010e8ffbecb186d"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor/LivingGlassSceneBuilder.cs.meta",
+    "sha256": "5b9a69505c0db9d6ec5866c5ad60c7baa40c0a8c5121beb5a9d6ac7b7f4c3b23"
+  },
+  {
+    "path": "Assets/LivingGlass/Editor.meta",
+    "sha256": "57520f75b4044859e41ad31fd7a2c0ae84a2b52fcee56925c58c3864b7edcae1"
+  },
+  {
+    "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+    "sha256": "8f0f048e9b2b61ac007f10ba7bd11b1ce593f7d70ad70509c97c49090b7a23e1"
+  },
+  {
+    "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs.meta",
+    "sha256": "68428f7672034773339fba36e9e496d5aec93836126ef54f766ac430ab7f14c1"
+  },
+  {
+    "path": "Assets/LivingGlass/Integration.meta",
+    "sha256": "3dd8a3e39ee54f06dfb31443fae46d5ccf8f33835f0df108bf6abb6101309dd7"
+  },
+  {
+    "path": "Assets/LivingGlass/Motion/LivingGlassMotion.cs",
+    "sha256": "afc5ff25ac2c5b471ecf7c66cfc40dcf5f087581425241d8cb3d0ea73fe10c84"
+  },
+  {
+    "path": "Assets/LivingGlass/Motion/LivingGlassMotion.cs.meta",
+    "sha256": "0036623645e2fdaf8b0d563693f1e60b8215fde8acdb3239352b4b3e3a4ed33d"
+  },
+  {
+    "path": "Assets/LivingGlass/Motion.meta",
+    "sha256": "cab00c1a241387da9642851a3f1c47002170a8935e46756652c05dae3d7c428e"
+  },
+  {
+    "path": "Assets/LivingGlass/Presentation/LivingGlassPresentation.cs",
+    "sha256": "66b787523f30759710f53c20452011b3c44ec35ccbced27fa085c609642dbfd1"
+  },
+  {
+    "path": "Assets/LivingGlass/Presentation/LivingGlassPresentation.cs.meta",
+    "sha256": "02d3096cf89a8c5647d318e2323efef3cb1ea6da464bcbbe5f83c863dc1eaefd"
+  },
+  {
+    "path": "Assets/LivingGlass/Presentation.meta",
+    "sha256": "932ec79722c572affb32340b1e9f6d7c9aa1d6be14175e6d6139d08f01c2a880"
+  },
+  {
+    "path": "Assets/LivingGlass/Rendering/LivingGlassAtmosphere.cs",
+    "sha256": "ee06f3651c70a48c34605f351963ea12355a3bb852b759cea2f8a81b889eb026"
+  },
+  {
+    "path": "Assets/LivingGlass/Rendering/LivingGlassAtmosphere.cs.meta",
+    "sha256": "de2fc8002ebb07fb3bf598ceb358f81d88d2b52d96bdd1d10050e49430322b88"
+  },
+  {
+    "path": "Assets/LivingGlass/Rendering.meta",
+    "sha256": "d931a54c20336cd7559d203b493b8b31c183e719e9aa5acb5ae6580ef850dea4"
+  },
+  {
+    "path": "Assets/LivingGlass/Themes/LivingGlassAssets.cs",
+    "sha256": "6830686d12b202929628c8f4acc6c0ab190bd87ce0f7ddad8227ea14965713ca"
+  },
+  {
+    "path": "Assets/LivingGlass/Themes/LivingGlassAssets.cs.meta",
+    "sha256": "7f6157200d3a52ed7b6e02c7486087705a4adcc30b88bb536c199ff00ac2a99e"
+  },
+  {
+    "path": "Assets/LivingGlass/Themes.meta",
+    "sha256": "1ef904d3c224e41f9a2e361237576bdf81edac4a4690d0d6d2cf570d8d3165c4"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Components/LivingGlassGestureIllustration.cs",
+    "sha256": "238b5237de13870a4938c4e1c57be3a066723180fe5bacfaf677ed105628cc27"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Components/LivingGlassGestureIllustration.cs.meta",
+    "sha256": "5797651c6c7acaedf258f860d043eefa4207e3ce891605ecb5b0ee7f16a3d480"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Components.meta",
+    "sha256": "732d62303e4b8c149107a4c01d4905e5a3157ca9f9a7cd41e15faa85d423c3f4"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+    "sha256": "d87b023cbcd664e8b8fc4f3a353bfedad2129bb418275360371fbca7f9037206"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/LivingGlassPanel.asset.meta",
+    "sha256": "580b0ee944a8e2b359e2257574760e522ab8e838971b0fdc9116411f28d31664"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Styles/LivingGlass.uss",
+    "sha256": "99fea15cb66380d400c5fb9aa70d0245daa3d8afc1f95b765bb9a766b6e108e8"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Styles/LivingGlass.uss.meta",
+    "sha256": "c1d05b1590201aee19bf17ea714eb00d9ef96aa6dcaa2fd1c9d2a86c4b3c2ceb"
+  },
+  {
+    "path": "Assets/LivingGlass/UI/Styles.meta",
+    "sha256": "d34e73534a1096a55543a4fd94dbf5323f050d0c0a81c9c9b200357baedaa01b"
+  },
+  {
+    "path": "Assets/LivingGlass/UI.meta",
+    "sha256": "c687ce62fbeb657ad86c1c9db4a19634e66439d84fd9aa676e27b41b189b620e"
+  },
+  {
+    "path": "Assets/LivingGlass.meta",
+    "sha256": "7a95c63e0399fa710ac05c92054a4e59f43ea07de405e81b640c84d9d12162e3"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs",
+    "sha256": "c371788209489687ba1d3276132ac821c70d8eab275a810b83172875ec780a9c"
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs.meta",
+    "sha256": "3e24f6abb9795471243e2102c9348d0a9b503c45ebd6c73709e527af3f4efabb"
+  },
+  {
+    "path": "Assets/Scenes/AwakeningLivingGlass.unity",
+    "sha256": "b66a1c508db23d896cb29141125a286116427ca0a196cf8df588f5b90c66f0c8"
+  },
+  {
+    "path": "Assets/Scenes/AwakeningLivingGlass.unity.meta",
+    "sha256": "d5758ccde68497e416c982f8aa5b2d9a58cb2ac99d5c97933dfcb0b459708bc0"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "sha256": "b60e63a4b4f99d0d7e1608a009825fe3bfd8a0f28cc100353c7b64e9c68eaadc"
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs.meta",
+    "sha256": "7df931f86ede78acf0a653420e4d7c22081231e6e92fb29909a7224fa5a45544"
+  },
+  {
+    "path": "Assets/Scripts/Interaction/MediaPipeGestureBridge.cs",
+    "sha256": "662a30e3d6ca31be30bb5b1e9c09c7228d5ddbec1444b30ee4ee5693b66e6e4d"
+  },
+  {
+    "path": "Assets/Scripts/Interaction/MediaPipeGestureBridge.cs.meta",
+    "sha256": "a512e0aefc9631efc06a98fd5ed1d2cd91fae4f974492089dd53d548398a51ef"
+  }
+]

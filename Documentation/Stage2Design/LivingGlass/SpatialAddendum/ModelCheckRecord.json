@@ -1,0 +1,7 @@
+{
+  "command": "node --test Documentation/Stage2Design/LivingGlass/SpatialAddendum/spatial-model.test.cjs",
+  "result": "14 passed / 0 failed in the recorded execution",
+  "scope": "pure presentation state and numeric bounds; no DOM/browser/Unity",
+  "model_sha256": "67844481b0abf60c926454ae98b6f8ca9876f883020af3d6fea3655ae7f507fc",
+  "test_sha256": "05c3a27da73d9b5e30f0a82b6e5e3c446b08c9a7d407bd01251022f2b4802fca"
+}

@@ -1,0 +1,24 @@
+PASS: 1001 shared-ease samples never show outgoing and incoming copy together.
+PASS: GAIA / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: PANDEMIC / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: RE-BIRTH / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: WHITE-GUARDIAN / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: CONSCIENCE / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: SANCTUARY / English / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: GAIA / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: PANDEMIC / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: RE-BIRTH / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: WHITE-GUARDIAN / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: CONSCIENCE / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: SANCTUARY / Chinese / exclusive copy/portrait; final cleanup; overlay, locale, settle and reduced interruption contracts. Editor model checks only.
+PASS: Home-en isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+PASS: Home-zh isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+PASS: 捲動：方向鍵、Page Up/Down、Home/End / computed arrow color=RGBA(0.157, 0.216, 0.278, 1.000); native scroll high=198.4; Editor styles, not native runtime input.
+PASS: Settings-zh isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+PASS: Scroll: arrows, Page Up/Down, Home/End / computed arrow color=RGBA(0.157, 0.216, 0.278, 1.000); native scroll high=268; Editor styles, not native runtime input.
+PASS: Settings-en isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+PASS: 捲動：方向鍵、Page Up/Down、Home/End / computed arrow color=RGBA(0.157, 0.216, 0.278, 1.000); native scroll high=6.103516E-05; Editor styles, not native runtime input.
+PASS: Privacy-zh isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+PASS: Gallery-reduced-zh isolated Editor layout completed. Automatic desktop capture excluded because occlusion is not controlled.
+PASS: isolated bilingual static views and reduced/opaque Gallery constructed without services. Visual references use separately inspected native-window captures, not automatic desktop crops.
+PASS: Editor-only model/tree/style checks; runtime retest NOT RUN.

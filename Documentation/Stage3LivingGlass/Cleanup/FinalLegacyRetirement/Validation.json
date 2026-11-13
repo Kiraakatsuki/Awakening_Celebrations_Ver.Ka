@@ -1,0 +1,220 @@
+{
+  "regression_status": "PASS",
+  "checks": [
+    {
+      "check": "evidence file hashes match the current complete scan roots",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "only ten reviewed existing files changed",
+      "status": "PASS",
+      "detail": [
+        "Assets/LivingGlass/Core/LivingGlassRoutes.cs",
+        "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+        "Assets/LivingGlass/Editor/LivingGlassContractChecks.cs",
+        "Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs",
+        "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+        "Assets/Scenes/AwakeningLivingGlass.unity",
+        "Assets/Scripts/AwakeningApplicationController.cs",
+        "Packages/manifest.json",
+        "Packages/packages-lock.json",
+        "ProjectSettings/EditorBuildSettings.asset"
+      ]
+    },
+    {
+      "check": "every retirement has exact recovery path, hash and GUID evidence",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all other pre-existing files preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "six new files are only enum, route contract and independent Editor validator with metadata",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "art, videos/importers, models, capture/consent/recognition/cursor and vendor sources preserved",
+      "status": "PASS",
+      "detail": 319
+    },
+    {
+      "check": "backend files and local configuration preserved without exposing contents",
+      "status": "PASS",
+      "detail": 7
+    },
+    {
+      "check": "approved view, motion, glass, themes, fonts, component styling and media configuration preserved",
+      "status": "PASS",
+      "detail": 36
+    },
+    {
+      "check": "four user recovery snapshots preserved byte-for-byte outside imported assets",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "primary scene diff removes only three obsolete null legacy fields",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all six serialized video slots unchanged and ordered",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "serialized development entry is Living Glass and unrelated config objects preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "demo scene/catalog/controllers/exports absent from imported project",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "independent104 locale fixture matches the exact pre-retirement contract",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "AppLanguage serialized numeric contract preserved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "protected service/consent/gesture/media/request/disposal method AST text unchanged",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "Roslyn method evidence matches current source spans",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "active flow has no legacy controller/catalog/path-binding dependencies",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "assistant lifecycle and cinematic coroutines remain in the single serialized controller",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Traditional Chinese source glyph coverage",
+      "status": "PASS",
+      "detail": {
+        "unique_characters": 380,
+        "missing": []
+      }
+    },
+    {
+      "check": "native GUID evidence covers every external raw identity",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "native resolution reports exactly the same five pre-existing unresolved GUIDs",
+      "status": "PASS",
+      "detail": [
+        "5a0e103d2920f990ab08fe7bada48cc4",
+        "8236d46ca3a43d373ae6ad281fea8fe0",
+        "b3ab972b21db85d48ade9657efdd4771",
+        "c41005c129ba4d66911b75229fd70b45",
+        "d5da564da19cb6b7d8e4f97f269edc5d"
+      ]
+    },
+    {
+      "check": "remaining obsolete override is confined to two unchanged MediaPipe recovery files",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "remaining UI documents parse and have no unresolved asset/style GUIDs",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "no duplicate imported GUID identities",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all Living Glass files have metadata",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "no retained native asset points into the retired set",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "primary native dependency closure preserved after removal",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "five raw failures are outside the active scene dependency closure",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "UPM removed only Figma and its exclusive pipeline without version drift",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "Unity completed compilation in clean Edit Mode with no consent or lingering preview",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "native primary-scene and pure contract checks passed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all68 isolated conversation layout/state specimens passed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "isolated bilingual transition/tree/scroll/reduced checks passed",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "strict_raw_guid_resolution": {
+    "status": "FAIL",
+    "distinct_guids": 5,
+    "sources": {
+      "5a0e103d2920f990ab08fe7bada48cc4": [
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab"
+      ],
+      "8236d46ca3a43d373ae6ad281fea8fe0": [
+        "Assets/_Recovery/0 (1).unity",
+        "Assets/_Recovery/1.unity"
+      ],
+      "b3ab972b21db85d48ade9657efdd4771": [
+        "Assets/Settings/Lit2DSceneTemplate.scenetemplate"
+      ],
+      "c41005c129ba4d66911b75229fd70b45": [
+        "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+      ],
+      "d5da564da19cb6b7d8e4f97f269edc5d": [
+        "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity"
+      ]
+    }
+  },
+  "confirmed_new_active_missing_references": [],
+  "runtime": "NOT RUN",
+  "note": "Compilation/static/isolated Editor checks do not prove operational equivalence or release readiness."
+}

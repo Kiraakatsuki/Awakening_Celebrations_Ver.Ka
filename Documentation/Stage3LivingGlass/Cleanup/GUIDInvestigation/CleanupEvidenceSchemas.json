@@ -1,0 +1,127 @@
+[
+  {
+    "file": "AllFilesAfter.json",
+    "encoding": "utf-8-sig",
+    "records": 2045
+  },
+  {
+    "file": "AllFilesBefore.json",
+    "encoding": "utf-8-sig",
+    "records": 2045
+  },
+  {
+    "file": "AssetInventory.json",
+    "encoding": "utf-8-sig",
+    "records": 593
+  },
+  {
+    "file": "AuditAfter.json",
+    "encoding": "utf-8-sig",
+    "records": 13
+  },
+  {
+    "file": "AuditBefore.json",
+    "encoding": "utf-8-sig",
+    "records": 10
+  },
+  {
+    "file": "BaselineStaticVerification.json",
+    "encoding": "utf-8-sig",
+    "records": 24
+  },
+  {
+    "file": "CandidateTriage.json",
+    "encoding": "utf-8-sig",
+    "records": 252
+  },
+  {
+    "file": "CleanupStaticChecks.json",
+    "encoding": "utf-8-sig",
+    "records": 11
+  },
+  {
+    "file": "CompiledAssemblies.json",
+    "encoding": "utf-8-sig",
+    "records": 154
+  },
+  {
+    "file": "ConsoleAfter.json",
+    "encoding": "utf-8-sig",
+    "records": 3
+  },
+  {
+    "file": "ConsoleBaseline.json",
+    "encoding": "utf-8-sig",
+    "records": 3
+  },
+  {
+    "file": "DuplicateContentGroups.json",
+    "encoding": "utf-8-sig",
+    "records": 6
+  },
+  {
+    "file": "DynamicAndToolingReferences.json",
+    "encoding": "utf-8-sig",
+    "records": 356
+  },
+  {
+    "file": "EditorStateAfter.json",
+    "encoding": "utf-8-sig",
+    "records": 1945
+  },
+  {
+    "file": "ExternalGuidResolution.json",
+    "encoding": "utf-8-sig",
+    "records": 261
+  },
+  {
+    "file": "ExternalGuids.json",
+    "encoding": "utf-8-sig",
+    "records": 261
+  },
+  {
+    "file": "FigmaMappingChecks.json",
+    "encoding": "utf-8-sig",
+    "records": 0
+  },
+  {
+    "file": "HandoffChecks.json",
+    "encoding": "cp1252",
+    "records": 8
+  },
+  {
+    "file": "PackageInventory.json",
+    "encoding": "cp1252",
+    "records": 57
+  },
+  {
+    "file": "ProtectedHashes.json",
+    "encoding": "utf-8-sig",
+    "records": 12
+  },
+  {
+    "file": "RemovalLedger.json",
+    "encoding": "utf-8-sig",
+    "records": 0
+  },
+  {
+    "file": "SceneScriptReferences.json",
+    "encoding": "utf-8-sig",
+    "records": 2
+  },
+  {
+    "file": "SerializedGuidReferences.json",
+    "encoding": "utf-8-sig",
+    "records": 589
+  },
+  {
+    "file": "UnityAssetGraph.json",
+    "encoding": "utf-8-sig",
+    "records": 591
+  },
+  {
+    "file": "UnityAssetGraphAfter.json",
+    "encoding": "utf-8-sig",
+    "records": 591
+  }
+]

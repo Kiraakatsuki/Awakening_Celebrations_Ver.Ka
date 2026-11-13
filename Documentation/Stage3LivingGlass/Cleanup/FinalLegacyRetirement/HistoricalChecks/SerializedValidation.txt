@@ -1,0 +1,7 @@
+INFO: GAIA clip=Assets/Resources/Videos/LivingPortrait/Gaia.mp4
+INFO: PANDEMIC clip=Assets/Resources/Videos/LivingPortrait/Pandemic.mp4
+INFO: RE-BIRTH clip=Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4
+INFO: WHITE-GUARDIAN clip=Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4
+INFO: CONSCIENCE clip=Assets/Resources/Videos/LivingPortrait/Conscience.mp4
+INFO: SANCTUARY clip=Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4
+INFO: catalog records=104

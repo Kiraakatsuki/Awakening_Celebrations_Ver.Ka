@@ -1,0 +1,11 @@
+{
+  "introduced_errors": 2,
+  "file": "Assets/LivingGlass/Editor/LivingGlassBoundedValidation.cs",
+  "lines": [
+    53,
+    91
+  ],
+  "cause": "Two Editor harness references still named the retired scene builder",
+  "correction": "Use LivingGlassProjectValidation.ScenePath, preserving existing runtime authorization guards",
+  "runtime_code_errors_observed": 0
+}

@@ -1,0 +1,91 @@
+--- before/Assets/LivingGlass/Presentation/LivingGlassPresentation.cs
++++ after/Assets/LivingGlass/Presentation/LivingGlassPresentation.cs
+@@ -59,7 +59,11 @@
+         root.AddToClassList("lg-app");
+         if (assets != null && assets.styles != null) root.styleSheets.Add(assets.styles);
+         root.RegisterCallback<KeyDownEvent>(OnKey, TrickleDown.TrickleDown);
+-        root.RegisterCallback<GeometryChangedEvent>(evt => root.EnableInClassList("lg-compact", evt.newRect.width < 1800));
++        root.RegisterCallback<GeometryChangedEvent>(evt =>
++        {
++            root.EnableInClassList("lg-compact", evt.newRect.width < 1800);
++            root.EnableInClassList("lg-short", evt.newRect.height < 900);
++        });
+         motion.Reduced = ReducedMotion;
+     }
+     public void Shutdown()
+@@ -96,7 +100,8 @@
+     private Button Action(VisualElement parent, string key, string text, System.Action command, string variant = "")
+     {
+         var b = new Button(() => command?.Invoke()) { name = key, text = text };
+-        b.AddToClassList("lg-action"); if (variant.Length > 0) b.AddToClassList(variant);
++        b.AddToClassList("lg-action");
++        foreach (string style in variant.Split(' ')) if (style.Length > 0) b.AddToClassList(style);
+         parent.Add(b); return b;
+     }
+     private Image Art(VisualElement parent, int performer, string cls = "lg-art", Texture2D replacement = null)
+@@ -558,6 +563,7 @@
+     }
+     private void BuildChapter(int performer, int stage)
+     {
++        if (stage == 4) { BuildReflection(performer); return; }
+         var chapter = Box(content, "chapter", "lg-chapter");
+         Texture2D art = stage == 1 ? assets.activation[performer] : stage == 2 ? assets.living[performer] : assets.portraits[performer];
+         if (stage == 2)
+@@ -580,12 +586,20 @@
+         }
+         else if (stage == 1) Text(copy, T("A presence is awakening…", "存在，正在甦醒……"));
+         else if (stage == 3) Action(copy, "release-continue", T("Reflect & converse", "沉澱並對話"), () => flow?.LivingContinue(), "lg-primary");
+-        else
+-        {
+-            copy.AddToClassList("lg-postvideo-copy");
+-            BuildChat(copy, performer);
+-            Action(copy, "finish-chapter", T("Continue to Closing", "繼續至結語"), () => flow?.LivingContinue(), "lg-primary");
+-        }
++    }
++    private void BuildReflection(int performer)
++    {
++        var layout = Box(content, "reflection", "lg-reflection");
++        var interaction = Box(layout, "reflection-interaction", "lg-reflection-interaction");
++        BuildChat(interaction, performer, true);
++        var side = Box(layout, "reflection-artwork", "lg-reflection-artwork");
++        Art(side, performer, "lg-reflection-art");
++        var identity = Box(side, "reflection-identity", "lg-reflection-identity");
++        var name = Text(identity, LivingGlassRoutes.Performers[performer], "lg-identity-title");
++        name.style.unityFontDefinition = FontDefinition.FromFont(assets.bodyEnglish);
++        name.style.color = LivingGlassAssets.Accents[performer];
++        Text(identity, T(LivingGlassAssets.ThemeEnglish[performer], LivingGlassAssets.ThemeChinese[performer]), "lg-small");
++        Action(side, "finish-chapter", T("Continue to Closing", "繼續至結語"), () => flow?.LivingContinue(), "lg-quiet lg-reflection-next");
+     }
+     public void UpdatePortraitStatus(bool fallback, bool firstFrame, bool autoAdvance, float seconds)
+     {
+@@ -638,10 +652,10 @@
+             Art(choice, p, "lg-assistant-thumb"); Text(choice, LivingGlassRoutes.Performers[p], "lg-choice-name");
+         }
+     }
+-    private void BuildChat(VisualElement parent, int performer)
+-    {
+-        Text(parent, LivingGlassRoutes.Performers[performer] + T(" / AI conversation", "／AI 對話"), "lg-subtitle");
+-        Text(parent, T("Ask about your experience. Verified performer context is limited; avoid sharing personal information.", "可詢問體驗感受。已核實的表演者背景有限，請勿分享個人資訊。"), "lg-small");
++    private void BuildChat(VisualElement parent, int performer, bool spacious = false)
++    {
++        Text(parent, spacious ? T("Reflect & converse", "沉澱並對話") : LivingGlassRoutes.Performers[performer] + T(" / AI conversation", "／AI 對話"), spacious ? "lg-reflection-title" : "lg-subtitle");
++        Text(parent, spacious ? T("AI context is limited. Please avoid sharing personal information.", "AI 背景資訊有限，請勿分享個人資訊。") : T("Ask about your experience. Verified performer context is limited; avoid sharing personal information.", "可詢問體驗感受。已核實的表演者背景有限，請勿分享個人資訊。"), "lg-small");
+         var suggestions = Box(parent, "suggestions", "lg-suggestions");
+         foreach (string s in new[] { T("What can I notice?", "我可以留意什麼？"), T("Help me reflect.", "引導我回顧感受。"), T("What is known about this presence?", "關於這種存在，有哪些已知資訊？") })
+             Action(suggestions, "suggestion-" + suggestions.childCount, s, null, "lg-suggestion");
+@@ -649,11 +663,12 @@
+         conversation.focusable = true; conversation.tabIndex = 0;
+         Text(conversation, T("Your conversation begins here.", "從這裡開始對話。"), "lg-empty").name = "assistant-empty";
+         var status = new Label { name = "assistantChatStatus", enableRichText = false }; status.AddToClassList("lg-chat-status"); conversation.Add(status);
++        var composer = spacious ? Box(parent, "question-composer", "lg-question-composer") : parent;
+         var input = new TextField(T("Your question", "您的問題")) { name = "assistantChatInput", maxLength = 3600, multiline = true };
+-        input.AddToClassList("lg-chat-input"); parent.Add(input);
+-        var controls = Box(parent, "chat-controls", "lg-actions");
++        input.AddToClassList("lg-chat-input"); composer.Add(input);
++        var controls = Box(composer, "chat-controls", spacious ? "lg-composer-controls" : "lg-actions");
+         Action(controls, "assistantChatSend", T("Ask", "詢問"), null, "lg-primary");
+-        Action(controls, "assistantCancel", T("Cancel request", "取消請求"), null, "lg-quiet").SetEnabled(false);
++        Action(controls, "assistantCancel", T("Cancel request", "取消請求"), null, spacious ? "lg-quiet lg-request-cancel" : "lg-quiet").SetEnabled(false);
+     }
+     public VisualElement OpenOverlay(string kind, AppLanguage locale, int performer)
+     {

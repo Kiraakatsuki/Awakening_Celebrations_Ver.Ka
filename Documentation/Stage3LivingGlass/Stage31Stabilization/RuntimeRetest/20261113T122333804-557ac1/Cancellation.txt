@@ -1,0 +1,1 @@
+textureNull=True;handlers=False;playing=0;copies=0

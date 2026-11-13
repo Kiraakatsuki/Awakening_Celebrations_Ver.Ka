@@ -1,0 +1,41 @@
+2026-11-13T11:20:09.9207965Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:20:11.7152566Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:20:11.8197208Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:20:11.9730123Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:20:12.0358731Z | Log | Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).
+2026-11-13T11:20:34.8146858Z | Log | Performer targeted: GAIA.
+2026-11-13T11:20:34.8156984Z | Log | Performer confirmed: GAIA.
+2026-11-13T11:20:35.7136950Z | Log | Both hands raised for GAIA on FOCUS-VIEW.
+2026-11-13T11:20:40.0188483Z | Log | Living Portrait playback started for GAIA at frame -1 (1280x720, 24 fps).
+2026-11-13T11:20:40.0228652Z | Log | Living Portrait first frame rendered for GAIA (frame 0, RenderTexture 1280x720).
+2026-11-13T11:21:03.1725653Z | Log | Performer targeted: PANDEMIC.
+2026-11-13T11:21:03.1725653Z | Log | Performer confirmed: PANDEMIC.
+2026-11-13T11:21:04.0708772Z | Log | Both hands raised for PANDEMIC on FOCUS-VIEW.
+2026-11-13T11:21:08.3779458Z | Log | Living Portrait playback started for PANDEMIC at frame -1 (1280x720, 24 fps).
+2026-11-13T11:21:08.3779458Z | Log | Living Portrait first frame rendered for PANDEMIC (frame 0, RenderTexture 1280x720).
+2026-11-13T11:21:31.5279286Z | Log | Performer targeted: RE-BIRTH.
+2026-11-13T11:21:31.5279286Z | Log | Performer confirmed: RE-BIRTH.
+2026-11-13T11:21:32.4285746Z | Log | Both hands raised for RE-BIRTH on FOCUS-VIEW.
+2026-11-13T11:21:36.7295307Z | Log | Living Portrait playback started for RE-BIRTH at frame -1 (1280x720, 24 fps).
+2026-11-13T11:21:36.7307685Z | Log | Living Portrait first frame rendered for RE-BIRTH (frame 0, RenderTexture 1280x720).
+2026-11-13T11:21:59.8971724Z | Log | Performer targeted: WHITE-GUARDIAN.
+2026-11-13T11:21:59.8971724Z | Log | Performer confirmed: WHITE-GUARDIAN.
+2026-11-13T11:22:00.7974421Z | Log | Both hands raised for WHITE-GUARDIAN on FOCUS-VIEW.
+2026-11-13T11:22:05.0989923Z | Log | Living Portrait playback started for WHITE-GUARDIAN at frame -1 (1280x720, 24 fps).
+2026-11-13T11:22:05.0989923Z | Log | Living Portrait first frame rendered for WHITE-GUARDIAN (frame 0, RenderTexture 1280x720).
+2026-11-13T11:22:28.2535569Z | Log | Performer targeted: CONSCIENCE.
+2026-11-13T11:22:28.2535569Z | Log | Performer confirmed: CONSCIENCE.
+2026-11-13T11:22:29.1513670Z | Log | Both hands raised for CONSCIENCE on FOCUS-VIEW.
+2026-11-13T11:22:33.4625428Z | Log | Living Portrait playback started for CONSCIENCE at frame -1 (784x1180, 24 fps).
+2026-11-13T11:22:33.4630559Z | Log | Living Portrait first frame rendered for CONSCIENCE (frame 0, RenderTexture 784x1180).
+2026-11-13T11:22:56.6311579Z | Log | Performer targeted: SANCTUARY.
+2026-11-13T11:22:56.6311579Z | Log | Performer confirmed: SANCTUARY.
+2026-11-13T11:22:57.5322439Z | Log | Both hands raised for SANCTUARY on FOCUS-VIEW.
+2026-11-13T11:23:01.8360215Z | Log | Living Portrait playback started for SANCTUARY at frame -1 (784x1180, 24 fps).
+2026-11-13T11:23:01.8372810Z | Log | Living Portrait first frame rendered for SANCTUARY (frame 0, RenderTexture 784x1180).
+2026-11-13T11:23:26.6996844Z | Log | Performer targeted: GAIA.
+2026-11-13T11:23:26.7002700Z | Log | Performer confirmed: GAIA.
+2026-11-13T11:23:27.5988510Z | Log | Both hands raised for GAIA on FOCUS-VIEW.
+2026-11-13T11:23:31.8972770Z | Log | Living Portrait playback started for GAIA at frame -1 (1280x720, 24 fps).
+2026-11-13T11:23:31.8972770Z | Log | Living Portrait first frame rendered for GAIA (frame 0, RenderTexture 1280x720).
+2026-11-13T11:23:32.3231527Z | Log | Living Portrait stopped. Returned to GAIA---FOCUS-VIEW---PER-001.

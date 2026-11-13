@@ -1,0 +1,9 @@
+{
+  "original_native_closure_UXML": 104,
+  "original_native_closure_USS": 97,
+  "other_styles": [
+    "Assets/Resources/HomeInteraction.uss",
+    "Assets/LivingGlass/UI/Styles/LivingGlass.uss",
+    "Assets/Resources/AssistantChatRuntime.uss"
+  ]
+}

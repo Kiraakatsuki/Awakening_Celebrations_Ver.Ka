@@ -1,0 +1,6 @@
+chapter=(x:61.44, y:160.64, width:1413.12, height:604.80)
+chapter-copy=(x:61.44, y:160.64, width:848.00, height:604.80)
+assistantConversation=(x:87.04, y:416.00, width:796.80, height:105.60)
+assistantChatInput=(x:87.04, y:536.32, width:796.80, height:95.36)
+chat-controls=(x:87.04, y:638.08, width:796.80, height:51.20)
+finish-chapter=(x:87.04, y:694.40, width:787.20, height:48.00)

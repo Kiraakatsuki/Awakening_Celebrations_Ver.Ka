@@ -1,0 +1,91 @@
+--- before/Assets\LivingGlass\UI\Styles\LivingGlass.uss
++++ after/Assets\LivingGlass\UI\Styles\LivingGlass.uss
+@@ -2,21 +2,24 @@
+ .lg-app {
+     --lg-floor: #0c1117; --lg-text: #f3f0e8; --lg-secondary: #c2cbd5;
+     --lg-reading: #17212c; --lg-glass: rgba(31,43,55,0.97); --lg-edge: #526475;
++    --lg-type-display: 72px; --lg-type-gallery: 56px; --lg-type-panel: 34px;
++    --lg-type-body: 25px; --lg-type-small: 19px; --lg-type-action: 22px;
+     flex-grow: 1; width: 100%; height: 100%; overflow: hidden;
+     background-color: var(--lg-floor); color: var(--lg-text); font-size: 24px;
++    -unity-font-style: normal; letter-spacing: 0;
+ }
+ .lg-content { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+ .lg-atmosphere { position: absolute; left: 20%; top: 14%; width: 68%; height: 68%; border-radius: 400px; }
+ .lg-header { position: absolute; left: 5%; right: 5%; top: 34px; flex-direction: row; justify-content: space-between; align-items: center; }
+-.lg-wordmark { font-size: 22px; letter-spacing: 3px; margin-bottom: 6px; }
+-.lg-eyebrow { font-size: 18px; color: var(--lg-secondary); letter-spacing: 2px; margin-top: 0; margin-bottom: 18px; white-space: normal; }
+-.lg-display { font-size: 72px; white-space: normal; margin-top: 0; margin-bottom: 22px; -unity-font-style: normal; }
+-.lg-body { font-size: 25px; color: var(--lg-secondary); white-space: normal; margin-top: 0; margin-bottom: 24px; }
+-.lg-small { font-size: 19px; color: var(--lg-secondary); white-space: normal; margin-top: 8px; margin-bottom: 12px; }
++.lg-wordmark { font-size: 22px; letter-spacing: 1.5px; margin-bottom: 6px; }
++.lg-eyebrow { font-size: 18px; color: var(--lg-secondary); letter-spacing: 1px; margin-top: 0; margin-bottom: 18px; white-space: normal; }
++.lg-display { font-size: var(--lg-type-display); white-space: normal; margin-top: 0; margin-bottom: 22px; -unity-font-style: normal; flex-shrink: 0; }
++.lg-body { font-size: var(--lg-type-body); color: var(--lg-secondary); white-space: normal; margin-top: 0; margin-bottom: 24px; flex-shrink: 0; }
++.lg-small { font-size: var(--lg-type-small); color: var(--lg-secondary); white-space: normal; margin-top: 8px; margin-bottom: 12px; flex-shrink: 0; }
+ .lg-action {
+     min-height: 60px; padding: 12px 24px; margin: 6px 12px 6px 0;
+     background-color: #283747; color: var(--lg-text); border-width: 1px; border-color: #536473; border-radius: 14px;
+-    font-size: 22px; white-space: normal;
++    font-size: var(--lg-type-action); white-space: normal; -unity-font-style: normal; -unity-text-align: middle-center;
+     transition-property: background-color, border-color; transition-duration: 0.12s;
+ }
+ .lg-action:hover { background-color: #344555; border-color: #a8bac6; }
+@@ -44,7 +47,7 @@
+ .lg-preview { height: 110px; width: 196px; background-color: #17212c; border-width: 1px; border-color: #526475; border-radius: 10px; margin-bottom: 8px; }
+ .lg-gallery-title { position: absolute; left: 5%; right: 5%; top: 12.5%; flex-direction: row; justify-content: space-between; }
+ .lg-gallery-title-copy { width: 62%; }
+-.lg-gallery-title .lg-display { font-size: 56px; }
++.lg-gallery-title .lg-display { font-size: var(--lg-type-gallery); }
+ .lg-gallery-guidance { font-size: 23px; white-space: normal; width: 31%; color: var(--lg-secondary); margin-top: 44px; }
+ .lg-gallery-arc { position: absolute; left: 5%; right: 5%; top: 31.48%; height: 464px; flex-direction: row; }
+ .lg-presence {
+@@ -63,7 +66,7 @@
+ .lg-rim { position: absolute; left: 0; right: 0; top: 0; bottom: 0; border-top-width: 2px; border-bottom-width: 2px; border-color: rgba(0,0,0,0); }
+ .lg-performer-name { font-size: 22px; white-space: normal; margin-top: 14px; color: var(--lg-text); -unity-text-align: upper-left; }
+ .lg-acquiring .lg-performer-name { color: #f3d8a3; }
+-.lg-targeted .lg-performer-name { -unity-font-style: bold; }
++.lg-targeted .lg-performer-name { color: var(--lg-text); }
+ .lg-identification { position: absolute; align-self: center; bottom: 14.1%; width: 820px; min-height: 110px; padding: 18px 25px; flex-direction: row; align-items: center; background-color: var(--lg-glass); border-width: 1px; border-color: #435362; border-top-color: #72838f; border-radius: 24px; }
+ .lg-identity-index { width: 45px; font-size: 20px; }
+ .lg-identity-copy { flex-grow: 1; flex-basis: 0; }
+@@ -82,7 +85,7 @@
+ .lg-portrait-status { align-self: center; margin-top: 34px; padding: 18px 24px; background-color: #17212c; border-radius: 14px; font-size: 22px; white-space: normal; }
+ .lg-reading { position: absolute; left: 18%; right: 18%; top: 16%; bottom: 18%; padding: 32px 44px; background-color: var(--lg-reading); border-width: 1px; border-color: #526475; border-radius: 26px; }
+ .lg-reading-body { flex-grow: 1; }
+-.lg-panel-title { font-size: 34px; white-space: normal; flex-grow: 1; flex-basis: 0; }
++.lg-panel-title { font-size: var(--lg-type-panel); white-space: normal; flex-grow: 1; flex-basis: 0; -unity-font-style: normal; }
+ .lg-subtitle { font-size: 25px; white-space: normal; margin-top: 12px; margin-bottom: 12px; }
+ .lg-reading > .lg-panel-title { height: 58px; min-height: 58px; flex-grow: 0; flex-basis: 58px; flex-shrink: 0; margin-bottom: 24px; }
+ .lg-hidden { display: none; }
+@@ -91,6 +94,22 @@
+ .lg-window-titlebar { flex-direction: row; align-items: center; margin-bottom: 18px; flex-shrink: 0; }
+ .lg-window-tool { padding: 8px 12px; font-size: 17px; min-height: 48px; margin-left: 10px; margin-right: 0; }
+ .lg-window-body { flex-shrink: 1; min-height: 120px; }
++/* Keep the native Scroller/Slider behavior and visible controls; theme their actual child nodes. */
++.lg-app .unity-scroll-view { border-width: 1px; border-color: rgba(0,0,0,0); border-radius: 12px; }
++.lg-app .unity-scroll-view:focus { border-color: #f3f0e8; }
++.lg-app .unity-scroller--vertical { width: 24px; min-width: 24px; margin-left: 12px; background-color: #101b26; border-radius: 12px; }
++.lg-app .unity-scroller--horizontal { height: 24px; min-height: 24px; background-color: #101b26; border-radius: 12px; }
++.lg-app .unity-scroller__slider { margin: 0; padding: 0; background-color: rgba(0,0,0,0); }
++.lg-app .unity-scroller .unity-base-slider__tracker { background-color: #182532; border-width: 0; border-radius: 6px; }
++.lg-app .unity-scroller .unity-base-slider__dragger { background-color: #8496a5; border-width: 1px; border-color: #a8bac6; border-radius: 6px; min-height: 32px; }
++.lg-app .unity-scroller .unity-base-slider__dragger:hover { background-color: #b0c1cc; }
++.lg-app .unity-scroller .unity-base-slider__dragger-border { background-color: rgba(0,0,0,0); border-width: 0; }
++.lg-app .unity-scroller__slider:focus .unity-base-slider__dragger { border-width: 2px; border-color: #f3f0e8; }
++.lg-app .unity-scroller .unity-repeat-button { width: 24px; height: 24px; min-height: 24px; margin: 0; padding: 0; background-image: none; background-color: #283747; border-width: 1px; border-color: #526475; border-radius: 7px; color: #f3f0e8; font-size: 14px; -unity-text-align: middle-center; }
++.lg-app .unity-scroller .unity-repeat-button:hover { background-color: #344555; }
++.lg-app .unity-scroller .unity-repeat-button:active { background-color: #182532; }
++.lg-app .unity-scroller .unity-repeat-button:focus { border-width: 2px; border-color: #f3f0e8; }
++.lg-app .unity-scroller:disabled { opacity: 0.45; }
+ .lg-setting-row { flex-direction: row; align-items: center; padding: 15px 0; border-bottom-width: 1px; border-bottom-color: #354351; }
+ .lg-setting-copy { flex-grow: 1; flex-basis: 0; margin-right: 24px; }
+ .lg-setting-row .lg-subtitle { margin: 0 0 4px; font-size: 23px; }
+@@ -129,6 +148,7 @@
+ .lg-resume { position: absolute; right: 4%; bottom: 118px; }
+ .lg-bridge { position: absolute; }
+ .lg-zh .lg-display { font-size: 64px; }
++.lg-zh .lg-eyebrow { letter-spacing: 0; }
+ .lg-zh .lg-gallery-title .lg-display { font-size: 54px; }
+ .lg-compact .lg-display { font-size: 54px; }
+ .lg-compact .lg-copy { padding-right: 32px; }

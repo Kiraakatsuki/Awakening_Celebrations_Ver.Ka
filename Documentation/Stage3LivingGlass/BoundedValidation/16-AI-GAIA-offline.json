@@ -1,0 +1,135 @@
+{
+    "label": "16-AI-GAIA-offline",
+    "utc": "2026-11-13T11:13:32.0445359Z",
+    "route": "GAIA---FOCUS-VIEW---PER-001",
+    "locale": "English",
+    "focus": "window-close",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 105464,
+    "performer": 0,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": true,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 633.0,
+                "y": 972.0,
+                "width": 655.0,
+                "height": 80.0
+            },
+            "opacity": 0.5,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "glass-window",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1083.0,
+                "y": 122.0,
+                "width": 760.0,
+                "height": 816.0
+            },
+            "opacity": 1.0,
+            "scale": 0.9999962449073792,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 986.0,
+                "width": 242.0,
+                "height": 66.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "assistantChatStatus",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1136.0,
+                "y": 528.0,
+                "width": 652.0,
+                "height": 8.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 863.0,
+                "y": 140.0,
+                "width": 980.0,
+                "height": 756.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        }
+    ]
+}

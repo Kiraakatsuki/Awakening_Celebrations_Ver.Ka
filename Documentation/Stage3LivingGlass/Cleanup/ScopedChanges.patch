@@ -1,0 +1,57 @@
+--- before/Assets/LivingGlass/Editor/LivingGlassConversationChecks.cs
++++ after/Assets/LivingGlass/Editor/LivingGlassConversationChecks.cs
+@@ -25,8 +25,8 @@
+         if(EditorApplication.isPlayingOrWillChangePlaymode)throw new InvalidOperationException("Edit Mode only.");
+         if(window!=null)throw new InvalidOperationException("Already checking.");
+         window=LivingGlassPreviewWindow.Open();var flags=BindingFlags.Instance|BindingFlags.NonPublic;
+-        view=(LivingGlassPresentation)typeof(LivingGlassPreviewWindow).GetField("view",flags).GetValue(window);
+-        data=(LivingGlassAssets)typeof(LivingGlassPreviewWindow).GetField("previewData",flags).GetValue(window);
++        view=window.Presentation;
++        data=window.PreviewAssets;
+         if(typeof(LivingGlassPresentation).GetField("flow",flags).GetValue(view)!=null)throw new InvalidOperationException("Services forbidden.");
+         index=0;rows.Clear();rows.Add("case,performer,locale,width,height,state,transcriptHeight,composerHeight,cancelDisplay");
+         Status="RUNNING isolated Editor layouts; no runtime or service requests";
+--- before/Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs
++++ after/Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs
+@@ -13,6 +13,9 @@
+     private GameObject owner;
+     private VisualElement canvas;
+     private LivingGlassAssets previewData;
++    // Typed access for isolated Editor checks; neither property initializes services.
++    internal LivingGlassPresentation Presentation { get { return view; } }
++    internal LivingGlassAssets PreviewAssets { get { return previewData; } }
+     private double lastTick, due;
+     private Queue<Shot> queue;
+     private Shot current;
+--- before/Assets/LivingGlass/Editor/LivingGlassStabilizationChecks.cs
++++ after/Assets/LivingGlass/Editor/LivingGlassStabilizationChecks.cs
+@@ -33,8 +33,8 @@
+         }
+         results.Add("PASS: 1001 shared-ease samples never show outgoing and incoming copy together.");
+         window=LivingGlassPreviewWindow.Open();
+-        view=(LivingGlassPresentation)typeof(LivingGlassPreviewWindow).GetField("view",Private).GetValue(window);
+-        data=(LivingGlassAssets)typeof(LivingGlassPreviewWindow).GetField("previewData",Private).GetValue(window);
++        view=window.Presentation;
++        data=window.PreviewAssets;
+         Check(typeof(LivingGlassPresentation).GetField("flow",Private).GetValue(view)==null,"preview has no application/service owner");
+         step=0; Status="RUNNING: isolated Editor view checks, not Play Mode";
+         PrepareGallery(); due=EditorApplication.timeSinceStartup+.25;
+--- before/Assets/Scripts/AwakeningApplicationController.cs
++++ after/Assets/Scripts/AwakeningApplicationController.cs
+@@ -131,7 +131,6 @@
+     private string cameraPreviewStatus;
+     private ManifestSnapshot nodeSnapshot;
+     private StyleSheet interactionStyles;
+-    private bool interactionStylesAdded;
+     private GestureCursorController gestureCursor;
+     private Label handTrackingStatus;
+     private AssistantSession assistantSession;
+@@ -2804,8 +2803,6 @@
+         if (interactionStyles == null || document == null || document.rootVisualElement == null)
+             return;
+         document.rootVisualElement.styleSheets.Add(interactionStyles);
+-        if (document == navigationDocument)
+-            interactionStylesAdded = true;
+     }
+ 
+     private void RegisterClick(VisualElement element, Action action, List<Action> cleanup)

@@ -1,0 +1,47 @@
+{
+  "scope": "Design contracts only; not a second runtime state machine",
+  "current_spatial_refinement": {
+    "composition": "Gallery Arc approved",
+    "treatment": "B preferred conditionally; exact caps require final review",
+    "tokens": "SpatialAddendum/SpatialTokens.json",
+    "state_matrix": "SpatialAddendum/SelectionStateMatrix.csv",
+    "presentation_states": ["neutral", "acquiring", "targeted", "lossPending", "trackingLost", "context", "confirmed"],
+    "threshold_policy": "consume existing source stability/loss events; do not change recognizer timing"
+  },
+  "authority": "Existing application/controller and media/camera owners remain authoritative until an approved migration",
+  "independent_state": ["route", "locale", "selectedPerformer", "assistantContext", "cameraConsent", "captureSuspension", "trackingReadiness", "previewVisibility", "mediaLifecycle", "overlayFocusContext"],
+  "gallery": {
+    "states": ["idle", "identified", "gestureTargetAcquired", "confirming", "trackingLost"],
+    "transitions": [
+      {"event":"pointer hover / keyboard focus", "result":"identify only; no selection"},
+      {"event":"source point target", "result":"identify and acquire current gesture target"},
+      {"event":"source fist", "guard":"fresh eligible source target", "result":"commit performer once"},
+      {"event":"pointer / Enter / Space / supported 1–6", "result":"explicit source-supported confirmation"},
+      {"event":"tracking loss / layout replacement / overlay input scope", "result":"invalidate gesture acquisition; preserve committed session"},
+      {"event":"tracking recovery", "result":"ready; require fresh target before fist"}
+    ],
+    "geometry": "Six stable wrapper regions; animated artwork descendants ignore picking; no new target algorithm or detector thresholds"
+  },
+  "chapter": {
+    "sequence": ["Focus", "Activation", "LivingPortrait.Preparing", "LivingPortrait.Playing", "Release", "PostVideoOrReturn"],
+    "activation_duration_seconds": 3,
+    "cinematic_transition_seconds": 0.65,
+    "first_frame": "Actual first decoded frame; never a reveal timer",
+    "completion": "Existing real VideoPlayer completion path; never animation length",
+    "cancel": "Distinct from completion; preserve permitted Back behavior and release owned operations",
+    "missing_media": "Preserve configured 10-second fallback or hold mode; no unconditional timer replacement",
+    "activation_safe_exit": "Proposed policy awaiting explicit approval"
+  },
+  "overlay": {
+    "states": ["closed", "opening", "open", "closing", "minimized", "restoring"],
+    "maximum_ordinary_modal_count": 1,
+    "input_priority": ["immediate privacy stop", "top modal", "editor/focused action", "shell", "experience"],
+    "opening": "Acquire scope/focus immediately; Close interrupts",
+    "closing": "Retarget from current pose; retain background inert until removal",
+    "minimized": "One labelled Resume control; no automatic reopen after route/protected-state change",
+    "restoration": "Connected actual opener, stable component key, then intentional route fallback",
+    "stale_callback_guard": "Animation/request/media generations cannot act on detached views"
+  },
+  "deferred_functions": "No audio application, preference persistence, reset, camera permission, calibration success, generated QR or assistant response in the prototype",
+  "reduced_modes": "No spatial/scale/stagger/idle motion; immediate or <=80ms opacity; opaque reading materials; semantic media/camera outcomes unchanged"
+}

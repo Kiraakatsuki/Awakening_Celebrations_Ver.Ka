@@ -1,0 +1,18 @@
+{
+  "playing": false,
+  "compiling": false,
+  "compilerErrors": false,
+  "scene": "Assets/Scenes/AwakeningLivingGlass.unity",
+  "dirty": false,
+  "consent": false,
+  "previewCount": 0,
+  "conversation": "PASS: 48 performer/locale/viewport layouts plus20 Editor-only state specimens. No backend behavior or IME runtime verified.",
+  "stabilization": "PASS: Editor-only model/tree/style checks; runtime retest NOT RUN.",
+  "buildScenes": [
+    {
+      "path": "Assets/Scenes/AwakeningLivingGlass.unity",
+      "enabled": true,
+      "guid": "12792cd3e2cf3c84b854c8186ea81f3a"
+    }
+  ]
+}

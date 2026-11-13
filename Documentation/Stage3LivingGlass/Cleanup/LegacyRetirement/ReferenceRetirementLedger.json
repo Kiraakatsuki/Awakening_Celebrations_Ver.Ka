@@ -1,0 +1,103 @@
+[
+  {
+    "path": "Assets/Settings/Renderer2D.asset",
+    "owner_asset_guid": "424799608f7334c24bf367e4bbfa7f9a",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 7,
+    "native_incoming_count_for_owner": 1,
+    "native_incoming_sources": [
+      "Assets/Settings/UniversalRP.asset"
+    ],
+    "before_sha256": "900455794d0d788504847c3aa54e03a0374fd3635afa295ed05c2f646f974705",
+    "after_sha256": "05180ad3534f2dfd19dbbb12480b019c91d3ff05b30c9ce170ff954c892745f5",
+    "backup": "Before/Assets/Settings/Renderer2D.asset",
+    "meta_identity_changed": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta",
+    "owner_asset_guid": "f4d846393f8d9f20fa64b924b0d95e68",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 2,
+    "native_incoming_count_for_owner": 2,
+    "native_incoming_sources": [
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+      "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab"
+    ],
+    "before_sha256": "1a2d0b26f7844f17b25cfb112a454968dd4c6b822e2c09b3525e557b42d62437",
+    "after_sha256": "9d4f1a6d79d5dbbdbe2bb0d6aad4736ff225c5511d5afeeb2427f949648a5b4f",
+    "backup": "Before/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta",
+    "meta_identity_changed": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "owner_asset_guid": "6398790df6f5f3123a3d09434706eb95",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 1,
+    "native_incoming_count_for_owner": 0,
+    "native_incoming_sources": [],
+    "before_sha256": "5bf1aa507563c8955458a6dc9c5df9249e310d520878cb5803b112eecacbbc4d",
+    "after_sha256": "2d829d564bde2e6b54a3822e3918ba1e8b54c6b731edde2efc749502ce42a9c8",
+    "backup": "Before/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "meta_identity_changed": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "owner_asset_guid": "df0fc3b9f7146dee593f8b5660ae773c",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 1,
+    "native_incoming_count_for_owner": 0,
+    "native_incoming_sources": [],
+    "before_sha256": "b147c16c1db4aeb9085f8cdeece915a78e83937d3b11203a1f57d388c417edb6",
+    "after_sha256": "bd9d6ea16130372d7724c13e15e63bf33d6866183e6ae7d0649251b58425b0c3",
+    "backup": "Before/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "meta_identity_changed": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "owner_asset_guid": "98d49dcfe667ea822a91d6b74f7cb2e9",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 1,
+    "native_incoming_count_for_owner": 0,
+    "native_incoming_sources": [],
+    "before_sha256": "53ae6f0684efd77398e96b07bedf7d78540eeda8de691e4b559530f31187e9ce",
+    "after_sha256": "56079ae0fcf87075003637d68b36328d66553ec98e5c80ab4cb7408d6dea08ee",
+    "backup": "Before/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "meta_identity_changed": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "owner_asset_guid": "d3c55222b68d3b6b797034638df4d179",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 1,
+    "native_incoming_count_for_owner": 0,
+    "native_incoming_sources": [],
+    "before_sha256": "ec0bb63563daebd9c60c29a1d6a666c7870d13ab56a623b53082815bcbf407d3",
+    "after_sha256": "d19581a3c4ad66daf39806fbab46bc918e03ba03547171b6dd80615ae0d277ff",
+    "backup": "Before/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "meta_identity_changed": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "owner_asset_guid": "d3734ffcdd3a40779bdd8de2c55bee2f",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 1,
+    "native_incoming_count_for_owner": 0,
+    "native_incoming_sources": [],
+    "before_sha256": "6baa2fea6e92930940b1877ee9bd112e7978c8bae3ba19fa77b310cb67e4f88e",
+    "after_sha256": "f79f1b575fc1174cd94c457ecc0a21e196e0a88111f46d90ab4a1b8b5de375f8",
+    "backup": "Before/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "meta_identity_changed": false
+  },
+  {
+    "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "owner_asset_guid": "927caf745c48e562eaa2cda915b091b4",
+    "operation": "retire obsolete serialized entries; preserve owning file",
+    "guid_reference_occurrences_removed": 1,
+    "native_incoming_count_for_owner": 0,
+    "native_incoming_sources": [],
+    "before_sha256": "ec94b564cda4b0958739698961a5054b55dfd95c28261e9cb761f9ae625a5ec1",
+    "after_sha256": "c9e003a5440058bff5e9df1f0a40506ea37c1c4a80831972877a0434c542d247",
+    "backup": "Before/Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "meta_identity_changed": false
+  }
+]

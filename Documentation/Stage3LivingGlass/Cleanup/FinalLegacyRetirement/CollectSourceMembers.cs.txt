@@ -1,0 +1,26 @@
+if(EditorApplication.isPlayingOrWillChangePlaymode)throw new System.InvalidOperationException("Edit Mode only");
+var asm=AppDomain.CurrentDomain.GetAssemblies().First(a=>a.GetName().Name=="Microsoft.CodeAnalysis.CSharp_AIA");
+var parser=asm.GetType("Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree");
+var parse=parser.GetMethods(System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.Public).First(m=>m.Name=="ParseText"&&m.GetParameters()[0].ParameterType==typeof(string));
+var all=new System.Collections.Generic.List<object>();
+foreach(var path in new[]{"Assets/Scripts/AwakeningApplicationController.cs","Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs"}){
+ var txt=System.IO.File.ReadAllText(path);var pars=parse.GetParameters();var args=pars.Select(p=>p.HasDefaultValue?p.DefaultValue:null).ToArray();args[0]=txt;
+ for(int i=1;i<pars.Length;i++)if(pars[i].ParameterType==typeof(System.Threading.CancellationToken))args[i]=new System.Threading.CancellationToken();
+ var tree=parse.Invoke(null,args);var root=tree.GetType().GetMethods().First(m=>m.Name=="GetRoot"&&m.GetParameters().Length==1).Invoke(tree,new object[]{new System.Threading.CancellationToken()});
+ var nodes=(System.Collections.IEnumerable)root.GetType().GetMethods().First(m=>m.Name=="DescendantNodes"&&m.GetParameters().Length==2).Invoke(root,new object[]{null,false});
+ foreach(var node in nodes){var type=node.GetType();var kind=type.Name;
+ if(kind!="MethodDeclarationSyntax"&&kind!="FieldDeclarationSyntax"&&kind!="ClassDeclarationSyntax")continue;
+ var parent=type.GetProperty("Parent").GetValue(node,null);if(parent.GetType().Name!="ClassDeclarationSyntax")continue;
+ var parentName=parent.GetType().GetProperty("Identifier").GetValue(parent,null).ToString();
+ var span=type.GetProperty("Span").GetValue(node,null);var full=type.GetProperty("FullSpan").GetValue(node,null);
+ int start=(int)span.GetType().GetProperty("Start").GetValue(span,null),length=(int)span.GetType().GetProperty("Length").GetValue(span,null);
+ int fullStart=(int)full.GetType().GetProperty("Start").GetValue(full,null);
+ string name=null;
+ if(kind=="FieldDeclarationSyntax"){var declaration=type.GetProperty("Declaration").GetValue(node,null);var vars=(System.Collections.IEnumerable)declaration.GetType().GetProperty("Variables").GetValue(declaration,null);var names=new System.Collections.Generic.List<string>();foreach(var v in vars)names.Add(v.GetType().GetProperty("Identifier").GetValue(v,null).ToString());name=string.Join(",",names);}
+ else name=type.GetProperty("Identifier").GetValue(node,null).ToString();
+ int bodyStart=-1,bodyLength=0;var bodyProperty=type.GetProperty("Body");var body=bodyProperty==null?null:bodyProperty.GetValue(node,null);
+ if(body!=null){var b=body.GetType().GetProperty("Span").GetValue(body,null);bodyStart=(int)b.GetType().GetProperty("Start").GetValue(b,null);bodyLength=(int)b.GetType().GetProperty("Length").GetValue(b,null);}
+ all.Add(new{path=path,kind=kind,name=name,parent=parentName,start=start,length=length,fullStart=fullStart,bodyStart=bodyStart,bodyLength=bodyLength,text=node.ToString()});
+ }}
+System.IO.File.WriteAllText("Documentation/Stage3LivingGlass/Cleanup/FinalLegacyRetirement/SourceMembersBefore.json",Newtonsoft.Json.JsonConvert.SerializeObject(all,Newtonsoft.Json.Formatting.Indented));
+return new{members=all.Count,playing=EditorApplication.isPlaying};

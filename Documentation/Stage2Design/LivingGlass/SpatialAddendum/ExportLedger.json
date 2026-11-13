@@ -1,0 +1,274 @@
+[
+  {
+    "nodeId": "33:9",
+    "name": "Arc spatial / A / GAIA / targeted / en",
+    "file": "review-evidence/A-GAIA-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:60",
+    "name": "Arc spatial / A / PANDEMIC / targeted / en",
+    "file": "review-evidence/A-PANDEMIC-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:111",
+    "name": "Arc spatial / A / RE-BIRTH / targeted / en",
+    "file": "review-evidence/A-RE-BIRTH-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:162",
+    "name": "Arc spatial / A / WHITE-GUARDIAN / targeted / en",
+    "file": "review-evidence/A-WHITE-GUARDIAN-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:213",
+    "name": "Arc spatial / A / CONSCIENCE / targeted / en",
+    "file": "review-evidence/A-CONSCIENCE-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:264",
+    "name": "Arc spatial / A / SANCTUARY / targeted / en",
+    "file": "review-evidence/A-SANCTUARY-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:315",
+    "name": "Arc spatial / B / GAIA / targeted / en",
+    "file": "review-evidence/B-GAIA-en.png",
+    "width": 1400,
+    "height": 788,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:366",
+    "name": "Arc spatial / B / PANDEMIC / targeted / en",
+    "file": "review-evidence/B-PANDEMIC-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:417",
+    "name": "Arc spatial / B / RE-BIRTH / targeted / en",
+    "file": "review-evidence/B-RE-BIRTH-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:468",
+    "name": "Arc spatial / B / WHITE-GUARDIAN / targeted / en",
+    "file": "review-evidence/B-WHITE-GUARDIAN-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:519",
+    "name": "Arc spatial / B / CONSCIENCE / targeted / en",
+    "file": "review-evidence/B-CONSCIENCE-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:570",
+    "name": "Arc spatial / B / SANCTUARY / targeted / en",
+    "file": "review-evidence/B-SANCTUARY-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:621",
+    "name": "Arc spatial / B / NEUTRAL / neutral / en",
+    "file": "review-evidence/B-NEUTRAL-neutral-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:666",
+    "name": "Arc spatial / B / GAIA / acquiring / en",
+    "file": "review-evidence/B-GAIA-acquiring-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:711",
+    "name": "Arc spatial / B / GAIA / lossPending / en",
+    "file": "review-evidence/B-GAIA-lossPending-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:758",
+    "name": "Arc spatial / B / GAIA / targeted settings / en",
+    "file": "review-evidence/B-GAIA-targeted-settings-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:846",
+    "name": "Arc spatial / B / GAIA / targeted ai / en",
+    "file": "review-evidence/B-GAIA-targeted-ai-en.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:914",
+    "name": "Arc spatial / A / GAIA / targeted / zh",
+    "file": "review-evidence/A-GAIA-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:965",
+    "name": "Arc spatial / A / PANDEMIC / targeted / zh",
+    "file": "review-evidence/A-PANDEMIC-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1016",
+    "name": "Arc spatial / A / RE-BIRTH / targeted / zh",
+    "file": "review-evidence/A-RE-BIRTH-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1067",
+    "name": "Arc spatial / A / WHITE-GUARDIAN / targeted / zh",
+    "file": "review-evidence/A-WHITE-GUARDIAN-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1118",
+    "name": "Arc spatial / A / CONSCIENCE / targeted / zh",
+    "file": "review-evidence/A-CONSCIENCE-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1169",
+    "name": "Arc spatial / A / SANCTUARY / targeted / zh",
+    "file": "review-evidence/A-SANCTUARY-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1220",
+    "name": "Arc spatial / B / GAIA / targeted / zh",
+    "file": "review-evidence/B-GAIA-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1271",
+    "name": "Arc spatial / B / PANDEMIC / targeted / zh",
+    "file": "review-evidence/B-PANDEMIC-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1322",
+    "name": "Arc spatial / B / RE-BIRTH / targeted / zh",
+    "file": "review-evidence/B-RE-BIRTH-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1373",
+    "name": "Arc spatial / B / WHITE-GUARDIAN / targeted / zh",
+    "file": "review-evidence/B-WHITE-GUARDIAN-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1424",
+    "name": "Arc spatial / B / CONSCIENCE / targeted / zh",
+    "file": "review-evidence/B-CONSCIENCE-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1475",
+    "name": "Arc spatial / B / SANCTUARY / targeted / zh",
+    "file": "review-evidence/B-SANCTUARY-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1526",
+    "name": "Arc spatial / B / NEUTRAL / neutral / zh",
+    "file": "review-evidence/B-NEUTRAL-neutral-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1571",
+    "name": "Arc spatial / B / GAIA / acquiring / zh",
+    "file": "review-evidence/B-GAIA-acquiring-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1616",
+    "name": "Arc spatial / B / GAIA / lossPending / zh",
+    "file": "review-evidence/B-GAIA-lossPending-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1663",
+    "name": "Arc spatial / B / GAIA / targeted settings / zh",
+    "file": "review-evidence/B-GAIA-targeted-settings-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  },
+  {
+    "nodeId": "33:1751",
+    "name": "Arc spatial / B / GAIA / targeted ai / zh",
+    "file": "review-evidence/B-GAIA-targeted-ai-zh.png",
+    "width": 960,
+    "height": 540,
+    "source": "native Figma optical proxy; not browser/Unity"
+  }
+]

@@ -1,0 +1,485 @@
+{
+  "unchanged": [
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnValidate"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "TryConnectGestureBridge"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnPointingChanged"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "UpdateGestureTarget"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ClearGestureTarget"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnTrackingChanged"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "CompleteColorReleaseAfterPresentation"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "SetTargetedPerformer"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ClearTargetedPerformer"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "UpdateNavigationHistoryLanguage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ReleaseTransitionLockNextFrame"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ContinueFromPrivacy"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "IsAllowedPostAwakeningBackTarget"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "PlayEnvironmentalMusic"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "CreateClapChime"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnDestroy"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "StopEnvironmentalMusic"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "AdvancePerformerStage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "FadeFocusIntoActivation"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "PlayActivationSequence"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "FadeInLivingPortrait"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "FadeInRelease"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "FadeVisualElement"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "NavigateWithinPerformerFlow"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "IsCurrentPerformerStage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "StartLivingPortrait"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "PrepareLivingPortraitVideo"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnLivingPortraitVideoPrepared"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "TryStartLivingPortraitPlayback"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnLivingPortraitVideoFrameReady"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnLivingPortraitVideoCompleted"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnLivingPortraitVideoError"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "StartPlaceholderPortraitTimer"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "WaitForPlaceholderPortrait"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "RequestLivingPortraitCompletion"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "StartLivingPortraitExitTransition"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "LeaveLivingPortrait"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "StopLivingPortraitVideoPlayer"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ReleaseLivingPortraitRenderTexture"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "StopPerformerExperienceSequence"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "TryBuildAssistantChatUrl"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "SubmitAssistantMessage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "BuildPerformerScopedMessage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "SendAssistantRequest"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "AppendAssistantReply"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "TryFormatNumberedListLine"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "FailAssistantMessage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "SetAssistantStatus"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "CancelAssistantRequest"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ClearBindings"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingLanguage"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingConsentChoice"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingBegin"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingContinue"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingTarget"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingConfirm"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingReleaseTargetOwner"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingReturnGallery"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingSouvenir"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingGlassCloseOverlay"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingMinimize"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingGlassUpdateStatus"
+    }
+  ],
+  "changed": [
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "Awake"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnEnable"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnDisable"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "Start"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "Update"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnGestureDetected"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "UpdatePointedPerformer"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "HandleInteractionCommand"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "Navigate"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ShowHome"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "Back"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "SelectPerformer"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "GetPerformerScreen"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "IsPerformerStage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "IsAssistantSessionViewActive"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingGlassRender"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingDone"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingGlassHome"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingGlassOpenOverlay"
+    },
+    {
+      "path": "Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs",
+      "name": "LivingGlassBindChat"
+    }
+  ],
+  "removed": [
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "UpdateCameraPreview"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "SetCameraPreviewStatus"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "BindHandTrackingStatus"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "UpdateHandTrackingStatus"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnLanguageChanged"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnConsentChanged"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnPrivacyRequested"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnSettingsRequested"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OnReviewConsentRequested"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ReturnHomeFromDone"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ReturnHomeFromSettings"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "BindCurrentScreen"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "BindAssistantPerformerChoices"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "PrepareColorReleaseSelection"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "BindColorReleasePerformerChoices"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "SetLabelTextAtPath"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "RegisterTargetHover"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "RegisterButtonHoverProxy"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "OpenAssistantOverlay"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ConfigureAssistantChat"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ConfigurePerformerAgentPage"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "CloseTopOverlay"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "GetUxmlRoot"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "FocusFirstFocusable"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "BindPath"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "FindManifestNode"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ApplyInteractionStyles"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ApplyInteractionStylesTo"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "RegisterClick"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "RegisterPageClick"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "DisableSettingsControls"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "MarkUnavailable"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "RegisterKeyOnRoot"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "RegisterKeyHandling"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "TryResolvePath"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ResolveRuntimeElementPath"
+    },
+    {
+      "path": "Assets/Scripts/AwakeningApplicationController.cs",
+      "name": "ArrayIndexOf"
+    }
+  ],
+  "added": []
+}

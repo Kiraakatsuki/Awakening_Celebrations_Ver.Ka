@@ -1,0 +1,74 @@
+[
+  {
+    "id": "PER-001",
+    "name": "GAIA",
+    "accent": "#5BD8ED",
+    "artwork": "../prototype/assets/gaia.png",
+    "line_en": "An ocean of attention.",
+    "line_zh_Hant": "將感知，交給海洋。",
+    "copy_status": "proposed poetic interpretation; not factual assistant knowledge",
+    "shared_component_system": true,
+    "atmosphere_color": "#137F91",
+    "secondary_reflection_color": "#3BAFAE"
+  },
+  {
+    "id": "PER-002",
+    "name": "PANDEMIC",
+    "accent": "#C0AA91",
+    "artwork": "../prototype/assets/pandemic.png",
+    "line_en": "A quieter kind of presence.",
+    "line_zh_Hant": "在靜謐中，感受存在。",
+    "copy_status": "proposed poetic interpretation; not factual assistant knowledge",
+    "shared_component_system": true,
+    "atmosphere_color": "#756453",
+    "secondary_reflection_color": "#9A8163"
+  },
+  {
+    "id": "PER-003",
+    "name": "RE-BIRTH",
+    "accent": "#E0B0C8",
+    "artwork": "../prototype/assets/rebirth.png",
+    "line_en": "A moment of becoming.",
+    "line_zh_Hant": "與蛻變的此刻相遇。",
+    "copy_status": "proposed poetic interpretation; not factual assistant knowledge",
+    "shared_component_system": true,
+    "atmosphere_color": "#8B557C",
+    "secondary_reflection_color": "#B77EA5"
+  },
+  {
+    "id": "PER-004",
+    "name": "WHITE-GUARDIAN",
+    "accent": "#C5E9FA",
+    "artwork": "../prototype/assets/guardian.png",
+    "line_en": "Stillness, held in light.",
+    "line_zh_Hant": "在光中，安放寧靜。",
+    "copy_status": "proposed poetic interpretation; not factual assistant knowledge",
+    "shared_component_system": true,
+    "atmosphere_color": "#6A839A",
+    "secondary_reflection_color": "#A5B6C4"
+  },
+  {
+    "id": "PER-005",
+    "name": "CONSCIENCE",
+    "accent": "#FF956A",
+    "artwork": "../prototype/assets/conscience.png",
+    "line_en": "An ember of awareness.",
+    "line_zh_Hant": "感知，如餘燼微亮。",
+    "copy_status": "proposed poetic interpretation; not factual assistant knowledge",
+    "shared_component_system": true,
+    "atmosphere_color": "#9B4B2B",
+    "secondary_reflection_color": "#C87546"
+  },
+  {
+    "id": "PER-006",
+    "name": "SANCTUARY",
+    "accent": "#F1C57A",
+    "artwork": "../prototype/assets/sanctuary.png",
+    "line_en": "A space to return to.",
+    "line_zh_Hant": "回到，心中的安所。",
+    "copy_status": "proposed poetic interpretation; not factual assistant knowledge",
+    "shared_component_system": true,
+    "atmosphere_color": "#98713B",
+    "secondary_reflection_color": "#BB9456"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "awakening-ai-backend/.env": "965323aa9962e94eca3c13ce174d3961610282f0300477f190d90d25aa2f73a3",
+  "awakening-ai-backend/.env.example": "095b651d9cbae9c176699204219fd0531b7c9858e105fb58c8ef7c5962e1ac27",
+  "awakening-ai-backend/.gitignore": "fc398a5e123c0d05c210fb97c6f7582d45e255dd204953efbf68a3219593ec87",
+  "awakening-ai-backend/package-lock.json": "125967c22f0f5246c44a3a1896bcd7836eb07e0b409b6f3c7442ccb3e4dd4e15",
+  "awakening-ai-backend/package.json": "bee52054ad36302d7aa5f857d4623cb5589b2623a2f3d7a78a81fef1e1b8907b",
+  "awakening-ai-backend/README.md": "41183930e2f7b6fb501676d8edca6a7aaa90d536d65ba4ab5cc14eaa963ad6f7",
+  "awakening-ai-backend/server.js": "a34afe2e04bca5aeeabde272a13221dc0f735aee1dd1cf8d6cd2e524d99c8d01"
+}

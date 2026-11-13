@@ -1,0 +1,105 @@
+{
+  "scope": "Only the investigated14 references; not whole-project runtime acceptance",
+  "checks": [
+    {
+      "check": "all2045 application/asset/config/backend files unchanged",
+      "status": "PASS",
+      "detail": {
+        "changed": [],
+        "added": [],
+        "removed": []
+      }
+    },
+    {
+      "check": "reviewed source/package evidence is current",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "exact14 original GUIDs covered once",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "reference source locations still match",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "legacy probe fields carry native Obsolete metadata",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "old falloff field absent from current serialized schema",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "old Bootstrap importer defaults have no fields",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "sample ModalButton consumes _contents, not contents",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "all eight obsolete override sites have valid current overrides",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "both scenes directly contain none of these14 GUIDs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "current bootstrap prefabs retain valid AppSettings",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "check": "four known support/optional references resolve",
+      "status": "FAIL",
+      "detail": [
+        "5a0e103d2920f990ab08fe7bada48cc4",
+        "b3ab972b21db85d48ade9657efdd4771",
+        "c41005c129ba4d66911b75229fd70b45",
+        "d5da564da19cb6b7d8e4f97f269edc5d"
+      ]
+    }
+  ],
+  "categories": {
+    "Validator false positive": 10,
+    "Historical or rollback dependency": 3,
+    "Editor/tooling dependency": 1
+  },
+  "raw_unresolved_guids": [
+    "03cfc4915c15d504a9ed85ecc404e607",
+    "24ec0e140fb444a44ab96ee80844e18e",
+    "488fbb6a3005b66c2b657204bce83fcf",
+    "53a11f4ebaebf4049b3638ef78dc9664",
+    "5688ab254e4c0634f8d6c8e0792331ca",
+    "57d7c4c16e2765b47a4d2069b311bffe",
+    "5a0e103d2920f990ab08fe7bada48cc4",
+    "8236d46ca3a43d373ae6ad281fea8fe0",
+    "8f96cd657dc40064aa21efcc7e50a2e7",
+    "a84904e562ecaf887b2dba62111bb901",
+    "b3ab972b21db85d48ade9657efdd4771",
+    "c41005c129ba4d66911b75229fd70b45",
+    "d5da564da19cb6b7d8e4f97f269edc5d",
+    "e5c6678ed2aaa91408dd3df699057aae"
+  ],
+  "genuine_support_optional_defects": [
+    "5a0e103d2920f990ab08fe7bada48cc4",
+    "b3ab972b21db85d48ade9657efdd4771",
+    "c41005c129ba4d66911b75229fd70b45",
+    "d5da564da19cb6b7d8e4f97f269edc5d"
+  ],
+  "confirmed_active_application_broken": [],
+  "runtime": "NOT RUN",
+  "repairs_applied": 0,
+  "note": "Ten obsolete entries are false positives only when interpreted as active runtime defects. All14 GUIDs remain genuinely non-resolving; four support defects stay FAIL."
+}

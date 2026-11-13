@@ -1,0 +1,479 @@
+--- Awake before
+
++++ Awake after
+
+@@ -3,38 +3,10 @@
+
+         gestureCursor = new GestureCursorController(gestureCursorSmoothingSpeed);
+         GestureCameraConsentGate.SetConsent(false);
+-        if (livingGlass != null)
++        if (livingGlass == null || livingGlass.Document == null)
+         {
+-            navigationDocument = livingGlass.Document;
++            Debug.LogError("Living Glass presentation and UIDocument must be assigned.", this);
++            enabled = false;
+             return;
+         }
+-        if (screenCatalog == null)
+-            screenCatalog = Resources.Load<RuntimeScreenCatalog>("RuntimeScreenCatalog");
+-        TextAsset snapshot = Resources.Load<TextAsset>("RuntimeNodeBindings");
+-        if (snapshot != null)
+-            nodeSnapshot = JsonUtility.FromJson<ManifestSnapshot>(snapshot.text);
+-        interactionStyles = Resources.Load<StyleSheet>("HomeInteraction");
+-        if (homeController == null)
+-            homeController = FindObjectOfType<HomeLanguageController>();
+-
+-        if (screenDocumentManager != null)
+-            screenDocumentManager.Initialize();
+-
+-        if (navigationDocument == null && screenDocumentManager == null)
+-        {
+-            UIDocument[] documents = FindObjectsOfType<UIDocument>(true);
+-            for (int i = 0; i < documents.Length; i++)
+-            {
+-                if (documents[i].gameObject.name == "UIDocument")
+-                {
+-                    navigationDocument = documents[i];
+-                    break;
+-                }
+-            }
+-        }
+-
+-        if (screenDocumentManager == null && navigationDocument != null)
+-        {
+-            navigationDocument.sortingOrder = 10;
+-            navigationDocument.enabled = false;
+-        }
++        navigationDocument = livingGlass.Document;
+     }
+--- OnEnable before
+
++++ OnEnable after
+
+@@ -1,9 +1,4 @@
+
+ private void OnEnable()
+     {
+-        HomeLanguageController.LanguageChanged += OnLanguageChanged;
+-        HomeLanguageController.PrivacyRequested += OnPrivacyRequested;
+-        HomeLanguageController.SettingsRequested += OnSettingsRequested;
+-        HomeLanguageController.ReviewConsentRequested += OnReviewConsentRequested;
+-        HomeLanguageController.ConsentChanged += OnConsentChanged;
+         TryConnectGestureBridge();
+     }
+--- OnDisable before
+
++++ OnDisable after
+
+@@ -7,19 +7,7 @@
+
+             livingGlass.Shutdown();
+         }
+-        cameraPreviewFrame?.RemoveFromHierarchy();
+-        if (cameraPreviewImage != null)
+-            cameraPreviewImage.image = null;
+-        cameraPreviewFrame = null;
+-        cameraPreviewImage = null;
+-        cameraPreviewDocumentRoot = null;
+-        cameraPreviewStatus = null;
+         GestureCameraConsentGate.SetConsent(false);
+         StopEnvironmentalMusic();
+         StopPerformerExperienceSequence();
+-        HomeLanguageController.LanguageChanged -= OnLanguageChanged;
+-        HomeLanguageController.PrivacyRequested -= OnPrivacyRequested;
+-        HomeLanguageController.SettingsRequested -= OnSettingsRequested;
+-        HomeLanguageController.ReviewConsentRequested -= OnReviewConsentRequested;
+-        HomeLanguageController.ConsentChanged -= OnConsentChanged;
+         if (gestureBridge != null)
+         {
+@@ -29,5 +17,4 @@
+
+             gestureBridgeSubscribed = false;
+         }
+-        ClearBindings(screenUnbind);
+         if (colorReleaseRoutine != null)
+         {
+@@ -37,5 +24,3 @@
+
+         transitionInProgress = false;
+         performerFlowTransitionLock = false;
+-        while (overlays.Count > 0)
+-            CloseTopOverlay();
+     }
+--- Start before
+
++++ Start after
+
+@@ -2,25 +2,6 @@
+
+     {
+         yield return null;
+-        if (livingGlass != null)
+-        {
+-            livingGlass.Initialize(this);
+-            language = PlayerPrefs.GetString("AwakeningCelebrations.Language", "en") == "zh" ? AppLanguage.Chinese : AppLanguage.English;
+-            LivingGlassRender();
+-            yield break;
+-        }
+-        if (screenCatalog == null)
+-            Debug.LogError("AwakeningApplicationController: Resources/RuntimeScreenCatalog.asset is missing.", this);
+-        if (screenDocumentManager == null && navigationDocument == null)
+-            Debug.LogError("AwakeningApplicationController: Assign the navigation UIDocument in the scene.", this);
+-        if (homeController == null)
+-            Debug.LogError("AwakeningApplicationController: HomeLanguageController was not found.", this);
+-
+-        if (homeController != null)
+-            homeController.SetHomeVisible(true);
+-
+-        if (gestureBridge == null && !warnedMissingGestureBridge)
+-        {
+-            warnedMissingGestureBridge = true;
+-            Debug.LogWarning("No MediaPipeGestureBridge is assigned on the application controller. Gesture input is unavailable.", this);
+-        }
++        livingGlass.Initialize(this);
++        language = PlayerPrefs.GetString("AwakeningCelebrations.Language", "en") == "zh" ? AppLanguage.Chinese : AppLanguage.English;
++        LivingGlassRender();
+     }
+--- Update before
+
++++ Update after
+
+@@ -1,6 +1,5 @@
+
+ private void Update()
+     {
+-        UpdateHandTrackingStatus();
+-        UpdateCameraPreview();
++        LivingGlassUpdateStatus();
+         gestureCursor?.Tick(Time.unscaledDeltaTime);
+         if (gesturePointing)
+--- OnGestureDetected before
+
++++ OnGestureDetected after
+
+@@ -15,5 +15,5 @@
+
+             case SemanticGesture.Fist:
+                 if (!transitionInProgress && currentScreen == ColorReleaseScreen && colorReleaseSelectionReady &&
+-                    overlays.Count == 0 && gestureTarget >= 0 &&
++                    gestureTarget >= 0 &&
+                     (gesturePointing || (gestureTargetLostSince >= 0f &&
+                         Time.unscaledTime - gestureTargetLostSince < gestureTargetReleaseSeconds)))
+--- UpdatePointedPerformer before
+
++++ UpdatePointedPerformer after
+
+@@ -4,5 +4,5 @@
+
+             return;
+         if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady ||
+-            overlays.Count > 0 || performerTargets == null)
++            performerTargets == null)
+             return;
+ 
+--- HandleInteractionCommand before
+
++++ HandleInteractionCommand after
+
+@@ -49,5 +49,5 @@
+
+                 awakeningSequenceCompletedThisSession = true;
+                 colorReleaseSelectionReady = true;
+-                PrepareColorReleaseSelection();
++                LivingGlassRender();
+                 break;
+ 
+@@ -56,5 +56,5 @@
+
+                 {
+                     Debug.Log("Performer confirmed: " + Performers[targetedPerformer] + ".", this);
+-                    SelectPerformer(targetedPerformer, false);
++                    SelectPerformer(targetedPerformer);
+                 }
+                 break;
+--- Navigate before
+
++++ Navigate after
+
+@@ -10,5 +10,5 @@
+
+         bool leavingLivingPortrait = (currentScreen != screenId || targetLanguage != language) &&
+             IsPerformerStage(currentScreen, out _, out int currentStage) && currentStage == 2;
+-        if (hasAwakenedThisSession && (screenId == HomeScreen || screenId == AttractScreen || screenId == ColorReleaseScreen || ArrayIndexOf(TutorialScreens, screenId) >= 0))
++        if (hasAwakenedThisSession && (screenId == HomeScreen || screenId == AttractScreen || screenId == ColorReleaseScreen || Array.IndexOf(TutorialScreens, screenId) >= 0))
+         {
+             screenId = ColorReleaseScreen;
+@@ -22,12 +22,10 @@
+
+             return false;
+         }
+-        VisualTreeAsset asset;
+-        asset = null;
+-        if (livingGlass != null ? !LivingGlassRoutes.Supports(screenId) : (screenCatalog == null || !screenCatalog.TryGet(screenId, targetLanguage, out asset)))
++        if (!LivingGlassRoutes.Supports(screenId))
+         {
+             Debug.LogError("AwakeningApplicationController: No " + targetLanguage + " asset is registered for logical screen '" + screenId + "'.", this);
+             return false;
+         }
+-        if (navigationDocument == null && screenDocumentManager == null)
++        if (navigationDocument == null)
+             return false;
+ 
+@@ -40,7 +38,4 @@
+
+         }
+         ClearTargetedPerformer();
+-        colorReleaseRoot = null;
+-        while (overlays.Count > 0)
+-            CloseTopOverlay();
+         if (assistantSession != null || assistantWebRequest != null || assistantRequestRoutine != null)
+             CancelAssistantRequest();
+@@ -50,17 +45,4 @@
+
+             backStack.Clear();
+ 
+-        ClearBindings(screenUnbind);
+-        if (livingGlass != null)
+-        {
+-            // Render after flow state is committed; the view may retain an inert art proxy.
+-        }
+-        else if (screenDocumentManager != null)
+-            navigationDocument = screenDocumentManager.Activate(screenId, asset);
+-        else
+-        {
+-            navigationDocument.enabled = false;
+-            navigationDocument.visualTreeAsset = asset;
+-            navigationDocument.enabled = true;
+-        }
+         if (leavingLivingPortrait)
+         {
+@@ -77,7 +59,5 @@
+
+             return false;
+         }
+-        ApplyInteractionStyles();
+         currentScreen = screenId;
+-        activeBindingScreen = screenId;
+         language = targetLanguage;
+         bool cameraAllowed = consentAccepted && (screenId == AttractScreen || screenId == ColorReleaseScreen || IsPerformerStage(screenId, out _, out _) || (hasAwakenedThisSession && (screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY")));
+@@ -88,8 +68,6 @@
+
+         if (!cameraAllowed)
+             gestureCursor?.ClearPosition();
+-        if (homeController != null)
+-            homeController.SetHomeVisible(false);
+-        BindCurrentScreen();
+-        UpdateCameraPreview();
++        LivingGlassRender();
++        LivingGlassUpdateStatus();
+         StartCoroutine(ReleaseTransitionLockNextFrame());
+         return true;
+--- ShowHome before
+
++++ ShowHome after
+
+@@ -1,42 +1,4 @@
+
+ public void ShowHome(bool recordHistory)
+     {
+-        if (livingGlass != null)
+-        {
+-            LivingGlassHome(false);
+-            return;
+-        }
+-        if (hasAwakenedThisSession)
+-        {
+-            if (currentScreen != ColorReleaseScreen)
+-                Navigate(ColorReleaseScreen, language, false);
+-            return;
+-        }
+-        if (transitionInProgress)
+-            return;
+-        transitionInProgress = true;
+-        if (colorReleaseRoutine != null)
+-        {
+-            StopCoroutine(colorReleaseRoutine);
+-            colorReleaseRoutine = null;
+-        }
+-        ClearTargetedPerformer();
+-        GestureCameraConsentGate.SetConsent(false);
+-        StopEnvironmentalMusic();
+-        if (recordHistory && currentScreen != HomeScreen)
+-            backStack.Push(new RouteState { screen = currentScreen, language = language });
+-        else if (!recordHistory)
+-            backStack.Clear();
+-        ClearBindings(screenUnbind);
+-        while (overlays.Count > 0)
+-            CloseTopOverlay();
+-        if (screenDocumentManager != null)
+-            screenDocumentManager.DeactivateMain();
+-        if (navigationDocument != null)
+-            navigationDocument.enabled = false;
+-        navigationDocument = null;
+-        currentScreen = HomeScreen;
+-        activeBindingScreen = HomeScreen;
+-        if (homeController != null)
+-            homeController.SetHomeVisible(true);
+-        StartCoroutine(ReleaseTransitionLockNextFrame());
++        LivingGlassHome(false);
+     }
+--- Back before
+
++++ Back after
+
+@@ -12,9 +12,4 @@
+
+         if (!awakeningSequenceCompletedThisSession && currentScreen != SettingsScreen && currentScreen != AttractScreen)
+             return;
+-        if (overlays.Count > 0)
+-        {
+-            CloseTopOverlay();
+-            return;
+-        }
+         if (hasAwakenedThisSession)
+         {
+--- SelectPerformer before
+
++++ SelectPerformer after
+
+@@ -1,10 +1,5 @@
+
+-private void SelectPerformer(int index, bool openAssistant)
++private void SelectPerformer(int index)
+     {
+         selectedPerformer = index;
+-        if (openAssistant)
+-        {
+-            OpenAssistantOverlay(index);
+-            return;
+-        }
+         Navigate(GetPerformerScreen(index, 0), language, true);
+     }
+--- GetPerformerScreen before
+
++++ GetPerformerScreen after
+
+@@ -1,4 +1,4 @@
+
+ private string GetPerformerScreen(int performer, int stage)
+     {
+-        return Performers[performer] + "---" + Stages[stage] + "---" + PerformerCodes[performer];
++        return LivingGlassRoutes.Chapter(performer, stage);
+     }
+--- IsPerformerStage before
+
++++ IsPerformerStage after
+
+@@ -1,18 +1,4 @@
+
+ private bool IsPerformerStage(string screen, out int performer, out int stage)
+     {
+-        for (int p = 0; p < Performers.Length; p++)
+-        {
+-            for (int s = 0; s < Stages.Length; s++)
+-            {
+-                if (screen == GetPerformerScreen(p, s))
+-                {
+-                    performer = p;
+-                    stage = s;
+-                    return true;
+-                }
+-            }
+-        }
+-        performer = -1;
+-        stage = -1;
+-        return false;
++        return LivingGlassRoutes.TryChapter(screen, out performer, out stage);
+     }
+--- IsAssistantSessionViewActive before
+
++++ IsAssistantSessionViewActive after
+
+@@ -1,12 +1,5 @@
+
+ private bool IsAssistantSessionViewActive(AssistantSession session)
+     {
+-        if (session == null)
+-            return false;
+-        if (livingGlass != null)
+-            return livingGlass.IsAssistantActive(session.root) && selectedPerformer == session.performerIndex;
+-        if (session.assistantScreenId == activeBindingScreen)
+-            return true;
+-
+-        return session.assistantScreenId == "Assistant-" + session.performerId && overlays.Count > 0 &&
+-               GetUxmlRoot(overlays.Peek().tree) == session.root;
++        return session != null && livingGlass != null && livingGlass.IsAssistantActive(session.root)
++            && selectedPerformer == session.performerIndex;
+     }
+--- LivingGlassRender before
+
++++ LivingGlassRender after
+
+@@ -10,8 +10,7 @@
+
+         livingGlass.StyleCursor();
+         performerTargets = livingGlass.PerformerTargets;
+-        colorReleaseRoot = currentScreen == ColorReleaseScreen ? root : null;
+         if (currentScreen.StartsWith("Assistant-", StringComparison.Ordinal) && selectedPerformer >= 0)
+         {
+-            LivingGlassBindChat(root, selectedPerformer, currentScreen);
++            LivingGlassBindChat(root, selectedPerformer);
+             return;
+         }
+@@ -37,4 +36,4 @@
+
+             performerStageRoutine = StartCoroutine(FadeInRelease(root));
+         }
+-        else LivingGlassBindChat(root, performer, currentScreen);
++        else LivingGlassBindChat(root, performer);
+     }
+--- LivingDone before
+
++++ LivingDone after
+
+@@ -1 +1 @@
+
+-public void LivingDone() { if (!LivingProtected && !livingGlass.OverlayVisible) ReturnHomeFromDone(); }
++public void LivingDone() { if (!LivingProtected && !livingGlass.OverlayVisible) LivingGlassHome(true); }
+--- LivingGlassHome before
+
++++ LivingGlassHome after
+
+@@ -11,6 +11,5 @@
+
+         GestureCameraConsentGate.SetConsent(false);
+         StopEnvironmentalMusic();
+-        ClearBindings(screenUnbind);
+-        currentScreen = activeBindingScreen = HomeScreen;
++        currentScreen = HomeScreen;
+         LivingGlassRender();
+     }
+--- LivingGlassOpenOverlay before
+
++++ LivingGlassOpenOverlay after
+
+@@ -28,4 +28,4 @@
+
+         if (kind == "Settings" || kind == "Privacy") GestureCameraConsentGate.SetConsent(false);
+         VisualElement panel = livingGlass.OpenOverlay(kind, language, livingOverlayPerformer);
+-        if (kind.StartsWith("Assistant-", StringComparison.Ordinal)) LivingGlassBindChat(panel, livingOverlayPerformer, kind);
++        if (kind.StartsWith("Assistant-", StringComparison.Ordinal)) LivingGlassBindChat(panel, livingOverlayPerformer);
+     }
+--- LivingGlassBindChat before
+
++++ LivingGlassBindChat after
+
+@@ -1,3 +1,3 @@
+
+-private void LivingGlassBindChat(VisualElement root, int performer, string screen)
++private void LivingGlassBindChat(VisualElement root, int performer)
+     {
+         ClearBindings(livingChatUnbind);
+@@ -5,5 +5,5 @@
+
+         assistantSession = new AssistantSession
+         {
+-            id = ++assistantSessionSequence, performerIndex = performer, performerId = Performers[performer], assistantScreenId = screen,
++            id = ++assistantSessionSequence, performerIndex = performer, performerId = Performers[performer],
+             root = root, input = root.Q<TextField>("assistantChatInput"), send = root.Q<Button>("assistantChatSend"), cancel = root.Q<Button>("assistantCancel"),
+             conversation = root.Q<ScrollView>("assistantConversation"), status = root.Q<Label>("assistantChatStatus")

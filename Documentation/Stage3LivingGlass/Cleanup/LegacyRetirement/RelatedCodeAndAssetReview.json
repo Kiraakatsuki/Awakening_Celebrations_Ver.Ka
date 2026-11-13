@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Original UXML/USS and UI art/fonts",
+    "decision": "RETAINED \u2014 rollback scene/catalog and prebuild dependencies",
+    "evidence": "SampleSceneBefore/After native closures and current mapping validator;104 UXML/100 USS inventoried"
+  },
+  {
+    "category": "Legacy Home/controller/document manager and navigation mappings",
+    "decision": "RETAINED \u2014 required original-scene serialized components and compatibility branch",
+    "evidence": "Native scene graph identical; no C# changed; facade remains one media/assistant/session owner"
+  },
+  {
+    "category": "Scene template with missing texture",
+    "decision": "RETAINED \u2014 currently configured Editor template, independence/obsolescence unproven",
+    "evidence": "addToDefaults true; templateScene/preview valid but dependency missing, not a reason to delete owner"
+  },
+  {
+    "category": "Global Config and legacy MediaPipe Video support material",
+    "decision": "DEFERRED \u2014 no independent workflow-retirement proof",
+    "evidence": "Missing component provenance unresolved; imported sample/compiled workflows remain; no arbitrary removal"
+  },
+  {
+    "category": "TMP Resources settings/default sprite",
+    "decision": "RETAINED \u2014 explicitly protected optional setting",
+    "evidence": "Unchanged hashes; user disallows modification solely to remove warning"
+  },
+  {
+    "category": "Recovery scenes/duplicate captures/Figma manifest backup",
+    "decision": "RETAINED \u2014 user recovery and design provenance; unsupported independence proof",
+    "evidence": "Ignored status/duplicate pixels do not authorize removal"
+  },
+  {
+    "category": "Related dead presentation code after reference retirement",
+    "decision": "No removal needed or justified",
+    "evidence": "Old Bootstrap/ModalButton fields already absent; deprecated renderer declarations are package-owned; no handler/router source tied to ignored metadata remains"
+  },
+  {
+    "category": "Legacy capture and Figma mapping Editor helpers",
+    "decision": "RETAINED \u2014 supported rollback review/prebuild menu entry points",
+    "evidence": "MenuItem/IPreprocessBuild entry points are not dead ordinary-call-only code"
+  }
+]

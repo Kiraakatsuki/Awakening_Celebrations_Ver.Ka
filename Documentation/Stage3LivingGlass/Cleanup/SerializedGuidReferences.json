@@ -1,0 +1,2720 @@
+{
+  "0000000000000000e000000000000000": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uss.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uxml.meta",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss.meta",
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+    "Assets/LivingGlass/UI/Styles/LivingGlass.uss.meta",
+    "Assets/Resources/AssistantChatRuntime.uss.meta",
+    "Assets/Resources/HomeInteraction.uss.meta",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab",
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/Settings/Lit2DSceneTemplate.scenetemplate",
+    "Assets/Settings/Scenes/URP2DSceneTemplate.unity",
+    "Assets/UI Toolkit/PanelSettings.asset",
+    "Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss.meta",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity",
+    "Assets/_Recovery/1.unity",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/Advanced/McpAdvancedSection.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/AssetGen/McpAssetGenSection.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/ClientConfig/McpClientConfigSection.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/Common.uss.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/Connection/McpConnectionSection.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/Resources/McpResourcesSection.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/Tools/McpToolsSection.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/Components/Validation/McpValidationSection.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/EditorPrefs/EditorPrefItem.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/EditorPrefs/EditorPrefsWindow.uss.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/EditorPrefs/EditorPrefsWindow.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.uss.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPForUnityEditorWindow.uxml.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPSetupWindow.uss.meta",
+    "Packages/com.coplaydev.unity-mcp/Editor/Windows/MCPSetupWindow.uxml.meta",
+    "ProjectSettings/PackageManagerSettings.asset"
+  ],
+  "0000000000000000f000000000000000": [
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/ScreenMaterial.mat",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/UV Grid.mat",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/FontAwesome Button.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab",
+    "Assets/UI Toolkit/PanelSettings.asset",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity",
+    "ProjectSettings/GraphicsSettings.asset"
+  ],
+  "008d3ceb81d782e4e8e1ef582920b9fa": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "01af6f49ddf64e1db7adfd56e5350fab": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "0218389f27a751092a0b1a9423b75a4f": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab"
+  ],
+  "0377f0d230cbfcb47b4ae0bf74816f91": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml"
+  ],
+  "03cfc4915c15d504a9ed85ecc404e607": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "04c410c9937594faa893a11dceb85f7e": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "04e27f61585a09eefba5551c1c6751fd": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs.meta"
+  ],
+  "0529e6c5f6dea8c4a8c2835ed7de57cb": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "0567c11655683ff499a24e9806fe7c32": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml"
+  ],
+  "05db3b8120cb5b143b9b8b7fa2a93bb5": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml"
+  ],
+  "05fec9f9a27549819643dbca8ee14db5": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "0618aab42e8b451409c9e47e7f45a1db": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "06437c1ff663d574d9447842ba0a72e4": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "06b32683b529d3e41bfd0e366029466d": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml"
+  ],
+  "06d2b2183ad5592468c5e0bc7a4d3b29": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "071e954febf155243a6c81e48f452644": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "073797afb82c5a1438f328866b10b3f0": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/Settings/Scenes/URP2DSceneTemplate.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "074337820eff7f441910fadfc931aa08": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "077f54d4ea8dac94ebf87beb9764b17b": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml"
+  ],
+  "07d252aa2baa9f548a27ba61fb689973": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "080975e17e658524d821ef6b43eea92c": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "0849e84e3d62649e8882e9d6f056a017": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "08567ddcd5175eeebafe07a630413ad2": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab"
+  ],
+  "08b2b5fb307b0d249860612774a987da": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "0951de5992461754fa73650732c4954c": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "09e2e81854f3f746e816e1db55d28fa2": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity"
+  ],
+  "0a34372e070dda4468eaa9694f6484bb": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml"
+  ],
+  "0a4468715e79d0b428355fdeffe2d701": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml"
+  ],
+  "0aa62a1074308204fae9a0eae4363385": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uxml"
+  ],
+  "0b2db86121404754db890f4c8dfe81b2": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "0b86ba34db2c888778bdb2f439fd1c76": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity"
+  ],
+  "0c29b3a09e5cf8f4b8c1d4679cc4deea": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "0caefbbdeb41f7149a6cba2c5c6d8cc5": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uxml"
+  ],
+  "0cd44c1031e13a943bb63640046fad76": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+  ],
+  "0d0041709efa403fab018e2ee14f0c26": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "0d0b652f32a2cc243917e4028fa0f046": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab"
+  ],
+  "0db7a91dd9c12a0428d0f74f7504d110": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml"
+  ],
+  "0dbbbf189f5843d2b25819cea3350055": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "0e9d5a909a1f7e84882a534d0d11e49f": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "0f4122b9a743b744abe2fb6a0a88868b": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "0f591a7806f68d7439c7505f645a5ead": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "1097e90e1306e26439701489f391a6c0": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "10b6c6d22e73dea46a8ab36b6eebd629": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "11145981673336645838492a2d98e247": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "1114d2fde7872974f82a6daa6a5f3a7c": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "1121bb4e615ca3c48b214e79e841e823": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1134690bf9216164dbc75050e35b7900": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1146a9de09159a948b683e94fb3d3c95": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "12dc59547ea167a4ab435097dd0f9add": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1344c3c82d62a2a41a3576d8abb8e3ea": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab"
+  ],
+  "13ac7ddf1f1e44a4290a1e2387fcbe44": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "140d1d2c406167c50819d89f86d9092e": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "14381521ff11cb74abe3fe65401c23be": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "145060647209d6d1c86b8ccce9fcaf5a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "14a78719bb30332419287a7180e17717": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "14f706a2859a564a7b7ae1bb3a7985e2": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "1563c5a06dc303a40888548c3d646a33": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab"
+  ],
+  "15d0c3709176029428a0da2f8cecf0b5": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1622a0294114a154483e4beb7daa6469": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/.figma-manifest.json",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml"
+  ],
+  "16e47c1641bd0104e92b624601457bb0": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "179f794063d2a66478e6e726f84a65bc": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "17b293bbe1f3f9d4394d0ca052a36e0c": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml"
+  ],
+  "186d5350d583cda41add12021ba7f881": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml"
+  ],
+  "19349a0f9a7ed4c48a27445bcf92e5e1": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1aa08ab6e0800fa44ae55d278d1423e3": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab"
+  ],
+  "1ad53a96b58d3c3488dde4f14db1aaeb": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1b1c20d82303e4b5781c3ef50ac1449f": [
+    "ProjectSettings/EditorBuildSettings.asset"
+  ],
+  "1b95b5dcf48d1914c9e1e7405c7660e3": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1bb40f1c45cd1d44c8fab25903a227f0": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml"
+  ],
+  "1c3c6d69a645b804fa232004b96b7ad3": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "1d8160f9a1a0e7f4d9c526ba579fee49": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml"
+  ],
+  "1ddeec99217ea692c920535a87583a51": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+  ],
+  "1e59db1f59f707641992c4e2450cdc40": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "1e5ca12f2e237d34b97a9585ad45a2cb": [
+    "Assets/Scenes/AwakeningLivingGlass.unity"
+  ],
+  "1edcd131364091c46a17cbff0b1de97a": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "200dc3520447a0644b66e6eac05601b4": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml"
+  ],
+  "202e35d9f771ca343a602ce302eb0b5b": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "205c1b13c4f71acf5b968f461c41b2a0": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity"
+  ],
+  "206b8342d43008d70b3754b4e109172a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity"
+  ],
+  "20be25aac4e22ee49a7db76fb3df6de2": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "20f2fd61d43b483ba93442eb6cfc37cf": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "221518ef91623a7438a71fef23660601": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "222cce62363a44a380c36bf03b392608": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "22ff2a945620cf0ed909d994a7f1ed8b": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab"
+  ],
+  "2453208a8b7f3e147b8c144972865d02": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "247994e1f5a72c2419c26a37e9334c01": [
+    "ProjectSettings/URPProjectSettings.asset"
+  ],
+  "24d349d9c78db0f3d94d4657029f4c5e": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "24ec0e140fb444a44ab96ee80844e18e": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "26114bc9cccb92454a468ea4d41f400a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity"
+  ],
+  "266d7eab0d4835a458d6a938e5496228": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "26a413214480ef144b2915d6ff4d0beb": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "26c7f8ac4a99ced4e9728629755239a2": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uxml"
+  ],
+  "2705215ac5b84b70bacc50632be6e391": [
+    "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+  ],
+  "275060fa7ac08c4128c0ea18c71b73dd": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "282c0a7f24315c84bbbf0b7a05f79926": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "29868e73b638e48ca99a19ea58c48d90": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "29fa0085f50d5e54f8144f766051a691": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "2a4db7a114972834c8e4117be1d82ba3": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab"
+  ],
+  "2a567b9b2733f8d47a700c3c85bed75b": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "2aed67ad60045d54ba3a00c91e2d2631": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "2bcd2660ca9b64942af0de543d8d7100": [
+    "ProjectSettings/EditorBuildSettings.asset"
+  ],
+  "2be51cff5cab1be4cba4c69a5ec3450d": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "2c2df9a35c274324682d3f683581f16c": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "2ca97df9d1801e84a8a8f2c53cb744f0": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "2cda990e2423bbf4892e6590ba056729": [
+    "Assets/Settings/Lit2DSceneTemplate.scenetemplate"
+  ],
+  "2d70cd6be91bd7843a39a54b51c15b13": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "2db48ef4cdeedc14785b96411ed62cfb": [
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+    "Assets/UI Toolkit/PanelSettings.asset"
+  ],
+  "2e1291ddc10af56d4be1551cc630d40b": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity"
+  ],
+  "2e498d1c8094910479dc3e1b768306a4": [
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+  ],
+  "2ec995e51a6e251468d2a3fd8a686257": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "2f39c7d0746c69f4b807171d6de71279": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "2f39e3082638e0e49825d740710a07c7": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "30649d3a9faa99c48a7b1166b86bf2a0": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab"
+  ],
+  "306cc8c2b49d7114eaa3623786fc2126": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab"
+  ],
+  "30ce68fc8909565718481dab17fb62cd": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity"
+  ],
+  "31321ba15b8f8eb4c954353edc038b1d": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "31374bd91c77c305a835fc84a9c49449": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/External/FontAwesome/Fonts/Font Awesome 5 Free-Regular-400.otf.meta",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/FontAwesome Button.prefab"
+  ],
+  "31a19414c41e5ae4aae2af33fee712f6": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab"
+  ],
+  "31d0dcc6f2dd4e4408d18036a2c93862": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "3245ec927659c4140ac4f8d17403cc18": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab"
+  ],
+  "326e6292d21184e3384c9de6a8abe56a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "328833ae6a41f7544a5cb62e0a54c298": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml"
+  ],
+  "3302065f671a8450b82c9ddf07426f3a": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "33be2e9a5506b2843bdb2bdff9cad5e1": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "3495500f1386ce3ee9a87dc859112641": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity"
+  ],
+  "354cc3593a81c3943a00d37fea8904cd": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "35cd116b192e2534d91b0e20f9add0dc": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml"
+  ],
+  "35d0a3145f9881749bddbda18a028bd4": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml"
+  ],
+  "363531d6ec615924ca6a54b63d7e6727": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml"
+  ],
+  "3647aa80071445388d8227a6da31ef08": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "36f118343fc974119bee3d09e2111500": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "386ee87194003cbd899dddcd6a2e6add": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity"
+  ],
+  "38982d8943fe7a7469cfac338404c295": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml"
+  ],
+  "3923900e2b41b5e47bc25bfdcbcdc9e6": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "39283c598b419151e84e22759e3d01ed": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "39451254daebd6d40b52899c1f1c0c1b": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "39bac9dd52c31ae7aa01a7383bc44853": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "3a38c6581cbfab04a8ea76d1fcedf9cd": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml"
+  ],
+  "3a6d5214a80e908479c9fd261ae82f27": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml"
+  ],
+  "3a80877c579b9144ebdcc6d923bca303": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "3aeffe9a2d89f0ea4aa716347e0529d6": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity"
+  ],
+  "3b21275fd12d65f49babb5286f040f2d": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "3b696480602fe21de85315216956bd42": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "3c106ac1f6d9f414e9de24f6a96f1f1f": [
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "3e950a4cd096cfe43b1c5c7587cc9319": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml"
+  ],
+  "3eb4b772797da9440885e8bd939e9560": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "3ecbbbd57f7c79c498eabaa6f746bde7": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "3ed851760a7c2f041bae9ebd86786d63": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "3f07634c7f06f2fd1a789b5a9e005709": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity"
+  ],
+  "3f6c848ca3d7bca4bbe846546ac701a1": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "3f9215ea0144899419cfbc0957140d3f": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "41439944d30ece34e96484bdb6645b55": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "42102e3a8b698e14f89895348705f55d": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uxml"
+  ],
+  "424799608f7334c24bf367e4bbfa7f9a": [
+    "Assets/Settings/UniversalRP.asset"
+  ],
+  "43e0b06a07be91d9ab8df9c5e822664a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+  ],
+  "43e9f0194e843b641ab8083b120feac8": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+  ],
+  "4418f6a92856c5b51b58a36e3be7ed5c": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "4431b1f1f743fbf4eb310a967890cbea": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "4491cc275b596624bbd88ebbdf28d2ef": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "44fc62292b65ab04eabcf310e799ccf6": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "4500d12d3121343488cd28beaafbcfb2": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "4610cc9639634e3e9a4a875f4536aa86": [
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "466a052655b8edd4eb2455fc3bce24f1": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "469d7c4a9aed99347bf91a5cb7d547ed": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml"
+  ],
+  "47a45908f6db0cb44a0d5e961143afec": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "483740821ccce60b4a263dad0478e9b7": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab"
+  ],
+  "488fbb6a3005b66c2b657204bce83fcf": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta"
+  ],
+  "4b7b083e6b6734e8bb2838b0b50a0bc8": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "4cc79f32c4d143b4f9a8476c7dcdf4b7": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml"
+  ],
+  "4d07ee79af1a4c738aebb64049a0b1ef": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "4d6d5de35fa45ef4a92119397a045cc9": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "4dcc0502f8586f941b5c4a66717205e8": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "4e034cc8ea2635c4e9f063e5ddc7ea7a": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "4e29b1a8efbd4b44bb3f3716e73f07ff": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/FontAwesome Button.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab"
+  ],
+  "4f231c4fb786f3946a6b90b886c48677": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "510a2f57334933e4a8dbabe4c30204e4": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "517e08eadb5f7ef4091795e66dc10896": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml"
+  ],
+  "51e50f7b54fc3584499667eb00c3e3bc": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "51eee22c2a633ef4aada830eed57c3fd": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "526b4db9d63a1c44f817e6b893301eb9": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "5304a9839079cb74cadeb6daeb3ab47b": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "530dd0798be480d48b8fe19fc20cb646": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "53626a513ea68ce47b59dc1299fe3959": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "53864816eb00f2343b60e1a2c5a262ef": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "53a11f4ebaebf4049b3638ef78dc9664": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "53d8a87aad4a738439054351039a187d": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "5435c652cf5f6694d89fb1f78aa6f5b3": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "54520f9c483ff1b418710149640639ee": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uxml"
+  ],
+  "5485954d14dfb9a4c8ead8edb0ded5b1": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "557fa399e33bf7647bda5697c5c158df": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "558a8e2b6826cf840aae193990ba9f2e": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "562b7ae4f629f144aa97780546fce7c6": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "56641cb88dcb31a4398a4997ef7a7a8c": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5688ab254e4c0634f8d6c8e0792331ca": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "56a0017fcc2b402fbcd0301656a585cf": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab"
+  ],
+  "56a77a3e8d64f47b6afe9e3c95cb57d5": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "570215b08e5cf1548a973e9679932743": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "5713b959e3c77a58fb258133fc8e4aef": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "573620ae32aec764abd4d728906d2587": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "579a95e023815ff4e9c8a631db08dcf4": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml"
+  ],
+  "57d7c4c16e2765b47a4d2069b311bffe": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "586a7a00ead9e304c98a96d94a970fe0": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml"
+  ],
+  "5870c72997b0a4f178afb3fa4b42f8ec": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab"
+  ],
+  "594ea882c5a793440b60ff72d896021e": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "59b35328435291843b548d1a5b3a9028": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "59f8146938fff824cb5fd77236b75775": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab"
+  ],
+  "5a0e103d2920f990ab08fe7bada48cc4": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab"
+  ],
+  "5a2a534753fbdb44e96c3c78b5a6999d": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5a992812cb320d146a66cc600200cce7": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5b12a0fff7bd34a4994debd2bac3a0df": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "5b7e5a28ec583884dbaaec50e19e18b7": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml"
+  ],
+  "5ba3c50c2cb46dc9e916dd3a33c8a488": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "5bb2534d2411d344cbc54f880232640f": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5c3c0879e8c0bf24787b66f8c2a854ef": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uxml"
+  ],
+  "5c81372d981403744adbdda4433c9c11": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5cdee82a77d13994f83b8fdabed7c301": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5da80a5efc5910a21b9460daafddfb45": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "5db98b44b5bd2a0e8b5c7dec21d0577d": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs.meta"
+  ],
+  "5e1547a4ad8a6eb4cbf53db0ebb059d3": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "5e7134d6e63e0bc47a1dd2669cedb379": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5efaea0e81c66334aa9d062d6573e6fd": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5f1864addb451f54bae8c86d230f736e": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "5f7201a12d95ffc409449d95f23cf332": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab"
+  ],
+  "5fd6d45b803987f4d9db8da268b89bf6": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml"
+  ],
+  "618f0a05cbf326799b0869858fb2a76a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity"
+  ],
+  "6196f34ed825db14b81fb3eb0ea8d931": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "61a77fef80b9dc14cb95f0f6026d5270": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "620b55b8040a88d468e94abe55bed5ba": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "622d2b94a86243641a8444564278293a": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml"
+  ],
+  "62474923f58f3e04f9f81c5604d88191": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "625f186215c104763be7675aa2d941aa": [
+    "Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph.meta",
+    "Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph.meta",
+    "Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph.meta",
+    "Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph.meta"
+  ],
+  "63eaba0ebfb82cc43bde059b4a8c65f6": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "6513b04592303e843a5258958a3beac7": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml"
+  ],
+  "654c582f7f8a5a14dbd7d119cbde215d": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "65df88701913c224d95fc554db28381a": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "66f335fb1ffd8684294ad653bf1c7564": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "67bc85ad740f1524a978ca1f399f125a": [
+    "Assets/Scenes/AwakeningLivingGlass.unity"
+  ],
+  "67d8231169859c4498b0ad159d5c8a63": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "681886c5eb7344803b6206f758bf0b1c": [
+    "ProjectSettings/QualitySettings.asset"
+  ],
+  "68e6db2ebdc24f95958faec2be5558d6": [
+    "Assets/Fonts/NotoSansSC-Regular SDF.asset",
+    "Assets/Fonts/NotoSerifSC-Regular SDF.asset",
+    "Assets/Fonts/SourceSans3-Regular SDF.asset",
+    "Assets/Fonts/SourceSerif4-Regular SDF.asset"
+  ],
+  "68f72feb5d493794fb3e26c546f7de7f": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "693e404b61e1a4641a9fc2180cfcdc39": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/.figma-manifest.json",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml"
+  ],
+  "69af93f79603bb04888eda8df6366a30": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "69e18923aff1a72458b62ca535ed6b80": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "6a82b9904ff34cc4fb66157217fe48a9": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "6acc1b608773d19458898b89d0b69353": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml"
+  ],
+  "6bb382f7de370af41b775f54182e491d": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "6bd486065ce11414fa40e631affc4900": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "6c46ce08b1af83c4c9f564856649a319": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml"
+  ],
+  "6c612b4386bf4f44686341c10a96ae17": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "6cda457ac28612740adb23da5d39ea92": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "6dd33b5127db4e21917d31fa2f15dada": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "6dea95bc04ae3844ca9ea47ba6734bfb": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "6ef4c3221a6129f4f82df5aa97d46915": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml"
+  ],
+  "6f229b42e76ae9041858933123399cc0": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "6ffc026344d557d41a0d6081072a15e0": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml"
+  ],
+  "701880fecb344ea4c9cd0db3407ab287": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "70620c801523bd3daafb31ee271ecac9": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity"
+  ],
+  "707a1bc4ec9ccae45bac455726415b9f": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset",
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset"
+  ],
+  "70a0ee0507b32884f948b3c75a87e802": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "70afe9e12c7a7ed47911bb608a23a8ff": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "71b533210c3ef1742ade990f2f06431e": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "71c1514a6bd24e1e882cebbe1904ce04": [
+    "Assets/Fonts/NotoSansSC-Regular SDF.asset",
+    "Assets/Fonts/NotoSerifSC-Regular SDF.asset",
+    "Assets/Fonts/SourceSans3-Regular SDF.asset",
+    "Assets/Fonts/SourceSerif4-Regular SDF.asset",
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+  ],
+  "72185b07b1e2bc4d9b4c72f9199fbbef": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab"
+  ],
+  "72bc0d8404c003a45b96ef2af350669f": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml"
+  ],
+  "73ad9952ec7a3b048864009cf1b7ca91": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml"
+  ],
+  "73fe53b428c5b3440b7e87ee830b608a": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "740fae5e472f5de40a86cf6d112d9547": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml"
+  ],
+  "74670598a59646549b65680bffe43d87": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "74c1aa0ecb37a6242a397b1e2a801a18": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "75498ea04b6af66428144e8980a2986c": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml"
+  ],
+  "758274893c5f8bc4597cfd7180bb9b85": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "769cfca1948154041a32ce48e3504943": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml"
+  ],
+  "76c392e42b5098c458856cdf6ecaaaa1": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "77774d9009bb81447b048c907d4c6273": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "77c8b76aa1d96ed47ab082ef0bc18307": [
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "783abb08ef3bea5f994c0dd50a4abc50": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Materials/UV Grid.mat"
+  ],
+  "78fe4f7b7ad763b02aa042ef4c50ff6e": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity"
+  ],
+  "7a3141fbb6ab47c419dcbef262bc4eb2": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml"
+  ],
+  "7c042ce752bc3c74aac5ab409ef95463": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml"
+  ],
+  "7ce2118f74614a94aa8a0cdf2e6062c3": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "7ebfbe7e9122d5343b3df9434de33363": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml"
+  ],
+  "7efb395a1ed5151409f6bd52075255a8": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml"
+  ],
+  "7fd51b2c318a4a9479855746cf6b2c57": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "8026945368f4a1ed29b086d7499b3172": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity"
+  ],
+  "80aa867ac363ac043847b06ad71604cd": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "81180773991d8724ab7f2d216912b564": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "81200413a40918d4d8702e94db29911c": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "81539394559fccf44b4bc81c6fc363eb": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml"
+  ],
+  "8236d46ca3a43d373ae6ad281fea8fe0": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "827b4ccfba2dccb47b17be39fbb3755c": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "827c4431af677e057aa6f14170d0785c": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Annotatable Screen.prefab",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "82dbbf8816bce2444a2ab2c7347341fa": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml"
+  ],
+  "82e54d022aad40348a3adb8b7331c028": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml"
+  ],
+  "8404be70184654265930450def6a9037": [
+    "Assets/InputSystem_Actions.inputactions.meta"
+  ],
+  "844379a266ebf2842a055dec5a2fced8": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml"
+  ],
+  "847a1473bc4893140acb765400ca81c7": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml"
+  ],
+  "84a2088461d0d3c4f86d53bafc62ff35": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "851431ccc1b0a894b8a0611f098d3003": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset",
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset"
+  ],
+  "85a5ef2fc3b5e3449a700c757bb7d3fc": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml"
+  ],
+  "8645e27cd7095e44abaf942b5b86aae4": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "8670f7ce4b60cef43bed36148aa1b0a2": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "8749efbdc19be6342aa6e6e8bc3fe9d3": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "8778d2c5de1025526bb9fccf445db529": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "87a9be2a7620991a78342ef9a56fa62c": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "88a32c2c64215969c81c79fa23411733": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity"
+  ],
+  "88de459fc96789248a50221dc9a08596": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uxml"
+  ],
+  "896d9004736809c4fb5973b7c12eb8b9": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "899c54efeace73346a0a16faa3afe726": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "8b27b280d3feaad4bbefb2c9c2b2e8d6": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uxml"
+  ],
+  "8b3d0a552233e644cacc7851e62c5631": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "8b6f6f1e3f264810aba6d340fe734e09": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "8be3f72711bbc29489580bc9cab18171": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml"
+  ],
+  "8c3ee818f2efa514c889881ccb2e95a2": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "8c9cfa26abfee488c85f1582747f6a02": [
+    "ProjectSettings/EditorBuildSettings.asset"
+  ],
+  "8eaa695afee89c8eea9241f8a5ab9645": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs.meta"
+  ],
+  "8f586378b4e144a9851e7b34d9b748ee": [
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat",
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat",
+    "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+  ],
+  "8f96cd657dc40064aa21efcc7e50a2e7": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "9085046f02f69544eb97fd06b6048fe2": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab"
+  ],
+  "91d6b9e901a488a4794dbadf1beb4f5e": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "91e4bf4149e51da44b6f57b748d7c553": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "9266d411ded84c378f53e32ef01a8e6e": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "93446b5c5339d4f00b85c159e1159b7c": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "939df0f23d84c4745be9eacab9bb7939": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml"
+  ],
+  "93b439a37f63240aca3dd4e01d978a9f": [
+    "ProjectSettings/GraphicsSettings.asset"
+  ],
+  "940329f7b66f22149881de029bc57bb3": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "9452ae1262a74094f8a68013fbcd1834": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "94a070d33e408384bafc1dea4a565df9": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "94db2f95d29f77f41b43b0b53b339d26": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "95c1d06b330642f4d9485029c09d176a": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "95deb9614294b3740b7d6c5bf0bfd131": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml"
+  ],
+  "969424950b8d4191aa676fc2e8039285": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "96aaab9cc247d0b4c98132159688c1af": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "97c23e3b12dc18c42a140437e53d3951": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "98691bb3f575dc94a88f573c14856bbd": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml"
+  ],
+  "987a6b1d14a79fc4f9fb57e7b25ed741": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml"
+  ],
+  "98b3bc9c251401d478d6ca2de593f709": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "98e3d58cae7210c4786f67f504c9e899": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "9920c1f1781549a46ba081a2a15a16ec": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "9930fb4528622b34687b00bbe6883de7": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "998922bef66c25f4193abee8a57ca312": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "99cac32d97da7604cbc08efa01cc3f80": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml"
+  ],
+  "9a0de252fe74e6540bfaf10d2044b5da": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml"
+  ],
+  "9add77a6e4bf64e118297a7f33a820a7": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab"
+  ],
+  "9b943ae8813c1134884063c0134c67a5": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml"
+  ],
+  "9c1445592963bfd4c8fafdede2edba9d": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "9c4d18f994c2cb51282484e339c69005": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab"
+  ],
+  "9c70c1a35ff15f340b38ea84842358bf": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "9d1642b93ebdf164ca764f041cd41432": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml"
+  ],
+  "9d92991794bb5864c8085468b97aa067": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "9dfc825aed78fcd4ba02077103263b40": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "9e32bf6bfbff5c643897c7881ef5286f": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "9e4308c3e97d26a388364cbe0ea8bfb4": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "9e6f601455c0e0549b841c969d30c2b7": [
+    "Assets/Settings/Pipeline/EditorPipelineManager.asset"
+  ],
+  "a04d1501c8c51cb45b05febe42ccb5c5": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml"
+  ],
+  "a159008dd252acd3cae7c02b4f17a5c4": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab"
+  ],
+  "a15b78cf8ca26ca4fb2090293153c62c": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a18bf186d5934f3dbb4839d736c78a45": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "a1d65b2c7319066458c7bfab8210399d": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml"
+  ],
+  "a252db6b2320f0148b3060b008b4a7f7": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml"
+  ],
+  "a26fd08bc6aaa394db18cce6a356b94f": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml"
+  ],
+  "a2eaeefdac4637a44b734e85b7be9186": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a2ec5cbf5a9b64345ad3fab0912ddf7b": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a3f7b8c99de28a94684cb1daebeccf5d": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a46c899decd10184ca826c19ca135b93": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml"
+  ],
+  "a65a2097188e99841938e37cd4d9db4a": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml"
+  ],
+  "a679dba8ec4d9ce45884a270b0e22dda": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a6c9ed8e7098c304f8dde074a7a586ce": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "a6cdfa1fba0bf10409a4dc5b914d8430": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "a79441f348de89743a2939f4d699eac1": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/Settings/Scenes/URP2DSceneTemplate.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "a79c31a495f5d77d08ce9fbc53f8ca2d": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "a7d02a455ff51174fbcad3656ed46d90": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "a80925ceebd011741b42509226cefc74": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a84904e562ecaf887b2dba62111bb901": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs.meta"
+  ],
+  "a89bee29cffa951418fc1e2da94d1959": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a8bb60d3515f9ba40b6eb0e410398956": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "a901443779a96c97890cab1b274b506f": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/HolisticTrackingGraph.cs.meta"
+  ],
+  "a90a70fc3b21a384385022b2c11e9ef4": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "a961195dcda7221428bb48251e749343": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml"
+  ],
+  "a97c105638bdf8b4a8650670310a4cd3": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "a9e295d16e5a48d7bf0fe01a94b7f87d": [
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "ab2114bdc8544297b417dfefe9f1e410": [
+    "Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset"
+  ],
+  "ab529f398f4b7ca4a8d153b98f7359ee": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml"
+  ],
+  "adb57c157e0a32d4cbccd3c954ea4f70": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "ae578aa6b6f5f8344b7104828034adca": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "aefd825a1f7147e0bc837911c525503e": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "af0527d9d7044ba28bc9c274f8d91c97": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "af6f87c1f072d207e99065e4712f000d": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity"
+  ],
+  "afedeb11fe98be44281ce9c309d15280": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "b085c374a6772aba491e20d7d9d980db": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "b1484537b0ae1db44bf9f0162a199d7c": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "b1e188c301029fe42bf1de708fb6f92c": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml"
+  ],
+  "b23e766bcf50ca4438ef186b174557df": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "b26bb4f6bd0c9ae4ba3e6285c791b3b8": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uxml"
+  ],
+  "b2c807c845aa4a2a97a73f2790356e5d": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection.unity",
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (1).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/1.unity"
+  ],
+  "b34df196d082fb94d973cd0e8ed4e550": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml"
+  ],
+  "b3ab972b21db85d48ade9657efdd4771": [
+    "Assets/Settings/Lit2DSceneTemplate.scenetemplate"
+  ],
+  "b3c92426a88625841ab15ca6a7917248": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "b408896a27ffc0145acbdb5e6e42910a": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "b4db8180660810945bf8d55ab44352ad": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "b4fb3ee144025b34d91f5ddc39855311": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml"
+  ],
+  "b569e1778761d5a44a5e6d41e91cce75": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "b5a94a2ed84aa5f439aa27e811c78a54": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "b68f91d05dbb56c4080c2378d28de60a": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "b7c55e0db5bc46df90a6157eb1521758": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "b7c99f07de80334419b7959e932be306": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "b8534637e4376af42b7e0011e4f783f4": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "b8f356deb8442ef4a8a6587fce961ef5": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "b9c68673d0e7f6380a80da74e3a9f826": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs.meta"
+  ],
+  "ba39488de81a63b298a92a9d09ac42db": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "bb19f5cde3feacb4f9f99102154b94a5": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml"
+  ],
+  "bb86f1f0af829fd45b2ebddda1245c22": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "bbd673bd64e6bcf4685bd31311a927ad": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml"
+  ],
+  "bcc6cf6fe8edcbedc948607491e604d1": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity"
+  ],
+  "bd9e8c758250ef449a4b4bfaad7a2133": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "be2713cd9b767d046876e3cd03812fff": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "bf2edee5c58d82540a51f03df9d42094": [
+    "Assets/Settings/UniversalRP.asset"
+  ],
+  "bf54e6528c79a224e96346799064c393": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "bfed3e498947fcb4890b7f40f54d85b9": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "c00ec61dfec4470bb0453aa212307594": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "c01700fd266d6914ababb731e09af2eb": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "c06cc21c692f94f5fb5206247191eeee": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "c0c4f1dcdeb23c54aa39e6a20ce12557": [
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset",
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset"
+  ],
+  "c0cc741384055c14d814d8503b4afc97": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "c11d1e65e08886c308c31ea8d84e4ee6": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+  ],
+  "c1272a8605687ce4b99a60234bb1eaad": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml"
+  ],
+  "c136ddbf65436f342bbdd95db041d638": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml"
+  ],
+  "c160f3c9df1acc645bcf9174c1a4b743": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "c1dea6c0f46f82342ac6b11989a0fb74": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab"
+  ],
+  "c310ee8310a0d3e429d4d56c924810c9": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml"
+  ],
+  "c41005c129ba4d66911b75229fd70b45": [
+    "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+  ],
+  "c4464efc66aa5db4e8faa1acc5baeef6": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "c49e63ed1bbcb334780a3bd19dfed403": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "c4c8ba5c0a9bced4da7e53d944e4825f": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml"
+  ],
+  "c56b7e0d4c7cb484e959caeeedae9bbf": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "c5e1dc532bcb41949b58bc4f2abfbb7e": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "c7e408387bfb28346bc4e1c622580803": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "c816db0b425434a4dbab252e00cdb09a": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uxml",
+    "Assets/Fonts/NotoSansSC-Regular SDF.asset"
+  ],
+  "c878d2cf6d8568e4d94a76c6b0e7f742": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml"
+  ],
+  "c8b6a681c7b4e2e4785ffab093907f9e": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "c94ad916058dff743b0f1c969ddbe660": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "c989e1ed85cf7154caa922fec53e6af6": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "c9a47f94846d46968f6e224c70f70055": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "c9bd74624d8070f429e3f46d161f9204": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "cacb30de6c40c7444bbc78cb0a81fd2a": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "cad620e9fb0add044b980b308fe63616": [
+    "Assets/Scenes/AwakeningLivingGlass.unity"
+  ],
+  "cb3b21dd872f29b48ad470f91b67a942": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "cb710201b970e004f8e6b8254532dc57": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "cb76dd40fa7654f9587f6a344f125c9a": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "cbd3e1cc4ae141c42a30e33b4d666a61": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "cbd6c340b6b747c4e869ed1472d020a9": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml"
+  ],
+  "cce6b3262e549b8428c1ba8e328e37c1": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml"
+  ],
+  "ccf1aba9553839d41ae37dd52e9ebcce": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "cd29506db2520be4eb0df76e96b787d0": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "cdfbdbb87d3286943a057f7791b43141": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "ce09d4a80b88c5a4eb9768fab4f1ee00": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "cee0636ab52a4b9d8d5026944c69fc25": [
+    "Assets/Scenes/AwakeningLivingGlass.unity",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "cf2d3fbd7a90b3f41bdf7a72aacda9b1": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "cf645f1af5f90246e87c443ab2154263": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "cf852408f2e174538bcd9b7fda1c5ae7": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "cf9f6bc49f01b3748bf70873cfd9821b": [
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (2).unity",
+    "Assets/_Recovery/0 (3).unity",
+    "Assets/_Recovery/0 (4).unity",
+    "Assets/_Recovery/0.unity"
+  ],
+  "d016b3c6865c79947ad5412f88fad2d4": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml"
+  ],
+  "d104b2fc1ca6445babb8e90b0758136b": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d1308851b69dd874192b5bf931e7c9ae": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "d13a6418361d0d0488c859552b11477a": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "d1814c946541f0f4ea993e40fbf94906": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "d18a24d7b4ed50f4387993566d9d3ae2": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d199490a83bb2b844b9695cbf13b01ef": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab"
+  ],
+  "d1ec0e202f29d7ee28cccba68415d95b": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection.unity"
+  ],
+  "d1f1048909d55cd4fa1126ab998f617e": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d1f297de946a523dda5bc19fb59525f6": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity"
+  ],
+  "d31ec499ac06b6b0cb4299d9b4aa7f19": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity"
+  ],
+  "d365a12e43c8eda4db04b857864ad040": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml"
+  ],
+  "d36f0fe53425e08499a2333cf423634c": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d3f0849180c2d0944bc71060693df100": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d4044ea2490d63b43aa1765f8efbf8a9": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d4228daaeb23b7b40a25777db06a3c34": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml"
+  ],
+  "d433cdb024dfd584696eeb11efb71102": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity"
+  ],
+  "d476bc13b66983ac4b7ac1f48fb6aff9": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "d50c5e07c9911a74982bddf7f3075e7b": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d512512f4af60a442ab3458489412954": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d51bc365fa9a4c746840c42128823704": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "d5a307c014552314b9f560906d708772": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d5c9b274310e5524ebe32a4e4da3df1f": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d5da564da19cb6b7d8e4f97f269edc5d": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity"
+  ],
+  "d684c6d125278d05fbb1904ee5103f3a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "d6dae50ee9e1bfa4db75f19f99355220": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "d6eeb1c9879f7c8468faa8101fc6fc2d": [
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "d6f8e1aedc20d4641bba4ed9e45df4b8": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uxml"
+  ],
+  "d70b071ee433d4e429124c369a86c001": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "d7fd9488000d3734a9e00ee676215985": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "d82c1b31c7e74239bff1220585707d2b": [
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+    "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+  ],
+  "d9293ed6c505d2e4fa5cdb3f409fe90a": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "db8bd7436dc2c5f4c92655307d198381": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "dc42784cf147c0c48a680349fa168899": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+  ],
+  "dd77ffd079630404e879388999033049": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "dd79916d5560cb942b758e974b430d87": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "ddecb287821537e47974959f59a0d7a3": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml"
+  ],
+  "de02b375720b5c445afe83cd483bedf3": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "de02f9e1d18f588468e474319d09a723": [
+    "ProjectSettings/ShaderGraphSettings.asset"
+  ],
+  "df737857f1e4c314997d9c8bbd4cbfcf": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "df9bce341028c908c92354551ef8347c": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection.unity"
+  ],
+  "e021b4c809a781e468c2988c016ebbea": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "e18721964791129469ecede9b98a61e7": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "e19bd0338085f7932856aa45f1be2899": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/FontAwesome Button.prefab"
+  ],
+  "e2a29ebe19825d247bf834646ec0c109": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml"
+  ],
+  "e32226222ff144b24bf3a5a451de54bc": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e3265ab4bf004d28a9537516768c1c75": [
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+  ],
+  "e366626b217103d4da4622bddc523b82": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "e3d24661c1e055f45a7560c033dbb837": [
+    "Assets/Settings/UniversalRP.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e44752fca7354cd41a51bb79a3ad3758": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml"
+  ],
+  "e507fdfead5ca47e8b9a768b51c291a1": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e5298225b3ec6ca4eb614e4afca83f3d": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "e5c6678ed2aaa91408dd3df699057aae": [
+    "Assets/Settings/Renderer2D.asset"
+  ],
+  "e5c841190f2e06346a60774f433c6a25": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml"
+  ],
+  "e6042ae1feea7bf48b0d92b6a3df265f": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "e611fdf19e8276b478ea8dbfeed3a65d": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml"
+  ],
+  "e63eef8f54aa9dc4da9a5ac094b503b5": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e6e9a19c3678ded42a3bc431ebef7dbd": [
+    "Assets/Settings/Renderer2D.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e77658d5b47172c4ba88d2ef7e820442": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "e7857e9d0c934dc4f83f270f8447b006": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e7cdac49f6d6ae44b847e2e21e42da14": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uxml"
+  ],
+  "e823cd5b5d27c0f4b8256e7c12ee3e6d": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e8a96d3fe0915ab4ba11b27f916d3122": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "e8ee25143a34b8c4388709ea947055d1": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e9155b26e1bc55942a41e518703fe304": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "e93736a2c52f90e49bb12e20fc6fb685": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml"
+  ],
+  "e9d7147c892fcd84086052abf860a607": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml"
+  ],
+  "ea1ce3a75b2958a89a0191d6cdcfde15": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab"
+  ],
+  "ea4546bdb229f3d9b9c3eb61bb0a3c45": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab"
+  ],
+  "eaa2ba12fd0a0224d848a328f0966529": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "eabbd422ff4691f48b81569113b9f834": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml"
+  ],
+  "eae71bbfc968e064bae38ec6f5c3b78b": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uxml"
+  ],
+  "eae74b0ecd74d8ed0a0610fc6bd2a647": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video.unity",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipeVideoGraph.cs.meta"
+  ],
+  "ebddf28f004e00648b39df50dea95021": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "ec19275a0f38ec141a8381302b7fc28d": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml"
+  ],
+  "ec5237085740d2545ac1cf51998620c8": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml"
+  ],
+  "ec9fec698a3456d4fb18cf8bacb7a2bc": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "ece564ad16755f1ef94c4fe04bd7ce2e": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "ed5ea7ce59ca8ec4f9f14bf470a30f35": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "eda47df5b85f4f249abf7abd73db2cb2": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "ee3366f60a895de43a0a662649101a3b": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml"
+  ],
+  "ef0ca988243f8b447b3e6e7ad0404b29": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml"
+  ],
+  "ef4725ddbd544eb769c8fdedd008ae0e": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity"
+  ],
+  "f056d8bd2a1c7e44e9729144b4c70395": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "f0b67500f7fad3b4c9f2b13e8f41ba6e": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "f1030a5a23a09e449b85dc0a7056ddd7": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "f129b03ed61794ba68a0ed3044e56031": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/.figma-manifest.json",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uss",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uss",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uss",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uss",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uss",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml"
+  ],
+  "f152430ce9da8f9f2ae5cfd135b4d061": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "f15378fb3e5a75643b944173fa23ca5f": [
+    "Assets/Resources/RuntimeScreenCatalog.asset",
+    "Assets/Scenes/SampleScene.unity",
+    "Assets/_Recovery/0 (4).unity"
+  ],
+  "f384062a3087d0944b65d33419255380": [
+    "Assets/Fonts/SourceSans3-Regular SDF.asset"
+  ],
+  "f4d846393f8d9f20fa64b924b0d95e68": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Resources/Bootstrap.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab"
+  ],
+  "f4dd2676e70d83a4e9bc8827d3b6be2a": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml"
+  ],
+  "f56ebb73d6cc4284bbf5078d877fd952": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "f6783ab646d374f94b199774402a5144": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "f6825eaeba8444241b18f580b97167a4": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml"
+  ],
+  "f69770e54f2823f43badf77916acad83": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "f6d223acabc2f974795a5a7864b50e6c": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "f89aac1e4f84468418fe30e611dff395": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "f89bd646cf435d243aff70970765fa35": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "f8e13ca9036ae790aa97029999dd7750": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection.unity"
+  ],
+  "f8fb55141659b9607bbd8859e1dbcf04": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+  ],
+  "f952c082cb03451daed3ee968ac6c63e": [
+    "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+  ],
+  "f984aeb540ded8b4fbb8a2047ab5b2e2": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "f993d16dcccfcecb6892ad3cc2ea76c8": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic.unity"
+  ],
+  "f9ee4ed84c1d10c49aabb9b210b0fc44": [
+    "Assets/Settings/UniversalRP.asset",
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "fa042edbfc40fbd4bad0ab9d505b1223": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "fa3ea12a628054f4ba1efe8e08391184": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "fac5aebe72678924c9590f70b4c882e4": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "fad1dfd19ebdeb543b56bfba8ce6d7de": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "fade42e8bc714b018fac513c043d323b": [
+    "Assets/LivingGlass/UI/LivingGlassPanel.asset",
+    "Assets/TextMesh Pro/Resources/TMP Settings.asset"
+  ],
+  "fb60a22f311433c4c962b888d1393f88": [
+    "Assets/DefaultVolumeProfile.asset"
+  ],
+  "fc2516ab17bf9a56185cb561f270551a": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation.unity"
+  ],
+  "fc3fa8f108657e14486697c9a84ccfc5": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "fc9fb74d77fa24b46aa08e70a536fc75": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml",
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml",
+    "Assets/LivingGlass/Assets/LivingGlassAssets.asset"
+  ],
+  "fd2fd78b392986e42a12df2177d3b89c": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "fdaed99104c819f499c5366089f27f6c": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml"
+  ],
+  "fdca7d5bd6d76474cb54287c1ba0039b": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uxml"
+  ],
+  "fdd967c0e52e7b13f80827e23283472e": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/AppSettings.asset",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerAppSettings.asset"
+  ],
+  "fde76746e4fd0ed418c224f6b4084114": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "fe393ace9b354375a9cb14cdbbc28be4": [
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat",
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat",
+    "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+  ],
+  "fe3c1ed38caa7424684754c1155d6d3e": [
+    "Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml"
+  ],
+  "fe4f13c1004a07d4ea1e30bfd0326d9e": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "fe87c0e1cc204ed48ad3b37840f39efc": [
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Detection/Face Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Face Landmark Detection/Face Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Image Segmentation/Image Segmentation Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/Holistic/Holistic Tracking Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Legacy/MediaPipe Video/MediaPipe Video Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Object Detection/Object Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Pose Landmark Detection/Pose Landmark Detection Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/FontAwesome Button.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Global Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/ImageSource Config Window.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Menu.prefab",
+    "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Solution Row.prefab"
+  ],
+  "ff02731834dbf5d41889fab3ec9a4067": [
+    "Assets/Resources/RuntimeScreenCatalog.asset"
+  ],
+  "ff2cbab5da58bf04d82c5f34037ed123": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ],
+  "ff47e5a0f105eb34883b973e51f4db62": [
+    "Assets/UniversalRenderPipelineGlobalSettings.asset"
+  ]
+}

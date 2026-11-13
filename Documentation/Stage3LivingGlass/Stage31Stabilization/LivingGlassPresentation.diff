@@ -1,0 +1,235 @@
+--- before/Assets\LivingGlass\Presentation\LivingGlassPresentation.cs
++++ after/Assets\LivingGlass\Presentation\LivingGlassPresentation.cs
+@@ -12,7 +12,7 @@
+     private AwakeningApplicationController flow;
+     private VisualElement root, content, header, dock, atmosphere, overlayPlane, panel, body, resume;
+     private VisualElement opener;
+-    private VisualElement bridgeProxy, bridgeGallery;
++    private VisualElement bridgeProxy, bridgeGallery, bridgeDestinationArt, bridgeDestinationCopy;
+     private readonly LivingGlassMotion motion = new LivingGlassMotion();
+     private readonly object themeKey = new object();
+     private readonly VisualElement[] artSurfaces = new VisualElement[6];
+@@ -64,6 +64,8 @@
+     }
+     public void Shutdown()
+     {
++        ++viewGeneration;
++        ClearBridge();
+         motion.Clear();
+         if (root != null) root.UnregisterCallback<KeyDownEvent>(OnKey, TrickleDown.TrickleDown);
+         if (preview != null) preview.image = null;
+@@ -79,7 +81,14 @@
+     }
+     private Label Text(VisualElement parent, string value, string cls = "lg-body")
+     {
+-        var label = new Label(value) { enableRichText = false, pickingMode = PickingMode.Ignore };
++        bool display = cls == "lg-display";
++        bool reading = cls == "lg-body" || cls == "lg-gallery-guidance";
++        // Only authored, immutable display/reading copy uses a line-height tag. Service text stays plain.
++        string leading = display ? (language == AppLanguage.Chinese ? "1.3" : "1.12") : "1.5";
++        var label = new Label(display || reading ? "<line-height=" + leading + "em>" + value + "</line-height>" : value)
++            { enableRichText = display || reading, pickingMode = PickingMode.Ignore };
++        if (cls == "lg-wordmark" || cls == "lg-performer-name")
++            label.style.unityFontDefinition = FontDefinition.FromFont(assets.bodyEnglish);
+         if (cls == "lg-display" && language == AppLanguage.English && assets.displayEnglish != null)
+             label.style.unityFontDefinition = FontDefinition.FromFont(assets.displayEnglish);
+         label.AddToClassList(cls); parent.Add(label); return label;
+@@ -107,6 +116,7 @@
+     }
+     public void ClearRoute()
+     {
++        ++viewGeneration;
+         ClearBridge();
+         motion.Clear();
+         CloseOverlay(true);
+@@ -122,9 +132,9 @@
+     {
+         if (root == null) return;
+         motion.Reduced = ReducedMotion;
+-        int generation = ++viewGeneration;
+         bool galleryBridge = route == "COLOR-RELEASE" && LivingGlassRoutes.TryChapter(screen, out _, out int nextStage) && nextStage == 0;
+         VisualElement oldGallery = galleryBridge && !ReducedMotion ? content : null;
++        float oldOpacity = oldGallery == null ? 1 : oldGallery.style.opacity.keyword == StyleKeyword.Undefined ? oldGallery.style.opacity.value : oldGallery.resolvedStyle.opacity;
+         Rect oldBounds = default;
+         Rect oldUv = new Rect(0,0,1,1);
+         Texture bridgeTexture = null;
+@@ -137,6 +147,7 @@
+             oldGallery.RemoveFromHierarchy();
+         }
+         ClearRoute();
++        int generation = viewGeneration;
+         route = screen; language = locale; selected = performer; ready = selectionReady; consent = accepted; target = -1;
+         keyboardGalleryOwner = false;
+         root.style.unityFontDefinition = FontDefinition.FromFont(language == AppLanguage.Chinese ? assets.traditionalChinese : assets.bodyEnglish);
+@@ -171,7 +182,7 @@
+         announcement = Text(root, "", "lg-announcement");
+         if (performer >= 0) ApplyTheme(performer, true);
+         if (oldGallery != null && bridgeTexture != null)
+-            BuildBridge(oldGallery, oldBounds, bridgeTexture, oldUv);
++            BuildBridge(oldGallery, oldBounds, bridgeTexture, oldUv, oldOpacity);
+         else if (!LivingGlassRoutes.Protected(route))
+         {
+             motion.Run(content, family == "Gallery" ? .52f : .3f, t => { content.style.opacity = t; LivingGlassMotion.Pose(content, new Vector2(0, (1-t)*8), 1); });
+@@ -191,7 +202,6 @@
+         Text(brand, T("A LIVING GALLERY", "感知流動的藝廊"), "lg-eyebrow");
+         Button locale = Action(header, "language", language == AppLanguage.English ? "English / 繁體中文" : "繁體中文 / English",
+             () => flow?.LivingLanguage(language == AppLanguage.English ? AppLanguage.Chinese : AppLanguage.English), "lg-quiet");
+-        locale.style.unityFontDefinition = FontDefinition.FromFont(assets.traditionalChinese);
+         locale.SetEnabled(!LivingGlassRoutes.Protected(route));
+     }
+     private void BuildDock()
+@@ -253,7 +263,38 @@
+     {
+         var surface = Box(parent, "reading", "lg-reading");
+         Text(surface, title, "lg-panel-title");
+-        var scroll = new ScrollView(ScrollViewMode.Vertical); scroll.AddToClassList("lg-reading-body"); surface.Add(scroll); return scroll;
++        var scroll = ReadingScroll("reading-scroll", "lg-reading-body"); surface.Add(scroll); return scroll;
++    }
++    private ScrollView ReadingScroll(string name, string style)
++    {
++        var scroll = new ScrollView(ScrollViewMode.Vertical) { name = name, focusable = true, tabIndex = 0 };
++        scroll.AddToClassList(style);
++        scroll.verticalScrollerVisibility = ScrollerVisibility.Auto;
++        scroll.verticalScroller.lowButton.text = "↑";
++        scroll.verticalScroller.highButton.text = "↓";
++        scroll.verticalScroller.lowButton.tooltip = T("Scroll up", "向上捲動");
++        scroll.verticalScroller.highButton.tooltip = T("Scroll down", "向下捲動");
++        scroll.tooltip = T("Scroll: arrows, Page Up/Down, Home/End", "捲動：方向鍵、Page Up/Down、Home/End");
++        scroll.RegisterCallback<KeyDownEvent>(evt =>
++        {
++            if (evt.target != scroll || evt.altKey || evt.ctrlKey || evt.commandKey) return;
++            float offset = scroll.scrollOffset.y, page = scroll.contentViewport.layout.height * .85f;
++            float maximum = Mathf.Max(0, scroll.verticalScroller.highValue);
++            switch (evt.keyCode)
++            {
++                case KeyCode.UpArrow: offset -= 40; break;
++                case KeyCode.DownArrow: offset += 40; break;
++                case KeyCode.PageUp: offset -= page; break;
++                case KeyCode.PageDown: offset += page; break;
++                case KeyCode.Home: offset = 0; break;
++                case KeyCode.End: offset = maximum; break;
++                default: return;
++            }
++            scroll.scrollOffset = new Vector2(scroll.scrollOffset.x, Mathf.Clamp(offset, 0, maximum));
++            evt.StopImmediatePropagation();
++            root.focusController?.IgnoreEvent(evt);
++        });
++        return scroll;
+     }
+     private void BuildHome()
+     {
+@@ -441,23 +482,28 @@
+             }
+         });
+     }
+-    private void BuildBridge(VisualElement oldGallery, Rect fromWorld, Texture artwork, Rect fromUv)
+-    {
++    private void BuildBridge(VisualElement oldGallery, Rect fromWorld, Texture artwork, Rect fromUv, float outgoingStart)
++    {
++        int generation = viewGeneration;
+         bridgeGallery = oldGallery;
+-        oldGallery.pickingMode = PickingMode.Ignore;
++        MakeOutgoingDecoration(oldGallery);
+         oldGallery.SetEnabled(false); root.Insert(1, oldGallery);
+-        var proxy = new Image { image = artwork, uv = fromUv, scaleMode = ScaleMode.StretchToFill, pickingMode = PickingMode.Ignore };
++        var proxy = new Image { name = "transition-portrait", image = artwork, uv = fromUv, scaleMode = ScaleMode.StretchToFill, pickingMode = PickingMode.Ignore };
+         proxy.AddToClassList("lg-bridge"); root.Add(proxy);
+         bridgeProxy = proxy;
+         Vector2 local = root.WorldToLocal(fromWorld.position);
+         Rect from = new Rect(local, root.WorldToLocal(fromWorld.position+fromWorld.size)-local);
+         Image destinationArt = content.Q<Image>("art-" + selected);
++        VisualElement destinationCopy = content.Q("chapter-copy");
++        bridgeDestinationArt = destinationArt; bridgeDestinationCopy = destinationCopy;
++        if (destinationArt != null) destinationArt.style.visibility = Visibility.Hidden;
++        if (destinationCopy != null) destinationCopy.style.visibility = Visibility.Hidden;
+         // Fixed art window matches the chapter's 4% / 13% safe composition.
+         float w = root.resolvedStyle.width, h = root.resolvedStyle.height;
+         Rect to = new Rect(w*.45f, h*.14f, w*.48f, h*.67f);
+-        content.style.opacity = 0;
+         motion.Run(proxy, .65f, t =>
+         {
++            if (generation != viewGeneration || bridgeProxy != proxy) return;
+             if (destinationArt != null && destinationArt.worldBound.width > 0)
+             {
+                 Rect bounds = destinationArt.worldBound;
+@@ -468,15 +514,42 @@
+             proxy.uv = new Rect(Mathf.Lerp(fromUv.x,toUv.x,t), Mathf.Lerp(fromUv.y,toUv.y,t), Mathf.Lerp(fromUv.width,toUv.width,t), Mathf.Lerp(fromUv.height,toUv.height,t));
+             proxy.style.left = Mathf.Lerp(from.x, to.x, t); proxy.style.top = Mathf.Lerp(from.y, to.y, t);
+             proxy.style.width = Mathf.Lerp(from.width, to.width, t); proxy.style.height = Mathf.Lerp(from.height, to.height, t);
+-            oldGallery.style.opacity = 1-t; content.style.opacity = Mathf.Clamp01((t-.35f)/.65f);
+-            proxy.style.opacity = t < .7f ? 1 : 1-(t-.7f)/.3f;
+-        }, ClearBridge);
++            float outgoing, incoming;
++            LivingGlassMotion.BridgeVisibility(t, out outgoing, out incoming);
++            oldGallery.style.opacity = outgoingStart * outgoing;
++            oldGallery.style.visibility = outgoing > 0 ? Visibility.Visible : Visibility.Hidden;
++            if (destinationCopy != null)
++            {
++                destinationCopy.style.opacity = incoming;
++                destinationCopy.style.visibility = incoming > 0 ? Visibility.Visible : Visibility.Hidden;
++            }
++            // The opaque proxy alone owns this portrait until it exactly reaches the destination.
++            proxy.style.opacity = 1;
++        }, () => { if (generation == viewGeneration && bridgeProxy == proxy) ClearBridge(); });
++    }
++    private static void MakeOutgoingDecoration(VisualElement element)
++    {
++        element.name = "outgoing-" + element.name;
++        element.pickingMode = PickingMode.Ignore;
++        element.focusable = false; element.tabIndex = -1;
++        foreach (VisualElement child in element.Children()) MakeOutgoingDecoration(child);
+     }
+     private void ClearBridge()
+     {
++        if (bridgeProxy != null) motion.Cancel(bridgeProxy);
++        if (bridgeDestinationArt != null) bridgeDestinationArt.style.visibility = Visibility.Visible;
++        if (bridgeDestinationCopy != null)
++        {
++            bridgeDestinationCopy.style.opacity = 1;
++            bridgeDestinationCopy.style.visibility = Visibility.Visible;
++        }
+         bridgeGallery?.RemoveFromHierarchy(); bridgeProxy?.RemoveFromHierarchy();
+         bridgeGallery = bridgeProxy = null;
++        bridgeDestinationArt = bridgeDestinationCopy = null;
+         if (content != null) content.style.opacity = 1;
++        var focused = root?.focusController?.focusedElement as VisualElement;
++        if (!OverlayVisible && (focused == null || focused.panel == null || !focused.enabledInHierarchy || focused.resolvedStyle.visibility == Visibility.Hidden))
++            FirstFocusable(content)?.Focus();
+     }
+     public void SettleRoutePresentation()
+     {
+@@ -572,7 +645,7 @@
+         var suggestions = Box(parent, "suggestions", "lg-suggestions");
+         foreach (string s in new[] { T("What can I notice?", "我可以留意什麼？"), T("Help me reflect.", "引導我回顧感受。"), T("What is known about this presence?", "關於這種存在，有哪些已知資訊？") })
+             Action(suggestions, "suggestion-" + suggestions.childCount, s, null, "lg-suggestion");
+-        var conversation = new ScrollView(ScrollViewMode.Vertical) { name = "assistantConversation" }; conversation.AddToClassList("lg-conversation"); parent.Add(conversation);
++        var conversation = ReadingScroll("assistantConversation", "lg-conversation"); parent.Add(conversation);
+         conversation.focusable = true; conversation.tabIndex = 0;
+         Text(conversation, T("Your conversation begins here.", "從這裡開始對話。"), "lg-empty").name = "assistant-empty";
+         var status = new Label { name = "assistantChatStatus", enableRichText = false }; status.AddToClassList("lg-chat-status"); conversation.Add(status);
+@@ -616,7 +689,7 @@
+         if (kind == "Settings" || kind.StartsWith("Assistant-", StringComparison.Ordinal))
+             Action(bar, "window-minimize", T("Minimize", "縮小"), () => flow?.LivingMinimize(), "lg-window-tool");
+         var close = Action(bar, "window-close", T("Close", "關閉"), () => flow?.LivingGlassCloseOverlay(), "lg-window-tool");
+-        var scroll = new ScrollView(ScrollViewMode.Vertical); scroll.AddToClassList("lg-window-body"); panel.Add(scroll); body = scroll;
++        var scroll = ReadingScroll("window-scroll", "lg-window-body"); panel.Add(scroll); body = scroll;
+         if (kind == "Settings") BuildSettings(body);
+         else if (kind == "Privacy") BuildPrivacy(body, false);
+         else if (kind == "Help") BuildHelp(body);
+@@ -688,6 +761,7 @@
+     private static VisualElement FirstFocusable(VisualElement parent)
+     {
+         if (parent == null) return null;
++        if (parent.style.visibility.value == Visibility.Hidden || parent.resolvedStyle.visibility == Visibility.Hidden || parent.resolvedStyle.display == DisplayStyle.None) return null;
+         if (parent.focusable && parent.enabledInHierarchy && parent.resolvedStyle.display != DisplayStyle.None) return parent;
+         foreach (VisualElement child in parent.Children()) { var found = FirstFocusable(child); if (found != null) return found; }
+         return null;
+@@ -730,7 +804,7 @@
+     private void MoveKeyboardFocus(VisualElement scope, bool reverse)
+     {
+         var candidates = scope.Query<VisualElement>().ToList().FindAll(v => (v is Button || v is TextField || v is Toggle || v is ScrollView)
+-            && v.focusable && v.tabIndex >= 0 && v.enabledInHierarchy && v.resolvedStyle.display != DisplayStyle.None && v.worldBound.height > 0);
++            && v.focusable && v.tabIndex >= 0 && v.enabledInHierarchy && v.resolvedStyle.display != DisplayStyle.None && v.resolvedStyle.visibility == Visibility.Visible && v.worldBound.height > 0);
+         if (candidates.Count == 0) return;
+         VisualElement focused = root.focusController.focusedElement as VisualElement;
+         int index = -1;

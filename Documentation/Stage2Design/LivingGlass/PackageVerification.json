@@ -1,0 +1,18 @@
+{
+  "native_static_frames": 43,
+  "native_motion_frames": 3,
+  "native_images_exported": 43,
+  "localized_catalog_records": 104,
+  "logical_routes": 52,
+  "families": 15,
+  "paired_deferred_states": 53,
+  "living_glass_copy_pairs": 101,
+  "core_state_copy_pairs": 30,
+  "js_syntax": "passed",
+  "local_link_failures": [],
+  "artwork_hashes": "six approved sources only",
+  "tracked_production_diff": [],
+  "browser_visual_interaction_checks": "blocked: saved permission / managed policy denial",
+  "Unity_runtime_performance": "not run / not measured",
+  "native_motion": "authored tracks; no video-frame inspection; not Unity proof"
+}

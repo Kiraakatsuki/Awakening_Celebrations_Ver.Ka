@@ -1,0 +1,193 @@
+{
+    "label": "AI-long-zh-0103",
+    "utc": "2026-11-13T12:29:32.6179520Z",
+    "route": "PANDEMIC---FOCUS-VIEW---PER-002",
+    "locale": "Chinese",
+    "focus": "window-close",
+    "videoState": "prepared=False,playing=False,frame=-1,time=0,clip=none",
+    "capturePhase": "Rendered end-of-frame",
+    "requestedUtc": "2026-11-13T12:29:32.5530353Z",
+    "overlayKind": "Assistant-GAIA",
+    "width": 1920,
+    "height": 1080,
+    "frame": 144985,
+    "performer": 0,
+    "players": 1,
+    "playingPlayers": 0,
+    "requestedFrame": 144984,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": true,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "header",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 34.0,
+                "width": 1728.0,
+                "height": 103.0
+            },
+            "opacity": 0.5,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "chapter-copy",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 77.0,
+                "y": 180.0,
+                "width": 848.0,
+                "height": 466.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 635.0,
+                "y": 972.0,
+                "width": 650.0,
+                "height": 80.0
+            },
+            "opacity": 0.5,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "glass-window",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1083.0,
+                "y": 133.0,
+                "width": 760.0,
+                "height": 795.0
+            },
+            "opacity": 1.0,
+            "scale": 0.9999930262565613,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 1011.0,
+                "width": 242.0,
+                "height": 41.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "assistantChatStatus",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1138.0,
+                "y": 517.0,
+                "width": 612.0,
+                "height": 8.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Position"
+        },
+        {
+            "name": "art-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 863.0,
+                "y": 140.0,
+                "width": 980.0,
+                "height": 756.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": "",
+            "visibility": "Visible",
+            "picking": "Ignore"
+        }
+    ]
+}

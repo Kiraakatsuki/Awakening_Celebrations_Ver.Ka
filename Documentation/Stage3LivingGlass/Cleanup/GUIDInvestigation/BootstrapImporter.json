@@ -1,0 +1,17 @@
+[
+  {
+    "name": "globalConfigManagerPrefab",
+    "fieldExists": false,
+    "resolved": null
+  },
+  {
+    "name": "gpuManagerPrefab",
+    "fieldExists": false,
+    "resolved": null
+  },
+  {
+    "name": "_appSettings",
+    "fieldExists": true,
+    "resolved": null
+  }
+]

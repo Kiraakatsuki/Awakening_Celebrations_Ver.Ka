@@ -1,0 +1,24 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"playing\":false,\"compiling\":false,\"scene\":\"Assets/Scenes/AwakeningLivingGlass.unity\",\"dirty\":false,\"consent\":false,\"previewWindows\":0},\"compiler\":\"codedom\"}}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "playing": false,
+        "compiling": false,
+        "scene": "Assets/Scenes/AwakeningLivingGlass.unity",
+        "dirty": false,
+        "consent": false,
+        "previewWindows": 0
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

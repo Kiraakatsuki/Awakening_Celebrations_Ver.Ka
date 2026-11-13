@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 using UnityEngine.Video;
 
 [DefaultExecutionOrder(-100)]
-public sealed class AwakeningApplicationController : MonoBehaviour
+public sealed partial class AwakeningApplicationController : MonoBehaviour
 {
     private const string HomeScreen = "Home";
     private const string PrivacyScreen = "Privacy";
@@ -17,37 +17,18 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private const string AttractScreen = "ATTRACT---MONOCHROME---FALLBACK-INPUT";
     private const string ColorReleaseScreen = "COLOR-RELEASE";
     private const string AssistantChooserScreen = "AssistantChooser";
-    private static readonly string[] TutorialScreens =
-    {
-        "TUTORIAL---ENTRY---DIM",
-        "TUTORIAL---INTRODUCTION",
-        "TUTORIAL---LOOK---MOVE",
-        "TUTORIAL---POINT",
-        "TUTORIAL---HOLD---SELECT",
-        "TUTORIAL---EXPERIENCE",
-        "TUTORIAL---READY"
-    };
+    private static readonly string[] TutorialScreens = LivingGlassRoutes.Tutorials;
 
-    private static readonly string[] Performers =
-    {
-        "GAIA", "PANDEMIC", "RE-BIRTH", "WHITE-GUARDIAN", "CONSCIENCE", "SANCTUARY"
-    };
+    private static readonly string[] Performers = LivingGlassRoutes.Performers;
 
-    private static readonly string[] PerformerCodes =
-    {
-        "PER-001", "PER-002", "PER-003", "PER-004", "PER-005", "PER-006"
-    };
 
-    private static readonly string[] Stages =
-    {
-        "FOCUS-VIEW", "ACTIVATION", "LIVING-PORTRAIT", "RELEASE", "POST-VIDEO-AI"
-    };
+    private static readonly string[] Stages = LivingGlassRoutes.Stages;
 
     [SerializeField] private UIDocument navigationDocument;
-    [SerializeField] private ScreenDocumentManager screenDocumentManager;
-    [SerializeField] private RuntimeScreenCatalog screenCatalog;
-    [SerializeField] private HomeLanguageController homeController;
-    [SerializeField, Min(0f), Tooltip("The imported Color Release screen has no completion event or duration; this configurable presentation interval is a provisional default.")]
+
+
+
+    [SerializeField, Min(0f), Tooltip("Presentation interval before gallery selection becomes ready; preserves the existing session timing.")]
     private float colorReleasePresentationSeconds = 2f;
     [SerializeField, Min(0.1f), Tooltip("Total time spent on Activation, including its fade in and fade out.")]
     private float activationSequenceDurationSeconds = 3f;
@@ -80,12 +61,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     }
 
     private readonly Stack<RouteState> backStack = new Stack<RouteState>();
-    private readonly List<Action> screenUnbind = new List<Action>();
-    private readonly Stack<OverlayState> overlays = new Stack<OverlayState>();
-    private readonly Stack<List<Action>> overlayUnbind = new Stack<List<Action>>();
+
+
+
     private AppLanguage language = AppLanguage.English;
     private string currentScreen = HomeScreen;
-    private string activeBindingScreen = HomeScreen;
+
     private int selectedPerformer = -1;
     private bool consentAccepted;
     private bool hasAwakenedThisSession;
@@ -103,7 +84,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private float gestureTargetLostSince = -1f;
     private bool gesturePointing;
     private VisualElement[] performerTargets;
-    private VisualElement colorReleaseRoot;
+
     private Coroutine colorReleaseRoutine;
     private Coroutine performerStageRoutine;
     private Coroutine placeholderPortraitRoutine;
@@ -125,15 +106,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private StyleEnum<ScaleMode> livingPortraitPlaceholderScaleMode;
     private StyleEnum<Overflow> livingPortraitSurfaceOverflow;
     private RenderTexture livingPortraitRenderTexture;
-    private VisualElement cameraPreviewFrame;
-    private Image cameraPreviewImage;
-    private VisualElement cameraPreviewDocumentRoot;
-    private string cameraPreviewStatus;
-    private ManifestSnapshot nodeSnapshot;
-    private StyleSheet interactionStyles;
-    private bool interactionStylesAdded;
+
+
+
+
+
+
     private GestureCursorController gestureCursor;
-    private Label handTrackingStatus;
+
     private AssistantSession assistantSession;
     private Coroutine assistantRequestRoutine;
     private UnityWebRequest assistantWebRequest;
@@ -144,13 +124,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         public int id;
         public int performerIndex;
         public string performerId;
-        public string assistantScreenId;
+
         public VisualElement root;
         public TextField input;
-        public Label placeholder;
+
         public ScrollView conversation;
         public Label status;
         public Button send;
+        public Button cancel;
         public string failedMessage;
         public bool requestInProgress;
     }
@@ -190,69 +171,21 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         public AppLanguage language;
     }
 
-    private sealed class OverlayState
-    {
-        public VisualElement tree;
-        public VisualElement baseRoot;
-    }
 
-    [Serializable]
-    private sealed class ManifestSnapshot
-    {
-        public ManifestScreen[] screens;
-    }
 
-    [Serializable]
-    private sealed class ManifestScreen
-    {
-        public string rootNodeId;
-        public string assetName;
-        public ManifestNode[] nodes;
-    }
 
-    [Serializable]
-    private sealed class ManifestNode
-    {
-        public string figmaNodeId;
-        public string path;
-        public string tag;
-        public string classes;
-    }
 
     private void Awake()
     {
         gestureCursor = new GestureCursorController(gestureCursorSmoothingSpeed);
         GestureCameraConsentGate.SetConsent(false);
-        if (screenCatalog == null)
-            screenCatalog = Resources.Load<RuntimeScreenCatalog>("RuntimeScreenCatalog");
-        TextAsset snapshot = Resources.Load<TextAsset>("RuntimeNodeBindings");
-        if (snapshot != null)
-            nodeSnapshot = JsonUtility.FromJson<ManifestSnapshot>(snapshot.text);
-        interactionStyles = Resources.Load<StyleSheet>("HomeInteraction");
-        if (homeController == null)
-            homeController = FindObjectOfType<HomeLanguageController>();
-
-        if (screenDocumentManager != null)
-            screenDocumentManager.Initialize();
-
-        if (navigationDocument == null && screenDocumentManager == null)
+        if (livingGlass == null || livingGlass.Document == null)
         {
-            UIDocument[] documents = FindObjectsOfType<UIDocument>(true);
-            for (int i = 0; i < documents.Length; i++)
-            {
-                if (documents[i].gameObject.name == "UIDocument")
-                {
-                    navigationDocument = documents[i];
-                    break;
-                }
-            }
+            Debug.LogError("Living Glass presentation and UIDocument must be assigned.", this);
+            enabled = false;
+            return;
         }
-
-        if (screenDocumentManager == null && navigationDocument != null)
-        {
-            navigationDocument.sortingOrder = 10;
-            navigationDocument.enabled = false;
-        }
+        navigationDocument = livingGlass.Document;
     }
 
     private void OnValidate()
@@ -263,31 +196,20 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void OnEnable()
     {
-        HomeLanguageController.LanguageChanged += OnLanguageChanged;
-        HomeLanguageController.PrivacyRequested += OnPrivacyRequested;
-        HomeLanguageController.SettingsRequested += OnSettingsRequested;
-        HomeLanguageController.ReviewConsentRequested += OnReviewConsentRequested;
-        HomeLanguageController.ConsentChanged += OnConsentChanged;
         TryConnectGestureBridge();
     }
 
     private void OnDisable()
     {
-        cameraPreviewFrame?.RemoveFromHierarchy();
-        if (cameraPreviewImage != null)
-            cameraPreviewImage.image = null;
-        cameraPreviewFrame = null;
-        cameraPreviewImage = null;
-        cameraPreviewDocumentRoot = null;
-        cameraPreviewStatus = null;
+        if (livingGlass != null)
+        {
+            ClearBindings(livingChatUnbind);
+            CancelAssistantRequest();
+            livingGlass.Shutdown();
+        }
         GestureCameraConsentGate.SetConsent(false);
         StopEnvironmentalMusic();
         StopPerformerExperienceSequence();
-        HomeLanguageController.LanguageChanged -= OnLanguageChanged;
-        HomeLanguageController.PrivacyRequested -= OnPrivacyRequested;
-        HomeLanguageController.SettingsRequested -= OnSettingsRequested;
-        HomeLanguageController.ReviewConsentRequested -= OnReviewConsentRequested;
-        HomeLanguageController.ConsentChanged -= OnConsentChanged;
         if (gestureBridge != null)
         {
             gestureBridge.GestureDetected -= OnGestureDetected;
@@ -295,7 +217,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             gestureBridge.TrackingChanged -= OnTrackingChanged;
             gestureBridgeSubscribed = false;
         }
-        ClearBindings(screenUnbind);
         if (colorReleaseRoutine != null)
         {
             StopCoroutine(colorReleaseRoutine);
@@ -303,34 +224,19 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
         transitionInProgress = false;
         performerFlowTransitionLock = false;
-        while (overlays.Count > 0)
-            CloseTopOverlay();
     }
 
     private IEnumerator Start()
     {
         yield return null;
-        if (screenCatalog == null)
-            Debug.LogError("AwakeningApplicationController: Resources/RuntimeScreenCatalog.asset is missing.", this);
-        if (screenDocumentManager == null && navigationDocument == null)
-            Debug.LogError("AwakeningApplicationController: Assign the navigation UIDocument in the scene.", this);
-        if (homeController == null)
-            Debug.LogError("AwakeningApplicationController: HomeLanguageController was not found.", this);
-
-        if (homeController != null)
-            homeController.SetHomeVisible(true);
-
-        if (gestureBridge == null && !warnedMissingGestureBridge)
-        {
-            warnedMissingGestureBridge = true;
-            Debug.LogWarning("No MediaPipeGestureBridge is assigned on the application controller. Gesture input is unavailable.", this);
-        }
+        livingGlass.Initialize(this);
+        language = PlayerPrefs.GetString("AwakeningCelebrations.Language", "en") == "zh" ? AppLanguage.Chinese : AppLanguage.English;
+        LivingGlassRender();
     }
 
     private void Update()
     {
-        UpdateHandTrackingStatus();
-        UpdateCameraPreview();
+        LivingGlassUpdateStatus();
         gestureCursor?.Tick(Time.unscaledDeltaTime);
         if (gesturePointing)
             UpdatePointedPerformer();
@@ -341,106 +247,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
     }
 
-    private void UpdateCameraPreview()
-    {
-        bool applicable = GestureCameraConsentGate.ConsentGranted && gestureBridge != null &&
-            gestureBridge.IsCameraReady &&
-            (currentScreen == AttractScreen || currentScreen == ColorReleaseScreen ||
-             (IsPerformerStage(currentScreen, out _, out int stage) && (stage == 0 || stage == 3)));
-        Texture texture = applicable ? gestureBridge.CameraPreviewTexture : null;
-        VisualElement documentRoot = navigationDocument == null ? null : navigationDocument.rootVisualElement;
-        if (!applicable || texture == null || documentRoot == null)
-        {
-            if (cameraPreviewFrame != null)
-                cameraPreviewFrame.style.display = DisplayStyle.None;
-            if (cameraPreviewImage != null)
-                cameraPreviewImage.image = null;
-            SetCameraPreviewStatus(!GestureCameraConsentGate.ConsentGranted ? "hidden: consent not granted" :
-                gestureBridge == null ? "hidden: gesture bridge unavailable" :
-                !gestureBridge.IsCameraReady ? "hidden: camera not prepared" : !applicable ? "hidden: screen does not use gestures" :
-                texture == null ? "hidden: waiting for the running camera texture" : "hidden: no active UIDocument");
-            return;
-        }
 
-        if (cameraPreviewFrame == null)
-        {
-            cameraPreviewFrame = new VisualElement { name = "gestureCameraPreviewFrame", pickingMode = PickingMode.Ignore };
-            cameraPreviewFrame.style.position = Position.Absolute;
-            cameraPreviewFrame.style.right = 22f;
-            cameraPreviewFrame.style.bottom = 22f;
-            cameraPreviewFrame.style.paddingLeft = 3f;
-            cameraPreviewFrame.style.paddingRight = 3f;
-            cameraPreviewFrame.style.paddingTop = 3f;
-            cameraPreviewFrame.style.paddingBottom = 3f;
-            cameraPreviewFrame.style.backgroundColor = new Color(0.035f, 0.045f, 0.055f, 0.94f);
-            cameraPreviewFrame.style.borderTopWidth = 1f;
-            cameraPreviewFrame.style.borderRightWidth = 1f;
-            cameraPreviewFrame.style.borderBottomWidth = 1f;
-            cameraPreviewFrame.style.borderLeftWidth = 1f;
-            cameraPreviewFrame.style.borderTopColor = new Color(0.78f, 0.68f, 0.48f, 0.82f);
-            cameraPreviewFrame.style.borderRightColor = cameraPreviewFrame.style.borderTopColor;
-            cameraPreviewFrame.style.borderBottomColor = cameraPreviewFrame.style.borderTopColor;
-            cameraPreviewFrame.style.borderLeftColor = cameraPreviewFrame.style.borderTopColor;
-            cameraPreviewFrame.style.borderTopLeftRadius = 10f;
-            cameraPreviewFrame.style.borderTopRightRadius = 10f;
-            cameraPreviewFrame.style.borderBottomLeftRadius = 10f;
-            cameraPreviewFrame.style.borderBottomRightRadius = 10f;
-            cameraPreviewFrame.style.overflow = Overflow.Hidden;
-            cameraPreviewImage = new Image { name = "gestureCameraPreviewImage", scaleMode = ScaleMode.ScaleToFit, pickingMode = PickingMode.Ignore };
-            cameraPreviewImage.style.position = Position.Absolute;
-            cameraPreviewImage.style.left = 4f;
-            cameraPreviewImage.style.right = 4f;
-            cameraPreviewImage.style.top = 4f;
-            cameraPreviewImage.style.bottom = 4f;
-            cameraPreviewFrame.Add(cameraPreviewImage);
-            documentRoot.Add(cameraPreviewFrame);
-        }
-
-        if (cameraPreviewFrame.parent != documentRoot)
-        {
-            cameraPreviewFrame.RemoveFromHierarchy();
-            documentRoot.Add(cameraPreviewFrame);
-            cameraPreviewDocumentRoot = null;
-        }
-        if (cameraPreviewDocumentRoot != documentRoot)
-        {
-            cameraPreviewDocumentRoot = documentRoot;
-            Debug.Log("Camera preview attached to " + navigationDocument.name + " for " + currentScreen + ".", this);
-        }
-
-        float rootWidth = documentRoot.resolvedStyle.width;
-        float rootHeight = documentRoot.resolvedStyle.height;
-        float previewWidth = Mathf.Clamp(rootWidth * 0.19f, 150f, 230f);
-        float aspect = texture.height > 0 ? (float)texture.width / texture.height : 16f / 9f;
-        if (aspect < 0.5f || aspect > 3f)
-            aspect = 16f / 9f;
-        float previewHeight = previewWidth / aspect;
-        float maxHeight = Mathf.Max(100f, rootHeight * 0.24f);
-        if (previewHeight > maxHeight)
-        {
-            previewHeight = maxHeight;
-            previewWidth = previewHeight * aspect;
-        }
-
-        cameraPreviewFrame.style.width = previewWidth;
-        cameraPreviewFrame.style.height = previewHeight;
-        cameraPreviewFrame.style.display = overlays.Count == 0 ? DisplayStyle.Flex : DisplayStyle.None;
-        if (cameraPreviewImage.image != texture)
-        {
-            cameraPreviewImage.image = texture;
-            Debug.Log("Camera preview using live " + texture.GetType().Name + " " + texture.width + "x" + texture.height + ".", this);
-        }
-        SetCameraPreviewStatus(overlays.Count == 0 ? "visible: " + currentScreen : "hidden: assistant overlay");
-        cameraPreviewImage.MarkDirtyRepaint();
-    }
-
-    private void SetCameraPreviewStatus(string status)
-    {
-        if (cameraPreviewStatus == status)
-            return;
-        cameraPreviewStatus = status;
-        Debug.Log("Camera preview " + status + ".", this);
-    }
 
     private void TryConnectGestureBridge()
     {
@@ -470,7 +277,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 break;
             case SemanticGesture.Fist:
                 if (!transitionInProgress && currentScreen == ColorReleaseScreen && colorReleaseSelectionReady &&
-                    overlays.Count == 0 && gestureTarget >= 0 &&
+                    gestureTarget >= 0 &&
                     (gesturePointing || (gestureTargetLostSince >= 0f &&
                         Time.unscaledTime - gestureTargetLostSince < gestureTargetReleaseSeconds)))
                 {
@@ -489,6 +296,10 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void OnPointingChanged(bool isPointing, Vector2 normalizedPosition)
     {
+        if (livingGlass != null && livingGlass.OverlayVisible)
+            return;
+        if (livingGlass != null && livingPointerOwnsTarget)
+            return;
         gestureCursor?.SetPointing(isPointing, normalizedPosition);
         if (!isPointing)
         {
@@ -505,8 +316,10 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void UpdatePointedPerformer()
     {
+        if (livingGlass != null && livingGlass.OverlayVisible)
+            return;
         if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady ||
-            overlays.Count > 0 || performerTargets == null)
+            performerTargets == null)
             return;
 
         if (gestureCursor == null || !gestureCursor.TryPickAtCurrentPosition(out VisualElement picked))
@@ -542,6 +355,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         {
             gestureTargetCandidate = candidate;
             gestureTargetCandidateSince = Time.unscaledTime;
+            if (livingGlass != null) livingGlass.AcquisitionChanged(candidate);
         }
 
         if (Time.unscaledTime - gestureTargetCandidateSince >= gestureTargetStabilitySeconds)
@@ -562,66 +376,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         gestureTargetLostSince = -1f;
     }
 
-    private void BindHandTrackingStatus(VisualElement root)
-    {
-        if (!GestureCameraConsentGate.ConsentGranted)
-            return;
 
-        var status = new Label { name = "hand-tracking-status", pickingMode = PickingMode.Ignore };
-        status.style.position = Position.Absolute;
-        status.style.left = 24;
-        status.style.top = 16;
-        status.style.fontSize = 18;
-        status.style.paddingLeft = 10;
-        status.style.paddingRight = 10;
-        status.style.paddingTop = 5;
-        status.style.paddingBottom = 5;
-        status.style.backgroundColor = new Color(0.04f, 0.08f, 0.1f, 0.9f);
-        root.Add(status);
-        handTrackingStatus = status;
-        screenUnbind.Add(() =>
-        {
-            status.RemoveFromHierarchy();
-            handTrackingStatus = null;
-        });
-        UpdateHandTrackingStatus();
-    }
-
-    private void UpdateHandTrackingStatus()
-    {
-        if (handTrackingStatus == null)
-            return;
-
-        bool english = language == AppLanguage.English;
-        int count = gestureBridge != null ? gestureBridge.TrackedHandCount : 0;
-        string text;
-        if (gestureBridge == null)
-            text = english ? "Hand tracker unavailable" : "手部追蹤無法使用";
-        else if (!gestureBridge.IsCameraReady)
-            text = english ? "Waiting for camera" : "等待相機";
-        else if (!gestureBridge.HasReceivedFrames)
-            text = english ? "Waiting for hand tracking" : "等待手部追蹤";
-        else if (count == 0)
-            text = english ? "No hand detected · Show your hand to the camera" : "未偵測到手部 · 請將手伸到相機前";
-        else
-        {
-            text = english ? (count == 1 ? "1 hand detected" : "2 hands detected") : $"已偵測到 {count} 隻手";
-            if (currentScreen == AttractScreen)
-                text += english ? " · Wave side to side for colour · Clap for sound" : " · 左右揮手喚醒色彩 · 拍手播放聲音";
-            else if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady)
-                text += english ? " · Point, then make a fist · Clap for sound" : " · 指向後握拳確認 · 拍手播放聲音";
-            else if (IsPerformerStage(currentScreen, out _, out int stage) && stage == 0)
-                text += english ? " · Show both open palms to play the video" : " · 張開雙手並朝向相機以播放影片";
-            else if (IsPerformerStage(currentScreen, out _, out stage) && stage == 2)
-                text += english ? " · Hold one open palm for 2 seconds to go back" : " · 張開一隻手掌並保持 2 秒即可返回";
-        }
-
-        if (handTrackingStatus.text != text)
-        {
-            handTrackingStatus.text = text;
-            handTrackingStatus.style.color = count > 0 ? new Color(0.45f, 1f, 0.83f) : Color.white;
-        }
-    }
 
     private void OnTrackingChanged(bool isTracking)
     {
@@ -635,6 +390,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void HandleInteractionCommand(InteractionCommand command)
     {
+        if (livingGlass != null && livingGlass.OverlayVisible)
+        {
+            if (command == InteractionCommand.BackRequested) LivingGlassCloseOverlay();
+            return;
+        }
         if (command == InteractionCommand.BackRequested)
         {
             if (currentScreen != HomeScreen)
@@ -678,14 +438,14 @@ public sealed class AwakeningApplicationController : MonoBehaviour
                 colorReleaseRoutine = null;
                 awakeningSequenceCompletedThisSession = true;
                 colorReleaseSelectionReady = true;
-                PrepareColorReleaseSelection();
+                LivingGlassRender();
                 break;
 
             case InteractionCommand.ConfirmPerformer:
                 if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady && targetedPerformer >= 0)
                 {
                     Debug.Log("Performer confirmed: " + Performers[targetedPerformer] + ".", this);
-                    SelectPerformer(targetedPerformer, false);
+                    SelectPerformer(targetedPerformer);
                 }
                 break;
 
@@ -732,6 +492,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         if (performerTargets != null && targetedPerformer >= 0 && targetedPerformer < performerTargets.Length && performerTargets[targetedPerformer] != null)
             performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
         targetedPerformer = index;
+        if (livingGlass != null)
+            livingGlass.TargetChanged(index);
         if (index >= 0 && performerTargets != null && index < performerTargets.Length && performerTargets[index] != null)
             performerTargets[index].AddToClassList("ac-performer-targeted");
         if (index >= 0)
@@ -740,6 +502,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private void ClearTargetedPerformer()
     {
+        livingPointerOwnsTarget = false;
+        if (livingGlass != null) livingGlass.TargetChanged(-1);
         gestureCursor?.ClearPosition();
         if (performerTargets != null && targetedPerformer >= 0 && targetedPerformer < performerTargets.Length && performerTargets[targetedPerformer] != null)
             performerTargets[targetedPerformer].RemoveFromClassList("ac-performer-targeted");
@@ -751,22 +515,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         gesturePointing = false;
     }
 
-    private void OnLanguageChanged(AppLanguage selectedLanguage)
-    {
-        if (language == selectedLanguage)
-            return;
-        language = selectedLanguage;
-        UpdateNavigationHistoryLanguage(selectedLanguage);
-
-        if (overlays.Count > 0)
-        {
-            while (overlays.Count > 0)
-                CloseTopOverlay();
-        }
-
-        if (currentScreen != HomeScreen)
-            Navigate(currentScreen, language, false, true);
-    }
 
     private void UpdateNavigationHistoryLanguage(AppLanguage selectedLanguage)
     {
@@ -782,27 +530,9 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
     }
 
-    private void OnConsentChanged(bool accepted)
-    {
-        consentAccepted = accepted;
-        if (!accepted)
-            GestureCameraConsentGate.SetConsent(false);
-    }
 
-    private void OnPrivacyRequested()
-    {
-        Navigate(PrivacyScreen, language, true);
-    }
 
-    private void OnSettingsRequested()
-    {
-        Navigate(SettingsScreen, language, true);
-    }
 
-    private void OnReviewConsentRequested()
-    {
-        Navigate(PrivacyScreen, language, true);
-    }
 
     public bool Navigate(string screenId, AppLanguage targetLanguage, bool recordHistory, bool preserveHistory = false)
     {
@@ -815,7 +545,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             return false;
         bool leavingLivingPortrait = (currentScreen != screenId || targetLanguage != language) &&
             IsPerformerStage(currentScreen, out _, out int currentStage) && currentStage == 2;
-        if (hasAwakenedThisSession && (screenId == HomeScreen || screenId == AttractScreen || screenId == ColorReleaseScreen || ArrayIndexOf(TutorialScreens, screenId) >= 0))
+        if (hasAwakenedThisSession && (screenId == HomeScreen || screenId == AttractScreen || screenId == ColorReleaseScreen || Array.IndexOf(TutorialScreens, screenId) >= 0))
         {
             screenId = ColorReleaseScreen;
             recordHistory = false;
@@ -827,13 +557,12 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             Debug.LogWarning("The Attract experience cannot start until consent is accepted.", this);
             return false;
         }
-        VisualTreeAsset asset;
-        if (screenCatalog == null || !screenCatalog.TryGet(screenId, targetLanguage, out asset))
+        if (!LivingGlassRoutes.Supports(screenId))
         {
             Debug.LogError("AwakeningApplicationController: No " + targetLanguage + " asset is registered for logical screen '" + screenId + "'.", this);
             return false;
         }
-        if (navigationDocument == null && screenDocumentManager == null)
+        if (navigationDocument == null)
             return false;
 
         transitionInProgress = true;
@@ -844,9 +573,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             colorReleaseRoutine = null;
         }
         ClearTargetedPerformer();
-        colorReleaseRoot = null;
-        while (overlays.Count > 0)
-            CloseTopOverlay();
         if (assistantSession != null || assistantWebRequest != null || assistantRequestRoutine != null)
             CancelAssistantRequest();
         if (recordHistory && currentScreen != HomeScreen)
@@ -854,15 +580,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         else if (!recordHistory && !preserveHistory)
             backStack.Clear();
 
-        ClearBindings(screenUnbind);
-        if (screenDocumentManager != null)
-            navigationDocument = screenDocumentManager.Activate(screenId, asset);
-        else
-        {
-            navigationDocument.enabled = false;
-            navigationDocument.visualTreeAsset = asset;
-            navigationDocument.enabled = true;
-        }
         if (leavingLivingPortrait)
         {
             StopLivingPortraitVideoPlayer(false, true);
@@ -877,9 +594,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             transitionInProgress = false;
             return false;
         }
-        ApplyInteractionStyles();
         currentScreen = screenId;
-        activeBindingScreen = screenId;
         language = targetLanguage;
         bool cameraAllowed = consentAccepted && (screenId == AttractScreen || screenId == ColorReleaseScreen || IsPerformerStage(screenId, out _, out _) || (hasAwakenedThisSession && (screenId == "CLOSING---CELEBRATION" || screenId == "SOUVENIR---QR-DELIVERY")));
         GestureCameraConsentGate.SetConsent(cameraAllowed);
@@ -888,10 +603,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         GestureCameraConsentGate.SetPreviewVisible(false);
         if (!cameraAllowed)
             gestureCursor?.ClearPosition();
-        if (homeController != null)
-            homeController.SetHomeVisible(false);
-        BindCurrentScreen();
-        UpdateCameraPreview();
+        LivingGlassRender();
+        LivingGlassUpdateStatus();
         StartCoroutine(ReleaseTransitionLockNextFrame());
         return true;
     }
@@ -905,95 +618,24 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     public void ShowHome(bool recordHistory)
     {
-        if (hasAwakenedThisSession)
-        {
-            if (currentScreen != ColorReleaseScreen)
-                Navigate(ColorReleaseScreen, language, false);
-            return;
-        }
-        if (transitionInProgress)
-            return;
-        transitionInProgress = true;
-        if (colorReleaseRoutine != null)
-        {
-            StopCoroutine(colorReleaseRoutine);
-            colorReleaseRoutine = null;
-        }
-        ClearTargetedPerformer();
-        GestureCameraConsentGate.SetConsent(false);
-        StopEnvironmentalMusic();
-        if (recordHistory && currentScreen != HomeScreen)
-            backStack.Push(new RouteState { screen = currentScreen, language = language });
-        else if (!recordHistory)
-            backStack.Clear();
-        ClearBindings(screenUnbind);
-        while (overlays.Count > 0)
-            CloseTopOverlay();
-        if (screenDocumentManager != null)
-            screenDocumentManager.DeactivateMain();
-        if (navigationDocument != null)
-            navigationDocument.enabled = false;
-        navigationDocument = null;
-        currentScreen = HomeScreen;
-        activeBindingScreen = HomeScreen;
-        if (homeController != null)
-            homeController.SetHomeVisible(true);
-        StartCoroutine(ReleaseTransitionLockNextFrame());
+        LivingGlassHome(false);
     }
 
-    private void ReturnHomeFromDone()
-    {
-        if (transitionInProgress)
-            return;
 
-        transitionInProgress = true;
-        if (colorReleaseRoutine != null)
-        {
-            StopCoroutine(colorReleaseRoutine);
-            colorReleaseRoutine = null;
-        }
-        ClearTargetedPerformer();
-        backStack.Clear();
-        GestureCameraConsentGate.SetConsent(false);
-        gestureCursor?.ClearPosition();
-        StopEnvironmentalMusic();
-        ClearBindings(screenUnbind);
-        while (overlays.Count > 0)
-            CloseTopOverlay();
-        if (screenDocumentManager != null)
-            screenDocumentManager.DeactivateMain();
-        if (navigationDocument != null)
-            navigationDocument.enabled = false;
-        navigationDocument = null;
-        currentScreen = HomeScreen;
-        activeBindingScreen = HomeScreen;
-        if (homeController != null)
-            homeController.SetHomeVisible(true);
-        StartCoroutine(ReleaseTransitionLockNextFrame());
-    }
-
-    private void ReturnHomeFromSettings()
-    {
-        if (transitionInProgress)
-            return;
-
-        selectedPerformer = -1;
-        ReturnHomeFromDone();
-    }
 
     public void Back()
     {
+        if (livingGlass != null && livingGlass.OverlayVisible)
+        {
+            LivingGlassCloseOverlay();
+            return;
+        }
         bool leavingVideo = IsPerformerStage(currentScreen, out _, out int stage) && stage == 2;
         if (!leavingVideo && (transitionInProgress || performerSequenceActive || performerFlowTransitionLock))
             return;
 
         if (!awakeningSequenceCompletedThisSession && currentScreen != SettingsScreen && currentScreen != AttractScreen)
             return;
-        if (overlays.Count > 0)
-        {
-            CloseTopOverlay();
-            return;
-        }
         if (hasAwakenedThisSession)
         {
             if (currentScreen == ColorReleaseScreen)
@@ -1031,269 +673,6 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             Navigate(previous.screen, previous.language, false, true);
     }
 
-    private void BindCurrentScreen()
-    {
-        VisualElement root = GetUxmlRoot(navigationDocument.rootVisualElement);
-        if (root == null)
-            return;
-
-        activeBindingScreen = currentScreen;
-        gestureCursor?.Attach(root);
-        BindHandTrackingStatus(root);
-        root.AddToClassList("ac-screen-runtime");
-        root.AddToClassList("ac-interactive");
-        EventCallback<FocusInEvent> rootFocusIn = evt => root.AddToClassList("ac-keyboard-focus");
-        EventCallback<FocusOutEvent> rootFocusOut = evt => root.RemoveFromClassList("ac-keyboard-focus");
-        root.RegisterCallback(rootFocusIn);
-        root.RegisterCallback(rootFocusOut);
-        screenUnbind.Add(() => root.UnregisterCallback(rootFocusIn));
-        screenUnbind.Add(() => root.UnregisterCallback(rootFocusOut));
-        root.focusable = false;
-        root.tabIndex = -1;
-        RegisterKeyHandling(root, screenUnbind);
-        if (currentScreen == PrivacyScreen)
-        {
-            BindPath(root, "1/26", "VisualElement", language == AppLanguage.English ? "51:65" : "53:63", () => ContinueFromPrivacy(), screenUnbind);
-            BindPath(root, "1/27", "Label", language == AppLanguage.English ? "51:66" : "53:64", () => ContinueFromPrivacy(), screenUnbind, false);
-            BindPath(root, "1/28", "VisualElement", language == AppLanguage.English ? "51:67" : "53:65", () =>
-            {
-                if (homeController != null)
-                    homeController.SetConsentFromApplication(false);
-                else
-                    consentAccepted = false;
-                ShowHome(false);
-            }, screenUnbind);
-            BindPath(root, "1/29", "Label", language == AppLanguage.English ? "51:68" : "53:66", () =>
-            {
-                if (homeController != null)
-                    homeController.SetConsentFromApplication(false);
-                else
-                    consentAccepted = false;
-                ShowHome(false);
-            }, screenUnbind, false);
-            BindPath(root, "1/30", "VisualElement", language == AppLanguage.English ? "51:69" : "53:67", () => ShowHome(false), screenUnbind);
-            BindPath(root, "1/31", "Label", language == AppLanguage.English ? "51:70" : "53:68", () => ShowHome(false), screenUnbind, false);
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        int tutorialIndex = ArrayIndexOf(TutorialScreens, currentScreen);
-        if (tutorialIndex >= 0)
-        {
-            if (tutorialIndex == TutorialScreens.Length - 1)
-            {
-                BindPath(root, "1/29", "VisualElement", language == AppLanguage.English ? "24:602" : "105:700", () => Navigate(AttractScreen, language, true), screenUnbind);
-                BindPath(root, "1/29/1", "Label", language == AppLanguage.English ? "24:603" : "105:701", () => Navigate(AttractScreen, language, true), screenUnbind, false);
-                BindPath(root, "1/30", "Label", language == AppLanguage.English ? "24:604" : "105:702", () => Navigate(AttractScreen, language, true), screenUnbind);
-                RegisterKeyOnRoot(root, () => Navigate(AttractScreen, language, true), screenUnbind);
-            }
-            else
-            {
-                if (tutorialIndex == 0)
-                {
-                    BindPath(root, "1/29/5", "VisualElement", language == AppLanguage.English ? "24:315" : "105:341", () => Navigate(TutorialScreens[1], language, true), screenUnbind);
-                    BindPath(root, "1/29/5/1", "Label", language == AppLanguage.English ? "24:316" : "105:342", () => Navigate(TutorialScreens[1], language, true), screenUnbind, false);
-                }
-                else
-                {
-                    string[] englishGuideIds = { "24:377", "24:425", "24:475", "24:521", "24:567" };
-                    string[] chineseGuideIds = { "105:403", "105:481", "105:542", "105:597", "105:653" };
-                    string[] guidePaths = { "1/37", "1/41", "1/43", "1/39", "1/39" };
-                    int guideIndex = tutorialIndex - 1;
-                    BindPath(root, guidePaths[guideIndex], "Label", language == AppLanguage.English ? englishGuideIds[guideIndex] : chineseGuideIds[guideIndex], () => Navigate(TutorialScreens[tutorialIndex + 1], language, true), screenUnbind);
-                    int nextTutorialIndex = tutorialIndex + 1;
-                    RegisterPageClick(root, () => Navigate(TutorialScreens[nextTutorialIndex], language, true), screenUnbind);
-                }
-                RegisterKeyOnRoot(root, () => Navigate(TutorialScreens[tutorialIndex + 1], language, true), screenUnbind);
-            }
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        if (currentScreen == "TUTORIAL---RETURN---DISMISS")
-        {
-            BindPath(root, "1/28/3", "Label", language == AppLanguage.English ? "24:644" : "105:742", () => Navigate("TUTORIAL---INTRODUCTION", language, false), screenUnbind);
-            RegisterKeyOnRoot(root, () => Navigate("TUTORIAL---INTRODUCTION", language, false), screenUnbind);
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        if (currentScreen == AttractScreen)
-        {
-            Action advance = () => HandleInteractionCommand(InteractionCommand.AdvanceStage);
-            RegisterClick(root, advance, screenUnbind);
-            RegisterKeyOnRoot(root, advance, screenUnbind);
-            FocusFirstFocusable(root);
-            return;
-        }
-        if (currentScreen == ColorReleaseScreen)
-        {
-            colorReleaseRoot = root;
-            Action clap = () =>
-            {
-                if (!colorReleaseSelectionReady)
-                    HandleInteractionCommand(InteractionCommand.ClapCompleted);
-            };
-            RegisterClick(root, clap, screenUnbind);
-            RegisterKeyOnRoot(root, clap, screenUnbind);
-            if (colorReleaseSelectionReady)
-                PrepareColorReleaseSelection();
-            else if (hasAwakenedThisSession && colorReleaseRoutine == null)
-                colorReleaseRoutine = StartCoroutine(CompleteColorReleaseAfterPresentation());
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        if (currentScreen == AssistantChooserScreen)
-        {
-            BindAssistantPerformerChoices(root, screenUnbind);
-            BindPath(root, "1/23", "Label", language == AppLanguage.English ? "124:5184" : "124:5212", () => Navigate(SettingsScreen, language, true), screenUnbind);
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        if (currentScreen == SettingsScreen)
-        {
-            int localeNodeOffset = language == AppLanguage.English ? 0 : 54;
-            Action switchLanguage = () =>
-            {
-                if (homeController != null)
-                    homeController.SetLanguageFromApplication(language == AppLanguage.English ? AppLanguage.Chinese : AppLanguage.English);
-            };
-            BindPath(root, "1/7/2", "VisualElement", "124:" + (5227 + localeNodeOffset), switchLanguage, screenUnbind);
-            BindPath(root, "1/7/4", "Label", "124:" + (5229 + localeNodeOffset), switchLanguage, screenUnbind, false);
-            BindPath(root, "1/7/6", "VisualElement", "124:" + (5231 + localeNodeOffset), switchLanguage, screenUnbind, false);
-            BindPath(root, "1/7/7", "Label", "124:" + (5232 + localeNodeOffset), switchLanguage, screenUnbind, false);
-
-            // These imported controls have no verified effect or service in the
-            // current prototype/project, so expose them as unavailable, not active.
-            DisableSettingsControls(root, localeNodeOffset);
-
-            string privacyId = "124:" + (5260 + localeNodeOffset);
-            string privacySurfaceId = "124:" + (5257 + localeNodeOffset);
-            string assistantId = "124:" + (5266 + localeNodeOffset);
-            string assistantSurfaceId = "124:" + (5265 + localeNodeOffset);
-            string backId = language == AppLanguage.English ? "124:5269" : "124:5323";
-            BindPath(root, "1/7/32", "VisualElement", privacySurfaceId, () => Navigate(PrivacyScreen, language, true), screenUnbind);
-            BindPath(root, "1/7/35", "Label", privacyId, () => Navigate(PrivacyScreen, language, true), screenUnbind, false);
-            BindPath(root, "1/8/4", "VisualElement", assistantSurfaceId, () => Navigate(AssistantChooserScreen, language, true), screenUnbind);
-            BindPath(root, "1/8/5", "Label", assistantId, () => Navigate(AssistantChooserScreen, language, true), screenUnbind, false);
-            BindPath(root, "1/9", "Label", backId, ReturnHomeFromSettings, screenUnbind);
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        if (IsPerformerStage(currentScreen, out int performer, out int stage))
-        {
-            selectedPerformer = performer;
-            int rootIndex = -1;
-            Action advanceStage = () => HandleInteractionCommand(InteractionCommand.AdvanceStage);
-            if (stage != 1 && stage != 2)
-            {
-                string actionPath;
-                int nodeOffset;
-                switch (stage)
-                {
-                    case 0: actionPath = "1/14"; nodeOffset = 14; break; // Gesture cue
-                    case 3: actionPath = "1/11"; nodeOffset = 11; break; // Interaction cue
-                    default: actionPath = "1/6/11"; nodeOffset = 17; break; // Continue
-                }
-                RuntimeScreenCatalog.Entry stageEntry;
-                string nodeId = null;
-                if (screenCatalog != null && screenCatalog.TryGetEntry(currentScreen, language, out stageEntry))
-                {
-                    string[] rootParts = stageEntry.figmaRootNodeId.Split(':');
-                    if (rootParts.Length == 2 && int.TryParse(rootParts[1], out rootIndex))
-                        nodeId = rootParts[0] + ":" + (rootIndex + nodeOffset);
-                }
-                if (nodeId == null)
-                {
-                    Debug.LogError("Could not derive the verified stage action node for " + currentScreen + ".", this);
-                    return;
-                }
-                BindPath(root, actionPath, "Label", nodeId, advanceStage, screenUnbind);
-            }
-            if (stage == 0)
-            {
-                gestureBridge?.ResetVideoGesture();
-                var playButton = new Button(advanceStage)
-                {
-                    name = "play-performer-video",
-                    text = language == AppLanguage.English ? "Play video" : "播放影片"
-                };
-                playButton.style.position = Position.Absolute;
-                playButton.style.top = 16;
-                playButton.style.right = 24;
-                playButton.style.minHeight = 40;
-                playButton.style.paddingLeft = 16;
-                playButton.style.paddingRight = 16;
-                playButton.style.fontSize = 18;
-                playButton.style.color = new Color(0.04f, 0.08f, 0.1f);
-                playButton.style.backgroundColor = new Color(0.45f, 1f, 0.83f);
-                root.Add(playButton);
-                screenUnbind.Add(() => playButton.RemoveFromHierarchy());
-            }
-            if (stage == 0 || stage == 3)
-                RegisterPageClick(root, advanceStage, screenUnbind, true);
-            if (stage == Stages.Length - 1)
-            {
-                string continueSurfaceId = "124:" + (rootIndex + 16);
-                BindPath(root, "1/6/10", "VisualElement", continueSurfaceId, advanceStage, screenUnbind);
-                VisualElement continueSurface;
-                VisualElement continueLabel;
-                if (TryResolvePath(root, "1/6/10", out continueSurface) &&
-                    TryResolvePath(root, "1/6/11", out continueLabel))
-                    RegisterButtonHoverProxy(continueLabel, continueSurface, screenUnbind);
-
-                ConfigurePerformerAgentPage(root, performer, rootIndex, screenUnbind);
-            }
-            if (stage == 0 || stage == 3 || stage == Stages.Length - 1)
-                RegisterKeyOnRoot(root, advanceStage, screenUnbind);
-
-            if (stage == 1)
-            {
-                performerSequenceActive = true;
-                performerFlowTransitionLock = true;
-                root.style.opacity = 0f;
-                VisualElement activationArtwork = root.Q<VisualElement>("activationArtwork");
-                if (activationArtwork != null)
-                    activationArtwork.style.opacity = 0.68f;
-                performerStageRoutine = StartCoroutine(PlayActivationSequence(root, performer));
-            }
-            else if (stage == 2)
-            {
-                performerSequenceActive = true;
-                performerFlowTransitionLock = true;
-                StartLivingPortrait(root, performer);
-            }
-            else if (stage == 3)
-            {
-                performerSequenceActive = false;
-                performerFlowTransitionLock = true;
-                root.style.opacity = 0f;
-                performerStageRoutine = StartCoroutine(FadeInRelease(root));
-            }
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        if (currentScreen == "CLOSING---CELEBRATION")
-        {
-            BindPath(root, "1/7/3", "VisualElement", language == AppLanguage.English ? "124:5337" : "124:5351", () => Navigate("SOUVENIR---QR-DELIVERY", language, true), screenUnbind);
-            BindPath(root, "1/7/4", "Label", language == AppLanguage.English ? "124:5338" : "124:5352", () => Navigate("SOUVENIR---QR-DELIVERY", language, true), screenUnbind, false);
-            BindPath(root, "1/7/5", "VisualElement", language == AppLanguage.English ? "124:5339" : "124:5353", () => Navigate(ColorReleaseScreen, language, false), screenUnbind);
-            BindPath(root, "1/7/6", "Label", language == AppLanguage.English ? "124:5340" : "124:5354", () => Navigate(ColorReleaseScreen, language, false), screenUnbind, false);
-            FocusFirstFocusable(root);
-            return;
-        }
-
-        if (currentScreen == "SOUVENIR---QR-DELIVERY")
-        {
-            BindPath(root, "1/7/7", "VisualElement", language == AppLanguage.English ? "124:5431" : "124:5510", ReturnHomeFromDone, screenUnbind);
-            BindPath(root, "1/7/8", "Label", language == AppLanguage.English ? "124:5432" : "124:5511", ReturnHomeFromDone, screenUnbind, false);
-        }
-        FocusFirstFocusable(root);
-    }
 
     private void ContinueFromPrivacy()
     {
@@ -1384,161 +763,15 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             environmentalMusicSource.Stop();
     }
 
-    private void BindAssistantPerformerChoices(VisualElement root, List<Action> cleanup)
-    {
-        int firstSurfaceNode = language == AppLanguage.English ? 5166 : 5194;
-        for (int i = 0; i < Performers.Length; i++)
-        {
-            int performerIndex = i;
-            string surfacePath = "1/" + (5 + (i * 3));
-            string labelPath = "1/" + (6 + (i * 3));
-            string cuePath = "1/" + (7 + (i * 3));
-            int surfaceNode = firstSurfaceNode + (i * 3);
-            int labelNode = surfaceNode + 1;
-            Action activate = () => SelectPerformer(performerIndex, true);
-            BindPath(root, surfacePath, "VisualElement", "124:" + surfaceNode, activate, cleanup);
-            BindPath(root, labelPath, "Label", "124:" + labelNode, activate, cleanup, false);
-            BindPath(root, cuePath, "Label", "124:" + (labelNode + 1), activate, cleanup, false);
-        }
-    }
 
-    private void PrepareColorReleaseSelection()
-    {
-        if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady || colorReleaseRoot == null)
-            return;
 
-        SetLabelTextAtPath(colorReleaseRoot, "1/24", language == AppLanguage.English
-            ? "Choose a performer to continue."
-            : "選擇一位表演者以繼續。");
-        SetLabelTextAtPath(colorReleaseRoot, "1/25", language == AppLanguage.English
-            ? "POINT AT AN IMAGE  ·  MAKE A FIST TO CONFIRM"
-            : "指向圖像  ·  握拳確認");
-        SetLabelTextAtPath(colorReleaseRoot, "1/28/1", language == AppLanguage.English
-            ? "PERFORMER SELECTION"
-            : "選擇表演者");
-        SetLabelTextAtPath(colorReleaseRoot, "1/28/2", language == AppLanguage.English
-            ? "MOUSE / TOUCH  ·  CLICK A PRESENCE"
-            : "滑鼠／觸控：點擊一位存在");
-        SetLabelTextAtPath(colorReleaseRoot, "1/28/3", language == AppLanguage.English
-            ? "KEYBOARD / CONTROLLER  ·  1–6 TO SELECT"
-            : "鍵盤／控制器：1–6 選擇");
-        SetLabelTextAtPath(colorReleaseRoot, "1/28/4", language == AppLanguage.English
-            ? "Point, then make a fist. You can also click or press 1–6."
-            : "指向後握拳確認，也可點擊或按 1–6 選擇。");
 
-        BindColorReleasePerformerChoices(colorReleaseRoot, screenUnbind);
-    }
 
-    private void BindColorReleasePerformerChoices(VisualElement root, List<Action> cleanup)
-    {
-        performerTargets = new VisualElement[Performers.Length];
-        RuntimeScreenCatalog.Entry entry;
-        if (screenCatalog == null || !screenCatalog.TryGetEntry(ColorReleaseScreen, language, out entry))
-        {
-            Debug.LogError("Color Release is not registered for performer selection in " + language + ".", this);
-            return;
-        }
 
-        string[] rootParts = entry.figmaRootNodeId.Split(':');
-        int rootNodeIndex;
-        if (rootParts.Length != 2 || !int.TryParse(rootParts[1], out rootNodeIndex))
-        {
-            Debug.LogError("Color Release has an invalid Figma root node ID: " + entry.figmaRootNodeId + ".", this);
-            return;
-        }
 
-        for (int i = 0; i < Performers.Length; i++)
-        {
-            int performerIndex = i;
-            string surfacePath = "1/" + (5 + (i * 3));
-            string labelPath = "1/" + (6 + (i * 3));
-            string cuePath = "1/" + (7 + (i * 3));
-            int surfaceNode = rootNodeIndex + 5 + (i * 3);
-            int labelNode = surfaceNode + 1;
-            Action activate = () =>
-            {
-                if (!colorReleaseSelectionReady || currentScreen != ColorReleaseScreen)
-                    return;
-                SetTargetedPerformer(performerIndex);
-                HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
-            };
-
-            BindPath(root, surfacePath, "VisualElement", rootParts[0] + ":" + surfaceNode, activate, cleanup);
-            BindPath(root, labelPath, "Label", rootParts[0] + ":" + labelNode, activate, cleanup, false);
-            BindPath(root, cuePath, "Label", rootParts[0] + ":" + (labelNode + 1), activate, cleanup, false);
-
-            VisualElement surface;
-            if (TryResolvePath(root, surfacePath, out surface))
-            {
-                performerTargets[performerIndex] = surface;
-                RegisterTargetHover(surface, performerIndex, cleanup);
-            }
-            VisualElement label;
-            if (TryResolvePath(root, labelPath, out label))
-                RegisterTargetHover(label, performerIndex, cleanup);
-            VisualElement cue;
-            if (TryResolvePath(root, cuePath, out cue))
-                RegisterTargetHover(cue, performerIndex, cleanup);
-        }
-    }
-
-    private static void SetLabelTextAtPath(VisualElement root, string path, string value)
-    {
-        VisualElement element;
-        if (TryResolvePath(root, path, out element) && element is Label label)
-            label.text = value;
-    }
-
-    private void RegisterTargetHover(VisualElement element, int index, List<Action> cleanup)
-    {
-        EventCallback<PointerEnterEvent> pointerEnter = evt => SetTargetedPerformer(index);
-        element.RegisterCallback(pointerEnter);
-        cleanup.Add(() => element.UnregisterCallback(pointerEnter));
-    }
-
-    private void RegisterButtonHoverProxy(VisualElement hitTarget, VisualElement visualTarget, List<Action> cleanup)
-    {
-        EventCallback<PointerEnterEvent> pointerEnter = _ => visualTarget.AddToClassList("ac-hover");
-        EventCallback<PointerLeaveEvent> pointerLeave = evt =>
-        {
-            if (!visualTarget.worldBound.Contains(new Vector2(evt.position.x, evt.position.y)))
-            {
-                visualTarget.RemoveFromClassList("ac-hover");
-                visualTarget.RemoveFromClassList("ac-pressed");
-            }
-        };
-        EventCallback<PointerDownEvent> pointerDown = evt =>
-        {
-            if (evt.button == 0)
-                visualTarget.AddToClassList("ac-pressed");
-        };
-        EventCallback<PointerUpEvent> pointerUp = evt =>
-        {
-            if (evt.button == 0 || evt.pressedButtons == 0)
-                visualTarget.RemoveFromClassList("ac-pressed");
-        };
-        EventCallback<PointerCancelEvent> pointerCancel = _ => visualTarget.RemoveFromClassList("ac-pressed");
-
-        hitTarget.RegisterCallback(pointerEnter);
-        hitTarget.RegisterCallback(pointerLeave);
-        hitTarget.RegisterCallback(pointerDown);
-        hitTarget.RegisterCallback(pointerUp);
-        hitTarget.RegisterCallback(pointerCancel);
-        cleanup.Add(() => hitTarget.UnregisterCallback(pointerEnter));
-        cleanup.Add(() => hitTarget.UnregisterCallback(pointerLeave));
-        cleanup.Add(() => hitTarget.UnregisterCallback(pointerDown));
-        cleanup.Add(() => hitTarget.UnregisterCallback(pointerUp));
-        cleanup.Add(() => hitTarget.UnregisterCallback(pointerCancel));
-    }
-
-    private void SelectPerformer(int index, bool openAssistant)
+    private void SelectPerformer(int index)
     {
         selectedPerformer = index;
-        if (openAssistant)
-        {
-            OpenAssistantOverlay(index);
-            return;
-        }
         Navigate(GetPerformerScreen(index, 0), language, true);
     }
 
@@ -1552,6 +785,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         {
             if (performerSequenceActive)
                 return;
+            if (livingGlass != null) livingGlass.SettleRoutePresentation();
             performerSequenceActive = true;
             performerFlowTransitionLock = true;
             transitionInProgress = true;
@@ -1573,7 +807,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     private IEnumerator FadeFocusIntoActivation(int performer)
     {
         string focusScreen = GetPerformerScreen(performer, 0);
-        VisualElement focusRoot = navigationDocument == null ? null : navigationDocument.rootVisualElement;
+        VisualElement focusRoot = LivingContent;
         yield return FadeVisualElement(focusRoot, 1f, 0f, performerTransitionFadeSeconds);
         if (currentScreen != focusScreen || selectedPerformer != performer)
         {
@@ -1661,7 +895,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     {
         if (element == null)
             yield break;
-        float safeDuration = Mathf.Max(0.05f, duration);
+        float safeDuration = livingGlass != null && livingGlass.ReducedMotion ? 0.001f : Mathf.Max(0.05f, duration);
         float elapsed = 0f;
         while (elapsed < safeDuration)
         {
@@ -1901,7 +1135,7 @@ public sealed class AwakeningApplicationController : MonoBehaviour
     {
         transitionInProgress = true;
         performerFlowTransitionLock = true;
-        VisualElement root = navigationDocument == null ? null : navigationDocument.rootVisualElement;
+        VisualElement root = LivingContent;
         yield return FadeVisualElement(root, 1f, 0f, performerTransitionFadeSeconds);
         if (!IsCurrentPerformerStage(performer, 2))
         {
@@ -1990,284 +1224,16 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private string GetPerformerScreen(int performer, int stage)
     {
-        return Performers[performer] + "---" + Stages[stage] + "---" + PerformerCodes[performer];
+        return LivingGlassRoutes.Chapter(performer, stage);
     }
 
     private bool IsPerformerStage(string screen, out int performer, out int stage)
     {
-        for (int p = 0; p < Performers.Length; p++)
-        {
-            for (int s = 0; s < Stages.Length; s++)
-            {
-                if (screen == GetPerformerScreen(p, s))
-                {
-                    performer = p;
-                    stage = s;
-                    return true;
-                }
-            }
-        }
-        performer = -1;
-        stage = -1;
-        return false;
+        return LivingGlassRoutes.TryChapter(screen, out performer, out stage);
     }
 
-    private void OpenAssistantOverlay(int performer)
-    {
-        if (performer < 0 || performer >= Performers.Length)
-        {
-            Debug.LogError("Cannot open an assistant for invalid performer index " + performer + ".", this);
-            return;
-        }
 
-        string overlayId = "Assistant-" + Performers[performer];
-        VisualTreeAsset asset;
-        if (screenCatalog == null || !screenCatalog.TryGet(overlayId, language, out asset))
-        {
-            Debug.LogError("No assistant overlay is registered for " + Performers[performer] + " / " + language + ".", this);
-            return;
-        }
 
-        VisualElement panelRoot;
-        if (screenDocumentManager != null)
-            panelRoot = screenDocumentManager.ActivateOverlay(asset);
-        else
-            panelRoot = navigationDocument.rootVisualElement;
-        if (panelRoot == null)
-            return;
-        VisualElement tree = screenDocumentManager != null ? GetUxmlRoot(panelRoot) : asset.Instantiate();
-        VisualElement baseRoot = screenDocumentManager != null
-            ? (navigationDocument == null ? null : GetUxmlRoot(navigationDocument.rootVisualElement))
-            : GetUxmlRoot(panelRoot);
-        if (baseRoot != null)
-            baseRoot.SetEnabled(false);
-        tree.AddToClassList("ac-assistant-overlay-container");
-        if (screenDocumentManager == null)
-            panelRoot.Add(tree);
-        overlays.Push(new OverlayState { tree = tree, baseRoot = baseRoot });
-        if (screenDocumentManager == null)
-            ApplyInteractionStylesTo(navigationDocument);
-        if (screenDocumentManager != null && interactionStyles != null)
-            panelRoot.styleSheets.Add(interactionStyles);
-        selectedPerformer = performer;
-        GestureCameraConsentGate.SetPreviewVisible(false);
-        List<Action> cleanup = new List<Action>();
-        overlayUnbind.Push(cleanup);
-        VisualElement importedRoot = GetUxmlRoot(tree);
-        int baseNode = language == AppLanguage.English ? 4970 + performer * 32 : 4986 + performer * 32;
-        activeBindingScreen = overlayId;
-        importedRoot.AddToClassList("ac-screen-runtime");
-        importedRoot.focusable = false;
-        importedRoot.tabIndex = -1;
-        ConfigureAssistantChat(importedRoot, performer, cleanup);
-        BindPath(importedRoot, "1/14", "VisualElement", "124:" + (baseNode + 13), CloseTopOverlay, cleanup);
-        BindPath(importedRoot, "1/15", "Label", "124:" + (baseNode + 14), CloseTopOverlay, cleanup, false);
-        EventCallback<KeyDownEvent> overlayKey = evt =>
-        {
-            if (evt.keyCode == KeyCode.Escape)
-            {
-                evt.StopPropagation();
-                CloseTopOverlay();
-            }
-        };
-        importedRoot.RegisterCallback(overlayKey);
-        cleanup.Add(() => importedRoot.UnregisterCallback(overlayKey));
-        for (int i = 0; i < importedRoot.childCount; i++)
-        {
-            VisualElement child = importedRoot[i];
-            if (child.focusable)
-            {
-                child.Focus();
-                break;
-            }
-        }
-        activeBindingScreen = currentScreen;
-        Debug.Log("Opened assistant overlay for " + Performers[performer] + ".", this);
-    }
-
-    private void ConfigureAssistantChat(VisualElement root, int performer, List<Action> cleanup)
-    {
-        assistantSession = new AssistantSession
-        {
-            id = ++assistantSessionSequence,
-            performerIndex = performer,
-            performerId = Performers[performer],
-            assistantScreenId = "Assistant-" + Performers[performer],
-            root = root
-        };
-
-        // Assistant replies need room for paragraphs, lists, and code output.
-        // Keep the existing horizontal layout while extending only this overlay.
-        root.style.height = 640;
-
-        string[] suggestionPaths = { "1/4", "1/6", "1/8" };
-        string[] suggestionLabelPaths = { "1/5", "1/7", "1/9" };
-        for (int i = 0; i < suggestionPaths.Length; i++)
-        {
-            VisualElement surface;
-            VisualElement labelElement;
-            if (TryResolvePath(root, suggestionPaths[i], out surface) &&
-                TryResolvePath(root, suggestionLabelPaths[i], out labelElement) && labelElement is Label suggestionLabel)
-            {
-                AssistantSession suggestionSession = assistantSession;
-                string suggestionPrompt = suggestionLabel.text;
-                Action askSuggestion = () => SubmitAssistantMessage(suggestionSession, suggestionPrompt);
-                RegisterClick(surface, askSuggestion, cleanup);
-                RegisterClick(suggestionLabel, askSuggestion, cleanup);
-            }
-            else
-            {
-                Debug.LogWarning("Assistant suggestion controls could not be resolved at " + suggestionPaths[i] + ".", this);
-            }
-        }
-
-        StyleSheet chatStyles = Resources.Load<StyleSheet>("AssistantChatRuntime");
-        if (chatStyles != null)
-        {
-            root.styleSheets.Add(chatStyles);
-            root.AddToClassList("ac-assistant-accent-" + Performers[performer].ToLowerInvariant().Replace("-", ""));
-        }
-        else
-        {
-            Debug.LogError("Resources/AssistantChatRuntime.uss is missing.", this);
-        }
-
-        TextField input = new TextField { name = "assistantChatInput", maxLength = 3600 };
-        input.AddToClassList("ac-assistant-chat-input");
-        root.Add(input);
-        assistantSession.input = input;
-
-        Label placeholder = new Label(language == AppLanguage.English ? "Ask a question…" : "輸入問題…");
-        placeholder.AddToClassList("ac-assistant-chat-placeholder");
-        placeholder.pickingMode = PickingMode.Ignore;
-        root.Add(placeholder);
-        assistantSession.placeholder = placeholder;
-
-        Button send = new Button { name = "assistantChatSend" };
-        send.text = language == AppLanguage.English ? "Ask" : "詢問";
-        send.AddToClassList("ac-assistant-chat-send");
-        root.Add(send);
-        assistantSession.send = send;
-
-        ScrollView conversation = new ScrollView(ScrollViewMode.Vertical) { name = "assistantConversation" };
-        conversation.AddToClassList("ac-assistant-conversation");
-        root.Add(conversation);
-        assistantSession.conversation = conversation;
-
-        Label status = new Label();
-        status.AddToClassList("ac-assistant-chat-status");
-        status.AddToClassList("ac-assistant-chat-hidden");
-        conversation.Add(status);
-        assistantSession.status = status;
-
-        AssistantSession session = assistantSession;
-        Action sendAction = () => SubmitAssistantMessage(session, session.input.value);
-        send.clicked += sendAction;
-        cleanup.Add(() => send.clicked -= sendAction);
-
-        EventCallback<KeyDownEvent> submitOnEnter = evt =>
-        {
-            if (evt.keyCode == KeyCode.Return || evt.keyCode == KeyCode.KeypadEnter)
-            {
-                evt.StopPropagation();
-                SubmitAssistantMessage(session, session.input.value);
-            }
-        };
-        input.RegisterCallback(submitOnEnter);
-        cleanup.Add(() => input.UnregisterCallback(submitOnEnter));
-
-        EventCallback<ChangeEvent<string>> updatePlaceholder = evt =>
-        {
-            if (string.IsNullOrWhiteSpace(evt.newValue))
-                placeholder.RemoveFromClassList("ac-assistant-chat-placeholder-hidden");
-            else
-                placeholder.AddToClassList("ac-assistant-chat-placeholder-hidden");
-        };
-        input.RegisterCallback(updatePlaceholder);
-        cleanup.Add(() => input.UnregisterCallback(updatePlaceholder));
-
-        EventCallback<FocusInEvent> hidePlaceholder = _ => placeholder.AddToClassList("ac-assistant-chat-placeholder-hidden");
-        EventCallback<FocusOutEvent> showPlaceholder = _ =>
-        {
-            if (string.IsNullOrWhiteSpace(input.value))
-                placeholder.RemoveFromClassList("ac-assistant-chat-placeholder-hidden");
-        };
-        input.RegisterCallback(hidePlaceholder);
-        input.RegisterCallback(showPlaceholder);
-        cleanup.Add(() => input.UnregisterCallback(hidePlaceholder));
-        cleanup.Add(() => input.UnregisterCallback(showPlaceholder));
-
-        assistantSession = session;
-        if (!TryBuildAssistantChatUrl(out _))
-            SetAssistantStatus(session, language == AppLanguage.English ? "Assistant service URL is not configured." : "尚未設定助理服務網址。", false);
-    }
-
-    private void ConfigurePerformerAgentPage(VisualElement root, int performer, int figmaRootIndex, List<Action> cleanup)
-    {
-        string screenId = GetPerformerScreen(performer, Stages.Length - 1);
-        assistantSession = new AssistantSession
-        {
-            id = ++assistantSessionSequence,
-            performerIndex = performer,
-            performerId = Performers[performer],
-            assistantScreenId = screenId,
-            root = root
-        };
-
-        StyleSheet chatStyles = Resources.Load<StyleSheet>("AssistantChatRuntime");
-        if (chatStyles != null)
-        {
-            root.styleSheets.Add(chatStyles);
-            root.AddToClassList("ac-assistant-accent-" + Performers[performer].ToLowerInvariant().Replace("-", ""));
-        }
-        else
-        {
-            Debug.LogError("Resources/AssistantChatRuntime.uss is missing.", this);
-        }
-
-        ScrollView conversation = new ScrollView(ScrollViewMode.Vertical) { name = "performerAgentConversation" };
-        conversation.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
-        conversation.verticalScrollerVisibility = ScrollerVisibility.Auto;
-        conversation.AddToClassList("ac-performer-agent-conversation");
-        root.Add(conversation);
-
-        Label status = new Label(language == AppLanguage.English
-            ? "Choose a question below to start a conversation."
-            : "請選擇下方問題開始對話。");
-        status.AddToClassList("ac-assistant-chat-status");
-        conversation.Add(status);
-
-        assistantSession.conversation = conversation;
-        assistantSession.status = status;
-        AssistantSession session = assistantSession;
-
-        int[] promptSurfaceOffsets = { 10, 12, 14 };
-        for (int i = 0; i < promptSurfaceOffsets.Length; i++)
-        {
-            string promptSurfacePath = "1/6/" + (4 + i * 2);
-            string promptLabelPath = "1/6/" + (5 + i * 2);
-            VisualElement surface;
-            VisualElement labelElement;
-            if (TryResolvePath(root, promptSurfacePath, out surface) &&
-                TryResolvePath(root, promptLabelPath, out labelElement) && labelElement is Label promptLabel)
-            {
-                int promptOffset = promptSurfaceOffsets[i];
-                string promptSurfaceId = "124:" + (figmaRootIndex + promptOffset);
-                string promptLabelId = "124:" + (figmaRootIndex + promptOffset + 1);
-                Action askPrompt = () => SubmitAssistantMessage(session, promptLabel.text);
-                BindPath(root, promptSurfacePath, "VisualElement", promptSurfaceId, askPrompt, cleanup);
-                BindPath(root, promptLabelPath, "Label", promptLabelId, askPrompt, cleanup, false);
-                RegisterButtonHoverProxy(labelElement, surface, cleanup);
-            }
-            else
-            {
-                Debug.LogWarning("Performer agent prompt controls could not be resolved for " + screenId + " at " + promptSurfacePath + ".", this);
-            }
-        }
-
-        if (!TryBuildAssistantChatUrl(out _))
-            SetAssistantStatus(session, language == AppLanguage.English ? "Assistant service URL is not configured." : "尚未設定助理服務網址。", false);
-    }
 
     private bool TryBuildAssistantChatUrl(out string chatUrl)
     {
@@ -2320,8 +1286,11 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         }
 
         session.requestInProgress = true;
+        if (livingGlass != null) session.root.Q("assistant-empty")?.AddToClassList("lg-hidden");
         if (session.send != null)
             session.send.SetEnabled(false);
+        if (session.cancel != null)
+            session.cancel.SetEnabled(true);
         SetAssistantStatus(session, language == AppLanguage.English ? "Thinking…" : "思考中…", true);
         string scopedMessage = BuildPerformerScopedMessage(session, message);
         assistantRequestRoutine = StartCoroutine(SendAssistantRequest(session, scopedMessage, chatUrl, message));
@@ -2329,13 +1298,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
 
     private bool IsAssistantSessionViewActive(AssistantSession session)
     {
-        if (session == null)
-            return false;
-        if (session.assistantScreenId == activeBindingScreen)
-            return true;
-
-        return session.assistantScreenId == "Assistant-" + session.performerId && overlays.Count > 0 &&
-               GetUxmlRoot(overlays.Peek().tree) == session.root;
+        return session != null && livingGlass != null && livingGlass.IsAssistantActive(session.root)
+            && selectedPerformer == session.performerIndex;
     }
 
     private string BuildPerformerScopedMessage(AssistantSession session, string visitorMessage)
@@ -2372,6 +1336,8 @@ public sealed class AwakeningApplicationController : MonoBehaviour
             session.requestInProgress = false;
             if (session.send != null)
                 session.send.SetEnabled(true);
+            if (session.cancel != null)
+                session.cancel.SetEnabled(false);
             if (request.result != UnityWebRequest.Result.Success)
             {
                 string retryHint = session.send == null
@@ -2553,419 +1519,21 @@ public sealed class AwakeningApplicationController : MonoBehaviour
         assistantSession = null;
     }
 
-    private void CloseTopOverlay()
-    {
-        if (overlays.Count == 0)
-            return;
-        CancelAssistantRequest();
-        OverlayState state = overlays.Pop();
-        if (overlayUnbind.Count > 0)
-            ClearBindings(overlayUnbind.Pop());
-        if (screenDocumentManager != null)
-            screenDocumentManager.DeactivateOverlay();
-        else if (state.tree != null)
-            state.tree.RemoveFromHierarchy();
-        if (state.baseRoot != null)
-        {
-            state.baseRoot.SetEnabled(true);
-            FocusFirstFocusable(state.baseRoot);
-        }
-        activeBindingScreen = currentScreen;
-        GestureCameraConsentGate.SetPreviewVisible(false);
-    }
 
-    private static VisualElement GetUxmlRoot(VisualElement documentRoot)
-    {
-        if (documentRoot == null)
-            return null;
-        if (documentRoot.childCount == 1)
-            return documentRoot[0];
-        return documentRoot;
-    }
 
-    private static bool FocusFirstFocusable(VisualElement root)
-    {
-        if (root == null)
-            return false;
-        if (root.focusable)
-        {
-            root.Focus();
-            return true;
-        }
-        for (int i = 0; i < root.childCount; i++)
-            if (FocusFirstFocusable(root[i]))
-                return true;
-        return false;
-    }
 
-    private void BindPath(VisualElement root, string path, string expectedTag, string figmaNodeId, Action action, List<Action> cleanup, bool keyboardFocusable = true)
-    {
-        string ownerRootNodeId;
-        ManifestNode mapping = FindManifestNode(figmaNodeId, out ownerRootNodeId);
-        if (mapping == null || mapping.path != path || mapping.tag != expectedTag)
-        {
-            Debug.LogError("Figma snapshot validation failed for node " + figmaNodeId + ": expected " + path + " / " + expectedTag + ". Revalidate the connector import before binding.", this);
-            return;
-        }
-        RuntimeScreenCatalog.Entry ownerEntry;
-        if (screenCatalog == null || !screenCatalog.TryGetEntry(activeBindingScreen, language, out ownerEntry) || ownerEntry.figmaRootNodeId != ownerRootNodeId)
-        {
-            Debug.LogError("Figma binding rejected: node " + figmaNodeId + " does not belong to the registered screen '" + activeBindingScreen + "'.", this);
-            return;
-        }
 
-        string runtimePath = ResolveRuntimeElementPath(path);
-        VisualElement element;
-        if (!TryResolvePath(root, runtimePath, out element))
-        {
-            Debug.LogError("Figma binding failed: node " + figmaNodeId + " at " + activeBindingScreen + "/" + runtimePath + " is not present.", this);
-            return;
-        }
-        string actualTag = element is Label ? "Label" : element.GetType() == typeof(VisualElement) ? "VisualElement" : element.GetType().Name;
-        if (actualTag != expectedTag)
-        {
-            Debug.LogError("Figma binding rejected: node " + figmaNodeId + " at " + runtimePath + " is " + actualTag + ", expected " + expectedTag + ".", this);
-            return;
-        }
 
-        element.AddToClassList("ac-interactive");
-        EventCallback<FocusInEvent> focusIn = evt => element.AddToClassList("ac-keyboard-focus");
-        EventCallback<FocusOutEvent> focusOut = evt => element.RemoveFromClassList("ac-keyboard-focus");
-        element.RegisterCallback(focusIn);
-        element.RegisterCallback(focusOut);
-        cleanup.Add(() => element.UnregisterCallback(focusIn));
-        cleanup.Add(() => element.UnregisterCallback(focusOut));
-        element.focusable = keyboardFocusable;
-        element.tabIndex = keyboardFocusable ? 0 : -1;
-        EventCallback<PointerEnterEvent> pointerEnter = evt =>
-        {
-            element.AddToClassList("ac-hover");
-            if (evt.pressedButtons != 0)
-                element.AddToClassList("ac-pressed");
-        };
-        EventCallback<PointerLeaveEvent> pointerLeave = evt =>
-        {
-            element.RemoveFromClassList("ac-hover");
-            element.RemoveFromClassList("ac-pressed");
-        };
-        EventCallback<PointerDownEvent> pointerDown = evt =>
-        {
-            if (evt.button == 0)
-                element.AddToClassList("ac-pressed");
-        };
-        EventCallback<PointerUpEvent> pointerUp = evt =>
-        {
-            if (evt.button == 0 || evt.pressedButtons == 0)
-                element.RemoveFromClassList("ac-pressed");
-        };
-        EventCallback<PointerCancelEvent> pointerCancel = evt => element.RemoveFromClassList("ac-pressed");
-        element.RegisterCallback(pointerEnter);
-        element.RegisterCallback(pointerLeave);
-        element.RegisterCallback(pointerDown);
-        element.RegisterCallback(pointerUp);
-        element.RegisterCallback(pointerCancel);
-        cleanup.Add(() => element.UnregisterCallback(pointerEnter));
-        cleanup.Add(() => element.UnregisterCallback(pointerLeave));
-        cleanup.Add(() => element.UnregisterCallback(pointerDown));
-        cleanup.Add(() => element.UnregisterCallback(pointerUp));
-        cleanup.Add(() => element.UnregisterCallback(pointerCancel));
-        EventCallback<ClickEvent> callback = evt =>
-        {
-            evt.StopPropagation();
-            action();
-        };
-        element.RegisterCallback(callback);
-        cleanup.Add(() => element.UnregisterCallback(callback));
-        EventCallback<KeyDownEvent> keyCallback = evt =>
-        {
-            if (evt.keyCode == KeyCode.Return || evt.keyCode == KeyCode.KeypadEnter || evt.keyCode == KeyCode.Space)
-            {
-                evt.StopPropagation();
-                action();
-            }
-        };
-        element.RegisterCallback(keyCallback);
-        cleanup.Add(() => element.UnregisterCallback(keyCallback));
-    }
 
-    private ManifestNode FindManifestNode(string figmaNodeId, out string ownerRootNodeId)
-    {
-        ownerRootNodeId = null;
-        if (nodeSnapshot == null || nodeSnapshot.screens == null)
-        {
-            Debug.LogError("RuntimeNodeBindings.json could not be loaded; no imported control will be bound.", this);
-            return null;
-        }
-        for (int i = 0; i < nodeSnapshot.screens.Length; i++)
-        {
-            ManifestNode[] nodes = nodeSnapshot.screens[i].nodes;
-            if (nodes == null)
-                continue;
-            for (int j = 0; j < nodes.Length; j++)
-                if (nodes[j].figmaNodeId == figmaNodeId)
-                {
-                    ownerRootNodeId = nodeSnapshot.screens[i].rootNodeId;
-                    return nodes[j];
-                }
-        }
-        return null;
-    }
 
-    private void ApplyInteractionStyles()
-    {
-        ApplyInteractionStylesTo(navigationDocument);
-    }
 
-    private void ApplyInteractionStylesTo(UIDocument document)
-    {
-        if (interactionStyles == null || document == null || document.rootVisualElement == null)
-            return;
-        document.rootVisualElement.styleSheets.Add(interactionStyles);
-        if (document == navigationDocument)
-            interactionStylesAdded = true;
-    }
 
-    private void RegisterClick(VisualElement element, Action action, List<Action> cleanup)
-    {
-        element.AddToClassList("ac-touch-surface");
-        element.focusable = true;
-        element.tabIndex = 0;
-        EventCallback<PointerEnterEvent> pointerEnter = evt =>
-        {
-            element.AddToClassList("ac-hover");
-            if (evt.pressedButtons != 0)
-                element.AddToClassList("ac-pressed");
-        };
-        EventCallback<PointerLeaveEvent> pointerLeave = evt =>
-        {
-            element.RemoveFromClassList("ac-hover");
-            element.RemoveFromClassList("ac-pressed");
-        };
-        EventCallback<PointerDownEvent> pointerDown = evt =>
-        {
-            if (evt.button == 0)
-                element.AddToClassList("ac-pressed");
-        };
-        EventCallback<PointerUpEvent> pointerUp = evt =>
-        {
-            if (evt.button == 0 || evt.pressedButtons == 0)
-                element.RemoveFromClassList("ac-pressed");
-        };
-        EventCallback<PointerCancelEvent> pointerCancel = evt => element.RemoveFromClassList("ac-pressed");
-        element.RegisterCallback(pointerEnter);
-        element.RegisterCallback(pointerLeave);
-        element.RegisterCallback(pointerDown);
-        element.RegisterCallback(pointerUp);
-        element.RegisterCallback(pointerCancel);
-        cleanup.Add(() => element.UnregisterCallback(pointerEnter));
-        cleanup.Add(() => element.UnregisterCallback(pointerLeave));
-        cleanup.Add(() => element.UnregisterCallback(pointerDown));
-        cleanup.Add(() => element.UnregisterCallback(pointerUp));
-        cleanup.Add(() => element.UnregisterCallback(pointerCancel));
 
-        EventCallback<ClickEvent> callback = evt =>
-        {
-            evt.StopPropagation();
-            element.RemoveFromClassList("ac-pressed");
-            action();
-        };
-        element.RegisterCallback(callback);
-        cleanup.Add(() => element.UnregisterCallback(callback));
-    }
 
-    private void RegisterPageClick(VisualElement root, Action action, List<Action> cleanup, bool captureChildClicks = false)
-    {
-        EventCallback<ClickEvent> callback = evt =>
-        {
-            if (transitionInProgress)
-                return;
-            evt.StopPropagation();
-            action();
-        };
-        TrickleDown phase = captureChildClicks ? TrickleDown.TrickleDown : TrickleDown.NoTrickleDown;
-        root.RegisterCallback(callback, phase);
-        cleanup.Add(() => root.UnregisterCallback(callback, phase));
-    }
 
-    private void DisableSettingsControls(VisualElement root, int localeNodeOffset)
-    {
-        string unavailable = language == AppLanguage.English ? "Unavailable" : "目前無法使用";
-        string guideUnavailable = language == AppLanguage.English ? "GUIDE UNAVAILABLE" : "指南目前無法使用";
-        string[][] controls =
-        {
-            // Sound: row surface, title, value, supporting copy, action surface, action label.
-            new[] { "1/7/8", "VisualElement", "5233", null },
-            new[] { "1/7/9", "Label", "5234", null },
-            new[] { "1/7/10", "Label", "5235", unavailable },
-            new[] { "1/7/11", "Label", "5236", null },
-            new[] { "1/7/12", "VisualElement", "5237", null },
-            new[] { "1/7/13", "Label", "5238", unavailable },
-            // Accessibility.
-            new[] { "1/7/14", "VisualElement", "5239", null },
-            new[] { "1/7/15", "Label", "5240", null },
-            new[] { "1/7/16", "Label", "5241", unavailable },
-            new[] { "1/7/17", "Label", "5242", null },
-            new[] { "1/7/18", "VisualElement", "5243", null },
-            new[] { "1/7/19", "Label", "5244", unavailable },
-            // Tracking and recalibration.
-            new[] { "1/7/20", "VisualElement", "5245", null },
-            new[] { "1/7/21", "Label", "5246", null },
-            new[] { "1/7/22", "Label", "5247", unavailable },
-            new[] { "1/7/23", "Label", "5248", null },
-            new[] { "1/7/24", "VisualElement", "5249", null },
-            new[] { "1/7/25", "Label", "5250", unavailable },
-            // Restart and its unavailable action.
-            new[] { "1/7/26", "VisualElement", "5251", null },
-            new[] { "1/7/28", "Label", "5253", null },
-            new[] { "1/7/29", "Label", "5254", null },
-            new[] { "1/7/30", "VisualElement", "5255", null },
-            new[] { "1/7/31", "Label", "5256", unavailable },
-            // Imported guide affordance has no verified destination/action.
-            new[] { "1/10", "VisualElement", "5270", null },
-            new[] { "1/10/1", "Label", "5271", guideUnavailable }
-        };
 
-        for (int i = 0; i < controls.Length; i++)
-        {
-            string[] control = controls[i];
-            MarkUnavailable(root, control[0], control[1], "124:" + (int.Parse(control[2]) + localeNodeOffset), control[3]);
-        }
-    }
 
-    private void MarkUnavailable(VisualElement root, string path, string expectedTag, string figmaNodeId, string replacementText)
-    {
-        string ownerRootNodeId;
-        ManifestNode mapping = FindManifestNode(figmaNodeId, out ownerRootNodeId);
-        RuntimeScreenCatalog.Entry ownerEntry;
-        if (mapping == null || mapping.path != path || mapping.tag != expectedTag ||
-            screenCatalog == null || !screenCatalog.TryGetEntry(activeBindingScreen, language, out ownerEntry) ||
-            ownerEntry.figmaRootNodeId != ownerRootNodeId)
-        {
-            Debug.LogError("Figma unavailable-state mapping validation failed for node " + figmaNodeId + " at " + path + ".", this);
-            return;
-        }
 
-        string runtimePath = ResolveRuntimeElementPath(path);
-        VisualElement element;
-        if (!TryResolvePath(root, runtimePath, out element))
-        {
-            Debug.LogError("Could not resolve unavailable control node " + figmaNodeId + " at " + runtimePath + ".", this);
-            return;
-        }
-        string actualTag = element is Label ? "Label" : element.GetType() == typeof(VisualElement) ? "VisualElement" : element.GetType().Name;
-        if (actualTag != expectedTag)
-        {
-            Debug.LogError("Unavailable control node " + figmaNodeId + " has runtime type " + actualTag + ", expected " + expectedTag + ".", this);
-            return;
-        }
-
-        element.AddToClassList("ac-control-unavailable");
-        element.SetEnabled(false);
-        element.focusable = false;
-        element.tabIndex = -1;
-        element.pickingMode = PickingMode.Ignore;
-        if (replacementText != null && element is Label label)
-            label.text = replacementText;
-    }
-
-    private void RegisterKeyOnRoot(VisualElement root, Action action, List<Action> cleanup)
-    {
-        EventCallback<KeyDownEvent> callback = evt =>
-        {
-            if (evt.keyCode == KeyCode.Return || evt.keyCode == KeyCode.KeypadEnter || evt.keyCode == KeyCode.Space)
-            {
-                evt.StopPropagation();
-                action();
-            }
-        };
-        root.RegisterCallback(callback);
-        cleanup.Add(() => root.UnregisterCallback(callback));
-    }
-
-    private void RegisterKeyHandling(VisualElement root, List<Action> cleanup)
-    {
-        EventCallback<KeyDownEvent> callback = evt =>
-        {
-            if (evt.keyCode == KeyCode.Escape || (evt.keyCode == KeyCode.Backspace && !(evt.target is TextField)))
-            {
-                evt.StopPropagation();
-                HandleInteractionCommand(InteractionCommand.BackRequested);
-            }
-            else if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady &&
-                     (int)evt.keyCode >= (int)KeyCode.Alpha1 && (int)evt.keyCode <= (int)KeyCode.Alpha6)
-            {
-                evt.StopPropagation();
-                SetTargetedPerformer((int)evt.keyCode - (int)KeyCode.Alpha1);
-                HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
-            }
-            else if (currentScreen == AssistantChooserScreen && (int)evt.keyCode >= (int)KeyCode.Alpha1 && (int)evt.keyCode <= (int)KeyCode.Alpha6)
-            {
-                SelectPerformer((int)evt.keyCode - (int)KeyCode.Alpha1, true);
-            }
-        };
-        root.RegisterCallback(callback);
-        cleanup.Add(() => root.UnregisterCallback(callback));
-    }
-
-    private static bool TryResolvePath(VisualElement root, string path, out VisualElement element)
-    {
-        element = null;
-        if (root == null)
-            return false;
-        string[] parts = path.Split('/');
-        if (parts.Length < 1 || parts[0] != "1")
-            return false;
-        VisualElement current = root;
-        for (int i = 1; i < parts.Length; i++)
-        {
-            int index;
-            if (!int.TryParse(parts[i], out index) || index < 1 || index > current.childCount)
-                return false;
-            current = current[index - 1];
-        }
-        element = current;
-        return true;
-    }
-
-    // The English Settings document was manually aligned and no longer has the
-    // two decorative root elements present in the original Figma hierarchy.
-    // Keep manifest validation on the canonical Figma paths, but resolve the
-    // corresponding runtime elements at their current UXML positions.
-    private string ResolveRuntimeElementPath(string figmaPath)
-    {
-        if (activeBindingScreen == "SOUVENIR---QR-DELIVERY")
-        {
-            if (figmaPath == "1/7/7")
-                return "1/6/7";
-            if (figmaPath == "1/7/8")
-                return "1/6/8";
-        }
-
-        if (activeBindingScreen != SettingsScreen || language != AppLanguage.English)
-            return figmaPath;
-
-        // English Settings has a separate button-surface element before this label.
-        if (figmaPath == "1/7/35")
-            return "1/5/36";
-        if (figmaPath == "1/9")
-            return "1/7";
-        if (figmaPath == "1/10" || figmaPath.StartsWith("1/10/", StringComparison.Ordinal))
-            return "1/8" + figmaPath.Substring("1/10".Length);
-        if (figmaPath.StartsWith("1/8/", StringComparison.Ordinal))
-            return "1/6/" + figmaPath.Substring("1/8/".Length);
-        if (figmaPath.StartsWith("1/7/", StringComparison.Ordinal))
-            return "1/5/" + figmaPath.Substring("1/7/".Length);
-
-        return figmaPath;
-    }
-
-    private static int ArrayIndexOf(string[] values, string value)
-    {
-        for (int i = 0; i < values.Length; i++)
-            if (values[i] == value)
-                return i;
-        return -1;
-    }
 
     private static void ClearBindings(List<Action> cleanup)
     {

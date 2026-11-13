@@ -211,3 +211,15 @@ ehthumbs.db
 # Packages/manifest.json, Packages/packages-lock.json, embedded packages,
 # ProjectSettings, Assets (including .meta), scenes, and Documentation are source files.
 # Keep the local MCP package trackable: the current packages-lock.json resolves it as embedded.
+
+# Local recovery archives duplicate versioned source/assets; keep reports and review media.
+/Documentation/Stage3LivingGlass/Cleanup/UntrackedBaseline.zip
+/Documentation/Stage3LivingGlass/Checkpoints/*.zip
+*.bundle
+
+# Local signing/credential material (environment examples remain trackable above).
+*.pfx
+*.p12
+*.key
+*.keystore
+*.jks

@@ -1,0 +1,56 @@
+{
+  "rendererLegacy": [
+    {
+      "name": "probeVolumeDebugShader",
+      "exists": true,
+      "instanceID": 0,
+      "objectNull": true
+    },
+    {
+      "name": "probeVolumeFragmentationDebugShader",
+      "exists": true,
+      "instanceID": 0,
+      "objectNull": true
+    },
+    {
+      "name": "probeVolumeOffsetDebugShader",
+      "exists": true,
+      "instanceID": 0,
+      "objectNull": true
+    },
+    {
+      "name": "probeVolumeSamplingDebugShader",
+      "exists": true,
+      "instanceID": 0,
+      "objectNull": true
+    },
+    {
+      "name": "probeSamplingDebugMesh",
+      "exists": true,
+      "instanceID": 0,
+      "objectNull": true
+    },
+    {
+      "name": "probeSamplingDebugTexture",
+      "exists": true,
+      "instanceID": 0,
+      "objectNull": true
+    }
+  ],
+  "rendererDirty": false,
+  "bootstrapGUID": "f4d846393f8d9f20fa64b924b0d95e68",
+  "defaults": [
+    {
+      "name": "globalConfigManagerPrefab",
+      "fieldExists": false,
+      "defaultNull": true
+    },
+    {
+      "name": "gpuManagerPrefab",
+      "fieldExists": false,
+      "defaultNull": true
+    }
+  ],
+  "playing": false,
+  "dirty": false
+}

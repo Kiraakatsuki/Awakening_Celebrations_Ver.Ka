@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-13",
+  "verification": "filesystem static only; no Unity compilation/runtime/visual verification",
+  "commit": "b9f0972b38008b31e4bd2117ee88cb34ef9ce6fe",
+  "catalog_entries": 104,
+  "logical_routes": 52,
+  "locales": {
+    "zh": 52,
+    "en": 52
+  },
+  "duplicate_route_locale_keys": [],
+  "unpaired_routes": [],
+  "manifest_rows": 104,
+  "snapshot_rows": 104,
+  "manifest_equals_snapshot": false,
+  "manifest_mapping_differences": [],
+  "uxml_count": 104,
+  "uss_count": 97,
+  "xml_errors": [],
+  "unresolved_catalog_assets": [],
+  "missing_local_uxml_references": [],
+  "structural_path_tag_mismatches": 251,
+  "drift_by_route": {
+    "GAIA---LIVING-PORTRAIT---PER-001/en": 9,
+    "GAIA---LIVING-PORTRAIT---PER-001/zh": 9,
+    "PANDEMIC---LIVING-PORTRAIT---PER-002/en": 9,
+    "PANDEMIC---LIVING-PORTRAIT---PER-002/zh": 9,
+    "RE-BIRTH---LIVING-PORTRAIT---PER-003/en": 9,
+    "RE-BIRTH---LIVING-PORTRAIT---PER-003/zh": 9,
+    "WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004/en": 9,
+    "WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004/zh": 9,
+    "CONSCIENCE---LIVING-PORTRAIT---PER-005/en": 9,
+    "CONSCIENCE---LIVING-PORTRAIT---PER-005/zh": 9,
+    "SANCTUARY---LIVING-PORTRAIT---PER-006/en": 9,
+    "SANCTUARY---LIVING-PORTRAIT---PER-006/zh": 9,
+    "SETTINGS---EXPERIENCE-CONTROLS/en": 5,
+    "SOUVENIR---QR-DELIVERY/en": 69,
+    "SOUVENIR---QR-DELIVERY/zh": 69
+  },
+  "note": "Structural drift scans all snapshot nodes including decoration, applying only controller remaps. It is not a count of broken controls and does not prove semantic identity.",
+  "inline_elements": 3001,
+  "inline_absolute_elements": 2585,
+  "labels_under_18px": 847,
+  "scene_documents": [
+    {
+      "id": "172272103",
+      "enabled": "1",
+      "order": "0"
+    },
+    {
+      "id": "990664202",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "2033912496",
+      "enabled": "1",
+      "order": "0"
+    },
+    {
+      "id": "1200000002",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000005",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000008",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000014",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000017",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000020",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000023",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000026",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000029",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000032",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000035",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000038",
+      "enabled": "0",
+      "order": "10"
+    },
+    {
+      "id": "1200000041",
+      "enabled": "0",
+      "order": "20"
+    }
+  ],
+  "video_slots": [
+    "Assets/Resources/Videos/LivingPortrait/Gaia.mp4",
+    "Assets/Resources/Videos/LivingPortrait/Pandemic.mp4",
+    "Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4",
+    "Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4",
+    "Assets/Resources/Videos/LivingPortrait/Conscience.mp4",
+    "Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4"
+  ],
+  "first_party_test_files": [],
+  "font_scan": {
+    "status": "assigned font cmap only; fallback not assessed",
+    "labels_with_deficits": 363,
+    "assets_with_deficits": 51
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "check": "Settings Escape restores opener",
+    "dialog": false,
+    "focus": "shell-settings"
+  },
+  {
+    "check": "AI has one enabled close action; Tab remains scoped",
+    "dialog": true,
+    "focus": "Close panel",
+    "inputsDisabled": true
+  },
+  {
+    "event": "Illustrate ready",
+    "canvasClass": "concept-A  selection focus enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - paragraph: AWAKENING CELEBRATIONS\n  - paragraph: COLOR RELEASE\n  - button \"Switch to Traditional Chinese\": English / 繁體中文\n  - heading \"Who will you awaken?\" [level=1]\n  - paragraph: Point to explore. Make a fist to choose. Or click / press 1–6.\n  - button \"GAIA · existing performer artwork GAIA 01 / Choose\":\n    - img \"GAIA · existing performer artwork\"\n    - generic: GAIA\n    - generic: 01 / Choose\n  - button \"PANDEMIC · existing performer artwork PANDEMIC 02 / Choose\":\n    - img \"PANDEMIC · existing performer artwork\"\n    - generic: PANDEMIC\n    - generic: 02 / Choose\n  - button \"RE-BIRTH · existing performer artwork RE-BIRTH 03 / Choose\":\n    - img \"RE-BIRTH · existing performer artwork\"\n    - generic: RE-BIRTH\n    - generic: 03 / Choose\n  - button \"WHITE-GUARDIAN · existing performer artwork WHITE-GUARDIAN 04 / Choose\":\n    - img \"WHITE-GUARDIAN · existing performer artwork\"\n    - generic: WHITE-GUARDIAN\n    - generic: 04 / Choose\n  - button \"CONSCIENCE · existing performer artwork CONSCIENCE 05 / Choose\":\n    - img \"CONSCIENCE · existing performer artwork\"\n    - generic: CONSCIENCE\n    - generic: 05 / Choose\n  - button \"SANCTUARY · existing performer artwork SANCTUARY 06 / Choose\":\n    - img \"SANCTUARY · existing performer artwork\"\n    - generic: SANCTUARY\n    - generic: 06 / Choose\n  - generic: VER.KA\n  - button \"Settings\"\n  - button \"Ask AI\"\n  - button \"Help\"\n  - button \"Privacy\"\n  - generic: Gesture ready · point to explore · illustration\n"
+  },
+  {
+    "event": "Illustrate tracking loss",
+    "canvasClass": "concept-A  selection focus enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - paragraph: AWAKENING CELEBRATIONS\n  - paragraph: COLOR RELEASE\n  - button \"Switch to Traditional Chinese\": English / 繁體中文\n  - heading \"Who will you awaken?\" [level=1]\n  - paragraph: Point to explore. Make a fist to choose. Or click / press 1–6.\n  - button \"GAIA · existing performer artwork GAIA 01 / Choose\":\n    - img \"GAIA · existing performer artwork\"\n    - generic: GAIA\n    - generic: 01 / Choose\n  - button \"PANDEMIC · existing performer artwork PANDEMIC 02 / Choose\":\n    - img \"PANDEMIC · existing performer artwork\"\n    - generic: PANDEMIC\n    - generic: 02 / Choose\n  - button \"RE-BIRTH · existing performer artwork RE-BIRTH 03 / Choose\":\n    - img \"RE-BIRTH · existing performer artwork\"\n    - generic: RE-BIRTH\n    - generic: 03 / Choose\n  - button \"WHITE-GUARDIAN · existing performer artwork WHITE-GUARDIAN 04 / Choose\":\n    - img \"WHITE-GUARDIAN · existing performer artwork\"\n    - generic: WHITE-GUARDIAN\n    - generic: 04 / Choose\n  - button \"CONSCIENCE · existing performer artwork CONSCIENCE 05 / Choose\":\n    - img \"CONSCIENCE · existing performer artwork\"\n    - generic: CONSCIENCE\n    - generic: 05 / Choose\n  - button \"SANCTUARY · existing performer artwork SANCTUARY 06 / Choose\":\n    - img \"SANCTUARY · existing performer artwork\"\n    - generic: SANCTUARY\n    - generic: 06 / Choose\n  - generic: VER.KA\n  - button \"Settings\"\n  - button \"Ask AI\"\n  - button \"Help\"\n  - button \"Privacy\"\n  - generic: Tracking lost · show your hand, or click to continue · illustration\n"
+  },
+  {
+    "event": "Illustrate point target",
+    "canvasClass": "concept-A  selection focus enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - paragraph: AWAKENING CELEBRATIONS\n  - paragraph: COLOR RELEASE\n  - button \"Switch to Traditional Chinese\": English / 繁體中文\n  - heading \"Who will you awaken?\" [level=1]\n  - paragraph: Point to explore. Make a fist to choose. Or click / press 1–6.\n  - button \"GAIA · existing performer artwork GAIA 01 / Choose Targeted · not yet selected\":\n    - img \"GAIA · existing performer artwork\"\n    - generic: GAIA\n    - generic: 01 / Choose\n    - text: Targeted · not yet selected\n  - button \"PANDEMIC · existing performer artwork PANDEMIC 02 / Choose\":\n    - img \"PANDEMIC · existing performer artwork\"\n    - generic: PANDEMIC\n    - generic: 02 / Choose\n  - button \"RE-BIRTH · existing performer artwork RE-BIRTH 03 / Choose\":\n    - img \"RE-BIRTH · existing performer artwork\"\n    - generic: RE-BIRTH\n    - generic: 03 / Choose\n  - button \"WHITE-GUARDIAN · existing performer artwork WHITE-GUARDIAN 04 / Choose\":\n    - img \"WHITE-GUARDIAN · existing performer artwork\"\n    - generic: WHITE-GUARDIAN\n    - generic: 04 / Choose\n  - button \"CONSCIENCE · existing performer artwork CONSCIENCE 05 / Choose\":\n    - img \"CONSCIENCE · existing performer artwork\"\n    - generic: CONSCIENCE\n    - generic: 05 / Choose\n  - button \"SANCTUARY · existing performer artwork SANCTUARY 06 / Choose\":\n    - img \"SANCTUARY · existing performer artwork\"\n    - generic: SANCTUARY\n    - generic: 06 / Choose\n  - generic: VER.KA\n  - button \"Settings\"\n  - button \"Ask AI\"\n  - button \"Help\"\n  - button \"Privacy\"\n  - generic: Target acquired · make a fist to confirm · illustration\n"
+  },
+  {
+    "event": "Illustrate fist confirm",
+    "canvasClass": "concept-A  focus focus enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - img \"GAIA · existing performer artwork\"\n  - heading \"GAIA\" [level=1]\n  - paragraph: Focus\n  - paragraph: Show both open palms, or use the play action.\n  - button \"Preview activation\"\n  - generic: VER.KA\n  - button \"Settings\"\n  - button \"Ask AI\"\n  - button \"Help\"\n  - button \"Privacy\"\n  - generic: Confirmed · GAIA · illustration\n"
+  },
+  {
+    "event": "Focus → Activation",
+    "canvasClass": "concept-A  focus activation enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - img \"GAIA · existing performer artwork\"\n  - heading \"GAIA\" [level=1]\n  - paragraph: Activation\n  - generic: GAIA\n  - paragraph: Settings & AI after this moment\n  - button \"Leave portrait · Esc\"\n  - generic: Confirmed · GAIA · illustration\n"
+  },
+  {
+    "event": "Illustrate preparing",
+    "canvasClass": "concept-A  focus prepare enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - img \"GAIA · existing performer artwork\"\n  - heading \"GAIA\" [level=1]\n  - paragraph: Preparing Living Portrait\n  - paragraph: Preparing… The artwork remains until the first decoded frame.\n  - generic: GAIA\n  - paragraph: Settings & AI after this moment\n  - button \"Leave portrait · Esc\"\n  - generic: Confirmed · GAIA · illustration\n"
+  },
+  {
+    "event": "Illustrate first frame",
+    "canvasClass": "concept-A  focus playing enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - img \"GAIA · existing performer artwork\"\n  - heading \"GAIA\" [level=1]\n  - paragraph: Living Portrait\n  - generic: GAIA\n  - paragraph: Settings & AI after this moment\n  - button \"Leave portrait · Esc\"\n  - generic: Confirmed · GAIA · illustration\n"
+  },
+  {
+    "event": "Illustrate completion event",
+    "canvasClass": "concept-A  focus release enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - img \"GAIA · existing performer artwork\"\n  - heading \"GAIA\" [level=1]\n  - paragraph: Release\n  - paragraph: A moment to return.\n  - button \"Return to the experience\"\n  - button \"Ask about this presence\"\n  - generic: VER.KA\n  - button \"Settings\"\n  - button \"Ask AI\"\n  - button \"Help\"\n  - button \"Privacy\"\n  - generic: Confirmed · GAIA · illustration\n"
+  },
+  {
+    "event": "Illustrate cancel",
+    "canvasClass": "concept-A  focus release enter  ",
+    "snapshot": "- main \"Proposed exhibition interface\":\n  - img \"GAIA · existing performer artwork\"\n  - heading \"GAIA\" [level=1]\n  - paragraph: Release\n  - paragraph: A moment to return.\n  - button \"Return to the experience\"\n  - button \"Ask about this presence\"\n  - generic: VER.KA\n  - button \"Settings\"\n  - button \"Ask AI\"\n  - button \"Help\"\n  - button \"Privacy\"\n  - generic: Confirmed · GAIA · illustration\n"
+  }
+]

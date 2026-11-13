@@ -1,0 +1,465 @@
+Assets/Art/Figma/Attract/Presence — CONSCIENCE.png
+Assets/Art/Figma/Attract/Presence — GAIA.png
+Assets/Art/Figma/Attract/Presence — PANDEMIC.png
+Assets/Art/Figma/Attract/Presence — RE-BIRTH.png
+Assets/Art/Figma/Attract/Presence — SANCTUARY.png
+Assets/Art/Figma/Attract/Presence — WHITE GUARDIAN.png
+Assets/Art/Figma/Home/HOME BACKGROUND.png
+Assets/Art/Figma/PER_CONSCIENCE/Approved Master Image.png
+Assets/Art/Figma/PER_CONSCIENCE/Living Master Image.png
+Assets/Art/Figma/PER_CONSCIENCE/Master Image — Activation.png
+Assets/Art/Figma/PER_CONSCIENCE/Released performer image.png
+Assets/Art/Figma/PER_GAIA/Approved Master Image.png
+Assets/Art/Figma/PER_GAIA/Living Master Image.png
+Assets/Art/Figma/PER_GAIA/Master Image — Activation.png
+Assets/Art/Figma/PER_GAIA/Released performer image.png
+Assets/Art/Figma/PER_PANDEMIC/Approved Master Image.png
+Assets/Art/Figma/PER_PANDEMIC/Living Master Image.png
+Assets/Art/Figma/PER_PANDEMIC/Master Image — Activation.png
+Assets/Art/Figma/PER_PANDEMIC/Released performer image.png
+Assets/Art/Figma/PER_RE-BIRTH/Approved Master Image.png
+Assets/Art/Figma/PER_RE-BIRTH/Living Master Image.png
+Assets/Art/Figma/PER_RE-BIRTH/Master Image — Activation.png
+Assets/Art/Figma/PER_RE-BIRTH/Released performer image.png
+Assets/Art/Figma/PER_SANCTUARY/Approved Master Image.png
+Assets/Art/Figma/PER_SANCTUARY/Living Master Image.png
+Assets/Art/Figma/PER_SANCTUARY/Master Image — Activation.png
+Assets/Art/Figma/PER_SANCTUARY/Released performer image.png
+Assets/Art/Figma/PER_WHITE/Approved Master Image.png
+Assets/Art/Figma/PER_WHITE/Living Master Image.png
+Assets/Art/Figma/PER_WHITE/Master Image — Activation.png
+Assets/Art/Figma/PER_WHITE/Released performer image.png
+Assets/Art/Figma/Performer Select/Selection target — CONSCIENCE.png
+Assets/Art/Figma/Performer Select/Selection target — GAIA.png
+Assets/Art/Figma/Performer Select/Selection target — PANDEMIC.png
+Assets/Art/Figma/Performer Select/Selection target — RE-BIRTH.png
+Assets/Art/Figma/Performer Select/Selection target — SANCTUARY.png
+Assets/Art/Figma/Performer Select/Selection target — WHITE GUARDIAN.png
+Assets/Art/Figma/Privacy/SANCTUARY — DIMMED PRIVACY BACKGROUND.png
+Assets/Art/Figma/Release/Presence — CONSCIENCE.png
+Assets/Art/Figma/Release/Presence — GAIA.png
+Assets/Art/Figma/Release/Presence — PANDEMIC.png
+Assets/Art/Figma/Release/Presence — RE-BIRTH.png
+Assets/Art/Figma/Release/Presence — SANCTUARY.png
+Assets/Art/Figma/Release/Presence — WHITE GUARDIAN.png
+Assets/Art/Figma/Souvenir/Souvenir artwork preview.png
+Assets/DefaultVolumeProfile.asset
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-01---ATTRACT---MONOCHROME---FALLBACK-INPUT---EN---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-02---ATTRACT---MONOCHROME---FALLBACK-INPUT.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-03---COLOR-RELEASE---EN---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/04-04---COLOR-RELEASE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-01---GAIA---FOCUS-VIEW---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-02---GAIA---FOCUS-VIEW---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-03---GAIA---ACTIVATION---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-04---GAIA---ACTIVATION---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-05---GAIA---LIVING-PORTRAIT---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-06---GAIA---LIVING-PORTRAIT---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-07---GAIA---RELEASE---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-08---GAIA---RELEASE---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-09---GAIA---POST-VIDEO-AI---PER-001---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-10---GAIA---POST-VIDEO-AI---PER-001.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-11---PANDEMIC---FOCUS-VIEW---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-12---PANDEMIC---FOCUS-VIEW---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-13---PANDEMIC---ACTIVATION---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-14---PANDEMIC---ACTIVATION---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-15---PANDEMIC---LIVING-PORTRAIT---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-16---PANDEMIC---LIVING-PORTRAIT---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-17---PANDEMIC---RELEASE---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-18---PANDEMIC---RELEASE---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-19---PANDEMIC---POST-VIDEO-AI---PER-002---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-20---PANDEMIC---POST-VIDEO-AI---PER-002.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-21---RE-BIRTH---FOCUS-VIEW---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-22---RE-BIRTH---FOCUS-VIEW---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-23---RE-BIRTH---ACTIVATION---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-24---RE-BIRTH---ACTIVATION---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-25---RE-BIRTH---LIVING-PORTRAIT---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-26---RE-BIRTH---LIVING-PORTRAIT---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-27---RE-BIRTH---RELEASE---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-28---RE-BIRTH---RELEASE---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-29---RE-BIRTH---POST-VIDEO-AI---PER-003---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-30---RE-BIRTH---POST-VIDEO-AI---PER-003.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-31---WHITE-GUARDIAN---FOCUS-VIEW---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-32---WHITE-GUARDIAN---FOCUS-VIEW---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-33---WHITE-GUARDIAN---ACTIVATION---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-34---WHITE-GUARDIAN---ACTIVATION---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-35---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-36---WHITE-GUARDIAN---LIVING-PORTRAIT---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-37---WHITE-GUARDIAN---RELEASE---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-38---WHITE-GUARDIAN---RELEASE---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-39---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-40---WHITE-GUARDIAN---POST-VIDEO-AI---PER-004.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-41---CONSCIENCE---FOCUS-VIEW---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-42---CONSCIENCE---FOCUS-VIEW---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-43---CONSCIENCE---ACTIVATION---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-44---CONSCIENCE---ACTIVATION---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-45---CONSCIENCE---LIVING-PORTRAIT---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-46---CONSCIENCE---LIVING-PORTRAIT---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-47---CONSCIENCE---RELEASE---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-48---CONSCIENCE---RELEASE---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-49---CONSCIENCE---POST-VIDEO-AI---PER-005---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-50---CONSCIENCE---POST-VIDEO-AI---PER-005.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-51---SANCTUARY---FOCUS-VIEW---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-52---SANCTUARY---FOCUS-VIEW---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-53---SANCTUARY---ACTIVATION---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-54---SANCTUARY---ACTIVATION---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-55---SANCTUARY---LIVING-PORTRAIT---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-56---SANCTUARY---LIVING-PORTRAIT---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-57---SANCTUARY---RELEASE---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-58---SANCTUARY---RELEASE---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-59---SANCTUARY---POST-VIDEO-AI---PER-006---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/06-60---SANCTUARY---POST-VIDEO-AI---PER-006.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-01---GAIA---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-02---PROTOTYPE---ASSISTANT---GAIA.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-03---PANDEMIC---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-04---PROTOTYPE---ASSISTANT---PANDEMIC.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-05---RE-BIRTH---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-06---PROTOTYPE---ASSISTANT---RE-BIRTH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-07---WHITE-GUARDIAN---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-08---PROTOTYPE---ASSISTANT---WHITE-GUARDIAN.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-09---CONSCIENCE---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-10---PROTOTYPE---ASSISTANT---CONSCIENCE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-11---SANCTUARY---FOCUS-AI-POP-UP---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-12---PROTOTYPE---ASSISTANT---SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-13---PROTOTYPE---SETTINGS---Choose-assistant-performer---EN.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/07-14---PROTOTYPE---SETTINGS.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-01---SETTINGS---EXPERIENCE-CONTROLS---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/08-02---SETTINGS---EXPERIENCE-CONTROLS.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-01---CLOSING---CELEBRATION---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-02---CLOSING---CELEBRATION.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-03---SOUVENIR---QR-DELIVERY---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/09-04---SOUVENIR---QR-DELIVERY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME--------SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/HOME---ENGLISH---SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY--------SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/PRIVACY---ENGLISH---SANCTUARY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---ENTRY---DIM.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---EXPERIENCE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---HOLD---SELECT.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---INTRODUCTION.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---LOOK---MOVE.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---POINT.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---READY.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS---ENGLISH.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uss
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/TUTORIAL---RETURN---DISMISS.uxml
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-2bn9rcq4kfv1-177.png
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/images/img-pxrcq71cb2zpy-169.png
+Assets/Figma/Awakening-Celebrations---Visual-Redesign/tokens.uss
+Assets/Fonts/NotoSansSC-Regular.ttf
+Assets/Fonts/SourceSans3-Regular.ttf
+Assets/Fonts/SourceSerif4-Regular.ttf
+Assets/InputSystem_Actions.inputactions
+Assets/Resources/RuntimeScreenCatalog.asset
+Assets/Resources/Videos/LivingPortrait/Conscience.mp4
+Assets/Resources/Videos/LivingPortrait/Gaia.mp4
+Assets/Resources/Videos/LivingPortrait/Pandemic.mp4
+Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4
+Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4
+Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/AppSettings.cs
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Common/Scripts/Bootstrap.cs
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerAppSettings.asset
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerBootstrap.prefab
+Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/HandLandmarkerRunner.cs
+Assets/Scenes/SampleScene.unity
+Assets/Scripts/AwakeningApplicationController.cs
+Assets/Scripts/HomeLanguageController.cs
+Assets/Scripts/Interaction/MediaPipeGestureBridge.cs
+Assets/Scripts/RuntimeScreenCatalog.cs
+Assets/Scripts/ScreenDocumentManager.cs
+Assets/Settings/Renderer2D.asset
+Assets/Settings/UniversalRP.asset
+Assets/UI Toolkit/PanelSettings.asset
+Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss
+Assets/UniversalRenderPipelineGlobalSettings.asset
+Packages/com.unity.dt.app-ui/PackageResources/Fonts/Inter-Regular.ttf
+Packages/com.unity.inputsystem/InputSystem/Actions/InputActionAsset.cs
+Packages/com.unity.inputsystem/InputSystem/Actions/InputActionReference.cs
+Packages/com.unity.inputsystem/InputSystem/Editor/AssetImporter/InputActionImporter.cs
+Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/DynamicGI/DynamicGISkyOcclusion.urtshader
+Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/ProbeVolumeCellDilation.compute
+Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/ProbeVolumeSubdivide.compute
+Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/RenderingLayerMask/TraceRenderingLayerMask.urtshader
+Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VirtualOffset/TraceVirtualOffset.urtshader
+Packages/com.unity.render-pipelines.core/Editor/Lighting/ProbeVolume/VoxelizeScene.shader
+Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeSamplingDebugMesh.fbx
+Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeDebug.shader
+Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeFragmentationDebug.shader
+Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeNumbersDisplayTex.png
+Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeOffsetDebug.shader
+Packages/com.unity.render-pipelines.core/Runtime/Debug/ProbeVolumeSamplingDebug.shader
+Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumeBlendStates.compute
+Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumeUploadData.compute
+Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumeUploadDataL2.compute
+Packages/com.unity.render-pipelines.core/Runtime/Lighting/ProbeVolume/ProbeVolumesOptions.cs
+Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Environment/EnvironmentImportanceSamplingBuild.compute
+Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Meshes/6FaceSkyboxMesh.mesh
+Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Meshes/SkyboxMesh.mesh
+Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/BlitCookie.compute
+Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/BlitCubemap.compute
+Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/BuildLightGrid.compute
+Packages/com.unity.render-pipelines.core/Runtime/PathTracing/Shaders/SetAlphaChannel.compute
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/DebugOccluder.shader
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/DebugOcclusionTest.shader
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceDataBufferCopyKernels.compute
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceDataBufferUploadKernels.compute
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceOcclusionCullingKernels.compute
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceTransformUpdateKernels.compute
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/InstanceWindDataUpdateKernels.compute
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/OccluderDepthPyramidKernels.compute
+Packages/com.unity.render-pipelines.core/Runtime/RenderPipelineResources/GPUDriven/OcclusionCullingDebug.compute
+Packages/com.unity.render-pipelines.core/Runtime/STP/StpPreTaa.compute
+Packages/com.unity.render-pipelines.core/Runtime/STP/StpSetup.compute
+Packages/com.unity.render-pipelines.core/Runtime/STP/StpTaa.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Common/GeometryPool/GeometryPoolKernels.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Common/Utilities/CopyBuffer.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/CopyPositions.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/bit_histogram.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/block_reduce_part.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/block_scan.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/build_hlbvh.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/restructure_bvh.compute
+Packages/com.unity.render-pipelines.core/Runtime/UnifiedRayTracing/Compute/RadeonRays/kernels/scatter.compute
+Packages/com.unity.render-pipelines.core/Runtime/Volume/VolumeProfile.cs
+Packages/com.unity.render-pipelines.core/Runtime/Vrs/Shaders/VrsTexture.compute
+Packages/com.unity.render-pipelines.core/Runtime/Vrs/Shaders/VrsVisualization.shader
+Packages/com.unity.render-pipelines.core/Shaders/CoreCopy.shader
+Packages/com.unity.render-pipelines.universal/Editor/Volume/DefaultVolumeProfile.asset
+Packages/com.unity.render-pipelines.universal/Runtime/2D/Light2D.cs
+Packages/com.unity.render-pipelines.universal/Runtime/2D/Renderer2DData.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset
+Packages/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Decal/DBuffer/DBufferClear.shader
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/Mesh2D-Lit-Default.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/Bloom.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ChannelMixer.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ChromaticAberration.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ColorAdjustments.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ColorCurves.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ColorLookup.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/DepthOfField.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/FilmGrain.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/LensDistortion.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/LiftGammaGain.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/MotionBlur.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/PaniniProjection.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ScreenSpaceLensFlare.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/ShadowsMidtonesHighlights.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/SplitToning.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/Tonemapping.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/Vignette.cs
+Packages/com.unity.render-pipelines.universal/Runtime/Overrides/WhiteBalance.cs
+Packages/com.unity.render-pipelines.universal/Runtime/RendererFeatures/OnTileUberPost.shader
+Packages/com.unity.render-pipelines.universal/Runtime/UniversalAdditionalCameraData.cs
+Packages/com.unity.render-pipelines.universal/Runtime/UniversalRenderPipelineGlobalSettings.cs
+Packages/com.unity.render-pipelines.universal/Shaders/2D/Light2D.shader
+Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Projected.shader
+Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Shadow-Geometry.shader
+Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Shadow-Sprite.shader
+Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Geometry.shader
+Packages/com.unity.render-pipelines.universal/Shaders/2D/Shadow2D-Unshadow-Sprite.shader
+Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractive.shadergraph
+Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractiveMasked.shadergraph
+Packages/com.unity.render-pipelines.universal/Shaders/AutodeskInteractive/AutodeskInteractiveTransparent.shadergraph
+Packages/com.unity.render-pipelines.universal/Shaders/CameraMotionVectors.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Debug/DebugReplacement.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Debug/HDRDebugView.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Debug/ProbeVolumeSamplingDebugPositionNormal.compute
+Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree7.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree8_PBRLit.shadergraph
+Packages/com.unity.render-pipelines.universal/Shaders/Nature/SpeedTree9_URP.shadergraph
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/Bloom.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/BokehDepthOfField.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/CameraMotionBlur.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/EdgeAdaptiveSpatialUpsampling.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/FinalPost.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/GaussianDepthOfField.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LensFlareDataDriven.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LensFlareScreenSpace.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderHdr.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/LutBuilderLdr.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/PaniniProjection.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/ScalingSetup.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/StopNaN.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/SubpixelMorphologicalAntialiasing.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/TemporalAA.shader
+Packages/com.unity.render-pipelines.universal/Shaders/PostProcessing/UberPost.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainDetailLit.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrass.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrassBillboard.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/BlitHDROverlay.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/ClusterDeferred.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/CopyDepth.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlit.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/CoreBlitColorAndDepth.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/FallbackError.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/Sampling.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/ScreenSpaceAmbientOcclusion.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/StencilDeferred.shader
+Packages/com.unity.render-pipelines.universal/Shaders/Utils/StencilDitherMaskSeed.shader
+Packages/com.unity.render-pipelines.universal/Shaders/XR/XRMirrorView.shader
+Packages/com.unity.render-pipelines.universal/Shaders/XR/XRMotionVector.shader
+Packages/com.unity.render-pipelines.universal/Shaders/XR/XROcclusionMesh.shader
+Packages/com.unity.render-pipelines.universal/Textures/BayerMatrix.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_0.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_1.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_10.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_11.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_12.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_13.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_14.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_15.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_16.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_17.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_18.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_19.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_2.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_20.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_21.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_22.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_23.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_24.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_25.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_26.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_27.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_28.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_29.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_3.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_30.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_31.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_4.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_5.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_6.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_7.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_8.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise16/L/LDR_LLL1_9.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_0.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_1.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_2.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_3.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_4.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_5.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise256/LDR_LLL1_6.png
+Packages/com.unity.render-pipelines.universal/Textures/BlueNoise64/L/LDR_LLL1_0.png
+Packages/com.unity.render-pipelines.universal/Textures/DebugFont.tga
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large01.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Large02.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium01.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium02.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium03.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium04.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium05.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Medium06.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin01.png
+Packages/com.unity.render-pipelines.universal/Textures/FilmGrain/Thin02.png
+Packages/com.unity.render-pipelines.universal/Textures/SMAA/AreaTex.tga
+Packages/com.unity.render-pipelines.universal/Textures/SMAA/SearchTex.tga

@@ -1,0 +1,17 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Retrieved 2 log entries.\",\"data\":[\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: [WebSocket] Unexpected receive error: WebSocket is not initialised\",\"Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com).\"]}"
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Retrieved 2 log entries.",
+    "data": [
+      "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: [WebSocket] Unexpected receive error: WebSocket is not initialised",
+      "Error reason is 'NoSubscription' and no additional error information was provided (https://generators.ai.unity.com)."
+    ]
+  },
+  "isError": false
+}

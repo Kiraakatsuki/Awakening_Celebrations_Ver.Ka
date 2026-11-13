@@ -1,0 +1,57 @@
+{
+  "pngCount": 113,
+  "wrongDimensions": [],
+  "unsafeSnapshots": [],
+  "wrongPhase": [],
+  "frameOrderMonotone": true,
+  "rejected": [
+    "Expected-rejection-0085-REJECTED.txt"
+  ],
+  "chromePresenceSamples": [
+    {
+      "file": "Focus-settled-0015.png",
+      "headerPixels": 1754,
+      "dockPixels": 1129
+    },
+    {
+      "file": "Home-en-0001.png",
+      "headerPixels": 1754,
+      "dockPixels": 1129
+    },
+    {
+      "file": "Home-zh-0002.png",
+      "headerPixels": 1983,
+      "dockPixels": 1446
+    },
+    {
+      "file": "Repeat-Home-0106.png",
+      "headerPixels": 1983,
+      "dockPixels": 1446
+    },
+    {
+      "file": "Repeat-Home-0107.png",
+      "headerPixels": 1983,
+      "dockPixels": 1446
+    },
+    {
+      "file": "Repeat-Home-0108.png",
+      "headerPixels": 1983,
+      "dockPixels": 1446
+    },
+    {
+      "file": "Repeat-Rebirth-Focus-0112.png",
+      "headerPixels": 1754,
+      "dockPixels": 1129
+    },
+    {
+      "file": "Repeat-Rebirth-Focus-0113.png",
+      "headerPixels": 1754,
+      "dockPixels": 1129
+    },
+    {
+      "file": "Repeat-Rebirth-Focus-0114.png",
+      "headerPixels": 1754,
+      "dockPixels": 1129
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+﻿family,state,en,zh_Hant,rule
+assistant,empty,Your conversation begins here.,你的對話，從這裡開始。,Only show on actual corresponding state; never synthesize service/media success
+assistant,waiting,Preparing a response…,正在準備回覆…,Only show on actual corresponding state; never synthesize service/media success
+assistant,cancel,Cancel request,取消請求,Only show on actual corresponding state; never synthesize service/media success
+assistant,cancelled,Request cancelled.,已取消請求。,Only show on actual corresponding state; never synthesize service/media success
+assistant,offline,The assistant is unavailable. Your experience can continue.,助理目前無法使用，你仍可繼續體驗。,Only show on actual corresponding state; never synthesize service/media success
+assistant,network error,The connection was interrupted. Try again when you are ready.,連線中斷，準備好後可重試。,Only show on actual corresponding state; never synthesize service/media success
+assistant,unexpected response,The response could not be displayed. Please try again.,無法顯示回覆，請重試。,Only show on actual corresponding state; never synthesize service/media success
+assistant,retry,Try again,重試,Only show on actual corresponding state; never synthesize service/media success
+assistant,new question,Ask another question,提出另一個問題,Only show on actual corresponding state; never synthesize service/media success
+assistant,no theme,Choose a conversation perspective.,請選擇對話主題。,Only show on actual corresponding state; never synthesize service/media success
+media,preparing,Preparing the portrait…,正在準備流動畫像…,Only show on actual corresponding state; never synthesize service/media success
+media,unavailable,The portrait is unavailable. The artwork remains here.,流動畫像目前無法使用，仍可欣賞此作品。,Only show on actual corresponding state; never synthesize service/media success
+media,cancelled,You have left the portrait.,已離開流動畫像。,Only show on actual corresponding state; never synthesize service/media success
+media,complete,A moment to return.,回到此刻。,Only show on actual corresponding state; never synthesize service/media success
+media,retry unavailable,Please return to the experience or ask for help.,請返回體驗，或開啟說明。,Only show on actual corresponding state; never synthesize service/media success
+navigation,deferred,Available after this moment.,此段落結束後可使用。,Only show on actual corresponding state; never synthesize service/media success
+navigation,ready,Ready to open,已可開啟,Only show on actual corresponding state; never synthesize service/media success
+navigation,open,Open,開啟,Only show on actual corresponding state; never synthesize service/media success
+navigation,return,Return to where you were,返回剛才的體驗,Only show on actual corresponding state; never synthesize service/media success
+navigation,unavailable,This option is not available yet.,此選項尚未提供。,Only show on actual corresponding state; never synthesize service/media success
+camera,off,Camera off,相機已關閉,Only show on actual corresponding state; never synthesize service/media success
+camera,suspended,Capture suspended,已暫停擷取,Only show on actual corresponding state; never synthesize service/media success
+camera,starting,Preparing the camera…,正在準備相機…,Only show on actual corresponding state; never synthesize service/media success
+camera,lost,Tracking lost. Point again to reacquire.,失去追蹤，請重新指向目標。,Only show on actual corresponding state; never synthesize service/media success
+camera,recovered,Tracking recovered. A new target is required.,追蹤已恢復，請重新取得目標。,Only show on actual corresponding state; never synthesize service/media success
+camera,error,Camera unavailable. Use pointer and keyboard.,相機目前無法使用，請改用滑鼠與鍵盤。,Only show on actual corresponding state; never synthesize service/media success
+gallery,target,"Targeted, not yet selected.",已指向，尚未選取。,Only show on actual corresponding state; never synthesize service/media success
+gallery,confirm,Confirm this presence,確認此種存在,Only show on actual corresponding state; never synthesize service/media success
+privacy,declined,Gesture interaction was declined for this session.,本次體驗未同意使用手勢互動。,Only show on actual corresponding state; never synthesize service/media success
+privacy,review,Review your camera choice,檢視相機使用選擇,Only show on actual corresponding state; never synthesize service/media success

@@ -1,3 +1,5 @@
+> **Historical snapshot — superseded for the active repository by [Stage 3.4](Stage3LivingGlass/Cleanup/FinalLegacyRetirement/Architecture.md).** SampleScene operational rollback and imported-demo dependency statements below describe the earlier phase. Recovery now uses the verified archival commit/bundle; Living Glass is the sole development entry. Original findings are retained as historical evidence.
+
 # UIDocument Architecture
 
 **Status:** Implemented in the scene and source. Phase 3 previously verified localized Home/Privacy routes. Phase 4 has a persisted Home EN screenshot pair; the current automation run could not navigate from Home, so Phase 4 route recapture and the remaining families/overlay still need runtime regression.

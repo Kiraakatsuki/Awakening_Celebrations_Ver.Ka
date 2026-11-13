@@ -1,0 +1,211 @@
+{
+    "label": "AI-open-final-120",
+    "utc": "2026-11-13T11:28:03.7998736Z",
+    "route": "Home",
+    "locale": "English",
+    "focus": "window-close",
+    "videoState": "none",
+    "width": 1920,
+    "height": 1080,
+    "frame": 8741,
+    "performer": -1,
+    "players": 0,
+    "playingPlayers": 0,
+    "cameraConsent": false,
+    "sessionConsent": false,
+    "rigInactive": true,
+    "requestAbsent": true,
+    "overlay": true,
+    "elements": [
+        {
+            "name": "content",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1920.0,
+                "height": 1080.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "shell",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 633.0,
+                "y": 972.0,
+                "width": 655.0,
+                "height": 80.0
+            },
+            "opacity": 0.5,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        },
+        {
+            "name": "glass-window",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 988.755126953125,
+                "y": 275.6191711425781,
+                "width": 751.3564453125,
+                "height": 660.4027099609375
+            },
+            "opacity": 0.8104487061500549,
+            "scale": 0.9886268973350525,
+            "translation": {
+                "x": -98.5666732788086,
+                "y": 75.82051849365235,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "camera",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 96.0,
+                "y": 986.0,
+                "width": 242.0,
+                "height": 66.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-0",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1051.0386962890625,
+                "y": 514.8668823242188,
+                "width": 59.317626953125,
+                "height": 84.03326416015625
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-1",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1392.114990234375,
+                "y": 514.8668823242188,
+                "width": 59.317626953125,
+                "height": 84.03326416015625
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-2",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1051.0386962890625,
+                "y": 655.251953125,
+                "width": 59.317626953125,
+                "height": 84.03326416015625
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-3",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1392.114990234375,
+                "y": 655.251953125,
+                "width": 59.317626953125,
+                "height": 84.03326416015625
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-4",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1051.0386962890625,
+                "y": 795.636962890625,
+                "width": 59.317626953125,
+                "height": 84.03326416015625
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": true,
+            "text": ""
+        },
+        {
+            "name": "art-5",
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 945.0,
+                "y": 173.0,
+                "width": 879.0,
+                "height": 691.0
+            },
+            "opacity": 1.0,
+            "scale": 1.0,
+            "translation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "enabled": false,
+            "text": ""
+        }
+    ]
+}

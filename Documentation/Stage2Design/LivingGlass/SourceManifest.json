@@ -1,0 +1,227 @@
+[
+  {
+    "path": "AGENTS.md",
+    "sha256": "3d24b57108f149a89b4331e356df4ee2067867d86b5852b55417a14f5030c6eb",
+    "bytes": 2436
+  },
+  {
+    "path": ".agents/skills/accessibility-localization/SKILL.md",
+    "sha256": "32cdf0bd37db1e6d615e30ee392306cd9375c548e8a8c669ad76fc6bf924af9d",
+    "bytes": 2460
+  },
+  {
+    "path": ".agents/skills/feature-planning/SKILL.md",
+    "sha256": "1438ebff7adb2cbb5ab53953b94b3e03cec8ea02bc8a10c478ff5d46cbfca59b",
+    "bytes": 3003
+  },
+  {
+    "path": ".agents/skills/figma-to-unity/SKILL.md",
+    "sha256": "431aab8fc64c7fc995521f6da6385be05be65a2f506686295d0382e8a57d2516",
+    "bytes": 2232
+  },
+  {
+    "path": ".agents/skills/motion-interaction/SKILL.md",
+    "sha256": "ccb8f9fcd10e60c603d9b8b60914c2b54137ba54f27f9de9cddd4a4636cefae0",
+    "bytes": 2322
+  },
+  {
+    "path": ".agents/skills/premium-glass-rendering/SKILL.md",
+    "sha256": "57bcec4305bf7da6391cb4cba623520d6af9ec20e33c8e6b05e302b25243e9dc",
+    "bytes": 2398
+  },
+  {
+    "path": ".agents/skills/regression-testing/SKILL.md",
+    "sha256": "1a6d1b95376425aedd39fef1c4193a641684c0f7ab826921f110065ab4c4f06c",
+    "bytes": 2522
+  },
+  {
+    "path": ".agents/skills/unity-architecture/SKILL.md",
+    "sha256": "bbeefae1165220fdd5f1eea235e7292109625626ae8967e253dfd1d1860bb504",
+    "bytes": 2477
+  },
+  {
+    "path": ".agents/skills/unity-performance/SKILL.md",
+    "sha256": "be9562e7aa6a5304c1c5d9f9e21b6269bbe5b800c2773104044b466f0a166f69",
+    "bytes": 2407
+  },
+  {
+    "path": ".agents/skills/unity-ui-toolkit/SKILL.md",
+    "sha256": "737ea791aa3f4827d25ce5e895c52b82ae68e1e402c799b5586205f7bd7b8491",
+    "bytes": 2428
+  },
+  {
+    "path": "Documentation/PremiumExperienceAudit.md",
+    "sha256": "8459aba8916c68268b9d8382e5e1a74c6f4bbb7749da851221e593ebb9060bcf",
+    "bytes": 14582
+  },
+  {
+    "path": "Documentation/CurrentArchitectureAssessment.md",
+    "sha256": "a26d57c05ff6d94d0517c64c11c72c0ae8240cc80593ead970f95b779d2e3bcb",
+    "bytes": 12358
+  },
+  {
+    "path": "Documentation/FeatureImplementationMatrix.md",
+    "sha256": "8349ae3857a06554ef5162ba15d8cd66c749ee0defcd2ec0e75913a6a43ff569",
+    "bytes": 20720
+  },
+  {
+    "path": "Documentation/GlobalNavigationRedesign.md",
+    "sha256": "413e0b7c0de14c17384fbbc266586cbf5c6b4277780778242d15556276bc273a",
+    "bytes": 11076
+  },
+  {
+    "path": "Documentation/PremiumDesignSystem.md",
+    "sha256": "226417fc4c22ebfed4500cd0634a7f9f4ed411645cfe818ecf9b223e8fe97700",
+    "bytes": 14372
+  },
+  {
+    "path": "Documentation/MotionInteractionSpecification.md",
+    "sha256": "41ceb4654c0acf8052db6117a75f22d8cbf8b0961a8ebc8180792710dbfd2c58",
+    "bytes": 9906
+  },
+  {
+    "path": "Documentation/TargetRuntimeArchitecture.md",
+    "sha256": "e5320d884b384ca91d65c3ebcc301246732e6bf6a65ba284aeeea500728459f6",
+    "bytes": 11453
+  },
+  {
+    "path": "Documentation/TechnicalDebtAssessment.md",
+    "sha256": "97c6a1f558d32442d35c561a8493890bb9f853a9edc330687e328779ae91d14a",
+    "bytes": 9518
+  },
+  {
+    "path": "Documentation/TransformationRoadmap.md",
+    "sha256": "2b45494cc6970588aab8d4f99f6abbe08e01b5a6f1e71db13efa085b2a8b20d0",
+    "bytes": 18862
+  },
+  {
+    "path": "Documentation/TransformationAudit/ValidationAndPerformancePlan.md",
+    "sha256": "4dc314718266c2872068731ef219029b8bdab5a0ca86c877f2b224980978f543",
+    "bytes": 12846
+  },
+  {
+    "path": "Documentation/Stage2Design/ComponentStateLibrary.md",
+    "sha256": "f5886139d607c03c55bc436104d37c56238ed78a03957ad71279b06abd352d40",
+    "bytes": 4357
+  },
+  {
+    "path": "Documentation/Stage2Design/DeferredFeatureUX.md",
+    "sha256": "a4c2dd15fc91db27e9efc6f1323b2c6d0b1693cee38f50e7c7f1ee5e321b9beb",
+    "bytes": 5570
+  },
+  {
+    "path": "Documentation/Stage2Design/DesignApprovalChecklist.md",
+    "sha256": "f1eba1d47626bd15d7fe2a2bafe786d199c3cb724a96d72052f370567025e752",
+    "bytes": 4472
+  },
+  {
+    "path": "Documentation/Stage2Design/GlobalShellSpecification.md",
+    "sha256": "e6e08cddf9d30d7239b4c1051fc65c84b27a16d0f2744dff5f0b09205886440e",
+    "bytes": 4295
+  },
+  {
+    "path": "Documentation/Stage2Design/MotionStoryboard.md",
+    "sha256": "caecf3b1a0e209d9319cc480687c4dc2889a51182693fb76cd878aafe702e0dc",
+    "bytes": 4400
+  },
+  {
+    "path": "Documentation/Stage2Design/README.md",
+    "sha256": "f8e2104a5ec15d43d1798e4bab8bf55ec47d3aabe6425fa11bba4c8358878f0c",
+    "bytes": 4082
+  },
+  {
+    "path": "Documentation/Stage2Design/ScreenFamilyCoverage.md",
+    "sha256": "0f6d852b36af3c5371fa938d1dc2dbcfe78a1924a49bf4474939aef3d5dee7e9",
+    "bytes": 4015
+  },
+  {
+    "path": "Documentation/Stage2Design/SourcesAndReconciliation.md",
+    "sha256": "74b9b2b5ba2099420fe8f4cf9a584cb759c474aad6aa7efbd1560858667a6728",
+    "bytes": 3407
+  },
+  {
+    "path": "Documentation/Stage2Design/TokensAndTypography.md",
+    "sha256": "1f5377be717fef3b6a10e1d06eaed6db157b128e998762ec2c1cbca892b88b69",
+    "bytes": 4170
+  },
+  {
+    "path": "Documentation/Stage2Design/UnityFeasibilityAndRisks.md",
+    "sha256": "2ae722301e2702110e6e49fc385e69d1e18d73f9bc97277849cbb836194eb67c",
+    "bytes": 4103
+  },
+  {
+    "path": "Documentation/Stage2Design/ValidationReport.md",
+    "sha256": "00eebf52ba6ea4d5bd2f8616baed240ed4cf8d83a3fdccc0ecdcca9d0e57562c",
+    "bytes": 4403
+  },
+  {
+    "path": "Documentation/Stage2Design/VisualDirectionComparison.md",
+    "sha256": "9be5fd3358c71aefbbb73f72e44c9f59f4364388523d9b849034936e179b3dd7",
+    "bytes": 5329
+  },
+  {
+    "path": "Documentation/Stage2Design/VisualMockupIndex.md",
+    "sha256": "eabd93174271a05948a35921308c247e5c9c0df19482a97e9290ba6d4556c367",
+    "bytes": 5503
+  },
+  {
+    "path": "ProjectSettings/ProjectVersion.txt",
+    "sha256": "7682d5a612c24f8310ca7094cfe88140abc299dafb4a92293d3b405f524d6f8e",
+    "bytes": 83
+  },
+  {
+    "path": "ProjectSettings/GraphicsSettings.asset",
+    "sha256": "bcdb6ee570b5edc137b79e48f860495035136e494030e214fe39c151d16fe993",
+    "bytes": 2559
+  },
+  {
+    "path": "ProjectSettings/QualitySettings.asset",
+    "sha256": "e7dc185b977703ec43789f2e73cf2f44f31a73bb42bd594f69d5a799d65b2883",
+    "bytes": 9889
+  },
+  {
+    "path": "Packages/manifest.json",
+    "sha256": "ba47b9112d475478eefb3ce9e57f84a1516205e925fcd9fed02683c7c3ca3439",
+    "bytes": 2635
+  },
+  {
+    "path": "Assets/Settings/UniversalRP.asset",
+    "sha256": "17b9079029f0fd7226ac3d8258fb827cd7c734a97053360e31f26ecd976b0c9f",
+    "bytes": 4630
+  },
+  {
+    "path": "Assets/Settings/Renderer2D.asset",
+    "sha256": "900455794d0d788504847c3aa54e03a0374fd3635afa295ed05c2f646f974705",
+    "bytes": 3629
+  },
+  {
+    "path": "Assets/UI Toolkit/PanelSettings.asset",
+    "sha256": "4d52999cdc32e653229942aa292137117fd2b2a7a36f5df07c538c5d065aac72",
+    "bytes": 1894
+  },
+  {
+    "path": "Assets/Scripts/AwakeningApplicationController.cs",
+    "sha256": "086759ca18b6f41f4fa274edbed812ff996746be481ae6313a697870adfbb38d",
+    "bytes": 131735
+  },
+  {
+    "path": "Assets/Scripts/ScreenDocumentManager.cs",
+    "sha256": "79bfaf2b7f82ec6e6c3d6faaa84cdd2b98cf5507e08257350e24e48ea808094e",
+    "bytes": 4072
+  },
+  {
+    "path": "Assets/Scripts/RuntimeScreenCatalog.cs",
+    "sha256": "9179a92d24e77fb2bd92c5873dcb45830248a267c86ebf01c278ca78b1dcf461",
+    "bytes": 1741
+  },
+  {
+    "path": "Assets/Scripts/Interaction/GestureRecognitionLayer.cs",
+    "sha256": "1606bf2b7d72853f486b75953b2cbca516208e9ffd2b2471a3a852f50d876ab2",
+    "bytes": 45091
+  },
+  {
+    "path": "Assets/Scripts/Interaction/GestureCursorController.cs",
+    "sha256": "c71afd0dd859432b6cd02ca8f3ce101ec4c1c62829726e0d8dfe9b94ec56cf2e",
+    "bytes": 6388
+  }
+]

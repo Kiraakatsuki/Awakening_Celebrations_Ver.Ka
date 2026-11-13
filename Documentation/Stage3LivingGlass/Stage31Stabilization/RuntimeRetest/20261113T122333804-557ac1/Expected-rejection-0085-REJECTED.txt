@@ -1,0 +1,1 @@
+Presentation changed between capture request and rendered frame; rejected instead of pairing stale metadata.

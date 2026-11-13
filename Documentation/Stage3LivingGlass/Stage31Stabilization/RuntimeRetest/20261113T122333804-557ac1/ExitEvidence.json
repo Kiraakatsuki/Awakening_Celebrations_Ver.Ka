@@ -1,0 +1,14 @@
+{
+  "preExitUTC": "2026-11-13T12:31:14.5719963Z",
+  "textureNull": true,
+  "requestNull": true,
+  "activeCapture": false,
+  "copies": 0,
+  "proxies": 0,
+  "postExitUTC": "2026-11-13T12:31:16.6556235Z",
+  "playing": false,
+  "dirty": false,
+  "consent": false,
+  "VideoPlayers": 0,
+  "provenance": "Values returned by Unity MCP inspection immediately before/after stop; anonymous JsonUtility output PreExitResources.json was empty and is not used."
+}

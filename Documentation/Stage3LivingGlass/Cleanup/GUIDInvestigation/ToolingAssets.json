@@ -1,0 +1,66 @@
+{
+  "assets": [
+    {
+      "path": "Assets/Settings/Lit2DSceneTemplate.scenetemplate",
+      "type": "UnityEditor.SceneTemplate.SceneTemplateAsset",
+      "properties": [
+        {
+          "name": "dependencies.Array.data[0].dependency",
+          "type": "PPtr<$Object>",
+          "instanceId": 77722,
+          "value": null
+        },
+        {
+          "name": "preview",
+          "type": "PPtr<$Texture2D>",
+          "instanceId": 73322,
+          "value": "Assets/Settings/Lit2DSceneTemplate.scenetemplate"
+        }
+      ],
+      "subassets": [
+        {
+          "name": "Lit2DSceneTemplate",
+          "type": "UnityEditor.SceneTemplate.SceneTemplateAsset"
+        },
+        {
+          "name": "Lit 2D",
+          "type": "UnityEngine.Texture2D"
+        }
+      ]
+    },
+    {
+      "path": "Assets/TextMesh Pro/Resources/TMP Settings.asset",
+      "type": "TMPro.TMP_Settings",
+      "properties": [
+        {
+          "name": "m_defaultSpriteAsset",
+          "type": "PPtr<$TMP_SpriteAsset>",
+          "instanceId": 81758,
+          "value": null
+        },
+        {
+          "name": "m_defaultFontAsset",
+          "type": "PPtr<$TMP_FontAsset>",
+          "instanceId": 74194,
+          "value": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
+        }
+      ],
+      "subassets": [
+        {
+          "name": "TMP Settings",
+          "type": "TMPro.TMP_Settings"
+        }
+      ]
+    }
+  ],
+  "modalRefs": [
+    {
+      "guid": "140d1d2c406167c50819d89f86d9092e",
+      "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/UI/Objects/Main Canvas.prefab"
+    },
+    {
+      "guid": "14f706a2859a564a7b7ae1bb3a7985e2",
+      "path": "Assets/Samples/MediaPipe Unity Plugin/0.16.3/Official Solutions/Scenes/Hand Landmark Detection/Hand Landmark Detection Config Window.prefab"
+    }
+  ]
+}

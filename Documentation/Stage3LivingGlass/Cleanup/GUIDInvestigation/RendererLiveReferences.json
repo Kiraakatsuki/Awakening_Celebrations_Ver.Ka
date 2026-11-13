@@ -1,0 +1,44 @@
+[
+  {
+    "property": "probeVolumeResources.probeVolumeDebugShader",
+    "exists": true,
+    "objectPath": null,
+    "instanceId": 69246
+  },
+  {
+    "property": "probeVolumeResources.probeVolumeFragmentationDebugShader",
+    "exists": true,
+    "objectPath": null,
+    "instanceId": 69248
+  },
+  {
+    "property": "probeVolumeResources.probeVolumeOffsetDebugShader",
+    "exists": true,
+    "objectPath": null,
+    "instanceId": 69250
+  },
+  {
+    "property": "probeVolumeResources.probeVolumeSamplingDebugShader",
+    "exists": true,
+    "objectPath": null,
+    "instanceId": 69252
+  },
+  {
+    "property": "probeVolumeResources.probeSamplingDebugMesh",
+    "exists": true,
+    "objectPath": null,
+    "instanceId": 69254
+  },
+  {
+    "property": "probeVolumeResources.probeSamplingDebugTexture",
+    "exists": true,
+    "objectPath": null,
+    "instanceId": 69256
+  },
+  {
+    "property": "m_FallOffLookup",
+    "exists": false,
+    "objectPath": null,
+    "instanceId": 0
+  }
+]
