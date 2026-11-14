@@ -39,6 +39,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     public bool OverlayVisible { get { return overlayPlane != null; } }
     public bool IsInitialized { get { return root != null; } }
     public bool ReducedMotion { get { return assets != null && assets.reducedMotion; } }
+    internal LivingGlassMotion Motion => motion;
     private string T(string en, string zh) { return language == AppLanguage.Chinese ? zh : en; }
 
     public void Initialize(AwakeningApplicationController owner)
@@ -174,7 +175,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
             case "Gallery": BuildGallery(); break;
             case "Settings": body = Reading(content, T("Experience controls", "體驗設定")); BuildSettings(body); break;
             case "AssistantChooser": body = Reading(content, T("Choose a conversation", "選擇對話主題")); BuildChooser(body); break;
-            case "Assistant": body = Reading(content, T("Ask a presence", "與存在對話")); BuildChat(body, Mathf.Max(0, Array.IndexOf(LivingGlassRoutes.Performers, route.Substring(10)))); break;
+            case "Assistant": body = Reading(content, T("Ask a presence", "與存在對話"), true); BuildChat(body, Mathf.Max(0, Array.IndexOf(LivingGlassRoutes.Performers, route.Substring(10)))); break;
             case "Closing": BuildClosing(); break;
             case "Souvenir": BuildSouvenir(); break;
             default:
@@ -264,10 +265,15 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         Art(layout, art, "lg-standard-art");
         return copy;
     }
-    private VisualElement Reading(VisualElement parent, string title)
+    private VisualElement Reading(VisualElement parent, string title, bool conversation = false)
     {
         var surface = Box(parent, "reading", "lg-reading");
         Text(surface, title, "lg-panel-title");
+        if (conversation)
+        {
+            surface.AddToClassList("lg-chat-reading");
+            return Box(surface, "reading-chat", "lg-chat-body");
+        }
         var scroll = ReadingScroll("reading-scroll", "lg-reading-body"); surface.Add(scroll); return scroll;
     }
     private ScrollView ReadingScroll(string name, string style)
@@ -663,12 +669,26 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         conversation.focusable = true; conversation.tabIndex = 0;
         Text(conversation, T("Your conversation begins here.", "從這裡開始對話。"), "lg-empty").name = "assistant-empty";
         var status = new Label { name = "assistantChatStatus", enableRichText = false }; status.AddToClassList("lg-chat-status"); conversation.Add(status);
-        var composer = spacious ? Box(parent, "question-composer", "lg-question-composer") : parent;
-        var input = new TextField(T("Your question", "您的問題")) { name = "assistantChatInput", maxLength = 3600, multiline = true };
+        BuildQuestionComposer(parent, performer);
+    }
+    private void BuildQuestionComposer(VisualElement parent, int performer)
+    {
+        var composer = Box(parent, "question-composer", "lg-question-composer");
+        var voice = Box(composer, "voice-affordance", "lg-voice-affordance");
+        var microphone = Box(voice, "microphone-unavailable", "lg-microphone");
+        microphone.pickingMode = PickingMode.Ignore;
+        microphone.style.borderTopColor = Color.Lerp(LivingGlassAssets.Hex("#526475"), LivingGlassAssets.Accents[performer], .55f);
+        microphone.Add(new LivingGlassMicrophoneIcon());
+        Text(voice, T("Voice unavailable", "語音尚未提供"), "lg-voice-caption").name = "voice-status";
+        var input = new TextField(T("Your question", "您的問題"))
+        {
+            name = "assistantChatInput", maxLength = 3600, multiline = true,
+            verticalScrollerVisibility = ScrollerVisibility.Auto
+        };
         input.AddToClassList("lg-chat-input"); composer.Add(input);
-        var controls = Box(composer, "chat-controls", spacious ? "lg-composer-controls" : "lg-actions");
-        Action(controls, "assistantChatSend", T("Ask", "詢問"), null, "lg-primary");
-        Action(controls, "assistantCancel", T("Cancel request", "取消請求"), null, spacious ? "lg-quiet lg-request-cancel" : "lg-quiet").SetEnabled(false);
+        var controls = Box(composer, "chat-controls", "lg-composer-controls");
+        Action(controls, "assistantChatSend", T("Ask", "詢問"), null, "lg-primary lg-ask");
+        Action(controls, "assistantCancel", T("Cancel request", "取消請求"), null, "lg-quiet lg-request-cancel").SetEnabled(false);
     }
     public VisualElement OpenOverlay(string kind, AppLanguage locale, int performer)
     {
@@ -704,11 +724,21 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         if (kind == "Settings" || kind.StartsWith("Assistant-", StringComparison.Ordinal))
             Action(bar, "window-minimize", T("Minimize", "縮小"), () => flow?.LivingMinimize(), "lg-window-tool");
         var close = Action(bar, "window-close", T("Close", "關閉"), () => flow?.LivingGlassCloseOverlay(), "lg-window-tool");
-        var scroll = ReadingScroll("window-scroll", "lg-window-body"); panel.Add(scroll); body = scroll;
+        bool conversation = kind.StartsWith("Assistant-", StringComparison.Ordinal);
+        if (conversation)
+        {
+            overlayPlane.AddToClassList("lg-chat-overlay");
+            panel.AddToClassList("lg-chat-window");
+            body = Box(panel, "window-chat", "lg-chat-body");
+        }
+        else
+        {
+            var scroll = ReadingScroll("window-scroll", "lg-window-body"); panel.Add(scroll); body = scroll;
+        }
         if (kind == "Settings") BuildSettings(body);
         else if (kind == "Privacy") BuildPrivacy(body, false);
         else if (kind == "Help") BuildHelp(body);
-        else if (kind.StartsWith("Assistant-", StringComparison.Ordinal)) BuildChat(body, performer);
+        else if (conversation) BuildChat(body, performer);
         else BuildChooser(body);
         Vector2 origin = opener != null ? root.WorldToLocal(opener.worldBound.center) : new Vector2(root.resolvedStyle.width*.5f, root.resolvedStyle.height*.94f);
         panelOrigin = new Vector2(Mathf.Clamp(origin.x - root.resolvedStyle.width*.76f, -520, 120), Mathf.Clamp(origin.y - root.resolvedStyle.height*.5f, -200, 400));
@@ -796,6 +826,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         if (!editing && (evt.keyCode == KeyCode.Return || evt.keyCode == KeyCode.KeypadEnter || evt.keyCode == KeyCode.Space))
         {
             Button button = keyTarget as Button ?? keyTarget?.GetFirstAncestorOfType<Button>();
+            if (button is LivingGlassVoiceButton) return;
             if (button != null && button.enabledInHierarchy)
             {
                 using (var submit = NavigationSubmitEvent.GetPooled()) button.SendEvent(submit);

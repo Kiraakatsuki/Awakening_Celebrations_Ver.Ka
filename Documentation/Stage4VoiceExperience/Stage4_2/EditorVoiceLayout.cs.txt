@@ -1,0 +1,96 @@
+// Idle Edit Mode only. Exercises the production presentation states with a closed
+// execution gate. No click, capture, audio pipeline or web request is invoked.
+if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling
+    || EditorUtility.scriptCompilationFailed) throw new Exception("Idle compiled Editor required");
+var output = "Documentation/Stage4VoiceExperience/Stage4_2/EditorVoiceLayout.txt";
+System.IO.File.WriteAllText(output, "RUNNING");
+var window = LivingGlassPreviewWindow.Open();
+var hidden = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+var view = (LivingGlassPresentation)typeof(LivingGlassPreviewWindow).GetProperty("Presentation", hidden).GetValue(window,null);
+var type = Type.GetType("LivingGlassSpeechCapture, Assembly-CSharp", true);
+var workerType = Type.GetType("LocalSpeechWorker, Assembly-CSharp", true);
+var worker = Activator.CreateInstance(workerType, new object[]{System.IO.Path.GetFullPath("VoiceLocal")});
+var stateType = type.GetNestedType("State", System.Reflection.BindingFlags.NonPublic);
+var show = type.GetMethod("Show", hidden);
+IDisposable binding = null;
+int index = 0;
+float initialBottom = 0;
+double due = 0;
+var rows = new System.Collections.Generic.List<string>();
+Action showCase = () =>
+{
+    int stage = index % 6;
+    int p = (index / 6) % 6;
+    var locale = (AppLanguage)((index / 36) % 2);
+    bool zh = locale == AppLanguage.Chinese;
+    bool overlay = (index / 72) % 2 == 1;
+    bool compact = index >= 144;
+    if (stage == 0)
+    {
+        if (binding != null) binding.Dispose();
+        view.Root.style.width = compact ? 1280 : 1920;
+        view.Root.style.height = compact ? 720 : 1080;
+        view.Render(overlay ? "COLOR-RELEASE" : LivingGlassRoutes.Chapter(p,4), locale, p, false, true);
+        string assistant = "Assistant-" + LivingGlassRoutes.Performers[p];
+        var scope = overlay ? view.OpenOverlay(assistant, locale, p) : view.Content;
+        view.PreviewTick(1);
+        binding = (IDisposable)Activator.CreateInstance(type, hidden, null,
+            new object[]{scope, worker, UnityEngine.UIElements.UQueryExtensions.Q<UnityEngine.UIElements.TextField>(scope,"assistantChatInput"),
+                UnityEngine.UIElements.UQueryExtensions.Q<UnityEngine.UIElements.Button>(scope,"assistantChatSend"),
+                p, locale, new Func<bool>(()=>false), new Func<bool>(()=>false)}, null);
+    }
+    else
+    {
+        var states = new[]{"Idle","Consent","Recording","Review","Processing","Draft"};
+        var text = zh ? new[]{"","僅本機處理","聆聽中","取代草稿？","本機處理中","請確認草稿"} : new[]{"","Local only","Listening","Replace draft?","Processing","Review draft"};
+        var action = zh ? new[]{"","錄音","停止","取代",null,null} : new[]{"","Record","Stop","Replace",null,null};
+        show.Invoke(binding, new object[]{Enum.Parse(stateType,states[stage]),text[stage],action[stage]});
+        // The runtime ticker must stay paused. This specimen sets presentation only.
+        ((UnityEngine.UIElements.IVisualElementScheduledItem)type.GetField("ticker",hidden).GetValue(binding)).Pause();
+    }
+    due = EditorApplication.timeSinceStartup + .17;
+};
+EditorApplication.CallbackFunction tick = null;
+Action finish = () =>
+{
+    EditorApplication.update -= tick;
+    if (binding != null) binding.Dispose();
+    window.Close();
+    System.IO.File.WriteAllLines(output,rows);
+};
+tick = () =>
+{
+    if (EditorApplication.timeSinceStartup < due) return;
+    try
+    {
+        if (EditorApplication.isPlayingOrWillChangePlaymode) throw new Exception("Edit Mode only");
+        var root = view.Root;
+        var composer = UnityEngine.UIElements.UQueryExtensions.Q(root,"question-composer");
+        var rail = UnityEngine.UIElements.UQueryExtensions.Q(composer,"voice-affordance");
+        var ask = UnityEngine.UIElements.UQueryExtensions.Q(composer,"assistantChatSend");
+        var mic = UnityEngine.UIElements.UQueryExtensions.Q(rail,"voice-microphone");
+        var primary = UnityEngine.UIElements.UQueryExtensions.Q(rail,"voice-primary");
+        var cancel = UnityEngine.UIElements.UQueryExtensions.Q(rail,"voice-cancel");
+        var scale = root.worldBound.width / root.resolvedStyle.width;
+        int stage = index % 6;
+        if (stage == 0) initialBottom = ask.worldBound.yMax;
+        Rect region = rail.worldBound, icon = mic.worldBound;
+        if (icon.yMin < region.yMin - .85f || icon.xMin < region.xMin - .85f)
+            throw new Exception("Voice icon overflows at case " + index + ": " + icon + " / " + region);
+        if (stage != 0 && (cancel.worldBound.yMax > region.yMax + .85f || (stage <= 3 && primary.worldBound.height / scale < 43)
+            || cancel.worldBound.height / scale < 43 || cancel.worldBound.xMax > region.xMax + .85f))
+            throw new Exception("Voice actions do not fit case " + index + ": " + cancel.worldBound + " / " + region);
+        if (Mathf.Abs(initialBottom - ask.worldBound.yMax) > .85f)
+            throw new Exception("Ask moved across voice states in case " + index);
+        if (++index >= 288)
+        {
+            rows.Add("PASS: 288 voice presentation layouts (6 themes x 2 locales x 2 surfaces x 2 viewports x 6 states).");
+            finish();
+        }
+        else showCase();
+    }
+    catch (Exception ex) { rows.Add("FAIL: " + ex.Message); finish(); }
+};
+showCase();
+EditorApplication.update += tick;
+return "Queued 288 isolated voice control geometry specimens";

@@ -1,0 +1,29 @@
+{
+  "baseline": "e57d4fa0c72e087c4a8a86f6e5c4657ec51e4488",
+  "tracked_stage_edits": [
+    "Assets/LivingGlass/Editor/LivingGlassConversationChecks.cs",
+    "Assets/LivingGlass/Editor/LivingGlassPreviewWindow.cs",
+    "Assets/LivingGlass/Presentation/LivingGlassPresentation.cs",
+    "Assets/LivingGlass/UI/Styles/LivingGlass.uss"
+  ],
+  "preexisting_screenshot_deletions": [
+    "Assets/Screenshots.meta",
+    "Assets/Screenshots/screenshot-20261024-163626.png",
+    "Assets/Screenshots/screenshot-20261024-163626.png.meta",
+    "Assets/Screenshots/screenshot-20261024-163815.png",
+    "Assets/Screenshots/screenshot-20261024-163815.png.meta",
+    "Assets/Screenshots/screenshot-20261024-164302.png",
+    "Assets/Screenshots/screenshot-20261024-164302.png.meta",
+    "Assets/Screenshots/screenshot-20261024-170327.png",
+    "Assets/Screenshots/screenshot-20261024-170327.png.meta"
+  ],
+  "cjk_glyphs_checked": 381,
+  "missing_glyphs": 0,
+  "new_unique_script_meta_guids": 2,
+  "isolated_layout_cases": 164,
+  "transcript_minimum_logical_px": {
+    "assistant-page": 194.4,
+    "assistant-window": 225.6,
+    "reflection": 244.8
+  }
+}

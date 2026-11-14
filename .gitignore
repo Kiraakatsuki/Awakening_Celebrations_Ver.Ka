@@ -223,3 +223,7 @@ ehthumbs.db
 *.key
 *.keystore
 *.jks
+
+# Stage 4.2 local speech runtime and model installation.
+/VoiceLocal/
+/VoiceLocal-preparing-*/

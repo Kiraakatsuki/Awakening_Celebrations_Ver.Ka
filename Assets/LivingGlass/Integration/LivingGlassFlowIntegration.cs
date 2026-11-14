@@ -17,6 +17,7 @@ public sealed partial class AwakeningApplicationController
     private string livingParentOverlay;
     private bool livingPointerOwnsTarget;
     private readonly List<Action> livingChatUnbind = new List<Action>();
+    private LivingGlassSpeechCapture livingSpeech;
     private VisualElement LivingContent { get { return livingGlass != null ? livingGlass.Content : null; } }
     public bool LivingConsent { get { return consentAccepted; } }
     public bool LivingReady { get { return colorReleaseSelectionReady; } }
@@ -172,6 +173,7 @@ public sealed partial class AwakeningApplicationController
         if (livingGlass.OverlayVisible && livingOverlay == kind) { LivingGlassCloseOverlay(); return; }
         livingParentOverlay = livingOverlay == "Settings" && kind == "Privacy" ? "Settings" : null;
         if (!livingGlass.OverlayVisible) livingReturnPerformer = selectedPerformer;
+        livingSpeech?.CancelForContextChange();
         CancelAssistantRequest();
         livingOverlay = kind;
         if (kind.StartsWith("Assistant-", StringComparison.Ordinal))
@@ -227,7 +229,20 @@ public sealed partial class AwakeningApplicationController
         };
         AssistantSession session = assistantSession;
         session.cancel.SetEnabled(false);
-        Action submit = () => SubmitAssistantMessage(session, string.IsNullOrWhiteSpace(session.input.value) ? session.failedMessage : session.input.value);
+        var speech = LivingGlassSpeechCapture.Bind(root, session.input, session.send, performer, language,
+            () => session == assistantSession && IsAssistantSessionViewActive(session),
+            () => environmentalMusicSource != null && environmentalMusicSource.isPlaying, livingGlass.Motion);
+        livingSpeech = speech;
+        if (speech != null) livingChatUnbind.Add(() =>
+        {
+            speech.Dispose();
+            if (livingSpeech == speech) livingSpeech = null;
+        });
+        Action submit = () =>
+        {
+            speech?.CancelForContextChange();
+            SubmitAssistantMessage(session, string.IsNullOrWhiteSpace(session.input.value) ? session.failedMessage : session.input.value);
+        };
         session.send.clicked += submit;
         livingChatUnbind.Add(() => session.send.clicked -= submit);
         Button cancelButton = root.Q<Button>("assistantCancel");
@@ -252,7 +267,11 @@ public sealed partial class AwakeningApplicationController
         foreach (Button suggestion in root.Query<Button>(className: "lg-suggestion").ToList())
         {
             string prompt = suggestion.text;
-            Action ask = () => SubmitAssistantMessage(session, prompt);
+            Action ask = () =>
+            {
+                speech?.CancelForContextChange();
+                SubmitAssistantMessage(session, prompt);
+            };
             suggestion.clicked += ask;
             livingChatUnbind.Add(() => suggestion.clicked -= ask);
         }

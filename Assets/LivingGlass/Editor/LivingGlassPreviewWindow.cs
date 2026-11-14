@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 /// <summary>Static Editor-only view inspection. No application, recognizer, player or transport is initialized.</summary>
-public sealed class LivingGlassPreviewWindow : EditorWindow
+public sealed partial class LivingGlassPreviewWindow : EditorWindow
 {
     private LivingGlassPresentation view;
     private GameObject owner;
@@ -72,10 +72,11 @@ public sealed class LivingGlassPreviewWindow : EditorWindow
     private void FitCanvas()
     {
         float width = rootVisualElement.resolvedStyle.width, height = rootVisualElement.resolvedStyle.height;
-        float scale = Mathf.Min(width/1920, height/1080);
+        float reserved = voiceReviewToolbar == null ? 0 : 64;
+        float scale = Mathf.Max(0, Mathf.Min(width/1920, (height-reserved)/1080));
         canvas.style.scale = new Scale(new Vector3(scale,scale,1));
         canvas.style.left = (width-1920*scale)*.5f;
-        canvas.style.top = (height-1080*scale)*.5f;
+        canvas.style.top = reserved + (height-reserved-1080*scale)*.5f;
     }
     public static string CapturePackage()
     {
@@ -145,6 +146,7 @@ public sealed class LivingGlassPreviewWindow : EditorWindow
     }
     private void OnDisable()
     {
+        AssemblyReloadEvents.beforeAssemblyReload -= Close;
         EditorApplication.update -= Tick;
         view?.Shutdown();
         if (owner != null) DestroyImmediate(owner);

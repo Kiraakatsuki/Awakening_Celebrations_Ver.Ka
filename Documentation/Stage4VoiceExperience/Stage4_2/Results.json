@@ -1,0 +1,930 @@
+{
+  "flags": [
+    "-t",
+    "4",
+    "-bs",
+    "1",
+    "-bo",
+    "1",
+    "-mc",
+    "0",
+    "-nf",
+    "-sns",
+    "-nt",
+    "-fa",
+    "--vad",
+    "-vt",
+    "0.5",
+    "-vspd",
+    "250"
+  ],
+  "corpus": [
+    {
+      "id": "en-6930-75918-0000",
+      "reference": "CONCORD RETURNED TO ITS PLACE AMIDST THE TENTS",
+      "language": "en",
+      "kind": "human",
+      "source": "LibriSpeech test.clean",
+      "row": 0,
+      "seconds": 3.505,
+      "sha256": "103c3f15eb3715ebc6243d142244128a3ac39b6bfae315baa6b8dc4a8be14aa8"
+    },
+    {
+      "id": "en-6930-75918-0001",
+      "reference": "THE ENGLISH FORWARDED TO THE FRENCH BASKETS OF FLOWERS OF WHICH THEY HAD MADE A PLENTIFUL PROVISION TO GREET THE ARRIVAL OF THE YOUNG PRINCESS THE FRENCH IN RETURN INVITED THE ENGLISH TO A SUPPER WHICH WAS TO BE GIVEN THE NEXT DAY",
+      "language": "en",
+      "kind": "human",
+      "source": "LibriSpeech test.clean",
+      "row": 1,
+      "seconds": 14.225,
+      "sha256": "7a0c28ad2cca523cd7e7d72e360a3f314eeb905688358dbf6f150c0a87b87f76"
+    },
+    {
+      "id": "en-6930-75918-0006",
+      "reference": "THIS HAS INDEED BEEN A HARASSING DAY CONTINUED THE YOUNG MAN HIS EYES FIXED UPON HIS FRIEND",
+      "language": "en",
+      "kind": "human",
+      "source": "LibriSpeech test.clean",
+      "row": 6,
+      "seconds": 5.85,
+      "sha256": "b4ee5871dbb5084f596aa076453afc255f1416c83aec19d05e324ef4e062fc4d"
+    },
+    {
+      "id": "en-6930-75918-0012",
+      "reference": "IT IS ANNOYANCE THEN",
+      "language": "en",
+      "kind": "human",
+      "source": "LibriSpeech test.clean",
+      "row": 12,
+      "seconds": 1.94,
+      "sha256": "fd64fa604791bb9e8adfee8278d4d86ac5cdfa79efeb4a61cd69b81b2a627e2f"
+    },
+    {
+      "id": "en-6930-76324-0000",
+      "reference": "GOLIATH MAKES ANOTHER DISCOVERY",
+      "language": "en",
+      "kind": "human",
+      "source": "LibriSpeech test.clean",
+      "row": 21,
+      "seconds": 3.025,
+      "sha256": "428b6bd1ef1f1bba4486d4717ab9b3431b20330a97e2cf6690d5d2454d38dab7"
+    },
+    {
+      "id": "en-6930-76324-0010",
+      "reference": "WHAT IN THE WORLD IS THAT QUERIED JOYCE",
+      "language": "en",
+      "kind": "human",
+      "source": "LibriSpeech test.clean",
+      "row": 31,
+      "seconds": 2.69,
+      "sha256": "8f3518c80a85cef01a523aa73c1df41f63c0cd87e78893187805cf0808b5a247"
+    },
+    {
+      "id": "exhibition-question",
+      "language": "en",
+      "kind": "synthetic",
+      "reference": "How does the light in Gaia change what I notice?",
+      "seconds": 3.39,
+      "sha256": "76be804f6f918a3ff69d457433ccfbec4ef876b490d951e9ed868624968c96df"
+    },
+    {
+      "id": "exhibition-names",
+      "language": "en",
+      "kind": "synthetic",
+      "reference": "Gaia Pandemic Rebirth White Guardian Conscience Sanctuary",
+      "seconds": 6.595,
+      "sha256": "e10afedce1dff74075af38c685a453991ef831cb50ba57eed6b459470c873819"
+    },
+    {
+      "id": "zh-fleurs-10519077850963840950",
+      "reference": "他称，他制作了一个 WiFi 门铃。",
+      "language": "zh",
+      "source": "Google FLEURS cmn_hans_cn validation",
+      "kind": "human",
+      "gender": 0,
+      "fleurs_id": 1554,
+      "seconds": 5.58,
+      "sha256": "696af0c04a1c95f88490f8107748d60287b148c3259038fd2cc5987f6e57c8b3"
+    },
+    {
+      "id": "zh-fleurs-11184525298057700964",
+      "reference": "西班牙人开始了长达三个世纪的殖民时期。",
+      "language": "zh",
+      "source": "Google FLEURS cmn_hans_cn validation",
+      "kind": "human",
+      "gender": 1,
+      "fleurs_id": 1636,
+      "seconds": 4.74,
+      "sha256": "b1043e541e056d4192d07018da76ee6edee19c9b372a4b969f0d2b595cf134b3"
+    },
+    {
+      "id": "zh-fleurs-11401752723132552192",
+      "reference": "内陆水道可以作为假期游玩的一个不错的主题。",
+      "language": "zh",
+      "source": "Google FLEURS cmn_hans_cn validation",
+      "kind": "human",
+      "gender": 1,
+      "fleurs_id": 1624,
+      "seconds": 4.8,
+      "sha256": "1edb0dcb978c3cab14e676be8526ec913663d7689e25e860abd61e81e18e4b62"
+    },
+    {
+      "id": "zh-fleurs-11883900098453826298",
+      "reference": "然后，拉卡·辛格带头唱了拜赞歌。",
+      "language": "zh",
+      "source": "Google FLEURS cmn_hans_cn validation",
+      "kind": "human",
+      "gender": 1,
+      "fleurs_id": 1578,
+      "seconds": 4.98,
+      "sha256": "edc8afb00fe6c1d5077ea3d0d7b85347f016bd078360ed3b8a71dfbbbb387d0b"
+    },
+    {
+      "id": "zh-fleurs-11978822748877094326",
+      "reference": "内陆水道可以作为假期游玩的一个不错的主题。",
+      "language": "zh",
+      "source": "Google FLEURS cmn_hans_cn validation",
+      "kind": "human",
+      "gender": 1,
+      "fleurs_id": 1624,
+      "seconds": 4.38,
+      "sha256": "d06b8ff651574c27c365969894d12a3809ae794f76319bc589be4a99cb8877fb"
+    },
+    {
+      "id": "zh-fleurs-12458238763518474227",
+      "reference": "这是马特利 (Martelly) 四年来第五次入选海地临时选举委员会 (CEP)。",
+      "language": "zh",
+      "source": "Google FLEURS cmn_hans_cn validation",
+      "kind": "human",
+      "gender": 1,
+      "fleurs_id": 1515,
+      "seconds": 5.34,
+      "sha256": "aee81b83688dbfb6d705b39ea0bc11f75ec2f7b398dd8765cd4ce9cff705bd2e"
+    },
+    {
+      "id": "zh-fleurs-10116334326946811387",
+      "reference": "报告警告称，没有人能保证目前在伊拉克采取的任何行动能够阻止宗派战争、不断增长的暴力或走向混乱。",
+      "language": "zh",
+      "source": "Google FLEURS cmn_hans_cn validation",
+      "kind": "human",
+      "gender": 0,
+      "fleurs_id": 1579,
+      "seconds": 18.38,
+      "sha256": "b70afdd1b122991cff6600a6541deac0b93b6e13dafe583192924d2ab35ba54d"
+    },
+    {
+      "id": "silence",
+      "reference": "",
+      "kind": "negative",
+      "language": "en",
+      "seconds": 4.0,
+      "sha256": "f751fd7094be088dc785125e4a1a0222a17c2bd20469aa31728ca5e515ed5809"
+    },
+    {
+      "id": "noise",
+      "reference": "",
+      "kind": "negative",
+      "language": "zh",
+      "seconds": 4.0,
+      "sha256": "dc167664822a10c684960015df0531c56b9278a3149b9f2040a5029dd2542e15"
+    },
+    {
+      "id": "question-noisy",
+      "reference": "How does the light in Gaia change what I notice?",
+      "kind": "synthetic",
+      "language": "en",
+      "seconds": 3.39,
+      "sha256": "e2bedda81f1d2f5bfcbb923ef1282b42859c7b18b389a4e0aa97d0ac984d24b5"
+    },
+    {
+      "id": "mixed-spliced",
+      "reference": "他称，他制作了一个 WiFi 门铃。How does the light in Gaia change what I notice?",
+      "kind": "spliced",
+      "language": "zh",
+      "seconds": 9.17,
+      "sha256": "d01649d8278f64238a9b1b236ace945b33678c569232e489d58edc74df1493b9"
+    }
+  ],
+  "trials": [
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0000"
+      ],
+      "pipe": true,
+      "wall_ms": 946.03,
+      "peak_working_bytes": 362278912,
+      "peak_commit_bytes": 1799540736,
+      "outputs": [
+        "The Concorde returned to its place amidst the tents."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 521.79,
+      "encode": 163.8,
+      "total": 745.25
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0001"
+      ],
+      "pipe": true,
+      "wall_ms": 1126.55,
+      "peak_working_bytes": 364593152,
+      "peak_commit_bytes": 1801986048,
+      "outputs": [
+        "The English forwarded to the French baskets of flowers, of which they had made a plentiful provision to greet the arrival of the young princess. The French, in return, invited the English to a supper, which was to be given the next day."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 485.16,
+      "encode": 157.43,
+      "total": 810.4
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0006"
+      ],
+      "pipe": true,
+      "wall_ms": 934.09,
+      "peak_working_bytes": 363204608,
+      "peak_commit_bytes": 1801347072,
+      "outputs": [
+        "This has indeed been a harassing day, continued the young man, his eyes fixed upon his friend."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 497.4,
+      "encode": 163.88,
+      "total": 746.26
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0012"
+      ],
+      "pipe": true,
+      "wall_ms": 898.16,
+      "peak_working_bytes": 362299392,
+      "peak_commit_bytes": 1798610944,
+      "outputs": [
+        "It is annoyance then."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 492.01,
+      "encode": 163.91,
+      "total": 700.27
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-76324-0000"
+      ],
+      "pipe": true,
+      "wall_ms": 864.14,
+      "peak_working_bytes": 362426368,
+      "peak_commit_bytes": 1801543680,
+      "outputs": [
+        "Goliath makes another discovery."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 480.6,
+      "encode": 161.18,
+      "total": 688.86
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-76324-0010"
+      ],
+      "pipe": true,
+      "wall_ms": 876.12,
+      "peak_working_bytes": 362647552,
+      "peak_commit_bytes": 1800343552,
+      "outputs": [
+        "What in the world is it? Query choice."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 487.36,
+      "encode": 156.34,
+      "total": 701.93
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "exhibition-question"
+      ],
+      "pipe": true,
+      "wall_ms": 902.58,
+      "peak_working_bytes": 362475520,
+      "peak_commit_bytes": 1800605696,
+      "outputs": [
+        "How does the light in Gaia change what I notice?"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 474.93,
+      "encode": 154.88,
+      "total": 695.52
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "exhibition-names"
+      ],
+      "pipe": true,
+      "wall_ms": 1004.99,
+      "peak_working_bytes": 363261952,
+      "peak_commit_bytes": 1800187904,
+      "outputs": [
+        "Gaia, Pandemic, Rebirth, White Guardian, Conscience, Sanctuary."
+      ],
+      "vad_segments": [
+        6
+      ],
+      "load": 478.65,
+      "encode": 151.31,
+      "total": 711.14
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-10519077850963840950"
+      ],
+      "pipe": true,
+      "wall_ms": 903.08,
+      "peak_working_bytes": 362401792,
+      "peak_commit_bytes": 1799364608,
+      "outputs": [
+        "他称,他制作了一个WiFi门铃"
+      ],
+      "vad_segments": [
+        2
+      ],
+      "load": 494.53,
+      "encode": 157.61,
+      "total": 724.38
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11184525298057700964"
+      ],
+      "pipe": true,
+      "wall_ms": 906.15,
+      "peak_working_bytes": 362790912,
+      "peak_commit_bytes": 1801916416,
+      "outputs": [
+        "西班牙人开始了长达三个世纪的殖民时期"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 473.63,
+      "encode": 166.03,
+      "total": 717.46
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11401752723132552192"
+      ],
+      "pipe": true,
+      "wall_ms": 920.92,
+      "peak_working_bytes": 362594304,
+      "peak_commit_bytes": 1799950336,
+      "outputs": [
+        "内陆水调可以作为假期游玩的一个不错的主题"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 479.25,
+      "encode": 152.08,
+      "total": 709.17
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11883900098453826298"
+      ],
+      "pipe": true,
+      "wall_ms": 877.94,
+      "peak_working_bytes": 362569728,
+      "peak_commit_bytes": 1801592832,
+      "outputs": [
+        "然后拉卡辛格带头唱了半战歌"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 488.18,
+      "encode": 155.96,
+      "total": 709.32
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11978822748877094326"
+      ],
+      "pipe": true,
+      "wall_ms": 894.68,
+      "peak_working_bytes": 362561536,
+      "peak_commit_bytes": 1801162752,
+      "outputs": [
+        "内漏水稿可以作为假期游玩的一个不错的主题"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 478.43,
+      "encode": 157.21,
+      "total": 720.92
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-12458238763518474227"
+      ],
+      "pipe": true,
+      "wall_ms": 931.77,
+      "peak_working_bytes": 362463232,
+      "peak_commit_bytes": 1799733248,
+      "outputs": [
+        "这是马跳利第四年来第五次入选海第临时选举委员会"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 494.52,
+      "encode": 172.84,
+      "total": 765.94
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-10116334326946811387"
+      ],
+      "pipe": true,
+      "wall_ms": 1057.29,
+      "peak_working_bytes": 364617728,
+      "peak_commit_bytes": 1802215424,
+      "outputs": [
+        "报告警告称,没有人能保证目前在伊拉克采取的任何行动,能够阻止宗派战争不断增长的暴力或走向混乱。"
+      ],
+      "vad_segments": [
+        4
+      ],
+      "load": 501.76,
+      "encode": 167.94,
+      "total": 856.16
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "silence"
+      ],
+      "pipe": true,
+      "wall_ms": 679.86,
+      "peak_working_bytes": 294494208,
+      "peak_commit_bytes": 1645281280,
+      "outputs": [
+        ""
+      ],
+      "vad_segments": [
+        0
+      ],
+      "load": 485.73,
+      "encode": 0.0,
+      "total": 505.6
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "noise"
+      ],
+      "pipe": true,
+      "wall_ms": 694.36,
+      "peak_working_bytes": 293937152,
+      "peak_commit_bytes": 1645838336,
+      "outputs": [
+        ""
+      ],
+      "vad_segments": [
+        0
+      ],
+      "load": 500.33,
+      "encode": 0.0,
+      "total": 520.02
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "question-noisy"
+      ],
+      "pipe": true,
+      "wall_ms": 890.67,
+      "peak_working_bytes": 362905600,
+      "peak_commit_bytes": 1800060928,
+      "outputs": [
+        "How does the light in Gaia change what I notice?"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 473.9,
+      "encode": 163.96,
+      "total": 701.91
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "mixed-spliced"
+      ],
+      "pipe": true,
+      "wall_ms": 927.11,
+      "peak_working_bytes": 363130880,
+      "peak_commit_bytes": 1800134656,
+      "outputs": [
+        "他称 他制作了一个WiFi门铃。How does the light in Gaia change what I notice?"
+      ],
+      "vad_segments": [
+        3
+      ],
+      "load": 489.44,
+      "encode": 158.61,
+      "total": 754.47
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0000"
+      ],
+      "pipe": true,
+      "wall_ms": 886.98,
+      "peak_working_bytes": 362401792,
+      "peak_commit_bytes": 1800294400,
+      "outputs": [
+        "The Concorde returned to its place amidst the tents."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 495.84,
+      "encode": 156.54,
+      "total": 713.13
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0006"
+      ],
+      "pipe": true,
+      "wall_ms": 888.76,
+      "peak_working_bytes": 363307008,
+      "peak_commit_bytes": 1801904128,
+      "outputs": [
+        "This has indeed been a harassing day, continued the young man, his eyes fixed upon his friend."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 477.86,
+      "encode": 155.63,
+      "total": 722.72
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0012"
+      ],
+      "pipe": true,
+      "wall_ms": 1013.42,
+      "peak_working_bytes": 362659840,
+      "peak_commit_bytes": 1799409664,
+      "outputs": [
+        "It is annoyance then."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 504.08,
+      "encode": 166.25,
+      "total": 718.6
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-76324-0000"
+      ],
+      "pipe": true,
+      "wall_ms": 887.86,
+      "peak_working_bytes": 362196992,
+      "peak_commit_bytes": 1801281536,
+      "outputs": [
+        "Goliath makes another discovery."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 487.86,
+      "encode": 158.98,
+      "total": 693.45
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-76324-0010"
+      ],
+      "pipe": true,
+      "wall_ms": 885.7,
+      "peak_working_bytes": 362344448,
+      "peak_commit_bytes": 1799299072,
+      "outputs": [
+        "What in the world is it? Query choice."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 496.16,
+      "encode": 155.6,
+      "total": 710.5
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-10519077850963840950"
+      ],
+      "pipe": true,
+      "wall_ms": 1027.39,
+      "peak_working_bytes": 362770432,
+      "peak_commit_bytes": 1801195520,
+      "outputs": [
+        "他称,他制作了一个WiFi门铃"
+      ],
+      "vad_segments": [
+        2
+      ],
+      "load": 489.4,
+      "encode": 154.41,
+      "total": 714.32
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11184525298057700964"
+      ],
+      "pipe": true,
+      "wall_ms": 896.56,
+      "peak_working_bytes": 362905600,
+      "peak_commit_bytes": 1800192000,
+      "outputs": [
+        "西班牙人开始了长达三个世纪的殖民时期"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 478.55,
+      "encode": 162.59,
+      "total": 724.91
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11401752723132552192"
+      ],
+      "pipe": true,
+      "wall_ms": 902.32,
+      "peak_working_bytes": 362557440,
+      "peak_commit_bytes": 1800634368,
+      "outputs": [
+        "内陆水调可以作为假期游玩的一个不错的主题"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 487.74,
+      "encode": 160.51,
+      "total": 731.09
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11883900098453826298"
+      ],
+      "pipe": true,
+      "wall_ms": 916.84,
+      "peak_working_bytes": 362823680,
+      "peak_commit_bytes": 1800613888,
+      "outputs": [
+        "然后拉卡辛格带头唱了半战歌"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 503.13,
+      "encode": 155.05,
+      "total": 727.08
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-11978822748877094326"
+      ],
+      "pipe": true,
+      "wall_ms": 917.35,
+      "peak_working_bytes": 362782720,
+      "peak_commit_bytes": 1799847936,
+      "outputs": [
+        "内漏水稿可以作为假期游玩的一个不错的主题"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 489.47,
+      "encode": 154.35,
+      "total": 725.78
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-12458238763518474227"
+      ],
+      "pipe": true,
+      "wall_ms": 936.63,
+      "peak_working_bytes": 362729472,
+      "peak_commit_bytes": 1800052736,
+      "outputs": [
+        "这是马跳利第四年来第五次入选海第临时选举委员会"
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 490.43,
+      "encode": 166.09,
+      "total": 758.19
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "en-6930-75918-0000",
+        "en-6930-75918-0006",
+        "en-6930-75918-0012",
+        "en-6930-76324-0000",
+        "en-6930-76324-0010",
+        "en-6930-75918-0000",
+        "en-6930-75918-0006",
+        "en-6930-75918-0012",
+        "en-6930-76324-0000",
+        "en-6930-76324-0010"
+      ],
+      "pipe": false,
+      "wall_ms": 2218.7,
+      "peak_working_bytes": 367116288,
+      "peak_commit_bytes": 1805565952,
+      "outputs": [
+        "The Concorde returned to its place amidst the tents.",
+        "This has indeed been a harassing day, continued the young man, his eyes fixed upon his friend.",
+        "It is annoyance then.",
+        "Goliath makes another discovery.",
+        "What in the world is it? Query choice.",
+        "The Concorde returned to its place amidst the tents.",
+        "This has indeed been a harassing day, continued the young man, his eyes fixed upon his friend.",
+        "It is annoyance then.",
+        "Goliath makes another discovery.",
+        "What in the world is it? Query choice."
+      ],
+      "vad_segments": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "load": 501.51,
+      "encode": 1023.64,
+      "total": 1916.92
+    },
+    {
+      "backend": "cpu",
+      "clips": [
+        "en-6930-75918-0000"
+      ],
+      "pipe": true,
+      "wall_ms": 14831.48,
+      "peak_working_bytes": 781635584,
+      "peak_commit_bytes": 1381105664,
+      "outputs": [
+        "The Concorde returned to its place amidst the tents."
+      ],
+      "vad_segments": [
+        1
+      ],
+      "load": 435.81,
+      "encode": 13815.46,
+      "total": 14375.29
+    },
+    {
+      "backend": "cuda",
+      "clips": [
+        "zh-fleurs-10519077850963840950",
+        "zh-fleurs-11184525298057700964",
+        "zh-fleurs-11401752723132552192",
+        "zh-fleurs-11883900098453826298",
+        "zh-fleurs-11978822748877094326",
+        "zh-fleurs-12458238763518474227",
+        "zh-fleurs-10519077850963840950",
+        "zh-fleurs-11184525298057700964",
+        "zh-fleurs-11401752723132552192",
+        "zh-fleurs-11883900098453826298",
+        "zh-fleurs-11978822748877094326",
+        "zh-fleurs-12458238763518474227"
+      ],
+      "pipe": false,
+      "wall_ms": 2823.44,
+      "peak_working_bytes": 366280704,
+      "peak_commit_bytes": 1804328960,
+      "outputs": [
+        "他称,他制作了一个WiFi门铃",
+        "西班牙人开始了长达三个世纪的殖民时期",
+        "内陆水调可以作为假期游玩的一个不错的主题",
+        "然后拉卡辛格带头唱了半战歌",
+        "内漏水稿可以作为假期游玩的一个不错的主题",
+        "这是马跳利第四年来第五次入选海第临时选举委员会",
+        "他称,他制作了一个WiFi门铃",
+        "西班牙人开始了长达三个世纪的殖民时期",
+        "内陆水调可以作为假期游玩的一个不错的主题",
+        "然后拉卡辛格带头唱了半战歌",
+        "内漏水稿可以作为假期游玩的一个不错的主题",
+        "这是马跳利第四年来第五次入选海第临时选举委员会"
+      ],
+      "vad_segments": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "load": 528.43,
+      "encode": 1231.71,
+      "total": 2490.12
+    },
+    {
+      "backend": "cpu",
+      "clips": [
+        "zh-fleurs-10519077850963840950"
+      ],
+      "pipe": true,
+      "wall_ms": 14379.88,
+      "peak_working_bytes": 781221888,
+      "peak_commit_bytes": 1381244928,
+      "outputs": [
+        "他称,他制作了一个WiFi门铃"
+      ],
+      "vad_segments": [
+        2
+      ],
+      "load": 394.58,
+      "encode": 13743.36,
+      "total": 14291.43
+    }
+  ],
+  "en_errors": [
+    5,
+    84
+  ],
+  "zh_errors": [
+    18,
+    162
+  ],
+  "short_cuda_wall_ms": {
+    "n": 22,
+    "median": 902.7,
+    "p95": 1013.42,
+    "maximum": 1027.39
+  }
+}

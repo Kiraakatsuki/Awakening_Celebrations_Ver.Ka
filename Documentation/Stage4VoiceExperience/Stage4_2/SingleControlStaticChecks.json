@@ -1,0 +1,9 @@
+{
+  "protectedTrackedDiff": 0,
+  "probeMetaUnique": true,
+  "captureStartSites": 1,
+  "voicePromptOrNetworkCallSites": 0,
+  "obsoleteVoiceBindingSites": 0,
+  "editorTestsUseExistingWorkerFixture": true,
+  "head": "e57d4fa0c72e087c4a8a86f6e5c4657ec51e4488"
+}

@@ -1,0 +1,11 @@
+PASS: Draft and IME confirmation policy
+PASS: Phrase conversion preserves Latin and punctuation
+PASS: PCM stereo mix and 48 kHz to 16 kHz WAV
+PASS: Installed CUDA worker, English stdin to editable text
+PASS: Installed CUDA worker, Mandarin and Traditional Chinese
+PASS: VAD silence
+PASS: Missing installation
+PASS: Cancel a running file request
+PASS: Worker timeout
+PASS: Fresh request succeeds after cancellation
+NOT RUN: capture, real permission denial, disconnect, Play Mode, live assistant

@@ -1,0 +1,84 @@
+// Run with Unity MCP execute_code in idle Edit Mode. Pass sample paths in
+// the invocation before this method body. All speech samples are corpus files.
+if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling
+    || EditorUtility.scriptCompilationFailed) throw new Exception("Idle compiled Editor required");
+var speech = Type.GetType("LocalSpeechWorker, Assembly-CSharp", true);
+var capture = Type.GetType("LivingGlassSpeechCapture, Assembly-CSharp", true);
+var flags = System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic;
+var worker = Activator.CreateInstance(speech, new object[]{System.IO.Path.GetFullPath("VoiceLocal")});
+var transcribe = speech.GetMethod("Transcribe");
+var confirm = capture.GetMethod("NeedsDraftConfirmation", flags);
+var discard = capture.GetMethod("CanDiscard", flags);
+var output = "Documentation/Stage4VoiceExperience/Stage4_2/EditorWorkerChecks.txt";
+System.IO.File.WriteAllText(output, "RUNNING file-only Windows worker checks");
+
+Func<string, float[]> readSample = path =>
+{
+    using (var file = new System.IO.BinaryReader(System.IO.File.OpenRead(path)))
+    {
+        if (file.ReadInt32() != 0x46464952) throw new Exception("Expected RIFF");
+        file.ReadInt32();
+        if (file.ReadInt32() != 0x45564157) throw new Exception("Expected WAVE");
+        while (file.BaseStream.Position < file.BaseStream.Length)
+        {
+            int id = file.ReadInt32(), size = file.ReadInt32();
+            if (id == 0x61746164) return Enumerable.Range(0, size / 2).Select(_ => file.ReadInt16() / 32768f).ToArray();
+            file.BaseStream.Seek(size + size % 2, System.IO.SeekOrigin.Current);
+        }
+        throw new Exception("No PCM chunk");
+    }
+};
+
+Func<object,float[],bool,System.Threading.CancellationToken,System.Threading.Tasks.Task<string>> recognize = async (adapter, data, zh, token) =>
+{
+    var task = (System.Threading.Tasks.Task)transcribe.Invoke(adapter, new object[]{data, 1, 16000, zh, token});
+    await task.ConfigureAwait(false);
+    var result = task.GetType().GetProperty("Result").GetValue(task, null);
+    string status = result.GetType().GetField("Outcome").GetValue(result).ToString();
+    string text = (string)result.GetType().GetField("Text").GetValue(result);
+    if (data.Any(x => x != 0)) throw new Exception("PCM was not released");
+    if (status == "Ready" && (zh ? !text.Contains("門鈴") || !text.Contains("WiFi") : !text.Contains("Gaia")))
+        throw new Exception("Corpus result did not meet the expected text/script contract");
+    return status;
+};
+
+System.Threading.Tasks.Task.Run(async () =>
+{
+    var lines = new System.Collections.Generic.List<string>();
+    Action<bool,string> check = (condition, name) =>
+    {
+        if (!condition) throw new Exception(name);
+        lines.Add("PASS: " + name);
+    };
+    try
+    {
+        check(!(bool)confirm.Invoke(null, new object[]{"", ""})
+            && (bool)confirm.Invoke(null, new object[]{"typed", ""})
+            && (bool)confirm.Invoke(null, new object[]{"", "注"}), "Draft and IME confirmation policy");
+        check((bool)discard.Invoke(null, new object[]{"draft", "draft"})
+            && !(bool)discard.Invoke(null, new object[]{"draft", "draft edited"}), "Discard protects a visitor edit");
+        var convert = Type.GetType("TraditionalSpeechText, Assembly-CSharp", true).GetMethod("Convert");
+        check((string)convert.Invoke(null, new object[]{"头发、干杯，以后到后台。WiFi GAIA.", System.IO.Path.GetFullPath("VoiceLocal/script")})
+            == "頭髮、乾杯，以後到後臺。WiFi GAIA.", "Phrase conversion preserves Latin and punctuation");
+        var encode = speech.GetMethod("EncodeWave", flags);
+        var stereo = Enumerable.Range(0, 960).Select(i => i % 2 == 0 ? .75f : -.25f).ToArray();
+        var wav = (byte[])encode.Invoke(null,new object[]{stereo,2,48000,System.Threading.CancellationToken.None});
+        check(wav.Length == 364 && BitConverter.ToInt16(wav, 22) == 1
+            && BitConverter.ToInt32(wav, 24) == 16000
+            && Math.Abs(BitConverter.ToInt16(wav, 44) - 8192) <= 1, "PCM stereo mix and 48 kHz to 16 kHz WAV");
+        check(await recognize(worker, readSample(english), false, System.Threading.CancellationToken.None) == "Ready", "Installed CUDA worker, English stdin to editable text");
+        check(await recognize(worker, readSample(mandarin), true, System.Threading.CancellationToken.None) == "Ready", "Installed CUDA worker, Mandarin and Traditional Chinese");
+        check(await recognize(worker, new float[64000], false, System.Threading.CancellationToken.None) == "NoSpeech", "VAD silence");
+        var absent = Activator.CreateInstance(speech, new object[]{System.IO.Path.GetFullPath("VoiceLocal/nonexistent")});
+        check(await recognize(absent, readSample(english), false, System.Threading.CancellationToken.None) == "Unavailable", "Missing installation");
+        using (var cancellation = new System.Threading.CancellationTokenSource(150))
+            check(await recognize(worker, readSample(english), false, cancellation.Token) == "Cancelled", "Cancel a running file request");
+        var impatient = Activator.CreateInstance(speech, new object[]{System.IO.Path.GetFullPath("VoiceLocal"), TimeSpan.FromMilliseconds(100)});
+        check(await recognize(impatient, readSample(english), false, System.Threading.CancellationToken.None) == "Timeout", "Worker timeout");
+        check(await recognize(worker, readSample(english), false, System.Threading.CancellationToken.None) == "Ready", "Fresh request succeeds after cancellation");
+        lines.Add("NOT RUN: capture, real permission denial, disconnect, Play Mode, live assistant");
+    }
+    catch (Exception ex) { lines.Add("FAIL: " + ex.GetType().Name + " " + ex.Message); }
+    System.IO.File.WriteAllLines(output, lines);
+});
+return "Queued offline Editor worker and draft checks";
