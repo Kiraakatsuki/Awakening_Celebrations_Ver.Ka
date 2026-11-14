@@ -1,0 +1,71 @@
+{
+  "approved": true,
+  "revision": "stage43d2-approved-tutorial",
+  "clips": [
+    {
+      "id": "welcome",
+      "en": "LivingGlassGuide/Approved/welcome-en",
+      "zh": "LivingGlassGuide/Approved/welcome-zh"
+    },
+    {
+      "id": "privacy",
+      "en": "LivingGlassGuide/Approved/privacy-en",
+      "zh": "LivingGlassGuide/Approved/privacy-zh"
+    },
+    {
+      "id": "overview",
+      "en": "LivingGlassGuide/Approved/overview-en",
+      "zh": "LivingGlassGuide/Approved/overview-zh"
+    },
+    {
+      "id": "gestures",
+      "en": "LivingGlassGuide/Approved/gestures-en",
+      "zh": "LivingGlassGuide/Approved/gestures-zh"
+    },
+    {
+      "id": "awakening",
+      "en": "LivingGlassGuide/Approved/awakening-en",
+      "zh": "LivingGlassGuide/Approved/awakening-zh"
+    },
+    {
+      "id": "discovery",
+      "en": "LivingGlassGuide/Approved/discovery-en",
+      "zh": "LivingGlassGuide/Approved/discovery-zh"
+    },
+    {
+      "id": "reflection",
+      "en": "LivingGlassGuide/Approved/reflection-en",
+      "zh": "LivingGlassGuide/Approved/reflection-zh"
+    },
+    {
+      "id": "closing",
+      "en": "LivingGlassGuide/Approved/closing-en",
+      "zh": "LivingGlassGuide/Approved/closing-zh"
+    },
+    {
+      "id": "tutorial-colour",
+      "en": "LivingGlassGuide/Approved/tutorial-colour-en",
+      "zh": "LivingGlassGuide/Approved/tutorial-colour-zh"
+    },
+    {
+      "id": "tutorial-confirm",
+      "en": "LivingGlassGuide/Approved/tutorial-confirm-en",
+      "zh": "LivingGlassGuide/Approved/tutorial-confirm-zh"
+    },
+    {
+      "id": "tutorial-move",
+      "en": "LivingGlassGuide/Approved/tutorial-move-en",
+      "zh": "LivingGlassGuide/Approved/tutorial-move-zh"
+    },
+    {
+      "id": "tutorial-portrait",
+      "en": "LivingGlassGuide/Approved/tutorial-portrait-en",
+      "zh": "LivingGlassGuide/Approved/tutorial-portrait-zh"
+    },
+    {
+      "id": "tutorial-ready",
+      "en": "LivingGlassGuide/Approved/tutorial-ready-en",
+      "zh": "LivingGlassGuide/Approved/tutorial-ready-zh"
+    }
+  ]
+}

@@ -311,10 +311,13 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     {
         var copy = Standard(T("AN INVITATION TO FEEL", "邀請您，一同感知"), T("A presence.\nAn awakening.", "與存在相遇。\n讓感知甦醒。"),
             T("Enter six artistic worlds. Let attention become an encounter.", "走進六種藝術世界，讓專注化為一場相遇。"));
+        copy.AddToClassList("lg-home-copy");
+        copy.parent.AddToClassList("lg-home-layout");
         var consentToggle = new Toggle { name = "consent", text = T("I agree to session-only camera tracking", "我同意於本次體驗使用相機追蹤") };
         consentToggle.AddToClassList("lg-consent"); consentToggle.SetValueWithoutNotify(consent);
         consentToggle.RegisterValueChangedCallback(evt => flow?.LivingConsentChoice(evt.newValue)); copy.Add(consentToggle);
         Text(copy, T("Camera starts only in eligible experiences. Preview does not grant permission.", "相機僅於適用體驗中啟動，預覽不代表授權。"), "lg-small");
+        BuildVoicePreference(copy, false);
         var actions = Box(copy, "actions", "lg-actions");
         Button begin = Action(actions, "begin", T("Review privacy & begin", "閱讀隱私並開始"), () => flow?.LivingBegin(), "lg-primary"); begin.SetEnabled(consent);
         Action(actions, "privacy-details", T("Read privacy", "閱讀隱私"), () => flow?.LivingGlassOpenOverlay("Privacy"), "lg-quiet");
@@ -628,6 +631,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     {
         Text(parent, T("Available controls and future capabilities are clearly separated.", "可用操作與未來功能皆明確標示。"), "lg-small");
         Setting(parent, T("Language", "語言"), T("Preserves your current route and session.", "保留目前畫面與本次體驗狀態。"), language == AppLanguage.English ? "繁體中文" : "English", () => flow?.LivingLanguage(language == AppLanguage.English ? AppLanguage.Chinese : AppLanguage.English));
+        BuildVoicePreference(parent, true);
         Setting(parent, T("Privacy & camera", "隱私與相機"), T("Review permission or stop capture immediately.", "檢視許可，或立即停止影像擷取。"), T("Review", "檢視"), () => flow?.LivingGlassOpenOverlay("Privacy"));
         Setting(parent, T("AI assistant", "AI 助理"), T("Choose one of six conversation themes.", "選擇六種對話主題之一。"), T("Choose", "選擇"), () => flow?.LivingGlassOpenOverlay("AssistantChooser"));
         Deferred(parent, T("Sound preferences", "聲音偏好"), T("Clap audio remains available in supported experiences. Volume and mute controls are deferred.", "適用體驗中仍可拍手播放音效；音量與靜音設定延後提供。"));
@@ -639,6 +643,30 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     {
         var row = Box(parent, "", "lg-setting-row"); var copy = Box(row, "", "lg-setting-copy");
         Text(copy, title, "lg-subtitle"); Text(copy, detail, "lg-small"); Action(row, "setting-" + parent.childCount, action, command, "lg-quiet");
+    }
+    private void BuildVoicePreference(VisualElement parent, bool settings)
+    {
+        var row = Box(parent, "", settings ? "lg-setting-row" : "lg-voice-preference");
+        var copy = Box(row, "", "lg-voice-preference-copy");
+        Text(copy, T("Voice assistance", "語音導覽"), "lg-voice-preference-title");
+        Text(copy, T("Plays available guide clips. Replies are read only when you choose Listen.", "播放可用的導覽語音。助理回覆僅在您選擇時朗讀。"), "lg-voice-preference-detail");
+        var control = new LivingGlassVoiceButton(() => flow?.LivingSetVoice(!(flow?.LivingVoiceEnabled ?? false)))
+            { name = "voice-preference" };
+        control.AddToClassList("lg-action");
+        control.AddToClassList("lg-voice-preference-action");
+        PaintVoicePreference(control, flow?.LivingVoiceEnabled ?? false);
+        row.Add(control);
+    }
+    public void VoicePreferenceChanged(bool enabled)
+    {
+        if (root != null)
+            root.Query<Button>("voice-preference").ForEach(button => PaintVoicePreference(button, enabled));
+    }
+    private void PaintVoicePreference(Button control, bool enabled)
+    {
+        control.text = enabled ? T("On", "開啟") : T("Off", "關閉");
+        control.tooltip = enabled ? T("Turn off voice assistance", "關閉語音導覽") : T("Turn on voice assistance", "開啟語音導覽");
+        control.EnableInClassList("lg-voice-on", enabled);
     }
     private void Deferred(VisualElement parent, string title, string detail)
     {

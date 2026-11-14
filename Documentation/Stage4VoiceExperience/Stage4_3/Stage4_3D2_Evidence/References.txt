@@ -1,0 +1,7 @@
+PASS: GAIA clip=Assets/Resources/Videos/LivingPortrait/Gaia.mp4
+PASS: PANDEMIC clip=Assets/Resources/Videos/LivingPortrait/Pandemic.mp4
+PASS: RE-BIRTH clip=Assets/Resources/Videos/LivingPortrait/Re-Birth.mp4
+PASS: WHITE-GUARDIAN clip=Assets/Resources/Videos/LivingPortrait/White_Guardian.mp4
+PASS: CONSCIENCE clip=Assets/Resources/Videos/LivingPortrait/Conscience.mp4
+PASS: SANCTUARY clip=Assets/Resources/Videos/LivingPortrait/Sanctuary.mp4
+PASS: primary entry, one service/view rig, panel,52 bilingual routes and all-six media references. Runtime NOT RUN.

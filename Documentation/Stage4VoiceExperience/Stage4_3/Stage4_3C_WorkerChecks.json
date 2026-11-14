@@ -1,0 +1,15 @@
+{
+  "MissingInstallAndBusy": "PASS",
+  "CancellationIncludingTeardownMs": 790,
+  "en": {
+    "result": "PASS",
+    "elapsedMs": 4960,
+    "seconds": 2.888
+  },
+  "zh": {
+    "result": "PASS",
+    "elapsedMs": 3629,
+    "seconds": 3.048
+  },
+  "Outcome": "PASS"
+}

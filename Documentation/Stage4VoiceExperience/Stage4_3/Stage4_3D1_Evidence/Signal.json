@@ -1,0 +1,42 @@
+{
+  "overview-en": {
+    "capture_seconds": 8.704,
+    "approved_seconds": 8.008,
+    "aligned_overlap_seconds": 8.008,
+    "lag_seconds": 0.5204,
+    "whole_correlation": 0.825161,
+    "ending_correlation": 0.87953,
+    "tail_100ms_peak": 0.0,
+    "quiet_after_last_active_seconds": 0.544
+  },
+  "overview-zh": {
+    "capture_seconds": 8.5333,
+    "approved_seconds": 7.928,
+    "aligned_overlap_seconds": 7.928,
+    "lag_seconds": 0.435,
+    "whole_correlation": 0.812767,
+    "ending_correlation": 0.83299,
+    "tail_100ms_peak": 0.0,
+    "quiet_after_last_active_seconds": 0.4633
+  },
+  "gestures-en": {
+    "capture_seconds": 8.2773,
+    "approved_seconds": 7.688,
+    "aligned_overlap_seconds": 7.688,
+    "lag_seconds": 0.4564,
+    "whole_correlation": 0.846208,
+    "ending_correlation": 0.934043,
+    "tail_100ms_peak": 0.0,
+    "quiet_after_last_active_seconds": 0.4873
+  },
+  "gestures-zh": {
+    "capture_seconds": 8.7467,
+    "approved_seconds": 8.088,
+    "aligned_overlap_seconds": 8.088,
+    "lag_seconds": 0.4564,
+    "whole_correlation": 0.825571,
+    "ending_correlation": 0.805589,
+    "tail_100ms_peak": 0.0,
+    "quiet_after_last_active_seconds": 0.8367
+  }
+}

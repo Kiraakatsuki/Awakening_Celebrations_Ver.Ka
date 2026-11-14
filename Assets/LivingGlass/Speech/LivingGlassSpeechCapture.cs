@@ -33,6 +33,8 @@ internal sealed class LivingGlassSpeechCapture : IDisposable
     private int position;
     private string transcript;
     private bool disposed;
+    internal Action BeforeCapture { get; set; }
+    internal bool BlocksVoiceOutput => state == State.Starting || state == State.Recording || state == State.Processing;
 
     public static LivingGlassSpeechCapture Bind(VisualElement root, TextField input, Button ask, int performer,
         AppLanguage language, Func<bool> isCurrent, Func<bool> exhibitionAudioActive, LivingGlassMotion motion)
@@ -152,6 +154,7 @@ internal sealed class LivingGlassSpeechCapture : IDisposable
                 }
             }
             else device = devices[0];
+            BeforeCapture?.Invoke();
             microphoneOwner = this;
             // A non-looping buffer with a guard second preserves the final position.
             clip = Microphone.Start(device, false, LocalSpeechWorker.MaximumSeconds + 1, 48000);

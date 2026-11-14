@@ -207,6 +207,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             CancelAssistantRequest();
             livingGlass.Shutdown();
         }
+        livingVoice?.Dispose();
+        livingVoice = null;
         GestureCameraConsentGate.SetConsent(false);
         StopEnvironmentalMusic();
         StopPerformerExperienceSequence();
@@ -236,6 +238,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
     private void Update()
     {
+        livingVoice?.Tick();
         LivingGlassUpdateStatus();
         gestureCursor?.Tick(Time.unscaledDeltaTime);
         if (gesturePointing)
@@ -429,6 +432,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             case InteractionCommand.ClapCompleted:
                 if (!GestureCameraConsentGate.ConsentGranted)
                     return;
+                livingVoice?.CutSpeech();
+                livingReplySpeech?.Stop();
                 PlayEnvironmentalMusic();
                 break;
 
@@ -1276,6 +1281,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             return;
         }
 
+        livingVoice?.CutSpeech();
+        livingReplySpeech?.Stop();
         bool retryingFailedMessage = session.failedMessage == message;
         if (!retryingFailedMessage)
         {
@@ -1370,6 +1377,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             }
 
             Label reply = AppendAssistantReply(session, result.reply);
+            VisualElement replyEnd = livingReplySpeech?.Add(session.conversation, result.reply) ?? reply;
             session.failedMessage = null;
             if (session.input != null && session.input.value.Trim() == visitorMessage)
                 session.input.value = string.Empty;
@@ -1379,7 +1387,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             session.conversation.schedule.Execute(() =>
             {
                 if (session == assistantSession && session.root != null && session.root.panel != null)
-                    session.conversation.ScrollTo(reply);
+                    session.conversation.ScrollTo(replyEnd);
             }).ExecuteLater(1);
         }
     }
@@ -1504,6 +1512,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
     private void CancelAssistantRequest()
     {
+        livingReplySpeech?.Stop();
         assistantSessionSequence++;
         if (assistantWebRequest != null)
         {

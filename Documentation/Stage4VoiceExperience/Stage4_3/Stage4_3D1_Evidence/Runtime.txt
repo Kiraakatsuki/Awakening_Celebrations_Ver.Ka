@@ -1,0 +1,39 @@
+2026-11-14T17:01:55.0454100Z | PASS preflight: saved scene; one inactive rig; camera denied; no microphone owner; blank assistant endpoint; sample rate 48000; Windows output Speakers (Realtek(R) Audio).
+2026-11-14T17:02:03.0523009Z | PASS Play Mode application focused.
+2026-11-14T17:02:03.5681619Z | PASS TUTORIAL---ENTRY---DIM English overview-en first samples=512; trigger-to-progress=0.104s; 192192 frames @ 24000Hz; declared 8.008s.
+2026-11-14T17:02:11.6714737Z | PASS natural source completion overview-en; last poll 192192/192192; elapsed=8.105s; source reference cleared.
+2026-11-14T17:02:12.4772508Z | PASS approval gate: step 2 English TUTORIAL---INTRODUCTION remained silent.
+2026-11-14T17:02:13.0322019Z | PASS approval gate: step 3 English TUTORIAL---LOOK---MOVE remained silent.
+2026-11-14T17:02:13.3149626Z | PASS TUTORIAL---POINT English gestures-en first samples=512; trigger-to-progress=0.099s; 184512 frames @ 24000Hz; declared 7.688s.
+2026-11-14T17:02:21.0816628Z | PASS natural source completion gestures-en; last poll 184512/184512; elapsed=7.765s; source reference cleared.
+2026-11-14T17:02:21.8636515Z | PASS approval gate: step 5 English TUTORIAL---HOLD---SELECT remained silent.
+2026-11-14T17:02:22.4150056Z | PASS approval gate: step 6 English TUTORIAL---EXPERIENCE remained silent.
+2026-11-14T17:02:22.9687996Z | PASS approval gate: step 7 English TUTORIAL---READY remained silent.
+2026-11-14T17:02:24.1771818Z | PASS English ordinary forward steps and denial at Attract; Back is unavailable during onboarding; safe revisit fixtures did not replay either approved cue.
+2026-11-14T17:02:25.0571381Z | PASS TUTORIAL---ENTRY---DIM Chinese overview-zh first samples=512; trigger-to-progress=0.134s; 190272 frames @ 24000Hz; declared 7.928s.
+2026-11-14T17:02:33.0419207Z | PASS natural source completion overview-zh; last poll 190272/190272; elapsed=7.984s; source reference cleared.
+2026-11-14T17:02:33.8475088Z | PASS approval gate: step 2 Chinese TUTORIAL---INTRODUCTION remained silent.
+2026-11-14T17:02:34.3990358Z | PASS approval gate: step 3 Chinese TUTORIAL---LOOK---MOVE remained silent.
+2026-11-14T17:02:34.7045116Z | PASS TUTORIAL---POINT Chinese gestures-zh first samples=512; trigger-to-progress=0.121s; 194112 frames @ 24000Hz; declared 8.088s.
+2026-11-14T17:02:42.8862551Z | PASS natural source completion gestures-zh; last poll 194048/194112; elapsed=8.182s; source reference cleared.
+2026-11-14T17:02:43.6680442Z | PASS approval gate: step 5 Chinese TUTORIAL---HOLD---SELECT remained silent.
+2026-11-14T17:02:44.2213923Z | PASS approval gate: step 6 Chinese TUTORIAL---EXPERIENCE remained silent.
+2026-11-14T17:02:44.7736158Z | PASS approval gate: step 7 Chinese TUTORIAL---READY remained silent.
+2026-11-14T17:02:45.9788870Z | PASS Chinese ordinary forward steps and denial at Attract; Back is unavailable during onboarding; safe revisit fixtures did not replay either approved cue.
+2026-11-14T17:02:48.0086919Z | PASS TUTORIAL---ENTRY---DIM English overview-en first samples=512; trigger-to-progress=0.092s; 192192 frames @ 24000Hz; declared 8.008s.
+2026-11-14T17:02:48.0086919Z | PASS current tutorial On via Settings starts after overlay exits.
+2026-11-14T17:02:48.2116920Z | PASS TUTORIAL---ENTRY---DIM Chinese overview-zh first samples=2560; trigger-to-progress=0.000s; 190272 frames @ 24000Hz; declared 7.928s.
+2026-11-14T17:02:48.2142358Z | FAIL System.InvalidOperationException: rapid Next reached wrong route
+  at Stage43D1TemporaryValidation+<Sequence>d__46.MoveNext () [0x009e3] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\Stage43D1TemporaryValidation.cs:395 
+  at Stage43D1TemporaryValidation.Update () [0x000c7] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\Stage43D1TemporaryValidation.cs:156 
+2026-11-14T17:02:48.9435738Z | PASS Edit Mode restored; saved scene clean=True; remaining voice sources=0; camera gate denied=True.
+2026-11-14T17:03:41.7431521Z | PASS preflight: saved scene; one inactive rig; camera denied; no microphone owner; blank assistant endpoint; sample rate 48000; Windows output Speakers (Realtek(R) Audio).
+2026-11-14T17:03:49.3453230Z | PASS Play Mode application focused.
+2026-11-14T17:03:51.1171354Z | PASS TUTORIAL---ENTRY---DIM English overview-en first samples=512; trigger-to-progress=0.112s; 192192 frames @ 24000Hz; declared 8.008s.
+2026-11-14T17:03:51.1181326Z | PASS current tutorial On via Settings starts after overlay exits.
+2026-11-14T17:03:51.3229294Z | PASS TUTORIAL---ENTRY---DIM Chinese overview-zh first samples=3072; trigger-to-progress=0.000s; 190272 frames @ 24000Hz; declared 7.928s.
+2026-11-14T17:03:52.0368560Z | PASS locale switch stopped stale voice; rapid Next invalidated scheduled Point playback.
+2026-11-14T17:03:53.5046072Z | PASS TUTORIAL---ENTRY---DIM Chinese overview-zh first samples=512; trigger-to-progress=0.123s; 190272 frames @ 24000Hz; declared 7.928s.
+2026-11-14T17:03:54.7312278Z | PASS opening Settings interrupts voice, Off stays silent on close, returning Home clears the clip and resets preference.
+2026-11-14T17:03:54.7312278Z | PASS runtime sequence complete; camera, microphone and assistant guards held.
+2026-11-14T17:03:55.5614473Z | PASS Edit Mode restored; saved scene clean=True; remaining voice sources=0; camera gate denied=True.

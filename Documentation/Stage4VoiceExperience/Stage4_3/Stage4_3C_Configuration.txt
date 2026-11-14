@@ -1,0 +1,1 @@
+PASS: startup scene, panel, serialized six media/art maps, GUIDs, 52 bilingual routes.

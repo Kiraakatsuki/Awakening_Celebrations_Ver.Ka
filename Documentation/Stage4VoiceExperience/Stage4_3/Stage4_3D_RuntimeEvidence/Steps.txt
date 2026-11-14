@@ -1,0 +1,71 @@
+2026-11-14T15:07:06.9534639Z Preflight PASS: transient rig inactive, no bootstrap, endpoint blank, denied camera; mic never invoked. Nine-minute deadline.
+2026-11-14T15:07:14.7853789Z Runtime audio 48000 Hz Stereo driver Stereo Game 1019x632 focus=True
+2026-11-14T15:07:14.8069198Z PASS default Off English
+2026-11-14T15:07:14.9458274Z PASS Home / welcome-en 512/190272 @ 24000 Hz volume=0.78 / event→audio progress 131ms
+2026-11-14T15:07:23.2775254Z Unity mixed output welcome-en: 405504 samples at 48000 Hz, peak=0.53158
+2026-11-14T15:07:23.6834228Z PASS Privacy / privacy-en 512/138432 @ 24000 Hz volume=0.78 / event→audio progress 99ms
+2026-11-14T15:07:23.8212010Z PASS TUTORIAL---ENTRY---DIM / overview-en 512/192192 @ 24000 Hz volume=0.78 / event→audio progress 136ms
+2026-11-14T15:07:23.9195607Z PASS TUTORIAL---POINT / gestures-en 512/184512 @ 24000 Hz volume=0.78 / event→audio progress 98ms
+2026-11-14T15:07:24.0175239Z PASS ATTRACT---MONOCHROME---FALLBACK-INPUT / awakening-en 512/144192 @ 24000 Hz volume=0.78 / event→audio progress 96ms
+2026-11-14T15:07:24.1358563Z PASS COLOR-RELEASE / discovery-en 512/128832 @ 24000 Hz volume=0.78 / event→audio progress 115ms
+2026-11-14T15:07:24.9480608Z PASS CLOSING---CELEBRATION / closing-en 512/123072 @ 24000 Hz volume=0.78 / event→audio progress 101ms
+2026-11-14T15:07:24.9509500Z Frame timing cached guide -en: n=169 p50=3.88ms p95=10.92ms max=117.53ms >33.3ms=1
+2026-11-14T15:07:25.7564819Z PASS normal Closing→Souvenir→Done/Off and no replay -en
+2026-11-14T15:07:25.8044489Z PASS default Off Chinese
+2026-11-14T15:07:25.9004224Z PASS Home / welcome-zh 512/171072 @ 24000 Hz volume=0.78 / event→audio progress 96ms
+2026-11-14T15:07:33.4322891Z Unity mixed output welcome-zh: 365568 samples at 48000 Hz, peak=0.50302
+2026-11-14T15:07:33.9007570Z PASS Privacy / privacy-zh 512/155712 @ 24000 Hz volume=0.78 / event→audio progress 168ms
+2026-11-14T15:07:37.9111807Z FAIL runtime System.InvalidOperationException: guide overview-zh observed discovery-zh 92672/134592 @ 24000 Hz volume=0.78
+  at Stage43DTemporary+<Until>d__32.MoveNext () [0x00092] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\Stage43DTemporary.cs:119 
+  at Stage43DTemporary+<Guard>d__24.MoveNext () [0x0004b] in D:\Coding\Unity\Projects\Awakening Celebrations ver.RM\Assets\LivingGlass\Editor\Stage43DTemporary.cs:107 
+2026-11-14T15:07:37.9111807Z Requesting Edit Mode. Camera denied=True; assistant request absent=True
+2026-11-14T15:07:38.6522953Z Exited Play Mode, reloaded saved scene; residual voice sources=0
+2026-11-14T15:08:37.6307746Z Preflight PASS: transient rig inactive, no bootstrap, endpoint blank, denied camera; mic never invoked. Nine-minute deadline.
+2026-11-14T15:08:44.7982475Z Runtime audio 48000 Hz Stereo driver Stereo Game 1019x632 focus=True
+2026-11-14T15:08:44.8107404Z PASS default Off English
+2026-11-14T15:08:44.9950193Z PASS Home / welcome-en 512/190272 @ 24000 Hz volume=0.78 / event→audio progress 179ms
+2026-11-14T15:08:53.3200024Z Unity mixed output welcome-en: 406528 samples at 48000 Hz, peak=0.53158
+2026-11-14T15:08:53.7429876Z PASS Privacy / privacy-en 512/138432 @ 24000 Hz volume=0.78 / event→audio progress 118ms
+2026-11-14T15:08:53.8663893Z PASS TUTORIAL---ENTRY---DIM / overview-en 512/192192 @ 24000 Hz volume=0.78 / event→audio progress 120ms
+2026-11-14T15:08:53.9816080Z PASS TUTORIAL---POINT / gestures-en 512/184512 @ 24000 Hz volume=0.78 / event→audio progress 115ms
+2026-11-14T15:08:54.0818600Z PASS ATTRACT---MONOCHROME---FALLBACK-INPUT / awakening-en 512/144192 @ 24000 Hz volume=0.78 / event→audio progress 98ms
+2026-11-14T15:08:54.1794981Z PASS COLOR-RELEASE / discovery-en 512/128832 @ 24000 Hz volume=0.78 / event→audio progress 94ms
+2026-11-14T15:08:54.9929224Z PASS CLOSING---CELEBRATION / closing-en 512/123072 @ 24000 Hz volume=0.78 / event→audio progress 106ms
+2026-11-14T15:08:54.9960559Z Frame timing cached guide -en: n=172 p50=3.99ms p95=9.08ms max=119.06ms >33.3ms=2
+2026-11-14T15:08:55.8103403Z PASS normal Closing→Souvenir→Done/Off and no replay -en
+2026-11-14T15:08:55.8391813Z PASS default Off Chinese
+2026-11-14T15:08:55.9714565Z PASS Home / welcome-zh 512/171072 @ 24000 Hz volume=0.78 / event→audio progress 132ms
+2026-11-14T15:09:03.4838681Z Unity mixed output welcome-zh: 366592 samples at 48000 Hz, peak=0.50302
+2026-11-14T15:09:03.9105532Z PASS Privacy / privacy-zh 512/155712 @ 24000 Hz volume=0.78 / event→audio progress 122ms
+2026-11-14T15:09:04.0548657Z PASS TUTORIAL---ENTRY---DIM / overview-zh 512/190272 @ 24000 Hz volume=0.78 / event→audio progress 144ms
+2026-11-14T15:09:04.1903560Z PASS TUTORIAL---POINT / gestures-zh 512/194112 @ 24000 Hz volume=0.78 / event→audio progress 134ms
+2026-11-14T15:09:04.2905783Z PASS ATTRACT---MONOCHROME---FALLBACK-INPUT / awakening-zh 512/126912 @ 24000 Hz volume=0.78 / event→audio progress 99ms
+2026-11-14T15:09:04.4071560Z PASS COLOR-RELEASE / discovery-zh 512/134592 @ 24000 Hz volume=0.78 / event→audio progress 115ms
+2026-11-14T15:09:05.2409803Z PASS CLOSING---CELEBRATION / closing-zh 512/146112 @ 24000 Hz volume=0.78 / event→audio progress 127ms
+2026-11-14T15:09:05.2409803Z Frame timing cached guide -zh: n=167 p50=3.87ms p95=8.86ms max=31.29ms >33.3ms=0
+2026-11-14T15:09:06.0455804Z PASS normal Closing→Souvenir→Done/Off and no replay -zh
+2026-11-14T15:09:06.4531877Z PASS direct Off stops source and rapid re-enable does not replay.
+2026-11-14T15:09:33.5558198Z PASS GAIA Focus→Activation→decoded video and real completion→Release→Reflection reflection-en 512/253632 @ 24000 Hz volume=0.78
+2026-11-14T15:10:01.5427260Z PASS PANDEMIC Focus→Activation→decoded video and real completion→Release→Reflection reflection-zh 512/257472 @ 24000 Hz volume=0.78
+2026-11-14T15:10:29.5181770Z PASS RE-BIRTH Focus→Activation→decoded video and real completion→Release→Reflection reflection-en 512/253632 @ 24000 Hz volume=0.78
+2026-11-14T15:10:57.4864541Z PASS WHITE-GUARDIAN Focus→Activation→decoded video and real completion→Release→Reflection reflection-zh 512/257472 @ 24000 Hz volume=0.78
+2026-11-14T15:11:25.4519499Z PASS CONSCIENCE Focus→Activation→decoded video and real completion→Release→Reflection reflection-en 512/253632 @ 24000 Hz volume=0.78
+2026-11-14T15:11:53.4205039Z PASS SANCTUARY Focus→Activation→decoded video and real completion→Release→Reflection reflection-zh 512/257472 @ 24000 Hz volume=0.78
+2026-11-14T15:12:01.6219399Z PASS actual ICL reply (English) while Off, Living Glass reply 512/113472 @ 24000 Hz volume=0.78, Listen→audio progress=6737ms
+2026-11-14T15:12:06.8090832Z Unity mixed output dynamic-en: 571392 samples at 48000 Hz, peak=0.41527
+2026-11-14T15:12:06.8090832Z Frame timing Unity+Qwen English: n=2793 p50=3.98ms p95=5.21ms max=27.62ms >33.3ms=0
+2026-11-14T15:12:15.3388121Z PASS Stop during preparation and playback
+2026-11-14T15:12:17.1660815Z PASS closure, answer preserved through completion, source idle.
+2026-11-14T15:12:22.7193797Z PASS actual ICL reply (Chinese) while Off, Living Glass reply 512/126912 @ 24000 Hz volume=0.78, Listen→audio progress=4995ms
+2026-11-14T15:12:28.4469988Z Unity mixed output dynamic-zh: 513024 samples at 48000 Hz, peak=0.37488
+2026-11-14T15:12:28.4480069Z Frame timing Unity+Qwen Chinese: n=2342 p50=4.04ms p95=7.76ms max=27.82ms >33.3ms=0
+2026-11-14T15:12:30.1492003Z PASS closure, answer preserved through completion, source idle.
+2026-11-14T15:12:30.1497040Z Bounded sequence completed.
+2026-11-14T15:12:30.1497040Z Requesting Edit Mode. Camera denied=True; assistant request absent=True
+2026-11-14T15:12:31.4031997Z Exited Play Mode, reloaded saved scene; residual voice sources=0
+2026-11-14T16:41:57.1913522Z Preflight PASS: transient rig inactive, no bootstrap, endpoint blank, denied camera; mic never invoked. Nine-minute deadline.
+2026-11-14T16:42:07.0618277Z PASS active locale switch cut the current guide, played the new locale and did not replay on return.
+2026-11-14T16:42:07.7566683Z PASS real adapter busy fallback. The existing reply stayed visible and Listen returned to idle.
+2026-11-14T16:42:09.8633885Z PASS performer replacement during ICL preparation discarded the pending reply.
+2026-11-14T16:42:09.8633885Z Requesting Edit Mode. Camera denied=True; assistant request absent=True
+2026-11-14T16:42:10.5742889Z Exited Play Mode, reloaded saved scene; residual voice sources=0

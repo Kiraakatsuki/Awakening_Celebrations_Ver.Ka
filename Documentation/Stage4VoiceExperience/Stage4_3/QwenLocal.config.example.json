@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "runtimeDirectory": "RuntimePack",
+  "voiceId": "awakening-guide",
+  "conditioning": "icl"
+}

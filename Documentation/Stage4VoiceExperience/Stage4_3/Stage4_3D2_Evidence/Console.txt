@@ -1,0 +1,24 @@
+2026-11-14T17:26:27.4536627Z Warning The Attract experience cannot start until consent is accepted.
+UnityEngine.Debug:LogWarning (object,UnityEngine.Object)
+AwakeningApplicationController:Navigate (string,AppLanguage,bool,bool) (at Assets/Scripts/AwakeningApplicationController.cs:562)
+AwakeningApplicationController:LivingContinue () (at Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs:128)
+LivingGlassPresentation/<>c__DisplayClass87_0:<BuildTutorial>b__0 () (at Assets/LivingGlass/Presentation/LivingGlassPresentation.cs:368)
+LivingGlassPresentation/<>c__DisplayClass72_0:<Action>b__0 () (at Assets/LivingGlass/Presentation/LivingGlassPresentation.cs:103)
+UnityEngine.UIElements.VisualElement:SendEvent (UnityEngine.UIElements.EventBase)
+Stage43D2TemporaryValidation:Press (string) (at Assets/LivingGlass/Editor/Stage43D2TemporaryValidation.cs:246)
+Stage43D2TemporaryValidation/<Sequence>d__45:MoveNext () (at Assets/LivingGlass/Editor/Stage43D2TemporaryValidation.cs:344)
+Stage43D2TemporaryValidation:Update () (at Assets/LivingGlass/Editor/Stage43D2TemporaryValidation.cs:157)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+2026-11-14T17:27:24.1365609Z Warning The Attract experience cannot start until consent is accepted.
+UnityEngine.Debug:LogWarning (object,UnityEngine.Object)
+AwakeningApplicationController:Navigate (string,AppLanguage,bool,bool) (at Assets/Scripts/AwakeningApplicationController.cs:562)
+AwakeningApplicationController:LivingContinue () (at Assets/LivingGlass/Integration/LivingGlassFlowIntegration.cs:128)
+LivingGlassPresentation/<>c__DisplayClass87_0:<BuildTutorial>b__0 () (at Assets/LivingGlass/Presentation/LivingGlassPresentation.cs:368)
+LivingGlassPresentation/<>c__DisplayClass72_0:<Action>b__0 () (at Assets/LivingGlass/Presentation/LivingGlassPresentation.cs:103)
+UnityEngine.UIElements.VisualElement:SendEvent (UnityEngine.UIElements.EventBase)
+Stage43D2TemporaryValidation:Press (string) (at Assets/LivingGlass/Editor/Stage43D2TemporaryValidation.cs:246)
+Stage43D2TemporaryValidation/<Sequence>d__45:MoveNext () (at Assets/LivingGlass/Editor/Stage43D2TemporaryValidation.cs:344)
+Stage43D2TemporaryValidation:Update () (at Assets/LivingGlass/Editor/Stage43D2TemporaryValidation.cs:157)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+

@@ -1,0 +1,3 @@
+PASS: known-duration PCM calculation, last sample retained, short de-click bridge and silence, intentional Stop gain, and codec-cap detection.
+PASS: bilingual cue mapping, protected state exclusion, missing/preview asset gating, replay suppression, locale, rapid context invalidation, disable and visit reset policies.
+PASS: Home and Settings, both locales, 1920×1080 / 1280×720 and reduced motion/opaque; accessible target, localized states and stable Begin.

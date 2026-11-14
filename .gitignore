@@ -227,3 +227,12 @@ ehthumbs.db
 # Stage 4.2 local speech runtime and model installation.
 /VoiceLocal/
 /VoiceLocal-preparing-*/
+
+# Optional local Qwen runtime, weights and approved voice conditioning.
+/QwenLocal/
+/QwenLocal-preparing-*/
+
+# Keep any local copy of the separate, private audition workspace out of Git.
+/AI-Voice-Auditions/
+/Documentation/Stage4VoiceExperience/Stage4_3/VoiceAudition.md
+/Documentation/Stage4VoiceExperience/Stage4_3/SampleIndex.md

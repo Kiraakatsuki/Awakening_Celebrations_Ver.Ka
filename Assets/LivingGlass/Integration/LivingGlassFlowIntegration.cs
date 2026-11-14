@@ -18,6 +18,20 @@ public sealed partial class AwakeningApplicationController
     private bool livingPointerOwnsTarget;
     private readonly List<Action> livingChatUnbind = new List<Action>();
     private LivingGlassSpeechCapture livingSpeech;
+    private LivingGlassReplySpeech livingReplySpeech;
+    private LivingGlassVoiceCoordinator livingVoice;
+    private LivingGlassVoiceCoordinator Voice => livingVoice ??= new LivingGlassVoiceCoordinator(gameObject,
+        () => !Application.isFocused || LivingProtected || (livingSpeech?.BlocksVoiceOutput ?? false)
+            || (environmentalMusicSource != null && environmentalMusicSource.isPlaying),
+        () => livingGlass != null && livingGlass.OverlayVisible);
+    public bool LivingVoiceEnabled => livingVoice?.Enabled ?? false;
+    public void LivingSetVoice(bool value)
+    {
+        if (LivingProtected || !Application.isPlaying) return;
+        if (!value) livingReplySpeech?.Stop();
+        Voice.Set(value);
+        livingGlass?.VoicePreferenceChanged(value);
+    }
     private VisualElement LivingContent { get { return livingGlass != null ? livingGlass.Content : null; } }
     public bool LivingConsent { get { return consentAccepted; } }
     public bool LivingReady { get { return colorReleaseSelectionReady; } }
@@ -29,6 +43,8 @@ public sealed partial class AwakeningApplicationController
     {
         if (livingGlass == null) return;
         ClearBindings(livingChatUnbind);
+        Voice.Overlay(false);
+        Voice.Show(currentScreen, language, colorReleaseSelectionReady, selectedPerformer);
         if (LivingGlassRoutes.TryChapter(currentScreen, out int chapterPerformer, out _)) selectedPerformer = chapterPerformer;
         if (currentScreen.StartsWith("Assistant-", StringComparison.Ordinal)) selectedPerformer = Array.IndexOf(Performers, currentScreen.Substring(10));
         livingGlass.Render(currentScreen, language, selectedPerformer, consentAccepted, colorReleaseSelectionReady);
@@ -155,6 +171,7 @@ public sealed partial class AwakeningApplicationController
         backStack.Clear();
         GestureCameraConsentGate.SetConsent(false);
         StopEnvironmentalMusic();
+        livingVoice?.Reset();
         currentScreen = HomeScreen;
         LivingGlassRender();
     }
@@ -171,6 +188,7 @@ public sealed partial class AwakeningApplicationController
             return;
         }
         if (livingGlass.OverlayVisible && livingOverlay == kind) { LivingGlassCloseOverlay(); return; }
+        Voice.Overlay(true);
         livingParentOverlay = livingOverlay == "Settings" && kind == "Privacy" ? "Settings" : null;
         if (!livingGlass.OverlayVisible) livingReturnPerformer = selectedPerformer;
         livingSpeech?.CancelForContextChange();
@@ -203,6 +221,7 @@ public sealed partial class AwakeningApplicationController
         selectedPerformer = livingReturnPerformer;
         livingGlass.CloseOverlay(immediate);
         if (returnSettings) { LivingGlassOpenOverlay("Settings"); return; }
+        livingVoice?.Overlay(false);
         bool eligible = currentScreen == AttractScreen || currentScreen == ColorReleaseScreen || IsPerformerStage(currentScreen, out _, out _)
             || (hasAwakenedThisSession && (currentScreen == "CLOSING---CELEBRATION" || currentScreen == "SOUVENIR---QR-DELIVERY"));
         GestureCameraConsentGate.SetConsent(consentAccepted && eligible);
@@ -238,6 +257,29 @@ public sealed partial class AwakeningApplicationController
             speech.Dispose();
             if (livingSpeech == speech) livingSpeech = null;
         });
+        var backend = LocalQwenReplySpeech.Discover(Application.dataPath);
+        if (backend != null && backend.IsAvailable)
+        {
+            var output = new LivingGlassReplySpeech(root, backend, Voice.BindReply(),
+                language, LivingGlassAssets.Accents[performer],
+                () => session == assistantSession && session.id == assistantSessionSequence
+                    && IsAssistantSessionViewActive(session) && Application.isFocused,
+                () => !LivingProtected && !session.requestInProgress && !(speech?.BlocksVoiceOutput ?? false)
+                    && (environmentalMusicSource == null || !environmentalMusicSource.isPlaying),
+                Voice.InterruptGuide);
+            livingReplySpeech = output;
+            livingChatUnbind.Add(() =>
+            {
+                if (speech != null) speech.BeforeCapture = null;
+                output.Dispose();
+                if (livingReplySpeech == output) livingReplySpeech = null;
+            });
+        }
+        if (speech != null) speech.BeforeCapture = () =>
+        {
+            livingVoice?.CutSpeech();
+            livingReplySpeech?.Stop();
+        };
         Action submit = () =>
         {
             speech?.CancelForContextChange();

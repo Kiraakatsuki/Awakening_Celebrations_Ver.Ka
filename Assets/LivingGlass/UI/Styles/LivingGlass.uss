@@ -112,6 +112,21 @@
 .lg-app .unity-scroller:disabled { opacity: 0.45; }
 .lg-setting-row { flex-direction: row; align-items: center; padding: 15px 0; border-bottom-width: 1px; border-bottom-color: #354351; }
 .lg-setting-copy { flex-grow: 1; flex-basis: 0; margin-right: 24px; }
+.lg-voice-preference { flex-direction: row; align-items: center; margin: 2px 0 10px; padding: 7px 10px; background-color: #17232f; border-radius: 12px; }
+.lg-voice-preference-copy { flex-grow: 1; flex-basis: 0; min-width: 0; margin-right: 16px; }
+.lg-voice-preference-title { font-size: 21px; color: var(--lg-text); white-space: normal; }
+.lg-voice-preference-detail { font-size: 16px; color: var(--lg-secondary); white-space: normal; }
+.lg-action.lg-voice-preference-action { min-width: 92px; min-height: 46px; margin: 0; padding: 5px 12px; font-size: 18px; border-width: 2px; flex-shrink: 0; }
+.lg-action.lg-voice-preference-action:focus { border-color: #f3f0e8; }
+.lg-voice-preference-action.lg-voice-on { background-color: #304757; }
+.lg-short .lg-home-layout { top: 13%; bottom: 21%; }
+.lg-short .lg-home-copy { width: 58%; padding-right: 28px; }
+.lg-short .lg-home-layout .lg-standard-art { width: 42%; }
+.lg-short .lg-home-copy .lg-display { font-size: 54px; margin-bottom: 12px; }
+.lg-short .lg-home-copy .lg-eyebrow { margin-bottom: 9px; }
+.lg-short .lg-home-copy .lg-body { margin-bottom: 12px; }
+.lg-short .lg-home-copy .lg-consent { margin-top: 4px; margin-bottom: 2px; }
+.lg-short .lg-home-copy .lg-small { margin-top: 3px; margin-bottom: 6px; }
 .lg-setting-row .lg-subtitle { margin: 0 0 4px; font-size: 23px; }
 .lg-setting-row .lg-action { font-size: 18px; min-width: 125px; }
 .lg-chooser { flex-direction: row; flex-wrap: wrap; margin-top: 20px; }
@@ -194,6 +209,15 @@
 .ac-assistant-chat-heading { font-size: 25px; }
 .ac-assistant-chat-paragraph-gap { height: 12px; }
 .ac-assistant-chat-code-line { white-space: normal; font-size: 19px; }
+.lg-reply-speech { flex-direction: row; align-items: center; flex-shrink: 0; margin: 0 0 14px; }
+.lg-reply-speech .lg-reply-speech-action {
+    width: 110px; min-height: 46px; flex-shrink: 0; margin: 0 12px 0 0; padding: 3px 8px;
+    font-size: 17px; border-width: 2px; background-color: #21303e;
+}
+.lg-reply-speech .lg-reply-speech-action:hover { background-color: #344555; }
+.lg-reply-speech .lg-reply-speech-action:active { background-color: #182532; }
+.lg-reply-speech .lg-reply-speech-action:focus { border-width: 2px; border-color: #f3f0e8; }
+.lg-reply-speech-status { font-size: 16px; white-space: normal; color: var(--lg-secondary); flex-shrink: 1; }
 .lg-help-row { flex-direction: row; align-items: center; min-height: 100px; }
 .lg-help-symbol { width: 92px; height: 92px; margin-right: 20px; }
 .lg-gesture-stage { width: 50%; height: 100%; align-items: center; justify-content: center; border-radius: 40px; background-color: rgba(27,42,57,0.8); }

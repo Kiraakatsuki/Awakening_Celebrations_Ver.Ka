@@ -1,0 +1,46 @@
+{
+  "approved": false,
+  "revision": "stage43c-draft-1",
+  "clips": [
+    {
+      "id": "welcome",
+      "en": "LivingGlassGuide/Approved/welcome-en",
+      "zh": "LivingGlassGuide/Approved/welcome-zh"
+    },
+    {
+      "id": "privacy",
+      "en": "LivingGlassGuide/Approved/privacy-en",
+      "zh": "LivingGlassGuide/Approved/privacy-zh"
+    },
+    {
+      "id": "overview",
+      "en": "LivingGlassGuide/Approved/overview-en",
+      "zh": "LivingGlassGuide/Approved/overview-zh"
+    },
+    {
+      "id": "gestures",
+      "en": "LivingGlassGuide/Approved/gestures-en",
+      "zh": "LivingGlassGuide/Approved/gestures-zh"
+    },
+    {
+      "id": "awakening",
+      "en": "LivingGlassGuide/Approved/awakening-en",
+      "zh": "LivingGlassGuide/Approved/awakening-zh"
+    },
+    {
+      "id": "discovery",
+      "en": "LivingGlassGuide/Approved/discovery-en",
+      "zh": "LivingGlassGuide/Approved/discovery-zh"
+    },
+    {
+      "id": "reflection",
+      "en": "LivingGlassGuide/Approved/reflection-en",
+      "zh": "LivingGlassGuide/Approved/reflection-zh"
+    },
+    {
+      "id": "closing",
+      "en": "LivingGlassGuide/Approved/closing-en",
+      "zh": "LivingGlassGuide/Approved/closing-zh"
+    }
+  ]
+}

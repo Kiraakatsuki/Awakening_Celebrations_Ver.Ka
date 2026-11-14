@@ -26,7 +26,6 @@ internal sealed class LocalSpeechWorker
     private const string Model = "ggml-large-v3-turbo-q5_0.bin";
     private const string Vad = "ggml-silero-v6.2.0.bin";
     internal const int MaximumSeconds = 20;
-    private static readonly SemaphoreSlim WorkerSlot = new SemaphoreSlim(1);
     private readonly string executable, model, vad, directory;
     private readonly TimeSpan requestLimit;
 
@@ -59,14 +58,14 @@ internal sealed class LocalSpeechWorker
         {
             try
             {
-                await WorkerSlot.WaitAsync(cancellation).ConfigureAwait(false);
+                await LocalVoiceInference.Slot.WaitAsync(cancellation).ConfigureAwait(false);
                 try
                 {
                     byte[] wav = EncodeWave(samples, channels, rate, cancellation);
                     try { return Run(wav, chinese, cancellation); }
                     finally { Array.Clear(wav, 0, wav.Length); }
                 }
-                finally { WorkerSlot.Release(); }
+                finally { LocalVoiceInference.Slot.Release(); }
             }
             catch (OperationCanceledException) { return new SpeechResult(SpeechOutcome.Cancelled); }
             catch (Exception) { return new SpeechResult(SpeechOutcome.Error); }

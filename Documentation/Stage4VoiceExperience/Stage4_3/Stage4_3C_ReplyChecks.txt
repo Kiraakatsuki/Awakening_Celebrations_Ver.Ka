@@ -1,0 +1,3 @@
+PASS: bounded multilingual chunking, locale fallback, and strict PCM/WAV parsing.
+PASS: 72 actual UI Toolkit layouts, all six themes, EN/ZH, three chat surfaces, 1920×1080 and 1280×720; no autoplay and Ask stays anchored.
+PASS: UI Toolkit submit, preparation/Stop, cancellation, stale result, completion, failure, detach during context change, disposal, and exhibition audio/capture priority using fake audio.

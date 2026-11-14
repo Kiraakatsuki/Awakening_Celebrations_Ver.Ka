@@ -1,0 +1,1 @@
+PASS: existing Living Glass scene, build entry, script GUIDs, six media/art mappings, PanelSettings and 52-route bilingual contract.

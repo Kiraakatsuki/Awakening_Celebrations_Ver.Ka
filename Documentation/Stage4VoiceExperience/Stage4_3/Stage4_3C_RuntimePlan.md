@@ -1,0 +1,24 @@
+# Stage 4.3C — Runtime and approval plan
+
+[Audition the 16 draft narration clips](<D:/AI-Voice-Auditions/Qwen3-TTS-Q8/Stage4_3C_Draft/Audition.html>) · [Narration manifest](Stage4_3C_NarrationManifest.md)
+
+## Narration approval and packaging
+
+1. Listen to both languages before authorizing release of any cue. In Mandarin, review welcome, privacy, overview, gestures, awakening, reflection and closing particularly closely. Offline ASR flagged departures from the scripts; this is not a human pronunciation judgment. Revise/regenerate only the affected lines with the same approved English-reference ICL voice if needed. Preserve the masters and per-file settings.
+2. After sign-off, import **only the approved clips**, with matching IDs, under `Assets/LivingGlass/Resources/LivingGlassGuide/Approved/`, and add `ApprovedCatalog.json` under `Assets/LivingGlass/Resources/LivingGlassGuide/`. Use the [inert example](Stage4_3C_ApprovedCatalog.example.json) as the schema and set `approved: true` only on the separately approved release manifest. Keep a revision and omit any unapproved cue or locale. A missing asset stays silent and the current on-screen instruction remains. The current checkout contains no active guide catalog and no deployed audio.
+3. Candidate assets are mono 24 kHz Ogg Vorbis; review them against PCM masters before import. Prefer a small compressed-in-memory import with background loading and clip preload enabled for the short cues after measuring actual Unity import/decoded size. If Unity's import re-encoding degrades the voice, import the padded PCM candidates and apply a single Unity-supported compression pass. No runtime file reads, API calls or model initialization are needed to play an approved guide AudioClip.
+4. Reproduce the developer work from the external audition root using `Scripts/stage43c_guides.py` with the [draft script JSON](Stage4_3C_NarrationDraft.json), then `Scripts/stage43c_index.py` and `Scripts/stage43c_compress.py`. Generation uses the pinned Stage 4.3A pack, ICL, seed 42 and a 450-frame cap. The encoder is development-only SoundFile 0.13.1/libsndfile with Vorbis; verify the compressed candidates before publication.
+
+## Warm-up and resource priorities
+
+Fixed narration never uses Qwen. Dynamic text is synthesized only after a visitor presses Listen. Keep Stage 4.3B's on-demand, bounded worker lifetime; it exits after a reply, releases the shared inference lease and has no idle GPU residency. A verified startup check and request timeout remain. No GPT-period warm-up or caching of visitor audio is enabled. Shorter retry chunks are used only when a generated segment hits the pinned codec cap, within the existing process timeout and audio limit.
+
+The Stage 4.3A standalone observations (2.19 GB model/runtime pack and ~2.42 GiB additional cached-inference VRAM) are historical. Do not launch Qwen during onboarding or protected video. A future test can compare on-demand, bounded conversational warm-up, and a small idle window keyed by explicit Listen history. First measure isolated worker ready/health timing, inference and upload separately, then Unity frame-time/GPU budget with real video and the existing gesture/Whisper load. Test prewarm overlapping GPT only with separate authorization and after enough headroom is demonstrated.
+
+Video and existing exhibition audio keep their original owners and volume. The shared voice owner stops at those boundaries rather than ducking them. Dictation interrupts guide or reply before capture; Listen interrupts guide; guide only starts when eligible. Session Off immediately stops current speech, but a later explicit Listen remains available if the operator installed Qwen. Voice assistance is never camera or mic permission.
+
+## Next bounded retest
+
+In separately authorized offline Play Mode, inject known reply PCM and test actual device output, final consonants, DSP drain and explicit Stop. Exercise very short and long ICL replies, punctuation, a mixed-script reply, missing audio, and retry after a simulated bad or capped generation. Verify transparent text fallback and no worker overlap. Use only signed-off narration or an explicitly isolated test pack. Test Home opt-in, Settings off, re-entry, locale change and Closing → Done, and confirm no delayed clip starts after route reset. Test microphone/camera or live GPT only with their own fresh authorization. Combined load, audible playback and release acceptance remain NOT RUN.
+
+Rollback should remove only this phase's implementation or approved deployment catalog; leave the separately working 4.3B local diff, Stage 4.2C recovery tag, existing speech packs and user work intact. Disabling Qwen still uses `QwenLocal/config.json`, independent of visitor guide preference. Removing or disabling the approved catalog is sufficient to silence guide narration without losing the preference UI or manual reply speech.

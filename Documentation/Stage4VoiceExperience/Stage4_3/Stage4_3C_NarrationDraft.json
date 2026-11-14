@@ -1,0 +1,56 @@
+{
+  "revision": "stage43c-draft-1",
+  "approved": false,
+  "voice": "awakening-guide",
+  "conditioning": "icl",
+  "cues": [
+    {
+      "id": "welcome",
+      "context": "Home",
+      "en": "Welcome to Awakening Celebrations. Take a moment to settle in. When you are ready, review how the experience works and begin.",
+      "zh": "歡迎來到覺醒慶典。請先放鬆一下。準備好後，就閱讀體驗說明，開始探索。"
+    },
+    {
+      "id": "privacy",
+      "context": "Privacy",
+      "en": "Please read the privacy information before deciding whether to allow camera tracking for this visit.",
+      "zh": "使用相機追蹤前，請先閱讀隱私說明，再決定是否授予本次體驗的許可。"
+    },
+    {
+      "id": "overview",
+      "context": "TUTORIAL---ENTRY---DIM",
+      "en": "Six artistic worlds are waiting to meet you. These short steps show the gestures and the available mouse and keyboard controls.",
+      "zh": "六個藝術世界正等著與你相遇。接下來會介紹手勢，以及可用的滑鼠與鍵盤操作。"
+    },
+    {
+      "id": "gestures",
+      "context": "TUTORIAL---POINT",
+      "en": "Point toward the presence that catches your attention. Pointing highlights your choice. Make a fist to confirm, or click a portrait.",
+      "zh": "指向吸引你注意的那位存在。指向只會標示目標；握拳即可確認，也可以點擊肖像。"
+    },
+    {
+      "id": "awakening",
+      "context": "ATTRACT---MONOCHROME---FALLBACK-INPUT",
+      "en": "Wave your hand gently from side to side to awaken the gallery, or use the button on screen.",
+      "zh": "輕輕左右揮手，喚醒藝廊。你也可以使用畫面上的按鈕。"
+    },
+    {
+      "id": "discovery",
+      "context": "COLOR-RELEASE",
+      "en": "Explore the six presences at your own pace. Choose the one you would like to meet.",
+      "zh": "依照自己的步調，探索六種存在。選擇你最想相遇的那一位。"
+    },
+    {
+      "id": "reflection",
+      "context": "POST-VIDEO-AI",
+      "en": "Take a breath. What stayed with you? If you like, ask a question about what you experienced. You can read the reply, or choose to listen when audio is available.",
+      "zh": "深呼吸。剛才的體驗，有什麼留在你心裡？如果你願意，可以提出一個問題。你可以閱讀回覆，或在有語音時選擇朗讀。"
+    },
+    {
+      "id": "closing",
+      "context": "CLOSING---CELEBRATION",
+      "en": "Thank you for spending this moment with us. Take whatever stayed with you into the rest of your day.",
+      "zh": "謝謝你與我們共度這一刻。把留在心裡的感受，帶進接下來的生活。"
+    }
+  ]
+}

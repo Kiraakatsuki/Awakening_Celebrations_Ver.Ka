@@ -1,0 +1,39 @@
+# Stage 4.3D — Runtime validation
+
+The main pass ran in Unity 6000.4.7f1 Play Mode for 3 minutes 47 seconds after runtime initialization. It used the saved Living Glass scene, a 1019 × 632 Game view, the Windows 48 kHz stereo output, and the installed RTX 4060 Laptop GPU on driver 621.01. The temporary harness kept the camera rig inactive before Play Mode, blanked the assistant endpoint in the unsaved scene instance, and disabled consent, dictation and submit controls while testing. The guard monitored the consent gate, rig, microphone owner and assistant request throughout. The Editor returned to Edit Mode with zero remaining voice sources and reloaded the saved scene. [Runtime steps](Stage4_3D_RuntimeEvidence/Steps.txt)
+
+| Test group | Result | Evidence and limits |
+| --- | --- | --- |
+| A · Home voice preference | **PASS** | Home began Off in both locales. On played the matching cached Welcome. Turning Off during active narration cleared the source immediately. Re-enabling and rerendering kept the cue silent after its first use. Settings reflected the visit preference and closing Settings did not replay the interrupted cue. |
+| B · Onboarding and walkthrough | **PASS** | Real AudioSource sample progress for both languages at Privacy, Tutorial Entry, Tutorial Point, Attract, Gallery and Closing. Reflection was exercised in group C, so all 16 imported clips played. Privacy and Tutorial used safe route entry. Attract used a presentation fixture because ordinary progression requires camera consent. The first run exposed a fixture setup error: the first-awakening latch correctly redirected the second tour's Tutorial to Gallery. Clearing that test state before the second tour let the real routes and audio finish on the next bounded pass. [Initial fixture run](Stage4_3D_RuntimeEvidence/InitialFixtureRun.txt) |
+| C · Performer journeys | **PASS** | GAIA, PANDEMIC, RE-BIRTH, WHITE-GUARDIAN, CONSCIENCE and SANCTUARY each reached Focus, Activation, decoded Living Portrait with a real playback-completion event, Release, Reflection, and Closing. Languages alternated across the six runs. The shared reflection clip started in both locales. Guide audio stayed silent during the protected stages. |
+| D · Dynamic Qwen | **PASS** | Fixed English and Mandarin reply text was inserted through the existing transcript renderer. Manual Listen worked with guidance Off and began preparation only on activation. Genuine Qwen ICL output reached Unity and the Windows render endpoint in both languages. Stop worked during preparation and during playback. Text remained after completion. An occupied inference slot produced the existing busy message and restored Listen while preserving the displayed reply. A forced native crash was not exercised. |
+| E · Cancellation and lifecycle | **PASS** | Active audio stopped on navigation, Off, opening Settings, conversation closure, and reset through Closing → Souvenir → Done. Repeated updates did not replay guide cues. A targeted pass switched locale during Welcome and switched assistants during ICL preparation. The new locale played once and the superseded assistant produced no stale audio. Play Mode released the voice source and the test workers exited. |
+| Natural endings | **PARTIAL** | Digital evidence confirms delivery of the fixed Welcome source endings and full dynamic output through the Windows render endpoint. All four captured clips settled to silence. Independent human listening for every final consonant, click/pop, loudness in the space and perceived fade quality remains outstanding. |
+| F · Combined performance | **PARTIAL** | Unity with Qwen and the local video paths was measured in separate portions of the same test. Full HD, deployed Player and concurrent physical MediaPipe/Whisper workload were outside this test. Startup and inference were not instrumented separately within the live adapter run. |
+| Compilation, references and regression | **PASS** | Unity compiled. All 16 loaded AudioClip assets match their expected locale and import metadata. The 72 reply layouts, 164 conversation cases, 432 microphone layouts, and bilingual Home/Settings and audio policy checks passed. [Reply](Stage4_3D_Reply.txt) · [Conversation](Stage4_3D_Conversation.txt) · [Microphone](Stage4_3D_Mic.txt) · [Voice and approved catalog](Stage4_3D_Voice.txt) · [Import data](Stage4_3D_UnityImport.json) |
+
+## Playback evidence
+
+The approved Welcome files were compared against Unity's mixed signal and a digital loopback of the active Windows render endpoint. For the dynamic replies, the endpoint recording was aligned with Unity's mixed signal. Only the render endpoint was captured. No physical microphone was opened.
+
+| Clip | Last-quarter correlation | Time below activity threshold after last signal | Endpoint capture |
+| --- | ---: | ---: | --- |
+| English Welcome | 0.993217 vs approved source | 0.561 s | [WAV](<D:/AI-Voice-Auditions/Qwen3-TTS-Q8/Stage4_3C_Draft/Stage4_3D_RuntimeOutput/welcome-en-endpoint.wav>) |
+| Mandarin Welcome | 0.981899 vs approved source | 0.535 s | [WAV](<D:/AI-Voice-Auditions/Qwen3-TTS-Q8/Stage4_3C_Draft/Stage4_3D_RuntimeOutput/welcome-zh-endpoint.wav>) |
+| English dynamic | 0.999987 vs Unity mix | 0.804 s | [WAV](<D:/AI-Voice-Auditions/Qwen3-TTS-Q8/Stage4_3C_Draft/Stage4_3D_RuntimeOutput/dynamic-en-endpoint.wav>) |
+| Mandarin dynamic | 0.999969 vs Unity mix | 0.549 s | [WAV](<D:/AI-Voice-Auditions/Qwen3-TTS-Q8/Stage4_3C_Draft/Stage4_3D_RuntimeOutput/dynamic-zh-endpoint.wav>) |
+
+The last 100 ms of all four endpoint recordings peaked at about −90.3 dBFS. The time below threshold is the measured quiet time in each recording, including the observation interval after playback. Offline transcription recovered both English endings. It recovered the final question phrase in Mandarin, with homophone substitutions. The Mandarin Welcome also had substitutions resembling those already screened in the source. The waveform comparison puts those differences upstream of Unity playback or in ASR interpretation. No new truncation fault was reproduced in these four traces, so no playback code was changed. [Signal evidence](Stage4_3D_RuntimeEvidence/SignalEvidence.json) · [Offline text check](Stage4_3D_RuntimeEvidence/EndpointSpeechCheck.json)
+
+## Bounded timing
+
+| Measurement | Observation |
+| --- | --- |
+| Cached guide route or toggle to AudioSource progress | 94–179 ms in the completed bilingual run. No Qwen worker was sampled during the fixed guide sequence. |
+| Manual Listen to AudioSource progress | 6.737 s English and 4.995 s Mandarin, including worker start, synthesis, handoff and scheduled playback. Endpoint signal passed the selected amplitude threshold at 7.28 s and 5.68 s in those recordings. |
+| Unity frame timing in the recorded Qwen windows | English p50 3.98 ms, p95 5.21 ms, max 27.62 ms (2,793 sampled frames). Mandarin p50 4.04 ms, p95 7.76 ms, max 27.82 ms (2,342). No sampled frame crossed 33.3 ms in either window. |
+| Guide transition samples | English p95 9.08 ms, max 119.06 ms, two samples over 33.3 ms. Mandarin p95 8.86 ms, max 31.29 ms. The longer transition frames are visible in the timing evidence. |
+| Memory and GPU samples | 184 coarse, whole-system observations from runtime start through the main test exit. Peak system RAM used 15,889 MiB. Peak sampled Unity working set 2,308 MiB and Qwen working set 1,839.5 MiB. NVIDIA device peak sampled 1,749 MiB and 52% utilization. This sampling can miss synthesis spikes and cannot attribute VRAM to the Qwen process or prove a CUDA peak. |
+
+[Raw telemetry](Stage4_3D_RuntimeEvidence/Telemetry.csv). The armed application warning/error capture recorded no entries. Camera, microphone, live GPT, Windows Player and release testing were **NOT RUN**. Stage 4.3D validates this local Play Mode scenario only.

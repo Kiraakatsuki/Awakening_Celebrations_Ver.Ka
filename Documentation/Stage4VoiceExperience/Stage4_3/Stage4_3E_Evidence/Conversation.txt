@@ -1,0 +1,1 @@
+PASS: 144 theme/locale/viewport layouts across three surfaces, plus the existing 20 Editor-only state specimens. Layout cases also checked Ask stability with a long draft, hidden suggestions and a pending request. No backend or native IME verified.

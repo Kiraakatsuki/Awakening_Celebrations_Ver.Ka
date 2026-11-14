@@ -1,0 +1,42 @@
+2026-11-14T17:25:26.3693496Z | PASS preflight: saved scene; one inactive rig; camera denied; no microphone owner; blank assistant endpoint; sample rate 48000; Windows output Speakers (Realtek(R) Audio).
+2026-11-14T17:25:35.8954525Z | PASS Play Mode application focused.
+2026-11-14T17:25:36.4708887Z | PASS TUTORIAL---ENTRY---DIM English overview-en first samples=512; trigger-to-progress=0.087s; 192192 frames @ 24000Hz; declared 8.008s.
+2026-11-14T17:25:44.5594639Z | PASS natural source completion overview-en; last poll 192192/192192; elapsed=8.090s; source reference cleared.
+2026-11-14T17:25:45.0899683Z | PASS TUTORIAL---INTRODUCTION English tutorial-move-en first samples=512; trigger-to-progress=0.092s; 142272 frames @ 24000Hz; declared 5.928s.
+2026-11-14T17:25:51.0998880Z | PASS natural source completion tutorial-move-en; last poll 142272/142272; elapsed=6.010s; source reference cleared.
+2026-11-14T17:25:51.6115888Z | PASS TUTORIAL---LOOK---MOVE English tutorial-colour-en first samples=512; trigger-to-progress=0.097s; 130752 frames @ 24000Hz; declared 5.448s.
+2026-11-14T17:25:57.1392960Z | PASS natural source completion tutorial-colour-en; last poll 130752/130752; elapsed=5.527s; source reference cleared.
+2026-11-14T17:25:57.6519937Z | PASS TUTORIAL---POINT English gestures-en first samples=512; trigger-to-progress=0.096s; 194112 frames @ 24000Hz; declared 8.088s.
+2026-11-14T17:26:05.8294679Z | PASS natural source completion gestures-en; last poll 194112/194112; elapsed=8.178s; source reference cleared.
+2026-11-14T17:26:06.3626989Z | PASS TUTORIAL---HOLD---SELECT English tutorial-confirm-en first samples=512; trigger-to-progress=0.118s; 169152 frames @ 24000Hz; declared 7.048s.
+2026-11-14T17:26:13.4831801Z | PASS natural source completion tutorial-confirm-en; last poll 169152/169152; elapsed=7.120s; source reference cleared.
+2026-11-14T17:26:14.0340547Z | PASS TUTORIAL---EXPERIENCE English tutorial-portrait-en first samples=512; trigger-to-progress=0.136s; 146112 frames @ 24000Hz; declared 6.088s.
+2026-11-14T17:26:20.2049108Z | PASS natural source completion tutorial-portrait-en; last poll 146112/146112; elapsed=6.170s; source reference cleared.
+2026-11-14T17:26:20.7381385Z | PASS TUTORIAL---READY English tutorial-ready-en first samples=512; trigger-to-progress=0.118s; 153792 frames @ 24000Hz; declared 6.408s.
+2026-11-14T17:26:27.2199725Z | PASS natural source completion tutorial-ready-en; last poll 153792/153792; elapsed=6.482s; source reference cleared.
+2026-11-14T17:26:28.6657113Z | PASS English ordinary forward steps and denial at Attract; Back is unavailable during onboarding; safe revisit fixtures did not replay either approved cue.
+2026-11-14T17:26:29.5140207Z | PASS TUTORIAL---ENTRY---DIM Chinese overview-zh first samples=512; trigger-to-progress=0.108s; 190272 frames @ 24000Hz; declared 7.928s.
+2026-11-14T17:26:37.5080057Z | PASS natural source completion overview-zh; last poll 190272/190272; elapsed=7.993s; source reference cleared.
+2026-11-14T17:26:38.0409246Z | PASS TUTORIAL---INTRODUCTION Chinese tutorial-move-zh first samples=512; trigger-to-progress=0.098s; 169152 frames @ 24000Hz; declared 7.048s.
+2026-11-14T17:26:45.1632883Z | PASS natural source completion tutorial-move-zh; last poll 169152/169152; elapsed=7.122s; source reference cleared.
+2026-11-14T17:26:45.6960284Z | PASS TUTORIAL---LOOK---MOVE Chinese tutorial-colour-zh first samples=512; trigger-to-progress=0.119s; 140352 frames @ 24000Hz; declared 5.848s.
+2026-11-14T17:26:51.6222619Z | PASS natural source completion tutorial-colour-zh; last poll 140352/140352; elapsed=5.925s; source reference cleared.
+2026-11-14T17:26:52.1351072Z | PASS TUTORIAL---POINT Chinese gestures-zh first samples=512; trigger-to-progress=0.098s; 217152 frames @ 24000Hz; declared 9.048s.
+2026-11-14T17:27:01.2614564Z | PASS natural source completion gestures-zh; last poll 217152/217152; elapsed=9.127s; source reference cleared.
+2026-11-14T17:27:01.7926586Z | PASS TUTORIAL---HOLD---SELECT Chinese tutorial-confirm-zh first samples=512; trigger-to-progress=0.116s; 167232 frames @ 24000Hz; declared 6.968s.
+2026-11-14T17:27:08.8295556Z | PASS natural source completion tutorial-confirm-zh; last poll 167232/167232; elapsed=7.037s; source reference cleared.
+2026-11-14T17:27:09.3780981Z | PASS TUTORIAL---EXPERIENCE Chinese tutorial-portrait-zh first samples=512; trigger-to-progress=0.133s; 128832 frames @ 24000Hz; declared 5.368s.
+2026-11-14T17:27:14.8099358Z | PASS natural source completion tutorial-portrait-zh; last poll 128832/128832; elapsed=5.432s; source reference cleared.
+2026-11-14T17:27:15.3397816Z | PASS TUTORIAL---READY Chinese tutorial-ready-zh first samples=512; trigger-to-progress=0.114s; 203712 frames @ 24000Hz; declared 8.488s.
+2026-11-14T17:27:23.9039068Z | PASS natural source completion tutorial-ready-zh; last poll 203712/203712; elapsed=8.565s; source reference cleared.
+2026-11-14T17:27:25.3416526Z | PASS Chinese ordinary forward steps and denial at Attract; Back is unavailable during onboarding; safe revisit fixtures did not replay either approved cue.
+2026-11-14T17:27:27.4079298Z | PASS TUTORIAL---ENTRY---DIM English overview-en first samples=512; trigger-to-progress=0.123s; 192192 frames @ 24000Hz; declared 8.008s.
+2026-11-14T17:27:27.4084425Z | PASS current tutorial On via Settings starts after overlay exits.
+2026-11-14T17:27:27.6117930Z | PASS TUTORIAL---ENTRY---DIM Chinese overview-zh first samples=3072; trigger-to-progress=0.000s; 190272 frames @ 24000Hz; declared 7.928s.
+2026-11-14T17:27:27.7458912Z | PASS TUTORIAL---HOLD---SELECT Chinese tutorial-confirm-zh first samples=512; trigger-to-progress=0.103s; 167232 frames @ 24000Hz; declared 6.968s.
+2026-11-14T17:27:27.7458912Z | PASS locale change and rapid next reached dedicated fist clip without stale playback.
+2026-11-14T17:27:28.8316939Z | PASS Settings Off continued to suppress voice on the next real step.
+2026-11-14T17:27:30.3062442Z | PASS TUTORIAL---ENTRY---DIM Chinese overview-zh first samples=512; trigger-to-progress=0.125s; 190272 frames @ 24000Hz; declared 7.928s.
+2026-11-14T17:27:31.5296667Z | PASS opening Settings interrupts voice, Off stays silent on close, returning Home clears the clip and resets preference.
+2026-11-14T17:27:31.5296667Z | PASS runtime sequence complete; camera, microphone and assistant guards held.
+2026-11-14T17:27:32.3759167Z | PASS Edit Mode restored; saved scene clean=True; remaining voice sources=0; camera gate denied=True.

@@ -1,0 +1,98 @@
+{
+  "welcome-en-unity": {
+    "seconds": 8.4693,
+    "peak": 0.53155517578125,
+    "first_activity_s": 0.57,
+    "last_activity_s": 7.77,
+    "trailing_activity_free_s": 0.6993,
+    "tail_100ms_peak": 0.0,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\welcome-en-unity.wav",
+    "correlation": 0.992042,
+    "final_quarter_correlation": 0.993671,
+    "lag_s": 0.1493,
+    "compared_s": 7.928
+  },
+  "welcome-en-endpoint": {
+    "seconds": 8.4907,
+    "peak": 0.53265380859375,
+    "first_activity_s": 0.73,
+    "last_activity_s": 7.93,
+    "trailing_activity_free_s": 0.5607,
+    "tail_100ms_peak": 3.0517578125e-05,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\welcome-en-endpoint.wav",
+    "correlation": 0.991714,
+    "final_quarter_correlation": 0.993217,
+    "lag_s": 0.3108,
+    "compared_s": 7.928
+  },
+  "welcome-zh-unity": {
+    "seconds": 7.6373,
+    "peak": 0.50299072265625,
+    "first_activity_s": 0.49,
+    "last_activity_s": 6.94,
+    "trailing_activity_free_s": 0.6973,
+    "tail_100ms_peak": 0.0,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\welcome-zh-unity.wav",
+    "correlation": 0.986215,
+    "final_quarter_correlation": 0.982942,
+    "lag_s": 0.1067,
+    "compared_s": 7.128
+  },
+  "welcome-zh-endpoint": {
+    "seconds": 7.5947,
+    "peak": 0.50555419921875,
+    "first_activity_s": 0.61,
+    "last_activity_s": 7.06,
+    "trailing_activity_free_s": 0.5347,
+    "tail_100ms_peak": 3.0517578125e-05,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\welcome-zh-endpoint.wav",
+    "correlation": 0.985847,
+    "final_quarter_correlation": 0.981899,
+    "lag_s": 0.2255,
+    "compared_s": 7.128
+  },
+  "dynamic-en-unity": {
+    "seconds": 11.904,
+    "peak": 0.415252685546875,
+    "first_activity_s": 7.13,
+    "last_activity_s": 10.96,
+    "trailing_activity_free_s": 0.944,
+    "tail_100ms_peak": 0.0,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\dynamic-en-unity.wav"
+  },
+  "dynamic-en-endpoint": {
+    "seconds": 11.904,
+    "peak": 0.416015625,
+    "first_activity_s": 7.28,
+    "last_activity_s": 11.1,
+    "trailing_activity_free_s": 0.804,
+    "tail_100ms_peak": 3.0517578125e-05,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\dynamic-en-endpoint.wav",
+    "correlation": 0.999983,
+    "final_quarter_correlation": 0.999987,
+    "lag_s": 0.1427,
+    "compared_s": 11.7613
+  },
+  "dynamic-zh-unity": {
+    "seconds": 10.688,
+    "peak": 0.374847412109375,
+    "first_activity_s": 5.53,
+    "last_activity_s": 10.02,
+    "trailing_activity_free_s": 0.668,
+    "tail_100ms_peak": 0.0,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\dynamic-zh-unity.wav"
+  },
+  "dynamic-zh-endpoint": {
+    "seconds": 10.7093,
+    "peak": 0.3759765625,
+    "first_activity_s": 5.68,
+    "last_activity_s": 10.16,
+    "trailing_activity_free_s": 0.5493,
+    "tail_100ms_peak": 3.0517578125e-05,
+    "capture": "D:\\AI-Voice-Auditions\\Qwen3-TTS-Q8\\Stage4_3C_Draft\\Stage4_3D_RuntimeOutput\\dynamic-zh-endpoint.wav",
+    "correlation": 0.999969,
+    "final_quarter_correlation": 0.999969,
+    "lag_s": 0.1427,
+    "compared_s": 10.5666
+  }
+}
