@@ -52,6 +52,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
     private EnvironmentalMusicMode environmentalMusicMode = EnvironmentalMusicMode.LoopUntilStopped;
     [SerializeField, Tooltip("Public HTTPS base URL for the Render assistant service. Keep API credentials on the backend.")]
     private string assistantBackendBaseUrl = "https://awakening-celebrations-ver-ka.onrender.com";
+    [SerializeField, Tooltip("Backend protocol for this deployment. Contextual uses the same HTTPS origin; Legacy explicitly uses /chat.")]
+    private LivingGlassChatMode assistantChatMode = LivingGlassChatMode.Legacy;
 
     private enum EnvironmentalMusicMode
     {
@@ -135,6 +137,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         public Button cancel;
         public string failedMessage;
         public bool requestInProgress;
+        public Coroutine followTail;
     }
 
     [Serializable]
@@ -1236,23 +1239,9 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
 
 
-    private bool TryBuildAssistantChatUrl(out string chatUrl)
-    {
-        chatUrl = null;
-        Uri baseUri;
-        string configuredUrl = assistantBackendBaseUrl == null ? string.Empty : assistantBackendBaseUrl.Trim().TrimEnd('/');
-        if (!Uri.TryCreate(configuredUrl, UriKind.Absolute, out baseUri) ||
-            baseUri.Scheme != Uri.UriSchemeHttps || baseUri.AbsolutePath != "/" ||
-            !string.IsNullOrEmpty(baseUri.Query) || !string.IsNullOrEmpty(baseUri.Fragment))
-            return false;
-
-        chatUrl = configuredUrl + "/chat";
-        return true;
-    }
-
     private void SubmitAssistantMessage(AssistantSession session, string rawMessage)
     {
-        string contextualOrigin = LivingGlassChatProtocol.DevelopmentBaseUrl;
+        string contextualOrigin = ContextualAssistantOrigin;
         if (session == null || session != assistantSession || session.id != assistantSessionSequence ||
             session.performerIndex < -1 || session.performerIndex >= Performers.Length ||
             (session.performerIndex < 0 ? contextualOrigin == null || !session.fromCommonChooser :
@@ -1273,8 +1262,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             SetAssistantStatus(session, language == AppLanguage.English ? "Your question is too long. Please shorten it and retry." : "問題內容過長，請縮短後重試。", false);
             return;
         }
-        TryBuildAssistantChatUrl(out string chatUrl);
-        if (contextualOrigin == null && chatUrl == null)
+        string origin = contextualOrigin ?? LivingGlassChatProtocol.HttpsOrigin(assistantBackendBaseUrl);
+        if (origin == null || (assistantChatMode == LivingGlassChatMode.Contextual && contextualOrigin == null))
         {
             SetAssistantStatus(session, language == AppLanguage.English ? "Assistant service URL is not configured." : "尚未設定助理服務網址。", false);
             return;
@@ -1298,7 +1287,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         if (session.cancel != null)
             session.cancel.SetEnabled(true);
         SetAssistantStatus(session, language == AppLanguage.English ? "Thinking…" : "思考中…", true);
-        assistantRequestRoutine = StartCoroutine(SendAssistantRequest(session, chatUrl, contextualOrigin, message));
+        FollowAssistantTail(session);
+        assistantRequestRoutine = StartCoroutine(SendAssistantRequest(session, origin, contextualOrigin != null, message));
     }
 
     private bool IsAssistantSessionViewActive(AssistantSession session)
@@ -1328,7 +1318,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         public string json;
     }
 
-    private static UnityWebRequest NewAssistantPost(string url, string body, bool local)
+    private static UnityWebRequest NewAssistantPost(string url, string body, bool contextual)
     {
         var request = new UnityWebRequest(url, UnityWebRequest.kHttpVerbPOST)
         {
@@ -1336,14 +1326,14 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             downloadHandler = new DownloadHandlerBuffer(),
             timeout = 45
         };
-        if (local) request.redirectLimit = 0;
+        if (contextual) request.redirectLimit = 0;
         request.SetRequestHeader("Content-Type", "application/json; charset=utf-8");
         return request;
     }
 
-    private IEnumerator PostAssistant(string url, string body, bool local, AssistantHttpResult result)
+    private IEnumerator PostAssistant(string url, string body, bool contextual, AssistantHttpResult result)
     {
-        using (UnityWebRequest request = NewAssistantPost(url, body, local))
+        using (UnityWebRequest request = NewAssistantPost(url, body, contextual))
         {
             assistantWebRequest = request;
             yield return request.SendWebRequest();
@@ -1366,22 +1356,21 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         catch (InvalidOperationException) { request.Dispose(); }
     }
 
-    private IEnumerator SendAssistantRequest(AssistantSession session, string chatUrl, string contextualOrigin, string visitorMessage)
+    private IEnumerator SendAssistantRequest(AssistantSession session, string origin, bool contextual, string visitorMessage)
     {
         int requestId = session.id;
         var resultData = new AssistantHttpResult();
-        bool usedFallback = false;
-        if (contextualOrigin != null)
+        if (contextual)
         {
-            if (contextSessionOrigin != contextualOrigin) ResetContextConversation();
+            if (contextSessionOrigin != origin) ResetContextConversation();
             if (contextSessionToken == null)
             {
-                yield return PostAssistant(contextualOrigin + "/chat/v2/session", "{}", true, resultData);
+                yield return PostAssistant(origin + "/chat/v2/session", "{}", true, resultData);
                 if (session != assistantSession || requestId != assistantSessionSequence) yield break;
                 if (resultData.outcome == UnityWebRequest.Result.Success)
                 {
                     contextSessionToken = LivingGlassChatProtocol.TokenFromResponse(resultData.json);
-                    contextSessionOrigin = contextualOrigin;
+                    contextSessionOrigin = origin;
                     if (contextSessionToken == null) resultData.outcome = UnityWebRequest.Result.DataProcessingError;
                 }
             }
@@ -1389,17 +1378,15 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             {
                 string body = LivingGlassChatProtocol.ContextBody(visitorMessage, language, contextSessionToken,
                     session.performerIndex, session.fromCommonChooser);
-                yield return PostAssistant(contextualOrigin + "/chat/v2", body, true, resultData);
+                yield return PostAssistant(origin + "/chat/v2", body, true, resultData);
                 if (session != assistantSession || requestId != assistantSessionSequence) yield break;
                 if (resultData.status == 410) contextSessionToken = null;
             }
-            usedFallback = chatUrl != null && LivingGlassChatProtocol.AllowLegacyFallback &&
-                LivingGlassChatProtocol.EligibleForFallback(resultData.outcome, resultData.status);
         }
-        if (contextualOrigin == null || usedFallback)
+        else
         {
-            string legacyText = usedFallback ? visitorMessage : BuildPerformerScopedMessage(session, visitorMessage);
-            yield return PostAssistant(chatUrl, LivingGlassChatProtocol.LegacyBody(legacyText), false, resultData);
+            string legacyText = BuildPerformerScopedMessage(session, visitorMessage);
+            yield return PostAssistant(origin + "/chat", LivingGlassChatProtocol.LegacyBody(legacyText), false, resultData);
         }
         assistantRequestRoutine = null;
         if (session != assistantSession || requestId != assistantSessionSequence || !IsAssistantSessionViewActive(session))
@@ -1441,21 +1428,16 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             yield break;
         }
 
-        Label reply = AppendAssistantReply(session, result.reply);
-        VisualElement replyEnd = livingReplySpeech?.Add(session.conversation, result.reply) ?? reply;
+        bool followReply = IsAtAssistantTail(session.conversation);
+        AppendAssistantReply(session, result.reply);
+        livingReplySpeech?.Add(session.conversation, result.reply);
         session.failedMessage = null;
         if (session.input != null && session.input.value.Trim() == visitorMessage)
             session.input.value = string.Empty;
         if (session.send != null)
             session.send.text = language == AppLanguage.English ? "Ask" : "詢問";
-        SetAssistantStatus(session, usedFallback
-            ? (language == AppLanguage.English ? "General reply. Exhibition sources are unavailable." : "一般回覆。展覽資料來源目前無法使用。")
-            : string.Empty, false);
-        session.conversation.schedule.Execute(() =>
-        {
-            if (session == assistantSession && session.root != null && session.root.panel != null)
-                session.conversation.ScrollTo(replyEnd);
-        }).ExecuteLater(1);
+        SetAssistantStatus(session, string.Empty, false);
+        if (followReply) FollowAssistantTail(session);
     }
 
     private Label AppendAssistantReply(AssistantSession session, string replyText)
@@ -1567,17 +1549,40 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             session.status.AddToClassList("ac-assistant-chat-loading");
         else
             session.status.RemoveFromClassList("ac-assistant-chat-loading");
+    }
 
-        if (!string.IsNullOrEmpty(message) && session.conversation != null)
-        {
-            session.status.RemoveFromHierarchy();
-            session.conversation.Add(session.status);
-            session.conversation.ScrollTo(session.status);
-        }
+    private static bool IsAtAssistantTail(ScrollView transcript)
+    {
+        const float edgeTolerance = 8f;
+        return transcript.verticalScroller.highValue - transcript.scrollOffset.y <= edgeTolerance;
+    }
+
+    private void FollowAssistantTail(AssistantSession session)
+    {
+        if (session.followTail != null) StopCoroutine(session.followTail);
+        session.followTail = StartCoroutine(FollowAssistantTailAfterLayout(session, session.conversation.scrollOffset.y));
+    }
+
+    private IEnumerator FollowAssistantTailAfterLayout(AssistantSession session, float offsetBeforeLayout)
+    {
+        // The panel's scrollbar range is still stale in its next scheduled callback.
+        yield return new WaitForEndOfFrame();
+        session.followTail = null;
+        var transcript = session.conversation;
+        float maximum = transcript.verticalScroller.highValue;
+        float expectedOffset = Mathf.Min(offsetBeforeLayout, maximum);
+        if (session == assistantSession && IsAssistantSessionViewActive(session) &&
+            Mathf.Abs(transcript.scrollOffset.y - expectedOffset) <= 1f)
+            transcript.scrollOffset = new Vector2(transcript.scrollOffset.x, maximum);
     }
 
     private void CancelAssistantRequest()
     {
+        if (assistantSession?.followTail != null)
+        {
+            StopCoroutine(assistantSession.followTail);
+            assistantSession.followTail = null;
+        }
         livingReplySpeech?.Stop();
         assistantSessionSequence++;
         if (assistantWebRequest != null)

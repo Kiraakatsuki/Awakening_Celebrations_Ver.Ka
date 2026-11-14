@@ -701,7 +701,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         var conversation = ReadingScroll("assistantConversation", "lg-conversation"); parent.Add(conversation);
         conversation.focusable = true; conversation.tabIndex = 0;
         Text(conversation, T("Your conversation begins here.", "從這裡開始對話。"), "lg-empty").name = "assistant-empty";
-        var status = new Label { name = "assistantChatStatus", enableRichText = false }; status.AddToClassList("lg-chat-status"); conversation.Add(status);
+        var status = new Label { name = "assistantChatStatus", enableRichText = false }; status.AddToClassList("lg-chat-status"); parent.Add(status);
         BuildQuestionComposer(parent, performer);
     }
     private void BuildQuestionComposer(VisualElement parent, int performer)

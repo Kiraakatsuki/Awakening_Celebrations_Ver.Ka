@@ -73,6 +73,10 @@ const rules = [
   'Distinguish organizer descriptions, reported events and curatorial readings. Never infer a costume material,',
   'designer, depicted person, rights holder or undocumented official title. State gaps or ask for clarification.',
   'Selection is a clue. Explicitly named subjects take precedence. Prior visitor queries clarify references and are not evidence.',
+  'Use resolvedSubjects to interpret references like “this presence”. For comparisons use the evidence for both resolved subjects.',
+  'When the evidence supports a direct answer, start with it. Do not ask the visitor to identify a subject that is already resolved.',
+  'For a general reflection or noticing prompt, offer an observation or a reflective question grounded in the exhibition context.',
+  'A registered portrait identifies the exhibition subject. It does not verify the depicted person or costume credits.',
   'Return JSON with reply (plain spoken text with no citation markup) and evidenceKeys (only supporting supplied keys).',
 ].join('\n');
 const responseFormat = {
@@ -161,8 +165,10 @@ export function mountContextChat(app, { knowledge, sessions, limiter, respond, b
       } else if (!result.passages.length) reply = language.missing;
       else {
         const evidence = result.passages.map(({ key, text, provenance }) => ({ key, text, provenance }));
+        const resolvedSubjects = result.subject.performerIds.map((id) => ({ id, name: knowledge.performers.get(id).names[locale] }));
         const prompt = { locale, question: input.message, context: { source: context.source,
-          performerId: context.performerId, imageId: context.imageId }, previousQuestions: sameScope ? state.turns : [], evidence };
+          performerId: context.performerId, imageId: context.imageId }, resolvedSubjects,
+          previousQuestions: sameScope ? state.turns : [], evidence };
         const output = await respond({ instructions: rules, input: JSON.stringify(prompt),
           text: { format: responseFormat }, max_output_tokens: 600, store: false }, controller.signal);
         if (typeof output !== 'string' || output.length > 16_000) throw new Error('Empty or invalid answer');

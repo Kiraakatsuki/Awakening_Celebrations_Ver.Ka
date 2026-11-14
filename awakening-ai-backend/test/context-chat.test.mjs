@@ -16,6 +16,73 @@ const answerFromEvidence = ({ input }) => {
   return JSON.stringify({ reply: entry.text, evidenceKeys: [entry.key] });
 };
 
+test('actual Unity presets retrieve evidence in both locales for all performer and portrait contexts', async (t) => {
+  const unity = readFileSync(new URL('../../Assets/LivingGlass/Presentation/LivingGlassPresentation.cs', import.meta.url), 'utf8');
+  const presetRow = unity.split(/\r?\n/).find((line) => line.includes('foreach (string s in new[] { T('));
+  const presets = [...presetRow.matchAll(/T\("([^"]+)", "([^"]+)"\)/g)].map(([, en, zh]) => ({ en, 'zh-TW': zh }));
+  assert.equal(presets.length, 3);
+  const scopes = [...knowledge.performers.values()].filter((row) => row.featured).flatMap((row) => [
+    { source: 'performer-page', performerId: row.id },
+    { source: 'common-ai', performerId: row.id, imageId: row.imageIds[0] },
+  ]);
+  scopes.push({ source: 'common-ai' });
+  for (const context of scopes) {
+    const expected = context.performerId ? knowledge.performers.get(context.performerId).defileId : 'JFC-HEAL-2026';
+    let calls = 0;
+    const http = await start(t, (payload) => {
+      const prompt = JSON.parse(payload.input);
+      assert.deepEqual(prompt.resolvedSubjects.map((item) => item.id), context.performerId ? [context.performerId] : []);
+      assert(prompt.evidence.some((entry) => entry.key.startsWith(expected + '/')));
+      calls++;
+      return answerFromEvidence(payload);
+    });
+    for (const preset of presets) {
+      for (const locale of localeList) {
+        const response = await http('/chat/v2', { locale, context, message: preset[locale] });
+        assert.equal(response.status, 200);
+        assert.equal(response.body.context.performerId, context.performerId ?? null);
+        assert.equal(response.body.context.imageId, context.imageId ?? null);
+        assert(response.body.recordIds.includes(expected), preset[locale] + ': ' + expected);
+      }
+    }
+    assert.equal(calls, 6);
+  }
+});
+
+test('comparisons resolve a selected or recent implicit operand while named-only questions override selection', async (t) => {
+  let prompt;
+  const http = await start(t, ({ input }) => {
+    prompt = JSON.parse(input);
+    return JSON.stringify({ reply: 'Fixture', evidenceKeys: prompt.evidence.map((item) => item.key) });
+  });
+  const pandemic = 'JFC26-PANDEMIC';
+  for (const [locale, message] of [['en', 'How is this different from Pandemic?'], ['zh-TW', '這支分隊與 Pandemic 有何不同？']]) {
+    const answer = await http('/chat/v2', { locale, message, context: gaia });
+    assert.equal(answer.status, 200);
+    assert.deepEqual(prompt.resolvedSubjects.map((item) => item.id), [pandemic, gaia.performerId]);
+    assert(answer.body.recordIds.includes('DEF-' + pandemic));
+    assert(answer.body.recordIds.includes('DEF-' + gaia.performerId));
+  }
+  const relation = await http('/chat/v2', { locale: 'en', message: 'How is it related to Gaia?',
+    context: { source: 'performer-page', performerId: 'JFC26-SANCTUARY' } });
+  assert(relation.body.recordIds.includes('DEF-JFC26-SANCTUARY'));
+  await http('/chat/v2', { locale: 'en', message: 'What is Pandemic?', context: gaia });
+  assert.deepEqual(prompt.resolvedSubjects.map((item) => item.id), [pandemic]);
+  const sessionId = (await http('/chat/v2/session', {})).body.sessionId;
+  await http('/chat/v2', { locale: 'en', sessionId, message: 'Tell me about Roots' });
+  const followup = await http('/chat/v2', { locale: 'zh-TW', sessionId, message: '這支分隊與 Pandemic 有何不同？' });
+  assert(followup.body.recordIds.includes('DEF-JFC26-ROOTS'));
+  assert(followup.body.recordIds.includes('DEF-' + pandemic));
+  await http('/chat/v2', { locale: 'en', sessionId, context: gaia, message: 'What is Pandemic?' });
+  const selected = await http('/chat/v2', { locale: 'zh-TW', sessionId, context: gaia, message: '關於這種存在，有哪些已知資訊？' });
+  assert(selected.body.recordIds.includes('DEF-' + gaia.performerId));
+  assert.deepEqual(prompt.resolvedSubjects.map((item) => item.id), [gaia.performerId]);
+  const credit = await http('/chat/v2', { locale: 'zh-TW', message: '這件服裝是誰設計的？',
+    context: { source: 'common-ai', performerId: gaia.performerId, imageId: 'JFC26-GAIA-IMG01' } });
+  assert.match(credit.body.reply, /尚未核實/);
+  assert(credit.body.recordIds.includes('JFC26-GAIA-IMG01'));
+});
+
 async function start(t, respond, options = {}) {
   const app = createApp({ knowledge, hasProvider: () => true, respond, ...options });
   const server = app.listen(0, '127.0.0.1');

@@ -1,8 +1,9 @@
 using System;
 using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.Networking;
 using Newtonsoft.Json;
+
+internal enum LivingGlassChatMode { Legacy, Contextual }
 
 internal static class LivingGlassChatProtocol
 {
@@ -27,31 +28,25 @@ internal static class LivingGlassChatProtocol
         }
     }
 
-    internal static bool AllowLegacyFallback
-    {
-        get
-        {
-#if UNITY_EDITOR
-            return Environment.GetEnvironmentVariable("AWAKENING_CONTEXT_CHAT_LEGACY_FALLBACK") == "1";
-#else
-            return false;
-#endif
-        }
-    }
+    internal static string ContextualOrigin(LivingGlassChatMode mode, string configuredOrigin, string editorLoopback) =>
+        editorLoopback ?? (mode == LivingGlassChatMode.Contextual ? HttpsOrigin(configuredOrigin) : null);
 
-    internal static string LoopbackBaseUrl(string value)
+    internal static string HttpsOrigin(string value)
     {
-        if (!Uri.TryCreate(value, UriKind.Absolute, out Uri uri) ||
-            uri.Scheme != Uri.UriSchemeHttps ||
-            (uri.Host != "127.0.0.1" && uri.Host != "[::1]") ||
+        if (!Uri.TryCreate(value?.Trim(), UriKind.Absolute, out Uri uri) ||
+            uri.Scheme != Uri.UriSchemeHttps || uri.Host.Length == 0 ||
             uri.AbsolutePath != "/" || uri.UserInfo.Length != 0 || uri.Query.Length != 0 || uri.Fragment.Length != 0)
             return null;
         return uri.GetLeftPart(UriPartial.Authority);
     }
 
-    internal static bool EligibleForFallback(UnityWebRequest.Result result, long status) =>
-        result == UnityWebRequest.Result.ConnectionError ||
-        (result == UnityWebRequest.Result.ProtocolError && (status == 502 || status == 503 || status == 504));
+    internal static string LoopbackBaseUrl(string value)
+    {
+        string origin = HttpsOrigin(value);
+        if (origin == null) return null;
+        string host = new Uri(origin).Host;
+        return host == "127.0.0.1" || host == "[::1]" ? origin : null;
+    }
 
     internal static bool IsSessionToken(string value) =>
         value != null && Regex.IsMatch(value, @"\A[A-Za-z0-9_-]{43}\z");

@@ -20,7 +20,9 @@ public sealed partial class AwakeningApplicationController
     private LivingGlassSpeechCapture livingSpeech;
     private LivingGlassReplySpeech livingReplySpeech;
     private LivingGlassVoiceCoordinator livingVoice;
-    internal bool LivingContextChatEnabled => LivingGlassChatProtocol.DevelopmentBaseUrl != null;
+    private string ContextualAssistantOrigin => LivingGlassChatProtocol.ContextualOrigin(
+        assistantChatMode, assistantBackendBaseUrl, LivingGlassChatProtocol.DevelopmentBaseUrl);
+    internal bool LivingContextChatEnabled => ContextualAssistantOrigin != null;
     private string contextSessionToken;
     private string contextSessionOrigin;
     private LivingGlassVoiceCoordinator Voice => livingVoice ??= new LivingGlassVoiceCoordinator(gameObject,
@@ -256,6 +258,7 @@ public sealed partial class AwakeningApplicationController
         };
         AssistantSession session = assistantSession;
         session.cancel.SetEnabled(false);
+        session.status.AddToClassList("ac-assistant-chat-hidden");
         var speech = LivingGlassSpeechCapture.Bind(root, session.input, session.send, performer, language,
             () => session == assistantSession && IsAssistantSessionViewActive(session),
             () => environmentalMusicSource != null && environmentalMusicSource.isPlaying, livingGlass.Motion);

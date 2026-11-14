@@ -117,10 +117,13 @@ export function loadKnowledge(directory = dataDirectory) {
   return { sources, performers, defiles, editions, images, passages, contributors: groups.contributors };
 }
 
-const referring = /(?:\b(?:this|that|it|these|those|previous one|following year|next year|tell me more|continue)\b|這張|這件|這套|這個|那個|它|隔年|下一年|多說|再多|再說|前一)/iu;
+const referring = /(?:\b(?:this|that|it|these|those|previous one|following year|next year|tell me more|continue)\b|這張|這件|這套|這個|那個|這位|這支|這種|這是|它|隔年|下一年|多說|再多|再說|前一)/iu;
 const imageQuestion = /(?:\b(?:costume|image|portrait|picture|outfit|fabric|material)\b|服裝|圖像|圖片|這張圖|肖像|材質|材料|服飾)/iu;
 const identityQuestion = /(?:\b(?:designed|designer|made|created|wore|wearing|identity|material|fabric|plastic|rights|copyright|who played|who portrayed|who is (?:in|this))\b|誰設計|誰做|誰創作|誰穿|誰演|是誰|材料|材質|塑膠|版權|著作權|權利)/iu;
 const broadHistory = /history|origins|歷史|起源/iu;
+const comparison = /\b(?:differ(?:s|ent|ence|ences)?|compar(?:e|ed|ison)|versus|related|connect(?:ed|ion)?|relationship)\b|有何不同|差異|比較|不同|關係|關聯|連結/iu;
+const exhibitionPrompt = /\b(?:what can i notice|help me reflect|what is known about this presence)\b|我可以留意什麼|引導我回顧感受|關於這種存在|為什麼選擇這個主題|why was this theme chosen/iu;
+const selectedReference = /\bthis\s+(?:presence|performer|defile|theme|costume|image|portrait|outfit)\b|這種存在|這位|這支|這個主題|這件|這套|這張/iu;
 export function retrieve(knowledge, { message, locale, context, previous, limit = 6 }) {
   const q = normalized(message);
   const tokens = [...new Set(terms(q))];
@@ -138,22 +141,30 @@ export function retrieve(knowledge, { message, locale, context, previous, limit 
   else if (!years.size && previous?.year && referring.test(q) && explicit.length === 0) years.add(previous.year);
   const editions = [...knowledge.editions.values()].filter((row) => years.has(row.year) ||
     [row.id, row.theme, row.subtitle, ...row.aliases].some((name) => name && match(q, name)));
-  const subjects = explicit.length ? explicit.map((row) => row.id) :
+  const followup = referring.test(q);
+  const mentionedSubjects = explicit.map((row) => row.id);
+  const selected = context.performerId ? [context.performerId] : [];
+  const compares = comparison.test(q);
+  const mentionsSelection = selectedReference.test(q) || (compares && /\bthis\b|這/iu.test(q));
+  const implicitSubjects = (!mentionsSelection || !selected.length) && followup && previous?.performerIds.length ?
+    previous.performerIds : selected;
+  // In "how is this different from Pandemic?", the named defile does not fill "this".
+  const comparedSubject = mentionedSubjects.length === 1 && followup && compares &&
+    implicitSubjects.length === 1 && implicitSubjects[0] !== mentionedSubjects[0] ? implicitSubjects[0] : null;
+  const subjects = explicit.length ? [...mentionedSubjects, ...(comparedSubject ? [comparedSubject] : [])] :
     explicitImages.length ? [...new Set(explicitImages.map((row) => row.performerId))] :
-      referring.test(q) && previous?.performerIds.length ? previous.performerIds :
-        context.performerId ? [context.performerId] : [];
+      implicitSubjects;
   const targetImage = explicitImages.length === 1 ? explicitImages[0] : context.imageId ? knowledge.images.get(context.imageId) :
     !context.unknownImage && !context.performerId && referring.test(q) && previous?.imageId ? knowledge.images.get(previous.imageId) : null;
   const focusImage = targetImage && (explicitImages.length || !explicit.length || explicit.some((row) => row.id === targetImage.performerId))
     ? targetImage : null;
   const creditIntent = identityQuestion.test(q);
-  const followup = referring.test(q);
   const imageIntent = imageQuestion.test(q) || (creditIntent && followup && Boolean(focusImage));
   const scores = new Map();
   function boost(id, section, amount) { scores.set(id + '/' + section, amount + (scores.get(id + '/' + section) ?? 0)); }
   for (const performerId of subjects) {
     const row = knowledge.performers.get(performerId);
-    boost(row.defileId, 'officialTheme', explicit.length ? 34 : 18);
+    boost(row.defileId, 'officialTheme', comparedSubject ? (performerId === comparedSubject ? 65 : 80) : explicit.length ? 34 : 18);
     boost(row.defileId, 'relationshipToGaia', /connect|related|relationship|symboliz|關係|連|象徵/iu.test(q) ? 26 : 8);
     boost(row.defileId, 'festivalPresentation', 6);
     if (creditIntent && !namedPeople.length && (imageIntent || /who played|who portrayed|誰演/iu.test(q))) boost(row.defileId, 'unverifiedCredits', 30);
@@ -181,6 +192,10 @@ export function retrieve(knowledge, { message, locale, context, previous, limit 
   if (/\bheal\b|\b2026\b|八支|幾支|地球與生命/iu.test(q)) {
     boost('JFC-HEAL-2026', 'facts', 36);
     boost('JFC-HEAL-2026', 'narrative', 25);
+  }
+  if (!subjects.length && !editions.length && exhibitionPrompt.test(q)) {
+    boost('JFC-HEAL-2026', 'narrative', 36);
+    boost('JFC-EXHIBITION-SCOPE', 'summary', 29);
   }
   if (explicit.length > 1 && /connect|related|relationship|關係|連/iu.test(q)) boost('JFC-HEAL-2026', 'narrative', 27);
   if (/only six|six of|the other two|noise.*roots|只能|六支|六位/iu.test(q)) {

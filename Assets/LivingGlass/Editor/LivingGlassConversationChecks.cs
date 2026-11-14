@@ -80,6 +80,8 @@ public static class LivingGlassConversationChecks
             if(EditorApplication.isPlayingOrWillChangePlaymode)throw new InvalidOperationException("Runtime forbidden.");
             var root=view.Root;var left=root.Q("reflection-interaction");var side=root.Q("reflection-artwork");var scroll=root.Q<ScrollView>("assistantConversation");
             var composer=root.Q("question-composer");var ask=root.Q<Button>("assistantChatSend");var cancel=root.Q<Button>("assistantCancel");var next=root.Q<Button>("finish-chapter");
+            var status = root.Q<Label>("assistantChatStatus");
+            Check(status.parent == scroll.parent && status.parent == composer.parent, "status can move transcript content");
             float scale=root.worldBound.width/root.resolvedStyle.width;
             Check(Mathf.Abs(root.resolvedStyle.width - expectedViewport.x) < 1 && Mathf.Abs(root.resolvedStyle.height - expectedViewport.y) < 1, "viewport settled");
             Check(scroll.worldBound.yMax<=composer.worldBound.yMin+.5f,"transcript overlays composer");
@@ -115,6 +117,11 @@ public static class LivingGlassConversationChecks
                     scroll.SendEvent(key);
                 }
                 Check(Mathf.Abs(scroll.scrollOffset.y - end) < .75f, "transcript End key does not reach the reply end");
+                SendWheel(scroll, -2);
+                float earlier = scroll.scrollOffset.y;
+                Check(earlier < end - 1, "upward wheel does not reveal earlier text");
+                SendWheel(scroll, 1);
+                Check(scroll.scrollOffset.y > earlier + 1, "downward wheel does not return toward the tail");
                 Check(ask.worldBound.yMax <= composer.worldBound.yMax, "scrolling displaced Ask");
             }
             if (checkChangedLayout)
@@ -148,6 +155,16 @@ public static class LivingGlassConversationChecks
     {
         Directory.CreateDirectory(Folder);File.WriteAllLines(Folder+"/LayoutChecks.csv",rows);File.WriteAllText(Folder+"/EditorChecks.txt",result);
         Status=result;EditorApplication.update-=Tick;if(window!=null)window.Close();window=null;view=null;data=null;
+    }
+    private static void SendWheel(ScrollView transcript, float delta)
+    {
+        using var wheel = WheelEvent.GetPooled(new Event
+        {
+            type = EventType.ScrollWheel, delta = new Vector2(0, delta),
+            mousePosition = transcript.contentViewport.worldBound.center
+        });
+        wheel.target = transcript.contentContainer;
+        transcript.contentContainer.SendEvent(wheel);
     }
     private static void Check(bool value,string reason){if(!value)throw new InvalidOperationException(reason);}
 }

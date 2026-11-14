@@ -2,7 +2,6 @@
 using System;
 using Newtonsoft.Json.Linq;
 using UnityEditor;
-using UnityEngine.Networking;
 
 // Pure Edit Mode serialization checks. The transport fixture is run separately.
 internal static class ContextChatEditorChecks
@@ -39,19 +38,19 @@ internal static class ContextChatEditorChecks
         var general = (JObject)JObject.Parse(LivingGlassChatProtocol.ContextBody("Fixture", AppLanguage.Chinese, token, -1, true))["context"];
         Need(general.Count == 1 && (string)general["source"] == "common-ai", "general context omits IDs");
         var legacy = JObject.Parse(LivingGlassChatProtocol.LegacyBody("Only the question"));
-        Need(legacy.Count == 1 && (string)legacy["message"] == "Only the question", "fallback data minimization");
+        Need(legacy.Count == 1 && (string)legacy["message"] == "Only the question", "legacy message contract");
         Need(LivingGlassChatProtocol.TokenFromResponse(LivingGlassChatProtocol.TokenBody(token)) == token, "server token");
         Need(LivingGlassChatProtocol.TokenFromResponse("{\"sessionId\":\"guessable\"}") == null, "invalid token");
         Need(LivingGlassChatProtocol.LoopbackBaseUrl("https://127.0.0.1:8743") == "https://127.0.0.1:8743", "loopback URL");
         foreach (string rejected in new[] { "http://127.0.0.1:8743", "https://example.com", "https://127.0.0.1/a", "https://user@127.0.0.1", "https://127.0.0.1/?key=1" })
             Need(LivingGlassChatProtocol.LoopbackBaseUrl(rejected) == null, "unsafe development URL");
-        foreach (long status in new long[] {400, 401, 409, 410, 413, 429, 500})
-            Need(!LivingGlassChatProtocol.EligibleForFallback(UnityWebRequest.Result.ProtocolError, status), "validation must not fall back");
-        foreach (long status in new long[] {502, 503, 504})
-            Need(LivingGlassChatProtocol.EligibleForFallback(UnityWebRequest.Result.ProtocolError, status), "service fallback");
-        Need(LivingGlassChatProtocol.EligibleForFallback(UnityWebRequest.Result.ConnectionError, 0), "connection fallback");
-        Need(!LivingGlassChatProtocol.EligibleForFallback(UnityWebRequest.Result.DataProcessingError, 200), "protocol failure must not fall back");
-        return "PASS 24 bilingual dedicated/portrait payloads, general context, token parsing, HTTPS loopback and fallback policy.";
+        const string render = "https://awakening-celebrations-ver-ka.onrender.com";
+        Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Contextual, render + "/", null) == render, "deployed contextual route");
+        Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Legacy, render, null) == null, "explicit legacy route");
+        Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Contextual, render, "https://127.0.0.1:8743") == "https://127.0.0.1:8743", "Editor fixture override");
+        foreach (string rejected in new[] { "http://example.com", "https://example.com/chat/v2", "https://user@example.com", "https://example.com/?key=1", "https://example.com/#fragment" })
+            Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Contextual, rejected, null) == null, "unsafe deployed origin");
+        return "PASS 24 bilingual dedicated/portrait payloads, general context, token parsing, HTTPS Render/loopback routing and explicit legacy mode.";
     }
 
     private static void Need(bool condition, string label)
