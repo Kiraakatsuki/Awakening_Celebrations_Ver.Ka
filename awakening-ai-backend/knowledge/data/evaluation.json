@@ -1,0 +1,581 @@
+[
+  {
+    "id": "QA-FOUNDER",
+    "question": {
+      "en": "Who founded Jember Fashion Carnaval?",
+      "zh-TW": "Jember Fashion Carnaval 是誰創辦的？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Dynand Fariz, a local fashion designer and educator, founded it.",
+        "zh-TW": "創辦人是當地時裝設計師兼教育工作者 Dynand Fariz。"
+      },
+      "recordIds": [
+        "JFC-OVERVIEW",
+        "PERSON-DYNAND-FARIZ"
+      ],
+      "mustMention": {
+        "en": [
+          "Dynand Fariz"
+        ],
+        "zh-TW": [
+          "Dynand Fariz"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-THEME",
+    "question": {
+      "en": "What is the theme of JFC 2026?",
+      "zh-TW": "2026 年 JFC 的主題是什麼？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "HEAL, a story about restoring the relationship between humanity, Earth and life.",
+        "zh-TW": "主題是 HEAL，談的是如何修復人類、地球與生命之間的關係。"
+      },
+      "recordIds": [
+        "ED-JFC-24",
+        "JFC-HEAL-2026"
+      ],
+      "mustMention": {
+        "en": [
+          "HEAL"
+        ],
+        "zh-TW": [
+          "HEAL"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-EXPANSION",
+    "question": {
+      "en": "What does HEAL stand for?",
+      "zh-TW": "HEAL 代表什麼？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Humanity, Earth, and Life.",
+        "zh-TW": "Humanity, Earth, and Life，即人類、地球與生命。"
+      },
+      "recordIds": [
+        "JFC-HEAL-2026"
+      ],
+      "mustMention": {
+        "en": [
+          "Humanity",
+          "Earth",
+          "Life"
+        ],
+        "zh-TW": [
+          "Humanity",
+          "Earth",
+          "Life"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-COUNT",
+    "question": {
+      "en": "How many defiles are in HEAL 2026?",
+      "zh-TW": "HEAL 2026 有幾支主題分隊？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "There are eight official thematic defiles.",
+        "zh-TW": "官方共有八支主題分隊。"
+      },
+      "recordIds": [
+        "JFC-HEAL-2026"
+      ],
+      "mustMention": {
+        "en": [],
+        "zh-TW": []
+      },
+      "mentionAny": {
+        "en": [
+          "eight",
+          "8"
+        ],
+        "zh-TW": [
+          "八",
+          "8"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-SCOPE",
+    "question": {
+      "en": "Why can I explore only six of them here?",
+      "zh-TW": "為什麼這裡只能體驗其中六支分隊？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "The exhibition presents six selected journeys. Noise and Roots are still part of the official festival and can be discussed.",
+        "zh-TW": "展覽選了六支分隊做成互動旅程。Noise 與 Roots 仍是正式嘉年華分隊，也可以詢問。"
+      },
+      "recordIds": [
+        "JFC-EXHIBITION-SCOPE",
+        "JFC26-NOISE",
+        "JFC26-ROOTS"
+      ],
+      "mustMention": {
+        "en": [
+          "Noise",
+          "Roots"
+        ],
+        "zh-TW": [
+          "Noise",
+          "Roots"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-COMPARE",
+    "question": {
+      "en": "What is the difference between Gaia and Pandemic?",
+      "zh-TW": "Gaia 和 Pandemic 有什麼不同？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Gaia personifies Mother Earth and anchors the story. Pandemic uses public health crises to show the fragility of human life.",
+        "zh-TW": "Gaia 是大地母親的化身，也是故事核心。Pandemic 透過公共衛生危機呈現人類生命的脆弱。"
+      },
+      "recordIds": [
+        "DEF-JFC26-GAIA",
+        "DEF-JFC26-PANDEMIC"
+      ],
+      "mustMention": {
+        "en": [
+          "Gaia",
+          "Pandemic"
+        ],
+        "zh-TW": [
+          "Gaia",
+          "Pandemic"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-REBIRTH",
+    "question": {
+      "en": "What does Re-Birth represent?",
+      "zh-TW": "Re-Birth 代表什麼？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "It represents renewal through repair and solidarity after damage.",
+        "zh-TW": "它象徵受創後透過修復與團結獲得新生。"
+      },
+      "recordIds": [
+        "DEF-JFC26-REBIRTH"
+      ],
+      "mustMention": {
+        "en": [],
+        "zh-TW": []
+      }
+    }
+  },
+  {
+    "id": "QA-HISTORY",
+    "question": {
+      "en": "Tell me about the history of JFC.",
+      "zh-TW": "可以介紹 JFC 的歷史嗎？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Dynand Fariz’s fashion work led to the public debut in 2003. The festival developed its themed street runway and outdoor Grand Carnival returned in 2022.",
+        "zh-TW": "Dynand Fariz 的時裝工作孕育了 2003 年首場公開活動。嘉年華發展出主題街頭伸展臺，戶外主遊行於 2022 年回歸。"
+      },
+      "recordIds": [
+        "JFC-OVERVIEW",
+        "HIST-2001",
+        "HIST-2003",
+        "HIST-2022"
+      ],
+      "mustMention": {
+        "en": [
+          "2003",
+          "2022"
+        ],
+        "zh-TW": [
+          "2003",
+          "2022"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-2024",
+    "question": {
+      "en": "What was the JFC theme in 2024?",
+      "zh-TW": "JFC 2024 的主題是什麼？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Algorithm, with the tagline Beyond Binary of Our Story.",
+        "zh-TW": "主題為 Algorithm，標語是 Beyond Binary of Our Story。"
+      },
+      "recordIds": [
+        "ED-JFC-22"
+      ],
+      "mustMention": {
+        "en": [
+          "Algorithm",
+          "Beyond Binary of Our Story"
+        ],
+        "zh-TW": [
+          "Algorithm",
+          "Beyond Binary of Our Story"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-DESIGNER",
+    "question": {
+      "en": "Who designed this costume?",
+      "zh-TW": "這套服裝是誰設計的？"
+    },
+    "expected": {
+      "behavior": "uncertain",
+      "answer": {
+        "en": "This artwork is mapped to the Gaia presence. Its costume designer has not been verified.",
+        "zh-TW": "這張展圖對應 Gaia；服裝設計者目前尚未核實。"
+      },
+      "recordIds": [
+        "JFC26-GAIA-IMG01"
+      ],
+      "mustMention": {
+        "en": [
+          "Gaia"
+        ],
+        "zh-TW": [
+          "Gaia"
+        ]
+      }
+    },
+    "context": {
+      "source": "performer-page",
+      "performerId": "JFC26-GAIA",
+      "imageId": "JFC26-GAIA-IMG01"
+    }
+  },
+  {
+    "id": "QA-SANCTUARY",
+    "question": {
+      "en": "How is Sanctuary connected to Gaia?",
+      "zh-TW": "Sanctuary 與 Gaia 有什麼關係？"
+    },
+    "expected": {
+      "behavior": "attributed-interpretation",
+      "answer": {
+        "en": "In the exhibition’s reading of the story, Sanctuary is a moment of refuge and reflection in Gaia’s healing journey.",
+        "zh-TW": "依展覽對故事的解讀，Sanctuary 是 Gaia 修復旅程中庇護與反思的一刻。"
+      },
+      "recordIds": [
+        "DEF-JFC26-SANCTUARY",
+        "JFC-HEAL-2026"
+      ],
+      "mustMention": {
+        "en": [
+          "Gaia"
+        ],
+        "zh-TW": [
+          "Gaia"
+        ]
+      },
+      "mentionAny": {
+        "en": [
+          "reading",
+          "interpret"
+        ],
+        "zh-TW": [
+          "解讀",
+          "詮釋"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-NOISE",
+    "question": {
+      "en": "Can you tell me about Noise even though it is not in the app?",
+      "zh-TW": "雖然展覽裡不能選 Noise，可以介紹它嗎？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Noise is an official HEAL defile about misinformation and social disorder. It has no selectable exhibition journey.",
+        "zh-TW": "Noise 是探討錯假資訊和社會失序的 HEAL 官方分隊，展覽未提供可選旅程。"
+      },
+      "recordIds": [
+        "DEF-JFC26-NOISE",
+        "JFC26-NOISE"
+      ],
+      "mustMention": {
+        "en": [
+          "Noise"
+        ],
+        "zh-TW": [
+          "Noise"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-ORDER",
+    "question": {
+      "en": "Did Gaia or Roots go first at the Grand Carnival?",
+      "zh-TW": "主遊行是 Gaia 還是 Roots 先出場？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Gaia featured in the opening stage drama, then Roots led the street parade.",
+        "zh-TW": "開場舞臺劇以 Gaia 為主，之後由 Roots 領先上街遊行。"
+      },
+      "recordIds": [
+        "HEAL-DAY-3",
+        "HEAL-ORDER"
+      ],
+      "mustMention": {
+        "en": [
+          "Gaia",
+          "Roots"
+        ],
+        "zh-TW": [
+          "Gaia",
+          "Roots"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-MATERIAL",
+    "question": {
+      "en": "Was this costume made from recycled plastic?",
+      "zh-TW": "這件服裝是用回收塑膠做的嗎？"
+    },
+    "expected": {
+      "behavior": "uncertain",
+      "answer": {
+        "en": "The image alone cannot verify costume materials. No material record for the depicted costume has been established.",
+        "zh-TW": "單憑圖像無法確認服裝材料；目前也沒有查證到該服裝的材料記錄。"
+      },
+      "recordIds": [
+        "JFC26-PANDEMIC-IMG01",
+        "DEF-JFC26-PANDEMIC"
+      ],
+      "mustMention": {
+        "en": [],
+        "zh-TW": []
+      }
+    },
+    "context": {
+      "source": "common-ai",
+      "performerId": "JFC26-PANDEMIC",
+      "imageId": "JFC26-PANDEMIC-IMG01"
+    }
+  },
+  {
+    "id": "QA-2020",
+    "question": {
+      "en": "Was there a numbered JFC Grand Carnival in 2020?",
+      "zh-TW": "2020 年有舉辦編號的 JFC 主遊行嗎？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "A virtual World Kids Carnival is documented. There is no verified numbered Grand Carnival record for 2020 in this collection.",
+        "zh-TW": "2020 年可確認有線上 World Kids Carnival；本資料集沒有核實的編號主遊行記錄。"
+      },
+      "recordIds": [
+        "ED-JFC-2020-WKC",
+        "HIST-2020"
+      ],
+      "mustMention": {
+        "en": [
+          "World Kids Carnival"
+        ],
+        "zh-TW": [
+          "World Kids Carnival"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-UNKNOWN-IMAGE",
+    "question": {
+      "en": "What does this image depict?",
+      "zh-TW": "這張圖上畫的是什麼？"
+    },
+    "expected": {
+      "behavior": "clarify",
+      "answer": {
+        "en": "Ask the visitor which image they mean. An unknown image ID cannot establish its contents or rightsholder.",
+        "zh-TW": "先請訪客指出是哪一張圖。未知的圖像 ID 無法確認內容或權利人。"
+      },
+      "recordIds": [],
+      "mustMention": {
+        "en": [],
+        "zh-TW": []
+      }
+    },
+    "context": {
+      "source": "common-ai",
+      "performerId": null,
+      "imageId": "JFC26-GAIA-IMG99"
+    }
+  },
+  {
+    "id": "QA-OTHER-DEFILE",
+    "question": {
+      "en": "I chose Gaia. Tell me about Roots instead.",
+      "zh-TW": "我選了 Gaia，但想知道 Roots 的故事。"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "Roots relates healing to cultural heritage and ancestral knowledge. It is part of HEAL and has no selectable route here.",
+        "zh-TW": "Roots 將修復和文化傳承、祖輩知識相連。它是 HEAL 分隊，這裡未提供可選旅程。"
+      },
+      "recordIds": [
+        "DEF-JFC26-ROOTS",
+        "JFC26-ROOTS"
+      ],
+      "mustMention": {
+        "en": [
+          "Roots"
+        ],
+        "zh-TW": [
+          "Roots"
+        ]
+      }
+    },
+    "context": {
+      "source": "performer-page",
+      "performerId": "JFC26-GAIA",
+      "imageId": null
+    }
+  },
+  {
+    "id": "QA-MISMATCH",
+    "question": {
+      "en": "Describe this performer’s image.",
+      "zh-TW": "請描述這位表演者的圖像。"
+    },
+    "expected": {
+      "behavior": "invalid-context",
+      "answer": {
+        "en": "The image ID belongs to a different defile. Reject the context and request a corrected selection.",
+        "zh-TW": "圖像 ID 屬於另一支分隊，應拒絕該脈絡並請訪客更正選擇。"
+      },
+      "recordIds": [
+        "JFC26-GAIA",
+        "JFC26-PANDEMIC-IMG01"
+      ],
+      "mustMention": {
+        "en": [],
+        "zh-TW": []
+      }
+    },
+    "context": {
+      "source": "performer-page",
+      "performerId": "JFC26-GAIA",
+      "imageId": "JFC26-PANDEMIC-IMG01"
+    }
+  },
+  {
+    "id": "QA-UNSUPPORTED-CAST",
+    "question": {
+      "en": "Who played Gaia in Dewi Bumi?",
+      "zh-TW": "《Dewi Bumi》的 Gaia 是誰演的？"
+    },
+    "expected": {
+      "behavior": "uncertain",
+      "answer": {
+        "en": "The opening production and Gaia’s role are documented. The performer’s identity has not been verified in this collection.",
+        "zh-TW": "開場演出與 Gaia 的角色有資料支持；本資料集尚未核實演出者身分。"
+      },
+      "recordIds": [
+        "DEF-JFC26-GAIA",
+        "HEAL-DAY-3"
+      ],
+      "mustMention": {
+        "en": [
+          "Gaia"
+        ],
+        "zh-TW": [
+          "Gaia"
+        ]
+      }
+    }
+  },
+  {
+    "id": "QA-UNKNOWN-EARLY-THEME",
+    "question": {
+      "en": "What was the official umbrella title for the first JFC?",
+      "zh-TW": "首屆 JFC 的官方總主題名稱是什麼？"
+    },
+    "expected": {
+      "behavior": "uncertain",
+      "answer": {
+        "en": "Records name costume groups such as Cowboy and Punk. A separate umbrella title is not established.",
+        "zh-TW": "資料記載 Cowboy、Punk 等服裝分隊，尚未確認另有官方總主題。"
+      },
+      "recordIds": [
+        "ED-JFC-01"
+      ],
+      "mustMention": {
+        "en": [],
+        "zh-TW": []
+      }
+    }
+  },
+  {
+    "id": "QA-FOLLOWUP",
+    "question": {
+      "en": "What happened the following year?",
+      "zh-TW": "隔年發生了什麼？"
+    },
+    "expected": {
+      "behavior": "answer",
+      "answer": {
+        "en": "The 2024 edition was Algorithm. The context for this follow-up is the 2023 Timelapse edition.",
+        "zh-TW": "2024 年的主題是 Algorithm。這個追問的前文是 2023 年 Timelapse 一屆。"
+      },
+      "recordIds": [
+        "ED-JFC-21",
+        "ED-JFC-22"
+      ],
+      "mustMention": {
+        "en": [
+          "Algorithm"
+        ],
+        "zh-TW": [
+          "Algorithm"
+        ]
+      }
+    },
+    "priorTurn": {
+      "en": "We were talking about the 2023 Timelapse edition.",
+      "zh-TW": "剛剛談的是 2023 年的 Timelapse。"
+    }
+  }
+]

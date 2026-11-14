@@ -1,0 +1,477 @@
+[
+  {
+    "id": "DEF-JFC26-GAIA",
+    "editionId": "ED-JFC-24",
+    "name": "Gaia",
+    "aliases": [
+      "GAIA"
+    ],
+    "relatedTerms": [
+      "Dewi Bumi",
+      "Ibu Pertiwi"
+    ],
+    "display": {
+      "en": "Gaia",
+      "zh-TW": "蓋婭"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "Gaia personifies the Earth as a source of life and the center of the story. JFC uses her journey to ask how people can protect the natural balance.",
+        "zh-TW": "Gaia 是生命泉源大地的化身，也是故事核心。JFC 透過她的旅程，思考人類如何維護自然平衡。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "The Dewi Bumi stage prologue centered on Gaia. detikJatim also reported a Raja Ampat marine motif in Gaia’s street presentation. A separately credited Raja Ampat design appeared in Artwear, and the shared motif does not establish a costume link.",
+        "zh-TW": "舞臺序幕《Dewi Bumi》以 Gaia 為核心。detikJatim 也報導 Gaia 的街頭演出運用 Raja Ampat 海洋意象。Artwear 另有一件具名的 Raja Ampat 設計；相同意象不足以證明為同一套服裝。"
+      },
+      "sources": [
+        "SRC-RRI-2026-FINALE",
+        "SRC-ANTARA-2026-FINALE",
+        "SRC-DETIK-2026-FINALE",
+        "SRC-RRI-2026-ARTWEAR"
+      ],
+      "provenance": "reported-outcome"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "Gaia anchors the whole story.",
+        "zh-TW": "Gaia 貫穿全篇。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-NOISE",
+      "DEF-JFC26-PANDEMIC",
+      "DEF-JFC26-REBIRTH"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-RRI-2026-FINALE",
+      "SRC-ANTARA-2026-FINALE",
+      "SRC-DETIK-2026-FINALE",
+      "SRC-RRI-2026-ARTWEAR"
+    ]
+  },
+  {
+    "id": "DEF-JFC26-NOISE",
+    "editionId": "ED-JFC-24",
+    "name": "Noise",
+    "aliases": [
+      "NOISE"
+    ],
+    "display": {
+      "en": "Noise",
+      "zh-TW": "喧囂"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "JFC connects Noise to misinformation and social disorder. Distorted accounts and public conflict can drown out a person’s sense of identity.",
+        "zh-TW": "JFC 以 Noise 描繪錯假資訊與社會失序；扭曲的說法與衝突可能淹沒個人對身分的理解。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "Post-event reporting describes traditional Indonesian mask imagery in the festival presentation.",
+        "zh-TW": "會後報導提到，嘉年華演出採用了印尼群島的傳統面具意象。"
+      },
+      "sources": [
+        "SRC-DETIK-2026-FINALE"
+      ],
+      "provenance": "reported-outcome"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "Noise is a human and social disruption within the world Gaia is trying to heal.",
+        "zh-TW": "Noise 描寫 Gaia 試圖修復的世界中的人為與社會失序。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-CONSCIENCE"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-DETIK-2026-FINALE"
+    ]
+  },
+  {
+    "id": "DEF-JFC26-PANDEMIC",
+    "editionId": "ED-JFC-24",
+    "name": "Pandemic",
+    "aliases": [
+      "PANDEMIC"
+    ],
+    "display": {
+      "en": "Pandemic",
+      "zh-TW": "大流行"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "JFC uses health crises to show how vulnerable people and societies are when everyday life is disrupted.",
+        "zh-TW": "JFC 透過公共衛生危機，呈現日常生活受擾時個人與社會的脆弱。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "The festival card establishes the crisis theme. A verified material list for a particular costume is unavailable.",
+        "zh-TW": "嘉年華說明卡可確認危機題材；尚無針對特定服裝的可靠材料清單。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "Pandemic shows the vulnerability of life within Gaia’s larger story of distress and recovery.",
+        "zh-TW": "Pandemic 在 Gaia 面對創傷並尋求復原的故事中，展現生命脆弱的一面。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-SANCTUARY"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE"
+    ]
+  },
+  {
+    "id": "DEF-JFC26-SANCTUARY",
+    "editionId": "ED-JFC-24",
+    "name": "Sanctuary",
+    "aliases": [
+      "SANCTUARY"
+    ],
+    "display": {
+      "en": "Sanctuary",
+      "zh-TW": "庇護所"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "JFC presents a place to pause and reflect. Earth offers room for healing and balance, and the defile invites care for living beings.",
+        "zh-TW": "JFC 將它呈現為停下與反思的空間。大地提供修復與恢復平衡的可能，也邀請人們關照各種生命。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "Post-event coverage describes Sanctuary closing the street sequence as a refuge for Earth and living beings.",
+        "zh-TW": "會後報導記載 Sanctuary 為街頭隊列收尾，將它描寫成大地與生命的庇護所。"
+      },
+      "sources": [
+        "SRC-DETIK-2026-FINALE"
+      ],
+      "provenance": "reported-outcome"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "Sanctuary is the refuge and reflective pause within Gaia’s healing journey.",
+        "zh-TW": "Sanctuary 是 Gaia 修復旅程中的庇護與反思時刻。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-PANDEMIC",
+      "DEF-JFC26-WGUARDIAN"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-DETIK-2026-FINALE"
+    ]
+  },
+  {
+    "id": "DEF-JFC26-WGUARDIAN",
+    "editionId": "ED-JFC-24",
+    "name": "White Guardian",
+    "aliases": [
+      "THE WHITE GUARDIAN",
+      "The White Guardian",
+      "WHITE-GUARDIAN"
+    ],
+    "display": {
+      "en": "White Guardian",
+      "zh-TW": "白色守護者"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "The organizer evokes a guardian of a frozen world and links warming to threats to long-established ways of life. Protection comes with facing the consequences of human action.",
+        "zh-TW": "主辦方以冰封世界的守護者為意象，將暖化與長久生活方式所受的威脅相連；守護也意味著面對人類行為的後果。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "The icy setting is supported by the official concept card. Specific fabric and construction credits are unresolved.",
+        "zh-TW": "冰封背景有官方概念卡支持；確切面料與製作人員仍待查證。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "The guardian represents protection within the threatened world Gaia embodies.",
+        "zh-TW": "守護者代表對 Gaia 所化身、正受威脅的世界的守護。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-SANCTUARY",
+      "DEF-JFC26-CONSCIENCE"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE"
+    ]
+  },
+  {
+    "id": "DEF-JFC26-CONSCIENCE",
+    "editionId": "ED-JFC-24",
+    "name": "Conscience",
+    "aliases": [
+      "CONSCIENCE"
+    ],
+    "display": {
+      "en": "Conscience",
+      "zh-TW": "良知"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "JFC’s card examines what happens when power and greed erode empathy. The defile puts humanity’s moral choices under scrutiny.",
+        "zh-TW": "JFC 的說明卡探討權力與貪欲侵蝕同理心的後果，藉此檢視人類的道德選擇。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "Post-event reporting describes a gladiator figure as a metaphor for moral struggle and the defense of human values.",
+        "zh-TW": "會後報導提到，角鬥士形象用來象徵良知的掙扎與對人性價值的捍衛。"
+      },
+      "sources": [
+        "SRC-DETIK-2026-FINALE"
+      ],
+      "provenance": "reported-outcome"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "Conscience asks what humanity must confront in itself to participate in Gaia’s recovery.",
+        "zh-TW": "Conscience 反問人類必須面對自身哪些問題，才能參與 Gaia 的修復。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-NOISE",
+      "DEF-JFC26-REBIRTH"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-DETIK-2026-FINALE"
+    ]
+  },
+  {
+    "id": "DEF-JFC26-REBIRTH",
+    "editionId": "ED-JFC-24",
+    "name": "Re-Birth",
+    "aliases": [
+      "RE-BIRTH",
+      "Rebirth",
+      "Re Birth"
+    ],
+    "display": {
+      "en": "Re-Birth",
+      "zh-TW": "重生"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "JFC emphasizes repairing what was damaged and finding strength through cooperation. Re-Birth carries the possibility of recovery after crisis.",
+        "zh-TW": "JFC 聚焦於修復破損之物，以及團結帶來的力量。Re-Birth 展現危機過後復原的可能。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "A post-event account connects the defile with a Japanese philosophy of repair. The source does not establish a specific technique for the Unity artwork.",
+        "zh-TW": "一則會後報導把此分隊與日本的修復哲學相連；該資料無法證實 Unity 展圖使用了某一特定工藝。"
+      },
+      "sources": [
+        "SRC-DETIK-2026-FINALE"
+      ],
+      "provenance": "reported-outcome"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "Re-Birth expresses the possibility of renewal in Gaia’s arc from injury to healing.",
+        "zh-TW": "Re-Birth 表達 Gaia 從創傷走向修復時重新開始的可能。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-CONSCIENCE",
+      "DEF-JFC26-ROOTS"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-DETIK-2026-FINALE"
+    ]
+  },
+  {
+    "id": "DEF-JFC26-ROOTS",
+    "editionId": "ED-JFC-24",
+    "name": "Roots",
+    "aliases": [
+      "ROOTS"
+    ],
+    "display": {
+      "en": "Roots",
+      "zh-TW": "根源"
+    },
+    "officialTheme": {
+      "text": {
+        "en": "JFC links healing with respect for cultural inheritance. Remembering ancestral knowledge helps reconnect people with the world they depend on.",
+        "zh-TW": "JFC 將修復與尊重文化傳承相連。記得祖輩知識，有助於人們重建與賴以維生的環境的關係。"
+      },
+      "sources": [
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "official-theme"
+    },
+    "festivalPresentation": {
+      "text": {
+        "en": "Post-event coverage identifies Minangkabau cultural references. ANTARA reports maroon as a prominent costume color in this defile.",
+        "zh-TW": "會後報導辨識出 Minangkabau（米南加保）文化元素。ANTARA 記載此分隊服裝醒目的栗紅色調。"
+      },
+      "sources": [
+        "SRC-DETIK-2026-FINALE",
+        "SRC-ANTARA-2026-FINALE"
+      ],
+      "provenance": "reported-outcome"
+    },
+    "relationshipToGaia": {
+      "text": {
+        "en": "Roots relates Gaia’s recovery to cultural memory and a renewed relationship with nature.",
+        "zh-TW": "Roots 將 Gaia 的復原連到文化記憶以及與自然重建的關係。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-HEAL-SITE"
+      ],
+      "provenance": "curatorial-reading"
+    },
+    "relatedDefileIds": [
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-REBIRTH"
+    ],
+    "confirmedCredits": [],
+    "openQuestions": {
+      "en": "A defile-specific cast and costume-design credit list has not been verified. Do not link event participants or artwork to a named costume without evidence.",
+      "zh-TW": "尚未核實本分隊完整演出與服裝設計名單；缺乏證據時，不應把活動來賓或展圖連到具名服裝。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-DETIK-2026-FINALE",
+      "SRC-ANTARA-2026-FINALE"
+    ]
+  }
+]

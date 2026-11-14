@@ -676,7 +676,11 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     }
     private void BuildChooser(VisualElement parent)
     {
-        Text(parent, T("Choose a presence to begin a conversation. The assistant uses the existing service and does not claim a verified knowledge archive.", "選擇一種存在展開對話。助理使用既有服務，不宣稱擁有已核實的知識庫。"), "lg-small");
+        bool contextual = flow?.LivingContextChatEnabled ?? false;
+        Text(parent, contextual ? T("Choose a portrait or ask a general question about JFC.", "選擇肖像，或詢問一般 JFC 問題。") :
+            T("Choose a presence to begin a conversation. The assistant uses the existing service and does not claim a verified knowledge archive.", "選擇一種存在展開對話。助理使用既有服務，不宣稱擁有已核實的知識庫。"), "lg-small");
+        if (contextual)
+            Action(parent, "assistant-general", T("Ask about JFC", "詢問 JFC"), () => flow.LivingGlassOpenOverlay(LivingGlassChatProtocol.GeneralOverlay), "lg-quiet");
         var choices = Box(parent, "assistant-choices", "lg-chooser");
         for (int i=0; i<6; i++)
         {
@@ -688,7 +692,8 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     }
     private void BuildChat(VisualElement parent, int performer, bool spacious = false)
     {
-        Text(parent, spacious ? T("Reflect & converse", "沉澱並對話") : LivingGlassRoutes.Performers[performer] + T(" / AI conversation", "／AI 對話"), spacious ? "lg-reflection-title" : "lg-subtitle");
+        Text(parent, spacious ? T("Reflect & converse", "沉澱並對話") :
+            performer < 0 ? T("JFC conversation", "JFC 對話") : LivingGlassRoutes.Performers[performer] + T(" / AI conversation", "／AI 對話"), spacious ? "lg-reflection-title" : "lg-subtitle");
         Text(parent, spacious ? T("AI context is limited. Please avoid sharing personal information.", "AI 背景資訊有限，請勿分享個人資訊。") : T("Ask about your experience. Verified performer context is limited; avoid sharing personal information.", "可詢問體驗感受。已核實的表演者背景有限，請勿分享個人資訊。"), "lg-small");
         var suggestions = Box(parent, "suggestions", "lg-suggestions");
         foreach (string s in new[] { T("What can I notice?", "我可以留意什麼？"), T("Help me reflect.", "引導我回顧感受。"), T("What is known about this presence?", "關於這種存在，有哪些已知資訊？") })
@@ -705,7 +710,8 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         var voice = Box(composer, "voice-affordance", "lg-voice-affordance");
         var microphone = Box(voice, "microphone-unavailable", "lg-microphone");
         microphone.pickingMode = PickingMode.Ignore;
-        microphone.style.borderTopColor = Color.Lerp(LivingGlassAssets.Hex("#526475"), LivingGlassAssets.Accents[performer], .55f);
+        microphone.style.borderTopColor = Color.Lerp(LivingGlassAssets.Hex("#526475"),
+            performer >= 0 ? LivingGlassAssets.Accents[performer] : LivingGlassAssets.Neutral, .55f);
         microphone.Add(new LivingGlassMicrophoneIcon());
         Text(voice, T("Voice unavailable", "語音尚未提供"), "lg-voice-caption").name = "voice-status";
         var input = new TextField(T("Your question", "您的問題"))
@@ -749,10 +755,10 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         var bar = Box(panel, "window-titlebar", "lg-window-titlebar");
         string title = kind == "Settings" ? T("Experience controls", "體驗設定") : kind == "Privacy" ? T("Privacy & camera", "隱私與相機") : kind == "Help" ? T("Here to guide you", "操作說明") : T("A conversation", "一場對話");
         Text(bar, title, "lg-panel-title");
-        if (kind == "Settings" || kind.StartsWith("Assistant-", StringComparison.Ordinal))
+        bool conversation = IsAssistantOverlay(kind);
+        if (kind == "Settings" || conversation)
             Action(bar, "window-minimize", T("Minimize", "縮小"), () => flow?.LivingMinimize(), "lg-window-tool");
         var close = Action(bar, "window-close", T("Close", "關閉"), () => flow?.LivingGlassCloseOverlay(), "lg-window-tool");
-        bool conversation = kind.StartsWith("Assistant-", StringComparison.Ordinal);
         if (conversation)
         {
             overlayPlane.AddToClassList("lg-chat-overlay");
@@ -827,8 +833,10 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     {
         if (chatRoot == null || chatRoot.panel == null || closing) return false;
         string family = LivingGlassRoutes.Family(route);
-        return OverlayVisible ? panel == chatRoot && overlayKind != null && overlayKind.StartsWith("Assistant-", StringComparison.Ordinal) : content == chatRoot && (family == "POST-VIDEO-AI" || family == "Assistant");
+        return OverlayVisible ? panel == chatRoot && IsAssistantOverlay(overlayKind) : content == chatRoot && (family == "POST-VIDEO-AI" || family == "Assistant");
     }
+    private static bool IsAssistantOverlay(string kind) => kind == LivingGlassChatProtocol.GeneralOverlay ||
+        (kind != null && kind.StartsWith("Assistant-", StringComparison.Ordinal));
     public void AnnounceProtected() { if (announcement != null) announcement.text = T("Available after this cinematic moment. Open explicitly when ready.", "此沉浸段落結束後可使用，屆時請自行開啟。 "); }
     public void AnnounceCameraOff() { if (announcement != null) announcement.text = T("Camera stopped. Your experience remains on this screen.", "相機已停止，體驗維持在目前畫面。"); }
     private static VisualElement FirstFocusable(VisualElement parent)

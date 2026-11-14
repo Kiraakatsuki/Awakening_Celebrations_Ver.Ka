@@ -1,0 +1,43 @@
+[
+  {
+    "id": "JFC-OVERVIEW",
+    "year": null,
+    "provenance": "verified-fact",
+    "text": {
+      "en": "Jember Fashion Carnaval is a street-fashion carnival in Jember, East Java, Indonesia. Designer and educator Dynand Fariz founded it, and the first public edition was held on January 1, 2003. Its themed groups combine costume design, performance and a street runway.",
+      "zh-TW": "Jember Fashion Carnaval 是印尼東爪哇 Jember 的街頭時裝嘉年華，由設計師兼教育工作者 Dynand Fariz 創立，首屆公開活動於 2003 年 1 月 1 日舉行。主題分隊融合服裝創作、表演及街頭伸展臺。"
+    },
+    "sources": [
+      "SRC-JFC-HOME",
+      "SRC-JFC-ID",
+      "SRC-POST-2011"
+    ]
+  },
+  {
+    "id": "JFC-CREATIVE-PRACTICE",
+    "year": null,
+    "provenance": "verified-fact",
+    "text": {
+      "en": "JFC describes participants as makers and performers of their own work. A 2023 government roadshow report also documents JFC instructors teaching modelling and costume making to local participants.",
+      "zh-TW": "JFC 主辦方介紹參與者如何親手設計、製作與演出。2023 年地方政府巡迴活動的報導也記載，JFC 指導員教授當地參與者走秀及製作服裝。"
+    },
+    "sources": [
+      "SRC-JFC-HOME",
+      "SRC-JEMBER-2023-THEME",
+      "SRC-DETIK-2008"
+    ]
+  },
+  {
+    "id": "JFC-EXHIBITION-SCOPE",
+    "year": 2026,
+    "provenance": "exhibition-fact",
+    "text": {
+      "en": "Awakening Celebrations provides six selectable journeys: Gaia, Pandemic, Re-Birth, White Guardian, Conscience and Sanctuary. Noise and Roots belong to HEAL and can be discussed as festival subjects.",
+      "zh-TW": "Awakening Celebrations 提供六個可選旅程：Gaia、Pandemic、Re-Birth、White Guardian、Conscience 和 Sanctuary。Noise 與 Roots 也屬於 HEAL，可作為嘉年華知識話題。"
+    },
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ]
+  }
+]

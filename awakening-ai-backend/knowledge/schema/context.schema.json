@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Proposed Stage 5.2 context",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source"],
+  "properties": {
+    "source": { "enum": ["performer-page", "common-ai"] },
+    "performerId": { "type": ["string", "null"], "pattern": "^JFC26-[A-Z]+$" },
+    "imageId": { "type": ["string", "null"], "pattern": "^JFC26-[A-Z]+-IMG[0-9]{2,}$" }
+  }
+}

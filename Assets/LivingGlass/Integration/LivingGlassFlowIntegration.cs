@@ -20,6 +20,9 @@ public sealed partial class AwakeningApplicationController
     private LivingGlassSpeechCapture livingSpeech;
     private LivingGlassReplySpeech livingReplySpeech;
     private LivingGlassVoiceCoordinator livingVoice;
+    internal bool LivingContextChatEnabled => LivingGlassChatProtocol.DevelopmentBaseUrl != null;
+    private string contextSessionToken;
+    private string contextSessionOrigin;
     private LivingGlassVoiceCoordinator Voice => livingVoice ??= new LivingGlassVoiceCoordinator(gameObject,
         () => !Application.isFocused || LivingProtected || (livingSpeech?.BlocksVoiceOutput ?? false)
             || (environmentalMusicSource != null && environmentalMusicSource.isPlaying),
@@ -163,6 +166,7 @@ public sealed partial class AwakeningApplicationController
     {
         if (transitionInProgress || LivingProtected) return;
         if (!fromDone && hasAwakenedThisSession) { Navigate(ColorReleaseScreen, language, false); return; }
+        ResetContextConversation();
         LivingGlassCloseOverlay(true);
         CancelAssistantRequest();
         StopPerformerExperienceSequence();
@@ -179,6 +183,8 @@ public sealed partial class AwakeningApplicationController
     public void LivingGlassOpenOverlay(string kind)
     {
         if (livingGlass == null) return;
+        bool general = kind == LivingGlassChatProtocol.GeneralOverlay;
+        if (general && !LivingContextChatEnabled) return;
         if (LivingProtected && kind != "Privacy") { livingGlass.AnnounceProtected(); return; }
         if (kind == "Privacy" && LivingProtected)
         {
@@ -200,6 +206,7 @@ public sealed partial class AwakeningApplicationController
             if (livingOverlayPerformer < 0) return;
             selectedPerformer = livingOverlayPerformer;
         }
+        else if (general) selectedPerformer = livingOverlayPerformer = -1;
         ClearGestureTarget();
         gesturePointing = false;
         livingPointerOwnsTarget = false;
@@ -207,7 +214,7 @@ public sealed partial class AwakeningApplicationController
         // Preserve the existing Settings/Privacy suspension contract. Do not auto-grant on close.
         if (kind == "Settings" || kind == "Privacy") GestureCameraConsentGate.SetConsent(false);
         VisualElement panel = livingGlass.OpenOverlay(kind, language, livingOverlayPerformer);
-        if (kind.StartsWith("Assistant-", StringComparison.Ordinal)) LivingGlassBindChat(panel, livingOverlayPerformer);
+        if (general || kind.StartsWith("Assistant-", StringComparison.Ordinal)) LivingGlassBindChat(panel, livingOverlayPerformer, true);
     }
 
     public void LivingGlassCloseOverlay(bool immediate = false)
@@ -231,18 +238,19 @@ public sealed partial class AwakeningApplicationController
     {
         string kind = livingOverlay;
         LivingGlassCloseOverlay();
-        if (kind == "Settings" || (kind != null && kind.StartsWith("Assistant-", StringComparison.Ordinal)))
+        if (kind == "Settings" || kind == LivingGlassChatProtocol.GeneralOverlay || (kind != null && kind.StartsWith("Assistant-", StringComparison.Ordinal)))
             livingGlass.ShowResume(kind);
         // Requests and detached chat sessions are canceled; resume starts a fresh view, never a fictional transcript.
     }
 
-    private void LivingGlassBindChat(VisualElement root, int performer)
+    private void LivingGlassBindChat(VisualElement root, int performer, bool fromCommonChooser = false)
     {
         ClearBindings(livingChatUnbind);
         CancelAssistantRequest();
         assistantSession = new AssistantSession
         {
-            id = ++assistantSessionSequence, performerIndex = performer, performerId = Performers[performer],
+            id = ++assistantSessionSequence, performerIndex = performer, performerId = performer >= 0 ? Performers[performer] : null,
+            fromCommonChooser = fromCommonChooser,
             root = root, input = root.Q<TextField>("assistantChatInput"), send = root.Q<Button>("assistantChatSend"), cancel = root.Q<Button>("assistantCancel"),
             conversation = root.Q<ScrollView>("assistantConversation"), status = root.Q<Label>("assistantChatStatus")
         };
@@ -261,7 +269,7 @@ public sealed partial class AwakeningApplicationController
         if (backend != null && backend.IsAvailable)
         {
             var output = new LivingGlassReplySpeech(root, backend, Voice.BindReply(),
-                language, LivingGlassAssets.Accents[performer],
+                language, performer >= 0 ? LivingGlassAssets.Accents[performer] : LivingGlassAssets.Neutral,
                 () => session == assistantSession && session.id == assistantSessionSequence
                     && IsAssistantSessionViewActive(session) && Application.isFocused,
                 () => !LivingProtected && !session.requestInProgress && !(speech?.BlocksVoiceOutput ?? false)

@@ -1,0 +1,208 @@
+[
+  {
+    "id": "HIST-1998",
+    "year": 1998,
+    "provenance": "reported-history",
+    "text": {
+      "en": "Dynand Fariz’s fashion house in Jember was a precursor to the carnival.",
+      "zh-TW": "Dynand Fariz 在 Jember 創立的時裝工作室，是嘉年華的前身。"
+    },
+    "sources": [
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "HIST-2001",
+    "year": 2001,
+    "provenance": "reported-history",
+    "text": {
+      "en": "Dynand Fariz experimented with a themed fashion week with staff before the public carnival developed.",
+      "zh-TW": "在公開嘉年華形成之前，Dynand Fariz 曾與員工試行主題時裝週。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-POST-2011"
+    ]
+  },
+  {
+    "id": "HIST-2003",
+    "year": 2003,
+    "provenance": "reported-history",
+    "text": {
+      "en": "Two numbered editions took place in the first year. The debut coincided with Jember’s anniversary, and the second joined the Tajemtra walk.",
+      "zh-TW": "首年舉行兩屆有編號的嘉年華。首屆適逢 Jember 紀念活動，第二屆配合 Tajemtra 健走。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-HISTORY",
+      "SRC-POST-2011"
+    ]
+  },
+  {
+    "id": "HIST-2004",
+    "year": 2004,
+    "provenance": "reported-history",
+    "text": {
+      "en": "The third edition continued to develop the street format. Early retrospective sources describe a shift from the fashion house to a formal carnival organization; its exact legal naming and founding sequence require archival verification.",
+      "zh-TW": "第三屆持續發展街頭形式。早期回顧資料指出，主辦逐漸由時裝工作室轉向正式嘉年華組織；確切法人名稱與成立沿革仍待查證。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-FOUNDER",
+      "SRC-LIPUTAN-FOUNDER"
+    ]
+  },
+  {
+    "id": "HIST-2011",
+    "year": 2011,
+    "provenance": "reported-history",
+    "text": {
+      "en": "Eyes on Triumph marked the first decade by revisiting groups from earlier editions. Contemporary reporting also documents the 3.6 km street runway.",
+      "zh-TW": "Eyes on Triumph 重訪前幾屆的分隊，紀念首個十年。當時報導也記載了 3.6 公里的街頭伸展臺。"
+    },
+    "sources": [
+      "SRC-POST-2011",
+      "SRC-UNEJ-HISTORY"
+    ]
+  },
+  {
+    "id": "HIST-2015",
+    "year": 2015,
+    "provenance": "verified-fact",
+    "text": {
+      "en": "The organizer lists an appearance at the 2015 Silk Road and Cultural Festival in Korea among JFC’s overseas activities.",
+      "zh-TW": "主辦方將 2015 年在韓國絲路文化節的亮相列入 JFC 的海外活動。"
+    },
+    "sources": [
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "HIST-2016",
+    "year": 2016,
+    "provenance": "reported-history",
+    "text": {
+      "en": "Indonesia’s tourism portal records JFC representing Indonesia at the International Carnaval de Victoria in Seychelles and placing third there.",
+      "zh-TW": "印尼旅遊官方網站記載，JFC 代表印尼參與塞席爾的 International Carnaval de Victoria，並於該活動獲第三名。"
+    },
+    "sources": [
+      "SRC-INDONESIA-TRAVEL-2019"
+    ]
+  },
+  {
+    "id": "HIST-2017",
+    "year": 2017,
+    "provenance": "reported-history",
+    "text": {
+      "en": "Historical reporting places Jember’s recognition as a carnival city in 2017.",
+      "zh-TW": "歷史報導將 Jember 獲嘉年華城市肯定的時間列於 2017 年。"
+    },
+    "sources": [
+      "SRC-DETIK-FOUNDER",
+      "SRC-UNEJ-HISTORY"
+    ]
+  },
+  {
+    "id": "HIST-2019",
+    "year": 2019,
+    "provenance": "reported-history",
+    "text": {
+      "en": "Fariz died on April 17. The 18th edition went ahead, and Anne Avantie presented designs. Retrospective reporting records Budi Setiawan succeeding Fariz as JFC president.",
+      "zh-TW": "Fariz 於 4 月 17 日逝世。第 18 屆仍如期舉辦，Anne Avantie 展出設計。回顧報導記載 Budi Setiawan 接任 JFC 主席。"
+    },
+    "sources": [
+      "SRC-DETIK-FOUNDER",
+      "SRC-ANTARA-2019-PHOTO",
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "HIST-2020",
+    "year": 2020,
+    "provenance": "reported-outcome",
+    "text": {
+      "en": "During COVID-19 JFC participated in a virtual World Kids Carnival. It is listed separately from the numbered Grand Carnival editions.",
+      "zh-TW": "COVID-19 疫情期間，JFC 參與線上 World Kids Carnival。此活動與有編號的主遊行分開記錄。"
+    },
+    "sources": [
+      "SRC-ANTARA-2020",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "HIST-2021",
+    "year": 2021,
+    "provenance": "reported-outcome",
+    "text": {
+      "en": "Virtue Fantasy was presented under pandemic restrictions.",
+      "zh-TW": "Virtue Fantasy 在疫情限制下舉行。"
+    },
+    "sources": [
+      "SRC-JEMBER-2021"
+    ]
+  },
+  {
+    "id": "HIST-2022",
+    "year": 2022,
+    "provenance": "reported-outcome",
+    "text": {
+      "en": "The Legacy marked the return of a fully outdoor Grand Carnival. The organizer also records an Indonesia National Day appearance in Dubai in 2022.",
+      "zh-TW": "The Legacy 標誌全戶外主遊行回歸。主辦方也記載 2022 年於杜拜印尼國慶活動亮相。"
+    },
+    "sources": [
+      "SRC-JEMBER-2022",
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "HIST-2023",
+    "year": 2023,
+    "provenance": "reported-outcome",
+    "text": {
+      "en": "Timelapse explored Earth’s history. The tourism ministry records JFC in the Top 10 of its 2023 Karisma Event Nusantara program.",
+      "zh-TW": "Timelapse 探索地球歷史。觀光部門記載 JFC 入列 2023 年 Karisma Event Nusantara 十大活動。"
+    },
+    "sources": [
+      "SRC-JEMBER-2023-EVENT",
+      "SRC-KEN-2023"
+    ]
+  },
+  {
+    "id": "HIST-2024",
+    "year": 2024,
+    "provenance": "reported-outcome",
+    "text": {
+      "en": "The August 4 Grand Carnival ended the Algorithm edition. Jember Regency documented ten defiles.",
+      "zh-TW": "8 月 4 日主遊行為 Algorithm 一屆收尾；地方政府記載十支分隊。"
+    },
+    "sources": [
+      "SRC-JEMBER-2024-LAUNCH",
+      "SRC-JEMBER-2024-EVENT"
+    ]
+  },
+  {
+    "id": "HIST-2025",
+    "year": 2025,
+    "provenance": "reported-outcome",
+    "text": {
+      "en": "Evoluxion, edition 23, concluded on August 10 after a three-day program.",
+      "zh-TW": "Evoluxion 為第 23 屆，三日活動於 8 月 10 日落幕。"
+    },
+    "sources": [
+      "SRC-JEMBER-2025-EVENT"
+    ]
+  },
+  {
+    "id": "HIST-2026",
+    "year": 2026,
+    "provenance": "reported-outcome",
+    "text": {
+      "en": "The 24th edition used a Gaia-centered stage drama and a HEAL street parade in its July 26 Grand Carnival.",
+      "zh-TW": "第 24 屆於 7 月 26 日主遊行中安排以 Gaia 為主的舞臺劇，以及 HEAL 街頭隊列。"
+    },
+    "sources": [
+      "SRC-RRI-2026-FINALE",
+      "SRC-HEAL-PRESS"
+    ]
+  }
+]

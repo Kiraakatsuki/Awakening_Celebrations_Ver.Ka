@@ -1,0 +1,217 @@
+[
+  {
+    "id": "PERSON-DYNAND-FARIZ",
+    "name": "Dynand Fariz",
+    "editionId": null,
+    "role": "founder",
+    "scope": "organization",
+    "summary": {
+      "en": "Founded JFC. His background as a designer and educator shaped its street-fashion and participant-training model.",
+      "zh-TW": "創辦 JFC；其設計師與教育工作者背景影響了街頭時裝形式與參與者培訓。"
+    },
+    "sources": [
+      "SRC-JFC-HOME",
+      "SRC-POST-2011"
+    ]
+  },
+  {
+    "id": "PERSON-BUDI-SETIAWAN",
+    "name": "Budi Setiawan",
+    "editionId": null,
+    "role": "organizer",
+    "scope": "organization",
+    "summary": {
+      "en": "Organizer lists him as President. He described the Dewi Bumi staging ahead of HEAL.",
+      "zh-TW": "主辦方列為主席；曾在 HEAL 前說明《Dewi Bumi》的舞臺構想。"
+    },
+    "sources": [
+      "SRC-JFC-HOME",
+      "SRC-JEMBER-2026-PREP"
+    ]
+  },
+  {
+    "id": "PERSON-SUYANTO",
+    "name": "Suyanto",
+    "editionId": null,
+    "role": "organizer",
+    "scope": "organization",
+    "summary": {
+      "en": "Listed as JFC Chief Executive Officer in the organizer roster.",
+      "zh-TW": "主辦方名冊列為 JFC 執行長。"
+    },
+    "sources": [
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "PERSON-ARIK-HARIYONO",
+    "name": "Arik Hariyono",
+    "editionId": null,
+    "role": "organizer",
+    "scope": "organization",
+    "summary": {
+      "en": "Listed as Chairman of JFC in the organizer roster.",
+      "zh-TW": "主辦方名冊列為 JFC 理事長。"
+    },
+    "sources": [
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "PERSON-KALIFA-DIYANTAMA",
+    "name": "Kalifa Diyantama",
+    "editionId": null,
+    "role": "organizer",
+    "scope": "organization",
+    "summary": {
+      "en": "Listed as Event Director.",
+      "zh-TW": "主辦方列為活動總監。"
+    },
+    "sources": [
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "PERSON-SITI-NUR-AMALIATUS-SOLIKHAH",
+    "name": "Siti Nur Amaliatus Solikhah",
+    "editionId": null,
+    "role": "organizer",
+    "scope": "organization",
+    "summary": {
+      "en": "Listed as Show Director.",
+      "zh-TW": "主辦方列為演出總監。"
+    },
+    "sources": [
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "PERSON-SYARIF-HIDAYAHTULLAH",
+    "name": "Syarif Hidayahtullah",
+    "editionId": null,
+    "role": "organizer",
+    "scope": "organization",
+    "summary": {
+      "en": "Listed as Costume Director. This role does not establish individual costume authorship.",
+      "zh-TW": "主辦方列為服裝總監；此職銜無法證明個別服裝由其設計。"
+    },
+    "sources": [
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "PERSON-ALVAN-SANTANA",
+    "name": "Alvan Santana",
+    "editionId": null,
+    "role": "organizer",
+    "scope": "organization",
+    "summary": {
+      "en": "Listed as Music Director.",
+      "zh-TW": "主辦方列為音樂總監。"
+    },
+    "sources": [
+      "SRC-JFC-HOME"
+    ]
+  },
+  {
+    "id": "PERSON-BUBAH-ALFIAN",
+    "name": "Bubah Alfian",
+    "editionId": null,
+    "role": "ambassador",
+    "scope": "organization",
+    "summary": {
+      "en": "JFC lists the professional make-up artist among its ambassadors. Jember Regency named him among JFC contributors at the 2024 launch.",
+      "zh-TW": "主辦方將這位專業彩妝師列為嘉年華大使；地方政府也在 2024 年主題發表時提到他的參與。"
+    },
+    "sources": [
+      "SRC-JFC-HOME",
+      "SRC-JEMBER-2024-LAUNCH"
+    ]
+  },
+  {
+    "id": "PERSON-ANNE-AVANTIE",
+    "name": "Anne Avantie",
+    "editionId": "ED-JFC-18",
+    "role": "designer",
+    "scope": "festival-event",
+    "summary": {
+      "en": "Presented designs at the 2019 Grand Carnival in tribute to Dynand Fariz.",
+      "zh-TW": "在 2019 年主遊行呈現設計，向 Dynand Fariz 致敬。"
+    },
+    "sources": [
+      "SRC-ANTARA-2019-PHOTO",
+      "SRC-INDONESIA-TRAVEL-2019"
+    ]
+  },
+  {
+    "id": "PERSON-NOVIA-BACHMID",
+    "name": "Novia Bachmid",
+    "editionId": "ED-JFC-24",
+    "role": "performer",
+    "scope": "festival-event",
+    "summary": {
+      "en": "Sang at the 2026 WACI closing on July 25.",
+      "zh-TW": "於 2026 年 7 月 25 日 WACI 閉幕演唱。"
+    },
+    "sources": [
+      "SRC-RRI-2026-WACI",
+      "SRC-HEAL-SITE"
+    ]
+  },
+  {
+    "id": "PERSON-DELINDA",
+    "name": "Delinda (Domi Jolie)",
+    "editionId": "ED-JFC-24",
+    "role": "designer",
+    "scope": "festival-event",
+    "summary": {
+      "en": "Presented a Raja Ampat-themed design at Artwear Carnival. This is an event-specific design credit.",
+      "zh-TW": "於 Artwear Carnival 發表 Raja Ampat 主題設計；此為該場活動的作品署名。"
+    },
+    "sources": [
+      "SRC-RRI-2026-ARTWEAR"
+    ]
+  },
+  {
+    "id": "PERSON-FIRSTA-YUFI-AMARTA-PUTRI",
+    "name": "Firsta Yufi Amarta Putri",
+    "editionId": "ED-JFC-24",
+    "role": "performer",
+    "scope": "festival-event",
+    "summary": {
+      "en": "Modelled Delinda’s Raja Ampat-themed design at Artwear Carnival.",
+      "zh-TW": "於 Artwear Carnival 展示 Delinda 的 Raja Ampat 主題設計。"
+    },
+    "sources": [
+      "SRC-RRI-2026-ARTWEAR"
+    ]
+  },
+  {
+    "id": "PERSON-AGNES-ADITYA-RAHAJENG",
+    "name": "Agnes Aditya Rahajeng",
+    "editionId": "ED-JFC-24",
+    "role": "performer",
+    "scope": "festival-event",
+    "summary": {
+      "en": "RRI reported Grand Carnival participation. Defile and Unity image attribution are unresolved.",
+      "zh-TW": "RRI 報導其參與主遊行；所屬分隊與 Unity 展圖關聯仍待查證。"
+    },
+    "sources": [
+      "SRC-RRI-2026-TALENT"
+    ]
+  },
+  {
+    "id": "PERSON-ZACK-LEE",
+    "name": "Zack Lee",
+    "editionId": "ED-JFC-24",
+    "role": "performer",
+    "scope": "festival-event",
+    "summary": {
+      "en": "RRI reported Grand Carnival participation. Defile and Unity image attribution are unresolved.",
+      "zh-TW": "RRI 報導其參與主遊行；所屬分隊與 Unity 展圖關聯仍待查證。"
+    },
+    "sources": [
+      "SRC-RRI-2026-TALENT"
+    ]
+  }
+]

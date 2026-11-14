@@ -1,0 +1,26 @@
+PASS UnityWebRequest POST negotiated pinned HTTPS and received an issued session token.
+PASS English dedicated JFC26-GAIA
+PASS English portrait JFC26-GAIA
+PASS English dedicated JFC26-PANDEMIC
+PASS English portrait JFC26-PANDEMIC
+PASS English dedicated JFC26-REBIRTH
+PASS English portrait JFC26-REBIRTH
+PASS English dedicated JFC26-WGUARDIAN
+PASS English portrait JFC26-WGUARDIAN
+PASS English dedicated JFC26-CONSCIENCE
+PASS English portrait JFC26-CONSCIENCE
+PASS English dedicated JFC26-SANCTUARY
+PASS English portrait JFC26-SANCTUARY
+PASS Chinese dedicated JFC26-GAIA
+PASS Chinese portrait JFC26-GAIA
+PASS Chinese dedicated JFC26-PANDEMIC
+PASS Chinese portrait JFC26-PANDEMIC
+PASS Chinese dedicated JFC26-REBIRTH
+PASS Chinese portrait JFC26-REBIRTH
+PASS Chinese dedicated JFC26-WGUARDIAN
+PASS Chinese portrait JFC26-WGUARDIAN
+PASS Chinese dedicated JFC26-CONSCIENCE
+PASS Chinese portrait JFC26-CONSCIENCE
+PASS Chinese dedicated JFC26-SANCTUARY
+PASS Chinese portrait JFC26-SANCTUARY
+PASS General AI without IDs, revoked token rejected, and legacy JSON. Edit Mode transport fixture; no scene navigation or live provider.

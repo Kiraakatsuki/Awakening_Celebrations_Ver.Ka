@@ -31,6 +31,8 @@ When the API key is absent, the server still starts and `/health` remains availa
 
 ## Render Web Service
 
+For Stage 5.2 local contextual development and its credential-free HTTPS mock, see the [API contract and setup](../Documentation/Stage5AIKnowledge/Stage5_2/Stage5_2_APIContract.md).
+
 Create a Web Service from the Git repository with:
 
 | Setting | Value |

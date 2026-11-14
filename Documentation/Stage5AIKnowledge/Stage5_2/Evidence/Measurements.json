@@ -1,0 +1,15 @@
+{
+  "loadMs": 4.77679999999998,
+  "passages": 124,
+  "retrievalSamples": 1000,
+  "p50Ms": 0.07029999999997472,
+  "p95Ms": 0.11430000000001428,
+  "maxPassages": 6,
+  "maxPromptBytesFor18Requests": 3142,
+  "localWarmSamples": 16,
+  "localP95Ms": 2.4746999999999844,
+  "port": "ephemeral loopback",
+  "rssBytes": 86441984,
+  "observedSessionHeapDeltaBytes": 813840,
+  "configuredSessionTextLimitUtf16Units": 524288
+}

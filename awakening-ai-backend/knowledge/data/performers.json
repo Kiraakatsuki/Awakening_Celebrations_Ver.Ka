@@ -1,0 +1,240 @@
+[
+  {
+    "id": "JFC26-GAIA",
+    "defileId": "DEF-JFC26-GAIA",
+    "idAuthority": "application",
+    "names": {
+      "en": "Gaia",
+      "zh-TW": "蓋婭"
+    },
+    "featured": true,
+    "unity": {
+      "performerId": "GAIA",
+      "index": 0,
+      "chapterCode": "PER-001",
+      "assistantRoute": "Assistant-GAIA",
+      "focusRoute": "GAIA---FOCUS-VIEW---PER-001",
+      "reflectionRoute": "GAIA---POST-VIDEO-AI---PER-001",
+      "galleryButton": "presence-0",
+      "assistantButton": "assistant-0"
+    },
+    "imageIds": [
+      "JFC26-GAIA-IMG01",
+      "JFC26-GAIA-IMG02",
+      "JFC26-GAIA-IMG03"
+    ],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Selectable presence in the exhibition. The record denotes a defile identity, not an individual person.",
+      "zh-TW": "展覽中的可選存在；本記錄表示分隊身分。"
+    }
+  },
+  {
+    "id": "JFC26-NOISE",
+    "defileId": "DEF-JFC26-NOISE",
+    "idAuthority": "application",
+    "names": {
+      "en": "Noise",
+      "zh-TW": "喧囂"
+    },
+    "featured": false,
+    "unity": null,
+    "imageIds": [],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Part of the 2026 festival and available for knowledge questions. No selectable Living Glass journey.",
+      "zh-TW": "屬於 2026 嘉年華，可供知識查詢；Living Glass 未提供可選旅程。"
+    }
+  },
+  {
+    "id": "JFC26-PANDEMIC",
+    "defileId": "DEF-JFC26-PANDEMIC",
+    "idAuthority": "application",
+    "names": {
+      "en": "Pandemic",
+      "zh-TW": "大流行"
+    },
+    "featured": true,
+    "unity": {
+      "performerId": "PANDEMIC",
+      "index": 1,
+      "chapterCode": "PER-002",
+      "assistantRoute": "Assistant-PANDEMIC",
+      "focusRoute": "PANDEMIC---FOCUS-VIEW---PER-002",
+      "reflectionRoute": "PANDEMIC---POST-VIDEO-AI---PER-002",
+      "galleryButton": "presence-1",
+      "assistantButton": "assistant-1"
+    },
+    "imageIds": [
+      "JFC26-PANDEMIC-IMG01",
+      "JFC26-PANDEMIC-IMG02",
+      "JFC26-PANDEMIC-IMG03"
+    ],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Selectable presence in the exhibition. The record denotes a defile identity, not an individual person.",
+      "zh-TW": "展覽中的可選存在；本記錄表示分隊身分。"
+    }
+  },
+  {
+    "id": "JFC26-SANCTUARY",
+    "defileId": "DEF-JFC26-SANCTUARY",
+    "idAuthority": "application",
+    "names": {
+      "en": "Sanctuary",
+      "zh-TW": "庇護所"
+    },
+    "featured": true,
+    "unity": {
+      "performerId": "SANCTUARY",
+      "index": 5,
+      "chapterCode": "PER-006",
+      "assistantRoute": "Assistant-SANCTUARY",
+      "focusRoute": "SANCTUARY---FOCUS-VIEW---PER-006",
+      "reflectionRoute": "SANCTUARY---POST-VIDEO-AI---PER-006",
+      "galleryButton": "presence-5",
+      "assistantButton": "assistant-5"
+    },
+    "imageIds": [
+      "JFC26-SANCTUARY-IMG01",
+      "JFC26-SANCTUARY-IMG02",
+      "JFC26-SANCTUARY-IMG03"
+    ],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Selectable presence in the exhibition. The record denotes a defile identity, not an individual person.",
+      "zh-TW": "展覽中的可選存在；本記錄表示分隊身分。"
+    }
+  },
+  {
+    "id": "JFC26-WGUARDIAN",
+    "defileId": "DEF-JFC26-WGUARDIAN",
+    "idAuthority": "application",
+    "names": {
+      "en": "White Guardian",
+      "zh-TW": "白色守護者"
+    },
+    "featured": true,
+    "unity": {
+      "performerId": "WHITE-GUARDIAN",
+      "index": 3,
+      "chapterCode": "PER-004",
+      "assistantRoute": "Assistant-WHITE-GUARDIAN",
+      "focusRoute": "WHITE-GUARDIAN---FOCUS-VIEW---PER-004",
+      "reflectionRoute": "WHITE-GUARDIAN---POST-VIDEO-AI---PER-004",
+      "galleryButton": "presence-3",
+      "assistantButton": "assistant-3"
+    },
+    "imageIds": [
+      "JFC26-WGUARDIAN-IMG01",
+      "JFC26-WGUARDIAN-IMG02",
+      "JFC26-WGUARDIAN-IMG03"
+    ],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Selectable presence in the exhibition. The record denotes a defile identity, not an individual person.",
+      "zh-TW": "展覽中的可選存在；本記錄表示分隊身分。"
+    }
+  },
+  {
+    "id": "JFC26-CONSCIENCE",
+    "defileId": "DEF-JFC26-CONSCIENCE",
+    "idAuthority": "application",
+    "names": {
+      "en": "Conscience",
+      "zh-TW": "良知"
+    },
+    "featured": true,
+    "unity": {
+      "performerId": "CONSCIENCE",
+      "index": 4,
+      "chapterCode": "PER-005",
+      "assistantRoute": "Assistant-CONSCIENCE",
+      "focusRoute": "CONSCIENCE---FOCUS-VIEW---PER-005",
+      "reflectionRoute": "CONSCIENCE---POST-VIDEO-AI---PER-005",
+      "galleryButton": "presence-4",
+      "assistantButton": "assistant-4"
+    },
+    "imageIds": [
+      "JFC26-CONSCIENCE-IMG01",
+      "JFC26-CONSCIENCE-IMG02",
+      "JFC26-CONSCIENCE-IMG03"
+    ],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Selectable presence in the exhibition. The record denotes a defile identity, not an individual person.",
+      "zh-TW": "展覽中的可選存在；本記錄表示分隊身分。"
+    }
+  },
+  {
+    "id": "JFC26-REBIRTH",
+    "defileId": "DEF-JFC26-REBIRTH",
+    "idAuthority": "application",
+    "names": {
+      "en": "Re-Birth",
+      "zh-TW": "重生"
+    },
+    "featured": true,
+    "unity": {
+      "performerId": "RE-BIRTH",
+      "index": 2,
+      "chapterCode": "PER-003",
+      "assistantRoute": "Assistant-RE-BIRTH",
+      "focusRoute": "RE-BIRTH---FOCUS-VIEW---PER-003",
+      "reflectionRoute": "RE-BIRTH---POST-VIDEO-AI---PER-003",
+      "galleryButton": "presence-2",
+      "assistantButton": "assistant-2"
+    },
+    "imageIds": [
+      "JFC26-REBIRTH-IMG01",
+      "JFC26-REBIRTH-IMG02",
+      "JFC26-REBIRTH-IMG03"
+    ],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Selectable presence in the exhibition. The record denotes a defile identity, not an individual person.",
+      "zh-TW": "展覽中的可選存在；本記錄表示分隊身分。"
+    }
+  },
+  {
+    "id": "JFC26-ROOTS",
+    "defileId": "DEF-JFC26-ROOTS",
+    "idAuthority": "application",
+    "names": {
+      "en": "Roots",
+      "zh-TW": "根源"
+    },
+    "featured": false,
+    "unity": null,
+    "imageIds": [],
+    "sources": [
+      "SRC-APP-UNITY",
+      "SRC-HEAL-PRESS"
+    ],
+    "notes": {
+      "en": "Part of the 2026 festival and available for knowledge questions. No selectable Living Glass journey.",
+      "zh-TW": "屬於 2026 嘉年華，可供知識查詢；Living Glass 未提供可選旅程。"
+    }
+  }
+]

@@ -1,0 +1,134 @@
+{
+  "id": "JFC-HEAL-2026",
+  "editionId": "ED-JFC-24",
+  "title": "HEAL",
+  "expansion": "Humanity, Earth, and Life",
+  "venue": "Central Park Jember",
+  "place": "Jember, East Java, Indonesia",
+  "startDate": "2026-07-24",
+  "endDate": "2026-07-26",
+  "narrativeOrder": [
+    "DEF-JFC26-GAIA",
+    "DEF-JFC26-NOISE",
+    "DEF-JFC26-PANDEMIC",
+    "DEF-JFC26-SANCTUARY",
+    "DEF-JFC26-WGUARDIAN",
+    "DEF-JFC26-CONSCIENCE",
+    "DEF-JFC26-REBIRTH",
+    "DEF-JFC26-ROOTS"
+  ],
+  "scheduledDefileOrder": {
+    "ids": [
+      "DEF-JFC26-ROOTS",
+      "DEF-JFC26-NOISE",
+      "DEF-JFC26-CONSCIENCE",
+      "DEF-JFC26-GAIA",
+      "DEF-JFC26-WGUARDIAN",
+      "DEF-JFC26-PANDEMIC",
+      "DEF-JFC26-REBIRTH",
+      "DEF-JFC26-SANCTUARY"
+    ],
+    "provenance": "announced",
+    "sources": ["SRC-DETIK-2026-SCHEDULE"]
+  },
+  "narrative": {
+    "provenance": "official-theme",
+    "text": {
+      "en": "Gaia embodies Mother Earth. The story moves from a living world in balance through human disruption and planetary distress toward refuge, protection, ethical reflection, renewal and renewed ties between people and nature. The healing is a collective responsibility.",
+      "zh-TW": "Gaia 是大地母親的化身。故事從平衡的生命世界出發，經歷人為失序與地球受損，走向庇護、守護、良知反思、重生，以及人類與自然重新建立關係。修復有賴共同承擔。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-JFC-HOME"
+    ]
+  },
+  "program": [
+    {
+      "id": "HEAL-DAY-1",
+      "date": "2026-07-24",
+      "programs": [
+        "World Kids Carnival",
+        "Pets Carnival"
+      ],
+      "status": "observed",
+      "text": {
+        "en": "Children and pets opened the festival.",
+        "zh-TW": "兒童與寵物嘉年華為活動揭幕。"
+      },
+      "sources": [
+        "SRC-JEMBER-2026-OPEN"
+      ]
+    },
+    {
+      "id": "HEAL-DAY-2",
+      "date": "2026-07-25",
+      "programs": [
+        "Wonderful Archipelago Carnival Indonesia (WACI)",
+        "Artwear Carnival"
+      ],
+      "status": "observed",
+      "text": {
+        "en": "RRI documented the WACI parade and Novia Bachmid’s closing performance. Its Artwear report covers a separate runway for conceptual fashion and local designers that evening.",
+        "zh-TW": "RRI 記載 WACI 遊行以及 Novia Bachmid 的壓軸演出。當晚另有 Artwear 伸展臺，讓概念服裝與在地設計師亮相。"
+      },
+      "sources": [
+        "SRC-RRI-2026-WACI",
+        "SRC-RRI-2026-ARTWEAR",
+        "SRC-JEMBER-2026-PREP"
+      ]
+    },
+    {
+      "id": "HEAL-DAY-3",
+      "date": "2026-07-26",
+      "programs": [
+        "Grand Carnival",
+        "Dewi Bumi"
+      ],
+      "status": "observed",
+      "text": {
+        "en": "The closing Grand Carnival opened with a Gaia-centered theatrical prologue. Roots led the street portion along roughly 3.6 km from Central Park Jember to GOR PKPSO Kaliwates.",
+        "zh-TW": "閉幕主遊行先演出以 Gaia 為核心的劇場序幕，接著由 Roots 領先上街，從 Central Park Jember 到 GOR PKPSO Kaliwates，約 3.6 公里。"
+      },
+      "sources": [
+        "SRC-RRI-2026-FINALE",
+        "SRC-ANTARA-2026-FINALE",
+        "SRC-DETIK-2026-FINALE"
+      ]
+    }
+  ],
+  "distinctions": [
+    {
+      "id": "HEAL-ORDER",
+      "status": "context-dependent",
+      "text": {
+        "en": "The press release’s sequence is a narrative list. The Grand Carnival rundown lists the scheduled defile slots from Roots to Sanctuary. Post-event accounts confirm Roots led the street parade after the Gaia stage prologue. The published schedule does not establish the complete observed street order.",
+        "zh-TW": "新聞稿的順序是故事章節名單。主遊行節目表列出的分隊時段以 Roots 開頭、Sanctuary 收尾；會後報導證實 Gaia 先在舞臺序幕出場，接著 Roots 領先上街。這份節目表不足以確認實際街頭隊列的完整順序。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-DETIK-2026-SCHEDULE",
+        "SRC-RRI-2026-FINALE",
+        "SRC-ANTARA-2026-FINALE",
+        "SRC-DETIK-2026-FINALE"
+      ]
+    },
+    {
+      "id": "HEAL-SCREEN",
+      "status": "announced",
+      "text": {
+        "en": "Organizers announced a unified LED staging concept as a storytelling aid. The specific screen layout and its full execution were not independently established here.",
+        "zh-TW": "主辦方預告以整合式 LED 舞臺輔助敘事。此資料庫尚未獨立證實實際配置與完整執行情況。"
+      },
+      "sources": [
+        "SRC-HEAL-PRESS",
+        "SRC-JEMBER-2026-PREP"
+      ]
+    }
+  ],
+  "sources": [
+    "SRC-HEAL-PRESS",
+    "SRC-HEAL-SITE",
+    "SRC-RRI-2026-FINALE"
+  ]
+}

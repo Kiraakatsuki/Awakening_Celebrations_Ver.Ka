@@ -1,0 +1,7 @@
+PASS: 432 actual UI Toolkit layouts (6 themes × 2 locales × 3 surfaces × 2 viewport/fallback profiles × 6 voice specimens).
+PASS: Idle → Starting → Listening only after capture progress → Transcribing → editable draft, with repeat gating and no Ask.
+PASS: capture permission/start failure and worker error restore an available control, preserve the draft and allow retry.
+PASS: Keep and Replace, no autosubmit, IME policy.
+PASS: recording cancellation on context change and route detach; AI close cancels pending processing; late result cannot reach another performer/locale.
+PASS: focused keyboard activation, Enter auto-repeat prevention, and Space via actual UI Toolkit events.
+NOT RUN: real microphone, OS permission/denial, native IME, Play Mode, live assistant, Player build.

@@ -1,0 +1,707 @@
+[
+  {
+    "id": "ED-JFC-01",
+    "year": 2003,
+    "edition": 1,
+    "format": "numbered",
+    "theme": null,
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "umbrella-not-established",
+    "defileNames": [
+      "Cowboy",
+      "Punk",
+      "Gipsy"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The public debut took place on January 1 during Jember’s anniversary celebrations. The three names identify costume groups.",
+      "zh-TW": "首場公開活動於 1 月 1 日 Jember 紀念活動期間舉行；三個名稱指服裝分隊。"
+    },
+    "sources": [
+      "SRC-UNEJ-TABLE",
+      "SRC-UNEJ-HISTORY",
+      "SRC-JFC-ID",
+      "SRC-POST-2011"
+    ]
+  },
+  {
+    "id": "ED-JFC-02",
+    "year": 2003,
+    "edition": 2,
+    "format": "numbered",
+    "theme": null,
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "umbrella-not-established",
+    "defileNames": [
+      "Arab",
+      "Maroko",
+      "India",
+      "Cina",
+      "Jepang"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "A second edition took place on August 30 alongside the Tajemtra walk, with groups drawing on international dress.",
+      "zh-TW": "同年 8 月 30 日配合 Tajemtra 健走舉辦第二屆，分隊取材自各地服裝。"
+    },
+    "sources": [
+      "SRC-UNEJ-TABLE",
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-03",
+    "year": 2004,
+    "edition": 3,
+    "format": "numbered",
+    "theme": null,
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "umbrella-not-established",
+    "defileNames": [
+      "Mali",
+      "Athena",
+      "Brazil",
+      "Indian",
+      "Futuristic",
+      "Vintage"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "Sources name six costume groupings, spanning geographic and stylistic references. One account gives a conflicting count.",
+      "zh-TW": "來源點名六個服裝分隊，涵蓋地域與風格題材；其中一份研究所述總數與名單不符。"
+    },
+    "sources": [
+      "SRC-UNEJ-TABLE",
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-04",
+    "year": 2005,
+    "edition": 4,
+    "format": "numbered",
+    "theme": "Discover the World",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Archipelago Java",
+      "Tsunami",
+      "Egypt",
+      "England"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "Global discovery framed the edition. The Tsunami group acknowledged recovery after the 2004 disaster; published full lineups differ.",
+      "zh-TW": "本屆以探索世界為框架。海嘯分隊呼應 2004 年災後復原；不同資料的完整名單有出入。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-UNEJ-TABLE",
+      "SRC-DETIK-HISTORY",
+      "SRC-POST-2011"
+    ]
+  },
+  {
+    "id": "ED-JFC-05",
+    "year": 2006,
+    "edition": 5,
+    "format": "numbered",
+    "theme": "Anxiety and Spirit of the World",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Archipelago Bali",
+      "Forest",
+      "Poverty",
+      "World Cup"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The title paired unease with vitality. Documented examples span social conditions, the natural world and sport.",
+      "zh-TW": "主題並置不安與活力；可查證的分隊例子涵蓋社會處境、自然與體育。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-UNEJ-TABLE",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-06",
+    "year": 2007,
+    "edition": 6,
+    "format": "numbered",
+    "theme": "Save Our World",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Borneo",
+      "Amazon",
+      "Chinese Opera",
+      "Recycle"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "Conservation was a visible thread, including a Recycle group. The group title alone does not establish costume materials.",
+      "zh-TW": "可見保育主軸，其中一隊名為 Recycle；隊名不足以證明服裝使用何種材料。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-UNEJ-TABLE",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-07",
+    "year": 2008,
+    "edition": 7,
+    "format": "numbered",
+    "theme": "World Evolution",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Archipelago Papua",
+      "Barricade",
+      "Roots",
+      "Undersea",
+      "Robotic"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "Dynand Fariz linked the World Evolution theme to human-driven changes to Earth. This edition also added a marching-band opening.",
+      "zh-TW": "Dynand Fariz 將 World Evolution 與人類活動造成的地球變遷相連。本屆也加入行進樂隊開場。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-HISTORY",
+      "SRC-DETIK-2008"
+    ]
+  },
+  {
+    "id": "ED-JFC-08",
+    "year": 2009,
+    "edition": 8,
+    "format": "numbered",
+    "theme": "World Unity",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [],
+    "defileCoverage": "unresolved",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "Dynand Fariz described the parade’s message as peace for its participants and spectators.",
+      "zh-TW": "Dynand Fariz 將遊行的訊息連結到參與者與觀眾共享的和平。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-HISTORY",
+      "SRC-ANTARA-2009"
+    ]
+  },
+  {
+    "id": "ED-JFC-09",
+    "year": 2010,
+    "edition": 9,
+    "format": "numbered",
+    "theme": "World Treasure",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Toraja",
+      "Butterfly",
+      "Thailand"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The examples juxtaposed cultural and natural subjects. The full organizer narrative has not been recovered.",
+      "zh-TW": "已記載的例子並置文化與自然題材，主辦方完整敘事尚未取得。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-UNEJ-TABLE",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-10",
+    "year": 2011,
+    "edition": 10,
+    "format": "numbered",
+    "theme": "Eyes on Triumph",
+    "subtitle": null,
+    "aliases": [
+      "Eyes of Triumph"
+    ],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Borneo",
+      "India",
+      "Tsunami"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "First-decade edition revisited highlights of earlier years. Contemporary coverage supports “on”; later lists often use “of”.",
+      "zh-TW": "首個十年的回顧，重訪前幾屆的亮點。當時報導採用 on，較晚的部分列表使用 of。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-POST-2011",
+      "SRC-UNEJ-TABLE",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-11",
+    "year": 2012,
+    "edition": 11,
+    "format": "numbered",
+    "theme": "Extremagination",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Rome Empire",
+      "Oceanarium",
+      "Madurese"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "Historical records document an edition mixing cultural references and imagined worlds. A full organizer explanation was not located.",
+      "zh-TW": "資料記載本屆融合文化題材與想像世界，尚未找到主辦方完整釋義。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-UNEJ-TABLE",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-12",
+    "year": 2013,
+    "edition": 12,
+    "format": "numbered",
+    "theme": "Artechsion",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Venice"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The documented concept ties art to technology and illusion. Only a subset of group names is recorded here.",
+      "zh-TW": "資料記載其概念結合藝術、科技與幻象，這裡僅列部分分隊。"
+    },
+    "sources": [
+      "SRC-UNEJ-HISTORY",
+      "SRC-UNEJ-TABLE",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-13",
+    "year": 2014,
+    "edition": 13,
+    "format": "numbered",
+    "theme": "Triangle",
+    "subtitle": null,
+    "aliases": [
+      "Triangle Dynamic in Harmony",
+      "Triangle: Dinamic in Harmony",
+      "Triangle Dynamic and Harmony"
+    ],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Mahabharata",
+      "Borobudur",
+      "Tambora"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The stable umbrella title is Triangle. Published versions of the extended title differ in spelling and prepositions.",
+      "zh-TW": "可穩定確認的總題名為 Triangle；各來源對副題的拼字與介系詞有異。"
+    },
+    "sources": [
+      "SRC-UNEJ-TABLE",
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-HISTORY",
+      "SRC-RESEARCH-2014-2019"
+    ]
+  },
+  {
+    "id": "ED-JFC-14",
+    "year": 2015,
+    "edition": 14,
+    "format": "numbered",
+    "theme": "Outframe",
+    "subtitle": null,
+    "aliases": [
+      "Out Frame"
+    ],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Majapahit",
+      "Ikebana",
+      "Fossil",
+      "Reog"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The concept looked beyond conventional frames. Use 2015; one historical article has a conflicting year in the same passage as its 2015 dates.",
+      "zh-TW": "概念著眼於突破既有框架。採用 2015 年；有篇研究在列明 2015 年日期的同段出現矛盾年份。"
+    },
+    "sources": [
+      "SRC-DETIK-HISTORY",
+      "SRC-RESEARCH-2014-2019",
+      "SRC-UNEJ-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-15",
+    "year": 2016,
+    "edition": 15,
+    "format": "numbered",
+    "theme": "Revival",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Garuda",
+      "Hortus",
+      "Technocyber"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The title evokes resurgence. Research connects the edition with national identity and documents varied defile subjects.",
+      "zh-TW": "題名呼應復興；研究從國族認同切入，並記載不同分隊題材。"
+    },
+    "sources": [
+      "SRC-ISI-2016-2019",
+      "SRC-RESEARCH-2014-2019",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-16",
+    "year": 2017,
+    "edition": 16,
+    "format": "numbered",
+    "theme": "Victory",
+    "subtitle": "Unity and Diversity",
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Sriwijaya Empire",
+      "Bali"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The documented subtitle connects victory with diversity and unity. Historical research places Jember’s carnival-city recognition in 2017.",
+      "zh-TW": "可查證的副題把勝利和多樣性、團結相連；歷史研究將 Jember 獲嘉年華城市肯定歸於 2017 年。"
+    },
+    "sources": [
+      "SRC-ISI-2016-2019",
+      "SRC-RESEARCH-2014-2019",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-17",
+    "year": 2018,
+    "edition": 17,
+    "format": "numbered",
+    "theme": "Asia Light",
+    "subtitle": null,
+    "aliases": [
+      "AsiaLight"
+    ],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Kujang",
+      "Bian Lian"
+    ],
+    "defileCoverage": "examples",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The edition drew on Asian cultural forms, including a West Javanese blade and Chinese face-changing performance.",
+      "zh-TW": "本屆取材自亞洲文化形式，包括西爪哇的 Kujang 刀具以及中國變臉表演。"
+    },
+    "sources": [
+      "SRC-ISI-2016-2019",
+      "SRC-RESEARCH-2014-2019",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-18",
+    "year": 2019,
+    "edition": 18,
+    "format": "numbered",
+    "theme": "Tribal Grandeur",
+    "subtitle": null,
+    "aliases": [
+      "Tribale Grandeur",
+      "Tribal Grendeur"
+    ],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Aztec",
+      "Minahasa",
+      "Hudoq",
+      "Zulu",
+      "Viking",
+      "Mongolia",
+      "Karen",
+      "Polynesia"
+    ],
+    "defileCoverage": "published-list",
+    "confidence": "historical-corroboration",
+    "summary": {
+      "en": "The program presented references to different peoples and cultural traditions. It proceeded after Dynand Fariz’s death in April.",
+      "zh-TW": "節目以不同族群與文化傳統為題材。Dynand Fariz 於 4 月逝世後，本屆仍舉行。"
+    },
+    "sources": [
+      "SRC-ISI-2016-2019",
+      "SRC-UNEJ-HISTORY",
+      "SRC-DETIK-FOUNDER",
+      "SRC-ANTARA-2019-PHOTO",
+      "SRC-INDONESIA-TRAVEL-2019"
+    ]
+  },
+  {
+    "id": "ED-JFC-2020-WKC",
+    "year": 2020,
+    "edition": null,
+    "format": "related-virtual",
+    "theme": null,
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "program-only",
+    "defileNames": [],
+    "defileCoverage": "unresolved",
+    "confidence": "contemporary-evidence",
+    "summary": {
+      "en": "The November 22 virtual World Kids Carnival was associated with JFC during COVID-19 and promoted solidarity. No numbered Grand Carnival is established here.",
+      "zh-TW": "疫情期間，11 月 22 日舉行與 JFC 相關的線上 World Kids Carnival，傳達團結訊息。此處未確認有編號的主遊行。"
+    },
+    "sources": [
+      "SRC-ANTARA-2020",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-19",
+    "year": 2021,
+    "edition": 19,
+    "format": "numbered",
+    "theme": "Virtue Fantasy",
+    "subtitle": null,
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [],
+    "defileCoverage": "unresolved",
+    "confidence": "contemporary-evidence",
+    "summary": {
+      "en": "The event returned in a limited hybrid format. Imagined animals conveyed values such as loyalty and wisdom.",
+      "zh-TW": "活動以有限度的混合形式回歸，透過幻想動物表達忠誠、智慧等價值。"
+    },
+    "sources": [
+      "SRC-JEMBER-2021",
+      "SRC-KOMPAS-2021",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-20",
+    "year": 2022,
+    "edition": 20,
+    "format": "numbered",
+    "theme": "The Legacy",
+    "subtitle": "JFC Second Decade",
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Madurese",
+      "Mahabharata",
+      "Betawi",
+      "Majapahit",
+      "Garuda",
+      "Sriwijaya",
+      "Kujang",
+      "Aztecs",
+      "Sasando",
+      "Poseidon"
+    ],
+    "defileCoverage": "published-list",
+    "confidence": "contemporary-evidence",
+    "summary": {
+      "en": "The outdoor Grand Carnival returned and drew on designs from earlier editions, marking the second decade.",
+      "zh-TW": "戶外主遊行回歸，重新呈現過往屆次的作品，紀念第二個十年。"
+    },
+    "sources": [
+      "SRC-JEMBER-2022",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-21",
+    "year": 2023,
+    "edition": 21,
+    "format": "numbered",
+    "theme": "Timelapse",
+    "subtitle": "Journey of the Earth",
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Bigbang",
+      "Prehistoric",
+      "Empire",
+      "Religic",
+      "Invention",
+      "World War",
+      "Superstar",
+      "Upcycle",
+      "Metaverse",
+      "Nusantara"
+    ],
+    "defileCoverage": "published-list",
+    "confidence": "contemporary-evidence",
+    "summary": {
+      "en": "The Earth’s long history provided a frame for natural and human change. The ten names follow the local government roadshow list.",
+      "zh-TW": "以地球長久歷史為框架，呈現自然與人類的變遷。十個名稱依地方政府巡迴活動資料記錄。"
+    },
+    "sources": [
+      "SRC-JEMBER-2023-THEME",
+      "SRC-KEN-2023",
+      "SRC-JEMBER-2023-EVENT",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-22",
+    "year": 2024,
+    "edition": 22,
+    "format": "numbered",
+    "theme": "Algorithm",
+    "subtitle": "Beyond Binary of Our Story",
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Wayang",
+      "Chess",
+      "Versailles",
+      "Media",
+      "Betta Fish",
+      "Climate Change",
+      "Zodiac",
+      "Fairy",
+      "Jember",
+      "Rio"
+    ],
+    "defileCoverage": "published-list",
+    "confidence": "contemporary-evidence",
+    "summary": {
+      "en": "The theme connected elements across JFC’s own history. Jember authorities reported ten defiles and an August 4 finale.",
+      "zh-TW": "主題串聯 JFC 歷程中的不同元素。地方政府記載十支分隊與 8 月 4 日主遊行。"
+    },
+    "sources": [
+      "SRC-JEMBER-2024-LAUNCH",
+      "SRC-JEMBER-2024-EVENT",
+      "SRC-UNY-2024",
+      "SRC-DETIK-HISTORY"
+    ]
+  },
+  {
+    "id": "ED-JFC-23",
+    "year": 2025,
+    "edition": 23,
+    "format": "numbered",
+    "theme": "Evoluxion",
+    "subtitle": "Dream, Evolve, Triumph",
+    "aliases": [
+      "Dreamy, Evolve, Triumph"
+    ],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Anatomi",
+      "Allograph",
+      "Nile Enigma",
+      "Great Wall of China",
+      "Botanica",
+      "Nias",
+      "Origami",
+      "Phinisi",
+      "Aerospace",
+      "Symphoni"
+    ],
+    "defileCoverage": "published-list",
+    "confidence": "contemporary-evidence",
+    "summary": {
+      "en": "The name combines evolution, luxury and innovation. Jember Regency confirmed the three-day edition concluded on August 10.",
+      "zh-TW": "名稱融合 evolution（演進）、luxury（華麗）及 innovation（創新）。Jember 地方政府確認三日活動於 8 月 10 日落幕。"
+    },
+    "sources": [
+      "SRC-ANTARA-2025-LAUNCH",
+      "SRC-JEMBER-2025-EVENT",
+      "SRC-DETIK-HISTORY",
+      "SRC-ANTARA-2025-PROGRAM"
+    ]
+  },
+  {
+    "id": "ED-JFC-24",
+    "year": 2026,
+    "edition": 24,
+    "format": "numbered",
+    "theme": "HEAL",
+    "subtitle": "Humanity, Earth, and Life",
+    "aliases": [],
+    "themeStatus": "sourced",
+    "defileNames": [
+      "Gaia",
+      "Noise",
+      "Pandemic",
+      "Sanctuary",
+      "White Guardian",
+      "Conscience",
+      "Re-Birth",
+      "Roots"
+    ],
+    "defileCoverage": "published-list",
+    "confidence": "contemporary-evidence",
+    "summary": {
+      "en": "Gaia’s story links damage, care, reflection and recovery to humanity’s relationship with Earth and life.",
+      "zh-TW": "藉由 Gaia 的故事，從創傷、守護、反思及復原理解人類與地球和生命的關係。"
+    },
+    "sources": [
+      "SRC-HEAL-PRESS",
+      "SRC-HEAL-SITE",
+      "SRC-RRI-2026-FINALE"
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+✔ startup loads canonical records and rejects missing data (1.8199ms)
+✔ legacy request/response, errors and health stay compatible (114.7487ms)
+✔ all 42 localized questions cover the fixture evidence and response contract with a fake model (92.1474ms)
+✔ canonical and Chinese defile matches, cross-scope priority, all six image IDs and no image bytes (15.9051ms)
+✔ strict validation, safe unknown image, bounded bodies and no arbitrary metadata (15.9819ms)
+✔ issuer uses unpredictable secrets, caps memory and expires independently of access (0.5157ms)
+✔ same-session ordering, reset during response, locale switch, recent subjects and isolation (16.8118ms)
+✔ provider isolation, prompt injection boundary, allowlisted citations and safe errors (10.2512ms)
+✔ existing and contextual endpoints share the per-IP limit (21.6014ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 689.949

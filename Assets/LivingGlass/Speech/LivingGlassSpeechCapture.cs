@@ -60,7 +60,7 @@ internal sealed class LivingGlassSpeechCapture : IDisposable
         this.exhibitionAudioActive = exhibitionAudioActive;
         this.motion = motion;
         chinese = language == AppLanguage.Chinese;
-        accent = LivingGlassAssets.Accents[performer];
+        accent = performer >= 0 ? LivingGlassAssets.Accents[performer] : LivingGlassAssets.Neutral;
         rail = root.Q("voice-affordance");
         rail.AddToClassList("lg-voice-bound");
         status = rail.Q<Label>("voice-status");

@@ -124,6 +124,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         public int id;
         public int performerIndex;
         public string performerId;
+        public bool fromCommonChooser;
 
         public VisualElement root;
         public TextField input;
@@ -134,12 +135,6 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         public Button cancel;
         public string failedMessage;
         public bool requestInProgress;
-    }
-
-    [Serializable]
-    private sealed class AssistantChatRequest
-    {
-        public string message;
     }
 
     [Serializable]
@@ -207,6 +202,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             CancelAssistantRequest();
             livingGlass.Shutdown();
         }
+        ResetContextConversation();
         livingVoice?.Dispose();
         livingVoice = null;
         GestureCameraConsentGate.SetConsent(false);
@@ -1256,9 +1252,11 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
     private void SubmitAssistantMessage(AssistantSession session, string rawMessage)
     {
+        string contextualOrigin = LivingGlassChatProtocol.DevelopmentBaseUrl;
         if (session == null || session != assistantSession || session.id != assistantSessionSequence ||
-            session.performerIndex < 0 || session.performerIndex >= Performers.Length ||
-            session.performerId != Performers[session.performerIndex] ||
+            session.performerIndex < -1 || session.performerIndex >= Performers.Length ||
+            (session.performerIndex < 0 ? contextualOrigin == null || !session.fromCommonChooser :
+                session.performerId != Performers[session.performerIndex]) ||
             !IsAssistantSessionViewActive(session) ||
             selectedPerformer != session.performerIndex ||
             session.root == null || session.root.panel == null || session.requestInProgress)
@@ -1275,7 +1273,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             SetAssistantStatus(session, language == AppLanguage.English ? "Your question is too long. Please shorten it and retry." : "問題內容過長，請縮短後重試。", false);
             return;
         }
-        if (!TryBuildAssistantChatUrl(out string chatUrl))
+        TryBuildAssistantChatUrl(out string chatUrl);
+        if (contextualOrigin == null && chatUrl == null)
         {
             SetAssistantStatus(session, language == AppLanguage.English ? "Assistant service URL is not configured." : "尚未設定助理服務網址。", false);
             return;
@@ -1299,8 +1298,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         if (session.cancel != null)
             session.cancel.SetEnabled(true);
         SetAssistantStatus(session, language == AppLanguage.English ? "Thinking…" : "思考中…", true);
-        string scopedMessage = BuildPerformerScopedMessage(session, message);
-        assistantRequestRoutine = StartCoroutine(SendAssistantRequest(session, scopedMessage, chatUrl, message));
+        assistantRequestRoutine = StartCoroutine(SendAssistantRequest(session, chatUrl, contextualOrigin, message));
     }
 
     private bool IsAssistantSessionViewActive(AssistantSession session)
@@ -1311,6 +1309,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
     private string BuildPerformerScopedMessage(AssistantSession session, string visitorMessage)
     {
+        if (session.performerIndex < 0) return visitorMessage;
         string languageInstruction = language == AppLanguage.English
             ? "Reply in the same language as the visitor's question."
             : "請使用訪客問題所使用的語言回答。";
@@ -1322,74 +1321,141 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
                "\nVisitor question:\n" + visitorMessage;
     }
 
-    private IEnumerator SendAssistantRequest(AssistantSession session, string message, string chatUrl, string visitorMessage)
+    private sealed class AssistantHttpResult
     {
-        AssistantChatRequest payload = new AssistantChatRequest { message = message };
-        byte[] body = Encoding.UTF8.GetBytes(JsonUtility.ToJson(payload));
-        using (UnityWebRequest request = new UnityWebRequest(chatUrl, UnityWebRequest.kHttpVerbPOST))
+        public UnityWebRequest.Result outcome;
+        public long status;
+        public string json;
+    }
+
+    private static UnityWebRequest NewAssistantPost(string url, string body, bool local)
+    {
+        var request = new UnityWebRequest(url, UnityWebRequest.kHttpVerbPOST)
         {
-            request.uploadHandler = new UploadHandlerRaw(body);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.timeout = 45;
-            request.SetRequestHeader("Content-Type", "application/json; charset=utf-8");
+            uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(body)),
+            downloadHandler = new DownloadHandlerBuffer(),
+            timeout = 45
+        };
+        if (local) request.redirectLimit = 0;
+        request.SetRequestHeader("Content-Type", "application/json; charset=utf-8");
+        return request;
+    }
+
+    private IEnumerator PostAssistant(string url, string body, bool local, AssistantHttpResult result)
+    {
+        using (UnityWebRequest request = NewAssistantPost(url, body, local))
+        {
             assistantWebRequest = request;
             yield return request.SendWebRequest();
-
+            result.outcome = request.result;
+            result.status = request.responseCode;
+            result.json = request.downloadHandler.text;
             assistantWebRequest = null;
-            assistantRequestRoutine = null;
-            if (session != assistantSession || session.id != assistantSessionSequence || session.root == null || session.root.panel == null)
-                yield break;
-
-            session.requestInProgress = false;
-            if (session.send != null)
-                session.send.SetEnabled(true);
-            if (session.cancel != null)
-                session.cancel.SetEnabled(false);
-            if (request.result != UnityWebRequest.Result.Success)
-            {
-                string retryHint = session.send == null
-                    ? (language == AppLanguage.English ? "Select the same question again to retry." : "再次選擇相同問題即可重試。")
-                    : (language == AppLanguage.English ? "Tap Retry to try again." : "請點選「重試」再試一次。");
-                string error = request.result == UnityWebRequest.Result.ConnectionError
-                    ? (language == AppLanguage.English ? "Network error. Check your connection. " + retryHint : "網路連線失敗，請確認連線。" + retryHint)
-                    : (language == AppLanguage.English ? "Assistant server error (HTTP " + request.responseCode + "). " + retryHint : "助理伺服器錯誤（HTTP " + request.responseCode + "）。" + retryHint);
-                Debug.LogWarning("Assistant request failed with HTTP status " + request.responseCode + " (" + request.result + ").", this);
-                FailAssistantMessage(session, visitorMessage, error);
-                yield break;
-            }
-
-            AssistantChatResponse result = null;
-            try
-            {
-                result = JsonUtility.FromJson<AssistantChatResponse>(request.downloadHandler.text);
-            }
-            catch (Exception exception)
-            {
-                Debug.LogWarning("Assistant response JSON could not be parsed (" + exception.GetType().Name + ").", this);
-            }
-
-            if (result == null || string.IsNullOrWhiteSpace(result.reply))
-            {
-                FailAssistantMessage(session, visitorMessage, language == AppLanguage.English
-                    ? (session.send == null ? "The assistant returned an unexpected response. Select the same question again to retry." : "The assistant returned an unexpected response. Tap Retry to try again.")
-                    : (session.send == null ? "助理回覆格式無法辨識，請再次選擇相同問題重試。" : "助理回覆格式無法辨識，請點選「重試」。"));
-                yield break;
-            }
-
-            Label reply = AppendAssistantReply(session, result.reply);
-            VisualElement replyEnd = livingReplySpeech?.Add(session.conversation, result.reply) ?? reply;
-            session.failedMessage = null;
-            if (session.input != null && session.input.value.Trim() == visitorMessage)
-                session.input.value = string.Empty;
-            if (session.send != null)
-                session.send.text = language == AppLanguage.English ? "Ask" : "詢問";
-            SetAssistantStatus(session, string.Empty, false);
-            session.conversation.schedule.Execute(() =>
-            {
-                if (session == assistantSession && session.root != null && session.root.panel != null)
-                    session.conversation.ScrollTo(replyEnd);
-            }).ExecuteLater(1);
         }
+    }
+
+    private void ResetContextConversation()
+    {
+        string token = contextSessionToken;
+        string origin = contextSessionOrigin;
+        contextSessionToken = contextSessionOrigin = null;
+        if (token == null || origin == null || !Application.isPlaying) return;
+        var request = NewAssistantPost(origin + "/chat/v2/reset", LivingGlassChatProtocol.TokenBody(token), true);
+        request.timeout = 4;
+        try { request.SendWebRequest().completed += _ => request.Dispose(); }
+        catch (InvalidOperationException) { request.Dispose(); }
+    }
+
+    private IEnumerator SendAssistantRequest(AssistantSession session, string chatUrl, string contextualOrigin, string visitorMessage)
+    {
+        int requestId = session.id;
+        var resultData = new AssistantHttpResult();
+        bool usedFallback = false;
+        if (contextualOrigin != null)
+        {
+            if (contextSessionOrigin != contextualOrigin) ResetContextConversation();
+            if (contextSessionToken == null)
+            {
+                yield return PostAssistant(contextualOrigin + "/chat/v2/session", "{}", true, resultData);
+                if (session != assistantSession || requestId != assistantSessionSequence) yield break;
+                if (resultData.outcome == UnityWebRequest.Result.Success)
+                {
+                    contextSessionToken = LivingGlassChatProtocol.TokenFromResponse(resultData.json);
+                    contextSessionOrigin = contextualOrigin;
+                    if (contextSessionToken == null) resultData.outcome = UnityWebRequest.Result.DataProcessingError;
+                }
+            }
+            if (contextSessionToken != null)
+            {
+                string body = LivingGlassChatProtocol.ContextBody(visitorMessage, language, contextSessionToken,
+                    session.performerIndex, session.fromCommonChooser);
+                yield return PostAssistant(contextualOrigin + "/chat/v2", body, true, resultData);
+                if (session != assistantSession || requestId != assistantSessionSequence) yield break;
+                if (resultData.status == 410) contextSessionToken = null;
+            }
+            usedFallback = chatUrl != null && LivingGlassChatProtocol.AllowLegacyFallback &&
+                LivingGlassChatProtocol.EligibleForFallback(resultData.outcome, resultData.status);
+        }
+        if (contextualOrigin == null || usedFallback)
+        {
+            string legacyText = usedFallback ? visitorMessage : BuildPerformerScopedMessage(session, visitorMessage);
+            yield return PostAssistant(chatUrl, LivingGlassChatProtocol.LegacyBody(legacyText), false, resultData);
+        }
+        assistantRequestRoutine = null;
+        if (session != assistantSession || requestId != assistantSessionSequence || !IsAssistantSessionViewActive(session))
+            yield break;
+
+        session.requestInProgress = false;
+        if (session.send != null)
+            session.send.SetEnabled(true);
+        if (session.cancel != null)
+            session.cancel.SetEnabled(false);
+        if (resultData.outcome != UnityWebRequest.Result.Success)
+        {
+            string retryHint = session.send == null
+                ? (language == AppLanguage.English ? "Select the same question again to retry." : "再次選擇相同問題即可重試。")
+                : (language == AppLanguage.English ? "Tap Retry to try again." : "請點選「重試」再試一次。");
+            string error = resultData.outcome == UnityWebRequest.Result.ConnectionError
+                ? (language == AppLanguage.English ? "Network error. Check your connection. " + retryHint : "網路連線失敗，請確認連線。" + retryHint)
+                : (language == AppLanguage.English ? "Assistant server error (HTTP " + resultData.status + "). " + retryHint : "助理伺服器錯誤（HTTP " + resultData.status + "）。" + retryHint);
+            Debug.LogWarning("Assistant request failed with HTTP status " + resultData.status + " (" + resultData.outcome + ").", this);
+            FailAssistantMessage(session, visitorMessage, error);
+            yield break;
+        }
+
+        AssistantChatResponse result = null;
+        try
+        {
+            result = JsonUtility.FromJson<AssistantChatResponse>(resultData.json);
+        }
+        catch (Exception exception)
+        {
+            Debug.LogWarning("Assistant response JSON could not be parsed (" + exception.GetType().Name + ").", this);
+        }
+
+        if (result == null || string.IsNullOrWhiteSpace(result.reply))
+        {
+            FailAssistantMessage(session, visitorMessage, language == AppLanguage.English
+                ? (session.send == null ? "The assistant returned an unexpected response. Select the same question again to retry." : "The assistant returned an unexpected response. Tap Retry to try again.")
+                : (session.send == null ? "助理回覆格式無法辨識，請再次選擇相同問題重試。" : "助理回覆格式無法辨識，請點選「重試」。"));
+            yield break;
+        }
+
+        Label reply = AppendAssistantReply(session, result.reply);
+        VisualElement replyEnd = livingReplySpeech?.Add(session.conversation, result.reply) ?? reply;
+        session.failedMessage = null;
+        if (session.input != null && session.input.value.Trim() == visitorMessage)
+            session.input.value = string.Empty;
+        if (session.send != null)
+            session.send.text = language == AppLanguage.English ? "Ask" : "詢問";
+        SetAssistantStatus(session, usedFallback
+            ? (language == AppLanguage.English ? "General reply. Exhibition sources are unavailable." : "一般回覆。展覽資料來源目前無法使用。")
+            : string.Empty, false);
+        session.conversation.schedule.Execute(() =>
+        {
+            if (session == assistantSession && session.root != null && session.root.panel != null)
+                session.conversation.ScrollTo(replyEnd);
+        }).ExecuteLater(1);
     }
 
     private Label AppendAssistantReply(AssistantSession session, string replyText)
