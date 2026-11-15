@@ -1,0 +1,9 @@
+# Stage 5.2F — AI acceptance checkpoint
+
+- **Repository and branch** [Awakening Celebrations Ver.ka](https://github.com/Kiraakatsuki/Awakening_Celebrations_Ver.Ka), `development/stage-5.2-jfc-ai`.
+- **Accepted implementation** `6345d7296ede7cd997b150e7bf47322452422681`. The annotated tag [awakening-stage5.2-ai-accepted](https://github.com/Kiraakatsuki/Awakening_Celebrations_Ver.Ka/tree/awakening-stage5.2-ai-accepted) identifies the documentation-only child of that commit. The code and assets are identical to the accepted implementation.
+- **Remote recovery** Fetch the tag with `git fetch origin tag awakening-stage5.2-ai-accepted`. Resolve the checkpoint SHA with `git rev-parse "awakening-stage5.2-ai-accepted^{commit}"`. The peeled remote tag and development branch HEAD identify the same checkpoint at publication.
+- **Render** Deployment `dep-dbsm0ue7bikc73f7m7t0` serves the accepted implementation SHA above. Both documentation files are outside Render's `awakening-ai-backend/` root. The checkpoint commit carries Render's `[skip render]` marker.
+- **Audio acceptance** The user listened to the English and Mandarin output and approved the audible quality and speech endings. [Stage 5.2E evidence](Stage5_2E_FinalAcceptance.md) records the separate technical playback and live GPT checks.
+- **External dependencies** Restore the ignored Whisper `VoiceLocal/` and Qwen `QwenLocal/RuntimePack/` with the approved ICL conditioning and local configuration. Restore the MediaPipe package archive as described in the [voice checkpoint](../../Stage4VoiceExperience/Stage4_3/Stage4_3E_GitHubCheckpoint.md). Render supplies OpenAI credentials server-side. GitHub stores the application source and approved prerecorded narration.
+- **Open validation** Full Windows Player acceptance and combined hardware-load testing are not yet verified.
