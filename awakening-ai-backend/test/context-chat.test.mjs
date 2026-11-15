@@ -66,6 +66,16 @@ test('comparisons resolve a selected or recent implicit operand while named-only
   const relation = await http('/chat/v2', { locale: 'en', message: 'How is it related to Gaia?',
     context: { source: 'performer-page', performerId: 'JFC26-SANCTUARY' } });
   assert(relation.body.recordIds.includes('DEF-JFC26-SANCTUARY'));
+  const variant = await http('/chat/v2', { locale: 'zh-TW',
+    message: '蓋亞和 Pandemic 有什麼不同？',
+    context: { source: 'performer-page', performerId: 'JFC26-SANCTUARY' } });
+  assert(variant.body.recordIds.includes('DEF-JFC26-GAIA'));
+  assert(variant.body.recordIds.includes('DEF-' + pandemic));
+  assert.deepEqual(prompt.resolvedSubjects.map((item) => item.id).sort(), [gaia.performerId, pandemic]);
+  for (const alias of ['Gaia', 'GAIA', '蓋婭', '蓋亞', 'Dewi Bumi']) {
+    const match = retrieve(knowledge, { locale: 'zh-TW', message: alias, context: {} });
+    assert.deepEqual(match.subject.performerIds, [gaia.performerId], alias);
+  }
   await http('/chat/v2', { locale: 'en', message: 'What is Pandemic?', context: gaia });
   assert.deepEqual(prompt.resolvedSubjects.map((item) => item.id), [pandemic]);
   const sessionId = (await http('/chat/v2/session', {})).body.sessionId;
