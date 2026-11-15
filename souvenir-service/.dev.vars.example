@@ -1,0 +1,4 @@
+# Replace each value with a different locally generated secret.
+LOCAL_TEST_AUTH=enabled
+LOCAL_KIOSK_KEY=
+TOKEN_KEY=

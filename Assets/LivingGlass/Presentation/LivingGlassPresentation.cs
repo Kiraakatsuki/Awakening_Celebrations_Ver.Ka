@@ -336,7 +336,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         Text(reading, T("Camera and gesture tracking", "相機與手勢追蹤"), "lg-subtitle");
         Text(reading, T("This experience uses the existing on-device hand-tracking pipeline. Permission lasts for this session and is never remembered as camera consent. You can stop capture at any time.", "本體驗使用既有的裝置端手部追蹤流程。相機許可僅限本次體驗，不會保存為下次授權；您可隨時停止影像擷取。"));
         Text(reading, T("Live preview uses the same camera source. Hiding a preview does not stop capture. Settings and Privacy suspend capture; returning resumes only with your session permission and an eligible route.", "即時預覽使用同一相機來源。隱藏預覽並不會停止擷取。設定與隱私畫面會暫停擷取；返回時，僅在本次已授權且適用的畫面恢復。"));
-        Text(reading, T("AI questions are sent to the existing assistant service. Do not include personal or sensitive information. Souvenir delivery and QR generation are unavailable.", "AI 問題會傳送至既有助理服務，請勿輸入個人或敏感資訊。紀念品傳送與 QR 碼產生功能目前無法使用。"));
+        Text(reading, T("AI questions are sent to the existing assistant service. Do not include personal or sensitive information. Digital souvenirs use an anonymous visit record.", "AI 問題會傳送至既有助理服務，請勿輸入個人或敏感資訊。數位紀念品使用匿名參觀紀錄。"));
         Text(reading, T("No claim is made here about unverified backend retention. Ask the exhibition team for the operational privacy notice.", "此處不對尚未核實的後端資料保留作出承諾；請向展覽團隊索取正式營運隱私說明。"), "lg-small");
         var permission = new Toggle { name = "privacy-consent", text = T("Allow camera tracking during this session", "允許於本次體驗使用相機追蹤") };
         permission.AddToClassList("lg-consent"); permission.SetValueWithoutNotify(consent);
@@ -620,12 +620,58 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     {
         var copy = Standard(T("UNTIL WE MEET AGAIN", "期待再次相遇"), T("Carry the moment\nwith you.", "讓此刻，\n留在心中。"), T("Return to the gallery to meet another presence.", "回到藝廊，與另一種存在相遇。"), Mathf.Max(0, selected));
         Action(copy, "closing-gallery", T("Explore another presence", "探索另一種存在"), () => flow?.LivingReturnGallery(), "lg-primary");
-        Action(copy, "closing-takeaway", T("About the takeaway", "關於紀念品"), () => flow?.LivingSouvenir(), "lg-quiet");
+        BuildSouvenirSection(copy, true);
     }
     private void BuildSouvenir()
     {
-        var copy = Standard(T("TAKEAWAY / NOT AVAILABLE", "紀念品／尚未提供"), T("A memory,\nwithout a code.", "留下一份回憶。"), T("Souvenir delivery is deliberately deferred. No QR code, download or personal-data collection is active.", "紀念品傳送功能刻意延後，目前沒有 QR 碼、下載或個人資料蒐集服務。"), Mathf.Max(0, selected));
-        Action(copy, "souvenir-done", T("Done", "完成"), () => flow?.LivingDone(), "lg-primary");
+        var copy = Standard(T("TAKEAWAY", "帶走一份回憶"), T("Digital souvenir", "數位紀念品"), "", Mathf.Max(0, selected));
+        BuildSouvenirSection(copy, false);
+    }
+
+    private void BuildSouvenirSection(VisualElement copy, bool closingPage)
+    {
+        copy.AddToClassList("lg-souvenir-copy");
+        var section = Box(copy, "digital-souvenir", "lg-souvenir-section");
+        if (closingPage) Text(section, T("Digital souvenir", "數位紀念品"), "lg-subtitle");
+        var row = Box(section, "souvenir-content", "lg-souvenir-content");
+        var qr = new Image { name = "souvenir-qr", scaleMode = ScaleMode.ScaleToFit, pickingMode = PickingMode.Ignore };
+        qr.AddToClassList("lg-souvenir-qr");
+        row.Add(qr);
+        var status = Text(row, "", "lg-small");
+        status.name = "souvenir-status";
+        status.AddToClassList("lg-souvenir-status");
+        var actions = Box(section, "souvenir-actions", "lg-actions");
+        var retry = Action(actions, "souvenir-retry", T("Check souvenir", "查看紀念品"), () => flow?.Souvenir?.Request(), "lg-quiet");
+        if (closingPage)
+            Action(actions, "closing-takeaway", T("Souvenir details", "紀念品詳情"), () => flow?.LivingSouvenir(), "lg-quiet");
+        var reset = Action(actions, "souvenir-done", T("New Visitor", "新的參觀者"), () => flow?.LivingDone(), "lg-quiet");
+        void UpdateSouvenir()
+        {
+            var souvenir = flow?.Souvenir;
+            qr.image = souvenir?.Qr;
+            qr.style.display = qr.image == null ? DisplayStyle.None : DisplayStyle.Flex;
+            string message = (souvenir?.Status ?? LivingGlassSouvenir.Display.Idle) switch
+            {
+                LivingGlassSouvenir.Display.Loading => T("Checking your souvenir…", "正在確認您的紀念品……"),
+                LivingGlassSouvenir.Display.Ready => T("Open your phone camera and point it at the QR code. Tap the link to view or download. Valid for ", "開啟手機相機，對準 QR 碼並點選連結，即可查看或下載。剩餘時間 ") +
+                    $"{souvenir.SecondsLeft / 60:00}:{souvenir.SecondsLeft % 60:00}",
+                LivingGlassSouvenir.Display.Paused => T("Digital souvenirs are paused. You can keep exploring or end your visit.", "數位紀念品目前暫停提供。您可以繼續探索或結束參觀。"),
+                LivingGlassSouvenir.Display.Expired => T("This souvenir link is no longer valid.", "此紀念品連結已失效。"),
+                LivingGlassSouvenir.Display.Denied => T("This kiosk cannot access the souvenir service.", "此展覽裝置無法存取紀念品服務。"),
+                LivingGlassSouvenir.Display.Conflict => T("This souvenir visit could not be resumed. Start a new visit when ready.", "無法繼續此紀念品參觀。準備好後請開始新的參觀。"),
+                LivingGlassSouvenir.Display.Throttled => T("The souvenir service is busy. Please try again shortly.", "紀念品服務忙碌中，請稍後再試。"),
+                LivingGlassSouvenir.Display.Unavailable => T("The souvenir service is temporarily unavailable.", "紀念品服務暫時無法使用。"),
+                _ => souvenir?.Eligible == true ? T("Check your digital souvenir.", "查看您的數位紀念品。")
+                    : T("Complete one performer journey to qualify.", "完成任一位表演者的體驗即可取得資格。"),
+            };
+            if (status.text != message) status.text = message;
+            retry.style.display = souvenir?.Eligible == true && qr.image == null &&
+                souvenir.Status != LivingGlassSouvenir.Display.Expired ? DisplayStyle.Flex : DisplayStyle.None;
+            retry.SetEnabled(souvenir?.Busy != true);
+            reset.SetEnabled(souvenir?.Busy != true);
+        }
+        UpdateSouvenir();
+        section.schedule.Execute(UpdateSouvenir).Every(250);
     }
     private void BuildSettings(VisualElement parent)
     {

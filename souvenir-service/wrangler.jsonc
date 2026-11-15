@@ -1,0 +1,54 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "awakening-souvenir",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-15",
+  "workers_dev": false,
+  "preview_urls": false,
+  "send_metrics": false,
+  "observability": { "enabled": false },
+  "assets": {
+    "directory": "./assets",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "awakening-souvenir-local",
+    // Local emulator identifier. It does not identify a provisioned database.
+    "database_id": "00000000-0000-4000-8000-000000000001",
+    "migrations_dir": "migrations"
+  }],
+  "vars": {
+    "SERVICE_MODE": "local",
+    "LOCAL_TEST_AUTH": "disabled",
+    "QR_TTL_SECONDS": "1800",
+    "ISSUANCE_PER_DAY": "100",
+    "REQUESTS_PER_MINUTE": "60",
+    "REQUESTS_PER_DAY": "5000"
+  },
+  "env": {
+    "controlled": {
+      "name": "awakening-souvenir",
+      "account_id": "b26073187b9ce64e32c4e0f50e22c8c1",
+      "workers_dev": true,
+      "preview_urls": false,
+      "d1_databases": [{
+        "binding": "DB",
+        "database_name": "awakening-souvenir-d1",
+        "database_id": "c2443cd8-8553-417d-a4c5-e605ee28e779",
+        "migrations_dir": "migrations"
+      }],
+      "vars": {
+        "SERVICE_MODE": "production",
+        "LOCAL_TEST_AUTH": "disabled",
+        "ISSUANCE_MODE": "paused",
+        "PUBLIC_ORIGIN": "https://awakening-souvenir.awakening-celebrations-verka.workers.dev",
+        "QR_TTL_SECONDS": "1800",
+        "ISSUANCE_PER_DAY": "100",
+        "REQUESTS_PER_MINUTE": "60",
+        "REQUESTS_PER_DAY": "5000"
+      }
+    }
+  }
+}

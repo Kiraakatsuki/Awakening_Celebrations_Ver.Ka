@@ -1,0 +1,7 @@
+/.wrangler/
+/node_modules/
+/.dev.vars
+/.dev.vars.*
+!/.dev.vars.example
+/assets/media/*
+!/assets/media/placeholder-test.webp

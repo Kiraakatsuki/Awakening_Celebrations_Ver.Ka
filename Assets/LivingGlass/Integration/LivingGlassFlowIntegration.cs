@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 /// <summary>
-/// Living Glass command port into the single flow/service authority. No new camera,
-/// decoder, recognizer or HTTP client. Imported path bindings are never used by this port.
+/// Living Glass command port into the single flow/service authority.
+/// Imported path bindings are never used by this port.
 /// </summary>
 public sealed partial class AwakeningApplicationController
 {
@@ -20,6 +20,11 @@ public sealed partial class AwakeningApplicationController
     private LivingGlassSpeechCapture livingSpeech;
     private LivingGlassReplySpeech livingReplySpeech;
     private LivingGlassVoiceCoordinator livingVoice;
+    private LivingGlassSouvenir livingSouvenir;
+    private int souvenirJourneyPerformer = -1;
+    private bool souvenirPortraitFinished;
+    internal LivingGlassSouvenir Souvenir => Application.isPlaying
+        ? livingSouvenir ??= new LivingGlassSouvenir() : null;
     private string ContextualAssistantOrigin => LivingGlassChatProtocol.ContextualOrigin(
         assistantBackendBaseUrl, LivingGlassChatProtocol.DevelopmentOverride);
     internal bool LivingAssistantAvailable => ContextualAssistantOrigin != null;
@@ -123,7 +128,7 @@ public sealed partial class AwakeningApplicationController
     public void LivingBegin()
     {
         if (LivingProtected || livingGlass.OverlayVisible || transitionInProgress) return;
-        Navigate(PrivacyScreen, language, true);
+        if (Navigate(PrivacyScreen, language, true)) Souvenir?.Begin();
     }
     public void LivingContinue()
     {
@@ -161,7 +166,14 @@ public sealed partial class AwakeningApplicationController
         if (LivingProtected || livingGlass.OverlayVisible) return;
         Navigate(ColorReleaseScreen, language, false);
     }
-    public void LivingDone() { if (!LivingProtected && !livingGlass.OverlayVisible) LivingGlassHome(true); }
+    public void LivingDone()
+    {
+        if (LivingProtected || livingGlass.OverlayVisible || transitionInProgress || Souvenir?.Busy == true) return;
+        Souvenir?.NewVisitor();
+        souvenirJourneyPerformer = -1;
+        souvenirPortraitFinished = false;
+        LivingGlassHome(true);
+    }
     public void LivingSouvenir() { if (!LivingProtected && !livingGlass.OverlayVisible) Navigate("SOUVENIR---QR-DELIVERY", language, true); }
 
     private void LivingGlassHome(bool fromDone)

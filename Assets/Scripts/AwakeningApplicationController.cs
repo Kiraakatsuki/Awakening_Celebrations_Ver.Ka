@@ -206,6 +206,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         ResetContextConversation();
         livingVoice?.Dispose();
         livingVoice = null;
+        livingSouvenir?.Dispose();
+        livingSouvenir = null;
         GestureCameraConsentGate.SetConsent(false);
         StopEnvironmentalMusic();
         StopPerformerExperienceSequence();
@@ -774,7 +776,11 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
     private void SelectPerformer(int index)
     {
         selectedPerformer = index;
-        Navigate(GetPerformerScreen(index, 0), language, true);
+        if (Navigate(GetPerformerScreen(index, 0), language, true))
+        {
+            souvenirJourneyPerformer = index;
+            souvenirPortraitFinished = false;
+        }
     }
 
     private void AdvancePerformerStage(int performer, int stage)
@@ -801,7 +807,11 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             return;
 
         if (stage == Stages.Length - 1)
-            Navigate("CLOSING---CELEBRATION", language, true);
+        {
+            if (Navigate("CLOSING---CELEBRATION", language, true) &&
+                souvenirJourneyPerformer == performer && souvenirPortraitFinished)
+                Souvenir?.Qualified(Performers[performer]);
+        }
         else if (stage == 3)
             Navigate(GetPerformerScreen(performer, stage + 1), language, true);
     }
@@ -1146,7 +1156,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         }
 
         livingPortraitTransitionRoutine = null;
-        NavigateWithinPerformerFlow(GetPerformerScreen(performer, 3));
+        if (NavigateWithinPerformerFlow(GetPerformerScreen(performer, 3)) && souvenirJourneyPerformer == performer)
+            souvenirPortraitFinished = true;
     }
 
     private void StopLivingPortraitVideoPlayer(bool restorePlaceholder, bool releaseTexture)
