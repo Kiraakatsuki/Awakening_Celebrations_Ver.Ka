@@ -21,8 +21,8 @@ public sealed partial class AwakeningApplicationController
     private LivingGlassReplySpeech livingReplySpeech;
     private LivingGlassVoiceCoordinator livingVoice;
     private string ContextualAssistantOrigin => LivingGlassChatProtocol.ContextualOrigin(
-        assistantChatMode, assistantBackendBaseUrl, LivingGlassChatProtocol.DevelopmentBaseUrl);
-    internal bool LivingContextChatEnabled => ContextualAssistantOrigin != null;
+        assistantBackendBaseUrl, LivingGlassChatProtocol.DevelopmentOverride);
+    internal bool LivingAssistantAvailable => ContextualAssistantOrigin != null;
     private string contextSessionToken;
     private string contextSessionOrigin;
     private LivingGlassVoiceCoordinator Voice => livingVoice ??= new LivingGlassVoiceCoordinator(gameObject,
@@ -186,7 +186,7 @@ public sealed partial class AwakeningApplicationController
     {
         if (livingGlass == null) return;
         bool general = kind == LivingGlassChatProtocol.GeneralOverlay;
-        if (general && !LivingContextChatEnabled) return;
+        if (general && !LivingAssistantAvailable) return;
         if (LivingProtected && kind != "Privacy") { livingGlass.AnnounceProtected(); return; }
         if (kind == "Privacy" && LivingProtected)
         {

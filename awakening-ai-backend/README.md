@@ -15,19 +15,19 @@ npm start
 
 PowerShell users can copy the example with `Copy-Item .env.example .env`. Never commit `.env`.
 
-The service reads `PORT` (defaults to `3000`), `OPENAI_API_KEY` (required for `/chat`), and `OPENAI_MODEL` (defaults to `gpt-4.1-mini`). The default model is listed in OpenAI's [models documentation](https://platform.openai.com/docs/models) and works with the Responses API. Set `OPENAI_MODEL` to another model enabled for your API project when needed.
+The service reads `PORT` (defaults to `3000`), `OPENAI_API_KEY` (required for generated contextual replies), and `OPENAI_MODEL` (defaults to `gpt-4.1-mini`). The default model is listed in OpenAI's [models documentation](https://platform.openai.com/docs/models) and works with the Responses API. Set `OPENAI_MODEL` to another model enabled for your API project when needed.
 
-`GET /health` returns `{"status":"ok"}`. `POST /chat` accepts `{"message":"Hello"}` and returns `{"reply":"..."}`. Messages must contain 1–4000 non-whitespace characters. The service limits JSON bodies to 16 KB and chat requests to 20 per IP per minute.
+`GET /health` returns `{"status":"ok"}`. Unity obtains a session from `POST /chat/v2/session`, sends questions to `POST /chat/v2`, and ends sessions through `POST /chat/v2/reset`. The contextual routes share the 20 requests per IP per minute limit. JSON request bodies are limited to 16 KB.
 
-Example request:
+A stateless local request:
 
 ```sh
-curl -X POST http://localhost:3000/chat \
+curl -X POST http://localhost:3000/chat/v2 \
   -H 'Content-Type: application/json' \
-  -d '{"message":"Hello"}'
+  -d '{"message":"Who founded JFC?","locale":"en"}'
 ```
 
-When the API key is absent, the server still starts and `/health` remains available; `/chat` returns HTTP 503 with a safe error. This allows Render health checks to pass while configuration is incomplete.
+Without a configured API key, the server still starts and `/health` remains available. Requests that need the provider receive a safe HTTP 503 response.
 
 ## Render Web Service
 
@@ -54,4 +54,4 @@ Render provides `PORT` automatically. Do not add the key to Unity, the repositor
 
 ## Unity integration
 
-The Unity runtime uses the language-specific UI Toolkit assets registered in `RuntimeScreenCatalog`. `AwakeningApplicationController` now adds a live text input, send/retry action, suggestion handlers, and conversation view to the imported assistant panel. It sends JSON `{ "message": "..." }` to the deployed HTTPS `/chat` endpoint and displays the `reply` field. Configure the service base URL in the controller's **Assistant Backend Base URL** Inspector field. The OpenAI API key remains exclusively in Render.
+Unity uses the configured HTTPS **Assistant Backend Base URL** and sends structured locale, session and selection context to `/chat/v2`. The reply text is read from the top-level `reply` field. The OpenAI API key stays in Render. An explicitly configured HTTPS loopback override is available in the Unity Editor for local tests.

@@ -37,20 +37,18 @@ internal static class ContextChatEditorChecks
         }
         var general = (JObject)JObject.Parse(LivingGlassChatProtocol.ContextBody("Fixture", AppLanguage.Chinese, token, -1, true))["context"];
         Need(general.Count == 1 && (string)general["source"] == "common-ai", "general context omits IDs");
-        var legacy = JObject.Parse(LivingGlassChatProtocol.LegacyBody("Only the question"));
-        Need(legacy.Count == 1 && (string)legacy["message"] == "Only the question", "legacy message contract");
         Need(LivingGlassChatProtocol.TokenFromResponse(LivingGlassChatProtocol.TokenBody(token)) == token, "server token");
         Need(LivingGlassChatProtocol.TokenFromResponse("{\"sessionId\":\"guessable\"}") == null, "invalid token");
         Need(LivingGlassChatProtocol.LoopbackBaseUrl("https://127.0.0.1:8743") == "https://127.0.0.1:8743", "loopback URL");
         foreach (string rejected in new[] { "http://127.0.0.1:8743", "https://example.com", "https://127.0.0.1/a", "https://user@127.0.0.1", "https://127.0.0.1/?key=1" })
             Need(LivingGlassChatProtocol.LoopbackBaseUrl(rejected) == null, "unsafe development URL");
         const string render = "https://awakening-celebrations-ver-ka.onrender.com";
-        Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Contextual, render + "/", null) == render, "deployed contextual route");
-        Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Legacy, render, null) == null, "explicit legacy route");
-        Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Contextual, render, "https://127.0.0.1:8743") == "https://127.0.0.1:8743", "Editor fixture override");
+        Need(LivingGlassChatProtocol.ContextualOrigin(render + "/", null) == render, "deployed contextual route");
+        Need(LivingGlassChatProtocol.ContextualOrigin(render, "https://example.com") == render, "non-loopback override rejected");
+        Need(LivingGlassChatProtocol.ContextualOrigin(render, "https://127.0.0.1:8743") == "https://127.0.0.1:8743", "Editor fixture override");
         foreach (string rejected in new[] { "http://example.com", "https://example.com/chat/v2", "https://user@example.com", "https://example.com/?key=1", "https://example.com/#fragment" })
-            Need(LivingGlassChatProtocol.ContextualOrigin(LivingGlassChatMode.Contextual, rejected, null) == null, "unsafe deployed origin");
-        return "PASS 24 bilingual dedicated/portrait payloads, general context, token parsing, HTTPS Render/loopback routing and explicit legacy mode.";
+            Need(LivingGlassChatProtocol.ContextualOrigin(rejected, null) == null, "unsafe deployed origin");
+        return "PASS 24 bilingual dedicated/portrait payloads, general context, token parsing, HTTPS Render/loopback contextual routing.";
     }
 
     private static void Need(bool condition, string label)

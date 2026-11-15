@@ -104,7 +104,7 @@ async function start(t, respond, options = {}) {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), ...options,
     });
     return { status: response.status, headers: response.headers,
-      body: response.status === 204 ? null : await response.json() };
+      body: response.headers.get('content-type')?.includes('application/json') ? await response.json() : null };
   }
   return request;
 }
@@ -115,16 +115,23 @@ test('startup loads canonical records and rejects missing data', () => {
   assert.throws(() => loadKnowledge(new URL('./missing/', import.meta.url)));
 });
 
-test('legacy request/response, errors and health stay compatible', async (t) => {
-  const http = await start(t, ({ input }) => ' Received ' + input + ' ');
-  assert.deepEqual((await http('/health')).body, { status: 'ok' });
-  assert.deepEqual((await http('/chat', { message: ' Hello ' })).body, { reply: 'Received Hello' });
-  assert.equal((await http('/chat', { message: 7 })).status, 400);
-  assert.equal((await http('/chat', { message: 'a'.repeat(4001) })).status, 400);
-  const noKey = await start(t, () => assert.fail('provider invoked'), { knowledge: null, hasProvider: () => false });
-  assert.equal((await noKey('/chat', { message: 'Hello' })).status, 503);
-  assert.equal((await noKey('/health')).status, 200);
-  assert.equal((await noKey('/chat/v2', defaultInput)).body.code, 'knowledge_unavailable');
+test('contextual endpoints are the only assistant API and health stays available', async (t) => {
+  const http = await start(t, answerFromEvidence);
+  const health = await http('/health');
+  assert.equal(health.status, 200);
+  assert.deepEqual(health.body, { status: 'ok' });
+  assert.equal((await http('/chat', { message: 'Hello' })).status, 404);
+  const issued = await http('/chat/v2/session', {});
+  assert.equal(issued.status, 201);
+  const { sessionId } = issued.body;
+  const answer = await http('/chat/v2', { ...defaultInput, sessionId });
+  assert.equal(answer.status, 200);
+  assert.match(answer.body.reply, /Dynand Fariz/);
+  assert.equal((await http('/chat/v2/reset', { sessionId })).status, 204);
+  assert.equal((await http('/chat/v2', { ...defaultInput, sessionId })).status, 410);
+  const unavailable = await start(t, () => assert.fail('provider invoked'), { knowledge: null, hasProvider: () => false });
+  assert.equal((await unavailable('/health')).status, 200);
+  assert.equal((await unavailable('/chat/v2', defaultInput)).body.code, 'knowledge_unavailable');
 });
 
 test('all 42 localized questions cover the fixture evidence and response contract with a fake model', async (t) => {
@@ -318,10 +325,13 @@ test('provider isolation, prompt injection boundary, allowlisted citations and s
   assert(!JSON.stringify(timeout.body).includes('private'));
 });
 
-test('existing and contextual endpoints share the per-IP limit', async (t) => {
-  const http = await start(t, () => 'legacy');
-  for (let i = 0; i < 20; ++i)
-    assert.equal((await http(i % 2 ? '/chat/v2/session' : '/chat', i % 2 ? {} : { message: 'hi' })).status, i % 2 ? 201 : 200);
+test('contextual endpoints share the per-IP limit', async (t) => {
+  const http = await start(t, answerFromEvidence);
+  for (let i = 0; i < 10; ++i) {
+    const issued = await http('/chat/v2/session', {});
+    assert.equal(issued.status, 201);
+    assert.equal((await http('/chat/v2/reset', { sessionId: issued.body.sessionId })).status, 204);
+  }
   assert.equal((await http('/chat/v2', defaultInput)).status, 429);
   assert.equal((await http('/health')).status, 200);
 });

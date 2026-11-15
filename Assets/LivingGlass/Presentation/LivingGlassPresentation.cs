@@ -676,7 +676,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     }
     private void BuildChooser(VisualElement parent)
     {
-        bool contextual = flow?.LivingContextChatEnabled ?? false;
+        bool contextual = flow?.LivingAssistantAvailable ?? false;
         Text(parent, contextual ? T("Choose a portrait or ask a general question about JFC.", "選擇肖像，或詢問一般 JFC 問題。") :
             T("Choose a presence to begin a conversation. The assistant uses the existing service and does not claim a verified knowledge archive.", "選擇一種存在展開對話。助理使用既有服務，不宣稱擁有已核實的知識庫。"), "lg-small");
         if (contextual)

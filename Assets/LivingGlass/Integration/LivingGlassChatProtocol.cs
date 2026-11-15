@@ -3,8 +3,6 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using Newtonsoft.Json;
 
-internal enum LivingGlassChatMode { Legacy, Contextual }
-
 internal static class LivingGlassChatProtocol
 {
     internal const string GeneralOverlay = "AssistantGeneral";
@@ -16,20 +14,20 @@ internal static class LivingGlassChatProtocol
     private static readonly JsonSerializerSettings ContextJsonSettings = new JsonSerializerSettings
         { NullValueHandling = NullValueHandling.Ignore };
 
-    internal static string DevelopmentBaseUrl
+    internal static string DevelopmentOverride
     {
         get
         {
 #if UNITY_EDITOR
-            return LoopbackBaseUrl(Environment.GetEnvironmentVariable("AWAKENING_CONTEXT_CHAT_URL"));
+            return Environment.GetEnvironmentVariable("AWAKENING_CONTEXT_CHAT_URL");
 #else
             return null;
 #endif
         }
     }
 
-    internal static string ContextualOrigin(LivingGlassChatMode mode, string configuredOrigin, string editorLoopback) =>
-        editorLoopback ?? (mode == LivingGlassChatMode.Contextual ? HttpsOrigin(configuredOrigin) : null);
+    internal static string ContextualOrigin(string configuredOrigin, string editorOverride) =>
+        LoopbackBaseUrl(editorOverride) ?? HttpsOrigin(configuredOrigin);
 
     internal static string HttpsOrigin(string value)
     {
@@ -70,7 +68,6 @@ internal static class LivingGlassChatProtocol
         return JsonConvert.SerializeObject(request, ContextJsonSettings);
     }
 
-    internal static string LegacyBody(string message) => JsonUtility.ToJson(new LegacyRequest { message = message });
     internal static string TokenBody(string token) => JsonUtility.ToJson(new TokenRequest { sessionId = token });
     internal static string TokenFromResponse(string json)
     {
@@ -82,7 +79,6 @@ internal static class LivingGlassChatProtocol
         catch (ArgumentException) { return null; }
     }
 
-    [Serializable] private sealed class LegacyRequest { public string message; }
     [Serializable] private sealed class TokenRequest { public string sessionId; }
     [Serializable] private sealed class ContextRequest { public string message, locale, sessionId; public Context context; }
     [Serializable] private sealed class Context { public string source, performerId, imageId; }

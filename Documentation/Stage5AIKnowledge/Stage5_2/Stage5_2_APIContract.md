@@ -1,6 +1,6 @@
 # Stage 5.2 — API contract
 
-Legacy `POST /chat` still accepts `{"message":"Hello"}` and responds with `{"reply":"..."}`. `GET /health` remains available. Helmet, the strict 16 KB JSON body limit, the trusted Render reverse proxy and the 20 requests per IP per minute limit remain in place. Legacy and contextual routes share the limit, including session requests.
+`POST /chat/v2` is the only assistant reply route. `GET /health` remains available. Helmet, the strict 16 KB JSON body limit and the trusted Render reverse proxy remain in place. The three contextual routes share the 20 requests per IP per minute limit.
 
 ## Contextual routes
 
@@ -37,6 +37,6 @@ node test/mock-context-server.mjs <certificate.pem> <private-key.pem> 8743
 
 The mock listens on HTTPS loopback and always uses a fake provider. Set `AWAKENING_CONTEXT_CHAT_URL=https://127.0.0.1:8743` in the environment of a new Unity Editor process. Use a certificate trusted by that process. The runtime preserves normal TLS validation and rejects redirects on the contextual requests. A temporary Edit Mode transport fixture pinned its own one-day test certificate, without changing system trust. No certificate or key is part of this change.
 
-Leaving the variable unset keeps the production HTTPS `/chat` connection. Windows Players always retain legacy routing in this stage. Optional Editor fallback requires `AWAKENING_CONTEXT_CHAT_LEGACY_FALLBACK=1` and occurs only on connection failure or HTTP 502, 503, or 504. It sends the visitor's question as the sole legacy field with a localized general-reply status. A valid production legacy URL is required. Keep fallback unset during mock tests to avoid contacting Render. HTTP 410 causes the client to discard the token and allows manual Retry to issue a new one. Validation failures, malformed responses and rate limits stay on the contextual path.
+With the Editor variable unset, Unity uses the configured HTTPS Render origin for all contextual requests. The Windows Player uses that origin directly. HTTP 410 discards the token and allows manual Retry to issue a new one. Request errors remain on the contextual path.
 
-A later authorized deployment needs the canonical knowledge directory, server-side OpenAI configuration, a model supporting structured output, and a deployment readiness check that exercises the contextual routes in addition to `/health`. Never copy credentials into Unity. A multi-instance deployment would need a decision about sticky routing or a separately approved ephemeral-state solution. Roll back by disabling the Editor variable. The server code can be rolled back independently to the existing checkpoint without changing Unity assets or resetting unrelated changes.
+Deployment requires the canonical knowledge directory, server-side OpenAI configuration, a model supporting structured output, and a deployment readiness check that exercises the contextual routes in addition to `/health`. Never copy credentials into Unity. A multi-instance deployment would need a decision about sticky routing or a separately approved ephemeral-state solution. The Stage 5.2 acceptance tag predates legacy retirement and preserves the earlier Unity and backend contracts for coordinated recovery.
