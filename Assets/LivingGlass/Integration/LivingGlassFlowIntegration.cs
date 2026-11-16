@@ -60,7 +60,6 @@ public sealed partial class AwakeningApplicationController
         livingGlass.Render(currentScreen, language, selectedPerformer, consentAccepted, colorReleaseSelectionReady);
         VisualElement root = livingGlass.Content;
         gestureCursor?.Attach(livingGlass.Root);
-        livingGlass.StyleCursor();
         performerTargets = livingGlass.PerformerTargets;
         if (currentScreen.StartsWith("Assistant-", StringComparison.Ordinal) && selectedPerformer >= 0)
         {
@@ -99,6 +98,7 @@ public sealed partial class AwakeningApplicationController
         PlayerPrefs.Save();
         UpdateNavigationHistoryLanguage(value);
         string retainedOverlay = livingOverlay;
+        bool retainedRestart = livingGlass.RestartConfirmationVisible;
         int retainedPerformer = livingOverlayPerformer;
         LivingGlassCloseOverlay(true);
         CancelAssistantRequest();
@@ -108,6 +108,7 @@ public sealed partial class AwakeningApplicationController
         {
             livingOverlayPerformer = retainedPerformer;
             LivingGlassOpenOverlay(retainedOverlay);
+            if (retainedRestart) LivingRequestRestart();
         }
     }
 
@@ -149,11 +150,13 @@ public sealed partial class AwakeningApplicationController
         ClearGestureTarget();
         SetTargetedPerformer(index);
     }
-    public void LivingConfirm(int index)
+    public void LivingConfirm(int index) => LivingConfirm(index, null);
+
+    internal void LivingConfirm(int index, Vector2? cursorPoint)
     {
         if (currentScreen != ColorReleaseScreen || !colorReleaseSelectionReady || livingGlass.OverlayVisible || transitionInProgress) return;
         LivingTarget(index);
-        HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
+        HandleInteractionCommand(InteractionCommand.ConfirmPerformer, cursorPoint);
     }
     public void LivingReleaseTargetOwner()
     {
@@ -168,7 +171,26 @@ public sealed partial class AwakeningApplicationController
     }
     public void LivingDone()
     {
-        if (LivingProtected || livingGlass.OverlayVisible || transitionInProgress || Souvenir?.Busy == true) return;
+        if (!livingGlass.OverlayVisible) EndVisitor();
+    }
+
+    internal bool LivingRestartAvailable => !LivingProtected && !transitionInProgress && Souvenir?.Busy != true;
+
+    internal void LivingRequestRestart()
+    {
+        if (LivingProtected || livingOverlay != "Settings" || !livingGlass.OverlayVisible ||
+            livingGlass.RestartConfirmationVisible) return;
+        livingGlass.OpenOverlay(LivingGlassPresentation.RestartOverlay, language, -1);
+    }
+
+    internal void LivingConfirmRestart()
+    {
+        if (livingOverlay == "Settings" && livingGlass.RestartConfirmationVisible) EndVisitor();
+    }
+
+    private void EndVisitor()
+    {
+        if (!LivingRestartAvailable) return;
         Souvenir?.NewVisitor();
         souvenirJourneyPerformer = -1;
         souvenirPortraitFinished = false;
@@ -234,6 +256,22 @@ public sealed partial class AwakeningApplicationController
     public void LivingGlassCloseOverlay(bool immediate = false)
     {
         if (livingGlass == null || !livingGlass.OverlayVisible) return;
+        bool restarting = livingGlass.RestartConfirmationVisible;
+        if (restarting && !immediate)
+        {
+            var settings = livingGlass.OpenOverlay("Settings", language, -1);
+            var restart = settings.Q<Button>("setting-restart");
+            restart.Focus();
+            restart.RegisterCallback<GeometryChangedEvent>(RevealRestart);
+            return;
+
+            void RevealRestart(GeometryChangedEvent evt)
+            {
+                restart.UnregisterCallback<GeometryChangedEvent>(RevealRestart);
+                settings.Q<ScrollView>("window-scroll").ScrollTo(restart);
+            }
+        }
+
         ClearBindings(livingChatUnbind);
         CancelAssistantRequest();
         bool returnSettings = !immediate && livingParentOverlay == "Settings";
@@ -245,7 +283,7 @@ public sealed partial class AwakeningApplicationController
         livingVoice?.Overlay(false);
         bool eligible = currentScreen == AttractScreen || currentScreen == ColorReleaseScreen || IsPerformerStage(currentScreen, out _, out _)
             || (hasAwakenedThisSession && (currentScreen == "CLOSING---CELEBRATION" || currentScreen == "SOUVENIR---QR-DELIVERY"));
-        GestureCameraConsentGate.SetConsent(consentAccepted && eligible);
+        if (!restarting) GestureCameraConsentGate.SetConsent(consentAccepted && eligible);
     }
 
     public void LivingMinimize()

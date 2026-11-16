@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using PointerType = UnityEngine.UIElements.PointerType;
 
 /// <summary>Living Glass view composition. Business commands belong to the flow port.</summary>
 [DisallowMultipleComponent]
@@ -37,6 +38,8 @@ public sealed class LivingGlassPresentation : MonoBehaviour
     public VisualElement Root { get { return root; } }
     public VisualElement[] PerformerTargets { get; private set; }
     public bool OverlayVisible { get { return overlayPlane != null; } }
+    internal const string RestartOverlay = "RestartExperience";
+    internal bool RestartConfirmationVisible => OverlayVisible && overlayKind == RestartOverlay && !closing;
     public bool IsInitialized { get { return root != null; } }
     public bool ReducedMotion { get { return assets != null && assets.reducedMotion; } }
     internal LivingGlassMotion Motion => motion;
@@ -247,15 +250,11 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         preview.style.display = texture != null ? DisplayStyle.Flex : DisplayStyle.None;
         if (texture != null) preview.MarkDirtyRepaint();
     }
-    public void StyleCursor()
+    private void ConfirmPresence(int performer, EventBase evt)
     {
-        VisualElement cursor = root?.Q("ac-gesture-cursor");
-        if (cursor == null) return;
-        cursor.AddToClassList("lg-pointer");
-        cursor.style.backgroundColor = LivingGlassAssets.Hex("#0C1117");
-        Color edge = LivingGlassAssets.Hex("#F3F0E8");
-        cursor.style.borderTopColor = cursor.style.borderBottomColor = cursor.style.borderLeftColor = cursor.style.borderRightColor = edge;
-        if (cursor.childCount > 0) cursor[0].style.backgroundColor = edge;
+        Vector2? cursorPoint = evt is IPointerEvent pointer && pointer.pointerType == PointerType.mouse
+            ? (Vector2)pointer.position : null;
+        flow?.LivingConfirm(performer, cursorPoint);
     }
     private VisualElement Standard(string eyebrow, string title, string description, int art = 5)
     {
@@ -393,7 +392,8 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             int p = i;
-            var hit = new Button(() => flow?.LivingConfirm(p)) { name = "presence-" + p, tooltip = LivingGlassRoutes.Performers[p] };
+            var hit = new Button { name = "presence-" + p, tooltip = LivingGlassRoutes.Performers[p] };
+            hit.clickable.clickedWithEventInfo += evt => ConfirmPresence(p, evt);
             hit.AddToClassList("lg-presence"); hit.AddToClassList(depths[p]); row.Add(hit); PerformerTargets[p] = hit;
             hit.EnableInClassList("lg-first-presence", p == 0); hit.EnableInClassList("lg-last-presence", p == 5);
             var surface = Box(hit, "aperture-" + p, "lg-aperture"); surface.pickingMode = PickingMode.Ignore;
@@ -439,7 +439,9 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         var copy = Box(plate, "identity-copy", "lg-identity-copy");
         identity = Text(copy, T("Six artistic presences", "六種藝術存在"), "lg-identity-title");
         identityDetail = Text(copy, ready ? T("Choose a presence to begin.", "選擇一種存在，開始體驗。") : T("Colour is awakening…", "色彩正甦醒……"), "lg-small");
-        confirm = Action(plate, "confirm-presence", T("Enter Focus", "進入專注"), () => flow?.LivingConfirm(target), "lg-primary"); confirm.SetEnabled(false);
+        confirm = Action(plate, "confirm-presence", T("Enter Focus", "進入專注"), null, "lg-primary");
+        confirm.clickable.clickedWithEventInfo += evt => ConfirmPresence(target, evt);
+        confirm.SetEnabled(false);
     }
     public void TargetChanged(int index)
     {
@@ -681,14 +683,28 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         Setting(parent, T("Privacy & camera", "隱私與相機"), T("Review permission or stop capture immediately.", "檢視許可，或立即停止影像擷取。"), T("Review", "檢視"), () => flow?.LivingGlassOpenOverlay("Privacy"));
         Setting(parent, T("AI assistant", "AI 助理"), T("Choose one of six conversation themes.", "選擇六種對話主題之一。"), T("Choose", "選擇"), () => flow?.LivingGlassOpenOverlay("AssistantChooser"));
         Deferred(parent, T("Sound preferences", "聲音偏好"), T("Clap audio remains available in supported experiences. Volume and mute controls are deferred.", "適用體驗中仍可拍手播放音效；音量與靜音設定延後提供。"));
-        Deferred(parent, T("Accessibility preferences", "無障礙偏好"), T("Keyboard access and readable surfaces are included. Saved preferences are deferred; reduced modes are exhibition configuration.", "提供鍵盤操作與易讀介面；偏好儲存延後提供，減少動態模式由展覽設定。"));
-        Deferred(parent, T("Calibration", "校正"), T("Conditional feature; no verified calibration workflow exists.", "條件式功能，尚無已核實的校正流程。"));
-        Deferred(parent, T("Restart / End Experience", "重新開始／結束體驗"), T("A full session reset is deferred. Existing Back and Done paths remain available.", "完整重設流程延後提供，既有返回與完成流程仍可使用。"));
+        Setting(parent, T("Restart / End Experience", "重新開始／結束體驗"),
+            T("Return to Home for the next visitor.", "返回首頁，讓下一位參觀者開始體驗。"),
+            T("Restart…", "重新開始…"), () => flow?.LivingRequestRestart()).name = "setting-restart";
     }
-    private void Setting(VisualElement parent, string title, string detail, string action, System.Action command)
+    private Button Setting(VisualElement parent, string title, string detail, string action, System.Action command)
     {
         var row = Box(parent, "", "lg-setting-row"); var copy = Box(row, "", "lg-setting-copy");
-        Text(copy, title, "lg-subtitle"); Text(copy, detail, "lg-small"); Action(row, "setting-" + parent.childCount, action, command, "lg-quiet");
+        Text(copy, title, "lg-subtitle"); Text(copy, detail, "lg-small");
+        return Action(row, "setting-" + parent.childCount, action, command, "lg-quiet");
+    }
+
+    private Button BuildRestartConfirmation(VisualElement parent)
+    {
+        Text(parent, T("Restart the exhibition for a new visitor? The current visitor's progress will be cleared.",
+            "要為下一位參觀者重新開始展覽嗎？目前參觀者的進度將被清除。"));
+        var actions = Box(parent, "restart-actions", "lg-actions");
+        var cancel = Action(actions, "restart-cancel", T("Cancel", "取消"), () => flow?.LivingGlassCloseOverlay(), "lg-quiet");
+        var restart = Action(actions, "restart-confirm", T("Restart", "重新開始"), () => flow?.LivingConfirmRestart(), "lg-primary");
+        void UpdateAvailability() => restart.SetEnabled(flow?.LivingRestartAvailable == true);
+        UpdateAvailability();
+        actions.schedule.Execute(UpdateAvailability).Every(250);
+        return cancel;
     }
     private void BuildVoicePreference(VisualElement parent, bool settings)
     {
@@ -799,12 +815,29 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         panel = Box(overlayPlane, "glass-window", "lg-window");
         panel.focusable = true; panel.tabIndex = -1;
         var bar = Box(panel, "window-titlebar", "lg-window-titlebar");
-        string title = kind == "Settings" ? T("Experience controls", "體驗設定") : kind == "Privacy" ? T("Privacy & camera", "隱私與相機") : kind == "Help" ? T("Here to guide you", "操作說明") : T("A conversation", "一場對話");
+        bool restart = kind == RestartOverlay;
+        string title = kind switch
+        {
+            "Settings" => T("Experience controls", "體驗設定"),
+            "Privacy" => T("Privacy & camera", "隱私與相機"),
+            "Help" => T("Here to guide you", "操作說明"),
+            RestartOverlay => T("Restart experience?", "重新開始體驗？"),
+            _ => T("A conversation", "一場對話"),
+        };
         Text(bar, title, "lg-panel-title");
         bool conversation = IsAssistantOverlay(kind);
-        if (kind == "Settings" || conversation)
-            Action(bar, "window-minimize", T("Minimize", "縮小"), () => flow?.LivingMinimize(), "lg-window-tool");
-        var close = Action(bar, "window-close", T("Close", "關閉"), () => flow?.LivingGlassCloseOverlay(), "lg-window-tool");
+        Button initialFocus = null;
+        if (restart)
+        {
+            Action(bar, "restart-language", T("繁體中文", "English"),
+                () => flow?.LivingLanguage(language == AppLanguage.English ? AppLanguage.Chinese : AppLanguage.English), "lg-window-tool");
+        }
+        else
+        {
+            if (kind == "Settings" || conversation)
+                Action(bar, "window-minimize", T("Minimize", "縮小"), () => flow?.LivingMinimize(), "lg-window-tool");
+            initialFocus = Action(bar, "window-close", T("Close", "關閉"), () => flow?.LivingGlassCloseOverlay(), "lg-window-tool");
+        }
         if (conversation)
         {
             overlayPlane.AddToClassList("lg-chat-overlay");
@@ -815,7 +848,8 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         {
             var scroll = ReadingScroll("window-scroll", "lg-window-body"); panel.Add(scroll); body = scroll;
         }
-        if (kind == "Settings") BuildSettings(body);
+        if (restart) initialFocus = BuildRestartConfirmation(body);
+        else if (kind == "Settings") BuildSettings(body);
         else if (kind == "Privacy") BuildPrivacy(body, false);
         else if (kind == "Help") BuildHelp(body);
         else if (conversation) BuildChat(body, performer);
@@ -824,7 +858,7 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         panelOrigin = new Vector2(Mathf.Clamp(origin.x - root.resolvedStyle.width*.76f, -520, 120), Mathf.Clamp(origin.y - root.resolvedStyle.height*.5f, -200, 400));
         panelProgress = 0;
         motion.Run(overlayPlane, .36f, t => SetPanelProgress(t));
-        close.Focus();
+        initialFocus.Focus();
         return panel;
     }
     private void BuildHelp(VisualElement parent)

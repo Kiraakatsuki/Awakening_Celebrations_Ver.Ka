@@ -193,10 +193,18 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
     private void OnEnable()
     {
         TryConnectGestureBridge();
+        if (livingGlass != null && livingGlass.Root != null)
+            gestureCursor?.Attach(livingGlass.Root);
+    }
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus) gestureCursor?.Suspend();
     }
 
     private void OnDisable()
     {
+        gestureCursor?.Detach();
         if (livingGlass != null)
         {
             ClearBindings(livingChatUnbind);
@@ -284,7 +292,9 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
                         Time.unscaledTime - gestureTargetLostSince < gestureTargetReleaseSeconds)))
                 {
                     SetTargetedPerformer(gestureTarget);
-                    HandleInteractionCommand(InteractionCommand.ConfirmPerformer);
+                    Vector2? point = gestureCursor != null && gestureCursor.TryGetPanelPosition(out Vector2 panelPoint)
+                        ? panelPoint : null;
+                    HandleInteractionCommand(InteractionCommand.ConfirmPerformer, point);
                 }
                 break;
             case SemanticGesture.BothHandsRaised:
@@ -347,6 +357,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
     private void UpdateGestureTarget(int candidate)
     {
+        gestureCursor?.SetHandHover(candidate >= 0);
         if (candidate == gestureTarget)
         {
             gestureTargetCandidate = null;
@@ -390,7 +401,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         }
     }
 
-    private void HandleInteractionCommand(InteractionCommand command)
+    private void HandleInteractionCommand(InteractionCommand command, Vector2? cursorPoint = null)
     {
         if (livingGlass != null && livingGlass.OverlayVisible)
         {
@@ -449,7 +460,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
                 if (currentScreen == ColorReleaseScreen && colorReleaseSelectionReady && targetedPerformer >= 0)
                 {
                     Debug.Log("Performer confirmed: " + Performers[targetedPerformer] + ".", this);
-                    SelectPerformer(targetedPerformer);
+                    SelectPerformer(targetedPerformer, cursorPoint);
                 }
                 break;
 
@@ -773,13 +784,15 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
 
 
-    private void SelectPerformer(int index)
+    private void SelectPerformer(int index, Vector2? cursorPoint)
     {
         selectedPerformer = index;
         if (Navigate(GetPerformerScreen(index, 0), language, true))
         {
             souvenirJourneyPerformer = index;
             souvenirPortraitFinished = false;
+            if (cursorPoint.HasValue)
+                gestureCursor?.Confirm(cursorPoint.Value, livingGlass.ReducedMotion);
         }
     }
 
