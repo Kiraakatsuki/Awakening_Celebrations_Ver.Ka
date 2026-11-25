@@ -204,6 +204,8 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
 
     private void OnDisable()
     {
+        livingOpeningMusic?.Dispose();
+        livingOpeningMusic = null;
         gestureCursor?.Detach();
         if (livingGlass != null)
         {
@@ -246,6 +248,12 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
     private void Update()
     {
         livingVoice?.Tick();
+        livingOpeningMusic?.Tick(Application.isFocused && livingGlass != null
+            && livingOverlay == null && !livingGlass.OverlayVisible,
+            (livingVoice?.IsPlaying ?? false) || (livingSpeech?.BlocksVoiceOutput ?? false),
+            Time.unscaledDeltaTime, Application.isFocused);
+        if (livingPortraitVideoPrepared && !livingPortraitPlaybackStarted)
+            TryStartLivingPortraitPlayback();
         LivingGlassUpdateStatus();
         gestureCursor?.Tick(Time.unscaledDeltaTime);
         if (gesturePointing)
@@ -645,6 +653,19 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
             LivingGlassCloseOverlay();
             return;
         }
+        // Focus is a cancellable selection, including its fade toward Activation.
+        // Both the dock and the existing held-open-palm command enter here.
+        if (IsPerformerStage(currentScreen, out _, out int focusStage) && focusStage == 0)
+        {
+            StopPerformerExperienceSequence();
+            livingGlass?.SettleRoutePresentation();
+            transitionInProgress = false;
+            selectedPerformer = -1;
+            souvenirJourneyPerformer = -1;
+            souvenirPortraitFinished = false;
+            Navigate(ColorReleaseScreen, language, false);
+            return;
+        }
         bool leavingVideo = IsPerformerStage(currentScreen, out _, out int stage) && stage == 2;
         if (!leavingVideo && (transitionInProgress || performerSequenceActive || performerFlowTransitionLock))
             return;
@@ -1027,13 +1048,20 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
         livingPortraitVideoPlayer.playOnAwake = false;
         livingPortraitVideoPlayer.isLooping = false;
         livingPortraitVideoPlayer.waitForFirstFrame = true;
-        livingPortraitVideoPlayer.skipOnDrop = true;
+        livingPortraitVideoPlayer.skipOnDrop = false;
         livingPortraitVideoPlayer.sendFrameReadyEvents = true;
         livingPortraitVideoPlayer.source = VideoSource.VideoClip;
         livingPortraitVideoPlayer.clip = clip;
         livingPortraitVideoPlayer.renderMode = VideoRenderMode.RenderTexture;
         livingPortraitVideoPlayer.targetTexture = livingPortraitRenderTexture;
-        livingPortraitVideoPlayer.audioOutputMode = VideoAudioOutputMode.None;
+        livingPortraitVideoPlayer.audioOutputMode = VideoAudioOutputMode.Direct;
+        livingPortraitVideoPlayer.controlledAudioTrackCount = clip.audioTrackCount;
+        for (ushort track = 0; track < clip.audioTrackCount; track++)
+        {
+            livingPortraitVideoPlayer.EnableAudioTrack(track, true);
+            livingPortraitVideoPlayer.SetDirectAudioMute(track, false);
+            livingPortraitVideoPlayer.SetDirectAudioVolume(track, 1f);
+        }
         livingPortraitVideoPlayer.prepareCompleted += OnLivingPortraitVideoPrepared;
         livingPortraitVideoPlayer.frameReady += OnLivingPortraitVideoFrameReady;
         livingPortraitVideoPlayer.loopPointReached += OnLivingPortraitVideoCompleted;
@@ -1063,6 +1091,7 @@ public sealed partial class AwakeningApplicationController : MonoBehaviour
     {
         if (!livingPortraitVisible || !livingPortraitVideoPrepared ||
             livingPortraitPlaybackStarted || livingPortraitVideoPlayer == null ||
+            livingOpeningMusic?.GalleryFadeComplete == false ||
             !IsCurrentPerformerStage(livingPortraitPerformer, 2))
             return;
 

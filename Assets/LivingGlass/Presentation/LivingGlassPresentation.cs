@@ -682,7 +682,11 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         BuildVoicePreference(parent, true);
         Setting(parent, T("Privacy & camera", "隱私與相機"), T("Review permission or stop capture immediately.", "檢視許可，或立即停止影像擷取。"), T("Review", "檢視"), () => flow?.LivingGlassOpenOverlay("Privacy"));
         Setting(parent, T("AI assistant", "AI 助理"), T("Choose one of six conversation themes.", "選擇六種對話主題之一。"), T("Choose", "選擇"), () => flow?.LivingGlassOpenOverlay("AssistantChooser"));
-        Deferred(parent, T("Sound preferences", "聲音偏好"), T("Clap audio remains available in supported experiences. Volume and mute controls are deferred.", "適用體驗中仍可拍手播放音效；音量與靜音設定延後提供。"));
+        var sound = Setting(parent, T("Sound preferences", "聲音偏好"),
+            T("Control background music on the opening page and Living Gallery.", "控制首頁與流光藝廊的背景音樂。"), "",
+            () => flow?.LivingSetSound(!(flow?.LivingSoundEnabled ?? true)));
+        sound.name = "sound-preference";
+        PaintSoundPreference(sound, flow?.LivingSoundEnabled ?? true);
         Setting(parent, T("Restart / End Experience", "重新開始／結束體驗"),
             T("Return to Home for the next visitor.", "返回首頁，讓下一位參觀者開始體驗。"),
             T("Restart…", "重新開始…"), () => flow?.LivingRequestRestart()).name = "setting-restart";
@@ -692,6 +696,17 @@ public sealed class LivingGlassPresentation : MonoBehaviour
         var row = Box(parent, "", "lg-setting-row"); var copy = Box(row, "", "lg-setting-copy");
         Text(copy, title, "lg-subtitle"); Text(copy, detail, "lg-small");
         return Action(row, "setting-" + parent.childCount, action, command, "lg-quiet");
+    }
+
+    public void SoundPreferenceChanged(bool enabled)
+    {
+        root?.Query<Button>("sound-preference").ForEach(button => PaintSoundPreference(button, enabled));
+    }
+
+    private void PaintSoundPreference(Button control, bool enabled)
+    {
+        control.text = enabled ? T("Sound: ON", "聲音：開啟") : T("Sound: OFF", "聲音：關閉");
+        control.tooltip = enabled ? T("Turn off background music", "關閉背景音樂") : T("Turn on background music", "開啟背景音樂");
     }
 
     private Button BuildRestartConfirmation(VisualElement parent)

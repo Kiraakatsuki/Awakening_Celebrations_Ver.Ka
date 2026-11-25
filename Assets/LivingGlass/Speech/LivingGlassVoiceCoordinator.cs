@@ -116,6 +116,7 @@ internal sealed class LivingGlassVoiceCoordinator : IDisposable
     }
 
     internal bool Enabled => visit.Enabled;
+    internal bool IsPlaying => playback.IsPlaying;
     internal IReplyAudio BindReply() => new ReplyChannel(playback);
     private string CurrentCue => route == "COLOR-RELEASE" && !galleryReady ? null : GuideCues.For(route);
 

@@ -20,6 +20,16 @@ public sealed partial class AwakeningApplicationController
     private LivingGlassSpeechCapture livingSpeech;
     private LivingGlassReplySpeech livingReplySpeech;
     private LivingGlassVoiceCoordinator livingVoice;
+    private LivingGlassOpeningMusic livingOpeningMusic;
+    private bool livingBackgroundSoundEnabled = true;
+    public bool LivingSoundEnabled => livingBackgroundSoundEnabled;
+    public void LivingSetSound(bool enabled)
+    {
+        if (LivingProtected || !Application.isPlaying) return;
+        livingBackgroundSoundEnabled = enabled;
+        livingOpeningMusic?.SetSoundEnabled(enabled);
+        livingGlass?.SoundPreferenceChanged(enabled);
+    }
     private LivingGlassSouvenir livingSouvenir;
     private int souvenirJourneyPerformer = -1;
     private bool souvenirPortraitFinished;
@@ -46,12 +56,21 @@ public sealed partial class AwakeningApplicationController
     public bool LivingConsent { get { return consentAccepted; } }
     public bool LivingReady { get { return colorReleaseSelectionReady; } }
     public bool LivingProtected { get { return LivingGlassRoutes.Protected(currentScreen) || performerFlowTransitionLock; } }
-    public bool LivingCanBack { get { return (IsPerformerStage(currentScreen, out _, out int s) && s == 2) ||
+    public bool LivingCanBack { get { return (IsPerformerStage(currentScreen, out _, out int s) && (s == 0 || s == 2)) ||
         (!transitionInProgress && !LivingProtected && (awakeningSequenceCompletedThisSession ? currentScreen != HomeScreen && currentScreen != ColorReleaseScreen : currentScreen == SettingsScreen || currentScreen == AttractScreen)); } }
 
     private void LivingGlassRender()
     {
         if (livingGlass == null) return;
+        if (Application.isPlaying)
+        {
+            livingOpeningMusic ??= new LivingGlassOpeningMusic(gameObject);
+            bool galleryMusic = currentScreen == ColorReleaseScreen && colorReleaseSelectionReady;
+            if (LivingGlassRoutes.TryChapter(currentScreen, out _, out int musicStage))
+                galleryMusic = musicStage == 0 || musicStage == 1;
+            livingOpeningMusic.SetSoundEnabled(livingBackgroundSoundEnabled);
+            livingOpeningMusic.Show(currentScreen == HomeScreen, galleryMusic);
+        }
         ClearBindings(livingChatUnbind);
         Voice.Overlay(false);
         Voice.Show(currentScreen, language, colorReleaseSelectionReady, selectedPerformer);
@@ -194,6 +213,8 @@ public sealed partial class AwakeningApplicationController
         Souvenir?.NewVisitor();
         souvenirJourneyPerformer = -1;
         souvenirPortraitFinished = false;
+        livingBackgroundSoundEnabled = true;
+        livingOpeningMusic?.ResetVisitor();
         LivingGlassHome(true);
     }
     public void LivingSouvenir() { if (!LivingProtected && !livingGlass.OverlayVisible) Navigate("SOUVENIR---QR-DELIVERY", language, true); }
