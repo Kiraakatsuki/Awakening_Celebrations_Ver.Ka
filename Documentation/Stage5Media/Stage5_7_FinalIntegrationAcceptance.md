@@ -1,6 +1,6 @@
 # Stage 5.7 — Final integration acceptance
 
-November 25, 2026. Completed local integration; the user has confirmed that the Windows application was launched and runs correctly. Git finalization and retention results are recorded below as they complete. No new build or runtime test is part of this finalization.
+November 25, 2026. Completed local integration; the user has confirmed that the Windows application was launched and runs correctly. Git finalization and retention completed as recorded below. No new build or runtime test is part of this finalization.
 
 ## Navigation correction
 
@@ -47,7 +47,9 @@ Excluded local changes: rendering/volume/panel cache assets, Unity Connect setti
 
 Commit message: `Stage 5.7: finalize exhibition media, audio and performer navigation [skip render]`.
 
-The established `[skip render]` directive is included to avoid triggering the existing Render auto-deployment. No Render/backend/configuration or Cloudflare file is included. A documentation-only receipt commit will record the actual implementation SHA, push verification and completed retention result without amending history.
+The established `[skip render]` directive is included to avoid triggering the existing Render auto-deployment. No Render/backend/configuration or Cloudflare file is included. Implementation commit: `b7abf220f47ab4adef35e611d38e38f148d5ebaf`. Ordinary push to `origin/development/stage-5.2-jfc-ai` succeeded; a fresh `git ls-remote` returned the same SHA. GitHub accepted all assets, with recommended-size warnings for five MP4s over 50 MiB; no hard-limit violation or storage-policy change occurred. A separate documentation-only receipt records these final results without amending the implementation commit.
+
+Scoped staged checks found no obvious private-key/token signatures, protected souvenir artwork, build output or backend files. Source/text whitespace checks passed; Unity-generated trailing spaces on empty new `.meta` fields were preserved to avoid changing imported files. No `.gitignore` changes were necessary.
 
 ## Build retention
 
@@ -56,6 +58,30 @@ Build-success records and executable timestamps identify the two builds to retai
 - `D:/Awakening-Exhibition-Builds/Stage5_7_FinalIntegration/` — success record November 25, 2026, 04:12 Taipei.
 - `D:/Awakening-Exhibition-Builds/Stage5_6_Opening/` — final success record November 24, 2026, 20:50 Taipei.
 
-Both have complete essential Player files and the 26-file VoiceLocal / 1,005-file QwenLocal packages. The older completed Player folders identified for removal are `Stage5_4`, `Stage5_4_ListenFix` and `Stage5_4_VoiceFix`, all under the same managed root. Removal must verify containment, absence of reparse points and absence of running targets. Separate `.validation` folders contain diagnostics/tools and must remain untouched. Actual cleanup results follow in the receipt.
+Both have complete essential Player files and the 26-file VoiceLocal / 1,005-file QwenLocal packages. The following positively identified older completed Player folders were removed from the managed root using the Windows Recycle Bin:
+
+- `D:/Awakening-Exhibition-Builds/Stage5_4/`
+- `D:/Awakening-Exhibition-Builds/Stage5_4_ListenFix/`
+- `D:/Awakening-Exhibition-Builds/Stage5_4_VoiceFix/`
+
+Before removal, all targets resolved to direct children of the managed root, contained no junctions/symlinks, had successful build records and essential Player files, and had no running executable under their paths. Automatic safety review blocked the first permanent recursive-delete command; no deletion occurred from that command. Recoverable recycling was used instead. No Recycle Bin purge was performed.
+
+PASS — exactly the two retained completed-build folders remain. Their executable, UnityPlayer, globalgamemanagers, Assembly-CSharp and Qwen configuration hashes match the pre-cleanup fingerprints; both still contain their 26-file VoiceLocal and 1,005-file QwenLocal packages. Separate `.validation` folders containing diagnostics/tools were preserved, including those associated with older builds. No uncertain directory was removed and no deletion target was outside the managed root.
+
+No new build, Play Mode entry or Player launch occurred during finalization.
 
 No cloud deployment, D1 write, TPM operation, production-service change or issuance activation occurred. The last accepted public souvenir state remains paused; no new hosted verification was performed.
+
+## Preserved unrelated local changes
+
+The following existing tracked modifications remain unstaged and unchanged:
+
+- `Assets/DefaultVolumeProfile.asset`
+- `Assets/LivingGlass/UI/LivingGlassPanel.asset`
+- `Assets/Settings/UniversalRP.asset`
+- `Assets/UniversalRenderPipelineGlobalSettings.asset`
+- `Documentation/Stage4VoiceExperience/Stage4_3/Stage4_3E_GitHubCheckpoint.md`
+- `Documentation/Stage5AIKnowledge/Stage5_2/Stage5_2B_GitHubAndRenderPreparation.md`
+- `ProjectSettings/UnityConnectSettings.asset`
+
+The untracked `Documentation/Stage5AIKnowledge/Stage5_2/Stage5_2D_LiveAcceptanceReport.md` also remains excluded. No existing source modification was reverted or untracked.
